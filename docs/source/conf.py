@@ -19,7 +19,7 @@ import os
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
-sys.path.append('C:\\Python27\\Lib\\site-packages\\breathe')
+#sys.path.append('C:\\Python27\\Lib\\site-packages\\breathe')
 
 # -- General configuration ------------------------------------------------
 
@@ -111,7 +111,7 @@ todo_include_todos = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'alabaster'
+#html_theme = 'alabaster'
 #html_theme = 'classic'
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -288,7 +288,7 @@ texinfo_documents = [
 #texinfo_no_detailmenu = False
 
 # Breathe projects
-breathe_projects = { "example": "C:\\doxygen_output\\xml"}
+breathe_projects = { "example": "./../xml"}
 
 # Breathe default project
 breathe_default_project = "example"
