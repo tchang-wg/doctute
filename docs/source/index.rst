@@ -25,6 +25,7 @@ Guide
    help
    example_index
    example_namespaces
+   example_modules
 
 
 
