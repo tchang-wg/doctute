@@ -28,7 +28,6 @@ Guide
    example_modules
 
 
-
 Indices and tables
 ==================
 
