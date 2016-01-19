@@ -2,4 +2,4 @@ Example Doxygen XML Documentation
 =================================
 
 .. doxygenindex::
-   :outline:
+   :no-link:
