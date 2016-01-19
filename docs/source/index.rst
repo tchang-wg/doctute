@@ -24,7 +24,7 @@ Guide
    license
    help
    example_index
-   example_classes
+   example_namespaces
 
 
 
