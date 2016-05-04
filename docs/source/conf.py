@@ -214,7 +214,7 @@ def setup(app):
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'doctutedoc'
+htmlhelp_basename = 'assetpipeline'
 
 # -- Options for LaTeX output ---------------------------------------------
 

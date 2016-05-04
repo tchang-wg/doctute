@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Asset Pipeline Documentation &mdash; Asset Pipeline  documentation</title>
+  <title>Asset Pipeline &mdash; Asset Pipeline  documentation</title>
   
 
   
@@ -33,7 +33,7 @@
 
   
     <link rel="top" title="Asset Pipeline  documentation" href="#"/>
-        <link rel="next" title="Asset Pipeline" href="asset.html"/> 
+        <link rel="next" title="Batch Compiler" href="batchcompiler.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -78,8 +78,14 @@
           
             
             
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="asset.html">Asset Pipeline</a></li>
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Asset Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batchcompiler.html">Batch Compiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testcompiler.html">TestCompiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jitcompiler.html">JIT Compiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilityclasses.html">Utility Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extendingassetpipeline.html">Extending the Asset Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assetrules.html">Asset Rules</a></li>
 </ul>
 
             
@@ -110,7 +116,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="#">Docs</a> &raquo;</li>
       
-    <li>Asset Pipeline Documentation</li>
+    <li>Asset Pipeline</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -124,44 +130,151 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="asset-pipeline-documentation">
-<h1>Asset Pipeline Documentation<a class="headerlink" href="#asset-pipeline-documentation" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="another-simple-header">
-<h1>Another simple header<a class="headerlink" href="#another-simple-header" title="Permalink to this headline">¶</a></h1>
-<p>Some text explaining something.</p>
-<blockquote>
-<div>print &#8216;hello&#8217;
-&gt;&gt; hello</div></blockquote>
-<div class="section" id="guide">
-<h2>Guide<a class="headerlink" href="#guide" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="asset-pipeline">
+<h1>Asset Pipeline<a class="headerlink" href="#asset-pipeline" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="asset.html">Asset Pipeline</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="asset.html#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="asset.html#batch-compiler">Batch Compiler</a></li>
-<li class="toctree-l2"><a class="reference internal" href="asset.html#testcompiler">TestCompiler</a></li>
-<li class="toctree-l2"><a class="reference internal" href="asset.html#jit-compiler">JIT Compiler</a></li>
-<li class="toctree-l2"><a class="reference internal" href="asset.html#utility-classes">Utility Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="asset.html#extending-the-asset-pipeline">Extending the Asset Pipeline</a></li>
-<li class="toctree-l2"><a class="reference internal" href="asset.html#asset-rules">Asset Rules</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Asset Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batchcompiler.html">Batch Compiler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="batchcompiler.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batchcompiler.html#running-the-batch-compiler">Running the Batch Compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batchcompiler.html#command-line-options">Command-Line Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batchcompiler.html#output">Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batchcompiler.html#report">Report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testcompiler.html">TestCompiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jitcompiler.html">JIT Compiler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jitcompiler.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jitcompiler.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jitcompiler.html#using-the-jit-compiler">Using the JIT Compiler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="utilityclasses.html">Utility Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="utilityclasses.html#assetserver">AssetServer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extendingassetpipeline.html">Extending the Asset Pipeline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="extendingassetpipeline.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extendingassetpipeline.html#modules">Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extendingassetpipeline.html#the-conversion-process">The Conversion Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extendingassetpipeline.html#writing-converters-and-conversion-rules">Writing Converters and Conversion Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extendingassetpipeline.html#writing-compilers">Writing Compilers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extendingassetpipeline.html#registering-converters-and-conversion-rules">Registering Converters and Conversion Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extendingassetpipeline.html#writing-plugins">Writing Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extendingassetpipeline.html#writing-unit-tests">Writing Unit Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="assetrules.html">Asset Rules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="assetrules.html#source-rules">Source Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetrules.html#destination-rules">Destination Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetrules.html#location-of-asset-rules-xml">Location of asset_rules.xml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetrules.html#excluding-files-from-conversion">Excluding Files from Conversion</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<ul class="simple">
-<li><code class="xref any docutils literal"><span class="pre">introduction</span></code></li>
-<li><a class="reference internal" href="help.html"><span class="doc">Need Help?</span></a></li>
-</ul>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="overview-of-the-asset-pipeline">
+<h3>Overview of the Asset Pipeline<a class="headerlink" href="#overview-of-the-asset-pipeline" title="Permalink to this headline">¶</a></h3>
+<p>The asset pipeline is a framework for discovering and converting source
+assets to game-ready compiled assets. When fully implemented it will
+unify and replace multiple resource management solutions in the current
+BigWorld Technology code base, such as the res_packer,
+offline_processor, asset_processor, and in-game conversion, with a
+single solution. This solution will make it possible to reuse any asset
+conversion code you write. For example, conversion code written for
+batch compilation could also be reused for JIT (Just-In-Time)
+compilation.</p>
+<p>There are currently three supported compilers: the Batch Compiler, JIT
+Compiler, and Test Compiler. You can also write your own compilers—see
+<a class="reference internal" href="extendingassetpipeline.html#writing-compilers"><span class="std std-ref">Writing Compilers</span></a>&nbsp;for more information.</p>
+<p>The current version of the asset pipeline batch compiler converts assets
+faster than res_packer, but only supports the conversion of <code class="docutils literal"><span class="pre">.bmp</span></code>,
+<code class="docutils literal"><span class="pre">.tga</span></code>, <code class="docutils literal"><span class="pre">.jpg</span></code>, <code class="docutils literal"><span class="pre">.png</span></code>, <code class="docutils literal"><span class="pre">.texformat</span></code> and <code class="docutils literal"><span class="pre">.dds</span></code> files. It
+compiles <code class="docutils literal"><span class="pre">fx</span></code> and <code class="docutils literal"><span class="pre">fxh</span></code> files into <code class="docutils literal"><span class="pre">fxo</span></code> files. It does not
+support <code class="docutils literal"><span class="pre">model</span></code>, <code class="docutils literal"><span class="pre">cdata</span></code>, or <code class="docutils literal"><span class="pre">chunk</span></code> yet.</p>
+<p>The back end of the asset pipeline is managed by a DLL plugin system
+that defines what converters and conversion rules are loaded by the
+framework to handle the asset processing.</p>
+</div>
+<div class="section" id="source-assets">
+<h3>Source Assets<a class="headerlink" href="#source-assets" title="Permalink to this headline">¶</a></h3>
+<p>The asset pipeline takes source asset files as inputs and produces
+game-ready compiled assets as outputs. The files it treats as source
+assets are defined by the converter plugins, and are unknown to the
+compiler front ends. Typical source assets include non dds texture files
+(for example, <code class="docutils literal"><span class="pre">bmp</span></code>, <code class="docutils literal"><span class="pre">tga</span></code> and <code class="docutils literal"><span class="pre">png</span></code> files), and uncompiled shader
+programs (<code class="docutils literal"><span class="pre">fx</span></code> and <code class="docutils literal"><span class="pre">fxh</span></code>). The output files are also determined by
+the converter plugins and are unknown to the compiler front ends with
+examples such as dds texture files (<code class="docutils literal"><span class="pre">dds</span></code>), and compiled shader
+programs (<code class="docutils literal"><span class="pre">fxo</span></code>).</p>
+</div>
+<div class="section" id="converters">
+<h3>Converters<a class="headerlink" href="#converters" title="Permalink to this headline">¶</a></h3>
+<p>Converters contain the logic to convert source asset files into compiled
+assets. Texture and effects converters are supplied with the Asset
+Pipeline package. You can also write your own converters. See <a class="reference internal" href="extendingassetpipeline.html"><span class="doc">Extending
+the Asset Pipeline</span></a> for more information.</p>
+<p>For a converter to be loaded by the asset pipeline, its DLL executable
+needs to be placed in an appropriate location (usually in the same
+directory as the compiler) and it needs to be added to the plugins list
+file for that compiler (for example, <code class="docutils literal"><span class="pre">batch_compiler_plugins.txt</span></code> for
+<code class="docutils literal"><span class="pre">batch_compiler.exe</span></code>). You only need to specify the relative path (if
+any) and the base name of the plugin DLL, as the compiler will determine
+and load the appropriate DLL. For example, specify &#8220;spaceconverter&#8221; for
+the compiler to load the <code class="docutils literal"><span class="pre">spaceconverter.dll</span></code> plugin (or
+<code class="docutils literal"><span class="pre">spaceconverter_d.dll</span></code> plugin in debug mode).</p>
+</div>
+<div class="section" id="intermediate-files">
+<h3>Intermediate files<a class="headerlink" href="#intermediate-files" title="Permalink to this headline">¶</a></h3>
+<p>As well as producing compiled assets, the asset pipeline outputs a
+number of intermediate files. The most important of these intermediate
+files are the dependency files (deps). The asset pipeline will generate
+one of these files for every source asset it discovers. It stores
+important information such as the hash of the source asset at the time
+of conversion, the converter that was used to convert the source asset,
+and the hash of any files that were required for the conversion process.
+These dependency files need to persist between runs of the asset
+pipeline, as they are used to determine whether a source asset needs to
+be reconverted. If a dependency file for a source asset is missing, a
+source asset is assumed to be out of date and in need of conversion.</p>
+<p>Converters can also output intermediate files during the conversion
+process. These intermediate files are functionally the same as ordinary
+output files. However, while output files are used by the game engine,
+intermediate files are not. By default, the intermediate files are saved
+in the location specified by &#8220;-intermediatePath&#8221; in
+<code class="docutils literal"><span class="pre">game/res/bigworld/resources.xml</span></code>.&nbsp;If a location is not specified,
+they will be saved in the same location as their corresponding source
+input file.</p>
+</div>
+<div class="section" id="output-location">
+<h3>Output Location<a class="headerlink" href="#output-location" title="Permalink to this headline">¶</a></h3>
+<p>By default, the asset pipeline outputs intermediate and output files to
+the locations specified by &#8220;-intermediatePath&#8221; and &#8220;-outputPath&#8221; in
+<code class="docutils literal"><span class="pre">game/res/bigworld/resources.xml</span></code>. This makes it easier to compress
+and package output files for distribution with the final game. It also
+allows you to keep your source directory clean from intermediate and
+output files, which is desirable when working with file versioning
+software. If &#8220;-outputPath&#8221; is not specified, then the output files will
+be saved in the same location as their corresponding source input file.</p>
+</div>
+<div class="section" id="performance">
+<h3>Performance<a class="headerlink" href="#performance" title="Permalink to this headline">¶</a></h3>
+<p>When running the asset pipeline over the same source assets multiple
+times, second iterations of the asset pipeline only reconvert source
+assets that have been changed. This is to ensure that the asset pipeline
+can be run repeatedly over large sets of data with minimal overhead per
+iteration.</p>
+<p>To further improve performance for multiple users running the asset
+pipeline on different machines, a file cache can be specified (see
+<a class="reference internal" href="batchcompiler.html#command-line-options"><span class="std std-ref">Command-Line Options</span></a>). When a
+file cache is used, all intermediate and output files produced by the
+asset pipeline are copied to an external shared location that can be
+queried on subsequent runs of the pipeline.</p>
 </div>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
-</ul>
 </div>
 
 
@@ -171,7 +284,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="asset.html" class="btn btn-neutral float-right" title="Asset Pipeline" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="batchcompiler.html" class="btn btn-neutral float-right" title="Batch Compiler" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
