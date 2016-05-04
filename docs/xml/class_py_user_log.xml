@@ -1,0 +1,372 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_py_user_log" kind="class" language="C++" prot="public">
+    <compoundname>PyUserLog</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">PyObject</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_py_user_log_1ac3293ce71867c26d9024f08b4e45cf8b" prot="public" static="yes" mutable="no">
+        <type>PyTypeObject</type>
+        <definition>PyTypeObject PyUserLog::s_type_</definition>
+        <argsstring></argsstring>
+        <name>s_type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type object for <ref refid="class_py_user_log" kindref="compound">PyUserLog</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="51" column="1" bodyfile="tools/message_logger/py_user_log.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_py_user_log_1ae7e1efdf0cf7d1effde720150c3d0a63" prot="private" static="no" mutable="no">
+        <type><ref refid="class_smart_pointer" kindref="compound">UserLogReaderPtr</ref></type>
+        <definition>UserLogReaderPtr PyUserLog::pUserLogReader_</definition>
+        <argsstring></argsstring>
+        <name>pUserLogReader_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="60" column="1" bodyfile="tools/message_logger/py_user_log.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_py_user_log_1a623c7bb857db190674068c9a16692e78" prot="private" static="no" mutable="no">
+        <type><ref refid="class_smart_pointer" kindref="compound">PyBWLogPtr</ref></type>
+        <definition>PyBWLogPtr PyUserLog::pBWLog_</definition>
+        <argsstring></argsstring>
+        <name>pBWLog_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="62" column="1" bodyfile="tools/message_logger/py_user_log.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_py_user_log_1ad3eea6abb4cfd8553b79fc0c158dd318" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject * PyUserLog::pyGetAttribute</definition>
+        <argsstring>(const char *attr)</argsstring>
+        <name>pyGetAttribute</name>
+        <param>
+          <type>const char *</type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns an attribute. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="27" column="1" bodyfile="tools/message_logger/py_user_log.cpp" bodystart="267" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_user_log_1a236ffabbab28128c02412ceb56755eac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject * PyUserLog::py_fetch</definition>
+        <argsstring>(PyObject *args, PyObject *kwargs)</argsstring>
+        <name>py_fetch</name>
+        <param>
+          <type>PyObject *</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>PyObject *</type>
+          <declname>kwargs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the result of a query on the user log. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="29" column="1" bodyfile="tools/message_logger/py_user_log.cpp" bodystart="300" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_user_log_1acbfc8a2313e472c47ca20835708e7c3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject * PyUserLog::py_getComponents</definition>
+        <argsstring>(PyObject *args)</argsstring>
+        <name>py_getComponents</name>
+        <param>
+          <type>PyObject *</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a list of tuples corresponding to the components in this user&apos;s log. Each tuple takes the format (name, pid, appid, firstEntry). The &apos;firstEntry&apos; member is a 2-tuple of (suffix, index). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="30" column="1" bodyfile="tools/message_logger/py_user_log.cpp" bodystart="337" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_user_log_1a1c6ddcfcc10a793c44af6671b2292521" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject * PyUserLog::py_getEntry</definition>
+        <argsstring>(PyObject *args)</argsstring>
+        <name>py_getEntry</name>
+        <param>
+          <type>PyObject *</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a <ref refid="class_py_query_result" kindref="compound">PyQueryResult</ref> object corresponding to the provided tuple of (suffix, index). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="31" column="1" bodyfile="tools/message_logger/py_user_log.cpp" bodystart="363" bodyend="428"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_user_log_1a50d03f02b7be6b02ff49f7be3dc890bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject * PyUserLog::py_getSegments</definition>
+        <argsstring>(PyObject *args)</argsstring>
+        <name>py_getSegments</name>
+        <param>
+          <type>PyObject *</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a list of tuples corresponding to the segments in this <ref refid="class_user_log" kindref="compound">UserLog</ref>. Each tuple takes the format (suffix, starttime, endtime, nEntries, size of entries file, size of args file). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="32" column="1" bodyfile="tools/message_logger/py_user_log.cpp" bodystart="445" bodyend="452"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_user_log_1a10608d5333c9626bc4756ef7ff648291" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject * PyUserLog::pyGet_uid</definition>
+        <argsstring>()</argsstring>
+        <name>pyGet_uid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method invokes the user log&apos;s getUID method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="34" column="1" bodyfile="tools/message_logger/py_user_log.cpp" bodystart="470" bodyend="473"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_user_log_1a4dd6be0d2f35d96bfbb47a3dbb98e91f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject * PyUserLog::pyGet_username</definition>
+        <argsstring>()</argsstring>
+        <name>pyGet_username</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the user name of the user log. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="35" column="1" bodyfile="tools/message_logger/py_user_log.cpp" bodystart="458" bodyend="464"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_user_log_1a7bc5f76a4e73f7504c77314eb39be13e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PyUserLog::PyUserLog</definition>
+        <argsstring>(UserLogReaderPtr pUserLogReader, PyBWLogPtr pBWLog)</argsstring>
+        <name>PyUserLog</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">UserLogReaderPtr</ref></type>
+          <declname>pUserLogReader</declname>
+        </param>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyBWLogPtr</ref></type>
+          <declname>pBWLog</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="38" column="1" bodyfile="tools/message_logger/py_user_log.cpp" bodystart="517" bodyend="529"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_user_log_1aec2c5194765c5cb4882617dde80b4ba9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_smart_pointer" kindref="compound">UserLogReaderPtr</ref></type>
+        <definition>UserLogReaderPtr PyUserLog::getUserLog</definition>
+        <argsstring>() const </argsstring>
+        <name>getUserLog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method allows other Python modules to get a handle on the <ref refid="class_user_log_reader" kindref="compound">UserLogReader</ref> this module is using.</para><para>It is used primarily by BWLogModule to pass the <ref refid="class_user_log_reader" kindref="compound">UserLogReader</ref> into QueryModule. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="40" column="1" bodyfile="tools/message_logger/py_user_log.cpp" bodystart="539" bodyend="542"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_user_log_1a11612a08d61036c6b1f061210bc389ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16</type>
+        <definition>uint16 PyUserLog::getUID</definition>
+        <argsstring>() const </argsstring>
+        <name>getUID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the log&apos;s UID </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="41" column="1" bodyfile="tools/message_logger/py_user_log.cpp" bodystart="548" bodyend="551"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_user_log_1a45d12cb544790fd5848634e62871d003" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PyUserLog::incRef</definition>
+        <argsstring>() const </argsstring>
+        <name>incRef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="43" column="1" bodyfile="tools/message_logger/py_user_log.hpp" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_user_log_1a4679de2c000e3dfcd5f2217d6728b618" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PyUserLog::decRef</definition>
+        <argsstring>() const </argsstring>
+        <name>decRef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="44" column="1" bodyfile="tools/message_logger/py_user_log.hpp" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_user_log_1a22b2708d84120ca878005a6d1a193d74" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int PyUserLog::refCount</definition>
+        <argsstring>() const </argsstring>
+        <name>refCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="45" column="1" bodyfile="tools/message_logger/py_user_log.hpp" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_user_log_1a2972d4c06f30002e79e111db7392469c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>BW::string</type>
+        <definition>BW::string PyUserLog::getUsername</definition>
+        <argsstring>() const </argsstring>
+        <name>getUsername</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the username for the log. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="53" column="1" bodyfile="tools/message_logger/py_user_log.cpp" bodystart="557" bodyend="560"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_py_user_log_1aadf4c6826e945cfbb968fe8047cc0996" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PyUserLog::_tp_dealloc</definition>
+        <argsstring>(PyObject *pObj)</argsstring>
+        <name>_tp_dealloc</name>
+        <param>
+          <type>PyObject *</type>
+          <declname>pObj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method implements the Python dealloc method </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="47" column="1" bodyfile="tools/message_logger/py_user_log.cpp" bodystart="479" bodyend="482"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_user_log_1a8c331ed692fa62ed75a83583c183869a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject * PyUserLog::_tp_repr</definition>
+        <argsstring>(PyObject *pObj)</argsstring>
+        <name>_tp_repr</name>
+        <param>
+          <type>PyObject *</type>
+          <declname>pObj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method implements the Python repr method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="48" column="1" bodyfile="tools/message_logger/py_user_log.cpp" bodystart="487" bodyend="495"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_user_log_1a5b346e25cc72aecf8e09052459733774" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject * PyUserLog::_tp_getattro</definition>
+        <argsstring>(PyObject *pObj, PyObject *name)</argsstring>
+        <name>_tp_getattro</name>
+        <param>
+          <type>PyObject *</type>
+          <declname>pObj</declname>
+        </param>
+        <param>
+          <type>PyObject *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method implements the Python getattribute method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/py_user_log.hpp" line="49" column="1" bodyfile="tools/message_logger/py_user_log.cpp" bodystart="501" bodyend="505"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2310">
+        <label>PyUserLog</label>
+        <link refid="class_py_user_log"/>
+        <childnode refid="2311" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2311">
+        <label>PyObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2312">
+        <label>PyUserLog</label>
+        <link refid="class_py_user_log"/>
+        <childnode refid="2313" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2313">
+        <label>PyObject</label>
+      </node>
+    </collaborationgraph>
+    <location file="tools/message_logger/py_user_log.hpp" line="24" column="1" bodyfile="tools/message_logger/py_user_log.hpp" bodystart="23" bodyend="63"/>
+    <listofallmembers>
+      <member refid="class_py_user_log_1aadf4c6826e945cfbb968fe8047cc0996" prot="public" virt="non-virtual"><scope>PyUserLog</scope><name>_tp_dealloc</name></member>
+      <member refid="class_py_user_log_1a5b346e25cc72aecf8e09052459733774" prot="public" virt="non-virtual"><scope>PyUserLog</scope><name>_tp_getattro</name></member>
+      <member refid="class_py_user_log_1a8c331ed692fa62ed75a83583c183869a" prot="public" virt="non-virtual"><scope>PyUserLog</scope><name>_tp_repr</name></member>
+      <member refid="class_py_user_log_1a4679de2c000e3dfcd5f2217d6728b618" prot="public" virt="non-virtual"><scope>PyUserLog</scope><name>decRef</name></member>
+      <member refid="class_py_user_log_1a11612a08d61036c6b1f061210bc389ec" prot="public" virt="non-virtual"><scope>PyUserLog</scope><name>getUID</name></member>
+      <member refid="class_py_user_log_1aec2c5194765c5cb4882617dde80b4ba9" prot="public" virt="non-virtual"><scope>PyUserLog</scope><name>getUserLog</name></member>
+      <member refid="class_py_user_log_1a2972d4c06f30002e79e111db7392469c" prot="public" virt="non-virtual"><scope>PyUserLog</scope><name>getUsername</name></member>
+      <member refid="class_py_user_log_1a45d12cb544790fd5848634e62871d003" prot="public" virt="non-virtual"><scope>PyUserLog</scope><name>incRef</name></member>
+      <member refid="class_py_user_log_1a623c7bb857db190674068c9a16692e78" prot="private" virt="non-virtual"><scope>PyUserLog</scope><name>pBWLog_</name></member>
+      <member refid="class_py_user_log_1ae7e1efdf0cf7d1effde720150c3d0a63" prot="private" virt="non-virtual"><scope>PyUserLog</scope><name>pUserLogReader_</name></member>
+      <member refid="class_py_user_log_1a236ffabbab28128c02412ceb56755eac" prot="public" virt="non-virtual"><scope>PyUserLog</scope><name>py_fetch</name></member>
+      <member refid="class_py_user_log_1acbfc8a2313e472c47ca20835708e7c3b" prot="public" virt="non-virtual"><scope>PyUserLog</scope><name>py_getComponents</name></member>
+      <member refid="class_py_user_log_1a1c6ddcfcc10a793c44af6671b2292521" prot="public" virt="non-virtual"><scope>PyUserLog</scope><name>py_getEntry</name></member>
+      <member refid="class_py_user_log_1a50d03f02b7be6b02ff49f7be3dc890bf" prot="public" virt="non-virtual"><scope>PyUserLog</scope><name>py_getSegments</name></member>
+      <member refid="class_py_user_log_1a10608d5333c9626bc4756ef7ff648291" prot="public" virt="non-virtual"><scope>PyUserLog</scope><name>pyGet_uid</name></member>
+      <member refid="class_py_user_log_1a4dd6be0d2f35d96bfbb47a3dbb98e91f" prot="public" virt="non-virtual"><scope>PyUserLog</scope><name>pyGet_username</name></member>
+      <member refid="class_py_user_log_1ad3eea6abb4cfd8553b79fc0c158dd318" prot="public" virt="non-virtual"><scope>PyUserLog</scope><name>pyGetAttribute</name></member>
+      <member refid="class_py_user_log_1a7bc5f76a4e73f7504c77314eb39be13e" prot="public" virt="non-virtual"><scope>PyUserLog</scope><name>PyUserLog</name></member>
+      <member refid="class_py_user_log_1a22b2708d84120ca878005a6d1a193d74" prot="public" virt="non-virtual"><scope>PyUserLog</scope><name>refCount</name></member>
+      <member refid="class_py_user_log_1ac3293ce71867c26d9024f08b4e45cf8b" prot="public" virt="non-virtual"><scope>PyUserLog</scope><name>s_type_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

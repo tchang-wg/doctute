@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</compoundname>
+    <basecompoundref refid="class_write_to_d_b_request_1_1_i_handler" prot="public" virt="non-virtual">WriteToDBRequest::IHandler</basecompoundref>
+    <derivedcompoundref refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_without_secondary_d_b" prot="public" virt="non-virtual">BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</derivedcompoundref>
+    <derivedcompoundref refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_with_secondary_d_b" prot="public" virt="non-virtual">BW_BEGIN_NAMESPACE::ShutDownHandlerWithSecondaryDB</derivedcompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1acd6d48f86edb1dd354ba73ef0f2ccdd2" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BW_BEGIN_NAMESPACE::ControlledShutDownHandler::numOutstanding_</definition>
+        <argsstring></argsstring>
+        <name>numOutstanding_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/controlled_shutdown_handler.cpp" line="51" column="1" bodyfile="baseapp/controlled_shutdown_handler.cpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1a16bac94c98c56263ebeed2e2df4d1b83" prot="private" static="no" mutable="no">
+        <type>Mercury::ReplyID</type>
+        <definition>Mercury::ReplyID BW_BEGIN_NAMESPACE::ControlledShutDownHandler::replyID_</definition>
+        <argsstring></argsstring>
+        <name>replyID_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/controlled_shutdown_handler.cpp" line="54" column="1" bodyfile="baseapp/controlled_shutdown_handler.cpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1a0a8894dcbab80388900c9cd86e459616" prot="private" static="no" mutable="no">
+        <type>Mercury::Address</type>
+        <definition>Mercury::Address BW_BEGIN_NAMESPACE::ControlledShutDownHandler::srcAddr_</definition>
+        <argsstring></argsstring>
+        <name>srcAddr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/controlled_shutdown_handler.cpp" line="55" column="1" bodyfile="baseapp/controlled_shutdown_handler.cpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1a5756262a52e74126d9a90ffff334bd05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE::ControlledShutDownHandler::ControlledShutDownHandler</definition>
+        <argsstring>()</argsstring>
+        <name>ControlledShutDownHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/controlled_shutdown_handler.cpp" line="38" column="1" bodyfile="baseapp/controlled_shutdown_handler.cpp" bodystart="62" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1a132819726734555beb916b435b022e3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BW_BEGIN_NAMESPACE::ControlledShutDownHandler::init</definition>
+        <argsstring>(const Bases &amp;bases, Mercury::ReplyID replyID, const Mercury::Address &amp;srcAddr)</argsstring>
+        <name>init</name>
+        <param>
+          <type>const <ref refid="class_bases" kindref="compound">Bases</ref> &amp;</type>
+          <declname>bases</declname>
+        </param>
+        <param>
+          <type>Mercury::ReplyID</type>
+          <declname>replyID</declname>
+        </param>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method initialises this handler. The real work is done in the derived classes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/controlled_shutdown_handler.cpp" line="39" column="1" bodyfile="baseapp/controlled_shutdown_handler.cpp" bodystart="74" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1acf4dc62a37266301235b765f4fcc66ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual BW_BEGIN_NAMESPACE::ControlledShutDownHandler::~ControlledShutDownHandler</definition>
+        <argsstring>()</argsstring>
+        <name>~ControlledShutDownHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/controlled_shutdown_handler.cpp" line="44" column="1" bodyfile="baseapp/controlled_shutdown_handler.cpp" bodystart="44" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1ae41c8fdc3f652599d3dbfe34426d189b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BW_BEGIN_NAMESPACE::ControlledShutDownHandler::checkFinished</definition>
+        <argsstring>()</argsstring>
+        <name>checkFinished</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks whether the shutdown has finished. If it has, this object is deleted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/controlled_shutdown_handler.cpp" line="47" column="1" bodyfile="baseapp/controlled_shutdown_handler.cpp" bodystart="93" bodyend="122"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1aa46c4837482148b62f8ed27ec5e4fd1b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void BW_BEGIN_NAMESPACE::ControlledShutDownHandler::onInit</definition>
+        <argsstring>(const Bases &amp;bases)=0</argsstring>
+        <name>onInit</name>
+        <reimplementedby refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_with_secondary_d_b_1a0ad1ee9705380afcd6dd05b708f8d9c4">onInit</reimplementedby>
+        <reimplementedby refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_without_secondary_d_b_1aae75111a26b628fe93b997121dadae07">onInit</reimplementedby>
+        <param>
+          <type>const <ref refid="class_bases" kindref="compound">Bases</ref> &amp;</type>
+          <declname>bases</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/controlled_shutdown_handler.cpp" line="50" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to handle shutting down in a controlled way. It writes the entities that have a database entry (i.e. non-zero databaseID) to the database. It only writes a few entities to the database at a time so that the database does not get flooded. It also finalises any active replay file data writers. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="851">
+        <label>WriteToDBRequest::IHandler</label>
+        <link refid="class_write_to_d_b_request_1_1_i_handler"/>
+      </node>
+      <node id="850">
+        <label>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</label>
+        <link refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler"/>
+        <childnode refid="851" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="853">
+        <label>BW_BEGIN_NAMESPACE::ShutDownHandlerWithSecondaryDB</label>
+        <link refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_with_secondary_d_b"/>
+        <childnode refid="850" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="852">
+        <label>BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</label>
+        <link refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_without_secondary_d_b"/>
+        <childnode refid="850" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="855">
+        <label>WriteToDBRequest::IHandler</label>
+        <link refid="class_write_to_d_b_request_1_1_i_handler"/>
+      </node>
+      <node id="854">
+        <label>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</label>
+        <link refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler"/>
+        <childnode refid="855" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/controlled_shutdown_handler.cpp" line="36" column="1" bodyfile="baseapp/controlled_shutdown_handler.cpp" bodystart="35" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1ae41c8fdc3f652599d3dbfe34426d189b" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</scope><name>checkFinished</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28aaf37607473e6e6b0c9b7c4b2aafc2aa1e" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</scope><name>COMPLETED_FAILED</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28aad619cc9e084ce160f1ff7568acd158d9" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</scope><name>COMPLETED_SUCCESS</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28a" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</scope><name>CompletionStatus</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1a5756262a52e74126d9a90ffff334bd05" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</scope><name>ControlledShutDownHandler</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1a132819726734555beb916b435b022e3a" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</scope><name>init</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1acd6d48f86edb1dd354ba73ef0f2ccdd2" prot="protected" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</scope><name>numOutstanding_</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1aa46c4837482148b62f8ed27ec5e4fd1b" prot="protected" virt="pure-virtual"><scope>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</scope><name>onInit</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1a4eb6fe869cf90c28f097b2dd850bba14" prot="public" virt="pure-virtual"><scope>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</scope><name>onWriteToDBComplete</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1a16bac94c98c56263ebeed2e2df4d1b83" prot="private" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</scope><name>replyID_</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28aab1fa5026495737e5415a45c1cd9fea0b" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</scope><name>SHUTTING_DOWN</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1a0a8894dcbab80388900c9cd86e459616" prot="private" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</scope><name>srcAddr_</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1acf4dc62a37266301235b765f4fcc66ba" prot="public" virt="virtual"><scope>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</scope><name>~ControlledShutDownHandler</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1a8734d12827e0ed82bc842d7a64c2a7ba" prot="protected" virt="virtual"><scope>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</scope><name>~IHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_barrier_handler" kind="class" language="C++" prot="public">
+    <compoundname>BarrierHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ShutdownSafeReplyMessageHandler</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_barrier_handler_1afbd2f311e21e70344cb7d3a15bddd02a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_d_b_app_hash_propagator" kindref="compound">DBAppHashPropagator</ref> &amp;</type>
+        <definition>DBAppHashPropagator&amp; BarrierHandler::propagator_</definition>
+        <argsstring></argsstring>
+        <name>propagator_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/dbapp_hash_propagator.cpp" line="90" column="1" bodyfile="dbappmgr/dbapp_hash_propagator.cpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_handler_1a17659e2f9ef068baaa63637df0f70be4" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t BarrierHandler::count_</definition>
+        <argsstring></argsstring>
+        <name>count_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/dbapp_hash_propagator.cpp" line="91" column="1" bodyfile="dbappmgr/dbapp_hash_propagator.cpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_barrier_handler_1a2205fc670fd1929f866c4c3d7f261a13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BarrierHandler::BarrierHandler</definition>
+        <argsstring>(DBAppHashPropagator &amp;propagator, size_t count)</argsstring>
+        <name>BarrierHandler</name>
+        <param>
+          <type><ref refid="class_d_b_app_hash_propagator" kindref="compound">DBAppHashPropagator</ref> &amp;</type>
+          <declname>propagator</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>propagator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The propagator instance. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of processes to send the request to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/dbapp_hash_propagator.cpp" line="23" column="1" bodyfile="dbappmgr/dbapp_hash_propagator.cpp" bodystart="23" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_barrier_handler_1affe55151e61afaaccc00424c9cb89641" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void BarrierHandler::handleMessage</definition>
+        <argsstring>(const Mercury::Address &amp;, Mercury::UnpackedMessageHeader &amp;, BinaryIStream &amp;, void *)</argsstring>
+        <name>handleMessage</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle barrierDBAppHash reply.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>srcAddr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ignored. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ignored. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ignored. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ignored. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/dbapp_hash_propagator.cpp" line="41" column="1" bodyfile="dbappmgr/dbapp_hash_propagator.cpp" bodystart="41" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_handler_1a5ddec4e307e3e79b1ed540b37dd112b6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void BarrierHandler::handleException</definition>
+        <argsstring>(const Mercury::NubException &amp;, void *)</argsstring>
+        <name>handleException</name>
+        <param>
+          <type>const Mercury::NubException &amp;</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle exception which preventing a reply from being received.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ne</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ignored. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ignored. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/dbapp_hash_propagator.cpp" line="55" column="1" bodyfile="dbappmgr/dbapp_hash_propagator.cpp" bodystart="55" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_handler_1a93b21459bbc668aeb0f66ef60ba1ba4a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BarrierHandler::finalise</definition>
+        <argsstring>()</argsstring>
+        <name>finalise</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method finalises and deletes this handler. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/dbapp_hash_propagator.cpp" line="65" column="1" bodyfile="dbappmgr/dbapp_hash_propagator.cpp" bodystart="65" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_handler_1a5a0e37f6b4f971d094eb1f06a5ce25c3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BarrierHandler::decCount</definition>
+        <argsstring>()</argsstring>
+        <name>decCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method decrements the number of outstanding requests. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/dbapp_hash_propagator.cpp" line="80" column="1" bodyfile="dbappmgr/dbapp_hash_propagator.cpp" bodystart="80" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class handles the barrierDBAppHash request&apos;s reply. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="159">
+        <label>BarrierHandler</label>
+        <link refid="class_barrier_handler"/>
+        <childnode refid="160" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="160">
+        <label>ShutdownSafeReplyMessageHandler</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="161">
+        <label>BarrierHandler</label>
+        <link refid="class_barrier_handler"/>
+        <childnode refid="162" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="162">
+        <label>ShutdownSafeReplyMessageHandler</label>
+      </node>
+    </collaborationgraph>
+    <location file="dbappmgr/dbapp_hash_propagator.cpp" line="15" column="1" bodyfile="dbappmgr/dbapp_hash_propagator.cpp" bodystart="13" bodyend="92"/>
+    <listofallmembers>
+      <member refid="class_barrier_handler_1a2205fc670fd1929f866c4c3d7f261a13" prot="public" virt="non-virtual"><scope>BarrierHandler</scope><name>BarrierHandler</name></member>
+      <member refid="class_barrier_handler_1a17659e2f9ef068baaa63637df0f70be4" prot="private" virt="non-virtual"><scope>BarrierHandler</scope><name>count_</name></member>
+      <member refid="class_barrier_handler_1a5a0e37f6b4f971d094eb1f06a5ce25c3" prot="private" virt="non-virtual"><scope>BarrierHandler</scope><name>decCount</name></member>
+      <member refid="class_barrier_handler_1a93b21459bbc668aeb0f66ef60ba1ba4a" prot="private" virt="non-virtual"><scope>BarrierHandler</scope><name>finalise</name></member>
+      <member refid="class_barrier_handler_1a5ddec4e307e3e79b1ed540b37dd112b6" prot="private" virt="virtual"><scope>BarrierHandler</scope><name>handleException</name></member>
+      <member refid="class_barrier_handler_1affe55151e61afaaccc00424c9cb89641" prot="private" virt="virtual"><scope>BarrierHandler</scope><name>handleMessage</name></member>
+      <member refid="class_barrier_handler_1afbd2f311e21e70344cb7d3a15bddd02a" prot="private" virt="non-virtual"><scope>BarrierHandler</scope><name>propagator_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

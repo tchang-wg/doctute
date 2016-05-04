@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="visibility__controller_8hpp" kind="file" language="C++">
+    <compoundname>visibility_controller.hpp</compoundname>
+    <includes refid="controller_8hpp" local="yes">controller.hpp</includes>
+    <includes local="yes">pyscript/script.hpp</includes>
+    <includedby refid="entity__vision_8cpp" local="yes">cellapp/entity_vision.cpp</includedby>
+    <includedby refid="visibility__controller_8cpp" local="yes">cellapp/visibility_controller.cpp</includedby>
+    <incdepgraph>
+      <node id="12861">
+        <label>build/bwapi.hpp</label>
+      </node>
+      <node id="12859">
+        <label>script/script_object.hpp</label>
+      </node>
+      <node id="12853">
+        <label>cellapp/visibility_controller.hpp</label>
+        <link refid="visibility_controller.hpp"/>
+        <childnode refid="12854" relation="include">
+        </childnode>
+        <childnode refid="12862" relation="include">
+        </childnode>
+      </node>
+      <node id="12857">
+        <label>cstdmf/binary_stream.hpp</label>
+      </node>
+      <node id="12860">
+        <label>cstdmf/md5.hpp</label>
+      </node>
+      <node id="12858">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="12862">
+        <label>pyscript/script.hpp</label>
+      </node>
+      <node id="12855">
+        <label>Python.h</label>
+      </node>
+      <node id="12854">
+        <label>controller.hpp</label>
+        <link refid="controller_8hpp_source"/>
+        <childnode refid="12855" relation="include">
+        </childnode>
+        <childnode refid="12856" relation="include">
+        </childnode>
+        <childnode refid="12857" relation="include">
+        </childnode>
+        <childnode refid="12858" relation="include">
+        </childnode>
+        <childnode refid="12859" relation="include">
+        </childnode>
+        <childnode refid="12860" relation="include">
+        </childnode>
+        <childnode refid="12861" relation="include">
+        </childnode>
+      </node>
+      <node id="12856">
+        <label>network/basictypes.hpp</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_visibility_controller" prot="public">VisibilityController</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>VISIBILITY_CONTROLLER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VISIBILITY_CONTROLLER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;controller.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pyscript/script.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_visibility_controller" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_visibility_controller" kindref="compound">VisibilityController</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_controller" kindref="compound">Controller</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>DECLARE_CONTROLLER_TYPE(<sp/><ref refid="class_visibility_controller" kindref="compound">VisibilityController</ref><sp/>)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_visibility_controller_1a438a897ac185289c599bb5f4578b84ea" kindref="member">VisibilityController</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_visibility_controller_1acbf78ec563c767f1bf3594057599646c" kindref="member">visibleHeight</ref><sp/>=<sp/>2.f<sp/>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_visibility_controller_1ae93125bb7e88a9f7ba09c228450b15dd" kindref="member">~VisibilityController</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_visibility_controller_1a27e05faf93aa049d071313121631d63d" kindref="member">writeGhostToStream</ref>(<sp/>BinaryOStream<sp/>&amp;<sp/>stream<sp/>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_visibility_controller_1a24cfeb2867cc6f714def046be98265cf" kindref="member">readGhostFromStream</ref>(<sp/>BinaryIStream<sp/>&amp;<sp/>stream<sp/>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//virtual<sp/>void<sp/>writeRealToStream(<sp/>BinaryOStream&amp;<sp/>stream<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//virtual<sp/>bool<sp/>readRealFromStream(<sp/>BinaryIStream&amp;<sp/>stream<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_visibility_controller_1acbd8a65886fd1964c7ba0c7cdc37f1db" kindref="member">startGhost</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_visibility_controller_1aafb85363dcad7df507fdb943f2632dda" kindref="member">stopGhost</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_controller_1_1_factory_fn_ret" kindref="compound">FactoryFnRet</ref><sp/><ref refid="class_visibility_controller_1a7f681775f2e60eb2d41be556a83d5977" kindref="member">New</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_visibility_controller_1acbf78ec563c767f1bf3594057599646c" kindref="member">visibleHeight</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_controller_1aad8a489249dcc3b5edde468d05cb5c7f" kindref="member">userArg</ref><sp/>=<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>PY_AUTO_CONTROLLER_FACTORY_DECLARE(<sp/><ref refid="class_visibility_controller" kindref="compound">VisibilityController</ref>,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ARG(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">,<sp/>OPTARG(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>0,<sp/>END<sp/>)<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_visibility_controller_1acbf78ec563c767f1bf3594057599646c" kindref="member">visibleHeight</ref>()</highlight><highlight class="keyword"><sp/>const<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>visibleHeight_;<sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_visibility_controller_1acbf78ec563c767f1bf3594057599646c" kindref="member">visibleHeight</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>h<sp/>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>visibleHeight_;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>VISIBILITY_CONTROLLER_HPP</highlight></codeline>
+    </programlisting>
+    <location file="cellapp/visibility_controller.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1872 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_client_app" kind="class" language="C++" prot="public">
+    <compoundname>ClientApp</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">PyObjectPlusWithWeakReference</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">ServerConnectionHandler</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">BWEntityFactory</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">BWStreamDataHandler</basecompoundref>
+    <includes refid="client__app_8hpp" local="no">client_app.hpp</includes>
+    <innerclass refid="class_client_app_1_1_timer_rec" prot="private">ClientApp::TimerRec</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_client_app_1a21251937269099efa4b6c1349b5c6196" prot="private" static="no" mutable="no">
+        <type>std::auto_ptr&lt; BWServerConnection &gt;</type>
+        <definition>std::auto_ptr&lt; BWServerConnection &gt; ClientApp::pConnection_</definition>
+        <argsstring></argsstring>
+        <name>pConnection_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="140" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_app_1ad9af56b220436494bbfb94dbdc8bce45" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClientApp::isDestroyed_</definition>
+        <argsstring></argsstring>
+        <name>isDestroyed_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="142" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_app_1a090c9ffad6fe90b449368975d37d5e02" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClientApp::isDormant_</definition>
+        <argsstring></argsstring>
+        <name>isDormant_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="143" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_app_1a54f0b56b7a3f2ccd3401f3abd278750b" prot="private" static="no" mutable="no">
+        <type>uint64</type>
+        <definition>uint64 ClientApp::logOnRetryTime_</definition>
+        <argsstring></argsstring>
+        <name>logOnRetryTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="145" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_app_1a08b5e6ab8c80e41fd440f4799bdcb4b9" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string ClientApp::userName_</definition>
+        <argsstring></argsstring>
+        <name>userName_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="147" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_app_1a1b850880f3bee12f473c65fdae5dc277" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string ClientApp::userPasswd_</definition>
+        <argsstring></argsstring>
+        <name>userPasswd_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="148" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_app_1a501b7b70843739cf80ba240d5042394a" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string ClientApp::clientContext_</definition>
+        <argsstring></argsstring>
+        <name>clientContext_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="149" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_app_1a0f8b32b04600d48e209a3b72f6566854" prot="private" static="no" mutable="no">
+        <type>ConnectionTransport</type>
+        <definition>ConnectionTransport ClientApp::transport_</definition>
+        <argsstring></argsstring>
+        <name>transport_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="150" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_app_1a590a2bfcb81b9d5703c0fc69747f0357" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string ClientApp::tag_</definition>
+        <argsstring></argsstring>
+        <name>tag_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="152" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_app_1a17e62c16faf5ab0af5482cf79c4fedf7" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ClientApp::speed_</definition>
+        <argsstring></argsstring>
+        <name>speed_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="153" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_app_1aec270147eee2f4bd81225cfca3de0315" prot="private" static="no" mutable="no">
+        <type>std::auto_ptr&lt; <ref refid="class_movement_controller" kindref="compound">MovementController</ref> &gt;</type>
+        <definition>std::auto_ptr&lt; MovementController &gt; ClientApp::pMovementController_</definition>
+        <argsstring></argsstring>
+        <name>pMovementController_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="155" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_app_1a65c87b6298d09dc6d9c9331144742d55" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClientApp::autoMove_</definition>
+        <argsstring></argsstring>
+        <name>autoMove_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="156" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_app_1a0289cd22739ed8ecfb2d0a3ec267bea2" prot="private" static="no" mutable="no">
+        <type>std::auto_ptr&lt; Vector3 &gt;</type>
+        <definition>std::auto_ptr&lt; Vector3 &gt; ClientApp::pDest_</definition>
+        <argsstring></argsstring>
+        <name>pDest_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="157" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_app_1a799bd3ecf34055ef23736d58b2eb97dc" prot="private" static="no" mutable="no">
+        <type>ScriptObject</type>
+        <definition>ScriptObject ClientApp::entities_</definition>
+        <argsstring></argsstring>
+        <name>entities_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="159" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_app_1a37ed1b713cff2fda4ac07f8a2ca88ab4" prot="private" static="no" mutable="no">
+        <type>PySpacesPtr</type>
+        <definition>PySpacesPtr ClientApp::pPySpaces_</definition>
+        <argsstring></argsstring>
+        <name>pPySpaces_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="160" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_app_1a4a42d4841ad03946ce11e9a0f9b99168" prot="private" static="no" mutable="no">
+        <type>std::priority_queue&lt; TimerRec &gt;</type>
+        <definition>std::priority_queue&lt; TimerRec &gt; ClientApp::timerRecs_</definition>
+        <argsstring></argsstring>
+        <name>timerRecs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="205" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_app_1a03e83d2493d6b9b8a42bab1c95b0528e" prot="private" static="no" mutable="no">
+        <type>BW::list&lt; int &gt;</type>
+        <definition>BW::list&lt; int &gt; ClientApp::deletedTimerRecs_</definition>
+        <argsstring></argsstring>
+        <name>deletedTimerRecs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="206" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_client_app_1ab3f12aacec47fd04ac07b0eab45b4aa0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method destroys this <ref refid="class_client_app" kindref="compound">ClientApp</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="73" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="523" bodyend="551"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1abf7bbad184133b438b705f3d72994c55" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::logOn</definition>
+        <argsstring>()</argsstring>
+        <name>logOn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method logs on the client. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="76" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="563" bodyend="581"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1add62fc99d4c45b5a8f8b6cc0c3abfa68" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::logOff</definition>
+        <argsstring>()</argsstring>
+        <name>logOff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="77" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="584" bodyend="590"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a09063ce23bea37e7d4c5240890845385" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::dropConnection</definition>
+        <argsstring>()</argsstring>
+        <name>dropConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="78" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="593" bodyend="601"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a5f78c39b0dfd4ef3437e621645911032" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::setConnectionLossRatio</definition>
+        <argsstring>(float lossRatio)</argsstring>
+        <name>setConnectionLossRatio</name>
+        <param>
+          <type>float</type>
+          <declname>lossRatio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="79" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="604" bodyend="615"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1af90d9311b316698e897e07a787f2a005" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::setConnectionLatency</definition>
+        <argsstring>(float latencyMin, float latencyMax)</argsstring>
+        <name>setConnectionLatency</name>
+        <param>
+          <type>float</type>
+          <declname>latencyMin</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>latencyMax</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="80" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="618" bodyend="630"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a442bbd0c53dfa1fd0ad42681758566e0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::connectionSendTimeReportThreshold</definition>
+        <argsstring>(double threshold)</argsstring>
+        <name>connectionSendTimeReportThreshold</name>
+        <param>
+          <type>double</type>
+          <declname>threshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the sendTimeReportThreshold of our server connection. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="81" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="637" bodyend="640"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1ab1c41569d8db3e326a4d27be567648cd" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const BW::string &amp;</type>
+        <definition>const BW::string&amp; ClientApp::tag</definition>
+        <argsstring>() const </argsstring>
+        <name>tag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="84" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1ae2258625ce733a99510f8334783be7ce" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>EntityID</type>
+        <definition>EntityID ClientApp::id</definition>
+        <argsstring>() const </argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="85" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="648" bodyend="658"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1aa9bf8b3bff7436b023c07f633abbeb69" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SpaceID</type>
+        <definition>SpaceID ClientApp::spaceID</definition>
+        <argsstring>() const </argsstring>
+        <name>spaceID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="86" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="661" bodyend="671"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a28c00d704c71fb2341cc43b4a8362d1c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_entity" kindref="compound">Entity</ref> *</type>
+        <definition>Entity * ClientApp::pPlayerEntity</definition>
+        <argsstring>() const </argsstring>
+        <name>pPlayerEntity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="87" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="674" bodyend="677"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a207aae8fd4d6df6d82321d1f51344fce" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>ScriptObject</type>
+        <definition>ScriptObject ClientApp::player</definition>
+        <argsstring>() const </argsstring>
+        <name>player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="88" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="680" bodyend="684"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a78468e5bd13745fed7186523870f4b8f" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ClientApp::isPlayerMovable</definition>
+        <argsstring>() const </argsstring>
+        <name>isPlayerMovable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method indicates if this <ref refid="class_client_app" kindref="compound">ClientApp</ref> can generate movement updates for this entity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="89" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="691" bodyend="702"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a3ec72a01e3cc54f7192a9ab50d9eabb7" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ClientApp::canSetMovementController</definition>
+        <argsstring>() const </argsstring>
+        <name>canSetMovementController</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method indicates if a Movement <ref refid="class_controller" kindref="compound">Controller</ref> for this entity can be set. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="90" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="709" bodyend="719"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a09d5fd79cd518115eb16d3e4d41906f4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double ClientApp::clientTime</definition>
+        <argsstring>()</argsstring>
+        <name>clientTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="91" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="722" bodyend="725"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a3d769bfb9d81fb228b073230e7ef1ad3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double ClientApp::serverTime</definition>
+        <argsstring>()</argsstring>
+        <name>serverTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="92" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="728" bodyend="731"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a15c2555e5c97c88193aa8b8b7fbd5d63" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>BWConnection *</type>
+        <definition>BWConnection* ClientApp::pConnection</definition>
+        <argsstring>() const </argsstring>
+        <name>pConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="93" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1abf1c4726258d0f27553d995239132076" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64</type>
+        <definition>uint64 ClientApp::logOnRetryTime</definition>
+        <argsstring>() const </argsstring>
+        <name>logOnRetryTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="94" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="94" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1ab4987cf957be10bf21fff980488184a8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_py_spaces" kindref="compound">PySpaces</ref> *</type>
+        <definition>PySpaces * ClientApp::pPySpaces</definition>
+        <argsstring>()</argsstring>
+        <name>pPySpaces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="95" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="734" bodyend="737"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a26733d70bb9707f0d0e22065d28c3681" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ClientApp::setDefaultMovementController</definition>
+        <argsstring>()</argsstring>
+        <name>setDefaultMovementController</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets a new default movement controller for this bot. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="98" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="748" bodyend="770"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a29b6b7e8ada1d71374d255a770a2731d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ClientApp::setMovementController</definition>
+        <argsstring>(const BW::string &amp;type, const BW::string &amp;data)</argsstring>
+        <name>setMovementController</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets a new movement controller for this bot. On failure, the controller is left unchanged.</para><para><simplesect kind="return"><para>True on success, otherwise false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="99" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="779" bodyend="803"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a9408c4bd7bd16a9aac3edd8282e49707" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::moveTo</definition>
+        <argsstring>(const Position3D &amp;pos)</argsstring>
+        <name>moveTo</name>
+        <param>
+          <type>const Position3D &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="101" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="806" bodyend="825"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a7dd27c0614769db0cca0846d7eca5ee6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::faceTowards</definition>
+        <argsstring>(const Position3D &amp;pos)</argsstring>
+        <name>faceTowards</name>
+        <param>
+          <type>const Position3D &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="102" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="828" bodyend="840"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a97f7189811c808301b90962a612356ca" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::snapTo</definition>
+        <argsstring>(const Position3D &amp;pos)</argsstring>
+        <name>snapTo</name>
+        <param>
+          <type>const Position3D &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="103" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="103" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a0473e9c9c0df759ba507c548e69d0456" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ClientApp::isMoving</definition>
+        <argsstring>() const </argsstring>
+        <name>isMoving</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="104" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a99bdd5792ee17ac69075de1c529d9a33" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="105" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="843" bodyend="847"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a30dace64b8170dacda07b3f264e988ac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::position</definition>
+        <argsstring>(const Position3D &amp;pos)</argsstring>
+        <name>position</name>
+        <param>
+          <type>const Position3D &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the position of the client. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="108" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="858" bodyend="877"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a4c64f365d9af804c1e6eb2c6beb327d5" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const Position3D</type>
+        <definition>const Position3D ClientApp::position</definition>
+        <argsstring>() const </argsstring>
+        <name>position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method gets the position of the client. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="109" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="883" bodyend="894"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1aafb96d658b9544f914012dc9fddc53dc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::direction</definition>
+        <argsstring>(const Direction3D &amp;dir)</argsstring>
+        <name>direction</name>
+        <param>
+          <type>const Direction3D &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the direction of the client. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="111" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="900" bodyend="919"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a4f8aa8b61b79050fb0279d0b1ca70684" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const Direction3D</type>
+        <definition>const Direction3D ClientApp::direction</definition>
+        <argsstring>() const </argsstring>
+        <name>direction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method gets the direction of the client. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="112" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="925" bodyend="936"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1af5ac28e6627dff0244e53e3d1c72fa55" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::yaw</definition>
+        <argsstring>(float val)</argsstring>
+        <name>yaw</name>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the yaw of the client. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="114" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="951" bodyend="971"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a4ecaf0838545f97f10df8c6286b44f2b" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ClientApp::yaw</definition>
+        <argsstring>() const </argsstring>
+        <name>yaw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method gets the yaw of the client. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="115" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="942" bodyend="945"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a28a722e5be9488e216162a05991fd196" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::pitch</definition>
+        <argsstring>(float val)</argsstring>
+        <name>pitch</name>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the pitch of the client. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="117" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="986" bodyend="1006"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a7bdb9e4ce2ca9224d5feb746ea143bdb" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ClientApp::pitch</definition>
+        <argsstring>() const </argsstring>
+        <name>pitch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method gets the pitch of the client. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="118" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="977" bodyend="980"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a912fc0ca47aa9fb2afaca6a9f25b3a96" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::roll</definition>
+        <argsstring>(float val)</argsstring>
+        <name>roll</name>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the roll of the client. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="120" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="1021" bodyend="1041"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1ad9411ffc70c3339967db85c8eba15cbb" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ClientApp::roll</definition>
+        <argsstring>() const </argsstring>
+        <name>roll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method gets the roll of the client. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="121" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="1012" bodyend="1015"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a11cb61793546c051b2e1e9fbd013e64d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::updatePosition</definition>
+        <argsstring>(const Position3D &amp;pos, const Direction3D &amp;dir)</argsstring>
+        <name>updatePosition</name>
+        <param>
+          <type>const Position3D &amp;</type>
+          <declname>pos</declname>
+          <defname>position</defname>
+        </param>
+        <param>
+          <type>const Direction3D &amp;</type>
+          <declname>dir</declname>
+          <defname>direction</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the entity&apos;s position and direction. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="123" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="1047" bodyend="1059"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a51d31df394bad3520c29b64b325ac3ee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ClientApp::addTimer</definition>
+        <argsstring>(float interval, PyObjectPtr callback, bool repeat)</argsstring>
+        <name>addTimer</name>
+        <param>
+          <type>float</type>
+          <declname>interval</declname>
+        </param>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+          <declname>callback</declname>
+          <defname>pFunc</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>repeat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a timer for this bot. The callback will be executed during the next tick after the specified number of seconds has elapsed. The id of this timer is returned so it can be cancelled later on with delTimer() if desired. A negative return value indicates failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="126" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="1073" bodyend="1097"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1aa9842a5afa38ffd961efbba7bdfe7a40" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::delTimer</definition>
+        <argsstring>(int id)</argsstring>
+        <name>delTimer</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method deletes a timer for this bot. It actually just adds the timer ID to a list of timers to be ignored so when the timer finally expires its callback is not executed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="127" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="1104" bodyend="1111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1ab9c1e7e75168bfacc04669dae958e4b3" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ClientApp::isDestroyed</definition>
+        <argsstring>() const </argsstring>
+        <name>isDestroyed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="128" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="128" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1afc7d439596001531d2b669408f9ca81b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::~ClientApp</definition>
+        <argsstring>()</argsstring>
+        <name>~ClientApp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="133" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="422" bodyend="430"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a942c780463c64bbaa786dcae8df68eed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::addMove</definition>
+        <argsstring>(double time)</argsstring>
+        <name>addMove</name>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+          <defname>dTime</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends a movement message to the server. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="135" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="1122" bodyend="1152"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a9d5634a54d88751e8262401e9e1e942e" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * ClientApp::transportString</definition>
+        <argsstring>() const </argsstring>
+        <name>transportString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the transport name of server connection uses. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="136" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="1392" bodyend="1395"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1ac05d61e4d7a64678fe619bd2f7f7a1a8" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ClientApp::isOnline</definition>
+        <argsstring>() const </argsstring>
+        <name>isOnline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns whether or not the connection is active. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="137" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="1401" bodyend="1404"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a120e32f5b66fc11d3b9847e32e893402" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::processTimers</definition>
+        <argsstring>()</argsstring>
+        <name>processTimers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method processes any timers that have elapsed </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="207" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="1163" bodyend="1199"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1aab0c726d17d43ce0957da1d8cdd54cbf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_RO_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(this-&gt;id(), id)</argsstring>
+        <name>PY_RO_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>this-&gt;</type>
+          <declname>id</declname>
+          <array>()</array>
+        </param>
+        <param>
+          <type>id</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="210" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a89a7a1f37d649bd9be0fd92004d216d0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_RO_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(this-&gt;spaceID(), spaceID)</argsstring>
+        <name>PY_RO_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>this-&gt;</type>
+          <declname>spaceID</declname>
+          <array>()</array>
+        </param>
+        <param>
+          <type>spaceID</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="211" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1abf5a0314999896e8c765edded2c2ca7b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_RO_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(this-&gt;player(), player)</argsstring>
+        <name>PY_RO_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>this-&gt;</type>
+          <declname>player</declname>
+          <array>()</array>
+        </param>
+        <param>
+          <type>player</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="212" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a0878e2b92e2cd5632c47092011e455fd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_RO_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(userName_, loginName)</argsstring>
+        <name>PY_RO_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>userName_</type>
+        </param>
+        <param>
+          <type>loginName</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="213" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1aa9e104d9c5162ada0356604c9cccef5f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_RO_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(userPasswd_, loginPassword)</argsstring>
+        <name>PY_RO_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>userPasswd_</type>
+        </param>
+        <param>
+          <type>loginPassword</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="214" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a9835661c99f68c447ba34db30b58a492" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_RO_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(pConnection_-&gt;isOnline(), isOnline)</argsstring>
+        <name>PY_RO_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>pConnection_-&gt;</type>
+          <declname>isOnline</declname>
+          <array>()</array>
+        </param>
+        <param>
+          <type>isOnline</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="215" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a2b9c56e037d65d775444e7c64c15107b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_RO_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(transport_, transport)</argsstring>
+        <name>PY_RO_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>transport_</type>
+        </param>
+        <param>
+          <type>transport</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="216" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1aaad17744901f6ef94a681d793bb74a45" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_RO_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(isDestroyed_, isDestroyed)</argsstring>
+        <name>PY_RO_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>isDestroyed_</type>
+        </param>
+        <param>
+          <type>isDestroyed</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="217" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a3f785c76899d98f896b1d7d17cdf20c2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_RO_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(this-&gt;isMoving(), isMoving)</argsstring>
+        <name>PY_RO_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>this-&gt;</type>
+          <declname>isMoving</declname>
+          <array>()</array>
+        </param>
+        <param>
+          <type>isMoving</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="218" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1ab2ab821d2666a53133c18f57eaf60ed7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_RW_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(tag_, tag)</argsstring>
+        <name>PY_RW_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>tag_</type>
+        </param>
+        <param>
+          <type>tag</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="219" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a2042c7ce3f68002919f8fe594365cd1c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_RW_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(speed_, speed)</argsstring>
+        <name>PY_RW_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>speed_</type>
+        </param>
+        <param>
+          <type>speed</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="220" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a2d9fffe3787285eaa5aac71a6b19618c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_RW_ACCESSOR_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(Position3D, position, position)</argsstring>
+        <name>PY_RW_ACCESSOR_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>Position3D</type>
+        </param>
+        <param>
+          <type>position</type>
+        </param>
+        <param>
+          <type>position</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="221" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a1bd84ced78051070bc0e42a209edaca7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_RW_ACCESSOR_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(float, yaw, yaw)</argsstring>
+        <name>PY_RW_ACCESSOR_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>float</type>
+        </param>
+        <param>
+          <type>yaw</type>
+        </param>
+        <param>
+          <type>yaw</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="222" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a8b1836cbc23d4283da1fe5f22a6c902a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_RW_ACCESSOR_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(float, pitch, pitch)</argsstring>
+        <name>PY_RW_ACCESSOR_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>float</type>
+        </param>
+        <param>
+          <type>pitch</type>
+        </param>
+        <param>
+          <type>pitch</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="223" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1af157b71061a3da7ae5f3a8838a5ba4b1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_RW_ACCESSOR_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(float, roll, roll)</argsstring>
+        <name>PY_RW_ACCESSOR_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>float</type>
+        </param>
+        <param>
+          <type>roll</type>
+        </param>
+        <param>
+          <type>roll</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="224" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1af6dd4ce829d58a25ac7c4d95ee3a0a04" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_RW_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(autoMove_, autoMove)</argsstring>
+        <name>PY_RW_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>autoMove_</type>
+        </param>
+        <param>
+          <type>autoMove</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="225" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a373d18f58b5325e2b8364e1d25f4d675" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETVOID, logOn, END)</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETVOID</type>
+        </param>
+        <param>
+          <type>logOn</type>
+        </param>
+        <param>
+          <type>END</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="227" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a928ca03b222fb5ff68fc2a63719bc43e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETVOID, logOff, END)</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETVOID</type>
+        </param>
+        <param>
+          <type>logOff</type>
+        </param>
+        <param>
+          <type>END</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="228" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a68bbce4f1dbc7a6cd22e4e80a727d71c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETVOID, dropConnection, END)</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETVOID</type>
+        </param>
+        <param>
+          <type>dropConnection</type>
+        </param>
+        <param>
+          <type>END</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="229" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a3d98e4c2767d1542708bc35035a9faeb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETVOID, setConnectionLossRatio, ARG(float, END))</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETVOID</type>
+        </param>
+        <param>
+          <type>setConnectionLossRatio</type>
+        </param>
+        <param>
+          <type>ARG(float, END)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="230" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1ad36339ee359bd8f52d0b7238a63a2e0b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETVOID, setConnectionLatency, ARG(float, ARG(float, END)))</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETVOID</type>
+        </param>
+        <param>
+          <type>setConnectionLatency</type>
+        </param>
+        <param>
+          <type>ARG(float, ARG(float, END))</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="231" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a3723af96f7dc202a573668997f62c62c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETOK, setMovementController, ARG(BW::string, ARG(BW::string, END)))</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETOK</type>
+        </param>
+        <param>
+          <type>setMovementController</type>
+        </param>
+        <param>
+          <type>ARG(BW::string, ARG(BW::string, END))</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="233" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1ae31a5a31336b1d2b7e29bade1771ec00" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETVOID, moveTo, ARG(Vector3, END))</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETVOID</type>
+        </param>
+        <param>
+          <type>moveTo</type>
+        </param>
+        <param>
+          <type>ARG(Vector3, END)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="235" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a19d218b1d7d336dff77f550fbfacc03e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETVOID, faceTowards, ARG(Vector3, END))</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETVOID</type>
+        </param>
+        <param>
+          <type>faceTowards</type>
+        </param>
+        <param>
+          <type>ARG(Vector3, END)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="237" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1af462705aa0aefe573ba21fcef038babd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETVOID, snapTo, ARG(Vector3, END))</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETVOID</type>
+        </param>
+        <param>
+          <type>snapTo</type>
+        </param>
+        <param>
+          <type>ARG(Vector3, END)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="239" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a5e59f857eeb7156aa0fe4e12cfd4c8d8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETVOID, stop, END)</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETVOID</type>
+        </param>
+        <param>
+          <type>stop</type>
+        </param>
+        <param>
+          <type>END</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="241" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1acffbbb23dc1b18d32c75dad6ddac3be8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETDATA, addTimer, ARG(float, ARG(PyObjectPtr, ARG(bool, END))))</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETDATA</type>
+        </param>
+        <param>
+          <type>addTimer</type>
+        </param>
+        <param>
+          <type>ARG(float, ARG(<ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref>, ARG(bool, END)))</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="243" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a9cc4e6c47f51246c93e0688aa3e87c5b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETVOID, delTimer, ARG(int, END))</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETVOID</type>
+        </param>
+        <param>
+          <type>delTimer</type>
+        </param>
+        <param>
+          <type>ARG(int, END)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="245" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a8e45c7ea3c11d408d9be673d30a718ce" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETDATA, clientTime, END)</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETDATA</type>
+        </param>
+        <param>
+          <type>clientTime</type>
+        </param>
+        <param>
+          <type>END</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="248" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1ad0b681941b3d45a2943626d1e58efb8c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETDATA, serverTime, END)</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETDATA</type>
+        </param>
+        <param>
+          <type>serverTime</type>
+        </param>
+        <param>
+          <type>END</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="249" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1ae7deaed6cf2d534d43b7374880c66d0f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_RO_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(entities_, entities)</argsstring>
+        <name>PY_RO_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>entities_</type>
+        </param>
+        <param>
+          <type>entities</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="251" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a021e5ff137eb715a8c32557e98261296" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientApp::PY_RO_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(pPySpaces_, spaces)</argsstring>
+        <name>PY_RO_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>pPySpaces_</type>
+        </param>
+        <param>
+          <type>spaces</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="252" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1aa5708514e1cea0a26d329881b788b109" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::onLoggedOff</definition>
+        <argsstring>()</argsstring>
+        <name>onLoggedOff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called when we are logged off from the server. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="255" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="1210" bodyend="1246"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a759e63b14acea8d7832064ddc40af67f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::onLoggedOn</definition>
+        <argsstring>()</argsstring>
+        <name>onLoggedOn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="256" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="256" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a3bebd22b78cb70be7fc4fa759fafccfb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::onLogOnFailure</definition>
+        <argsstring>(const LogOnStatus &amp;status, const BW::string &amp;message)</argsstring>
+        <name>onLogOnFailure</name>
+        <param>
+          <type>const LogOnStatus &amp;</type>
+          <declname>status</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called when we fail to log into the server </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="257" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="1252" bodyend="1284"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1abe59afc3114d0f54548061a95680e5a8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BWEntity *</type>
+        <definition>BWEntity * ClientApp::doCreate</definition>
+        <argsstring>(EntityTypeID entityTypeID, BWConnection *pConnection)</argsstring>
+        <name>doCreate</name>
+        <param>
+          <type>EntityTypeID</type>
+          <declname>entityTypeID</declname>
+        </param>
+        <param>
+          <type>BWConnection *</type>
+          <declname>pConnection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="261" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="1292" bodyend="1313"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a862cb54ead073c6c9a72fb76ec955489" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BWSpace *</type>
+        <definition>BWSpace * ClientApp::doCreateSpace</definition>
+        <argsstring>(EntityTypeID spaceTypeID, BWConnection *pConnection)</argsstring>
+        <name>doCreateSpace</name>
+        <param>
+          <type>EntityTypeID</type>
+          <declname>spaceTypeID</declname>
+        </param>
+        <param>
+          <type>BWConnection *</type>
+          <declname>pConnection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="264" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="1316" bodyend="1330"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_app_1a883569b0415279a5f10de8604d50f1b0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClientApp::onStreamDataComplete</definition>
+        <argsstring>(uint16 streamID, const BW::string &amp;rDescription, BinaryIStream &amp;rData)</argsstring>
+        <name>onStreamDataComplete</name>
+        <param>
+          <type>uint16</type>
+          <declname>streamID</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>rDescription</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>rData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override from ServerMessageHandler, done for testing streaming downloads to multiple clients. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="268" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="1341" bodyend="1362"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_client_app_1a626b9fbdde5204c0d00c564b5b593838" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_smart_pointer" kindref="compound">WatcherPtr</ref></type>
+        <definition>WatcherPtr ClientApp::pWatcher</definition>
+        <argsstring>()</argsstring>
+        <name>pWatcher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the static Watcher associated with this class. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/client_app.hpp" line="130" column="1" bodyfile="tools/bots/client_app.cpp" bodystart="1368" bodyend="1386"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to hold a connection to the server. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="652">
+        <label>BWEntityFactory</label>
+      </node>
+      <node id="651">
+        <label>ServerConnectionHandler</label>
+      </node>
+      <node id="650">
+        <label>PyObjectPlusWithWeakReference</label>
+      </node>
+      <node id="649">
+        <label>ClientApp</label>
+        <link refid="class_client_app"/>
+        <childnode refid="650" relation="public-inheritance">
+        </childnode>
+        <childnode refid="651" relation="public-inheritance">
+        </childnode>
+        <childnode refid="652" relation="public-inheritance">
+        </childnode>
+        <childnode refid="653" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="653">
+        <label>BWStreamDataHandler</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="657">
+        <label>BWEntityFactory</label>
+      </node>
+      <node id="656">
+        <label>ServerConnectionHandler</label>
+      </node>
+      <node id="655">
+        <label>PyObjectPlusWithWeakReference</label>
+      </node>
+      <node id="654">
+        <label>ClientApp</label>
+        <link refid="class_client_app"/>
+        <childnode refid="655" relation="public-inheritance">
+        </childnode>
+        <childnode refid="656" relation="public-inheritance">
+        </childnode>
+        <childnode refid="657" relation="public-inheritance">
+        </childnode>
+        <childnode refid="658" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="658">
+        <label>BWStreamDataHandler</label>
+      </node>
+    </collaborationgraph>
+    <location file="tools/bots/client_app.hpp" line="62" column="1" bodyfile="tools/bots/client_app.hpp" bodystart="58" bodyend="270"/>
+    <listofallmembers>
+      <member refid="class_client_app_1a942c780463c64bbaa786dcae8df68eed" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>addMove</name></member>
+      <member refid="class_client_app_1a51d31df394bad3520c29b64b325ac3ee" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>addTimer</name></member>
+      <member refid="class_client_app_1a65c87b6298d09dc6d9c9331144742d55" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>autoMove_</name></member>
+      <member refid="class_client_app_1a3ec72a01e3cc54f7192a9ab50d9eabb7" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>canSetMovementController</name></member>
+      <member refid="class_client_app_1a501b7b70843739cf80ba240d5042394a" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>clientContext_</name></member>
+      <member refid="class_client_app_1a09d5fd79cd518115eb16d3e4d41906f4" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>clientTime</name></member>
+      <member refid="class_client_app_1a442bbd0c53dfa1fd0ad42681758566e0" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>connectionSendTimeReportThreshold</name></member>
+      <member refid="class_client_app_1a03e83d2493d6b9b8a42bab1c95b0528e" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>deletedTimerRecs_</name></member>
+      <member refid="class_client_app_1aa9842a5afa38ffd961efbba7bdfe7a40" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>delTimer</name></member>
+      <member refid="class_client_app_1ab3f12aacec47fd04ac07b0eab45b4aa0" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>destroy</name></member>
+      <member refid="class_client_app_1aafb96d658b9544f914012dc9fddc53dc" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>direction</name></member>
+      <member refid="class_client_app_1a4f8aa8b61b79050fb0279d0b1ca70684" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>direction</name></member>
+      <member refid="class_client_app_1abe59afc3114d0f54548061a95680e5a8" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>doCreate</name></member>
+      <member refid="class_client_app_1a862cb54ead073c6c9a72fb76ec955489" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>doCreateSpace</name></member>
+      <member refid="class_client_app_1a09063ce23bea37e7d4c5240890845385" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>dropConnection</name></member>
+      <member refid="class_client_app_1a799bd3ecf34055ef23736d58b2eb97dc" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>entities_</name></member>
+      <member refid="class_client_app_1a7dd27c0614769db0cca0846d7eca5ee6" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>faceTowards</name></member>
+      <member refid="class_client_app_1ae2258625ce733a99510f8334783be7ce" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>id</name></member>
+      <member refid="class_client_app_1ab9c1e7e75168bfacc04669dae958e4b3" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>isDestroyed</name></member>
+      <member refid="class_client_app_1ad9af56b220436494bbfb94dbdc8bce45" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>isDestroyed_</name></member>
+      <member refid="class_client_app_1a090c9ffad6fe90b449368975d37d5e02" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>isDormant_</name></member>
+      <member refid="class_client_app_1a0473e9c9c0df759ba507c548e69d0456" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>isMoving</name></member>
+      <member refid="class_client_app_1ac05d61e4d7a64678fe619bd2f7f7a1a8" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>isOnline</name></member>
+      <member refid="class_client_app_1a78468e5bd13745fed7186523870f4b8f" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>isPlayerMovable</name></member>
+      <member refid="class_client_app_1add62fc99d4c45b5a8f8b6cc0c3abfa68" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>logOff</name></member>
+      <member refid="class_client_app_1abf7bbad184133b438b705f3d72994c55" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>logOn</name></member>
+      <member refid="class_client_app_1abf1c4726258d0f27553d995239132076" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>logOnRetryTime</name></member>
+      <member refid="class_client_app_1a54f0b56b7a3f2ccd3401f3abd278750b" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>logOnRetryTime_</name></member>
+      <member refid="class_client_app_1a9408c4bd7bd16a9aac3edd8282e49707" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>moveTo</name></member>
+      <member refid="class_client_app_1aa5708514e1cea0a26d329881b788b109" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>onLoggedOff</name></member>
+      <member refid="class_client_app_1a759e63b14acea8d7832064ddc40af67f" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>onLoggedOn</name></member>
+      <member refid="class_client_app_1a3bebd22b78cb70be7fc4fa759fafccfb" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>onLogOnFailure</name></member>
+      <member refid="class_client_app_1a883569b0415279a5f10de8604d50f1b0" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>onStreamDataComplete</name></member>
+      <member refid="class_client_app_1a15c2555e5c97c88193aa8b8b7fbd5d63" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>pConnection</name></member>
+      <member refid="class_client_app_1a21251937269099efa4b6c1349b5c6196" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>pConnection_</name></member>
+      <member refid="class_client_app_1a0289cd22739ed8ecfb2d0a3ec267bea2" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>pDest_</name></member>
+      <member refid="class_client_app_1a28a722e5be9488e216162a05991fd196" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>pitch</name></member>
+      <member refid="class_client_app_1a7bdb9e4ce2ca9224d5feb746ea143bdb" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>pitch</name></member>
+      <member refid="class_client_app_1a207aae8fd4d6df6d82321d1f51344fce" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>player</name></member>
+      <member refid="class_client_app_1aec270147eee2f4bd81225cfca3de0315" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>pMovementController_</name></member>
+      <member refid="class_client_app_1a30dace64b8170dacda07b3f264e988ac" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>position</name></member>
+      <member refid="class_client_app_1a4c64f365d9af804c1e6eb2c6beb327d5" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>position</name></member>
+      <member refid="class_client_app_1a28c00d704c71fb2341cc43b4a8362d1c" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>pPlayerEntity</name></member>
+      <member refid="class_client_app_1ab4987cf957be10bf21fff980488184a8" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>pPySpaces</name></member>
+      <member refid="class_client_app_1a37ed1b713cff2fda4ac07f8a2ca88ab4" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>pPySpaces_</name></member>
+      <member refid="class_client_app_1a120e32f5b66fc11d3b9847e32e893402" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>processTimers</name></member>
+      <member refid="class_client_app_1a626b9fbdde5204c0d00c564b5b593838" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>pWatcher</name></member>
+      <member refid="class_client_app_1a373d18f58b5325e2b8364e1d25f4d675" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_client_app_1a928ca03b222fb5ff68fc2a63719bc43e" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_client_app_1a68bbce4f1dbc7a6cd22e4e80a727d71c" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_client_app_1a3d98e4c2767d1542708bc35035a9faeb" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_client_app_1ad36339ee359bd8f52d0b7238a63a2e0b" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_client_app_1a3723af96f7dc202a573668997f62c62c" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_client_app_1ae31a5a31336b1d2b7e29bade1771ec00" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_client_app_1a19d218b1d7d336dff77f550fbfacc03e" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_client_app_1af462705aa0aefe573ba21fcef038babd" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_client_app_1a5e59f857eeb7156aa0fe4e12cfd4c8d8" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_client_app_1acffbbb23dc1b18d32c75dad6ddac3be8" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_client_app_1a9cc4e6c47f51246c93e0688aa3e87c5b" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_client_app_1a8e45c7ea3c11d408d9be673d30a718ce" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_client_app_1ad0b681941b3d45a2943626d1e58efb8c" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_client_app_1aab0c726d17d43ce0957da1d8cdd54cbf" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_RO_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_app_1a89a7a1f37d649bd9be0fd92004d216d0" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_RO_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_app_1abf5a0314999896e8c765edded2c2ca7b" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_RO_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_app_1a0878e2b92e2cd5632c47092011e455fd" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_RO_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_app_1aa9e104d9c5162ada0356604c9cccef5f" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_RO_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_app_1a9835661c99f68c447ba34db30b58a492" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_RO_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_app_1a2b9c56e037d65d775444e7c64c15107b" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_RO_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_app_1aaad17744901f6ef94a681d793bb74a45" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_RO_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_app_1a3f785c76899d98f896b1d7d17cdf20c2" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_RO_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_app_1ae7deaed6cf2d534d43b7374880c66d0f" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_RO_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_app_1a021e5ff137eb715a8c32557e98261296" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_RO_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_app_1a2d9fffe3787285eaa5aac71a6b19618c" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_RW_ACCESSOR_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_app_1a1bd84ced78051070bc0e42a209edaca7" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_RW_ACCESSOR_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_app_1a8b1836cbc23d4283da1fe5f22a6c902a" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_RW_ACCESSOR_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_app_1af157b71061a3da7ae5f3a8838a5ba4b1" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_RW_ACCESSOR_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_app_1ab2ab821d2666a53133c18f57eaf60ed7" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_RW_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_app_1a2042c7ce3f68002919f8fe594365cd1c" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_RW_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_app_1af6dd4ce829d58a25ac7c4d95ee3a0a04" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>PY_RW_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_app_1a912fc0ca47aa9fb2afaca6a9f25b3a96" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>roll</name></member>
+      <member refid="class_client_app_1ad9411ffc70c3339967db85c8eba15cbb" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>roll</name></member>
+      <member refid="class_client_app_1a3d769bfb9d81fb228b073230e7ef1ad3" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>serverTime</name></member>
+      <member refid="class_client_app_1af90d9311b316698e897e07a787f2a005" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>setConnectionLatency</name></member>
+      <member refid="class_client_app_1a5f78c39b0dfd4ef3437e621645911032" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>setConnectionLossRatio</name></member>
+      <member refid="class_client_app_1a26733d70bb9707f0d0e22065d28c3681" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>setDefaultMovementController</name></member>
+      <member refid="class_client_app_1a29b6b7e8ada1d71374d255a770a2731d" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>setMovementController</name></member>
+      <member refid="class_client_app_1a97f7189811c808301b90962a612356ca" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>snapTo</name></member>
+      <member refid="class_client_app_1aa9bf8b3bff7436b023c07f633abbeb69" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>spaceID</name></member>
+      <member refid="class_client_app_1a17e62c16faf5ab0af5482cf79c4fedf7" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>speed_</name></member>
+      <member refid="class_client_app_1a99bdd5792ee17ac69075de1c529d9a33" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>stop</name></member>
+      <member refid="class_client_app_1ab1c41569d8db3e326a4d27be567648cd" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>tag</name></member>
+      <member refid="class_client_app_1a590a2bfcb81b9d5703c0fc69747f0357" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>tag_</name></member>
+      <member refid="class_client_app_1a4a42d4841ad03946ce11e9a0f9b99168" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>timerRecs_</name></member>
+      <member refid="class_client_app_1a0f8b32b04600d48e209a3b72f6566854" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>transport_</name></member>
+      <member refid="class_client_app_1a9d5634a54d88751e8262401e9e1e942e" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>transportString</name></member>
+      <member refid="class_client_app_1a11cb61793546c051b2e1e9fbd013e64d" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>updatePosition</name></member>
+      <member refid="class_client_app_1a08b5e6ab8c80e41fd440f4799bdcb4b9" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>userName_</name></member>
+      <member refid="class_client_app_1a1b850880f3bee12f473c65fdae5dc277" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>userPasswd_</name></member>
+      <member refid="class_client_app_1af5ac28e6627dff0244e53e3d1c72fa55" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>yaw</name></member>
+      <member refid="class_client_app_1a4ecaf0838545f97f10df8c6286b44f2b" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>yaw</name></member>
+      <member refid="class_client_app_1afc7d439596001531d2b669408f9ca81b" prot="private" virt="non-virtual"><scope>ClientApp</scope><name>~ClientApp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

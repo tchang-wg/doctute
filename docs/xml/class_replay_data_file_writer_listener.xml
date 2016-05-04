@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_replay_data_file_writer_listener" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ReplayDataFileWriterListener</compoundname>
+    <derivedcompoundref refid="class_py_replay_data_file_writer_listener" prot="public" virt="non-virtual">PyReplayDataFileWriterListener</derivedcompoundref>
+    <includes refid="replay__data__file__writer_8hpp" local="no">replay_data_file_writer.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_replay_data_file_writer_listener_1aa07a39fbffd1622c434b7b7321f63f85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ReplayDataFileWriterListener::~ReplayDataFileWriterListener</definition>
+        <argsstring>()</argsstring>
+        <name>~ReplayDataFileWriterListener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/replay_data_file_writer.hpp" line="66" column="1" bodyfile="baseapp/replay_data_file_writer.hpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_replay_data_file_writer_listener_1a754adc5b413b5c7921ad17b516c5938d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ReplayDataFileWriterListener::onReplayDataFileWriterDestroyed</definition>
+        <argsstring>(ReplayDataFileWriter &amp;writer)=0</argsstring>
+        <name>onReplayDataFileWriterDestroyed</name>
+        <reimplementedby refid="class_py_replay_data_file_writer_listener_1a24ca452dcde6272b6e7067655614342b">onReplayDataFileWriterDestroyed</reimplementedby>
+        <param>
+          <type><ref refid="class_replay_data_file_writer" kindref="compound">ReplayDataFileWriter</ref> &amp;</type>
+          <declname>writer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called when the given writer is destroyed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/replay_data_file_writer.hpp" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_replay_data_file_writer_listener_1ae3db54f8438a45d40c59bfef6cdfea3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ReplayDataFileWriterListener::onReplayDataFileWritingError</definition>
+        <argsstring>(ReplayDataFileWriter &amp;writer)=0</argsstring>
+        <name>onReplayDataFileWritingError</name>
+        <reimplementedby refid="class_py_replay_data_file_writer_listener_1ac77aebffa3ea003347c6b99469853446">onReplayDataFileWritingError</reimplementedby>
+        <param>
+          <type><ref refid="class_replay_data_file_writer" kindref="compound">ReplayDataFileWriter</ref> &amp;</type>
+          <declname>writer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a file writing error in the given file writer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/replay_data_file_writer.hpp" line="77" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_replay_data_file_writer_listener_1a85b02097b9f7d2514f59c89a47bd18bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ReplayDataFileWriterListener::onReplayDataFileWritingComplete</definition>
+        <argsstring>(ReplayDataFileWriter &amp;writer)=0</argsstring>
+        <name>onReplayDataFileWritingComplete</name>
+        <reimplementedby refid="class_py_replay_data_file_writer_listener_1a70bfa00c0c9084cc1dca9b8410241dfd">onReplayDataFileWritingComplete</reimplementedby>
+        <param>
+          <type><ref refid="class_replay_data_file_writer" kindref="compound">ReplayDataFileWriter</ref> &amp;</type>
+          <declname>writer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called to handle when the file writing is completed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/replay_data_file_writer.hpp" line="83" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This interface is used for handling events from a <ref refid="class_replay_data_file_writer" kindref="compound">ReplayDataFileWriter</ref> instance. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2414">
+        <label>PyReplayDataFileWriterListener</label>
+        <link refid="class_py_replay_data_file_writer_listener"/>
+        <childnode refid="2413" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2413">
+        <label>ReplayDataFileWriterListener</label>
+        <link refid="class_replay_data_file_writer_listener"/>
+      </node>
+    </inheritancegraph>
+    <location file="baseapp/replay_data_file_writer.hpp" line="63" column="1" bodyfile="baseapp/replay_data_file_writer.hpp" bodystart="62" bodyend="85"/>
+    <listofallmembers>
+      <member refid="class_replay_data_file_writer_listener_1a754adc5b413b5c7921ad17b516c5938d" prot="public" virt="pure-virtual"><scope>ReplayDataFileWriterListener</scope><name>onReplayDataFileWriterDestroyed</name></member>
+      <member refid="class_replay_data_file_writer_listener_1a85b02097b9f7d2514f59c89a47bd18bb" prot="public" virt="pure-virtual"><scope>ReplayDataFileWriterListener</scope><name>onReplayDataFileWritingComplete</name></member>
+      <member refid="class_replay_data_file_writer_listener_1ae3db54f8438a45d40c59bfef6cdfea3e" prot="public" virt="pure-virtual"><scope>ReplayDataFileWriterListener</scope><name>onReplayDataFileWritingError</name></member>
+      <member refid="class_replay_data_file_writer_listener_1aa07a39fbffd1622c434b7b7321f63f85" prot="public" virt="virtual"><scope>ReplayDataFileWriterListener</scope><name>~ReplayDataFileWriterListener</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

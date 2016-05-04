@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_transfer_d_b" kind="class" language="C++" prot="public">
+    <compoundname>TransferDB</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Singleton&lt; TransferDB &gt;</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_transfer_d_b_1a6723ee70449bde907ccbfa58135ec370" prot="private" static="no" mutable="no">
+        <type>std::auto_ptr&lt; Mercury::EventDispatcher &gt;</type>
+        <definition>std::auto_ptr&lt; Mercury::EventDispatcher &gt; TransferDB::pEventDispatcher_</definition>
+        <argsstring></argsstring>
+        <name>pEventDispatcher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/transfer_db.hpp" line="49" column="1" bodyfile="tools/transfer_db/transfer_db.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_transfer_d_b_1af882ec7e3d6f90b99ddc4a974470d8e3" prot="private" static="no" mutable="no">
+        <type>std::auto_ptr&lt; WatcherNub &gt;</type>
+        <definition>std::auto_ptr&lt; WatcherNub &gt; TransferDB::pWatcherNub_</definition>
+        <argsstring></argsstring>
+        <name>pWatcherNub_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/transfer_db.hpp" line="51" column="1" bodyfile="tools/transfer_db/transfer_db.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_transfer_d_b_1a1b8fb244b7b846a50ef3225207532b81" prot="private" static="no" mutable="no">
+        <type>std::auto_ptr&lt; LoggerMessageForwarder &gt;</type>
+        <definition>std::auto_ptr&lt; LoggerMessageForwarder &gt; TransferDB::pLoggerMessageForwarder_</definition>
+        <argsstring></argsstring>
+        <name>pLoggerMessageForwarder_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/transfer_db.hpp" line="53" column="1" bodyfile="tools/transfer_db/transfer_db.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_transfer_d_b_1afc4b1af938a13fbba941448ec662e0fa" prot="private" static="no" mutable="no">
+        <type>const BWMachineDNetwork *</type>
+        <definition>const BWMachineDNetwork* TransferDB::pBWMachineD_</definition>
+        <argsstring></argsstring>
+        <name>pBWMachineD_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/transfer_db.hpp" line="55" column="1" bodyfile="tools/transfer_db/transfer_db.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_transfer_d_b_1a7388b1092ff591b5b50b344e38bee6ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE TransferDB::TransferDB</definition>
+        <argsstring>(const BWMachineDNetwork *pBWMachineD)</argsstring>
+        <name>TransferDB</name>
+        <param>
+          <type>const BWMachineDNetwork *</type>
+          <declname>pBWMachineD</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/transfer_db.hpp" line="21" column="1" bodyfile="tools/transfer_db/transfer_db.cpp" bodystart="33" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transfer_d_b_1a6e0b92607eb524ddd82eb83424779c62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TransferDB::~TransferDB</definition>
+        <argsstring>()</argsstring>
+        <name>~TransferDB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/transfer_db.hpp" line="22" column="1" bodyfile="tools/transfer_db/transfer_db.cpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transfer_d_b_1ace42dbfa8d5f2d37f4a0d6c9d3d0d785" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TransferDB::init</definition>
+        <argsstring>(bool isVerbose)</argsstring>
+        <name>init</name>
+        <param>
+          <type>bool</type>
+          <declname>isVerbose</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/transfer_db.hpp" line="24" column="1" bodyfile="tools/transfer_db/transfer_db.cpp" bodystart="54" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transfer_d_b_1aed4a9681a8994cac756af6cb39a23a77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TransferDB::consolidate</definition>
+        <argsstring>(BW::string secondaryDB, BW::string sendToAddr)</argsstring>
+        <name>consolidate</name>
+        <param>
+          <type>BW::string</type>
+          <declname>secondaryDB</declname>
+        </param>
+        <param>
+          <type>BW::string</type>
+          <declname>sendToAddr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is a simple wrapper to handle the command line arguments for the &apos;consolidate&apos; command and pass them through to the <ref refid="class_consolidate" kindref="compound">Consolidate</ref> class. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/transfer_db.hpp" line="27" column="1" bodyfile="tools/transfer_db/transfer_db.cpp" bodystart="129" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transfer_d_b_1ad2ddb5aca396bb62f36f01bfa33f2841" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TransferDB::snapshotPrimary</definition>
+        <argsstring>(BW::string destinationIP, BW::string destinationPath, BW::string limitKbps)</argsstring>
+        <name>snapshotPrimary</name>
+        <param>
+          <type>BW::string</type>
+          <declname>destinationIP</declname>
+        </param>
+        <param>
+          <type>BW::string</type>
+          <declname>destinationPath</declname>
+        </param>
+        <param>
+          <type>BW::string</type>
+          <declname>limitKbps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/transfer_db.hpp" line="29" column="1" bodyfile="tools/transfer_db/transfer_db.cpp" bodystart="170" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transfer_d_b_1a8f3d436f12caaee02e4869b966a74801" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TransferDB::snapshotSecondary</definition>
+        <argsstring>(BW::string secondaryDB, BW::string destinationIP, BW::string destinationPath, BW::string limitKbps)</argsstring>
+        <name>snapshotSecondary</name>
+        <param>
+          <type>BW::string</type>
+          <declname>secondaryDB</declname>
+        </param>
+        <param>
+          <type>BW::string</type>
+          <declname>destinationIP</declname>
+        </param>
+        <param>
+          <type>BW::string</type>
+          <declname>destinationPath</declname>
+        </param>
+        <param>
+          <type>BW::string</type>
+          <declname>limitKbps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/transfer_db.hpp" line="32" column="1" bodyfile="tools/transfer_db/transfer_db.cpp" bodystart="196" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transfer_d_b_1afce0cbf592cf22fc3f7481e0be475d26" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Mercury::EventDispatcher &amp;</type>
+        <definition>Mercury::EventDispatcher&amp; TransferDB::dispatcher</definition>
+        <argsstring>()</argsstring>
+        <name>dispatcher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/transfer_db.hpp" line="37" column="1" bodyfile="tools/transfer_db/transfer_db.hpp" bodystart="37" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transfer_d_b_1aca102c262fe3c5cfb625519cdb166575" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TransferDB::onChildAboutToExec</definition>
+        <argsstring>()</argsstring>
+        <name>onChildAboutToExec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called from a child process to close all the sockets and file descriptors that were opened in the parent. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/transfer_db.hpp" line="42" column="1" bodyfile="tools/transfer_db/transfer_db.cpp" bodystart="71" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_transfer_d_b_1a23b92e4574a13634db802d2314c5ca69" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TransferDB::initLogger</definition>
+        <argsstring>(const char *appName, const BW::string &amp;loggerID, bool isVerbose)</argsstring>
+        <name>initLogger</name>
+        <param>
+          <type>const char *</type>
+          <declname>appName</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>loggerID</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isVerbose</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/transfer_db.hpp" line="45" column="1" bodyfile="tools/transfer_db/transfer_db.cpp" bodystart="83" bodyend="122"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2967">
+        <label>TransferDB</label>
+        <link refid="class_transfer_d_b"/>
+        <childnode refid="2968" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2968">
+        <label>Singleton&lt; TransferDB &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2969">
+        <label>TransferDB</label>
+        <link refid="class_transfer_d_b"/>
+        <childnode refid="2970" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2970">
+        <label>Singleton&lt; TransferDB &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="tools/transfer_db/transfer_db.hpp" line="19" column="1" bodyfile="tools/transfer_db/transfer_db.hpp" bodystart="18" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_transfer_d_b_1aed4a9681a8994cac756af6cb39a23a77" prot="public" virt="non-virtual"><scope>TransferDB</scope><name>consolidate</name></member>
+      <member refid="class_transfer_d_b_1afce0cbf592cf22fc3f7481e0be475d26" prot="public" virt="non-virtual"><scope>TransferDB</scope><name>dispatcher</name></member>
+      <member refid="class_transfer_d_b_1ace42dbfa8d5f2d37f4a0d6c9d3d0d785" prot="public" virt="non-virtual"><scope>TransferDB</scope><name>init</name></member>
+      <member refid="class_transfer_d_b_1a23b92e4574a13634db802d2314c5ca69" prot="private" virt="non-virtual"><scope>TransferDB</scope><name>initLogger</name></member>
+      <member refid="class_transfer_d_b_1aca102c262fe3c5cfb625519cdb166575" prot="public" virt="non-virtual"><scope>TransferDB</scope><name>onChildAboutToExec</name></member>
+      <member refid="class_transfer_d_b_1afc4b1af938a13fbba941448ec662e0fa" prot="private" virt="non-virtual"><scope>TransferDB</scope><name>pBWMachineD_</name></member>
+      <member refid="class_transfer_d_b_1a6723ee70449bde907ccbfa58135ec370" prot="private" virt="non-virtual"><scope>TransferDB</scope><name>pEventDispatcher_</name></member>
+      <member refid="class_transfer_d_b_1a1b8fb244b7b846a50ef3225207532b81" prot="private" virt="non-virtual"><scope>TransferDB</scope><name>pLoggerMessageForwarder_</name></member>
+      <member refid="class_transfer_d_b_1af882ec7e3d6f90b99ddc4a974470d8e3" prot="private" virt="non-virtual"><scope>TransferDB</scope><name>pWatcherNub_</name></member>
+      <member refid="class_transfer_d_b_1ad2ddb5aca396bb62f36f01bfa33f2841" prot="public" virt="non-virtual"><scope>TransferDB</scope><name>snapshotPrimary</name></member>
+      <member refid="class_transfer_d_b_1a8f3d436f12caaee02e4869b966a74801" prot="public" virt="non-virtual"><scope>TransferDB</scope><name>snapshotSecondary</name></member>
+      <member refid="class_transfer_d_b_1a7388b1092ff591b5b50b344e38bee6ec" prot="public" virt="non-virtual"><scope>TransferDB</scope><name>TransferDB</name></member>
+      <member refid="class_transfer_d_b_1a6e0b92607eb524ddd82eb83424779c62" prot="public" virt="non-virtual"><scope>TransferDB</scope><name>~TransferDB</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

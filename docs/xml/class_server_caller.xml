@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_server_caller" kind="class" language="C++" prot="public">
+    <compoundname>ServerCaller</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">PyObjectPlus</basecompoundref>
+    <basecompoundref refid="class_server_entity_mail_box" prot="public" virt="non-virtual">ServerEntityMailBox</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_server_caller_1a099a30947f8fbbff79771558e9523dc2" prot="private" static="no" mutable="no">
+        <type>PyEntityWPtr</type>
+        <definition>PyEntityWPtr ServerCaller::wpPyEntity_</definition>
+        <argsstring></argsstring>
+        <name>wpPyEntity_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/py_server.cpp" line="65" column="1" bodyfile="tools/bots/py_server.cpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_server_caller_1a46633a8980b9d318232254041b730370" prot="private" static="no" mutable="no">
+        <type>const MethodDescription *</type>
+        <definition>const MethodDescription* ServerCaller::pDescription_</definition>
+        <argsstring></argsstring>
+        <name>pDescription_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/py_server.cpp" line="66" column="1" bodyfile="tools/bots/py_server.cpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_server_caller_1a1b1623b4232e4fed81c9ebda79caac20" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ServerCaller::isProxyCaller_</definition>
+        <argsstring></argsstring>
+        <name>isProxyCaller_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/py_server.cpp" line="67" column="1" bodyfile="tools/bots/py_server.cpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_server_caller_1a7ebfb5436b4afb6d77385c23ac3d321e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ServerCaller::Py_Header</definition>
+        <argsstring>(ServerCaller, PyObjectPlus)</argsstring>
+        <name>Py_Header</name>
+        <param>
+          <type><ref refid="class_server_caller" kindref="compound">ServerCaller</ref></type>
+        </param>
+        <param>
+          <type>PyObjectPlus</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/py_server.cpp" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_caller_1a976cb88c04902871a885ef31916dda56" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_entity" kindref="compound">Entity</ref> *</type>
+        <definition>Entity * ServerCaller::pEntity</definition>
+        <argsstring>() const </argsstring>
+        <name>pEntity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method gets an <ref refid="class_entity" kindref="compound">Entity</ref> from our weak <ref refid="class_py_entity" kindref="compound">PyEntity</ref> pointer if it is valid. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/py_server.cpp" line="63" column="1" bodyfile="tools/bots/py_server.cpp" bodystart="141" bodyend="148"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_server_caller_1aab7b6051eb0225666cbd9e8e49c46683" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ServerCaller::ServerCaller</definition>
+        <argsstring>(PyEntity *pPyEntity, const MethodDescription *pDescription, bool isProxyCaller, PyTypeObject *pType=&amp;ServerCaller::s_type_)</argsstring>
+        <name>ServerCaller</name>
+        <param>
+          <type><ref refid="class_py_entity" kindref="compound">PyEntity</ref> *</type>
+          <declname>pPyEntity</declname>
+        </param>
+        <param>
+          <type>const MethodDescription *</type>
+          <declname>pDescription</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isProxyCaller</declname>
+        </param>
+        <param>
+          <type>PyTypeObject *</type>
+          <declname>pType</declname>
+          <defval>&amp;ServerCaller::s_type_</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This constructor is used to initialise a <ref refid="class_server_caller" kindref="compound">ServerCaller</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity the method is being called on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pDescription</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The description associated with the method to call. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isProxyCaller</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True for calling the base, false for the cell. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The derived Python type. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/py_server.cpp" line="42" column="1" bodyfile="tools/bots/py_server.cpp" bodystart="42" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_caller_1a8bd82074eb3e181897ef1cb156ef2766" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ServerCaller::~ServerCaller</definition>
+        <argsstring>()</argsstring>
+        <name>~ServerCaller</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/py_server.cpp" line="56" column="1" bodyfile="tools/bots/py_server.cpp" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_caller_1a18b3c0113b4435b609a0054804d734aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ServerCaller::PY_METHOD_DECLARE</definition>
+        <argsstring>(pyCall)</argsstring>
+        <name>PY_METHOD_DECLARE</name>
+        <param>
+          <type>pyCall</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/py_server.cpp" line="60" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements a simple helper Python type. Objects of this type are used to represent methods that the client can call on the server. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2586">
+        <label>ServerCaller</label>
+        <link refid="class_server_caller"/>
+        <childnode refid="2587" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2588" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2589">
+        <label>PyEntityMailBox</label>
+      </node>
+      <node id="2588">
+        <label>ServerEntityMailBox</label>
+        <link refid="class_server_entity_mail_box"/>
+        <childnode refid="2589" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2589" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2587">
+        <label>PyObjectPlus</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2590">
+        <label>ServerCaller</label>
+        <link refid="class_server_caller"/>
+        <childnode refid="2591" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2592" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2593">
+        <label>PyEntityMailBox</label>
+      </node>
+      <node id="2592">
+        <label>ServerEntityMailBox</label>
+        <link refid="class_server_entity_mail_box"/>
+        <childnode refid="2593" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2593" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2594" relation="usage">
+          <edgelabel>pLocalType_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2591">
+        <label>PyObjectPlus</label>
+      </node>
+      <node id="2594">
+        <label>SmartPointer&lt; EntityType &gt;</label>
+        <link refid="class_smart_pointer"/>
+      </node>
+    </collaborationgraph>
+    <location file="tools/bots/py_server.cpp" line="30" column="1" bodyfile="tools/bots/py_server.cpp" bodystart="29" bodyend="68"/>
+    <listofallmembers>
+      <member refid="class_server_entity_mail_box_1a37fa9fde4551bda091d33eed21013963" prot="protected" virt="non-virtual"><scope>ServerCaller</scope><name>addr_</name></member>
+      <member refid="class_server_entity_mail_box_1aa74a6727a32255a12afd670896ca0ebf" prot="protected" virt="non-virtual"><scope>ServerCaller</scope><name>clusterID_</name></member>
+      <member refid="class_server_entity_mail_box_1aac93f482e4dc14b9f2ae55281e45c090" prot="protected" virt="pure-virtual"><scope>ServerCaller</scope><name>getStreamEx</name></member>
+      <member refid="class_server_entity_mail_box_1a08d188a0e07455f51514799fac1f92da" prot="protected" virt="non-virtual"><scope>ServerCaller</scope><name>id_</name></member>
+      <member refid="class_server_caller_1a1b1623b4232e4fed81c9ebda79caac20" prot="private" virt="non-virtual"><scope>ServerCaller</scope><name>isProxyCaller_</name></member>
+      <member refid="class_server_caller_1a46633a8980b9d318232254041b730370" prot="private" virt="non-virtual"><scope>ServerCaller</scope><name>pDescription_</name></member>
+      <member refid="class_server_caller_1a976cb88c04902871a885ef31916dda56" prot="private" virt="non-virtual"><scope>ServerCaller</scope><name>pEntity</name></member>
+      <member refid="class_server_entity_mail_box_1af95a74119a60168567696de3372410c9" prot="protected" virt="non-virtual"><scope>ServerCaller</scope><name>pLocalType_</name></member>
+      <member refid="class_server_caller_1a7ebfb5436b4afb6d77385c23ac3d321e" prot="private" virt="non-virtual"><scope>ServerCaller</scope><name>Py_Header</name></member>
+      <member refid="class_server_caller_1a18b3c0113b4435b609a0054804d734aa" prot="public" virt="non-virtual"><scope>ServerCaller</scope><name>PY_METHOD_DECLARE</name></member>
+      <member refid="class_server_caller_1aab7b6051eb0225666cbd9e8e49c46683" prot="public" virt="non-virtual"><scope>ServerCaller</scope><name>ServerCaller</name></member>
+      <member refid="class_server_caller_1a099a30947f8fbbff79771558e9523dc2" prot="private" virt="non-virtual"><scope>ServerCaller</scope><name>wpPyEntity_</name></member>
+      <member refid="class_server_caller_1a8bd82074eb3e181897ef1cb156ef2766" prot="public" virt="non-virtual"><scope>ServerCaller</scope><name>~ServerCaller</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

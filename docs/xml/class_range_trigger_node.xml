@@ -1,0 +1,688 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_range_trigger_node" kind="class" language="C++" prot="public">
+    <compoundname>RangeTriggerNode</compoundname>
+    <basecompoundref refid="class_range_list_node" prot="public" virt="non-virtual">RangeListNode</basecompoundref>
+    <includes refid="range__trigger_8hpp" local="no">range_trigger.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_range_trigger_node_1a5230b7106f0435c531b04331e219bc6c" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_range_trigger" kindref="compound">RangeTrigger</ref> *</type>
+        <definition>RangeTrigger* RangeTriggerNode::pRange_</definition>
+        <argsstring></argsstring>
+        <name>pRange_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="54" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_range_trigger_node_1a4fc1c32ca5bc9b3f7ead9b5cb0b64208" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RangeTriggerNode::range_</definition>
+        <argsstring></argsstring>
+        <name>range_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="55" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_range_trigger_node_1a4e95638ac2303bd72cce9939d0978f03" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RangeTriggerNode::oldRange_</definition>
+        <argsstring></argsstring>
+        <name>oldRange_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="56" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_range_trigger_node_1a5bc47e3b0b77b5b66d0e8e4f0ee68a27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE RangeTriggerNode::RangeTriggerNode</definition>
+        <argsstring>(RangeTrigger *pRangeTrigger, float range, RangeListFlags wantsFlags, RangeListFlags makesFlags)</argsstring>
+        <name>RangeTriggerNode</name>
+        <param>
+          <type><ref refid="class_range_trigger" kindref="compound">RangeTrigger</ref> *</type>
+          <declname>pRangeTrigger</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>range</declname>
+        </param>
+        <param>
+          <type>RangeListFlags</type>
+          <declname>wantsFlags</declname>
+        </param>
+        <param>
+          <type>RangeListFlags</type>
+          <declname>makesFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pRangeTrigger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node that this trigger is offset from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The range of the AoI for this entity. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wantsFlags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>makesFlags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="17" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="29" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_node_1a164d9b80828ca9090285d4982191eefc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>float</type>
+        <definition>float RangeTriggerNode::x</definition>
+        <argsstring>() const </argsstring>
+        <name>x</name>
+        <reimplements refid="class_range_list_node_1ae322ecd2efdbbcbe465a1c09b25fbf84">x</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the x position of this node. For trigger nodes, this is the entities position + the range</para><para><simplesect kind="return"><para>x position of the node </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="22" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="50" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_node_1a3113a63a17fb1ae1d4856d7c53795340" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>float</type>
+        <definition>float RangeTriggerNode::z</definition>
+        <argsstring>() const </argsstring>
+        <name>z</name>
+        <reimplements refid="class_range_list_node_1a693e47058ba36ee3bfef68f96eae09fe">z</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the z position of this node. For trigger nodes, this is the entities position + the range</para><para><simplesect kind="return"><para>z position of the node </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="23" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="68" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_node_1aa0adc8162aeb9e96b7f7cb88fc27271a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float RangeTriggerNode::oldX</definition>
+        <argsstring>() const </argsstring>
+        <name>oldX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the x position of this node. For trigger nodes, this is the entities position + the range</para><para><simplesect kind="return"><para>x position of the node </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="25" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="86" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_node_1a62132a618da5247a95e58bffdba5085d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float RangeTriggerNode::oldZ</definition>
+        <argsstring>() const </argsstring>
+        <name>oldZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the z position of this node. For trigger nodes, this is the entities position + the range</para><para><simplesect kind="return"><para>z position of the node </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="26" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="104" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_node_1a4ccd72991aca5193ac777303d9a2841a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>BW::string</type>
+        <definition>BW::string RangeTriggerNode::debugString</definition>
+        <argsstring>() const </argsstring>
+        <name>debugString</name>
+        <reimplements refid="class_range_list_node_1a99f8b39fbe368fe96fa402fe20e50c00">debugString</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the identifier for the <ref refid="class_range_trigger_node" kindref="compound">RangeTriggerNode</ref></para><para><simplesect kind="return"><para>the string identifier of the node </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="28" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="122" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_node_1a45badb800f78be9ec6a96c5c45945456" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float RangeTriggerNode::range</definition>
+        <argsstring>() const </argsstring>
+        <name>range</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="30" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_node_1a5590d01702e6e34214a6fbd376ee8489" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeTriggerNode::range</definition>
+        <argsstring>(float r)</argsstring>
+        <name>range</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="31" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_node_1a2c651870dbb5fcd28cd876e15338850e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeTriggerNode::setRange</definition>
+        <argsstring>(float range)</argsstring>
+        <name>setRange</name>
+        <param>
+          <type>float</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the range of the trigger. It does a reshuffle to shrink the range and any entities which are no longer in the range are untriggered.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the range of the node from its entity </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="32" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="408" bodyend="416"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_node_1a21a63d4fa3e2a66246d79592365a30f9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float RangeTriggerNode::oldRange</definition>
+        <argsstring>() const </argsstring>
+        <name>oldRange</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="34" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_node_1a69b2a9e5bc5603fe9d1aafe86a500fc1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeTriggerNode::oldRange</definition>
+        <argsstring>(float r)</argsstring>
+        <name>oldRange</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="35" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_node_1a4746ce0f7ebf1d9052d09ed350752a31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeTriggerNode::updateOldRange</definition>
+        <argsstring>()</argsstring>
+        <name>updateOldRange</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="36" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_node_1a869fbe58da10d6bbb41ec2fe90195b0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RangeTriggerNode::crossedX</definition>
+        <argsstring>(RangeListNode *node, bool positiveCrossing, float oldOthX, float oldOthZ)</argsstring>
+        <name>crossedX</name>
+        <reimplements refid="class_range_list_node_1a5b0bb3003dae46e2fdc49d01b611920a">crossedX</reimplements>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+          <declname>node</declname>
+          <defname>pNode</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>positiveCrossing</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oldOthX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oldOthZ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called whenever there is a shuffle in the X direction. The range trigger node then decides whether or not the entity triggers or untriggers it.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Other entity that has crossed this trigger node. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>positiveCrossing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Which direction the shuffle occurred. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oldOthX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The old x co-ordinate of the other node. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oldOthZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The old z co-ordinate of the other node. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="38" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="146" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_node_1acab23e8d8ce325d5d7216ac820bd7b54" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RangeTriggerNode::crossedZ</definition>
+        <argsstring>(RangeListNode *node, bool positiveCrossing, float oldOthX, float oldOthZ)</argsstring>
+        <name>crossedZ</name>
+        <reimplements refid="class_range_list_node_1ab3f2ab9a8ddf7cad4b976130304694c9">crossedZ</reimplements>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+          <declname>node</declname>
+          <defname>pNode</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>positiveCrossing</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oldOthX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oldOthZ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called whenever, there is a shuffle in the Z direction. The range trigger node then decides whether or not the entity triggers or untriggers it.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Other entity that has crossed this trigger node. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>positiveCrossing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Which direction the shuffle occurred. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oldOthX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The old x co-ordinate of the other node. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oldOthZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The old z co-ordinate of the other node. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="40" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="279" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_node_1a65ff2694a58170757b9b509847add96e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_range_trigger" kindref="compound">RangeTrigger</ref> &amp;</type>
+        <definition>const RangeTrigger&amp; RangeTriggerNode::rangeTrigger</definition>
+        <argsstring>() const </argsstring>
+        <name>rangeTrigger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="43" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="43" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_range_trigger_node_1a6446ffa9eab859f16a37f4cd7c6de1bc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeTriggerNode::crossedXEntity</definition>
+        <argsstring>(RangeListNode *node, bool positiveCrossing, float oldOthX, float oldOthZ)</argsstring>
+        <name>crossedXEntity</name>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+          <declname>node</declname>
+          <defname>pNode</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>positiveCrossing</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oldOthX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oldOthZ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called whenever there is a shuffle in the X direction. The range trigger node then decides whether or not the entity triggers or untriggers it.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Other entity that has crossed this trigger node. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>positiveCrossing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Which direction the shuffle occurred. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oldOthX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The old x co-ordinate of the other node. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oldOthZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The old z co-ordinate of the other node. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="46" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="170" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_node_1a9247704ea49f96e6450ad8012eb7029b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeTriggerNode::crossedZEntity</definition>
+        <argsstring>(RangeListNode *node, bool positiveCrossing, float oldOthX, float oldOthZ)</argsstring>
+        <name>crossedZEntity</name>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+          <declname>node</declname>
+          <defname>pNode</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>positiveCrossing</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oldOthX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oldOthZ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called whenever, there is a shuffle in the Z direction. The range trigger node then decides whether or not the entity triggers or untriggers it.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Other entity that has crossed this trigger node. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>positiveCrossing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Which direction the shuffle occurred. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oldOthX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The old x co-ordinate of the other node. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oldOthZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The old z co-ordinate of the other node. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="48" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="303" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_node_1a8e3e315f5f342fe4d6e5ee4419e14753" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeTriggerNode::crossedXEntityRange</definition>
+        <argsstring>(RangeListNode *node, bool positiveCrossing)</argsstring>
+        <name>crossedXEntityRange</name>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+          <declname>node</declname>
+          <defname>pNode</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>positiveCrossing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles the case where this range trigger node crossed an entity&apos;s appeal range in the X direction. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="51" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="213" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_node_1ac75731dc04f07a2784de498ed35a2c8a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeTriggerNode::crossedZEntityRange</definition>
+        <argsstring>(RangeListNode *node, bool positiveCrossing)</argsstring>
+        <name>crossedZEntityRange</name>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+          <declname>node</declname>
+          <defname>pNode</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>positiveCrossing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles the case where this range trigger node crossed an entity&apos;s appeal range in the Z direction. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="52" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="346" bodyend="399"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used for range triggers (traps). Its position is the same as the entity&apos;s position plus a range. Once another entity crosses the node, it will either trigger or untrigger it and it will notify its owner entity. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2359">
+        <label>RangeTriggerNode</label>
+        <link refid="class_range_trigger_node"/>
+        <childnode refid="2360" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2360">
+        <label>RangeListNode</label>
+        <link refid="class_range_list_node"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2363">
+        <label>RangeTrigger</label>
+        <link refid="class_range_trigger"/>
+        <childnode refid="2361" relation="usage">
+          <edgelabel>lowerBound_</edgelabel>
+          <edgelabel>upperBound_</edgelabel>
+        </childnode>
+        <childnode refid="2362" relation="usage">
+          <edgelabel>pCentralNode_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2361">
+        <label>RangeTriggerNode</label>
+        <link refid="class_range_trigger_node"/>
+        <childnode refid="2362" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2363" relation="usage">
+          <edgelabel>pRange_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2362">
+        <label>RangeListNode</label>
+        <link refid="class_range_list_node"/>
+        <childnode refid="2362" relation="usage">
+          <edgelabel>pPrevX_</edgelabel>
+          <edgelabel>pPrevZ_</edgelabel>
+          <edgelabel>pNextX_</edgelabel>
+          <edgelabel>pNextZ_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/range_trigger.hpp" line="15" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="14" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_range_trigger_node_1a869fbe58da10d6bbb41ec2fe90195b0a" prot="public" virt="virtual"><scope>RangeTriggerNode</scope><name>crossedX</name></member>
+      <member refid="class_range_trigger_node_1a6446ffa9eab859f16a37f4cd7c6de1bc" prot="protected" virt="non-virtual"><scope>RangeTriggerNode</scope><name>crossedXEntity</name></member>
+      <member refid="class_range_trigger_node_1a8e3e315f5f342fe4d6e5ee4419e14753" prot="protected" virt="non-virtual"><scope>RangeTriggerNode</scope><name>crossedXEntityRange</name></member>
+      <member refid="class_range_trigger_node_1acab23e8d8ce325d5d7216ac820bd7b54" prot="public" virt="virtual"><scope>RangeTriggerNode</scope><name>crossedZ</name></member>
+      <member refid="class_range_trigger_node_1a9247704ea49f96e6450ad8012eb7029b" prot="protected" virt="non-virtual"><scope>RangeTriggerNode</scope><name>crossedZEntity</name></member>
+      <member refid="class_range_trigger_node_1ac75731dc04f07a2784de498ed35a2c8a" prot="protected" virt="non-virtual"><scope>RangeTriggerNode</scope><name>crossedZEntityRange</name></member>
+      <member refid="class_range_list_node_1a144a093e0a3f1a45bb9af7e663e249e8" prot="public" virt="virtual"><scope>RangeTriggerNode</scope><name>debugRangeX</name></member>
+      <member refid="class_range_list_node_1af6e879e8e60e0ee3373984b539dc2191" prot="public" virt="virtual"><scope>RangeTriggerNode</scope><name>debugRangeZ</name></member>
+      <member refid="class_range_trigger_node_1a4ccd72991aca5193ac777303d9a2841a" prot="public" virt="virtual"><scope>RangeTriggerNode</scope><name>debugString</name></member>
+      <member refid="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362a30d709291ecbd02940398e3f7f1462cd" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>FLAG_ENTITY_TRIGGER</name></member>
+      <member refid="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362ab0b582a48863cfe49b2b1a3f8449ea1c" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>FLAG_IS_ENTITY</name></member>
+      <member refid="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362aa4e1b463ad4c2df70b38a3981d27e61a" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>FLAG_IS_LOWER_BOUND</name></member>
+      <member refid="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362aac1cd62d73098f411eafb37b471ec979" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>FLAG_LOWER_AOI_TRIGGER</name></member>
+      <member refid="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362ad51dfdf49df09082b4cf3514124e5027" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>FLAG_NO_TRIGGERS</name></member>
+      <member refid="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362ac0b256d23b50aaa675238da6cc1511d1" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>FLAG_UPPER_AOI_TRIGGER</name></member>
+      <member refid="class_range_list_node_1a285c2ce052e78bfed9b0bd7767bf07ab" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>getCoord</name></member>
+      <member refid="class_range_list_node_1a908e5e1c48d02f7feb9ee34b597aa1ff" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>getNeighbour</name></member>
+      <member refid="class_range_list_node_1a570ce871ee4f9b904b6b8f58059f2ab4" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>insertBeforeX</name></member>
+      <member refid="class_range_list_node_1a1a2694095ea91a3d9a5cbaaa2e3970e5" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>insertBeforeZ</name></member>
+      <member refid="class_range_list_node_1a1644fad16a0b0d0730af2342bfe7e6e1" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>isEntity</name></member>
+      <member refid="class_range_list_node_1aef5fb57f3470868518f223d59447fd42" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>isLowerBound</name></member>
+      <member refid="class_range_list_node_1a2f2f452449f3c3e9fccb491c64599b2c" prot="protected" virt="non-virtual"><scope>RangeTriggerNode</scope><name>makesFlags_</name></member>
+      <member refid="class_range_list_node_1a2ab0c5b64255b782a85ac73f658cb7a0" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>nextX</name></member>
+      <member refid="class_range_list_node_1a9ead098d54eaf66e2e221ac61aadc948" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>nextX</name></member>
+      <member refid="class_range_list_node_1a27645c439394ceddd78d7793e721957a" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>nextZ</name></member>
+      <member refid="class_range_list_node_1a638743feab8c64ae91b926b3b8464ee9" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>nextZ</name></member>
+      <member refid="class_range_trigger_node_1a21a63d4fa3e2a66246d79592365a30f9" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>oldRange</name></member>
+      <member refid="class_range_trigger_node_1a69b2a9e5bc5603fe9d1aafe86a500fc1" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>oldRange</name></member>
+      <member refid="class_range_trigger_node_1a4e95638ac2303bd72cce9939d0978f03" prot="protected" virt="non-virtual"><scope>RangeTriggerNode</scope><name>oldRange_</name></member>
+      <member refid="class_range_trigger_node_1aa0adc8162aeb9e96b7f7cb88fc27271a" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>oldX</name></member>
+      <member refid="class_range_trigger_node_1a62132a618da5247a95e58bffdba5085d" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>oldZ</name></member>
+      <member refid="class_range_list_node_1a5882f13b56ed8482282f7b9c8e161708" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>order</name></member>
+      <member refid="class_range_list_node_1a3614dc34d083b61bd6b454bb0a53a1b7" prot="protected" virt="non-virtual"><scope>RangeTriggerNode</scope><name>order_</name></member>
+      <member refid="class_range_list_node_1afda2467dc82894e6d35680733f482577" prot="protected" virt="non-virtual"><scope>RangeTriggerNode</scope><name>pNextX_</name></member>
+      <member refid="class_range_list_node_1abecb089a0e0408aab64ada6895f9edf3" prot="protected" virt="non-virtual"><scope>RangeTriggerNode</scope><name>pNextZ_</name></member>
+      <member refid="class_range_list_node_1a6013d312c6a35ce59f309708475660f7" prot="protected" virt="non-virtual"><scope>RangeTriggerNode</scope><name>pPrevX_</name></member>
+      <member refid="class_range_list_node_1a48d2a6529c51ba469fb140359512a00b" prot="protected" virt="non-virtual"><scope>RangeTriggerNode</scope><name>pPrevZ_</name></member>
+      <member refid="class_range_trigger_node_1a5230b7106f0435c531b04331e219bc6c" prot="protected" virt="non-virtual"><scope>RangeTriggerNode</scope><name>pRange_</name></member>
+      <member refid="class_range_list_node_1aad5f7eec4dff8e149f2677821d51fe31" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>prevX</name></member>
+      <member refid="class_range_list_node_1a19bd745a4b181fb9e4b4c41a0aceabd5" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>prevX</name></member>
+      <member refid="class_range_list_node_1aabe8fccb25aefb8284cf77e1b79147d4" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>prevZ</name></member>
+      <member refid="class_range_list_node_1ae90350c686304bb4678c0e443805023e" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>prevZ</name></member>
+      <member refid="class_range_trigger_node_1a45badb800f78be9ec6a96c5c45945456" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>range</name></member>
+      <member refid="class_range_trigger_node_1a5590d01702e6e34214a6fbd376ee8489" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>range</name></member>
+      <member refid="class_range_trigger_node_1a4fc1c32ca5bc9b3f7ead9b5cb0b64208" prot="protected" virt="non-virtual"><scope>RangeTriggerNode</scope><name>range_</name></member>
+      <member refid="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>RangeListFlags</name></member>
+      <member refid="class_range_list_node_1a57691e5e83d32b6f110735f499189044" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>RangeListNode</name></member>
+      <member refid="class_range_trigger_node_1a65ff2694a58170757b9b509847add96e" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>rangeTrigger</name></member>
+      <member refid="class_range_trigger_node_1a5bc47e3b0b77b5b66d0e8e4f0ee68a27" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>RangeTriggerNode</name></member>
+      <member refid="class_range_list_node_1a45cc0b83c1b3744987c7d98328fc820d" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>removeFromRangeList</name></member>
+      <member refid="class_range_trigger_node_1a2c651870dbb5fcd28cd876e15338850e" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>setRange</name></member>
+      <member refid="class_range_list_node_1a64d09ef9737c804bae2e1747e8da4b3a" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>shuffleX</name></member>
+      <member refid="class_range_list_node_1a71f3fea44c51ea217658cb2341653bd5" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>shuffleXThenZ</name></member>
+      <member refid="class_range_list_node_1a73e62225d1db04e36d278355dea39340" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>shuffleZ</name></member>
+      <member refid="class_range_trigger_node_1a4746ce0f7ebf1d9052d09ed350752a31" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>updateOldRange</name></member>
+      <member refid="class_range_list_node_1ae4c45a02e82050c619604a5345902ac8" prot="public" virt="non-virtual"><scope>RangeTriggerNode</scope><name>wantsCrossingWith</name></member>
+      <member refid="class_range_list_node_1a6c9b7e2a687ac30d771ee133e95b11cb" prot="protected" virt="non-virtual"><scope>RangeTriggerNode</scope><name>wantsFlags_</name></member>
+      <member refid="class_range_trigger_node_1a164d9b80828ca9090285d4982191eefc" prot="public" virt="virtual"><scope>RangeTriggerNode</scope><name>x</name></member>
+      <member refid="class_range_trigger_node_1a3113a63a17fb1ae1d4856d7c53795340" prot="public" virt="virtual"><scope>RangeTriggerNode</scope><name>z</name></member>
+      <member refid="class_range_list_node_1a73c0d88d985240d0ede4dc9315ef1a3b" prot="public" virt="virtual"><scope>RangeTriggerNode</scope><name>~RangeListNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_buffered_message" kind="class" language="C++" prot="public">
+    <compoundname>BufferedMessage</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_buffered_message_1a15847c10685f56d791e6d822c0096258" prot="private" static="no" mutable="no">
+        <type>Mercury::UnpackedMessageHeader</type>
+        <definition>Mercury::UnpackedMessageHeader BufferedMessage::header_</definition>
+        <argsstring></argsstring>
+        <name>header_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/rate_limit_message_filter.cpp" line="100" column="1" bodyfile="baseapp/rate_limit_message_filter.cpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_buffered_message_1aedd3aea6bc828f76b56bfbc55d0d5717" prot="private" static="no" mutable="no">
+        <type>MemoryOStream</type>
+        <definition>MemoryOStream BufferedMessage::data_</definition>
+        <argsstring></argsstring>
+        <name>data_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/rate_limit_message_filter.cpp" line="103" column="1" bodyfile="baseapp/rate_limit_message_filter.cpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_buffered_message_1aa771b6516e3ac5434bdc61f512e90d10" prot="private" static="no" mutable="no">
+        <type>Mercury::InputMessageHandler *</type>
+        <definition>Mercury::InputMessageHandler* BufferedMessage::pHandler_</definition>
+        <argsstring></argsstring>
+        <name>pHandler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/rate_limit_message_filter.cpp" line="106" column="1" bodyfile="baseapp/rate_limit_message_filter.cpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_buffered_message_1ac32b7bfab3b0f681a3f4af3c5b5b9a81" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BufferedMessage::BufferedMessage</definition>
+        <argsstring>(const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data, Mercury::InputMessageHandler *pHandler)</argsstring>
+        <name>BufferedMessage</name>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>Mercury::InputMessageHandler *</type>
+          <declname>pHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message header. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message data stream. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pHandler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination message handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/rate_limit_message_filter.cpp" line="38" column="1" bodyfile="baseapp/rate_limit_message_filter.cpp" bodystart="38" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_buffered_message_1a16159a820c27a074cfc1ebdabd3a9c3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual BufferedMessage::~BufferedMessage</definition>
+        <argsstring>()</argsstring>
+        <name>~BufferedMessage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/rate_limit_message_filter.cpp" line="52" column="1" bodyfile="baseapp/rate_limit_message_filter.cpp" bodystart="52" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_buffered_message_1a953ae7f2193bca28dd54a9d31d2e8d8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void BufferedMessage::dispatch</definition>
+        <argsstring>(ProxyPtr pProxy)</argsstring>
+        <name>dispatch</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">ProxyPtr</ref></type>
+          <declname>pProxy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dispatch a buffered message. Subclasses of <ref refid="class_buffered_message" kindref="compound">BufferedMessage</ref> can override this method to supply custom functionality.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pProxy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source proxy of the message. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/rate_limit_message_filter.cpp" line="62" column="1" bodyfile="baseapp/rate_limit_message_filter.cpp" bodystart="62" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_buffered_message_1a9a14da30b503a893d8ccfab478e22cba" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint BufferedMessage::size</definition>
+        <argsstring>() const </argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the data size of the message. Note that calling this after the message has been dispatched will not return the original data size. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/rate_limit_message_filter.cpp" line="72" column="1" bodyfile="baseapp/rate_limit_message_filter.cpp" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_buffered_message_1a50a831aaedd7205e2b799945596bccb7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Mercury::UnpackedMessageHeader &amp;</type>
+        <definition>const Mercury::UnpackedMessageHeader&amp; BufferedMessage::header</definition>
+        <argsstring>() const </argsstring>
+        <name>header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the message header (const version). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/rate_limit_message_filter.cpp" line="78" column="1" bodyfile="baseapp/rate_limit_message_filter.cpp" bodystart="78" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_buffered_message_1a709720fed7fefbcfa7180697c341f0c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Mercury::UnpackedMessageHeader &amp;</type>
+        <definition>Mercury::UnpackedMessageHeader&amp; BufferedMessage::header</definition>
+        <argsstring>()</argsstring>
+        <name>header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the message header. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/rate_limit_message_filter.cpp" line="84" column="1" bodyfile="baseapp/rate_limit_message_filter.cpp" bodystart="84" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_buffered_message_1ade2a0ad4ae4c0a26def56c87c8dc15dc" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BinaryIStream &amp;</type>
+        <definition>BinaryIStream&amp; BufferedMessage::data</definition>
+        <argsstring>()</argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the message data stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/rate_limit_message_filter.cpp" line="90" column="1" bodyfile="baseapp/rate_limit_message_filter.cpp" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_buffered_message_1afc410f41e46d8ce3dc97ed5a24c6abe0" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Mercury::InputMessageHandler *</type>
+        <definition>Mercury::InputMessageHandler* BufferedMessage::pHandler</definition>
+        <argsstring>()</argsstring>
+        <name>pHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the message&apos;s destination handler. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/rate_limit_message_filter.cpp" line="95" column="1" bodyfile="baseapp/rate_limit_message_filter.cpp" bodystart="95" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is a buffered message instance, and stores the header, data stream and the destination message handler for deferred playback.</para><para>Note that the source address is not stored, as RateLimitMessageFilters are per-address already, and it supplies that source address to the dispatch method.</para><para>Application code can derive from <ref refid="class_buffered_message" kindref="compound">BufferedMessage</ref> for associating their own state and/or overriding the dispatch method for doing any custom actions. They can override RateLimitMessageFilter::Callback::createBufferedMessage() in order to have the filter create instances of different derived classes. </para>    </detaileddescription>
+    <location file="baseapp/rate_limit_message_filter.cpp" line="29" column="1" bodyfile="baseapp/rate_limit_message_filter.cpp" bodystart="28" bodyend="108"/>
+    <listofallmembers>
+      <member refid="class_buffered_message_1ac32b7bfab3b0f681a3f4af3c5b5b9a81" prot="public" virt="non-virtual"><scope>BufferedMessage</scope><name>BufferedMessage</name></member>
+      <member refid="class_buffered_message_1ade2a0ad4ae4c0a26def56c87c8dc15dc" prot="protected" virt="non-virtual"><scope>BufferedMessage</scope><name>data</name></member>
+      <member refid="class_buffered_message_1aedd3aea6bc828f76b56bfbc55d0d5717" prot="private" virt="non-virtual"><scope>BufferedMessage</scope><name>data_</name></member>
+      <member refid="class_buffered_message_1a953ae7f2193bca28dd54a9d31d2e8d8e" prot="public" virt="virtual"><scope>BufferedMessage</scope><name>dispatch</name></member>
+      <member refid="class_buffered_message_1a50a831aaedd7205e2b799945596bccb7" prot="public" virt="non-virtual"><scope>BufferedMessage</scope><name>header</name></member>
+      <member refid="class_buffered_message_1a709720fed7fefbcfa7180697c341f0c9" prot="public" virt="non-virtual"><scope>BufferedMessage</scope><name>header</name></member>
+      <member refid="class_buffered_message_1a15847c10685f56d791e6d822c0096258" prot="private" virt="non-virtual"><scope>BufferedMessage</scope><name>header_</name></member>
+      <member refid="class_buffered_message_1afc410f41e46d8ce3dc97ed5a24c6abe0" prot="protected" virt="non-virtual"><scope>BufferedMessage</scope><name>pHandler</name></member>
+      <member refid="class_buffered_message_1aa771b6516e3ac5434bdc61f512e90d10" prot="private" virt="non-virtual"><scope>BufferedMessage</scope><name>pHandler_</name></member>
+      <member refid="class_buffered_message_1a9a14da30b503a893d8ccfab478e22cba" prot="public" virt="non-virtual"><scope>BufferedMessage</scope><name>size</name></member>
+      <member refid="class_buffered_message_1a16159a820c27a074cfc1ebdabd3a9c3b" prot="public" virt="virtual"><scope>BufferedMessage</scope><name>~BufferedMessage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

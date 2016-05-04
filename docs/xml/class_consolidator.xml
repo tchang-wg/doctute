@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_consolidator" kind="class" language="C++" prot="public">
+    <compoundname>Consolidator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IChildProcess</basecompoundref>
+    <includes refid="consolidator_8hpp" local="no">consolidator.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_consolidator_1a97c70b328ce9a5a082cd8019dba2b9bc" prot="private" static="no" mutable="no">
+        <type><ref refid="class_d_b_app" kindref="compound">DBApp</ref> &amp;</type>
+        <definition>DBApp&amp; Consolidator::dbApp_</definition>
+        <argsstring></argsstring>
+        <name>dbApp_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/consolidator.hpp" line="43" column="1" bodyfile="dbapp/consolidator.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_consolidator_1ac988b13ca7ba42dd44fe1856b613681a" prot="private" static="no" mutable="no">
+        <type>ChildProcess *</type>
+        <definition>ChildProcess* Consolidator::pChildProcess_</definition>
+        <argsstring></argsstring>
+        <name>pChildProcess_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/consolidator.hpp" line="45" column="1" bodyfile="dbapp/consolidator.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_consolidator_1af59150c2dafb0f729cca9a40bd3c9f77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Consolidator::Consolidator</definition>
+        <argsstring>(DBApp &amp;dbApp)</argsstring>
+        <name>Consolidator</name>
+        <param>
+          <type><ref refid="class_d_b_app" kindref="compound">DBApp</ref> &amp;</type>
+          <declname>dbApp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/consolidator.hpp" line="26" column="1" bodyfile="dbapp/consolidator.cpp" bodystart="48" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_consolidator_1aba260215764b1a6a9208a5bd563680c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>Consolidator::~Consolidator</definition>
+        <argsstring>()</argsstring>
+        <name>~Consolidator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/consolidator.hpp" line="27" column="1" bodyfile="dbapp/consolidator.cpp" bodystart="58" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_consolidator_1afa3c7a47889321c71878730c376824e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Consolidator::startConsolidation</definition>
+        <argsstring>()</argsstring>
+        <name>startConsolidation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is the entry point for the <ref refid="class_d_b_app" kindref="compound">DBApp</ref> to start consolidation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/consolidator.hpp" line="29" column="1" bodyfile="dbapp/consolidator.cpp" bodystart="169" bodyend="208"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_consolidator_1ab23c944cb6a806061fcc22a5f6ea3607" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Mercury::EventDispatcher &amp;</type>
+        <definition>Mercury::EventDispatcher &amp; Consolidator::dispatcher</definition>
+        <argsstring>()</argsstring>
+        <name>dispatcher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the database&apos;s event dispatcher. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/consolidator.hpp" line="33" column="1" bodyfile="dbapp/consolidator.cpp" bodystart="159" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="class_consolidator_1a28e48b7915f0cd3ddb64319f5cc0b8da" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Consolidator::outputErrorLogs</definition>
+        <argsstring>() const </argsstring>
+        <name>outputErrorLogs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method outputs any error logs from the child process. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/consolidator.hpp" line="35" column="1" bodyfile="dbapp/consolidator.cpp" bodystart="214" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="class_consolidator_1a6c98fec6ab7417a4c9a3e20085638f2c" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Consolidator::onChildComplete</definition>
+        <argsstring>(int status, ChildProcess *process)</argsstring>
+        <name>onChildComplete</name>
+        <param>
+          <type>int</type>
+          <declname>status</declname>
+        </param>
+        <param>
+          <type>ChildProcess *</type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/consolidator.hpp" line="38" column="1" bodyfile="dbapp/consolidator.cpp" bodystart="70" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_consolidator_1ae321075b814fddd0382139e8a53e778a" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Consolidator::onChildAboutToExec</definition>
+        <argsstring>()</argsstring>
+        <name>onChildAboutToExec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/consolidator.hpp" line="39" column="1" bodyfile="dbapp/consolidator.cpp" bodystart="138" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_consolidator_1a4cc93ca399d0815c3b14162ca7beecbe" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Consolidator::onExecFailure</definition>
+        <argsstring>(int result)</argsstring>
+        <name>onExecFailure</name>
+        <param>
+          <type>int</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/consolidator.hpp" line="40" column="1" bodyfile="dbapp/consolidator.cpp" bodystart="146" bodyend="153"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class wraps the functionality of calling the ConsolidateDBs process, and managing the child process events and notifying the <ref refid="class_d_b_app" kindref="compound">DBApp</ref> on completion. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="847">
+        <label>IChildProcess</label>
+      </node>
+      <node id="846">
+        <label>Consolidator</label>
+        <link refid="class_consolidator"/>
+        <childnode refid="847" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="849">
+        <label>IChildProcess</label>
+      </node>
+      <node id="848">
+        <label>Consolidator</label>
+        <link refid="class_consolidator"/>
+        <childnode refid="849" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="dbapp/consolidator.hpp" line="24" column="1" bodyfile="dbapp/consolidator.hpp" bodystart="23" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_consolidator_1af59150c2dafb0f729cca9a40bd3c9f77" prot="public" virt="non-virtual"><scope>Consolidator</scope><name>Consolidator</name></member>
+      <member refid="class_consolidator_1a97c70b328ce9a5a082cd8019dba2b9bc" prot="private" virt="non-virtual"><scope>Consolidator</scope><name>dbApp_</name></member>
+      <member refid="class_consolidator_1ab23c944cb6a806061fcc22a5f6ea3607" prot="private" virt="non-virtual"><scope>Consolidator</scope><name>dispatcher</name></member>
+      <member refid="class_consolidator_1ae321075b814fddd0382139e8a53e778a" prot="private" virt="virtual"><scope>Consolidator</scope><name>onChildAboutToExec</name></member>
+      <member refid="class_consolidator_1a6c98fec6ab7417a4c9a3e20085638f2c" prot="private" virt="virtual"><scope>Consolidator</scope><name>onChildComplete</name></member>
+      <member refid="class_consolidator_1a4cc93ca399d0815c3b14162ca7beecbe" prot="private" virt="virtual"><scope>Consolidator</scope><name>onExecFailure</name></member>
+      <member refid="class_consolidator_1a28e48b7915f0cd3ddb64319f5cc0b8da" prot="private" virt="non-virtual"><scope>Consolidator</scope><name>outputErrorLogs</name></member>
+      <member refid="class_consolidator_1ac988b13ca7ba42dd44fe1856b613681a" prot="private" virt="non-virtual"><scope>Consolidator</scope><name>pChildProcess_</name></member>
+      <member refid="class_consolidator_1afa3c7a47889321c71878730c376824e3" prot="public" virt="non-virtual"><scope>Consolidator</scope><name>startConsolidation</name></member>
+      <member refid="class_consolidator_1aba260215764b1a6a9208a5bd563680c9" prot="public" virt="virtual"><scope>Consolidator</scope><name>~Consolidator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

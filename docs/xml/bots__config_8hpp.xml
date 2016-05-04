@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="bots__config_8hpp" kind="file" language="C++">
+    <compoundname>bots_config.hpp</compoundname>
+    <includes local="yes">cstdmf/bw_namespace.hpp</includes>
+    <includes local="yes">server/server_app_config.hpp</includes>
+    <includedby refid="main__app_8hpp" local="yes">tools/bots/main_app.hpp</includedby>
+    <includedby refid="bot__entity_8cpp" local="yes">tools/bots/bot_entity.cpp</includedby>
+    <includedby refid="bot__space_8cpp" local="yes">tools/bots/bot_space.cpp</includedby>
+    <includedby refid="bots__config_8cpp" local="yes">tools/bots/bots_config.cpp</includedby>
+    <includedby refid="client__app_8cpp" local="yes">tools/bots/client_app.cpp</includedby>
+    <includedby refid="tools_2bots_2entity_8cpp" local="yes">tools/bots/entity.cpp</includedby>
+    <includedby refid="tools_2bots_2py__entities_8cpp" local="yes">tools/bots/py_entities.cpp</includedby>
+    <includedby refid="script__bot__entity_8cpp" local="yes">tools/bots/script_bot_entity.cpp</includedby>
+    <incdepgraph>
+      <node id="16620">
+        <label>tools/bots/bots_config.hpp</label>
+        <link refid="bots_config.hpp"/>
+        <childnode refid="16621" relation="include">
+        </childnode>
+        <childnode refid="16622" relation="include">
+        </childnode>
+      </node>
+      <node id="16622">
+        <label>server/server_app_config.hpp</label>
+      </node>
+      <node id="16621">
+        <label>cstdmf/bw_namespace.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="16625">
+        <label>tools/bots/client_app.hpp</label>
+        <link refid="client__app_8hpp_source"/>
+        <childnode refid="16626" relation="include">
+        </childnode>
+      </node>
+      <node id="16623">
+        <label>tools/bots/bots_config.hpp</label>
+        <link refid="bots_config.hpp"/>
+        <childnode refid="16624" relation="include">
+        </childnode>
+      </node>
+      <node id="16626">
+        <label>tools/bots/py_entity.hpp</label>
+        <link refid="py__entity_8hpp_source"/>
+      </node>
+      <node id="16624">
+        <label>tools/bots/main_app.hpp</label>
+        <link refid="main__app_8hpp_source"/>
+        <childnode refid="16625" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_bots_config" prot="public">BotsConfig</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SERVER__TOOLS__BOTS__BOTS_CONFIG_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVER__TOOLS__BOTS__BOTS_CONFIG_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_namespace.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;server/server_app_config.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_bots_config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_bots_config" kindref="compound">BotsConfig</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>ServerAppConfig</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>BW::string<sp/>&gt;<sp/>username;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>BW::string<sp/>&gt;<sp/>password;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>BW::string<sp/>&gt;<sp/>clientContext;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>BW::string<sp/>&gt;<sp/>tag;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>BW::string<sp/>&gt;<sp/>serverName;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>shouldUseTCP;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>shouldUseWebSockets;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>int<sp/>&gt;<sp/>transport;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>uint16<sp/>&gt;<sp/>port;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>shouldUseRandomName;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>shouldUseScripts;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>BW::string<sp/>&gt;<sp/>standinEntity;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>BW::string<sp/>&gt;<sp/>controllerType;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>BW::string<sp/>&gt;<sp/>controllerData;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>BW::string<sp/>&gt;<sp/>publicKey;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>logOnRetryPeriod;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>shouldListenForGeometryMappings;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>chunkLoadingPeriod;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>int<sp/>&gt;<sp/>numStartupRetries;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>startupRetryPeriod;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>postInit();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SERVER__TOOLS__BOTS__BOTS_CONFIG_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="tools/bots/bots_config.hpp"/>
+  </compounddef>
+</doxygen>

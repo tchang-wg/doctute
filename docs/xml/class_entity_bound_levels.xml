@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_entity_bound_levels" kind="class" language="C++" prot="public">
+    <compoundname>EntityBoundLevels</compoundname>
+    <includes refid="entity__bound__levels_8hpp" local="no">entity_bound_levels.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_entity_bound_levels_1a14d1439c91df1a1936dcd35b2a4a317d" prot="private" static="no">
+        <type>BW::vector&lt; BW::Rect &gt;</type>
+        <definition>typedef BW::vector&lt; BW::Rect &gt; EntityBoundLevels::Rects</definition>
+        <argsstring></argsstring>
+        <name>Rects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/entity_bound_levels.hpp" line="58" column="1" bodyfile="cellappmgr/entity_bound_levels.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_entity_bound_levels_1a8d99d44da309e05b43a4f0a8d5ed0142" prot="private" static="no" mutable="no">
+        <type>Rects</type>
+        <definition>Rects EntityBoundLevels::entityBounds_</definition>
+        <argsstring></argsstring>
+        <name>entityBounds_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/entity_bound_levels.hpp" line="60" column="1" bodyfile="cellappmgr/entity_bound_levels.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_bound_levels_1ac466d84c1507c63c193472045d720c46" prot="private" static="no" mutable="no">
+        <type>Rects</type>
+        <definition>Rects EntityBoundLevels::entityLoads_</definition>
+        <argsstring></argsstring>
+        <name>entityLoads_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/entity_bound_levels.hpp" line="63" column="1" bodyfile="cellappmgr/entity_bound_levels.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_entity_bound_levels_1a2df456e87794abf9e155763f7d17ff25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EntityBoundLevels::EntityBoundLevels</definition>
+        <argsstring>(int numLevels)</argsstring>
+        <name>EntityBoundLevels</name>
+        <param>
+          <type>int</type>
+          <declname>numLevels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/entity_bound_levels.hpp" line="21" column="1" bodyfile="cellappmgr/entity_bound_levels.hpp" bodystart="21" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_bound_levels_1af1cb2078d223213fe70c339183a68c58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityBoundLevels::updateFromStream</definition>
+        <argsstring>(BinaryIStream &amp;data)</argsstring>
+        <name>updateFromStream</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method reads in the entity bounds from a stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/entity_bound_levels.hpp" line="28" column="1" bodyfile="cellappmgr/entity_bound_levels.cpp" bodystart="185" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_bound_levels_1a248b2a358b411e73deda615a19714efe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityBoundLevels::addToStream</definition>
+        <argsstring>(BinaryOStream &amp;stream) const </argsstring>
+        <name>addToStream</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method streams in the required portion of data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/entity_bound_levels.hpp" line="30" column="1" bodyfile="cellappmgr/entity_bound_levels.cpp" bodystart="209" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_bound_levels_1aa3ca9823ce51c435e8634ec103bd6e3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityBoundLevels::merge</definition>
+        <argsstring>(const EntityBoundLevels &amp;left, const EntityBoundLevels &amp;right, bool isHorizontal, float position)</argsstring>
+        <name>merge</name>
+        <param>
+          <type>const <ref refid="class_entity_bound_levels" kindref="compound">EntityBoundLevels</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_entity_bound_levels" kindref="compound">EntityBoundLevels</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isHorizontal</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>position</declname>
+          <defname>partitionPosition</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method merges bound levels data from left and right nodes into this one </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/entity_bound_levels.hpp" line="32" column="1" bodyfile="cellappmgr/entity_bound_levels.cpp" bodystart="35" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_bound_levels_1acdd6141c6e193708d296e58a1e651599" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float EntityBoundLevels::entityBoundForLoadDiff</definition>
+        <argsstring>(float loadDiff, bool isHorizontal, bool isMax, float defaultPosition) const </argsstring>
+        <name>entityBoundForLoadDiff</name>
+        <param>
+          <type>float</type>
+          <declname>loadDiff</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isHorizontal</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isMax</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>defaultPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the entity bound best suited to offload a desired amount. The largest level less than this load amount is chosen. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/entity_bound_levels.hpp" line="38" column="1" bodyfile="cellappmgr/entity_bound_levels.cpp" bodystart="219" bodyend="235"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_entity_bound_levels_1a091531c8618f4895265538276d709d9c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const BW::Rect &amp;</type>
+        <definition>BW_BEGIN_NAMESPACE const BW::Rect &amp; EntityBoundLevels::entityBounds</definition>
+        <argsstring>(int level=0) const </argsstring>
+        <name>entityBounds</name>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the entity bounds associated with a given level. If no level is passed, the maximum offload level is used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/entity_bound_levels.hpp" line="45" column="1" bodyfile="cellappmgr/entity_bound_levels.cpp" bodystart="13" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_bound_levels_1a790477cea4f583a7ef44bed237775183" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const BW::Rect &amp;</type>
+        <definition>const BW::Rect &amp; EntityBoundLevels::entityLoads</definition>
+        <argsstring>(int level=0) const </argsstring>
+        <name>entityLoads</name>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the load limits associated with a given level. If no level is passed, the maximum offload level is used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/entity_bound_levels.hpp" line="46" column="1" bodyfile="cellappmgr/entity_bound_levels.cpp" bodystart="24" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_bound_levels_1a50164b2505d40c7366c3430248b23fcc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityBoundLevels::takeSingleBranch</definition>
+        <argsstring>(const EntityBoundLevels &amp;single, bool isY, bool isMax, float partitionPosition)</argsstring>
+        <name>takeSingleBranch</name>
+        <param>
+          <type>const <ref refid="class_entity_bound_levels" kindref="compound">EntityBoundLevels</ref> &amp;</type>
+          <declname>single</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isY</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isMax</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>partitionPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method simply takes the data from the given branch </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/entity_bound_levels.hpp" line="49" column="1" bodyfile="cellappmgr/entity_bound_levels.cpp" bodystart="62" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_bound_levels_1a25eae25dfa58866bf2b96419ad0715c2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityBoundLevels::mergeTwoBranches</definition>
+        <argsstring>(const EntityBoundLevels &amp;left, const EntityBoundLevels &amp;right, bool isY, bool isMax)</argsstring>
+        <name>mergeTwoBranches</name>
+        <param>
+          <type>const <ref refid="class_entity_bound_levels" kindref="compound">EntityBoundLevels</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_entity_bound_levels" kindref="compound">EntityBoundLevels</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isY</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isMax</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method merges bounds and loads from two branches </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/entity_bound_levels.hpp" line="53" column="1" bodyfile="cellappmgr/entity_bound_levels.cpp" bodystart="88" bodyend="179"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class maintains entity bound levels data received from <ref refid="class_cell_apps" kindref="compound">CellApps</ref>. It&apos;s supposed to be a property of internal BSP nodes and leaves. </para>    </detaileddescription>
+    <location file="cellappmgr/entity_bound_levels.hpp" line="19" column="1" bodyfile="cellappmgr/entity_bound_levels.hpp" bodystart="18" bodyend="64"/>
+    <listofallmembers>
+      <member refid="class_entity_bound_levels_1a248b2a358b411e73deda615a19714efe" prot="public" virt="non-virtual"><scope>EntityBoundLevels</scope><name>addToStream</name></member>
+      <member refid="class_entity_bound_levels_1acdd6141c6e193708d296e58a1e651599" prot="public" virt="non-virtual"><scope>EntityBoundLevels</scope><name>entityBoundForLoadDiff</name></member>
+      <member refid="class_entity_bound_levels_1a2df456e87794abf9e155763f7d17ff25" prot="public" virt="non-virtual"><scope>EntityBoundLevels</scope><name>EntityBoundLevels</name></member>
+      <member refid="class_entity_bound_levels_1a091531c8618f4895265538276d709d9c" prot="private" virt="non-virtual"><scope>EntityBoundLevels</scope><name>entityBounds</name></member>
+      <member refid="class_entity_bound_levels_1a8d99d44da309e05b43a4f0a8d5ed0142" prot="private" virt="non-virtual"><scope>EntityBoundLevels</scope><name>entityBounds_</name></member>
+      <member refid="class_entity_bound_levels_1a790477cea4f583a7ef44bed237775183" prot="private" virt="non-virtual"><scope>EntityBoundLevels</scope><name>entityLoads</name></member>
+      <member refid="class_entity_bound_levels_1ac466d84c1507c63c193472045d720c46" prot="private" virt="non-virtual"><scope>EntityBoundLevels</scope><name>entityLoads_</name></member>
+      <member refid="class_entity_bound_levels_1aa3ca9823ce51c435e8634ec103bd6e3a" prot="public" virt="non-virtual"><scope>EntityBoundLevels</scope><name>merge</name></member>
+      <member refid="class_entity_bound_levels_1a25eae25dfa58866bf2b96419ad0715c2" prot="private" virt="non-virtual"><scope>EntityBoundLevels</scope><name>mergeTwoBranches</name></member>
+      <member refid="class_entity_bound_levels_1a14d1439c91df1a1936dcd35b2a4a317d" prot="private" virt="non-virtual"><scope>EntityBoundLevels</scope><name>Rects</name></member>
+      <member refid="class_entity_bound_levels_1a50164b2505d40c7366c3430248b23fcc" prot="private" virt="non-virtual"><scope>EntityBoundLevels</scope><name>takeSingleBranch</name></member>
+      <member refid="class_entity_bound_levels_1af1cb2078d223213fe70c339183a68c58" prot="public" virt="non-virtual"><scope>EntityBoundLevels</scope><name>updateFromStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

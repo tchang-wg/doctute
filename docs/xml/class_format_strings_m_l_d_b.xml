@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_format_strings_m_l_d_b" kind="class" language="C++" prot="public">
+    <compoundname>FormatStringsMLDB</compoundname>
+    <basecompoundref refid="class_binary_file_handler" prot="public" virt="non-virtual">BinaryFileHandler</basecompoundref>
+    <basecompoundref refid="class_format_strings" prot="public" virt="non-virtual">FormatStrings</basecompoundref>
+    <includes refid="mldb_2format__strings_8hpp" local="no">format_strings.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_format_strings_m_l_d_b_1a802f5d50966d91722b9a0bf0c28718ee" prot="private" static="no">
+        <type>BW::map&lt; MessageLogger::FormatStringOffsetId, <ref refid="class_log_string_interpolator" kindref="compound">LogStringInterpolator</ref> * &gt;</type>
+        <definition>typedef BW::map&lt; MessageLogger::FormatStringOffsetId, LogStringInterpolator * &gt; FormatStringsMLDB::OffsetMap</definition>
+        <argsstring></argsstring>
+        <name>OffsetMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/format_strings.hpp" line="42" column="1" bodyfile="tools/message_logger/mldb/format_strings.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_format_strings_m_l_d_b_1adab492d60eb879360f5af35e9eb134f4" prot="private" static="no" mutable="no">
+        <type>OffsetMap</type>
+        <definition>OffsetMap FormatStringsMLDB::offsetMap_</definition>
+        <argsstring></argsstring>
+        <name>offsetMap_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/format_strings.hpp" line="43" column="1" bodyfile="tools/message_logger/mldb/format_strings.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_format_strings_m_l_d_b_1a6b239b666c7a8309e9d715a96f58df5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>FormatStringsMLDB::~FormatStringsMLDB</definition>
+        <argsstring>()</argsstring>
+        <name>~FormatStringsMLDB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/format_strings.hpp" line="22" column="1" bodyfile="tools/message_logger/mldb/format_strings.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_format_strings_m_l_d_b_1a9ca043ddd76a95da86996dbb51c0dc5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FormatStringsMLDB::init</definition>
+        <argsstring>(const char *logLocation, const char *mode)</argsstring>
+        <name>init</name>
+        <param>
+          <type>const char *</type>
+          <declname>logLocation</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/format_strings.hpp" line="23" column="1" bodyfile="tools/message_logger/mldb/format_strings.cpp" bodystart="20" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_format_strings_m_l_d_b_1a4322c0b9330b84c00e11f08c31e1792d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="class_log_string_interpolator" kindref="compound">LogStringInterpolator</ref> *</type>
+        <definition>const LogStringInterpolator * FormatStringsMLDB::getHandlerForLogEntry</definition>
+        <argsstring>(const LogEntry &amp;entry)</argsstring>
+        <name>getHandlerForLogEntry</name>
+        <param>
+          <type>const <ref refid="class_log_entry" kindref="compound">LogEntry</ref> &amp;</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the string handler that should be used to parse the log entry provided.</para><para><simplesect kind="return"><para>A pointer to a <ref refid="class_log_string_interpolator" kindref="compound">LogStringInterpolator</ref> on success, NULL on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/format_strings.hpp" line="24" column="1" bodyfile="tools/message_logger/mldb/format_strings.cpp" bodystart="97" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_format_strings_m_l_d_b_1a7379a015de642fb55343f0f3e5d1311b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool FormatStringsMLDB::read</definition>
+        <argsstring>()</argsstring>
+        <name>read</name>
+        <reimplements refid="class_file_handler_1a81e45df04afafdc54b27686861c4475c">read</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/format_strings.hpp" line="28" column="1" bodyfile="tools/message_logger/mldb/format_strings.cpp" bodystart="31" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_format_strings_m_l_d_b_1a728215fbc374b3beebc4eec7e03372ed" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void FormatStringsMLDB::flush</definition>
+        <argsstring>()</argsstring>
+        <name>flush</name>
+        <reimplements refid="class_file_handler_1aaa5e02b440b04dd78fe9ac2c8f19c69e">flush</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is invoked from <ref refid="class_file_handler_1aa529a9fd4b544fd8b85e8aba4da1b32b" kindref="member">FileHandler::refresh()</ref> to clear our current self knowledge prior to re-reading the format string file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/format_strings.hpp" line="29" column="1" bodyfile="tools/message_logger/mldb/format_strings.cpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_format_strings_m_l_d_b_1a6ca2a6bdb4220ffac1034c9a8d6b5160" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void FormatStringsMLDB::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <reimplements refid="class_format_strings_1af20060e6b46b3115d1bf75941bfeb78e">clear</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is to clear our current self knowledge. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/format_strings.hpp" line="31" column="1" bodyfile="tools/message_logger/mldb/format_strings.cpp" bodystart="68" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_format_strings_m_l_d_b_1af473b260a43da4fc6e32bc39ed790316" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool FormatStringsMLDB::canAppendToDB</definition>
+        <argsstring>()</argsstring>
+        <name>canAppendToDB</name>
+        <reimplements refid="class_format_strings_1afd330c110f3a455669db0987a59d66ed">canAppendToDB</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/format_strings.hpp" line="33" column="1" bodyfile="tools/message_logger/mldb/format_strings.cpp" bodystart="74" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_format_strings_m_l_d_b_1a736059da669cffbf729bbb81602d50fd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool FormatStringsMLDB::writeFormatStringToDB</definition>
+        <argsstring>(LogStringInterpolator *pHandler)</argsstring>
+        <name>writeFormatStringToDB</name>
+        <reimplements refid="class_format_strings_1afca5ed351b8dc30f93f919103fdf1cc7">writeFormatStringToDB</reimplements>
+        <param>
+          <type><ref refid="class_log_string_interpolator" kindref="compound">LogStringInterpolator</ref> *</type>
+          <declname>pHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If we&apos;re in write mode and the fmt string passed in does not currently exist in the mapping, it will be added to the mapping and written to disk. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/format_strings.hpp" line="34" column="1" bodyfile="tools/message_logger/mldb/format_strings.cpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_format_strings_m_l_d_b_1ad067dfc2a2743b4cfe042a5f41917b60" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FormatStringsMLDB::addFormatStringToMap</definition>
+        <argsstring>(const BW::string &amp;fmt, LogStringInterpolator *pHandler)</argsstring>
+        <name>addFormatStringToMap</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type><ref refid="class_log_string_interpolator" kindref="compound">LogStringInterpolator</ref> *</type>
+          <declname>pHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method add the new format string to the map. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/format_strings.hpp" line="36" column="1" bodyfile="tools/message_logger/mldb/format_strings.cpp" bodystart="114" bodyend="120"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Handles the global format strings mapping and file. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1368">
+        <label>BinaryFileHandler</label>
+        <link refid="class_binary_file_handler"/>
+        <childnode refid="1369" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1369">
+        <label>FileHandler</label>
+        <link refid="class_file_handler"/>
+      </node>
+      <node id="1367">
+        <label>FormatStringsMLDB</label>
+        <link refid="class_format_strings_m_l_d_b"/>
+        <childnode refid="1368" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1370" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1370">
+        <label>FormatStrings</label>
+        <link refid="class_format_strings"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1372">
+        <label>BinaryFileHandler</label>
+        <link refid="class_binary_file_handler"/>
+        <childnode refid="1373" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1373">
+        <label>FileHandler</label>
+        <link refid="class_file_handler"/>
+      </node>
+      <node id="1371">
+        <label>FormatStringsMLDB</label>
+        <link refid="class_format_strings_m_l_d_b"/>
+        <childnode refid="1372" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1374" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1374">
+        <label>FormatStrings</label>
+        <link refid="class_format_strings"/>
+      </node>
+    </collaborationgraph>
+    <location file="tools/message_logger/mldb/format_strings.hpp" line="20" column="1" bodyfile="tools/message_logger/mldb/format_strings.hpp" bodystart="19" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_format_strings_m_l_d_b_1ad067dfc2a2743b4cfe042a5f41917b60" prot="protected" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>addFormatStringToMap</name></member>
+      <member refid="class_binary_file_handler_1a0cb04b5e807edbbcf09160a0718a75f9" prot="public" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>BinaryFileHandler</name></member>
+      <member refid="class_format_strings_m_l_d_b_1af473b260a43da4fc6e32bc39ed790316" prot="protected" virt="virtual"><scope>FormatStringsMLDB</scope><name>canAppendToDB</name></member>
+      <member refid="class_format_strings_m_l_d_b_1a6ca2a6bdb4220ffac1034c9a8d6b5160" prot="protected" virt="virtual"><scope>FormatStringsMLDB</scope><name>clear</name></member>
+      <member refid="class_file_handler_1a21db311b76430aff514bf39a238b015d" prot="public" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>filename</name></member>
+      <member refid="class_file_handler_1a48f6ab15fbc95172ce6db0878cd4d5e7" prot="protected" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>filename_</name></member>
+      <member refid="class_format_strings_m_l_d_b_1a728215fbc374b3beebc4eec7e03372ed" prot="protected" virt="virtual"><scope>FormatStringsMLDB</scope><name>flush</name></member>
+      <member refid="class_format_strings_1a272117842c12a2aaaafbff27a1fb58c0" prot="public" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>getFormatStrings</name></member>
+      <member refid="class_format_strings_m_l_d_b_1a4322c0b9330b84c00e11f08c31e1792d" prot="public" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>getHandlerForLogEntry</name></member>
+      <member refid="class_format_strings_m_l_d_b_1a9ca043ddd76a95da86996dbb51c0dc5e" prot="public" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>init</name></member>
+      <member refid="class_file_handler_1a83d056536289a502e280ad909c998e29" prot="public" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>isDirty</name></member>
+      <member refid="class_file_handler_1aeca3703f7450120817ff241f9ab5cebc" prot="public" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>join</name></member>
+      <member refid="class_binary_file_handler_1a2f569a2a2f1478ec6312a9f559cade02" prot="public" virt="virtual"><scope>FormatStringsMLDB</scope><name>length</name></member>
+      <member refid="class_file_handler_1aa513ca77c5578ff7f931578c4e2f767c" prot="protected" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>length_</name></member>
+      <member refid="class_file_handler_1af160a3724165ff7d40488471ad2cfeba" prot="public" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>mode</name></member>
+      <member refid="class_file_handler_1a3d60ec446935def914042db894c1bd3a" prot="protected" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>mode_</name></member>
+      <member refid="class_format_strings_m_l_d_b_1a802f5d50966d91722b9a0bf0c28718ee" prot="private" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>OffsetMap</name></member>
+      <member refid="class_format_strings_m_l_d_b_1adab492d60eb879360f5af35e9eb134f4" prot="private" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>offsetMap_</name></member>
+      <member refid="class_binary_file_handler_1a13bdd4383c425937da751b83380cd479" prot="protected" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>pFile_</name></member>
+      <member refid="class_format_strings_m_l_d_b_1a7379a015de642fb55343f0f3e5d1311b" prot="protected" virt="virtual"><scope>FormatStringsMLDB</scope><name>read</name></member>
+      <member refid="class_file_handler_1aa529a9fd4b544fd8b85e8aba4da1b32b" prot="public" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>refresh</name></member>
+      <member refid="class_binary_file_handler_1a210e605b34b892af78197e6667f89bf8" prot="public" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>reloadFileAndRefresh</name></member>
+      <member refid="class_format_strings_1afd22a14b8a09eadcbe10f112a69be9cf" prot="public" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>resolve</name></member>
+      <member refid="class_file_handler_1a6beda2ae2fd3b91e1928615ebde690af" prot="protected" virt="non-virtual"><scope>FormatStringsMLDB</scope><name>s_pathBuf_</name></member>
+      <member refid="class_format_strings_m_l_d_b_1a736059da669cffbf729bbb81602d50fd" prot="protected" virt="virtual"><scope>FormatStringsMLDB</scope><name>writeFormatStringToDB</name></member>
+      <member refid="class_binary_file_handler_1ac0e6becf7617edfa335daec6e2bb658e" prot="public" virt="virtual"><scope>FormatStringsMLDB</scope><name>~BinaryFileHandler</name></member>
+      <member refid="class_format_strings_1ab33e145ffff994a46a94dd17de70605b" prot="public" virt="virtual"><scope>FormatStringsMLDB</scope><name>~FormatStrings</name></member>
+      <member refid="class_format_strings_m_l_d_b_1a6b239b666c7a8309e9d715a96f58df5f" prot="public" virt="virtual"><scope>FormatStringsMLDB</scope><name>~FormatStringsMLDB</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

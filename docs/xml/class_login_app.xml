@@ -1,0 +1,1320 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_login_app" kind="class" language="C++" prot="public">
+    <compoundname>LoginApp</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ServerApp</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">TimerHandler</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Singleton&lt; LoginApp &gt;</basecompoundref>
+    <includes refid="loginapp_8hpp" local="no">loginapp.hpp</includes>
+    <innerclass refid="class_login_app_1_1_login_stats" prot="private">LoginApp::LoginStats</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_login_app_1a870c3a07da0a4feeaf994cb698b2eb65" prot="private" static="no">
+        <name>TimeoutType</name>
+        <enumvalue id="class_login_app_1a870c3a07da0a4feeaf994cb698b2eb65a9d3d9e3c9434f7c618f8481021ee856b" prot="private">
+          <name>TIMEOUT_TICK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="401" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="400" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_login_app_1a34c1cd45d7cc5e56c570022bbfa0669d" prot="private" static="no">
+        <type>BW::map&lt; Mercury::Address, <ref refid="class_client_login_request" kindref="compound">ClientLoginRequest</ref> &gt;</type>
+        <definition>typedef BW::map&lt; Mercury::Address, ClientLoginRequest &gt; LoginApp::ClientLoginRequests</definition>
+        <argsstring></argsstring>
+        <name>ClientLoginRequests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="196" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_login_app_1a4a9d0b088ee7e5ff126468a2e890fd80" prot="private" static="no">
+        <type>BW::map&lt; uint32, uint64 &gt;</type>
+        <definition>typedef BW::map&lt; uint32, uint64 &gt; LoginApp::IPAddressBanMap</definition>
+        <argsstring></argsstring>
+        <name>IPAddressBanMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="218" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_login_app_1a7267a3388f899d745eb782f0709f3539" prot="public" static="no">
+        <type><ref refid="class_login_app_config" kindref="compound">LoginAppConfig</ref></type>
+        <definition>typedef LoginAppConfig LoginApp::Config</definition>
+        <argsstring></argsstring>
+        <name>Config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="53" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_login_app_1a86d401e11285eebcb0e893751692f1c7" prot="private" static="no" mutable="no">
+        <type>std::auto_ptr&lt; StreamEncoder &gt;</type>
+        <definition>std::auto_ptr&lt; StreamEncoder &gt; LoginApp::pLogOnParamsEncoder_</definition>
+        <argsstring></argsstring>
+        <name>pLogOnParamsEncoder_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="187" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1ab59df515dc8a2d40a6dd7362b8837e1d" prot="private" static="no" mutable="no">
+        <type>Mercury::NetworkInterface</type>
+        <definition>Mercury::NetworkInterface LoginApp::extInterface_</definition>
+        <argsstring></argsstring>
+        <name>extInterface_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="188" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1aae7ce919ed3d1d536365fdbaf7e17b5f" prot="private" static="no" mutable="no">
+        <type>std::auto_ptr&lt; Mercury::StreamFilterFactory &gt;</type>
+        <definition>std::auto_ptr&lt; Mercury::StreamFilterFactory &gt; LoginApp::pStreamFilterFactory_</definition>
+        <argsstring></argsstring>
+        <name>pStreamFilterFactory_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="190" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1af26fb4297f15023547f3fc21c9ed1318" prot="private" static="no" mutable="no">
+        <type>Mercury::TCPServer</type>
+        <definition>Mercury::TCPServer LoginApp::tcpServer_</definition>
+        <argsstring></argsstring>
+        <name>tcpServer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="191" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1a1a9383260a9911880d7b9bb49a9b898c" prot="private" static="no" mutable="no">
+        <type>uint8</type>
+        <definition>uint8 LoginApp::systemOverloaded_</definition>
+        <argsstring></argsstring>
+        <name>systemOverloaded_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="193" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1a8510ca8ed7ea0b09482f221ad6bc548f" prot="private" static="no" mutable="no">
+        <type>uint64</type>
+        <definition>uint64 LoginApp::systemOverloadedTime_</definition>
+        <argsstring></argsstring>
+        <name>systemOverloadedTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="194" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1a15f76fa6a7543d88a748acc15ca158b8" prot="private" static="no" mutable="no">
+        <type>ClientLoginRequests</type>
+        <definition>ClientLoginRequests LoginApp::loginRequests_</definition>
+        <argsstring></argsstring>
+        <name>loginRequests_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="197" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1ad0cc7b378d165e1e52114d8fbadb4daa" prot="private" static="no" mutable="no">
+        <type>LoginChallengeFactories</type>
+        <definition>LoginChallengeFactories LoginApp::challengeFactories_</definition>
+        <argsstring></argsstring>
+        <name>challengeFactories_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="199" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1a32870f3c730f163f6e60628c1a132c9e" prot="private" static="no" mutable="no">
+        <type>DatabaseGateway</type>
+        <definition>DatabaseGateway LoginApp::databaseGateway_</definition>
+        <argsstring></argsstring>
+        <name>databaseGateway_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="201" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1a7a4e040a4baa27389e7cf29aec58adb6" prot="private" static="no" mutable="no">
+        <type>AnonymousChannelClient</type>
+        <definition>AnonymousChannelClient LoginApp::dbAppMgr_</definition>
+        <argsstring></argsstring>
+        <name>dbAppMgr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="203" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1a384330cf30eb68e342bac67dca9b559c" prot="private" static="no" mutable="no">
+        <type>uint64</type>
+        <definition>uint64 LoginApp::repliedFailsCounterResetTime_</definition>
+        <argsstring></argsstring>
+        <name>repliedFailsCounterResetTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="206" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1ae312927abcaeff8f34decda91ed10c37" prot="private" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint LoginApp::numFailRepliesLeft_</definition>
+        <argsstring></argsstring>
+        <name>numFailRepliesLeft_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="208" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1aa0a3477837572df1f78e946d72e1868b" prot="private" static="no" mutable="no">
+        <type>uint64</type>
+        <definition>uint64 LoginApp::lastRateLimitCheckTime_</definition>
+        <argsstring></argsstring>
+        <name>lastRateLimitCheckTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="213" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1abfedf491bffc3eefc6f749fcf7f3b3ec" prot="private" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint LoginApp::numAllowedLoginsLeft_</definition>
+        <argsstring></argsstring>
+        <name>numAllowedLoginsLeft_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="215" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1acb68ca8a962a2bd3dda5a2e1c8dd5ad4" prot="private" static="no" mutable="no">
+        <type>IPAddressBanMap</type>
+        <definition>IPAddressBanMap LoginApp::ipAddressBanMap_</definition>
+        <argsstring></argsstring>
+        <name>ipAddressBanMap_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="219" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1a7502391407b094f771794c377620595a" prot="private" static="no" mutable="no">
+        <type>uint64</type>
+        <definition>uint64 LoginApp::nextIPAddressBanMapCleanupTime_</definition>
+        <argsstring></argsstring>
+        <name>nextIPAddressBanMapCleanupTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="220" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1aaefa8f59dc29943449d9d68594d7a9ff" prot="private" static="no" mutable="no">
+        <type>LoginAppID</type>
+        <definition>LoginAppID LoginApp::id_</definition>
+        <argsstring></argsstring>
+        <name>id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="222" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1a79b0dc7d40210cb0ab2d2aa808a74cdf" prot="private" static="no" mutable="no">
+        <type>LoginStats</type>
+        <definition>LoginStats LoginApp::loginStats_</definition>
+        <argsstring></argsstring>
+        <name>loginStats_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="397" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1aee2c514738ea4b7c13aec484c4335573" prot="private" static="no" mutable="no">
+        <type>TimerHandle</type>
+        <definition>TimerHandle LoginApp::statsTimer_</definition>
+        <argsstring></argsstring>
+        <name>statsTimer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="398" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="398" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1a3a7f5fd17275d0ad606c8b1ab3574c5f" prot="private" static="no" mutable="no">
+        <type>TimerHandle</type>
+        <definition>TimerHandle LoginApp::tickTimer_</definition>
+        <argsstring></argsstring>
+        <name>tickTimer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="405" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_login_app_1a42a4b846b67355077a84052b89f0e170" prot="private" static="yes" mutable="no">
+        <type>const uint32</type>
+        <definition>BW_BEGIN_NAMESPACE const uint32 LoginApp::UPDATE_STATS_PERIOD</definition>
+        <argsstring></argsstring>
+        <name>UPDATE_STATS_PERIOD</name>
+        <initializer>= 1000000</initializer>
+        <briefdescription>
+<para>Timer period when updating login statistics. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="407" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1a0111b7df8be39f7ff4527df2523f86f7" prot="private" static="yes" mutable="no">
+        <type>const uint32</type>
+        <definition>const uint32 LoginApp::MAX_SANE_CALCULATION_SECONDS</definition>
+        <argsstring></argsstring>
+        <name>MAX_SANE_CALCULATION_SECONDS</name>
+        <initializer>= 3600</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="408" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_login_app_1a350573c873cf57219a86d2a3370921cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LoginApp::LoginApp</definition>
+        <argsstring>(Mercury::EventDispatcher &amp;mainDispatcher, Mercury::NetworkInterface &amp;interface)</argsstring>
+        <name>LoginApp</name>
+        <param>
+          <type>Mercury::EventDispatcher &amp;</type>
+          <declname>mainDispatcher</declname>
+        </param>
+        <param>
+          <type>Mercury::NetworkInterface &amp;</type>
+          <declname>interface</declname>
+          <defname>intInterface</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="55" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="176" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1a1a98120530e3ef8f320d2418caa39421" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LoginApp::~LoginApp</definition>
+        <argsstring>()</argsstring>
+        <name>~LoginApp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="57" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="234" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1aaa95b9169bcc108518ec6d2229bd3ef7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LoginApp::finishInit</definition>
+        <argsstring>(ClusterID clusterID, LoginAppID appID, BinaryIStream &amp;data)</argsstring>
+        <name>finishInit</name>
+        <param>
+          <type>ClusterID</type>
+          <declname>clusterID</declname>
+        </param>
+        <param>
+          <type>LoginAppID</type>
+          <declname>appID</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method completes initialisation after registration to <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>appID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_login_app" kindref="compound">LoginApp</ref> ID. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The shard hash data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="59" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="454" bodyend="569"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1a61781662e6d2691578008d982ecd80b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::handleTimeout</definition>
+        <argsstring>(TimerHandle handle, void *arg)</argsstring>
+        <name>handleTimeout</name>
+        <param>
+          <type>TimerHandle</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="63" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="1280" bodyend="1290"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1aeb02dea88e459e32d5a262f3e57a0d50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::login</definition>
+        <argsstring>(const Mercury::Address &amp;source, Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>login</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is the one that actually receives the login requests. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="67" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="819" bodyend="1195"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1aef381479e40cbcb39444fabdeb154ab8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::probe</definition>
+        <argsstring>(const Mercury::Address &amp;source, Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>probe</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles the probe message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="70" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="1300" bodyend="1325"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1ae7df18a2df3dd677355861086b8d6e2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::challengeResponse</definition>
+        <argsstring>(const Mercury::Address &amp;source, Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>challengeResponse</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles the client sending up the response for a previously issued challenge. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="73" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="1332" bodyend="1393"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1ae882ea701fed0fe3e66a261159f59dc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::controlledShutDown</definition>
+        <argsstring>(const Mercury::Address &amp;source, Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>controlledShutDown</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles incoming shutdown requests. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="77" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="1611" bodyend="1615"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1ae0ff02ee942b636e1cb95c9fa203765a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::handleDBAppMgrBirth</definition>
+        <argsstring>(const LoginIntInterface::handleDBAppMgrBirthArgs &amp;args)</argsstring>
+        <name>handleDBAppMgrBirth</name>
+        <param>
+          <type>const LoginIntInterface::handleDBAppMgrBirthArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref> birth. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="80" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="431" bodyend="445"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1ac3516f8d622b0e62b8a976df79189785" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::barrierDBAppHash</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header)</argsstring>
+        <name>barrierDBAppHash</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a message from <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref> to mark that there will be shards under transition in the cluster. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="83" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="576" bodyend="584"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1abeff5b62dd5687b2ac70a7bcf13f062b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::updateDBAppHash</definition>
+        <argsstring>(const Mercury::Address &amp;source, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>updateDBAppHash</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles the updateDBAppHash message.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message context. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="86" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="594" bodyend="640"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1a4acbf56f6695f511c0c6d16d64b525ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::handleFailure</definition>
+        <argsstring>(const Mercury::Address &amp;addr, Mercury::Channel *pChannel, Mercury::ReplyID replyID, int status, const char *msg=NULL, ServerLogOnParamsPtr pParams=NULL)</argsstring>
+        <name>handleFailure</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>Mercury::Channel *</type>
+          <declname>pChannel</declname>
+        </param>
+        <param>
+          <type>Mercury::ReplyID</type>
+          <declname>replyID</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>status</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>msg</declname>
+          <defname>pDescription</defname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>ServerLogOnParamsPtr</type>
+          <declname>pParams</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method updates counters and sends a failure message back to the client. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="90" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="705" bodyend="787"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1a2427356a5fd6c9df4b631feafdb40bd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::sendAndCacheSuccess</definition>
+        <argsstring>(const Mercury::Address &amp;addr, Mercury::Channel *pChannel, Mercury::ReplyID replyID, const LoginReplyRecord &amp;replyRecord, const BW::string &amp;serverMsg, ServerLogOnParamsPtr pParams)</argsstring>
+        <name>sendAndCacheSuccess</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>Mercury::Channel *</type>
+          <declname>pChannel</declname>
+        </param>
+        <param>
+          <type>Mercury::ReplyID</type>
+          <declname>replyID</declname>
+        </param>
+        <param>
+          <type>const LoginReplyRecord &amp;</type>
+          <declname>replyRecord</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>serverMsg</declname>
+        </param>
+        <param>
+          <type>ServerLogOnParamsPtr</type>
+          <declname>pParams</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends a reply to a client indicating that logging in has been successful. It also caches this information so that it can be resent if necessary. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="94" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="1401" bodyend="1431"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1a6fe56e8410ae912cf4d8f205c37d343f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::handleBanIP</definition>
+        <argsstring>(const Mercury::Address &amp;addr, Mercury::Channel *pChannel, Mercury::ReplyID replyID, ServerLogOnParamsPtr pParams,::time_t banDuration)</argsstring>
+        <name>handleBanIP</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>Mercury::Channel *</type>
+          <declname>pChannel</declname>
+        </param>
+        <param>
+          <type>Mercury::ReplyID</type>
+          <declname>replyID</declname>
+        </param>
+        <param>
+          <type>ServerLogOnParamsPtr</type>
+          <declname>pParams</declname>
+        </param>
+        <param>
+          <type>::time_t</type>
+          <declname>banDuration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method marks the address as banned and sends a failure message back to the client. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="99" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="793" bodyend="804"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1a2509816fa585319827d82cfecefd4442" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Mercury::NetworkInterface &amp;</type>
+        <definition>Mercury::NetworkInterface&amp; LoginApp::intInterface</definition>
+        <argsstring>()</argsstring>
+        <name>intInterface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="103" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="103" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1a00c10cd5e6d2e88a9b9cb02dd9c6397c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Mercury::NetworkInterface &amp;</type>
+        <definition>Mercury::NetworkInterface&amp; LoginApp::extInterface</definition>
+        <argsstring>()</argsstring>
+        <name>extInterface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="104" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1aae69b53ffc1b8a456e9aaefff924bc4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Mercury::ChannelOwner &amp;</type>
+        <definition>Mercury::ChannelOwner&amp; LoginApp::dbAppMgr</definition>
+        <argsstring>()</argsstring>
+        <name>dbAppMgr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="106" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1a287556f161c4334b4afa521f6480f45e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Mercury::ChannelOwner &amp;</type>
+        <definition>const Mercury::ChannelOwner&amp; LoginApp::dbAppMgr</definition>
+        <argsstring>() const </argsstring>
+        <name>dbAppMgr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="107" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="107" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1abaa7924e15150f2967eccd18fd62c488" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_storage_shard" kindref="compound">StorageShard</ref> &amp;</type>
+        <definition>const StorageShard&amp; LoginApp::shardAlpha</definition>
+        <argsstring>() const </argsstring>
+        <name>shardAlpha</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="112" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1ad187307190d958049efec043b8b7e44b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LoginApp::isDBReady</definition>
+        <argsstring>() const </argsstring>
+        <name>isDBReady</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="117" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="117" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1ab574a58de70dfe72a85843bcefed9061" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LoginApp::isDBAppMgrReady</definition>
+        <argsstring>() const </argsstring>
+        <name>isDBAppMgrReady</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="122" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="122" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1a37563afae9ba074fe9c62c70c8a7a121" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LoginApp::hasStarted</definition>
+        <argsstring>() const </argsstring>
+        <name>hasStarted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="127" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="127" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1a9b0f4444a3f4e6c3bb061d6d8ceb5ef4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::clearIPAddressBans</definition>
+        <argsstring>()</argsstring>
+        <name>clearIPAddressBans</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="132" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="1618" bodyend="1623"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1a5248881f9208efe050126b4e46c7bd4e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8</type>
+        <definition>uint8 LoginApp::systemOverloaded</definition>
+        <argsstring>() const </argsstring>
+        <name>systemOverloaded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="134" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="134" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1a46cc359a3ac7b58266ef351a238bb81d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::systemOverloaded</definition>
+        <argsstring>(uint8 status)</argsstring>
+        <name>systemOverloaded</name>
+        <param>
+          <type>uint8</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="137" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="137" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1a78c57e7f2f10e27e38cca8cab4305de6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>BW::string</type>
+        <definition>BW::string LoginApp::challengeType</definition>
+        <argsstring>() const </argsstring>
+        <name>challengeType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns challengeType configuration option value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="151" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="1642" bodyend="1645"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1ac97e330b7780137119faaedf710c634c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::challengeType</definition>
+        <argsstring>(BW::string value)</argsstring>
+        <name>challengeType</name>
+        <param>
+          <type>BW::string</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method update challengeType configuration option value and invoke onChallengeTypeModified() handler if the value is modified </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="153" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="1651" bodyend="1668"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_login_app_1a4749d40ddd224f8547ae7a99f2d520dc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Mercury::UDPChannel &amp;</type>
+        <definition>static Mercury::UDPChannel&amp; LoginApp::getChannel</definition>
+        <argsstring>(const Mercury::Address &amp;addr)</argsstring>
+        <name>getChannel</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the channel for the given address. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="146" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="146" bodyend="149"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_login_app_1a2c3c2c45afb0db7c3f2fcddb4b28d40e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LoginApp::init</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>init</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="157" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="245" bodyend="425"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1a97d17112646a197c2b71aee0cc593c45" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::onRunComplete</definition>
+        <argsstring>()</argsstring>
+        <name>onRunComplete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="158" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="694" bodyend="698"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1aaef82ffc066cab6be6004a9dcb0ef633" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LoginApp::initLogOnParamsEncoder</definition>
+        <argsstring>()</argsstring>
+        <name>initLogOnParamsEncoder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method initialises the <ref refid="class_login_app" kindref="compound">LoginApp</ref> private key for decrypting log on parameters. <simplesect kind="return"><para>true if the initialisation finished correctly, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="160" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="648" bodyend="688"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1a9096f8cf6f0621c62cdc49cf216e1f2a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>LoginSessionID</type>
+        <definition>LoginSessionID LoginApp::generateLoginSessionID</definition>
+        <argsstring>() const </argsstring>
+        <name>generateLoginSessionID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method generates an unique login session ID. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="162" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="810" bodyend="813"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1ac20d97f7b6d933f124042e9650fa8e82" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LoginApp::handleResentPendingAttempt</definition>
+        <argsstring>(const Mercury::Address &amp;addr, Mercury::ReplyID replyID)</argsstring>
+        <name>handleResentPendingAttempt</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>Mercury::ReplyID</type>
+          <declname>replyID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks whether there is a login in progress from this address. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="163" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="1545" bodyend="1578"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1ab8a109539811aacf644a876f458a77c3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LoginApp::handleResentCachedAttempt</definition>
+        <argsstring>(const Mercury::Address &amp;addr, ServerLogOnParamsPtr pParams, Mercury::ReplyID replyID)</argsstring>
+        <name>handleResentCachedAttempt</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>ServerLogOnParamsPtr</type>
+          <declname>pParams</declname>
+        </param>
+        <param>
+          <type>Mercury::ReplyID</type>
+          <declname>replyID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks whether there is a cached login attempt from this address. If there is, it is assumed that the previous reply was dropped and this one is resent. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="165" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="1586" bodyend="1606"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1a539dafe209eb7e2d1a212d9a7ca85b36" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LoginApp::processForLoginChallenge</definition>
+        <argsstring>(const Mercury::Address &amp;addr, Mercury::Channel *pChannel, Mercury::ReplyID replyID, BinaryIStream &amp;data)</argsstring>
+        <name>processForLoginChallenge</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+          <defname>source</defname>
+        </param>
+        <param>
+          <type>Mercury::Channel *</type>
+          <declname>pChannel</declname>
+        </param>
+        <param>
+          <type>Mercury::ReplyID</type>
+          <declname>replyID</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method determines whether a login challenge should be sent, or a login response should be received.</para><para><simplesect kind="return"><para>true if no further processing is required, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="167" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="1204" bodyend="1274"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1af054d529ea328af02105c62441afd73d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::sendSuccess</definition>
+        <argsstring>(const Mercury::Address &amp;addr, Mercury::Channel *pChannel, Mercury::ReplyID replyID, const ClientLoginRequest &amp;request)</argsstring>
+        <name>sendSuccess</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>Mercury::Channel *</type>
+          <declname>pChannel</declname>
+        </param>
+        <param>
+          <type>Mercury::ReplyID</type>
+          <declname>replyID</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_client_login_request" kindref="compound">ClientLoginRequest</ref> &amp;</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends a reply to a client indicating that logging in has been successful. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="171" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="1438" bodyend="1468"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1a74c3b743134fd031a0a29176ccc10775" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::sendChallengeReply</definition>
+        <argsstring>(const Mercury::Address &amp;addr, Mercury::Channel *pChannel, Mercury::ReplyID replyID, const BW::string &amp;challengeType, LoginChallengePtr pChallenge)</argsstring>
+        <name>sendChallengeReply</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>Mercury::Channel *</type>
+          <declname>pChannel</declname>
+        </param>
+        <param>
+          <type>Mercury::ReplyID</type>
+          <declname>replyID</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>challengeType</declname>
+        </param>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">LoginChallengePtr</ref></type>
+          <declname>pChallenge</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends a reply back to the client with a challenge. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="175" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="1474" bodyend="1497"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1ab921cdbea91801ca921d6e989d503312" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::sendRawReply</definition>
+        <argsstring>(const Mercury::Address &amp;addr, Mercury::Channel *pChannel, Mercury::ReplyID replyID, BinaryIStream &amp;payload)</argsstring>
+        <name>sendRawReply</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>Mercury::Channel *</type>
+          <declname>pChannel</declname>
+        </param>
+        <param>
+          <type>Mercury::ReplyID</type>
+          <declname>replyID</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>payload</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends the given payload back to the client as a login reply. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="180" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="1503" bodyend="1538"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1a03f13d6e3fff37dd9aba4e2d14781be3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::onChallengeTypeModified</definition>
+        <argsstring>(const BW::string &amp;oldValue, const BW::string &amp;newValue)</argsstring>
+        <name>onChallengeTypeModified</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>oldValue</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>newValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is run if challengeType option is modified by the watcher. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="184" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="1629" bodyend="1637"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements the main singleton object in the login application. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1708">
+        <label>TimerHandler</label>
+      </node>
+      <node id="1709">
+        <label>Singleton&lt; LoginApp &gt;</label>
+      </node>
+      <node id="1706">
+        <label>LoginApp</label>
+        <link refid="class_login_app"/>
+        <childnode refid="1707" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1708" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1709" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1707">
+        <label>ServerApp</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1712">
+        <label>TimerHandler</label>
+      </node>
+      <node id="1713">
+        <label>Singleton&lt; LoginApp &gt;</label>
+      </node>
+      <node id="1710">
+        <label>LoginApp</label>
+        <link refid="class_login_app"/>
+        <childnode refid="1711" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1712" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1713" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1711">
+        <label>ServerApp</label>
+      </node>
+    </collaborationgraph>
+    <location file="loginapp/loginapp.hpp" line="49" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="47" bodyend="410"/>
+    <listofallmembers>
+      <member refid="class_login_app_1ac3516f8d622b0e62b8a976df79189785" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>barrierDBAppHash</name></member>
+      <member refid="class_login_app_1ad0cc7b378d165e1e52114d8fbadb4daa" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>challengeFactories_</name></member>
+      <member refid="class_login_app_1ae7df18a2df3dd677355861086b8d6e2b" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>challengeResponse</name></member>
+      <member refid="class_login_app_1a78c57e7f2f10e27e38cca8cab4305de6" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>challengeType</name></member>
+      <member refid="class_login_app_1ac97e330b7780137119faaedf710c634c" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>challengeType</name></member>
+      <member refid="class_login_app_1a9b0f4444a3f4e6c3bb061d6d8ceb5ef4" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>clearIPAddressBans</name></member>
+      <member refid="class_login_app_1a34c1cd45d7cc5e56c570022bbfa0669d" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>ClientLoginRequests</name></member>
+      <member refid="class_login_app_1a7267a3388f899d745eb782f0709f3539" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>Config</name></member>
+      <member refid="class_login_app_1ae882ea701fed0fe3e66a261159f59dc1" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>controlledShutDown</name></member>
+      <member refid="class_login_app_1a32870f3c730f163f6e60628c1a132c9e" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>databaseGateway_</name></member>
+      <member refid="class_login_app_1aae69b53ffc1b8a456e9aaefff924bc4b" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>dbAppMgr</name></member>
+      <member refid="class_login_app_1a287556f161c4334b4afa521f6480f45e" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>dbAppMgr</name></member>
+      <member refid="class_login_app_1a7a4e040a4baa27389e7cf29aec58adb6" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>dbAppMgr_</name></member>
+      <member refid="class_login_app_1a00c10cd5e6d2e88a9b9cb02dd9c6397c" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>extInterface</name></member>
+      <member refid="class_login_app_1ab59df515dc8a2d40a6dd7362b8837e1d" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>extInterface_</name></member>
+      <member refid="class_login_app_1aaa95b9169bcc108518ec6d2229bd3ef7" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>finishInit</name></member>
+      <member refid="class_login_app_1a9096f8cf6f0621c62cdc49cf216e1f2a" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>generateLoginSessionID</name></member>
+      <member refid="class_login_app_1a4749d40ddd224f8547ae7a99f2d520dc" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>getChannel</name></member>
+      <member refid="class_login_app_1a6fe56e8410ae912cf4d8f205c37d343f" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>handleBanIP</name></member>
+      <member refid="class_login_app_1ae0ff02ee942b636e1cb95c9fa203765a" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>handleDBAppMgrBirth</name></member>
+      <member refid="class_login_app_1a4acbf56f6695f511c0c6d16d64b525ad" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>handleFailure</name></member>
+      <member refid="class_login_app_1ab8a109539811aacf644a876f458a77c3" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>handleResentCachedAttempt</name></member>
+      <member refid="class_login_app_1ac20d97f7b6d933f124042e9650fa8e82" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>handleResentPendingAttempt</name></member>
+      <member refid="class_login_app_1a61781662e6d2691578008d982ecd80b6" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>handleTimeout</name></member>
+      <member refid="class_login_app_1a37563afae9ba074fe9c62c70c8a7a121" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>hasStarted</name></member>
+      <member refid="class_login_app_1aaefa8f59dc29943449d9d68594d7a9ff" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>id_</name></member>
+      <member refid="class_login_app_1a2c3c2c45afb0db7c3f2fcddb4b28d40e" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>init</name></member>
+      <member refid="class_login_app_1aaef82ffc066cab6be6004a9dcb0ef633" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>initLogOnParamsEncoder</name></member>
+      <member refid="class_login_app_1a2509816fa585319827d82cfecefd4442" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>intInterface</name></member>
+      <member refid="class_login_app_1a4a9d0b088ee7e5ff126468a2e890fd80" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>IPAddressBanMap</name></member>
+      <member refid="class_login_app_1acb68ca8a962a2bd3dda5a2e1c8dd5ad4" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>ipAddressBanMap_</name></member>
+      <member refid="class_login_app_1ab574a58de70dfe72a85843bcefed9061" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>isDBAppMgrReady</name></member>
+      <member refid="class_login_app_1ad187307190d958049efec043b8b7e44b" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>isDBReady</name></member>
+      <member refid="class_login_app_1aa0a3477837572df1f78e946d72e1868b" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>lastRateLimitCheckTime_</name></member>
+      <member refid="class_login_app_1aeb02dea88e459e32d5a262f3e57a0d50" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>login</name></member>
+      <member refid="class_login_app_1a350573c873cf57219a86d2a3370921cc" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>LoginApp</name></member>
+      <member refid="class_login_app_1a15f76fa6a7543d88a748acc15ca158b8" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>loginRequests_</name></member>
+      <member refid="class_login_app_1a79b0dc7d40210cb0ab2d2aa808a74cdf" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>loginStats_</name></member>
+      <member refid="class_login_app_1a0111b7df8be39f7ff4527df2523f86f7" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>MAX_SANE_CALCULATION_SECONDS</name></member>
+      <member refid="class_login_app_1a7502391407b094f771794c377620595a" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>nextIPAddressBanMapCleanupTime_</name></member>
+      <member refid="class_login_app_1abfedf491bffc3eefc6f749fcf7f3b3ec" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>numAllowedLoginsLeft_</name></member>
+      <member refid="class_login_app_1ae312927abcaeff8f34decda91ed10c37" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>numFailRepliesLeft_</name></member>
+      <member refid="class_login_app_1a03f13d6e3fff37dd9aba4e2d14781be3" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>onChallengeTypeModified</name></member>
+      <member refid="class_login_app_1a97d17112646a197c2b71aee0cc593c45" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>onRunComplete</name></member>
+      <member refid="class_login_app_1a86d401e11285eebcb0e893751692f1c7" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>pLogOnParamsEncoder_</name></member>
+      <member refid="class_login_app_1aef381479e40cbcb39444fabdeb154ab8" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>probe</name></member>
+      <member refid="class_login_app_1a539dafe209eb7e2d1a212d9a7ca85b36" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>processForLoginChallenge</name></member>
+      <member refid="class_login_app_1aae7ce919ed3d1d536365fdbaf7e17b5f" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>pStreamFilterFactory_</name></member>
+      <member refid="class_login_app_1a384330cf30eb68e342bac67dca9b559c" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>repliedFailsCounterResetTime_</name></member>
+      <member refid="class_login_app_1a2427356a5fd6c9df4b631feafdb40bd1" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>sendAndCacheSuccess</name></member>
+      <member refid="class_login_app_1a74c3b743134fd031a0a29176ccc10775" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>sendChallengeReply</name></member>
+      <member refid="class_login_app_1ab921cdbea91801ca921d6e989d503312" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>sendRawReply</name></member>
+      <member refid="class_login_app_1af054d529ea328af02105c62441afd73d" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>sendSuccess</name></member>
+      <member refid="class_login_app_1abaa7924e15150f2967eccd18fd62c488" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>shardAlpha</name></member>
+      <member refid="class_login_app_1aee2c514738ea4b7c13aec484c4335573" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>statsTimer_</name></member>
+      <member refid="class_login_app_1a5248881f9208efe050126b4e46c7bd4e" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>systemOverloaded</name></member>
+      <member refid="class_login_app_1a46cc359a3ac7b58266ef351a238bb81d" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>systemOverloaded</name></member>
+      <member refid="class_login_app_1a1a9383260a9911880d7b9bb49a9b898c" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>systemOverloaded_</name></member>
+      <member refid="class_login_app_1a8510ca8ed7ea0b09482f221ad6bc548f" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>systemOverloadedTime_</name></member>
+      <member refid="class_login_app_1af26fb4297f15023547f3fc21c9ed1318" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>tcpServer_</name></member>
+      <member refid="class_login_app_1a3a7f5fd17275d0ad606c8b1ab3574c5f" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>tickTimer_</name></member>
+      <member refid="class_login_app_1a870c3a07da0a4feeaf994cb698b2eb65a9d3d9e3c9434f7c618f8481021ee856b" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>TIMEOUT_TICK</name></member>
+      <member refid="class_login_app_1a870c3a07da0a4feeaf994cb698b2eb65" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>TimeoutType</name></member>
+      <member refid="class_login_app_1a42a4b846b67355077a84052b89f0e170" prot="private" virt="non-virtual"><scope>LoginApp</scope><name>UPDATE_STATS_PERIOD</name></member>
+      <member refid="class_login_app_1abeff5b62dd5687b2ac70a7bcf13f062b" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>updateDBAppHash</name></member>
+      <member refid="class_login_app_1a1a98120530e3ef8f320d2418caa39421" prot="public" virt="non-virtual"><scope>LoginApp</scope><name>~LoginApp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

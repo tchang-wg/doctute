@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_transfer_d_b_process" kind="class" language="C++" prot="public">
+    <compoundname>TransferDBProcess</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ReplyHandler</basecompoundref>
+    <includes refid="transfer__db__process_8hpp" local="no">transfer_db_process.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_transfer_d_b_process_1a01ed9dccfedb6e9d68a31513a2009dd3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TransferDBProcess::shouldAbort_</definition>
+        <argsstring></argsstring>
+        <name>shouldAbort_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/transfer_db_process.hpp" line="29" column="1" bodyfile="tools/consolidate_dbs/transfer_db_process.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_transfer_d_b_process_1a610804e68e0b80e8ebc8a61a0a2f045e" prot="private" static="no" mutable="no">
+        <type>Mercury::Address</type>
+        <definition>Mercury::Address TransferDBProcess::listeningAddr_</definition>
+        <argsstring></argsstring>
+        <name>listeningAddr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/transfer_db_process.hpp" line="30" column="1" bodyfile="tools/consolidate_dbs/transfer_db_process.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_transfer_d_b_process_1afcbb0966b27d5d1a8f7a52b82b68275c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE TransferDBProcess::TransferDBProcess</definition>
+        <argsstring>(const Mercury::Address &amp;listeningAddr)</argsstring>
+        <name>TransferDBProcess</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>listeningAddr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/transfer_db_process.hpp" line="18" column="1" bodyfile="tools/consolidate_dbs/transfer_db_process.cpp" bodystart="14" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transfer_d_b_process_1a388b55d98db97ce4de99a4e2b4d1e3f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TransferDBProcess::transfer</definition>
+        <argsstring>(const BWMachineDNetwork *pBWMachineD, uint32 remoteIP, const BW::string &amp;path)</argsstring>
+        <name>transfer</name>
+        <param>
+          <type>const BWMachineDNetwork *</type>
+          <declname>pBWMachineD</declname>
+        </param>
+        <param>
+          <type>uint32</type>
+          <declname>remoteIP</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/transfer_db_process.hpp" line="20" column="1" bodyfile="tools/consolidate_dbs/transfer_db_process.cpp" bodystart="22" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_transfer_d_b_process_1a0f3917093e735bc004ea4d873a9603b1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TransferDBProcess::onPidMessage</definition>
+        <argsstring>(PidMessage &amp;pm, uint32 addr)</argsstring>
+        <name>onPidMessage</name>
+        <param>
+          <type>PidMessage &amp;</type>
+          <declname>pm</declname>
+        </param>
+        <param>
+          <type>uint32</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called when a remote process to transfer the secondary DB file is started. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/transfer_db_process.hpp" line="26" column="1" bodyfile="tools/consolidate_dbs/transfer_db_process.cpp" bodystart="62" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class to handle transferring a secondary database from a remote machine. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2972">
+        <label>ReplyHandler</label>
+      </node>
+      <node id="2971">
+        <label>TransferDBProcess</label>
+        <link refid="class_transfer_d_b_process"/>
+        <childnode refid="2972" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2974">
+        <label>ReplyHandler</label>
+      </node>
+      <node id="2973">
+        <label>TransferDBProcess</label>
+        <link refid="class_transfer_d_b_process"/>
+        <childnode refid="2974" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/consolidate_dbs/transfer_db_process.hpp" line="16" column="1" bodyfile="tools/consolidate_dbs/transfer_db_process.hpp" bodystart="15" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_transfer_d_b_process_1a610804e68e0b80e8ebc8a61a0a2f045e" prot="private" virt="non-virtual"><scope>TransferDBProcess</scope><name>listeningAddr_</name></member>
+      <member refid="class_transfer_d_b_process_1a0f3917093e735bc004ea4d873a9603b1" prot="private" virt="non-virtual"><scope>TransferDBProcess</scope><name>onPidMessage</name></member>
+      <member refid="class_transfer_d_b_process_1a01ed9dccfedb6e9d68a31513a2009dd3" prot="private" virt="non-virtual"><scope>TransferDBProcess</scope><name>shouldAbort_</name></member>
+      <member refid="class_transfer_d_b_process_1a388b55d98db97ce4de99a4e2b4d1e3f6" prot="public" virt="non-virtual"><scope>TransferDBProcess</scope><name>transfer</name></member>
+      <member refid="class_transfer_d_b_process_1afcbb0966b27d5d1a8f7a52b82b68275c" prot="public" virt="non-virtual"><scope>TransferDBProcess</scope><name>TransferDBProcess</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

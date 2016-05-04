@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="client__entity__mailbox_8hpp" kind="file" language="C++">
+    <compoundname>client_entity_mailbox.hpp</compoundname>
+    <includes local="yes">entitydef/mailbox_base.hpp</includes>
+    <includedby refid="client__entity__mailbox_8cpp" local="yes">baseapp/client_entity_mailbox.cpp</includedby>
+    <includedby refid="client__entity__mailbox__wrapper_8hpp" local="yes">baseapp/client_entity_mailbox_wrapper.hpp</includedby>
+    <includedby refid="proxy_8cpp" local="yes">baseapp/proxy.cpp</includedby>
+    <includedby refid="remote__client__method_8cpp" local="yes">baseapp/remote_client_method.cpp</includedby>
+    <incdepgraph>
+      <node id="1319">
+        <label>baseapp/client_entity_mailbox.hpp</label>
+        <link refid="client_entity_mailbox.hpp"/>
+        <childnode refid="1320" relation="include">
+        </childnode>
+      </node>
+      <node id="1320">
+        <label>entitydef/mailbox_base.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1321">
+        <label>baseapp/client_entity_mailbox.hpp</label>
+        <link refid="client_entity_mailbox.hpp"/>
+        <childnode refid="1322" relation="include">
+        </childnode>
+      </node>
+      <node id="1322">
+        <label>baseapp/client_entity_mailbox_wrapper.hpp</label>
+        <link refid="client__entity__mailbox__wrapper_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_client_entity_mail_box" prot="public">ClientEntityMailBox</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CLIENT_ENTITY_MAILBOX_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLIENT_ENTITY_MAILBOX_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;entitydef/mailbox_base.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">EntityDescription;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MethodDescription;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_proxy" kindref="compound">Proxy</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_remote_client_method" kindref="compound">RemoteClientMethod</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_client_entity_mail_box" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_client_entity_mail_box" kindref="compound">ClientEntityMailBox</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>PyEntityMailBox</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>Py_Header(<sp/><ref refid="class_client_entity_mail_box" kindref="compound">ClientEntityMailBox</ref>,<sp/>PyEntityMailBox<sp/>)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_client_entity_mail_box" kindref="compound">ClientEntityMailBox</ref>(<sp/><ref refid="class_proxy" kindref="compound">Proxy</ref><sp/>&amp;<sp/>proxy<sp/>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>EntityID<sp/>id()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>ClusterID<sp/>clusterID()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isRemoteCluster()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>address(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>address<sp/>)<sp/>{}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>address()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>ScriptObject<sp/>pyGetAttribute(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ScriptString<sp/>&amp;<sp/>attrObj<sp/>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>BinaryOStream<sp/>*<sp/>getStream(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MethodDescription<sp/>&amp;<sp/>methodDesc,<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::auto_ptr&lt;<sp/>Mercury::ReplyMessageHandler<sp/>&gt;<sp/>pHandler<sp/>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sendStream();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MethodDescription<sp/>*<sp/>findMethod(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>attr<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EntityDescription&amp;<sp/>getEntityDescription()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>EntityMailBoxRef<sp/>ref()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_proxy" kindref="compound">Proxy</ref><sp/>&amp;<sp/>proxy()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>proxy_;<sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>PY_KEYWORD_METHOD_DECLARE(<sp/>pyCall<sp/>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>EntityMailBoxRef<sp/>static_ref(<sp/>PyObject<sp/>*<sp/>pThis<sp/>)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_client_entity_mail_box" kindref="compound">ClientEntityMailBox</ref>*)pThis)-&gt;ref();<sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_proxy" kindref="compound">Proxy</ref><sp/>&amp;<sp/>proxy_;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>CLIENT_ENTITY_MAILBOX_HPP</highlight></codeline>
+    </programlisting>
+    <location file="baseapp/client_entity_mailbox.hpp"/>
+  </compounddef>
+</doxygen>

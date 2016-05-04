@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="bw__config__login__challenge__config_8hpp" kind="file" language="C++">
+    <compoundname>bw_config_login_challenge_config.hpp</compoundname>
+    <includes local="yes">connection/login_challenge_factory.hpp</includes>
+    <includedby refid="bw__config__login__challenge__config_8cpp" local="yes">loginapp/bw_config_login_challenge_config.cpp</includedby>
+    <includedby refid="loginapp_8cpp" local="yes">loginapp/loginapp.cpp</includedby>
+    <incdepgraph>
+      <node id="16119">
+        <label>loginapp/bw_config_login_challenge_config.hpp</label>
+        <link refid="bw_config_login_challenge_config.hpp"/>
+        <childnode refid="16120" relation="include">
+        </childnode>
+      </node>
+      <node id="16120">
+        <label>connection/login_challenge_factory.hpp</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_b_w_config_login_challenge_config" prot="public">BWConfigLoginChallengeConfig</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BW_CONFIG_LOGIN_CHALLENGE_CONFIG_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BW_CONFIG_LOGIN_CHALLENGE_CONFIG_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;connection/login_challenge_factory.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_b_w_config_login_challenge_config" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_b_w_config_login_challenge_config" kindref="compound">BWConfigLoginChallengeConfig</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>LoginChallengeConfig</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>LoginChallengeConfigPtr<sp/><ref refid="class_b_w_config_login_challenge_config_1a0060f3b7319c0e56558fce174ff5b1c8" kindref="member">root</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>LoginChallengeConfigPtr<sp/>getChild(<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>childName<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>override<sp/>*/</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>getString(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>path,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BW::string<sp/>defaultValue<sp/>=<sp/>BW::string()<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>override<sp/>*/</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>getLong(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>path,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>defaultValue<sp/>=<sp/>0<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>override<sp/>*/</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>getDouble(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>path,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>defaultValue<sp/>=<sp/>0.0<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>override<sp/>*/</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_w_config_login_challenge_config" kindref="compound">BWConfigLoginChallengeConfig</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>path<sp/>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>BW::string<sp/>path_;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>BW_CONFIG_LOGIN_CHALLENGE_CONFIG_HPP</highlight></codeline>
+    </programlisting>
+    <location file="loginapp/bw_config_login_challenge_config.hpp"/>
+  </compounddef>
+</doxygen>

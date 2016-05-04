@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_proxy_message_handler" kind="class" language="C++" prot="public">
+    <compoundname>ProxyMessageHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">InputMessageHandler</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>class ARGS_TYPE</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_proxy_message_handler_1ae247103971bbbbd125b11b7afe13beb4" prot="public" static="no">
+        <type>void(Proxy::*</type>
+        <definition>typedef void(Proxy::* ProxyMessageHandler&lt; ARGS_TYPE &gt;::Handler) (const ARGS_TYPE &amp;args)</definition>
+        <argsstring>)(const ARGS_TYPE &amp;args)</argsstring>
+        <name>Handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/message_handlers.cpp" line="160" column="1" bodyfile="baseapp/message_handlers.cpp" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_proxy_message_handler_1a98314bba566f0155c20e51e255358ec6" prot="private" static="no" mutable="no">
+        <type>Handler</type>
+        <definition>Handler ProxyMessageHandler&lt; ARGS_TYPE &gt;::handler_</definition>
+        <argsstring></argsstring>
+        <name>handler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/message_handlers.cpp" line="199" column="1" bodyfile="baseapp/message_handlers.cpp" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_proxy_message_handler_1a229e652c4d5c6318288cf35cb1ec9669" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ProxyMessageHandler&lt; ARGS_TYPE &gt;::ProxyMessageHandler</definition>
+        <argsstring>(Handler handler)</argsstring>
+        <name>ProxyMessageHandler</name>
+        <param>
+          <type>Handler</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/message_handlers.cpp" line="163" column="1" bodyfile="baseapp/message_handlers.cpp" bodystart="163" bodyend="163"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_proxy_message_handler_1a1affc39a18991505d764bde5955e8fb4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ProxyMessageHandler&lt; ARGS_TYPE &gt;::handleMessage</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>handleMessage</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/message_handlers.cpp" line="166" column="1" bodyfile="baseapp/message_handlers.cpp" bodystart="166" bodyend="197"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Objects of this type are used to handle proxy messages </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2183">
+        <label>InputMessageHandler</label>
+      </node>
+      <node id="2182">
+        <label>ProxyMessageHandler&lt; ARGS_TYPE &gt;</label>
+        <link refid="class_proxy_message_handler"/>
+        <childnode refid="2183" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2185">
+        <label>InputMessageHandler</label>
+      </node>
+      <node id="2184">
+        <label>ProxyMessageHandler&lt; ARGS_TYPE &gt;</label>
+        <link refid="class_proxy_message_handler"/>
+        <childnode refid="2185" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/message_handlers.cpp" line="158" column="1" bodyfile="baseapp/message_handlers.cpp" bodystart="157" bodyend="200"/>
+    <listofallmembers>
+      <member refid="class_proxy_message_handler_1a1affc39a18991505d764bde5955e8fb4" prot="private" virt="virtual"><scope>ProxyMessageHandler</scope><name>handleMessage</name></member>
+      <member refid="class_proxy_message_handler_1ae247103971bbbbd125b11b7afe13beb4" prot="public" virt="non-virtual"><scope>ProxyMessageHandler</scope><name>Handler</name></member>
+      <member refid="class_proxy_message_handler_1a98314bba566f0155c20e51e255358ec6" prot="private" virt="non-virtual"><scope>ProxyMessageHandler</scope><name>handler_</name></member>
+      <member refid="class_proxy_message_handler_1a229e652c4d5c6318288cf35cb1ec9669" prot="public" virt="non-virtual"><scope>ProxyMessageHandler</scope><name>ProxyMessageHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

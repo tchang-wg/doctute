@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_entity_auto_loader" kind="class" language="C++" prot="public">
+    <compoundname>EntityAutoLoader</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IEntityAutoLoader</basecompoundref>
+    <includes refid="entity__auto__loader_8hpp" local="no">entity_auto_loader.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_entity_auto_loader_1abd2562f5c365f8f7357db01986d7f22f" prot="private" static="no">
+        <type>BW::vector&lt; std::pair&lt; EntityTypeID, DatabaseID &gt; &gt;</type>
+        <definition>typedef BW::vector&lt; std::pair&lt; EntityTypeID, DatabaseID &gt; &gt; EntityAutoLoader::Entities</definition>
+        <argsstring></argsstring>
+        <name>Entities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.hpp" line="37" column="1" bodyfile="dbapp/entity_auto_loader.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_entity_auto_loader_1a723e9cd6ab3260d114e3f6e12506d859" prot="private" static="no" mutable="no">
+        <type>Entities</type>
+        <definition>Entities EntityAutoLoader::entities_</definition>
+        <argsstring></argsstring>
+        <name>entities_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.hpp" line="38" column="1" bodyfile="dbapp/entity_auto_loader.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_auto_loader_1acf5e0a66793f8c03688b02aa673a4299" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EntityAutoLoader::numOutstanding_</definition>
+        <argsstring></argsstring>
+        <name>numOutstanding_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.hpp" line="39" column="1" bodyfile="dbapp/entity_auto_loader.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_auto_loader_1aa0a7821797e12e04c8665c43de526ab6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EntityAutoLoader::maxOutstanding_</definition>
+        <argsstring></argsstring>
+        <name>maxOutstanding_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.hpp" line="40" column="1" bodyfile="dbapp/entity_auto_loader.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_auto_loader_1a782b6df06f1e5f8d7bce4133cd383cfd" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EntityAutoLoader::numSent_</definition>
+        <argsstring></argsstring>
+        <name>numSent_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.hpp" line="41" column="1" bodyfile="dbapp/entity_auto_loader.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_auto_loader_1adf1d09275003018b3f1250f445884a79" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EntityAutoLoader::hasErrors_</definition>
+        <argsstring></argsstring>
+        <name>hasErrors_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.hpp" line="42" column="1" bodyfile="dbapp/entity_auto_loader.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_entity_auto_loader_1a7df245378bf617317e30a60b0e3d41bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EntityAutoLoader::EntityAutoLoader</definition>
+        <argsstring>()</argsstring>
+        <name>EntityAutoLoader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.hpp" line="19" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="233" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_auto_loader_1a9a3ea2c765b4906adaf5898c8ee0e31e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityAutoLoader::reserve</definition>
+        <argsstring>(int numEntities)</argsstring>
+        <name>reserve</name>
+        <param>
+          <type>int</type>
+          <declname>numEntities</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optimisation. Reserves the correct number of entities to be auto-loaded. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.hpp" line="21" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="244" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_auto_loader_1a805baeb42089c9e225343a7ca5ed5b9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityAutoLoader::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method starts loading the entities into the system. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.hpp" line="23" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="253" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_auto_loader_1a5c7523ec1beada0a84a2540786be95eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityAutoLoader::abort</definition>
+        <argsstring>()</argsstring>
+        <name>abort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is used instead of <ref refid="class_entity_auto_loader_1a805baeb42089c9e225343a7ca5ed5b9e" kindref="member">start()</ref> to indicate that there was an error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.hpp" line="25" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="276" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_auto_loader_1aea9e89fb4a1d76796c7b1738b96fcc87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityAutoLoader::addEntity</definition>
+        <argsstring>(EntityTypeID entityTypeID, DatabaseID dbID)</argsstring>
+        <name>addEntity</name>
+        <param>
+          <type>EntityTypeID</type>
+          <declname>entityTypeID</declname>
+        </param>
+        <param>
+          <type>DatabaseID</type>
+          <declname>dbID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a database entry that will later be loaded. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.hpp" line="27" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="287" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_auto_loader_1a7b2c69502838f3a721bb96b69186fde9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityAutoLoader::onAutoLoadEntityComplete</definition>
+        <argsstring>(bool isOK)</argsstring>
+        <name>onAutoLoadEntityComplete</name>
+        <param>
+          <type>bool</type>
+          <declname>isOK</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>AutoLoadingEntityHandler calls this method when the process of auto-loading the entity has completed - regardless of success or failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.hpp" line="29" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="320" bodyend="331"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_entity_auto_loader_1a4f5c7975e2258bdae6be3cadf1885919" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityAutoLoader::checkFinished</definition>
+        <argsstring>()</argsstring>
+        <name>checkFinished</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks whether or not this object has finished its job. If it has, this object deletes itself. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.hpp" line="32" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="338" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_auto_loader_1aa52fbeccde1c4b16710aa30ebf89bcb5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityAutoLoader::sendNext</definition>
+        <argsstring>()</argsstring>
+        <name>sendNext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method loads the next pending entity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.hpp" line="33" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="296" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_auto_loader_1ae517fb027cb6b45f860418673a3ac059" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EntityAutoLoader::allSent</definition>
+        <argsstring>() const </argsstring>
+        <name>allSent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.hpp" line="35" column="1" bodyfile="dbapp/entity_auto_loader.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used for loading entities from the database over a period of time. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1083">
+        <label>EntityAutoLoader</label>
+        <link refid="class_entity_auto_loader"/>
+        <childnode refid="1084" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1084">
+        <label>IEntityAutoLoader</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1085">
+        <label>EntityAutoLoader</label>
+        <link refid="class_entity_auto_loader"/>
+        <childnode refid="1086" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1086">
+        <label>IEntityAutoLoader</label>
+      </node>
+    </collaborationgraph>
+    <location file="dbapp/entity_auto_loader.hpp" line="17" column="1" bodyfile="dbapp/entity_auto_loader.hpp" bodystart="16" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_entity_auto_loader_1a5c7523ec1beada0a84a2540786be95eb" prot="public" virt="non-virtual"><scope>EntityAutoLoader</scope><name>abort</name></member>
+      <member refid="class_entity_auto_loader_1aea9e89fb4a1d76796c7b1738b96fcc87" prot="public" virt="non-virtual"><scope>EntityAutoLoader</scope><name>addEntity</name></member>
+      <member refid="class_entity_auto_loader_1ae517fb027cb6b45f860418673a3ac059" prot="private" virt="non-virtual"><scope>EntityAutoLoader</scope><name>allSent</name></member>
+      <member refid="class_entity_auto_loader_1a4f5c7975e2258bdae6be3cadf1885919" prot="private" virt="non-virtual"><scope>EntityAutoLoader</scope><name>checkFinished</name></member>
+      <member refid="class_entity_auto_loader_1abd2562f5c365f8f7357db01986d7f22f" prot="private" virt="non-virtual"><scope>EntityAutoLoader</scope><name>Entities</name></member>
+      <member refid="class_entity_auto_loader_1a723e9cd6ab3260d114e3f6e12506d859" prot="private" virt="non-virtual"><scope>EntityAutoLoader</scope><name>entities_</name></member>
+      <member refid="class_entity_auto_loader_1a7df245378bf617317e30a60b0e3d41bf" prot="public" virt="non-virtual"><scope>EntityAutoLoader</scope><name>EntityAutoLoader</name></member>
+      <member refid="class_entity_auto_loader_1adf1d09275003018b3f1250f445884a79" prot="private" virt="non-virtual"><scope>EntityAutoLoader</scope><name>hasErrors_</name></member>
+      <member refid="class_entity_auto_loader_1aa0a7821797e12e04c8665c43de526ab6" prot="private" virt="non-virtual"><scope>EntityAutoLoader</scope><name>maxOutstanding_</name></member>
+      <member refid="class_entity_auto_loader_1acf5e0a66793f8c03688b02aa673a4299" prot="private" virt="non-virtual"><scope>EntityAutoLoader</scope><name>numOutstanding_</name></member>
+      <member refid="class_entity_auto_loader_1a782b6df06f1e5f8d7bce4133cd383cfd" prot="private" virt="non-virtual"><scope>EntityAutoLoader</scope><name>numSent_</name></member>
+      <member refid="class_entity_auto_loader_1a7b2c69502838f3a721bb96b69186fde9" prot="public" virt="non-virtual"><scope>EntityAutoLoader</scope><name>onAutoLoadEntityComplete</name></member>
+      <member refid="class_entity_auto_loader_1a9a3ea2c765b4906adaf5898c8ee0e31e" prot="public" virt="non-virtual"><scope>EntityAutoLoader</scope><name>reserve</name></member>
+      <member refid="class_entity_auto_loader_1aa52fbeccde1c4b16710aa30ebf89bcb5" prot="private" virt="non-virtual"><scope>EntityAutoLoader</scope><name>sendNext</name></member>
+      <member refid="class_entity_auto_loader_1a805baeb42089c9e225343a7ca5ed5b9e" prot="public" virt="non-virtual"><scope>EntityAutoLoader</scope><name>start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

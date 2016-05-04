@@ -1,0 +1,649 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="server__platform_8hpp" kind="file" language="C++">
+    <compoundname>server_platform.hpp</compoundname>
+    <includes refid="process__binary__version_8hpp" local="yes">process_binary_version.hpp</includes>
+    <includes refid="usermap_8hpp" local="yes">usermap.hpp</includes>
+    <includes refid="message__with__destination_8hpp" local="yes">message_with_destination.hpp</includes>
+    <includes local="yes">cstdmf/bw_namespace.hpp</includes>
+    <includes local="yes">cstdmf/bw_string.hpp</includes>
+    <includes local="yes">cstdmf/stdmf.hpp</includes>
+    <includes local="yes">cstdmf/bw_set.hpp</includes>
+    <includes local="yes">cstdmf/binary_stream.hpp</includes>
+    <includes local="yes">cstdmf/bw_vector.hpp</includes>
+    <includes local="yes">network/interfaces.hpp</includes>
+    <includes local="yes">network/portmap.hpp</includes>
+    <includes local="yes">network/machine_guard.hpp</includes>
+    <includes local="no">sys/types.h</includes>
+    <includedby refid="listeners_8hpp" local="yes">tools/bwmachined/listeners.hpp</includedby>
+    <includedby refid="bwmachined_8hpp" local="yes">tools/bwmachined/bwmachined.hpp</includedby>
+    <includedby refid="server__platform_8cpp" local="yes">tools/bwmachined/server_platform.cpp</includedby>
+    <includedby refid="server__platform__linux_8hpp" local="yes">tools/bwmachined/server_platform_linux.hpp</includedby>
+    <includedby refid="server__platform__windows_8hpp" local="yes">tools/bwmachined/server_platform_windows.hpp</includedby>
+    <includedby refid="usermap_8cpp" local="yes">tools/bwmachined/usermap.cpp</includedby>
+    <incdepgraph>
+      <node id="18069">
+        <label>cstdmf/memory_stream.hpp</label>
+      </node>
+      <node id="18072">
+        <label>cstdmf/stdmf.hpp</label>
+      </node>
+      <node id="18067">
+        <label>network/endpoint.hpp</label>
+      </node>
+      <node id="18064">
+        <label>network/machine_guard.hpp</label>
+      </node>
+      <node id="18068">
+        <label>cstdmf/binary_stream.hpp</label>
+      </node>
+      <node id="18070">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="18062">
+        <label>cstdmf/bw_string.hpp</label>
+      </node>
+      <node id="18063">
+        <label>usermap.hpp</label>
+        <link refid="usermap_8hpp_source"/>
+        <childnode refid="18064" relation="include">
+        </childnode>
+      </node>
+      <node id="18073">
+        <label>cstdmf/bw_set.hpp</label>
+      </node>
+      <node id="18077">
+        <label>sys/types.h</label>
+      </node>
+      <node id="18066">
+        <label>connection_wrapper.hpp</label>
+        <link refid="connection__wrapper_8hpp_source"/>
+        <childnode refid="18067" relation="include">
+        </childnode>
+        <childnode refid="18068" relation="include">
+        </childnode>
+        <childnode refid="18069" relation="include">
+        </childnode>
+        <childnode refid="18070" relation="include">
+        </childnode>
+      </node>
+      <node id="18076">
+        <label>network/portmap.hpp</label>
+      </node>
+      <node id="18075">
+        <label>network/interfaces.hpp</label>
+      </node>
+      <node id="18071">
+        <label>cstdmf/bw_namespace.hpp</label>
+      </node>
+      <node id="18061">
+        <label>process_binary_version.hpp</label>
+        <link refid="process__binary__version_8hpp_source"/>
+        <childnode refid="18062" relation="include">
+        </childnode>
+      </node>
+      <node id="18065">
+        <label>message_with_destination.hpp</label>
+        <link refid="message__with__destination_8hpp_source"/>
+        <childnode refid="18066" relation="include">
+        </childnode>
+        <childnode refid="18064" relation="include">
+        </childnode>
+        <childnode refid="18067" relation="include">
+        </childnode>
+      </node>
+      <node id="18074">
+        <label>cstdmf/bw_vector.hpp</label>
+      </node>
+      <node id="18060">
+        <label>tools/bwmachined/server_platform.hpp</label>
+        <link refid="server_platform.hpp"/>
+        <childnode refid="18061" relation="include">
+        </childnode>
+        <childnode refid="18063" relation="include">
+        </childnode>
+        <childnode refid="18065" relation="include">
+        </childnode>
+        <childnode refid="18071" relation="include">
+        </childnode>
+        <childnode refid="18062" relation="include">
+        </childnode>
+        <childnode refid="18072" relation="include">
+        </childnode>
+        <childnode refid="18073" relation="include">
+        </childnode>
+        <childnode refid="18068" relation="include">
+        </childnode>
+        <childnode refid="18074" relation="include">
+        </childnode>
+        <childnode refid="18075" relation="include">
+        </childnode>
+        <childnode refid="18076" relation="include">
+        </childnode>
+        <childnode refid="18064" relation="include">
+        </childnode>
+        <childnode refid="18077" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="18083">
+        <label>tools/bwmachined/server_platform_windows.hpp</label>
+        <link refid="server__platform__windows_8hpp_source"/>
+      </node>
+      <node id="18081">
+        <label>tools/bwmachined/incoming_packet.hpp</label>
+        <link refid="incoming__packet_8hpp_source"/>
+      </node>
+      <node id="18080">
+        <label>tools/bwmachined/bwmachined.hpp</label>
+        <link refid="bwmachined_8hpp_source"/>
+        <childnode refid="18081" relation="include">
+        </childnode>
+      </node>
+      <node id="18079">
+        <label>tools/bwmachined/listeners.hpp</label>
+        <link refid="listeners_8hpp_source"/>
+        <childnode refid="18080" relation="include">
+        </childnode>
+      </node>
+      <node id="18078">
+        <label>tools/bwmachined/server_platform.hpp</label>
+        <link refid="server_platform.hpp"/>
+        <childnode refid="18079" relation="include">
+        </childnode>
+        <childnode refid="18080" relation="include">
+        </childnode>
+        <childnode refid="18082" relation="include">
+        </childnode>
+        <childnode refid="18083" relation="include">
+        </childnode>
+      </node>
+      <node id="18082">
+        <label>tools/bwmachined/server_platform_linux.hpp</label>
+        <link refid="server__platform__linux_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_stat" prot="public">Stat</innerclass>
+    <innerclass refid="struct_max_stat" prot="public">MaxStat</innerclass>
+    <innerclass refid="struct_interface_info" prot="public">InterfaceInfo</innerclass>
+    <innerclass refid="struct_system_info" prot="public">SystemInfo</innerclass>
+    <innerclass refid="struct_process_info" prot="public">ProcessInfo</innerclass>
+    <innerclass refid="class_platform_read_handler" prot="public">PlatformReadHandler</innerclass>
+    <innerclass refid="class_platform_write_handler" prot="public">PlatformWriteHandler</innerclass>
+    <innerclass refid="class_server_platform" prot="public">ServerPlatform</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="server__platform_8hpp_1a4b3d822b36f1a9c287f6c48834440a4d" prot="public" static="no">
+        <name>MAX_BIT_RATE</name>
+        <initializer>(1&lt;&lt;27)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/server_platform.hpp" line="22" column="9" bodyfile="tools/bwmachined/server_platform.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="server__platform_8hpp_1ad43a3f236e5c3a54b9b20a792ab83781" prot="public" static="no">
+        <name>BIT_INCREMENT</name>
+        <initializer>(MAX_BIT_RATE / 0xFF)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/server_platform.hpp" line="23" column="9" bodyfile="tools/bwmachined/server_platform.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="server__platform_8hpp_1ab26905cedc1600333b1fea39fd2682b9" prot="public" static="no">
+        <name>MAX_PACKET_RATE</name>
+        <initializer>256000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/server_platform.hpp" line="24" column="9" bodyfile="tools/bwmachined/server_platform.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="server__platform_8hpp_1a9cb3c4d05f702502bd9010fa74bd7cb1" prot="public" static="no">
+        <name>PACK_INCREMENT</name>
+        <initializer>(MAX_PACKET_RATE / 0xFF)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/server_platform.hpp" line="25" column="9" bodyfile="tools/bwmachined/server_platform.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="server__platform_8hpp_1a810c09c329e3b75b6aa89946b141e3f5" prot="public" static="no">
+        <name>BWMACHINED_VERSION</name>
+        <initializer>53</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/server_platform.hpp" line="84" column="9" bodyfile="tools/bwmachined/server_platform.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="server__platform_8hpp_1a90e61eff960ea3c615d136eeafef592b" prot="public" static="no">
+        <type><ref refid="class_stat" kindref="compound">Stat</ref>&lt; uint64 &gt;</type>
+        <definition>typedef Stat&lt; uint64 &gt; HighResStat</definition>
+        <argsstring></argsstring>
+        <name>HighResStat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/server_platform.hpp" line="133" column="1" bodyfile="tools/bwmachined/server_platform.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="server__platform_8hpp_1a309c1dfe0e48b6648e772485133b83e3" prot="public" static="no">
+        <type>BW::vector&lt; <ref refid="struct_process_info" kindref="compound">ProcessInfo</ref> &gt;</type>
+        <definition>typedef BW::vector&lt; ProcessInfo &gt; ProcessInfoList</definition>
+        <argsstring></argsstring>
+        <name>ProcessInfoList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/server_platform.hpp" line="176" column="1" bodyfile="tools/bwmachined/server_platform.hpp" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="server__platform_8hpp_1a0d50594fd33a1beb831902ffa17a9a63" prot="public" static="no">
+        <type>BW::map&lt; int, <ref refid="class_platform_read_handler" kindref="compound">PlatformReadHandler</ref> * &gt;</type>
+        <definition>typedef BW::map&lt; int, PlatformReadHandler * &gt; PlatformReadHandlerMap</definition>
+        <argsstring></argsstring>
+        <name>PlatformReadHandlerMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/server_platform.hpp" line="196" column="1" bodyfile="tools/bwmachined/server_platform.hpp" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="server__platform_8hpp_1a04de47c86b12e356c16cdb3367ba4b3e" prot="public" static="no">
+        <type>BW::map&lt; int, <ref refid="class_platform_write_handler" kindref="compound">PlatformWriteHandler</ref> * &gt;</type>
+        <definition>typedef BW::map&lt; int, PlatformWriteHandler * &gt; PlatformWriteHandlerMap</definition>
+        <argsstring></argsstring>
+        <name>PlatformWriteHandlerMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/server_platform.hpp" line="216" column="1" bodyfile="tools/bwmachined/server_platform.hpp" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="server__platform_8hpp_1a5a7d9708ff8e34c8cfb1d8f48ab47f24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initProcessState</definition>
+        <argsstring>(bool daemon)</argsstring>
+        <name>initProcessState</name>
+        <param>
+          <type>bool</type>
+          <declname>daemon</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/server_platform.hpp" line="92" column="1" bodyfile="tools/bwmachined/server_platform_linux.cpp" bodystart="226" bodyend="239"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SERVER_PLATFORM_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVER_PLATFORM_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;process_binary_version.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;usermap.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;message_with_destination.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_namespace.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_string.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/stdmf.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_set.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/binary_stream.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_vector.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/interfaces.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/portmap.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/machine_guard.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_BIT_RATE<sp/>(1&lt;&lt;27)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BIT_INCREMENT<sp/>(MAX_BIT_RATE<sp/>/<sp/>0xFF)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_PACKET_RATE<sp/>256000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PACK_INCREMENT<sp/>(MAX_PACKET_RATE<sp/>/<sp/>0xFF)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>2:<sp/>Makes<sp/>sure<sp/>to<sp/>write<sp/>empty<sp/>string<sp/>to<sp/>name<sp/>field<sp/>in<sp/>MACHINED_VERSION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messages</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>3:<sp/>Listener<sp/>notifications<sp/>are<sp/>now<sp/>sent<sp/>back<sp/>to<sp/>the<sp/>registration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>address<sp/>instead<sp/>of<sp/>127.0.0.1.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>4:<sp/>Added<sp/>support<sp/>for<sp/>tags<sp/>specified<sp/>in<sp/>/etc/bwmachined.conf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>5:<sp/>Using<sp/>mgm.id<sp/>to<sp/>pass<sp/>back<sp/>replyID<sp/>for<sp/>QUERY_TAG_MESSAGE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>6:<sp/>mgm.pid<sp/>==<sp/>-1<sp/>in<sp/>QUERY_TAG_MESSAGE<sp/>means<sp/>category<sp/>is<sp/>undefined</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>7:<sp/>Now<sp/>mgm.uid<sp/>&gt;<sp/>mgm.pid<sp/>means<sp/>category<sp/>is<sp/>undefined</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>8:<sp/>MACHINED_VERSION_MESSAGE<sp/>replies<sp/>marked<sp/>as<sp/>outgoing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>9:<sp/>Broadcast<sp/>replies<sp/>are<sp/>now<sp/>staggered<sp/>(bigworld-1-7-patch<sp/>only)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>10:Machined&apos;s<sp/>now<sp/>have<sp/>complete<sp/>knowledge<sp/>of<sp/>the<sp/>network</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>11:MGM&apos;s<sp/>are<sp/>variable<sp/>length<sp/>and<sp/>there<sp/>can<sp/>be<sp/>many<sp/>on<sp/>a<sp/>single<sp/>packet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>12:Messages<sp/>are<sp/>sized<sp/>prefixed<sp/>and<sp/>UnknownMessages<sp/>are<sp/>added</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>13:Bugfixes<sp/>for<sp/>dead<sp/>watcher<sp/>nubs<sp/>and<sp/>SMP<sp/>cpu<sp/>stat<sp/>calculation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>14:Critical<sp/>fix<sp/>for<sp/>possible<sp/>segfault<sp/>on<sp/>user<sp/>info<sp/>init</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>15:Dead<sp/>listeners<sp/>are<sp/>now<sp/>auto-deregistered</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>16:Memory<sp/>leak<sp/>and<sp/>death<sp/>notification<sp/>fixes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>17:Refactored<sp/>monolithic<sp/>machine_guard.cpp<sp/>into<sp/>classes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>18:Broadcast-reply-based<sp/>fault<sp/>tolerance,<sp/>handles<sp/>segmentation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>19:Added<sp/>ResetMessage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>20:Will<sp/>not<sp/>create<sp/>processes<sp/>under<sp/>non-existent<sp/>UIDs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>21:Dropped<sp/>packet<sp/>stats<sp/>are<sp/>current<sp/>values,<sp/>not<sp/>deltas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>22:Added<sp/>ErrorMessage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>23:Bugfix<sp/>for<sp/>buddy<sp/>selection<sp/>post-bootstrap</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>24:Check<sp/>filehandles<sp/>for<sp/>/proc<sp/>files<sp/>before<sp/>reading</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>25:Fixed<sp/>fd<sp/>leak;<sp/>more<sp/>error<sp/>handling<sp/>for<sp/>possible<sp/>fopen()<sp/>failures</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>26:Added<sp/>support<sp/>for<sp/>ANY_UID<sp/>ListenerMessages</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>27:Repeatedly-offset<sp/>updates<sp/>fixed,<sp/>uses<sp/>64-bit<sp/>timestamps</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>28:Coredump<sp/>reporting<sp/>is<sp/>done<sp/>in<sp/>UserMessages</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>29:Fix<sp/>for<sp/>segfault<sp/>in<sp/>updateProcessStats()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>30:Added<sp/>UserMessage::PARAM_REFRESH_ENV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>31:Fixed<sp/>CPU<sp/>load<sp/>calculation<sp/>on<sp/>SMP<sp/>systems</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>32:Won&apos;t<sp/>refuse<sp/>to<sp/>start<sp/>processes<sp/>under<sp/>UID&apos;s<sp/>not<sp/>in<sp/>usermap</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>33:Reload<sp/>usermap<sp/>after<sp/>a<sp/>flush<sp/>request</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>34:Broadcast<sp/>route<sp/>interface<sp/>discovery</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>35:Preserve<sp/>processes<sp/>on<sp/>restart;<sp/>set<sp/>BW_TIMING_METHOD<sp/>for<sp/>children</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>36:Take<sp/>caching<sp/>into<sp/>account<sp/>in<sp/>system<sp/>memory<sp/>calculations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>37:Handles<sp/>changes<sp/>to<sp/>system<sp/>time<sp/>(fix<sp/>in<sp/>cstdmf/time_queue.*)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>38:setgid()<sp/>before<sp/>fork()<sp/>so<sp/>users<sp/>have<sp/>permissions<sp/>on<sp/>their<sp/>procs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>39:No<sp/>longer<sp/>send<sp/>oversized<sp/>MGMPacket<sp/>responses.<sp/>Max<sp/>10<sp/>core<sp/>files.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>40:Added<sp/>CreateWithArgsMessage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>41:Added<sp/>HighPrecisionMachineMessage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>42:Added<sp/>version<sp/>number<sp/>to<sp/>ProcessMessage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>43:Fixed<sp/>a<sp/>bug<sp/>where<sp/>ResetMessage<sp/>was<sp/>not<sp/>streaming<sp/>itself<sp/>correctly.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>44:Delay<sp/>PidMessage<sp/>reply<sp/>in<sp/>order<sp/>to<sp/>determine<sp/>child<sp/>process<sp/>status.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>45:Fixed<sp/>a<sp/>memory<sp/>leak<sp/>and<sp/>a<sp/>daemon<sp/>shutdown<sp/>on<sp/>error<sp/>handling.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>46:New<sp/>server<sp/>binary<sp/>location<sp/>/<sp/>BW_CONFIG<sp/>changed<sp/>Hybrid<sp/>-&gt;<sp/>hybrid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>47:Add<sp/>MachinePlatformMessage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>48:Binary<sp/>directory<sp/>support<sp/>for<sp/>&apos;el&apos;<sp/>vs<sp/>&apos;centos&apos;/&apos;rhel&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>49:New<sp/>server<sp/>binary<sp/>location<sp/>(restructure<sp/>for<sp/>WG<sp/>decoupling)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dropped<sp/>32<sp/>bit<sp/>binary<sp/>support<sp/>for<sp/>Linux</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>50:Add<sp/>PARAM_GET_VERSION<sp/>to<sp/>UserMessage.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>51:Add<sp/>SignalListenerMessage.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>52:Add<sp/>BroadcastWrapperMessage<sp/>and<sp/>ResponseWrapperMessage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>53:Using<sp/>EventDispatcher<sp/>and<sp/>adding<sp/>TCP<sp/>support</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NOTE:<sp/>This<sp/>should<sp/>stay<sp/>in<sp/>sync<sp/>with<sp/>the<sp/>value<sp/>in<sp/>pycommon/messages.py</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BWMACHINED_VERSION<sp/>53</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ServerInfo;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_server_platform" kindref="compound">ServerPlatform</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_b_w_machined" kindref="compound">BWMachined</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initProcessState(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>daemon<sp/>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="98" refid="class_stat" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_stat" kindref="compound">Stat</ref></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_stat" kindref="compound">Stat</ref>()<sp/>:<sp/>v1_(),<sp/>v2_(),<sp/>v1curr_(<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>)<sp/>{}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>T&amp;<sp/>cur()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v1curr_<sp/>?<sp/>v1_<sp/>:<sp/>v2_;<sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>T&amp;<sp/>old()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v1curr_<sp/>?<sp/>v2_<sp/>:<sp/>v1_;<sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>T<sp/>delta()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v1curr_<sp/>?<sp/>v1_<sp/>-<sp/>v2_<sp/>:<sp/>v2_<sp/>-<sp/>v1_;<sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;t)<sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v1curr_)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v2_<sp/>=<sp/>t;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v1_<sp/>=<sp/>t;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v1curr_<sp/>=<sp/>!v1curr_;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>T&amp;<sp/>next()<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v1curr_<sp/>=<sp/>!v1curr_;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;cur();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v1curr_;<sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/>v1_,<sp/>v2_;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>v1curr_;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>BinaryOStream<sp/>&amp;<sp/>operator&lt;&lt;(<sp/>BinaryOStream<sp/>&amp;<sp/>os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_stat" kindref="compound">Stat</ref><sp/>&amp;<sp/>v<sp/>)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/>v.v1_<sp/>&lt;&lt;<sp/>v.v2_<sp/>&lt;&lt;<sp/>v.v1curr_;<sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>BinaryIStream<sp/>&amp;<sp/>operator&gt;&gt;(<sp/>BinaryIStream<sp/>&amp;<sp/>is,<sp/><ref refid="class_stat" kindref="compound">Stat</ref><sp/>&amp;<sp/>v<sp/>)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>is<sp/>&gt;&gt;<sp/>v.v1_<sp/>&gt;&gt;<sp/>v.v2_<sp/>&gt;&gt;<sp/>v.v1curr_;<sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="class_stat" kindref="compound">Stat&lt; uint64 &gt;</ref><sp/><ref refid="class_stat" kindref="compound">HighResStat</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="struct_max_stat" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_max_stat" kindref="compound">MaxStat</ref></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_stat" kindref="compound">HighResStat</ref><sp/>val,<sp/>max;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="struct_interface_info" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_interface_info" kindref="compound">InterfaceInfo</ref></highlight></codeline>
+<codeline lineno="141"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>BW::string<sp/>name;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_stat" kindref="compound">HighResStat</ref><sp/>bitsTotIn,<sp/>bitsTotOut,<sp/>packTotIn,<sp/>packTotOut;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="struct_system_info" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_system_info" kindref="compound">SystemInfo</ref></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>uint<sp/>nCpus,<sp/>cpuSpeed;</highlight></codeline>
+<codeline lineno="149" refid="struct_system_info_1a7bb12aa19f310d744c52ba311e04a46f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>BW::vector&lt;<sp/>MaxStat<sp/>&gt;<sp/><ref refid="struct_system_info_1a7bb12aa19f310d744c52ba311e04a46f" kindref="member">cpu</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="150" refid="struct_system_info_1a36487af50b116d6b741eeaf14309b711" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_max_stat" kindref="compound">MaxStat</ref><sp/><ref refid="struct_system_info_1a36487af50b116d6b741eeaf14309b711" kindref="member">iowait</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="151" refid="struct_system_info_1a35427d4271481751c2440a72ce63ad9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_max_stat" kindref="compound">MaxStat</ref><sp/><ref refid="struct_system_info_1a35427d4271481751c2440a72ce63ad9a" kindref="member">mem</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_stat" kindref="compound">HighResStat</ref><sp/>packTotIn,<sp/>packDropIn,<sp/>packTotOut,<sp/>packDropOut;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>BW::vector&lt;<sp/>struct<sp/>InterfaceInfo<sp/>&gt;<sp/>ifInfo;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>WholeMachineMessage<sp/>m;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>HighPrecisionMachineMessage<sp/>hpm;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="struct_process_info" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_process_info" kindref="compound">ProcessInfo</ref></highlight></codeline>
+<codeline lineno="161"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_process_info" kindref="compound">ProcessInfo</ref>()<sp/>:<sp/>starttime(<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_stat" kindref="compound">HighResStat</ref><sp/>cpu,<sp/>mem,<sp/>cpuTime;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>affinity;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>ProcessStatsMessage<sp/>m;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Time<sp/>(since<sp/>OS<sp/>boot)<sp/>that<sp/>the<sp/>process<sp/>was<sp/>started</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64<sp/>starttime;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Platform<sp/>specific<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ProcessMessage<sp/>&amp;pm<sp/>){}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BW::vector&lt;<sp/>ProcessInfo<sp/>&gt;<sp/>ProcessInfoList;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="class_platform_read_handler" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_platform_read_handler" kindref="compound">PlatformReadHandler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Mercury::InputNotificationHandler</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_platform_read_handler" kindref="compound">PlatformReadHandler</ref>(<sp/><ref refid="class_server_platform" kindref="compound">ServerPlatform</ref><sp/>*<sp/>pPlatform<sp/>)<sp/>:</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pPlatform_(<sp/>pPlatform<sp/>)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>handleInputNotification(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd<sp/>);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>handleErrorNotification(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd<sp/>);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_server_platform" kindref="compound">ServerPlatform</ref><sp/>*<sp/>pPlatform_;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BW::map&lt;<sp/>int,<sp/>PlatformReadHandler<sp/>*<sp/>&gt;<sp/>PlatformReadHandlerMap;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="class_platform_write_handler" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_platform_write_handler" kindref="compound">PlatformWriteHandler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Mercury::InputNotificationHandler</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_platform_write_handler" kindref="compound">PlatformWriteHandler</ref>(<sp/><ref refid="class_server_platform" kindref="compound">ServerPlatform</ref><sp/>*<sp/>pPlatform<sp/>)<sp/>:</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pPlatform_(<sp/>pPlatform<sp/>)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>handleInputNotification(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd<sp/>);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>handleErrorNotification(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd<sp/>);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_server_platform" kindref="compound">ServerPlatform</ref><sp/>*<sp/>pPlatform_;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BW::map&lt;<sp/>int,<sp/>PlatformWriteHandler<sp/>*<sp/>&gt;<sp/>PlatformWriteHandlerMap;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="class_server_platform" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_server_platform" kindref="compound">ServerPlatform</ref></highlight></codeline>
+<codeline lineno="226"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BW::set&lt;<sp/>BW::string<sp/>&gt;<sp/>ProcessSet;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_server_platform" kindref="compound">ServerPlatform</ref>(<sp/><ref refid="class_b_w_machined" kindref="compound">BWMachined</ref><sp/>&amp;<sp/>machined<sp/>);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isInitialised()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>determineVersion(<sp/>MachineGuardMessage::UserId<sp/>uid,</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>bwRoot,<sp/>BW::string<sp/>&amp;<sp/>versionString<sp/>);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_server_platform" kindref="compound">ServerPlatform</ref><sp/>*<sp/>CreateServerPlatform(<sp/><ref refid="class_b_w_machined" kindref="compound">BWMachined</ref><sp/>&amp;<sp/>machined<sp/>);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>stateFileName()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>notifyNetworkInitialised(<sp/>uint16<sp/>port<sp/>);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>findUserBinaryDirForConfig(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>bwRoot,</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>bwConfig,<sp/></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BW::string<sp/>&amp;<sp/>binaryDir<sp/>);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isProcessRunning(<sp/>uint16<sp/>pid<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>killProcess(<sp/>uint16<sp/>pid,<sp/>uint8<sp/>signal<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>updateSystemInfo(<sp/><ref refid="struct_system_info" kindref="compound">SystemInfo</ref><sp/>&amp;<sp/>systemInfo,</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ServerInfo<sp/>*<sp/>pServerInfo<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updateCPUInfo(<sp/><ref refid="struct_system_info" kindref="compound">SystemInfo</ref><sp/>&amp;<sp/>systemInfo<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>checkCoreDumps(<sp/>MachineGuardMessage::UserId<sp/>uid,</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>bwRoot,<sp/>UserMessage::CoreDumps<sp/>&amp;<sp/>coreDumps<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>canProcessMessageWithUid(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>msgUid<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>UserMessage<sp/>*<sp/>addUserToMapByUid(<sp/><ref refid="class_user_map" kindref="compound">UserMap</ref><sp/>*<sp/>pUserMap,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>uid<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>UserMessage*<sp/>addUserToMapByUsername(<sp/><ref refid="class_user_map" kindref="compound">UserMap</ref><sp/>*<sp/>pUserMap,<sp/></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>pUserName<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getProcessCpuMem(BW::ProcessInfo<sp/>&amp;pi,</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BW::SystemInfo<sp/>&amp;si)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Methods<sp/>that<sp/>are<sp/>triggered<sp/>if<sp/>the<sp/>sub-class<sp/>registers<sp/>with<sp/>BWMachined</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>receive<sp/>read<sp/>or<sp/>write<sp/>notifications.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>notifyRead(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd<sp/>)<sp/>{};</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>notifyReadError(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd<sp/>)<sp/>{};</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>notifyWrite(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd<sp/>)<sp/>{};</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>notifyWriteError(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd<sp/>)<sp/>{};</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cleanupHandlers(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>freeAll<sp/>);</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bool<sp/>updateProcessStats(ThingData<sp/>&amp;<sp/>td);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getProcessorSpeeds(<sp/>BW::vector&lt;float&gt;<sp/>&amp;speeds<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>true<sp/>if<sp/>the<sp/>pPmwd<sp/>is<sp/>ready<sp/>to<sp/>send</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>(having<sp/>updated<sp/>the<sp/>values<sp/>for<sp/>PidMessage::pid_<sp/>and<sp/>pidMessage::running_)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>otherwise<sp/>the<sp/>machine-guard<sp/>code<sp/>has<sp/>claimed<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>will<sp/>dispose<sp/>of<sp/>it<sp/>later</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>startProcess(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>bwBinaryDir,</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>bwResPath,</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>config,</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>binaryName,</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MachineGuardMessage::UserId<sp/>uid,</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16<sp/>gid,</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>home,</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BW::vector&lt;<sp/>const<sp/>char<sp/>*<sp/>&gt;<sp/>args,</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_message_with_destination" kindref="compound">PidMessageWithDestination</ref><sp/>*<sp/>pPmwd<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>validateProcessInfo(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_process_info" kindref="compound">ProcessInfo</ref><sp/>&amp;processInfo<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>updateProcessStats(<sp/><ref refid="struct_process_info" kindref="compound">ProcessInfo</ref><sp/>&amp;pi,<sp/></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_system_info" kindref="compound">SystemInfo</ref><sp/>&amp;si<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>BW::string<sp/>getMachineConfigFileName()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>BW::string<sp/>getBigWorldConfigFileName()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initConfigSuffixes();</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initVersionsProcesses();</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>checkBinariesExist(<sp/>MachineGuardMessage::UserId<sp/>uid,<sp/></highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>bwRoot,</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ProcessSet<sp/>&amp;<sp/>processes<sp/>)<sp/>=<sp/>0;<sp/></highlight></codeline>
+<codeline lineno="416"><highlight class="normal"></highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isInitialised_;</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_w_machined" kindref="compound">BWMachined</ref><sp/>&amp;<sp/>machined_;</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"></highlight></codeline>
+<codeline lineno="422" refid="class_server_platform_1a533223e9780ead3266c5a8a0dc54afc3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BW::map&lt;<sp/>ProcessBinaryVersion,<sp/>ProcessSet<sp/>&gt;<sp/><ref refid="class_server_platform_1a533223e9780ead3266c5a8a0dc54afc3" kindref="member">VersionsProcesses</ref>;</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/>VersionsProcesses<sp/>versionsProcesses_;</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"></highlight></codeline>
+<codeline lineno="426" refid="class_server_platform_1a5ea03261fef71821068ef416580b4034" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BW::vector&lt;<sp/>BW::string<sp/>&gt;<sp/><ref refid="class_server_platform_1a5ea03261fef71821068ef416580b4034" kindref="member">StringList</ref>;</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>configDirectoryExists(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>bwRoot,</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>StringList<sp/>&amp;<sp/>pregeneratedConfigPaths,<sp/></highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BW::string<sp/>&amp;<sp/>binaryDir<sp/>);</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"></highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="432"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/>This<sp/>function<sp/>is<sp/>a<sp/>convenience<sp/>to<sp/>test<sp/>the<sp/>existence<sp/>of<sp/>a<sp/>directory</highlight></codeline>
+<codeline lineno="433"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/>without<sp/>emitting<sp/>any<sp/>error<sp/>messages.</highlight></codeline>
+<codeline lineno="434"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>directoryExists(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>directoryPath<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/>StringList<sp/>preparedHybridSuffix_;</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/>StringList<sp/>preparedDebugSuffix_;</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/>StringList<sp/>preparedOldHybridSuffix_;</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/>StringList<sp/>preparedOldDebugSuffix_;</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"></highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>machinedConfFile_;</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>bigworldConfFile_;</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Storage<sp/>for<sp/>read/write<sp/>handlers<sp/>created<sp/>by<sp/>forked<sp/>processes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>PlatformReadHandlerMap<sp/>s_readHandlers;</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>PlatformWriteHandlerMap<sp/>s_writeHandlers;</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>PlatformReadHandlerMap<sp/>s_expiredReadHandlers;</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>PlatformWriteHandlerMap<sp/>s_expiredWriteHandlers;</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"></highlight></codeline>
+<codeline lineno="451"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"></highlight></codeline>
+<codeline lineno="453"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SERVER_PLATFORM_HPP</highlight></codeline>
+    </programlisting>
+    <location file="tools/bwmachined/server_platform.hpp"/>
+  </compounddef>
+</doxygen>

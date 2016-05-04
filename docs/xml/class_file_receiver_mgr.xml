@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_file_receiver_mgr" kind="class" language="C++" prot="public">
+    <compoundname>FileReceiverMgr</compoundname>
+    <includes refid="file__receiver__mgr_8hpp" local="no">file_receiver_mgr.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_file_receiver_mgr_1ab7ce4663cc78875cbb768c6cf7a682d3" prot="public" static="no">
+        <type>BW::map&lt; BW::string, uint32 &gt;</type>
+        <definition>typedef BW::map&lt; BW::string, uint32 &gt; FileReceiverMgr::SourceDBs</definition>
+        <argsstring></argsstring>
+        <name>SourceDBs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="71" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_file_receiver_mgr_1a4baca802954c5864820c67d8a5718976" prot="public" static="no">
+        <type>BW::set&lt; <ref refid="class_file_receiver" kindref="compound">FileReceiver</ref> * &gt;</type>
+        <definition>typedef BW::set&lt; FileReceiver* &gt; FileReceiverMgr::ReceiverSet</definition>
+        <argsstring></argsstring>
+        <name>ReceiverSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="74" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_file_receiver_mgr_1a756c668dd89129599d99f7cf72b2d48c" prot="private" static="no">
+        <type>BW::vector&lt; <ref refid="class_file_receiver" kindref="compound">FileReceiver</ref> * &gt;</type>
+        <definition>typedef BW::vector&lt; FileReceiver * &gt; FileReceiverMgr::Receivers</definition>
+        <argsstring></argsstring>
+        <name>Receivers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="87" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_file_receiver_mgr_1a4e63288a8610374ca8108a7f2ffdc3ca" prot="private" static="no" mutable="no">
+        <type>Mercury::EventDispatcher &amp;</type>
+        <definition>Mercury::EventDispatcher&amp; FileReceiverMgr::dispatcher_</definition>
+        <argsstring></argsstring>
+        <name>dispatcher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="82" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_file_receiver_mgr_1a05daba7649a448de6e162937b4325bc8" prot="private" static="no" mutable="no">
+        <type><ref refid="class_file_transfer_progress_reporter" kindref="compound">FileTransferProgressReporter</ref> &amp;</type>
+        <definition>FileTransferProgressReporter&amp; FileReceiverMgr::progressReporter_</definition>
+        <argsstring></argsstring>
+        <name>progressReporter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="83" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_file_receiver_mgr_1a9861d0e1587813f0585c754cb438626f" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string FileReceiverMgr::consolidationDir_</definition>
+        <argsstring></argsstring>
+        <name>consolidationDir_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="84" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_file_receiver_mgr_1a2d5f03465609a5f60285c517a542cb18" prot="private" static="no" mutable="no">
+        <type>SourceDBs</type>
+        <definition>SourceDBs FileReceiverMgr::unfinishedDBs_</definition>
+        <argsstring></argsstring>
+        <name>unfinishedDBs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="85" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_file_receiver_mgr_1a7ed90c1fa5035a548bf703b45d2cbde1" prot="private" static="no" mutable="no">
+        <type>ReceiverSet</type>
+        <definition>ReceiverSet FileReceiverMgr::startedReceivers_</definition>
+        <argsstring></argsstring>
+        <name>startedReceivers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="86" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_file_receiver_mgr_1a76004d0e57cfd2d15f33c4b9c449a691" prot="private" static="no" mutable="no">
+        <type>Receivers</type>
+        <definition>Receivers FileReceiverMgr::completedReceivers_</definition>
+        <argsstring></argsstring>
+        <name>completedReceivers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="88" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_file_receiver_mgr_1a7aa8b6939ec7c6cf916790cc9596e78d" prot="private" static="no" mutable="no">
+        <type>FileNames</type>
+        <definition>FileNames FileReceiverMgr::receivedFilePaths_</definition>
+        <argsstring></argsstring>
+        <name>receivedFilePaths_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="89" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_file_receiver_mgr_1a86af20dae8d8cc3f6a8ca517e86ea4ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE FileReceiverMgr::FileReceiverMgr</definition>
+        <argsstring>(Mercury::EventDispatcher &amp;dispatcher, FileTransferProgressReporter &amp;progressReporter, const SecondaryDBInfos &amp;secondaryDBs, const BW::string &amp;consolidationDir)</argsstring>
+        <name>FileReceiverMgr</name>
+        <param>
+          <type>Mercury::EventDispatcher &amp;</type>
+          <declname>dispatcher</declname>
+        </param>
+        <param>
+          <type><ref refid="class_file_transfer_progress_reporter" kindref="compound">FileTransferProgressReporter</ref> &amp;</type>
+          <declname>progressReporter</declname>
+        </param>
+        <param>
+          <type>const SecondaryDBInfos &amp;</type>
+          <declname>secondaryDBs</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>consolidationDir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="34" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.cpp" bodystart="20" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_receiver_mgr_1acc84e478ddcb9453e02cc6235cf199c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FileReceiverMgr::~FileReceiverMgr</definition>
+        <argsstring>()</argsstring>
+        <name>~FileReceiverMgr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="38" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.cpp" bodystart="41" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_receiver_mgr_1aa0bcf7209f94c94f2284f77067ed4503" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Mercury::EventDispatcher &amp;</type>
+        <definition>Mercury::EventDispatcher&amp; FileReceiverMgr::dispatcher</definition>
+        <argsstring>()</argsstring>
+        <name>dispatcher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="40" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.hpp" bodystart="40" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_receiver_mgr_1acc0c1568119e00e5563559ec71010b1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_file_transfer_progress_reporter" kindref="compound">FileTransferProgressReporter</ref> &amp;</type>
+        <definition>FileTransferProgressReporter&amp; FileReceiverMgr::progressReporter</definition>
+        <argsstring>()</argsstring>
+        <name>progressReporter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="43" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.hpp" bodystart="43" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_receiver_mgr_1a7aa6b6d19601740565d2c08746ca01f3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const BW::string &amp;</type>
+        <definition>const BW::string&amp; FileReceiverMgr::consolidationDir</definition>
+        <argsstring>() const </argsstring>
+        <name>consolidationDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="46" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.hpp" bodystart="46" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_receiver_mgr_1a6bf756936ed5238bcffe3f406fe103af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FileReceiverMgr::finished</definition>
+        <argsstring>() const </argsstring>
+        <name>finished</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if we&apos;ve finished receiving all our files. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="49" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.cpp" bodystart="127" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_receiver_mgr_1a26355bb792f215be32e5f340b8c108a5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const FileNames &amp;</type>
+        <definition>const FileNames&amp; FileReceiverMgr::receivedFilePaths</definition>
+        <argsstring>() const </argsstring>
+        <name>receivedFilePaths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="51" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.hpp" bodystart="51" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_receiver_mgr_1a62606595df1ff78570d1f0160090ac83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FileReceiverMgr::cleanUpLocalFiles</definition>
+        <argsstring>()</argsstring>
+        <name>cleanUpLocalFiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deletes the local copies of the secondary DB files. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="54" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.cpp" bodystart="204" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_receiver_mgr_1a6c91c176b222f3c5085b4701eaa34897" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FileReceiverMgr::cleanUpRemoteFiles</definition>
+        <argsstring>(const DBConsolidatorErrors &amp;errorDBs)</argsstring>
+        <name>cleanUpRemoteFiles</name>
+        <param>
+          <type>const <ref refid="class_d_b_consolidator_errors" kindref="compound">DBConsolidatorErrors</ref> &amp;</type>
+          <declname>errorDBs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sends a message to delete the remote secondary database files, except for those secondary databases that had errors when we tried to consolidate them (i.e. those in errorDBs). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="55" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.cpp" bodystart="230" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_receiver_mgr_1a28d2548e10ad1a92d1b138789dda3902" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FileReceiverMgr::onAcceptedConnection</definition>
+        <argsstring>(int socket, uint32 ip, uint16 port)</argsstring>
+        <name>onAcceptedConnection</name>
+        <param>
+          <type>int</type>
+          <declname>socket</declname>
+        </param>
+        <param>
+          <type>uint32</type>
+          <declname>ip</declname>
+        </param>
+        <param>
+          <type>uint16</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="58" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.cpp" bodystart="264" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_receiver_mgr_1afbcef3627fb9b3ddba81a07923372ca4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FileReceiverMgr::onFileReceiverStart</definition>
+        <argsstring>(FileReceiver &amp;receiver)</argsstring>
+        <name>onFileReceiverStart</name>
+        <param>
+          <type><ref refid="class_file_receiver" kindref="compound">FileReceiver</ref> &amp;</type>
+          <declname>receiver</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_receiver_mgr_1a5b7a6810b1a9e48fba83fca4bf89ca00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FileReceiverMgr::onFileReceived</definition>
+        <argsstring>(FileReceiver &amp;receiver)</argsstring>
+        <name>onFileReceived</name>
+        <param>
+          <type><ref refid="class_file_receiver" kindref="compound">FileReceiver</ref> &amp;</type>
+          <declname>receiver</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called by <ref refid="class_file_receiver" kindref="compound">FileReceiver</ref> when they finished receiving a file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="62" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.cpp" bodystart="86" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_receiver_mgr_1aad1df0949b20257dcfb24e3435edc033" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FileReceiverMgr::onFileReceiveError</definition>
+        <argsstring>()</argsstring>
+        <name>onFileReceiveError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called by to notify us of an error in file transfer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="65" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.cpp" bodystart="115" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_receiver_mgr_1ae60df8e696c744f9cdb63a1a94068e57" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FileReceiverMgr::hasUnstartedDBs</definition>
+        <argsstring>() const </argsstring>
+        <name>hasUnstartedDBs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="68" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.hpp" bodystart="68" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_receiver_mgr_1abb800372998ca770d84c64474b34789e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SourceDBs</type>
+        <definition>FileReceiverMgr::SourceDBs FileReceiverMgr::getUnstartedDBs</definition>
+        <argsstring>() const </argsstring>
+        <name>getUnstartedDBs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function takes a mighty good guess as to which databases still have not started their transfer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="72" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.cpp" bodystart="136" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_receiver_mgr_1a614f8dcaf82b948576ad04e438e847c3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const ReceiverSet &amp;</type>
+        <definition>const ReceiverSet&amp; FileReceiverMgr::startedReceivers</definition>
+        <argsstring>() const </argsstring>
+        <name>startedReceivers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="75" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.hpp" bodystart="75" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_file_receiver_mgr_1aa530eb0e5c337b2562e7c30672c2b450" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FileReceiverMgr::onFailedBind</definition>
+        <argsstring>(uint32 ip, uint16 port)</argsstring>
+        <name>onFailedBind</name>
+        <param>
+          <type>uint32</type>
+          <declname>ip</declname>
+        </param>
+        <param>
+          <type>uint16</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called by <ref refid="class_tcp_listener" kindref="compound">TcpListener</ref> if listener bind failed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="78" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.cpp" bodystart="64" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_receiver_mgr_1abc46f30ad78d075da7ae8c62f19a1ef2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FileReceiverMgr::onFailedAccept</definition>
+        <argsstring>(uint32 ip, uint16 port)</argsstring>
+        <name>onFailedAccept</name>
+        <param>
+          <type>uint32</type>
+          <declname>ip</declname>
+        </param>
+        <param>
+          <type>uint16</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called by <ref refid="class_tcp_listener" kindref="compound">TcpListener</ref> if we failed to accept incoming connection. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="79" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.cpp" bodystart="74" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Receives secondary database files. </para>    </detaileddescription>
+    <location file="tools/consolidate_dbs/file_receiver_mgr.hpp" line="32" column="1" bodyfile="tools/consolidate_dbs/file_receiver_mgr.hpp" bodystart="31" bodyend="90"/>
+    <listofallmembers>
+      <member refid="class_file_receiver_mgr_1a62606595df1ff78570d1f0160090ac83" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>cleanUpLocalFiles</name></member>
+      <member refid="class_file_receiver_mgr_1a6c91c176b222f3c5085b4701eaa34897" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>cleanUpRemoteFiles</name></member>
+      <member refid="class_file_receiver_mgr_1a76004d0e57cfd2d15f33c4b9c449a691" prot="private" virt="non-virtual"><scope>FileReceiverMgr</scope><name>completedReceivers_</name></member>
+      <member refid="class_file_receiver_mgr_1a7aa6b6d19601740565d2c08746ca01f3" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>consolidationDir</name></member>
+      <member refid="class_file_receiver_mgr_1a9861d0e1587813f0585c754cb438626f" prot="private" virt="non-virtual"><scope>FileReceiverMgr</scope><name>consolidationDir_</name></member>
+      <member refid="class_file_receiver_mgr_1aa0bcf7209f94c94f2284f77067ed4503" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>dispatcher</name></member>
+      <member refid="class_file_receiver_mgr_1a4e63288a8610374ca8108a7f2ffdc3ca" prot="private" virt="non-virtual"><scope>FileReceiverMgr</scope><name>dispatcher_</name></member>
+      <member refid="class_file_receiver_mgr_1a86af20dae8d8cc3f6a8ca517e86ea4ee" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>FileReceiverMgr</name></member>
+      <member refid="class_file_receiver_mgr_1a6bf756936ed5238bcffe3f406fe103af" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>finished</name></member>
+      <member refid="class_file_receiver_mgr_1abb800372998ca770d84c64474b34789e" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>getUnstartedDBs</name></member>
+      <member refid="class_file_receiver_mgr_1ae60df8e696c744f9cdb63a1a94068e57" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>hasUnstartedDBs</name></member>
+      <member refid="class_file_receiver_mgr_1a28d2548e10ad1a92d1b138789dda3902" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>onAcceptedConnection</name></member>
+      <member refid="class_file_receiver_mgr_1abc46f30ad78d075da7ae8c62f19a1ef2" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>onFailedAccept</name></member>
+      <member refid="class_file_receiver_mgr_1aa530eb0e5c337b2562e7c30672c2b450" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>onFailedBind</name></member>
+      <member refid="class_file_receiver_mgr_1a5b7a6810b1a9e48fba83fca4bf89ca00" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>onFileReceived</name></member>
+      <member refid="class_file_receiver_mgr_1aad1df0949b20257dcfb24e3435edc033" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>onFileReceiveError</name></member>
+      <member refid="class_file_receiver_mgr_1afbcef3627fb9b3ddba81a07923372ca4" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>onFileReceiverStart</name></member>
+      <member refid="class_file_receiver_mgr_1acc0c1568119e00e5563559ec71010b1f" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>progressReporter</name></member>
+      <member refid="class_file_receiver_mgr_1a05daba7649a448de6e162937b4325bc8" prot="private" virt="non-virtual"><scope>FileReceiverMgr</scope><name>progressReporter_</name></member>
+      <member refid="class_file_receiver_mgr_1a26355bb792f215be32e5f340b8c108a5" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>receivedFilePaths</name></member>
+      <member refid="class_file_receiver_mgr_1a7aa8b6939ec7c6cf916790cc9596e78d" prot="private" virt="non-virtual"><scope>FileReceiverMgr</scope><name>receivedFilePaths_</name></member>
+      <member refid="class_file_receiver_mgr_1a756c668dd89129599d99f7cf72b2d48c" prot="private" virt="non-virtual"><scope>FileReceiverMgr</scope><name>Receivers</name></member>
+      <member refid="class_file_receiver_mgr_1a4baca802954c5864820c67d8a5718976" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>ReceiverSet</name></member>
+      <member refid="class_file_receiver_mgr_1ab7ce4663cc78875cbb768c6cf7a682d3" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>SourceDBs</name></member>
+      <member refid="class_file_receiver_mgr_1a614f8dcaf82b948576ad04e438e847c3" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>startedReceivers</name></member>
+      <member refid="class_file_receiver_mgr_1a7ed90c1fa5035a548bf703b45d2cbde1" prot="private" virt="non-virtual"><scope>FileReceiverMgr</scope><name>startedReceivers_</name></member>
+      <member refid="class_file_receiver_mgr_1a2d5f03465609a5f60285c517a542cb18" prot="private" virt="non-virtual"><scope>FileReceiverMgr</scope><name>unfinishedDBs_</name></member>
+      <member refid="class_file_receiver_mgr_1acc84e478ddcb9453e02cc6235cf199c3" prot="public" virt="non-virtual"><scope>FileReceiverMgr</scope><name>~FileReceiverMgr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

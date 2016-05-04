@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_create_base_reply_handler" kind="class" language="C++" prot="public">
+    <compoundname>CreateBaseReplyHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ShutdownSafeReplyMessageHandler</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">ReplyMessageHandler</basecompoundref>
+    <includes refid="reply__handlers_8hpp" local="no">reply_handlers.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_create_base_reply_handler_1abfc75d14733885f549cbe02ee12ef47b" prot="private" static="no" mutable="no">
+        <type>Mercury::Address</type>
+        <definition>Mercury::Address CreateBaseReplyHandler::srcAddr_</definition>
+        <argsstring></argsstring>
+        <name>srcAddr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="36" column="1" bodyfile="baseappmgr/reply_handlers.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_create_base_reply_handler_1aaf8234e73122728e72f95a5653509bec" prot="private" static="no" mutable="no">
+        <type>Mercury::ReplyID</type>
+        <definition>Mercury::ReplyID CreateBaseReplyHandler::replyID_</definition>
+        <argsstring></argsstring>
+        <name>replyID_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="37" column="1" bodyfile="baseappmgr/reply_handlers.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_create_base_reply_handler_1a73d27f12165c26f05643baa1557f0020" prot="private" static="no" mutable="no">
+        <type>Mercury::Address</type>
+        <definition>Mercury::Address CreateBaseReplyHandler::externalAddr_</definition>
+        <argsstring></argsstring>
+        <name>externalAddr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="38" column="1" bodyfile="baseappmgr/reply_handlers.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_create_base_reply_handler_1a70d0b25ee31a2acb5ac5217a55b4da9c" prot="private" static="no" mutable="no">
+        <type>const ScriptObject</type>
+        <definition>const ScriptObject CreateBaseReplyHandler::callback_</definition>
+        <argsstring></argsstring>
+        <name>callback_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellapp.cpp" line="2605" column="1" bodyfile="cellapp/cellapp.cpp" bodystart="2605" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_create_base_reply_handler_1a228c7e76dafff1e1c9e7115823f3b725" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE CreateBaseReplyHandler::CreateBaseReplyHandler</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, Mercury::ReplyID replyID, const Mercury::Address &amp;externalAddr)</argsstring>
+        <name>CreateBaseReplyHandler</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>Mercury::ReplyID</type>
+          <declname>replyID</declname>
+        </param>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>externalAddr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="24" column="1" bodyfile="baseappmgr/reply_handlers.cpp" bodystart="25" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_create_base_reply_handler_1a067745447682b45f086c3a1c09057aaa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CreateBaseReplyHandler::CreateBaseReplyHandler</definition>
+        <argsstring>(const ScriptObject &amp;callback)</argsstring>
+        <name>CreateBaseReplyHandler</name>
+        <param>
+          <type>const ScriptObject &amp;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellapp.cpp" line="2551" column="1" bodyfile="cellapp/cellapp.cpp" bodystart="2551" bodyend="2554"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_create_base_reply_handler_1a337a561956675f16c996f318dba6bd3b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CreateBaseReplyHandler::handleMessage</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data, void *arg)</argsstring>
+        <name>handleMessage</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles the reply message to a createBase call to a <ref refid="class_base_app" kindref="compound">BaseApp</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="29" column="1" bodyfile="baseappmgr/reply_handlers.cpp" bodystart="39" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_create_base_reply_handler_1a10057996b09383aab7878a9e23051a8c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CreateBaseReplyHandler::handleException</definition>
+        <argsstring>(const Mercury::NubException &amp;ne, void *arg)</argsstring>
+        <name>handleException</name>
+        <param>
+          <type>const Mercury::NubException &amp;</type>
+          <declname>ne</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles an exception to a createBase call to a <ref refid="class_base_app" kindref="compound">BaseApp</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="33" column="1" bodyfile="baseappmgr/reply_handlers.cpp" bodystart="79" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_create_base_reply_handler_1a3477ddc48c5e54e96dcb73a3bfdcff4d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CreateBaseReplyHandler::handleShuttingDown</definition>
+        <argsstring>(const Mercury::NubException &amp;ne, void *arg)</argsstring>
+        <name>handleShuttingDown</name>
+        <param>
+          <type>const Mercury::NubException &amp;</type>
+          <declname>ne</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="34" column="1" bodyfile="baseappmgr/reply_handlers.cpp" bodystart="97" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_create_base_reply_handler_1a2db88110aba9ac10607ce1c5be123853" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CreateBaseReplyHandler::handleMessage</definition>
+        <argsstring>(const Mercury::Address &amp;, Mercury::UnpackedMessageHeader &amp;, BinaryIStream &amp;data, void *)</argsstring>
+        <name>handleMessage</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellapp.cpp" line="2557" column="1" bodyfile="cellapp/cellapp.cpp" bodystart="2557" bodyend="2587"/>
+      </memberdef>
+      <memberdef kind="function" id="class_create_base_reply_handler_1a84cf9fbc69890ff1b12d4cff3f79cf6c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CreateBaseReplyHandler::handleException</definition>
+        <argsstring>(const Mercury::NubException &amp;, void *)</argsstring>
+        <name>handleException</name>
+        <param>
+          <type>const Mercury::NubException &amp;</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellapp.cpp" line="2589" column="1" bodyfile="cellapp/cellapp.cpp" bodystart="2589" bodyend="2595"/>
+      </memberdef>
+      <memberdef kind="function" id="class_create_base_reply_handler_1ad728015bf6eaf34459356afd54ad23f1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CreateBaseReplyHandler::callback</definition>
+        <argsstring>(const ScriptObject &amp;arg=ScriptObject::none())</argsstring>
+        <name>callback</name>
+        <param>
+          <type>const ScriptObject &amp;</type>
+          <declname>arg</declname>
+          <defval>ScriptObject::none()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellapp.cpp" line="2597" column="1" bodyfile="cellapp/cellapp.cpp" bodystart="2597" bodyend="2603"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to handle reply messages from BaseApps when a createBase message has been sent. This sends the base creation reply back to the <ref refid="class_d_b_app" kindref="compound">DBApp</ref>.</para><para>This class is used to handle reply messages from BaseApps when a createBase message has been sent. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="905">
+        <label>CreateBaseReplyHandler</label>
+        <link refid="class_create_base_reply_handler"/>
+        <childnode refid="906" relation="public-inheritance">
+        </childnode>
+        <childnode refid="907" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="906">
+        <label>ShutdownSafeReplyMessageHandler</label>
+      </node>
+      <node id="907">
+        <label>ReplyMessageHandler</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="908">
+        <label>CreateBaseReplyHandler</label>
+        <link refid="class_create_base_reply_handler"/>
+        <childnode refid="909" relation="public-inheritance">
+        </childnode>
+        <childnode refid="910" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="909">
+        <label>ShutdownSafeReplyMessageHandler</label>
+      </node>
+      <node id="910">
+        <label>ReplyMessageHandler</label>
+      </node>
+    </collaborationgraph>
+    <location file="baseappmgr/reply_handlers.hpp" line="22" column="1" bodyfile="baseappmgr/reply_handlers.hpp" bodystart="21" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_create_base_reply_handler_1ad728015bf6eaf34459356afd54ad23f1" prot="private" virt="non-virtual"><scope>CreateBaseReplyHandler</scope><name>callback</name></member>
+      <member refid="class_create_base_reply_handler_1a70d0b25ee31a2acb5ac5217a55b4da9c" prot="private" virt="non-virtual"><scope>CreateBaseReplyHandler</scope><name>callback_</name></member>
+      <member refid="class_create_base_reply_handler_1a228c7e76dafff1e1c9e7115823f3b725" prot="public" virt="non-virtual"><scope>CreateBaseReplyHandler</scope><name>CreateBaseReplyHandler</name></member>
+      <member refid="class_create_base_reply_handler_1a067745447682b45f086c3a1c09057aaa" prot="public" virt="non-virtual"><scope>CreateBaseReplyHandler</scope><name>CreateBaseReplyHandler</name></member>
+      <member refid="class_create_base_reply_handler_1a73d27f12165c26f05643baa1557f0020" prot="private" virt="non-virtual"><scope>CreateBaseReplyHandler</scope><name>externalAddr_</name></member>
+      <member refid="class_create_base_reply_handler_1a10057996b09383aab7878a9e23051a8c" prot="private" virt="non-virtual"><scope>CreateBaseReplyHandler</scope><name>handleException</name></member>
+      <member refid="class_create_base_reply_handler_1a84cf9fbc69890ff1b12d4cff3f79cf6c" prot="private" virt="non-virtual"><scope>CreateBaseReplyHandler</scope><name>handleException</name></member>
+      <member refid="class_create_base_reply_handler_1a337a561956675f16c996f318dba6bd3b" prot="private" virt="non-virtual"><scope>CreateBaseReplyHandler</scope><name>handleMessage</name></member>
+      <member refid="class_create_base_reply_handler_1a2db88110aba9ac10607ce1c5be123853" prot="private" virt="non-virtual"><scope>CreateBaseReplyHandler</scope><name>handleMessage</name></member>
+      <member refid="class_create_base_reply_handler_1a3477ddc48c5e54e96dcb73a3bfdcff4d" prot="private" virt="non-virtual"><scope>CreateBaseReplyHandler</scope><name>handleShuttingDown</name></member>
+      <member refid="class_create_base_reply_handler_1aaf8234e73122728e72f95a5653509bec" prot="private" virt="non-virtual"><scope>CreateBaseReplyHandler</scope><name>replyID_</name></member>
+      <member refid="class_create_base_reply_handler_1abfc75d14733885f549cbe02ee12ef47b" prot="private" virt="non-virtual"><scope>CreateBaseReplyHandler</scope><name>srcAddr_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

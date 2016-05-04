@@ -1,0 +1,797 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_range_list_node" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>RangeListNode</compoundname>
+    <derivedcompoundref refid="class_entity_range_list_node" prot="public" virt="non-virtual">EntityRangeListNode</derivedcompoundref>
+    <derivedcompoundref refid="class_mobile_range_list_node" prot="public" virt="non-virtual">MobileRangeListNode</derivedcompoundref>
+    <derivedcompoundref refid="class_range_list_terminator" prot="public" virt="non-virtual">RangeListTerminator</derivedcompoundref>
+    <derivedcompoundref refid="class_range_trigger_node" prot="public" virt="non-virtual">RangeTriggerNode</derivedcompoundref>
+    <includes refid="range__list__node_8hpp" local="no">range_list_node.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362" prot="public" static="no">
+        <name>RangeListFlags</name>
+        <enumvalue id="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362ad51dfdf49df09082b4cf3514124e5027" prot="public">
+          <name>FLAG_NO_TRIGGERS</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362a30d709291ecbd02940398e3f7f1462cd" prot="public">
+          <name>FLAG_ENTITY_TRIGGER</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362aac1cd62d73098f411eafb37b471ec979" prot="public">
+          <name>FLAG_LOWER_AOI_TRIGGER</name>
+          <initializer>= 0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362ac0b256d23b50aaa675238da6cc1511d1" prot="public">
+          <name>FLAG_UPPER_AOI_TRIGGER</name>
+          <initializer>= 0x04</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362ab0b582a48863cfe49b2b1a3f8449ea1c" prot="public">
+          <name>FLAG_IS_ENTITY</name>
+          <initializer>= 0x10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362aa4e1b463ad4c2df70b38a3981d27e61a" prot="public">
+          <name>FLAG_IS_LOWER_BOUND</name>
+          <initializer>= 0x20</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="38" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="37" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_range_list_node_1a6013d312c6a35ce59f309708475660f7" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+        <definition>RangeListNode* RangeListNode::pPrevX_</definition>
+        <argsstring></argsstring>
+        <name>pPrevX_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="114" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_range_list_node_1afda2467dc82894e6d35680733f482577" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+        <definition>RangeListNode* RangeListNode::pNextX_</definition>
+        <argsstring></argsstring>
+        <name>pNextX_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="115" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_range_list_node_1a48d2a6529c51ba469fb140359512a00b" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+        <definition>RangeListNode* RangeListNode::pPrevZ_</definition>
+        <argsstring></argsstring>
+        <name>pPrevZ_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="116" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_range_list_node_1abecb089a0e0408aab64ada6895f9edf3" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+        <definition>RangeListNode* RangeListNode::pNextZ_</definition>
+        <argsstring></argsstring>
+        <name>pNextZ_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="117" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_range_list_node_1a6c9b7e2a687ac30d771ee133e95b11cb" prot="protected" static="no" mutable="no">
+        <type>RangeListFlags</type>
+        <definition>RangeListFlags RangeListNode::wantsFlags_</definition>
+        <argsstring></argsstring>
+        <name>wantsFlags_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="120" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_range_list_node_1a2f2f452449f3c3e9fccb491c64599b2c" prot="protected" static="no" mutable="no">
+        <type>RangeListFlags</type>
+        <definition>RangeListFlags RangeListNode::makesFlags_</definition>
+        <argsstring></argsstring>
+        <name>makesFlags_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="123" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_range_list_node_1a3614dc34d083b61bd6b454bb0a53a1b7" prot="protected" static="no" mutable="no">
+        <type>RangeListOrder</type>
+        <definition>RangeListOrder RangeListNode::order_</definition>
+        <argsstring></argsstring>
+        <name>order_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="124" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_range_list_node_1a57691e5e83d32b6f110735f499189044" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RangeListNode::RangeListNode</definition>
+        <argsstring>(RangeListFlags wantsFlags, RangeListFlags makesFlags, RangeListOrder order)</argsstring>
+        <name>RangeListNode</name>
+        <param>
+          <type>RangeListFlags</type>
+          <declname>wantsFlags</declname>
+        </param>
+        <param>
+          <type>RangeListFlags</type>
+          <declname>makesFlags</declname>
+        </param>
+        <param>
+          <type>RangeListOrder</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="48" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="48" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a73c0d88d985240d0ede4dc9315ef1a3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual RangeListNode::~RangeListNode</definition>
+        <argsstring>()</argsstring>
+        <name>~RangeListNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="59" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a71f3fea44c51ea217658cb2341653bd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>BW_BEGIN_NAMESPACE void RangeListNode::shuffleXThenZ</definition>
+        <argsstring>(float oldX, float oldZ)</argsstring>
+        <name>shuffleXThenZ</name>
+        <param>
+          <type>float</type>
+          <declname>oldX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oldZ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method makes sure that this entity is in the correct place in the global sorted position lists. If a shuffle is performed, crossedX or crossedZ is called on both nodes.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>oldX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The old value of the x position. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oldZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The old value of the z position. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="62" column="1" bodyfile="cellapp/range_list_node.cpp" bodystart="29" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a64d09ef9737c804bae2e1747e8da4b3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeListNode::shuffleX</definition>
+        <argsstring>(float oldX, float oldZ)</argsstring>
+        <name>shuffleX</name>
+        <param>
+          <type>float</type>
+          <declname>oldX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oldZ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method makes sure that this entity is in the correct place in X position lists. If a shuffle is performed, crossedX is called on both nodes.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>oldX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The old value of the x position. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oldZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The old value of the z position. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="64" column="1" bodyfile="cellapp/range_list_node.cpp" bodystart="44" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a73e62225d1db04e36d278355dea39340" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeListNode::shuffleZ</definition>
+        <argsstring>(float oldX, float oldZ)</argsstring>
+        <name>shuffleZ</name>
+        <param>
+          <type>float</type>
+          <declname>oldX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oldZ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method makes sure that this entity is in the correct place in Z position lists. If a shuffle is performed, crossedZ is called on both nodes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="65" column="1" bodyfile="cellapp/range_list_node.cpp" bodystart="135" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1aad5f7eec4dff8e149f2677821d51fe31" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+        <definition>RangeListNode* RangeListNode::prevX</definition>
+        <argsstring>() const </argsstring>
+        <name>prevX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="67" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1aabe8fccb25aefb8284cf77e1b79147d4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+        <definition>RangeListNode* RangeListNode::prevZ</definition>
+        <argsstring>() const </argsstring>
+        <name>prevZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="68" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a2ab0c5b64255b782a85ac73f658cb7a0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+        <definition>RangeListNode* RangeListNode::nextX</definition>
+        <argsstring>() const </argsstring>
+        <name>nextX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="69" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a27645c439394ceddd78d7793e721957a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+        <definition>RangeListNode* RangeListNode::nextZ</definition>
+        <argsstring>() const </argsstring>
+        <name>nextZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="70" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a908e5e1c48d02f7feb9ee34b597aa1ff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+        <definition>RangeListNode* RangeListNode::getNeighbour</definition>
+        <argsstring>(bool getNext, bool getZ) const </argsstring>
+        <name>getNeighbour</name>
+        <param>
+          <type>bool</type>
+          <declname>getNext</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>getZ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="72" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="72" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a19bd745a4b181fb9e4b4c41a0aceabd5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeListNode::prevX</definition>
+        <argsstring>(RangeListNode *pNode)</argsstring>
+        <name>prevX</name>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+          <declname>pNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="79" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1ae90350c686304bb4678c0e443805023e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeListNode::prevZ</definition>
+        <argsstring>(RangeListNode *pNode)</argsstring>
+        <name>prevZ</name>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+          <declname>pNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="80" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="80" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a9ead098d54eaf66e2e221ac61aadc948" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeListNode::nextX</definition>
+        <argsstring>(RangeListNode *pNode)</argsstring>
+        <name>nextX</name>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+          <declname>pNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="81" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a638743feab8c64ae91b926b3b8464ee9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeListNode::nextZ</definition>
+        <argsstring>(RangeListNode *pNode)</argsstring>
+        <name>nextZ</name>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+          <declname>pNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="82" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a5882f13b56ed8482282f7b9c8e161708" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>RangeListOrder</type>
+        <definition>RangeListOrder RangeListNode::order</definition>
+        <argsstring>() const </argsstring>
+        <name>order</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="84" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a1644fad16a0b0d0730af2342bfe7e6e1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RangeListNode::isEntity</definition>
+        <argsstring>() const </argsstring>
+        <name>isEntity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="86" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="86" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1aef5fb57f3470868518f223d59447fd42" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RangeListNode::isLowerBound</definition>
+        <argsstring>() const </argsstring>
+        <name>isLowerBound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="87" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1ae4c45a02e82050c619604a5345902ac8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RangeListNode::wantsCrossingWith</definition>
+        <argsstring>(RangeListNode *pOther) const </argsstring>
+        <name>wantsCrossingWith</name>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+          <declname>pOther</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="89" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a45cc0b83c1b3744987c7d98328fc820d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeListNode::removeFromRangeList</definition>
+        <argsstring>()</argsstring>
+        <name>removeFromRangeList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method removes the node from the range list. It attaches its previous node to its next node. It does not delete itself. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="94" column="1" bodyfile="cellapp/range_list_node.cpp" bodystart="226" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a570ce871ee4f9b904b6b8f58059f2ab4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeListNode::insertBeforeX</definition>
+        <argsstring>(RangeListNode *entry)</argsstring>
+        <name>insertBeforeX</name>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+          <declname>entry</declname>
+          <defname>pNode</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method inserts a range node before another one in the X list.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to insert before. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="95" column="1" bodyfile="cellapp/range_list_node.cpp" bodystart="246" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a1a2694095ea91a3d9a5cbaaa2e3970e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeListNode::insertBeforeZ</definition>
+        <argsstring>(RangeListNode *entry)</argsstring>
+        <name>insertBeforeZ</name>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+          <declname>entry</declname>
+          <defname>pNode</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method inserts a range node before another one in the Z list.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to insert before. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="96" column="1" bodyfile="cellapp/range_list_node.cpp" bodystart="267" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a144a093e0a3f1a45bb9af7e663e249e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RangeListNode::debugRangeX</definition>
+        <argsstring>() const </argsstring>
+        <name>debugRangeX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This debugging method prints out information about the node in the X list. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="98" column="1" bodyfile="cellapp/range_list_node.cpp" bodystart="286" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1af6e879e8e60e0ee3373984b539dc2191" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RangeListNode::debugRangeZ</definition>
+        <argsstring>() const </argsstring>
+        <name>debugRangeZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This debugging method prints out information about the node in the Z list. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="99" column="1" bodyfile="cellapp/range_list_node.cpp" bodystart="302" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a99f8b39fbe368fe96fa402fe20e50c00" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>BW::string</type>
+        <definition>virtual BW::string RangeListNode::debugString</definition>
+        <argsstring>() const </argsstring>
+        <name>debugString</name>
+        <reimplementedby refid="class_entity_range_list_node_1a8540da00cf9ebe50e602c68c1398b23f">debugString</reimplementedby>
+        <reimplementedby refid="class_range_trigger_node_1a4ccd72991aca5193ac777303d9a2841a">debugString</reimplementedby>
+        <reimplementedby refid="class_mobile_range_list_node_1ad67cbd970163dc1a8a49bff26c130883">debugString</reimplementedby>
+        <reimplementedby refid="class_range_list_terminator_1ae52388311f18ff4872b5ccecdaed836e">debugString</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="100" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a285c2ce052e78bfed9b0bd7767bf07ab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float RangeListNode::getCoord</definition>
+        <argsstring>(bool getZ) const </argsstring>
+        <name>getCoord</name>
+        <param>
+          <type>bool</type>
+          <declname>getZ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="102" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1ae322ecd2efdbbcbe465a1c09b25fbf84" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>float</type>
+        <definition>virtual float RangeListNode::x</definition>
+        <argsstring>() const  =0</argsstring>
+        <name>x</name>
+        <reimplementedby refid="class_entity_range_list_node_1a788564d1d62262c520e15f1df78b8247">x</reimplementedby>
+        <reimplementedby refid="class_range_trigger_node_1a164d9b80828ca9090285d4982191eefc">x</reimplementedby>
+        <reimplementedby refid="class_mobile_range_list_node_1aba18990a43597d044faff16a417138be">x</reimplementedby>
+        <reimplementedby refid="class_range_list_terminator_1affe38de55734574dc9b04a97379abf7b">x</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="104" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a693e47058ba36ee3bfef68f96eae09fe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>float</type>
+        <definition>virtual float RangeListNode::z</definition>
+        <argsstring>() const  =0</argsstring>
+        <name>z</name>
+        <reimplementedby refid="class_entity_range_list_node_1a7559933279b1aee3f8a5b02358d3c06f">z</reimplementedby>
+        <reimplementedby refid="class_range_trigger_node_1a3113a63a17fb1ae1d4856d7c53795340">z</reimplementedby>
+        <reimplementedby refid="class_mobile_range_list_node_1a901e5cf244f85792dab07d9f1867a63c">z</reimplementedby>
+        <reimplementedby refid="class_range_list_terminator_1a7f4b045aad7c8881f5b031bcb385e98a">z</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="105" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1a5b0bb3003dae46e2fdc49d01b611920a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RangeListNode::crossedX</definition>
+        <argsstring>(RangeListNode *, bool, float, float)</argsstring>
+        <name>crossedX</name>
+        <reimplementedby refid="class_range_trigger_node_1a869fbe58da10d6bbb41ec2fe90195b0a">crossedX</reimplementedby>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+        </param>
+        <param>
+          <type>bool</type>
+        </param>
+        <param>
+          <type>float</type>
+        </param>
+        <param>
+          <type>float</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="107" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="107" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_node_1ab3f2ab9a8ddf7cad4b976130304694c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RangeListNode::crossedZ</definition>
+        <argsstring>(RangeListNode *, bool, float, float)</argsstring>
+        <name>crossedZ</name>
+        <reimplementedby refid="class_range_trigger_node_1acab23e8d8ce325d5d7216ac820bd7b54">crossedZ</reimplementedby>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+        </param>
+        <param>
+          <type>bool</type>
+        </param>
+        <param>
+          <type>float</type>
+        </param>
+        <param>
+          <type>float</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="109" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="109" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is the base of all range nodes. Range Nodes are used to keep track of the order of entities and triggers relative to the x axis or the z axis. This is used for AoI calculations and range queries. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2342">
+        <label>EntityRangeListNode</label>
+        <link refid="class_entity_range_list_node"/>
+        <childnode refid="2341" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2344">
+        <label>RangeListTerminator</label>
+        <link refid="class_range_list_terminator"/>
+        <childnode refid="2341" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2343">
+        <label>MobileRangeListNode</label>
+        <link refid="class_mobile_range_list_node"/>
+        <childnode refid="2341" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2345">
+        <label>RangeTriggerNode</label>
+        <link refid="class_range_trigger_node"/>
+        <childnode refid="2341" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2341">
+        <label>RangeListNode</label>
+        <link refid="class_range_list_node"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2346">
+        <label>RangeListNode</label>
+        <link refid="class_range_list_node"/>
+        <childnode refid="2346" relation="usage">
+          <edgelabel>pPrevX_</edgelabel>
+          <edgelabel>pPrevZ_</edgelabel>
+          <edgelabel>pNextX_</edgelabel>
+          <edgelabel>pNextZ_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/range_list_node.hpp" line="35" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="34" bodyend="125"/>
+    <listofallmembers>
+      <member refid="class_range_list_node_1a5b0bb3003dae46e2fdc49d01b611920a" prot="public" virt="virtual"><scope>RangeListNode</scope><name>crossedX</name></member>
+      <member refid="class_range_list_node_1ab3f2ab9a8ddf7cad4b976130304694c9" prot="public" virt="virtual"><scope>RangeListNode</scope><name>crossedZ</name></member>
+      <member refid="class_range_list_node_1a144a093e0a3f1a45bb9af7e663e249e8" prot="public" virt="virtual"><scope>RangeListNode</scope><name>debugRangeX</name></member>
+      <member refid="class_range_list_node_1af6e879e8e60e0ee3373984b539dc2191" prot="public" virt="virtual"><scope>RangeListNode</scope><name>debugRangeZ</name></member>
+      <member refid="class_range_list_node_1a99f8b39fbe368fe96fa402fe20e50c00" prot="public" virt="virtual"><scope>RangeListNode</scope><name>debugString</name></member>
+      <member refid="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362a30d709291ecbd02940398e3f7f1462cd" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>FLAG_ENTITY_TRIGGER</name></member>
+      <member refid="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362ab0b582a48863cfe49b2b1a3f8449ea1c" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>FLAG_IS_ENTITY</name></member>
+      <member refid="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362aa4e1b463ad4c2df70b38a3981d27e61a" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>FLAG_IS_LOWER_BOUND</name></member>
+      <member refid="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362aac1cd62d73098f411eafb37b471ec979" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>FLAG_LOWER_AOI_TRIGGER</name></member>
+      <member refid="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362ad51dfdf49df09082b4cf3514124e5027" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>FLAG_NO_TRIGGERS</name></member>
+      <member refid="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362ac0b256d23b50aaa675238da6cc1511d1" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>FLAG_UPPER_AOI_TRIGGER</name></member>
+      <member refid="class_range_list_node_1a285c2ce052e78bfed9b0bd7767bf07ab" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>getCoord</name></member>
+      <member refid="class_range_list_node_1a908e5e1c48d02f7feb9ee34b597aa1ff" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>getNeighbour</name></member>
+      <member refid="class_range_list_node_1a570ce871ee4f9b904b6b8f58059f2ab4" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>insertBeforeX</name></member>
+      <member refid="class_range_list_node_1a1a2694095ea91a3d9a5cbaaa2e3970e5" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>insertBeforeZ</name></member>
+      <member refid="class_range_list_node_1a1644fad16a0b0d0730af2342bfe7e6e1" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>isEntity</name></member>
+      <member refid="class_range_list_node_1aef5fb57f3470868518f223d59447fd42" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>isLowerBound</name></member>
+      <member refid="class_range_list_node_1a2f2f452449f3c3e9fccb491c64599b2c" prot="protected" virt="non-virtual"><scope>RangeListNode</scope><name>makesFlags_</name></member>
+      <member refid="class_range_list_node_1a2ab0c5b64255b782a85ac73f658cb7a0" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>nextX</name></member>
+      <member refid="class_range_list_node_1a9ead098d54eaf66e2e221ac61aadc948" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>nextX</name></member>
+      <member refid="class_range_list_node_1a27645c439394ceddd78d7793e721957a" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>nextZ</name></member>
+      <member refid="class_range_list_node_1a638743feab8c64ae91b926b3b8464ee9" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>nextZ</name></member>
+      <member refid="class_range_list_node_1a5882f13b56ed8482282f7b9c8e161708" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>order</name></member>
+      <member refid="class_range_list_node_1a3614dc34d083b61bd6b454bb0a53a1b7" prot="protected" virt="non-virtual"><scope>RangeListNode</scope><name>order_</name></member>
+      <member refid="class_range_list_node_1afda2467dc82894e6d35680733f482577" prot="protected" virt="non-virtual"><scope>RangeListNode</scope><name>pNextX_</name></member>
+      <member refid="class_range_list_node_1abecb089a0e0408aab64ada6895f9edf3" prot="protected" virt="non-virtual"><scope>RangeListNode</scope><name>pNextZ_</name></member>
+      <member refid="class_range_list_node_1a6013d312c6a35ce59f309708475660f7" prot="protected" virt="non-virtual"><scope>RangeListNode</scope><name>pPrevX_</name></member>
+      <member refid="class_range_list_node_1a48d2a6529c51ba469fb140359512a00b" prot="protected" virt="non-virtual"><scope>RangeListNode</scope><name>pPrevZ_</name></member>
+      <member refid="class_range_list_node_1aad5f7eec4dff8e149f2677821d51fe31" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>prevX</name></member>
+      <member refid="class_range_list_node_1a19bd745a4b181fb9e4b4c41a0aceabd5" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>prevX</name></member>
+      <member refid="class_range_list_node_1aabe8fccb25aefb8284cf77e1b79147d4" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>prevZ</name></member>
+      <member refid="class_range_list_node_1ae90350c686304bb4678c0e443805023e" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>prevZ</name></member>
+      <member refid="class_range_list_node_1a970dd3fab911b2d45ca61819054ba362" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>RangeListFlags</name></member>
+      <member refid="class_range_list_node_1a57691e5e83d32b6f110735f499189044" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>RangeListNode</name></member>
+      <member refid="class_range_list_node_1a45cc0b83c1b3744987c7d98328fc820d" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>removeFromRangeList</name></member>
+      <member refid="class_range_list_node_1a64d09ef9737c804bae2e1747e8da4b3a" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>shuffleX</name></member>
+      <member refid="class_range_list_node_1a71f3fea44c51ea217658cb2341653bd5" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>shuffleXThenZ</name></member>
+      <member refid="class_range_list_node_1a73e62225d1db04e36d278355dea39340" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>shuffleZ</name></member>
+      <member refid="class_range_list_node_1ae4c45a02e82050c619604a5345902ac8" prot="public" virt="non-virtual"><scope>RangeListNode</scope><name>wantsCrossingWith</name></member>
+      <member refid="class_range_list_node_1a6c9b7e2a687ac30d771ee133e95b11cb" prot="protected" virt="non-virtual"><scope>RangeListNode</scope><name>wantsFlags_</name></member>
+      <member refid="class_range_list_node_1ae322ecd2efdbbcbe465a1c09b25fbf84" prot="public" virt="pure-virtual"><scope>RangeListNode</scope><name>x</name></member>
+      <member refid="class_range_list_node_1a693e47058ba36ee3bfef68f96eae09fe" prot="public" virt="pure-virtual"><scope>RangeListNode</scope><name>z</name></member>
+      <member refid="class_range_list_node_1a73c0d88d985240d0ede4dc9315ef1a3b" prot="public" virt="virtual"><scope>RangeListNode</scope><name>~RangeListNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

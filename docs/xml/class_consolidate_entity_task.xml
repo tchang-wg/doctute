@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_consolidate_entity_task" kind="class" language="C++" prot="public">
+    <compoundname>ConsolidateEntityTask</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">EntityTask</basecompoundref>
+    <includes refid="consolidate__entity__task_8hpp" local="no">consolidate_entity_task.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_consolidate_entity_task_1a7f91b3443a32264a66c66b085c7e5f8b" prot="private" static="no" mutable="no">
+        <type>MemoryOStream</type>
+        <definition>MemoryOStream ConsolidateEntityTask::stream_</definition>
+        <argsstring></argsstring>
+        <name>stream_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/consolidate_entity_task.hpp" line="31" column="1" bodyfile="tools/consolidate_dbs/consolidate_entity_task.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_consolidate_entity_task_1aeadd387c93983c531349babfdd92bbe5" prot="private" static="no" mutable="no">
+        <type>GameTime</type>
+        <definition>GameTime ConsolidateEntityTask::time_</definition>
+        <argsstring></argsstring>
+        <name>time_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/consolidate_entity_task.hpp" line="33" column="1" bodyfile="tools/consolidate_dbs/consolidate_entity_task.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_consolidate_entity_task_1a50be986df4ea985b0a35776921b56666" prot="private" static="no" mutable="no">
+        <type>IDatabase::IPutEntityHandler &amp;</type>
+        <definition>IDatabase::IPutEntityHandler&amp; ConsolidateEntityTask::handler_</definition>
+        <argsstring></argsstring>
+        <name>handler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/consolidate_entity_task.hpp" line="35" column="1" bodyfile="tools/consolidate_dbs/consolidate_entity_task.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_consolidate_entity_task_1aaf96c59ed40d2482d85f0e6ce58f7f9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE ConsolidateEntityTask::ConsolidateEntityTask</definition>
+        <argsstring>(const EntityTypeMapping &amp;entityTypeMapping, DatabaseID dbID, BinaryIStream &amp;stream, GameTime time, IDatabase::IPutEntityHandler &amp;handler)</argsstring>
+        <name>ConsolidateEntityTask</name>
+        <param>
+          <type>const EntityTypeMapping &amp;</type>
+          <declname>entityTypeMapping</declname>
+        </param>
+        <param>
+          <type>DatabaseID</type>
+          <declname>dbID</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>GameTime</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>IDatabase::IPutEntityHandler &amp;</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/consolidate_entity_task.hpp" line="20" column="1" bodyfile="tools/consolidate_dbs/consolidate_entity_task.cpp" bodystart="13" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_consolidate_entity_task_1a2d5e4033feb0d65f3a06f8078e176ce5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConsolidateEntityTask::performBackgroundTask</definition>
+        <argsstring>(MySql &amp;conn)</argsstring>
+        <name>performBackgroundTask</name>
+        <param>
+          <type>MySql &amp;</type>
+          <declname>conn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/consolidate_entity_task.hpp" line="26" column="1" bodyfile="tools/consolidate_dbs/consolidate_entity_task.cpp" bodystart="33" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_consolidate_entity_task_1a043a6ec2deeaaf523fd9aa60f94246c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConsolidateEntityTask::performEntityMainThreadTask</definition>
+        <argsstring>(const DatabaseOperationResult &amp;result)</argsstring>
+        <name>performEntityMainThreadTask</name>
+        <param>
+          <type>const DatabaseOperationResult &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/consolidate_entity_task.hpp" line="27" column="1" bodyfile="tools/consolidate_dbs/consolidate_entity_task.cpp" bodystart="64" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class consolidates an entity database entry with existing an existing entry. The game time resolves which entry is kept. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="838">
+        <label>ConsolidateEntityTask</label>
+        <link refid="class_consolidate_entity_task"/>
+        <childnode refid="839" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="839">
+        <label>EntityTask</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="840">
+        <label>ConsolidateEntityTask</label>
+        <link refid="class_consolidate_entity_task"/>
+        <childnode refid="841" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="841">
+        <label>EntityTask</label>
+      </node>
+    </collaborationgraph>
+    <location file="tools/consolidate_dbs/consolidate_entity_task.hpp" line="18" column="1" bodyfile="tools/consolidate_dbs/consolidate_entity_task.hpp" bodystart="17" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_consolidate_entity_task_1aaf96c59ed40d2482d85f0e6ce58f7f9d" prot="public" virt="non-virtual"><scope>ConsolidateEntityTask</scope><name>ConsolidateEntityTask</name></member>
+      <member refid="class_consolidate_entity_task_1a50be986df4ea985b0a35776921b56666" prot="private" virt="non-virtual"><scope>ConsolidateEntityTask</scope><name>handler_</name></member>
+      <member refid="class_consolidate_entity_task_1a2d5e4033feb0d65f3a06f8078e176ce5" prot="public" virt="non-virtual"><scope>ConsolidateEntityTask</scope><name>performBackgroundTask</name></member>
+      <member refid="class_consolidate_entity_task_1a043a6ec2deeaaf523fd9aa60f94246c4" prot="public" virt="non-virtual"><scope>ConsolidateEntityTask</scope><name>performEntityMainThreadTask</name></member>
+      <member refid="class_consolidate_entity_task_1a7f91b3443a32264a66c66b085c7e5f8b" prot="private" virt="non-virtual"><scope>ConsolidateEntityTask</scope><name>stream_</name></member>
+      <member refid="class_consolidate_entity_task_1aeadd387c93983c531349babfdd92bbe5" prot="private" virt="non-virtual"><scope>ConsolidateEntityTask</scope><name>time_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="custom_8hpp" kind="file" language="C++">
+    <compoundname>custom.hpp</compoundname>
+    <includes local="yes">network/basictypes.hpp</includes>
+    <includes local="yes">resmgr/datasection.hpp</includes>
+    <includes local="yes">cstdmf/bw_string.hpp</includes>
+    <includedby refid="custom_8cpp" local="yes">dbapp/custom.cpp</includedby>
+    <includedby refid="dbapp_2dbapp_8cpp" local="yes">dbapp/dbapp.cpp</includedby>
+    <incdepgraph>
+      <node id="14170">
+        <label>resmgr/datasection.hpp</label>
+      </node>
+      <node id="14171">
+        <label>cstdmf/bw_string.hpp</label>
+      </node>
+      <node id="14169">
+        <label>network/basictypes.hpp</label>
+      </node>
+      <node id="14168">
+        <label>dbapp/custom.hpp</label>
+        <link refid="custom.hpp"/>
+        <childnode refid="14169" relation="include">
+        </childnode>
+        <childnode refid="14170" relation="include">
+        </childnode>
+        <childnode refid="14171" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="custom_8hpp_1a1ed6fb06bf8aa0727b12d21b441e86fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BW_BEGIN_NAMESPACE DataSectionPtr</type>
+        <definition>BW_BEGIN_NAMESPACE DataSectionPtr createNewEntity</definition>
+        <argsstring>(EntityTypeID, const BW::string &amp;name)</argsstring>
+        <name>createNewEntity</name>
+        <param>
+          <type>EntityTypeID</type>
+          <defname>typeID</defname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is used to create a new &quot;unknown&quot; entity. All its properties should be default values except its name property which will be set to the login name. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/custom.hpp" line="23" column="1" bodyfile="dbapp/custom.cpp" bodystart="22" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CUSTOM_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CUSTOM_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/basictypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;resmgr/datasection.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_string.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>this<sp/>file<sp/>contains<sp/>hook<sp/>functions<sp/>you<sp/>can<sp/>use<sp/>to<sp/>customise<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>database<sp/>system</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>if<sp/>an<sp/>entity<sp/>doesn&apos;t<sp/>exist<sp/>when<sp/>logging<sp/>on,<sp/>an<sp/>implementation<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>IDatabase<sp/>should<sp/>call<sp/>this<sp/>function<sp/>and<sp/>add<sp/>the<sp/>result<sp/>into<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>database;<sp/>if<sp/>this<sp/>function<sp/>returns<sp/>NULL,<sp/>then<sp/>the<sp/>IDatabase</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>implementation<sp/>should<sp/>fail<sp/>gracefully</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(function<sp/>in<sp/>IDatabase<sp/>concerned<sp/>is<sp/>readOrCreateEntity)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>Convert<sp/>this<sp/>to<sp/>something<sp/>a<sp/>DBApp<sp/>extension<sp/>could<sp/>set<sp/>up<sp/>on<sp/>load.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">DataSectionPtr<sp/>createNewEntity(<sp/>EntityTypeID,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>name<sp/>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>CUSTOM_HPP</highlight></codeline>
+    </programlisting>
+    <location file="dbapp/custom.hpp"/>
+  </compounddef>
+</doxygen>

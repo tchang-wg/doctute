@@ -1,0 +1,2629 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_cell_app_mgr" kind="class" language="C++" prot="public">
+    <compoundname>CellAppMgr</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ManagerApp</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">TimerHandler</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Singleton&lt; CellAppMgr &gt;</basecompoundref>
+    <includes refid="cellappmgr_8hpp" local="no">cellappmgr.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_cell_app_mgr_1a09dd68f7cd22092ffc2e27f48f41171e" prot="public" static="no">
+        <name>ReadyComponent</name>
+        <enumvalue id="class_cell_app_mgr_1a09dd68f7cd22092ffc2e27f48f41171ea9f2d9cd4ef06d2dfda4a7ab2f4d4415d" prot="public">
+          <name>READY_CELL_APP</name>
+          <initializer>= 0x1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_cell_app_mgr_1a09dd68f7cd22092ffc2e27f48f41171eacc94f75338a4f79ae433bbc0056ed9dc" prot="public">
+          <name>READY_BASE_APP_MGR</name>
+          <initializer>= 0x2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_cell_app_mgr_1a09dd68f7cd22092ffc2e27f48f41171ea29fcb9cb04cb26d113053463e8da6dc8" prot="public">
+          <name>READY_BASE_APP</name>
+          <initializer>= 0x4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_cell_app_mgr_1a09dd68f7cd22092ffc2e27f48f41171ea8d9d882f91fed2c023fc0a9544f1409f" prot="public">
+          <name>READY_CLUSTER_ID</name>
+          <initializer>= 0x8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_cell_app_mgr_1a09dd68f7cd22092ffc2e27f48f41171ea0596544298dd6bb16d9acfc809083487" prot="public">
+          <name>READY_ALL</name>
+          <initializer>=	READY_CELL_APP | READY_BASE_APP_MGR |
+						    	READY_BASE_APP | READY_CLUSTER_ID</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="202" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="201" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_cell_app_mgr_1aed5b58fa807a50edd99482a1556b9c6c" prot="public" static="no">
+        <type><ref refid="class_cell_app_mgr_config" kindref="compound">CellAppMgrConfig</ref></type>
+        <definition>typedef CellAppMgrConfig CellAppMgr::Config</definition>
+        <argsstring></argsstring>
+        <name>Config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="53" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_cell_app_mgr_1a6c385dbf9db880245a1107b79d1fd6cb" prot="private" static="no">
+        <name>TimeOutType</name>
+        <enumvalue id="class_cell_app_mgr_1a6c385dbf9db880245a1107b79d1fd6cba97f7716ee5712eb7dbba29aab31186e6" prot="private">
+          <name>TIMEOUT_GAME_TICK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_cell_app_mgr_1a6c385dbf9db880245a1107b79d1fd6cbad8300ad6b2a0dcc8b6b9a79177f69b1d" prot="private">
+          <name>TIMEOUT_LOAD_BALANCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_cell_app_mgr_1a6c385dbf9db880245a1107b79d1fd6cba1b4a5f1c303693b04767a776698789ac" prot="private">
+          <name>TIMEOUT_META_LOAD_BALANCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_cell_app_mgr_1a6c385dbf9db880245a1107b79d1fd6cbaf0d6d4d7f671da69caf21c9903ac7382" prot="private">
+          <name>TIMEOUT_OVERLOAD_CHECK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_cell_app_mgr_1a6c385dbf9db880245a1107b79d1fd6cbadf063a65cf375dc8e1166d9919639426" prot="private">
+          <name>TIMEOUT_END_OF_RECOVERY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="290" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="289" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_cell_app_mgr_1a577131dc887263c2041c6285adffc08f" prot="private" static="no">
+        <type>BW::map&lt; BW::string, BW::string &gt;</type>
+        <definition>typedef BW::map&lt; BW::string, BW::string &gt; CellAppMgr::SharedData</definition>
+        <argsstring></argsstring>
+        <name>SharedData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="304" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_cell_app_mgr_1adbd0c689fc026da3588d253376333616" prot="private" static="no">
+        <type>BW::map&lt; Mercury::Address, <ref refid="class_cell_app_death_handler" kindref="compound">CellAppDeathHandler</ref> * &gt;</type>
+        <definition>typedef BW::map&lt; Mercury::Address, CellAppDeathHandler * &gt; CellAppMgr::CellAppDeathHandlers</definition>
+        <argsstring></argsstring>
+        <name>CellAppDeathHandlers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="342" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="342" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_cell_app_mgr_1ae1f6068a11c6a966e339c8f886cba81b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_spaces" kindref="compound">Spaces</ref></type>
+        <definition>Spaces CellAppMgr::spaces_</definition>
+        <argsstring></argsstring>
+        <name>spaces_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="284" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1ae3c41b9a58dcca1a073ff1c9b142f67d" prot="private" static="no" mutable="no">
+        <type>SpaceIDs</type>
+        <definition>SpaceIDs CellAppMgr::spacesShuttingDown_</definition>
+        <argsstring></argsstring>
+        <name>spacesShuttingDown_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="285" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1ab373874f7d712bf02f25aa408186a840" prot="private" static="no" mutable="no">
+        <type><ref refid="class_cell_apps" kindref="compound">CellApps</ref></type>
+        <definition>CellApps CellAppMgr::cellApps_</definition>
+        <argsstring></argsstring>
+        <name>cellApps_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="302" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1a5d364cff0f80af8ef2c95bba732c67bc" prot="private" static="no" mutable="no">
+        <type>SharedData</type>
+        <definition>SharedData CellAppMgr::sharedCellAppData_</definition>
+        <argsstring></argsstring>
+        <name>sharedCellAppData_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="305" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1a3760ba2a1450eb61c559e757cba98b6f" prot="private" static="no" mutable="no">
+        <type>SharedData</type>
+        <definition>SharedData CellAppMgr::sharedGlobalData_</definition>
+        <argsstring></argsstring>
+        <name>sharedGlobalData_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="306" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1af70bb73e401806a6f2e7842780293000" prot="private" static="no" mutable="no">
+        <type>TimeKeeper *</type>
+        <definition>TimeKeeper* CellAppMgr::pTimeKeeper_</definition>
+        <argsstring></argsstring>
+        <name>pTimeKeeper_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="308" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1a43830e2713c67e3a184f2d6e0b3d944f" prot="private" static="no" mutable="no">
+        <type>BW::vector&lt; <ref refid="class_cell_app" kindref="compound">CellApp</ref> * &gt;</type>
+        <definition>BW::vector&lt; CellApp * &gt; CellAppMgr::pendingApps_</definition>
+        <argsstring></argsstring>
+        <name>pendingApps_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="313" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1a5a3f2e8c52c26079baf372bac0ae36b2" prot="private" static="no" mutable="no">
+        <type><ref refid="class_base_app_mgr" kindref="compound">BaseAppMgr</ref></type>
+        <definition>BaseAppMgr CellAppMgr::baseAppMgr_</definition>
+        <argsstring></argsstring>
+        <name>baseAppMgr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="315" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1a7b82ce55ca6fdfe74ddd685d73e4f437" prot="private" static="no" mutable="no">
+        <type><ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref></type>
+        <definition>DBAppMgr CellAppMgr::dbAppMgr_</definition>
+        <argsstring></argsstring>
+        <name>dbAppMgr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="316" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1ad647fa572fb57bfb534edc2ca809c055" prot="private" static="no" mutable="no">
+        <type><ref refid="class_d_b_app" kindref="compound">DBApp</ref></type>
+        <definition>DBApp CellAppMgr::dbAppAlpha_</definition>
+        <argsstring></argsstring>
+        <name>dbAppAlpha_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="317" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1ab8a90fdd3cecaffd95c04fb09c69743f" prot="private" static="no" mutable="no">
+        <type>Mercury::Address</type>
+        <definition>Mercury::Address CellAppMgr::baseAppAddr_</definition>
+        <argsstring></argsstring>
+        <name>baseAppAddr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="319" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1a8523c96b2710fa859a5b541f172b67c7" prot="private" static="no" mutable="no">
+        <type><ref refid="class_cell_app_mgr_viewer_server" kindref="compound">CellAppMgrViewerServer</ref> *</type>
+        <definition>CellAppMgrViewerServer* CellAppMgr::pCellAppMgrViewerServer_</definition>
+        <argsstring></argsstring>
+        <name>pCellAppMgrViewerServer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="321" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1add29bddd8846b541b084b1eedf22aa69" prot="private" static="no" mutable="no">
+        <type>UniqueID</type>
+        <definition>UniqueID CellAppMgr::clusterUniqueID_</definition>
+        <argsstring></argsstring>
+        <name>clusterUniqueID_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="323" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1ab743d4d3780b5d8aee68f7b85fe22c16" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CellAppMgr::waitingFor_</definition>
+        <argsstring></argsstring>
+        <name>waitingFor_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="324" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1a4fdb7e897934e24b0c61981665223a6b" prot="private" static="no" mutable="no">
+        <type>int32</type>
+        <definition>int32 CellAppMgr::lastCellAppID_</definition>
+        <argsstring></argsstring>
+        <name>lastCellAppID_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="325" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="325" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1abec050d30d7f6c84ed8b2da1b99bff77" prot="private" static="no" mutable="no">
+        <type>SpaceID</type>
+        <definition>SpaceID CellAppMgr::lastSpaceID_</definition>
+        <argsstring></argsstring>
+        <name>lastSpaceID_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="326" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1a4629f3b31b6561e8d4f0963098d31489" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CellAppMgr::allowNewCellApps_</definition>
+        <argsstring></argsstring>
+        <name>allowNewCellApps_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="328" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1aaa3f6943fd3288cb9b8e551ea6498fd9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CellAppMgr::isRecovering_</definition>
+        <argsstring></argsstring>
+        <name>isRecovering_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="329" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="329" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1a8d94dabf2d19fd6b0177e773b3bc471a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CellAppMgr::hasStarted_</definition>
+        <argsstring></argsstring>
+        <name>hasStarted_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="330" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1a6d8439efe3a08c5773c324291b1c098c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CellAppMgr::isShuttingDown_</definition>
+        <argsstring></argsstring>
+        <name>isShuttingDown_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="331" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="331" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1af58a8493288dcf0683f85c0d6a516c59" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CellAppMgr::haveCellAppsReceivedStartup_</definition>
+        <argsstring></argsstring>
+        <name>haveCellAppsReceivedStartup_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="332" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="332" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1af3ea05049035aff15fd78b7959310ff1" prot="private" static="no" mutable="no">
+        <type>uint64</type>
+        <definition>uint64 CellAppMgr::avgCellAppOverloadStartTime_</definition>
+        <argsstring></argsstring>
+        <name>avgCellAppOverloadStartTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="334" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="334" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1a8fa112f343d970af7596e1b4308e705b" prot="private" static="no" mutable="no">
+        <type>uint64</type>
+        <definition>uint64 CellAppMgr::maxCellAppOverloadStartTime_</definition>
+        <argsstring></argsstring>
+        <name>maxCellAppOverloadStartTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="335" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="335" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1adbd87c214ca0c98fe766f7dc514ba07f" prot="private" static="no" mutable="no">
+        <type>Mercury::Address</type>
+        <definition>Mercury::Address CellAppMgr::lastCellAppDeath_</definition>
+        <argsstring></argsstring>
+        <name>lastCellAppDeath_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="337" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1aa094c76db78b0449d0a1734ada110654" prot="private" static="no" mutable="no">
+        <type><ref refid="class_shut_down_handler" kindref="compound">ShutDownHandler</ref> *</type>
+        <definition>ShutDownHandler* CellAppMgr::pShutDownHandler_</definition>
+        <argsstring></argsstring>
+        <name>pShutDownHandler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="339" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="339" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1a5babb4ffb83bdf72800f51fbd73ac54c" prot="private" static="no" mutable="no">
+        <type>CellAppDeathHandlers</type>
+        <definition>CellAppDeathHandlers CellAppMgr::cellAppDeathHandlers_</definition>
+        <argsstring></argsstring>
+        <name>cellAppDeathHandlers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="343" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="343" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1ae88e32fc9cf4dcc9917758d7d9b133c6" prot="private" static="no" mutable="no">
+        <type>TimerHandle</type>
+        <definition>TimerHandle CellAppMgr::loadBalanceTimer_</definition>
+        <argsstring></argsstring>
+        <name>loadBalanceTimer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="345" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="345" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1a1a0a5e0570806d5beccd47ed9791cf73" prot="private" static="no" mutable="no">
+        <type>TimerHandle</type>
+        <definition>TimerHandle CellAppMgr::metaLoadBalanceTimer_</definition>
+        <argsstring></argsstring>
+        <name>metaLoadBalanceTimer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="346" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="346" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1aa5b02ca0aed1aef89bc7b032af685c09" prot="private" static="no" mutable="no">
+        <type>TimerHandle</type>
+        <definition>TimerHandle CellAppMgr::overloadCheckTimer_</definition>
+        <argsstring></argsstring>
+        <name>overloadCheckTimer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="347" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1a2cb2eb5cf4d8ce9759ffac5d51baabce" prot="private" static="no" mutable="no">
+        <type>TimerHandle</type>
+        <definition>TimerHandle CellAppMgr::gameTimer_</definition>
+        <argsstring></argsstring>
+        <name>gameTimer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="348" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="348" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1a9084989c5f523870da8f92e3df1d9d0f" prot="private" static="no" mutable="no">
+        <type>TimerHandle</type>
+        <definition>TimerHandle CellAppMgr::recoveryTimer_</definition>
+        <argsstring></argsstring>
+        <name>recoveryTimer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="349" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1a805dd81ca65c9660c0b15666bd79926b" prot="private" static="no" mutable="no">
+        <type>ServicesMap</type>
+        <definition>ServicesMap CellAppMgr::servicesMap_</definition>
+        <argsstring></argsstring>
+        <name>servicesMap_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="351" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1a412762cbb7e1143f6f09316ad19f0a5e" prot="private" static="no" mutable="no">
+        <type>MD5::Digest</type>
+        <definition>MD5::Digest CellAppMgr::cellappDigest_</definition>
+        <argsstring></argsstring>
+        <name>cellappDigest_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="355" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="355" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_cell_app_mgr_1a9368118d64e861aae69844566807f17c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class CellAppMgrViewerConnection</definition>
+        <argsstring></argsstring>
+        <name>CellAppMgrViewerConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="310" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="310" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_cell_app_mgr_1a037b067f51606ea3d5efd5a95539d232" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class CellAppMgrCreateEntityHandler</definition>
+        <argsstring></argsstring>
+        <name>CellAppMgrCreateEntityHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="311" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_cell_app_mgr_1a932bdd7b2f4b64c709141be6097ccac0" prot="private" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool CellAppMgr::shouldLoadBalance_</definition>
+        <argsstring></argsstring>
+        <name>shouldLoadBalance_</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para><ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> Singleton. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="352" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="352" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_1ac18efe79a45433426981732d99586e0a" prot="private" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool CellAppMgr::shouldMetaLoadBalance_</definition>
+        <argsstring></argsstring>
+        <name>shouldMetaLoadBalance_</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="353" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="353" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cell_app_mgr_1a42705a1a91d2a322d441d0e53cd914d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CellAppMgr::CellAppMgr</definition>
+        <argsstring>(Mercury::EventDispatcher &amp;mainDispatcher, Mercury::NetworkInterface &amp;networkInterface)</argsstring>
+        <name>CellAppMgr</name>
+        <param>
+          <type>Mercury::EventDispatcher &amp;</type>
+          <declname>mainDispatcher</declname>
+        </param>
+        <param>
+          <type>Mercury::NetworkInterface &amp;</type>
+          <declname>networkInterface</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="56" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="90" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a774e1f705d915307684db5d245a339f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>CellAppMgr::~CellAppMgr</definition>
+        <argsstring>()</argsstring>
+        <name>~CellAppMgr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="58" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="130" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a7a3ca59c28338838267daf10612008fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::addWatchers</definition>
+        <argsstring>()</argsstring>
+        <name>addWatchers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds watchers which are used for debugging to look at data associated with this <ref refid="class_cell" kindref="compound">Cell</ref> App Manager. </para>        </detaileddescription>
+        <inbodydescription>
+<para>This adds a health check watcher to display a decaying average of largest timeout from the known <ref refid="class_cell_apps" kindref="compound">CellApps</ref>.</para>        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="60" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="336" bodyend="426"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1af27f55a591df834260c3e1de53c0de08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::setShutDownHandler</definition>
+        <argsstring>(ShutDownHandler *pHandler)</argsstring>
+        <name>setShutDownHandler</name>
+        <param>
+          <type><ref refid="class_shut_down_handler" kindref="compound">ShutDownHandler</ref> *</type>
+          <declname>pHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="62" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="62" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a25000bfc9a69b8a9c0327ce11b7e882c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_shut_down_handler" kindref="compound">ShutDownHandler</ref> *</type>
+        <definition>ShutDownHandler* CellAppMgr::pShutDownHandler</definition>
+        <argsstring>() const </argsstring>
+        <name>pShutDownHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="64" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a067e2c816444d283abcdc972a2b649ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::controlledShutDown</definition>
+        <argsstring>()</argsstring>
+        <name>controlledShutDown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method initiates a controlled shutdown of the system. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="66" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="432" bodyend="438"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1afd2bcdeecddd6a14ee31dda0334cb248" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::createEntity</definition>
+        <argsstring>(const Mercury::Address &amp;addr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>createEntity</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+          <defname>srcAddr</defname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method creates a new entity on the system. It finds the appropriate cell to create the entity on and does so.</para><para><xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>Currently adds the entity to the first space but the correct space will need to be specified in the message. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="69" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1013" bodyend="1032"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a1aa0b97fa58cf841dfa0a9b4c7e04ef5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::createEntityInNewSpace</definition>
+        <argsstring>(const Mercury::Address &amp;addr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>createEntityInNewSpace</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+          <defname>srcAddr</defname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method creates a new entity on the system. It finds the appropriate cell to create the entity on and does so. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="72" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="774" bodyend="815"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a44dd32c0e25659620ea7092f075ae497" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::createEntityCommon</definition>
+        <argsstring>(Space *pSpace, const Mercury::Address &amp;addr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>createEntityCommon</name>
+        <param>
+          <type><ref refid="class_space" kindref="compound">Space</ref> *</type>
+          <declname>pSpace</declname>
+        </param>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+          <defname>srcAddr</defname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This private method is used by createEntity and createSpace to implement their common functionality. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="75" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1039" bodyend="1087"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a4793ebae699bb09225fd37a0fa416a4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::prepareForRestoreFromDB</definition>
+        <argsstring>(const Mercury::Address &amp;addr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>prepareForRestoreFromDB</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a message from the database to restore spaces that have been previously saved. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="80" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1094" bodyend="1134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a7aaf6129c6620546eed7abdd77aacc08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::setClusterID</definition>
+        <argsstring>(const CellAppMgrInterface::setClusterIDArgs &amp;args)</argsstring>
+        <name>setClusterID</name>
+        <param>
+          <type>const CellAppMgrInterface::setClusterIDArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles clusterID from <ref refid="class_base_app_mgr" kindref="compound">BaseAppMgr</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="84" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1831" bodyend="1842"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1ac6d627d6bf2679b77fb55095272a7790" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::startup</definition>
+        <argsstring>(const Mercury::Address &amp;addr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>startup</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method tells us to start. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="86" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1848" bodyend="1861"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a91c3356c06335ffbfabfbf50fb36834d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CellAppMgr::shutDown</definition>
+        <argsstring>()</argsstring>
+        <name>shutDown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="90" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="90" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1ad6c9fd50102b1adc6ae8ba11372e6114" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::shutDown</definition>
+        <argsstring>(bool shutDownOthers)</argsstring>
+        <name>shutDown</name>
+        <param>
+          <type>bool</type>
+          <declname>shutDownOthers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method shuts down this application. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="93" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1140" bodyend="1153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a49b7e1193ad125c76690aa5df717d42f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::shutDown</definition>
+        <argsstring>(const CellAppMgrInterface::shutDownArgs &amp;args)</argsstring>
+        <name>shutDown</name>
+        <param>
+          <type>const CellAppMgrInterface::shutDownArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called to shut down the <ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> application. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="95" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1159" bodyend="1162"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a6369a408110cf2f1a988224997eb2437" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::controlledShutDown</definition>
+        <argsstring>(const CellAppMgrInterface::controlledShutDownArgs &amp;args)</argsstring>
+        <name>controlledShutDown</name>
+        <param>
+          <type>const CellAppMgrInterface::controlledShutDownArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a message to start shutting down in a controlled way. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="96" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1168" bodyend="1190"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a5d35c5e13ff74afed7fcf87f11bd75dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::triggerControlledShutDown</definition>
+        <argsstring>()</argsstring>
+        <name>triggerControlledShutDown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method triggers a controlled shutdown of the cluster. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="99" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1883" bodyend="1892"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a665f7fbbd86cbdcd28cb1b58c4b01159" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::shouldOffload</definition>
+        <argsstring>(const CellAppMgrInterface::shouldOffloadArgs &amp;args)</argsstring>
+        <name>shouldOffload</name>
+        <param>
+          <type>const CellAppMgrInterface::shouldOffloadArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method enables or disables offloading of entities on all cells. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="101" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1259" bodyend="1269"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a3094e275334c263f32b226d95865391a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::addApp</definition>
+        <argsstring>(const Mercury::Address &amp;addr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>addApp</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+          <defname>srcAddr</defname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a <ref refid="class_cell" kindref="compound">Cell</ref> Application to the list of known cell applications. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="103" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1275" bodyend="1440"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1ac23cd5b3a5736f21e0978127ec9eb7d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::delApp</definition>
+        <argsstring>(const CellAppMgrInterface::delAppArgs &amp;args)</argsstring>
+        <name>delApp</name>
+        <param>
+          <type>const CellAppMgrInterface::delAppArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method removes a <ref refid="class_cell" kindref="compound">Cell</ref> Application from the list of known cell applications. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="106" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1623" bodyend="1626"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a407aa46aac5e8855a7b5fc4e0e6339f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::recoverCellApp</definition>
+        <argsstring>(BinaryIStream &amp;data)</argsstring>
+        <name>recoverCellApp</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method lets the <ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> know about a <ref refid="class_cell_app" kindref="compound">CellApp</ref> when it is recovering. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="108" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1446" bodyend="1616"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1ae5b8e3bc38e2022746e1cc7210250457" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::setBaseApp</definition>
+        <argsstring>(const CellAppMgrInterface::setBaseAppArgs &amp;args)</argsstring>
+        <name>setBaseApp</name>
+        <param>
+          <type>const CellAppMgrInterface::setBaseAppArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called by the <ref refid="class_base_app_mgr" kindref="compound">BaseAppMgr</ref> to inform us of the address of a base application. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="110" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1633" bodyend="1648"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1ad1118f26b5a8f0560300ecaf6a2abe60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::handleCellAppMgrBirth</definition>
+        <argsstring>(const CellAppMgrInterface::handleCellAppMgrBirthArgs &amp;args)</argsstring>
+        <name>handleCellAppMgrBirth</name>
+        <param>
+          <type>const CellAppMgrInterface::handleCellAppMgrBirthArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called to inform the <ref refid="class_cell" kindref="compound">Cell</ref> App Manager that another <ref refid="class_cell" kindref="compound">Cell</ref> App Manager has been started. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="112" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1655" bodyend="1664"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a7550b25f579a904c762b5d0e228b9838" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::handleBaseAppMgrBirth</definition>
+        <argsstring>(const CellAppMgrInterface::handleBaseAppMgrBirthArgs &amp;args)</argsstring>
+        <name>handleBaseAppMgrBirth</name>
+        <param>
+          <type>const CellAppMgrInterface::handleBaseAppMgrBirthArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called to inform the <ref refid="class_cell" kindref="compound">Cell</ref> App Manager that a new <ref refid="class_base" kindref="compound">Base</ref> App Manager has been started. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="115" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1671" bodyend="1680"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1aecd9e3fa2c88211d81d2284a5372b9cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::handleCellAppDeath</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, const CellAppMgrInterface::handleCellAppDeathArgs &amp;args)</argsstring>
+        <name>handleCellAppDeath</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>const CellAppMgrInterface::handleCellAppDeathArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called to inform the <ref refid="class_cell" kindref="compound">Cell</ref> App Manager that a <ref refid="class_cell" kindref="compound">Cell</ref> App has died unexpectedly. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="118" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1687" bodyend="1710"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1ad25ae80025a8fc92a23a5dbf2394825c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::ackCellAppDeath</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, const CellAppMgrInterface::ackCellAppDeathArgs &amp;args)</argsstring>
+        <name>ackCellAppDeath</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>const CellAppMgrInterface::ackCellAppDeathArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called from a <ref refid="class_cell_app" kindref="compound">CellApp</ref> that has received and processed a handleCellAppDeath message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="122" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1717" bodyend="1735"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a3c8c68f6e047a8e8672963b7bc730f50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::handleBaseAppDeath</definition>
+        <argsstring>(BinaryIStream &amp;data)</argsstring>
+        <name>handleBaseAppDeath</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a message from the <ref refid="class_base_app_mgr" kindref="compound">BaseAppMgr</ref> informing us that a <ref refid="class_base_app" kindref="compound">BaseApp</ref> has died. All the <ref refid="class_cell_apps" kindref="compound">CellApps</ref> will now be informed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="126" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1742" bodyend="1778"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1ad3682d3453e0e902ce20660e9c8e818b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::handleDBAppMgrBirth</definition>
+        <argsstring>(const CellAppMgrInterface::handleDBAppMgrBirthArgs &amp;args)</argsstring>
+        <name>handleDBAppMgrBirth</name>
+        <param>
+          <type>const CellAppMgrInterface::handleDBAppMgrBirthArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles when a <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref> has started. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="128" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1784" bodyend="1788"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1addb94a96a6a538774a7d174f995e88b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::setDBAppAlpha</definition>
+        <argsstring>(const CellAppMgrInterface::setDBAppAlphaArgs &amp;args)</argsstring>
+        <name>setDBAppAlpha</name>
+        <param>
+          <type>const CellAppMgrInterface::setDBAppAlphaArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref> telling us where the <ref refid="class_d_b_app" kindref="compound">DBApp</ref> Alpha is. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="131" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1794" bodyend="1800"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a31fdf682e169d64f41d810704852a7ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::setSharedData</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>setSharedData</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a message to set a shared data value. This may be data that is shared between all <ref refid="class_cell_apps" kindref="compound">CellApps</ref> or all <ref refid="class_cell_apps" kindref="compound">CellApps</ref> and BaseApps. The <ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> is the authoritative copy of this information. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="133" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2009" bodyend="2062"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1afa4ce338ac9c0d84a8c79ac1cdd8a26e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::delSharedData</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>delSharedData</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a message to delete a shared data value. This may be data that is shared between all <ref refid="class_cell_apps" kindref="compound">CellApps</ref> or all <ref refid="class_cell_apps" kindref="compound">CellApps</ref> and BaseApps. The <ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> is the authoritative copy of this information. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="135" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2070" bodyend="2123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a3e2e07488a31bff2d068b1bcd4c294b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::addServiceFragment</definition>
+        <argsstring>(BinaryIStream &amp;data)</argsstring>
+        <name>addServiceFragment</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a message for adding a service fragment.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message payload. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="138" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2131" bodyend="2140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1abe8f14de82a517d50d8c899ab1b46c17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::delServiceFragment</definition>
+        <argsstring>(BinaryIStream &amp;data)</argsstring>
+        <name>delServiceFragment</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a message for deleting a service fragment.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message payload. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="139" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2148" bodyend="2157"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a34b14492118c601157f4bf7d2da5ad27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::updateSpaceProperty</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>updateSpaceProperty</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a message from a cell to update space property. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="141" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2163" bodyend="2173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1aba0ba1da897b6d1f86ee35b981a0e566" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::writeSpaceToDB</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, const CellAppMgrInterface::writeSpaceToDBArgs &amp;args)</argsstring>
+        <name>writeSpaceToDB</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>const CellAppMgrInterface::writeSpaceToDBArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a message from a cell to write the space to database. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="143" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2179" bodyend="2188"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1aeae031a8808f39ff071e8c971664a7be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::addSpaceGeometryMapping</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>addSpaceGeometryMapping</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a message from a cell to update space geometry mappings. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="147" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2194" bodyend="2204"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1ab7b1aac64c2f4a373133517ade065f8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::removeSpaceGeometryMapping</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, const CellAppMgrInterface::removeSpaceGeometryMappingArgs &amp;args)</argsstring>
+        <name>removeSpaceGeometryMapping</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>const CellAppMgrInterface::removeSpaceGeometryMappingArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a message from a cell to update space geometry mappings. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="149" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2210" bodyend="2218"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1ae838d8c54709ce428c0fb513197d250e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::updateSpaceLoadBounds</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>updateSpaceLoadBounds</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a message from a cell to update space load bounds. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="153" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2224" bodyend="2236"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a457fcc4661eec6a90966996ff4e252ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::updateSpaceArtificialMinLoad</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, const CellAppMgrInterface::updateSpaceArtificialMinLoadArgs &amp;args)</argsstring>
+        <name>updateSpaceArtificialMinLoad</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>const CellAppMgrInterface::updateSpaceArtificialMinLoadArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a message from a cell to update space load bounds. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="156" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2242" bodyend="2250"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1adc6a7301245e63128e370ff7634e4953" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::notifySpaceStartRecording</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>notifySpaceStartRecording</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a message from a cell for start recording. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="160" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2256" bodyend="2266"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a6384037511333376d5e4a406368cc3c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::notifySpaceStopRecording</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, const CellAppMgrInterface::notifySpaceStopRecordingArgs &amp;args)</argsstring>
+        <name>notifySpaceStopRecording</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>const CellAppMgrInterface::notifySpaceStopRecordingArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a message from a cell for stop recording. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="162" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2272" bodyend="2280"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1ab4bf78ae7a1473d5b9b34b587b021ec7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::shutDownSpace</definition>
+        <argsstring>(const CellAppMgrInterface::shutDownSpaceArgs &amp;args)</argsstring>
+        <name>shutDownSpace</name>
+        <param>
+          <type>const CellAppMgrInterface::shutDownSpaceArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a message informing us to shut down a space. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="166" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2286" bodyend="2314"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a80b4555e74146e98a3cb092888c77334" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::ackBaseAppsShutDown</definition>
+        <argsstring>(const CellAppMgrInterface::ackBaseAppsShutDownArgs &amp;args)</argsstring>
+        <name>ackBaseAppsShutDown</name>
+        <param>
+          <type>const CellAppMgrInterface::ackBaseAppsShutDownArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called to acknowledge that the base apps are in a particular shutdown stage. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="168" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2321" bodyend="2328"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1acd03b83a9f0cae0d88f74434b5af88f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::checkStatus</definition>
+        <argsstring>(const Mercury::Address &amp;addr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>checkStatus</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This request is called to query the status of this process. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="171" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2334" bodyend="2369"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a7e1fe9dec0c380232dfad48b8f28c7ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::gameTimeReading</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, const CellAppMgrInterface::gameTimeReadingArgs &amp;args)</argsstring>
+        <name>gameTimeReading</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>const CellAppMgrInterface::gameTimeReadingArgs &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This message handles someone telling us what their game time is and asking for our version of it, since we are the time master (hmmm time lord?) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="175" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2376" bodyend="2397"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a02fe51906882169f0beea0e27685ce47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::requestEntityPositions</definition>
+        <argsstring>()</argsstring>
+        <name>requestEntityPositions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="179" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a944d2231409fe41a6c806400dd844a13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::ready</definition>
+        <argsstring>(int component)</argsstring>
+        <name>ready</name>
+        <param>
+          <type>int</type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is used to identify when all components are ready. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="181" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1806" bodyend="1825"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1af5b5c48e9a3cfb09fcc56bb258f8d58f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_base_app_mgr" kindref="compound">BaseAppMgr</ref> &amp;</type>
+        <definition>BaseAppMgr&amp; CellAppMgr::baseAppMgr</definition>
+        <argsstring>()</argsstring>
+        <name>baseAppMgr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="189" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="189" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a17577d2113e99c0ba5f4667476a9b505" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_d_b_app" kindref="compound">DBApp</ref> &amp;</type>
+        <definition>DBApp&amp; CellAppMgr::dbAppAlpha</definition>
+        <argsstring>()</argsstring>
+        <name>dbAppAlpha</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="190" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="190" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a3e05a2b740b0889e1d2aa22bf34f5362" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref> &amp;</type>
+        <definition>DBAppMgr&amp; CellAppMgr::dbAppMgr</definition>
+        <argsstring>()</argsstring>
+        <name>dbAppMgr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="191" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="191" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a7f4d5f22c94ce5b4f7605ffb83120186" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_cell_apps" kindref="compound">CellApps</ref> &amp;</type>
+        <definition>CellApps&amp; CellAppMgr::cellApps</definition>
+        <argsstring>()</argsstring>
+        <name>cellApps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="192" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="192" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a8760701a9610c89370059fe04d9eea20" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CellAppMgr::hasStarted</definition>
+        <argsstring>() const </argsstring>
+        <name>hasStarted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="194" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="194" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a7ab58c260f0ecde28e0607f5da9553cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_space" kindref="compound">Space</ref> *</type>
+        <definition>Space * CellAppMgr::findSpace</definition>
+        <argsstring>(SpaceID id)</argsstring>
+        <name>findSpace</name>
+        <param>
+          <type>SpaceID</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method finds the space with the input id. If none is found, NULL is returned. If we ask for the default space and it hasn&apos;t been created yet, it will be created here. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="196" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1198" bodyend="1233"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a5006aaadab0aecb6c036c9d555299c3a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_cell_app" kindref="compound">CellApp</ref> *</type>
+        <definition>CellApp * CellAppMgr::findApp</definition>
+        <argsstring>(const Mercury::Address &amp;addr) const </argsstring>
+        <name>findApp</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method finds the cell application with the input address. If no application is found, NULL is returned. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="198" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1240" bodyend="1243"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a0cc0219d8b41e04de0bfb47d8944aee9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_cell_app" kindref="compound">CellApp</ref> *</type>
+        <definition>CellApp * CellAppMgr::findAlternateApp</definition>
+        <argsstring>(CellApp *pApp) const </argsstring>
+        <name>findAlternateApp</name>
+        <param>
+          <type><ref refid="class_cell_app" kindref="compound">CellApp</ref> *</type>
+          <declname>pApp</declname>
+          <defname>pDeadApp</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns a <ref refid="class_cell_app" kindref="compound">CellApp</ref> that is not the input one. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="199" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1249" bodyend="1252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a36c5c536053a5c5159b9e7d5f699134b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int CellAppMgr::numSpaces</definition>
+        <argsstring>() const </argsstring>
+        <name>numSpaces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="212" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="212" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a9537b47d387ab763d6d2c0a473685702" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int CellAppMgr::numCellApps</definition>
+        <argsstring>() const </argsstring>
+        <name>numCellApps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="213" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="213" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1ad511c3915dc9a33fe85b69f0c750186a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int CellAppMgr::numActiveCellApps</definition>
+        <argsstring>() const </argsstring>
+        <name>numActiveCellApps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Watcher helper method for numActiveCellApps(cellApps that has &gt; 0 cells) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="214" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="444" bodyend="447"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a1ec9998a9c35ae4add13ee000230702d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int CellAppMgr::numCells</definition>
+        <argsstring>() const </argsstring>
+        <name>numCells</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Watcher helper method for numCells </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="215" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="453" bodyend="463"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a1d34ac9c28d434fac5c3de0d25d5ce6d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CellAppMgr::numEntities</definition>
+        <argsstring>() const </argsstring>
+        <name>numEntities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the number of entities that the <ref refid="class_cell" kindref="compound">Cell</ref> App Manager thinks are in the system. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="217" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="663" bodyend="666"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a0d84fdb4c4dcac0c9b0b8e9adcc1132e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CellAppMgr::minCellAppLoad</definition>
+        <argsstring>() const </argsstring>
+        <name>minCellAppLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the minimum load on the active cell apps. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="218" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="672" bodyend="675"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a970608d318f58b8ebd6276f2907e0eaf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CellAppMgr::avgCellAppLoad</definition>
+        <argsstring>() const </argsstring>
+        <name>avgCellAppLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the average load on the active cell apps. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="219" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="681" bodyend="684"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a8342175d52837dbc0f213cbc2ac59333" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CellAppMgr::maxCellAppLoad</definition>
+        <argsstring>() const </argsstring>
+        <name>maxCellAppLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the average load on the active cell apps. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="220" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="690" bodyend="693"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a103b9d174990e3d1bff818fbe998d923" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CellAppMgr::cellsPerSpaceMax</definition>
+        <argsstring>() const </argsstring>
+        <name>cellsPerSpaceMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the number of cells in the biggest space. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="222" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="469" bodyend="486"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a6227b28620f8528a15532c19311270b7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CellAppMgr::cellsPerMultiCellSpaceAvg</definition>
+        <argsstring>() const </argsstring>
+        <name>cellsPerMultiCellSpaceAvg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the average number of cells per space. It only takes multi-cell spaces into account. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="223" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="493" bodyend="514"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a44ba9ff0e4d79e53da90834881579859" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CellAppMgr::numPartitions</definition>
+        <argsstring>() const </argsstring>
+        <name>numPartitions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the number of cell partitions among all spaces. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="224" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="520" bodyend="523"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a7056b3baf730e2fa36450570f8311ea8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>BW::string</type>
+        <definition>BW::string CellAppMgr::cellAppGroups</definition>
+        <argsstring>() const </argsstring>
+        <name>cellAppGroups</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Thie method returns a string representation of the <ref refid="class_cell_app" kindref="compound">CellApp</ref> groups with multiple <ref refid="class_cell_apps" kindref="compound">CellApps</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="225" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="530" bodyend="534"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1adf7bc53b74a75e43cf9e47149bec46ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CellAppMgr::numMultiCellSpaces</definition>
+        <argsstring>() const </argsstring>
+        <name>numMultiCellSpaces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the number of multi-cell spaces. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="226" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="540" bodyend="557"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a5007b4559a03c7a44da8aa3392c4225c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CellAppMgr::numMultiMachineSpaces</definition>
+        <argsstring>() const </argsstring>
+        <name>numMultiMachineSpaces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the number of spaces that have <ref refid="class_cell_apps" kindref="compound">CellApps</ref> on multiple physical machines. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="227" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="564" bodyend="581"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1af219b70aeb0261e4316d515cf1ffa7c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CellAppMgr::machinesPerMultiCellSpaceAvg</definition>
+        <argsstring>() const </argsstring>
+        <name>machinesPerMultiCellSpaceAvg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the average number of distinct physical machines over which a space&apos;s cells are spread. It only takes multi-cell spaces into consideration. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="228" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="589" bodyend="611"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a44a2f20f9c8caa51aaaba832428ce51c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CellAppMgr::machinesPerMultiCellSpaceMax</definition>
+        <argsstring>() const </argsstring>
+        <name>machinesPerMultiCellSpaceMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the maximum number of distinct physical machines over which a space&apos;s cells are spread. It only takes multi-cell spaces into consideration. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="229" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="619" bodyend="634"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a4fd4395085c59910d0966bb4ee47a866" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CellAppMgr::numMachinePartitions</definition>
+        <argsstring>() const </argsstring>
+        <name>numMachinePartitions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the number of splits of all spaces over multiple machines. For example, a space that has cells on <ref refid="class_cell_apps" kindref="compound">CellApps</ref> over three unique physical machines will have two machine partitions. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="230" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="642" bodyend="656"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1ab4ed13152635492a9a00a1b204c4225c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::clearCellAppDeathHandler</definition>
+        <argsstring>(const Mercury::Address &amp;addr)</argsstring>
+        <name>clearCellAppDeathHandler</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method clears the death handler associated with the input address. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="232" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2696" bodyend="2703"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a693926ab79e47554df91c551fbc025a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::writeSpacesToDB</definition>
+        <argsstring>()</argsstring>
+        <name>writeSpacesToDB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method writes space information to the database. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="234" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2709" bodyend="2730"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a6b1fa0aae896159abaac06aebee45484" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::writeGameTimeToDB</definition>
+        <argsstring>()</argsstring>
+        <name>writeGameTimeToDB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method writes the game time to the database. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="235" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2736" bodyend="2753"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1afa59837097ff3ea21d8605c3705bd1d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CellAppMgr::numSpacesWithLoadedGeometry</definition>
+        <argsstring>() const </argsstring>
+        <name>numSpacesWithLoadedGeometry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Predicate that returns the number of spaces in which have loaded their respective mapped geometry.</para><para><simplesect kind="see"><para>numSpaces() </para></simplesect>
+<simplesect kind="see"><para><ref refid="class_space_1af888736d040d758e9a3230f7e74e2f72" kindref="member">Space::cellsHaveLoadedMappedGeometry()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="249" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2763" bodyend="2775"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_cell_app_mgr_1a3b21f8b8764f0ceb93fb3f262deb8594" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Mercury::UDPChannel &amp;</type>
+        <definition>static Mercury::UDPChannel&amp; CellAppMgr::getChannel</definition>
+        <argsstring>(const Mercury::Address &amp;addr)</argsstring>
+        <name>getChannel</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="184" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="184" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1af186972efc883d04c953eb0cf7ecae01" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool CellAppMgr::shouldMetaLoadBalance</definition>
+        <argsstring>()</argsstring>
+        <name>shouldMetaLoadBalance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="237" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="237" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a1ec89b96b01391ad5eb51ae08889b8a3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void CellAppMgr::setShouldMetaLoadBalance</definition>
+        <argsstring>(bool newValue)</argsstring>
+        <name>setShouldMetaLoadBalance</name>
+        <param>
+          <type>bool</type>
+          <declname>newValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="238" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="238" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a6e8854a7846ece009887303b543eb29b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool CellAppMgr::shouldLoadBalance</definition>
+        <argsstring>()</argsstring>
+        <name>shouldLoadBalance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="243" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="243" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a67990b7577507e89a173e3df541c0be3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void CellAppMgr::setShouldLoadBalance</definition>
+        <argsstring>(bool newValue)</argsstring>
+        <name>setShouldLoadBalance</name>
+        <param>
+          <type>bool</type>
+          <declname>newValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="244" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="244" bodyend="247"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_cell_app_mgr_1ad15280667b08ef6df400231bd1c0d03f" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool CellAppMgr::init</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>init</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The initialisation method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="253" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="164" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a8f7c8448a3fc48c28b1278a556145def" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CellAppMgr::initScript</definition>
+        <argsstring>(const char *componentName)</argsstring>
+        <name>initScript</name>
+        <param>
+          <type>const char *</type>
+          <declname>componentName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is used to initialise the script associated with this application. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="254" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="315" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a47caf8f4c171253a9f1bb0a66b623d05" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::startTimer</definition>
+        <argsstring>()</argsstring>
+        <name>startTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method starts the timer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="256" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1867" bodyend="1877"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1ae7b047e5a89081b6389c36055eeba939" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::handleCellAppDeath</definition>
+        <argsstring>(Mercury::Address addr)</argsstring>
+        <name>handleCellAppDeath</name>
+        <param>
+          <type>Mercury::Address</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a cell application dying unexpectedly. The address arg to this method is deliberately not a reference because the <ref refid="class_cell_app" kindref="compound">CellApp</ref> object can be deleted halfway through this, taking its channel and address with it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="258" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="1899" bodyend="2001"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a974c58423fd9d2348d3b60f0c5c4493f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::sendUpdaterStepAck</definition>
+        <argsstring>(int step)</argsstring>
+        <name>sendUpdaterStepAck</name>
+        <param>
+          <type>int</type>
+          <declname>step</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="259" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1acf35384af79825b1534cef1ad7d6f647" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::checkForDeadCellApps</definition>
+        <argsstring>()</argsstring>
+        <name>checkForDeadCellApps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called periodically to check whether or not any cell applications have timed out. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="260" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2677" bodyend="2690"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1aca6288b60a417c2cecb7b992a3f9e588" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CellAppMgr::isRecovering</definition>
+        <argsstring>() const </argsstring>
+        <name>isRecovering</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="262" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="262" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1aad85702a0f020e557c9bbb846c6afeb8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CellAppMgr::startRecovery</definition>
+        <argsstring>()</argsstring>
+        <name>startRecovery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the <ref refid="class_cell" kindref="compound">Cell</ref> App Manager to be in recovery mode. In this time, currently running cell apps should inform us about their details. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="263" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2436" bodyend="2454"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a54262780bf220b466ed133b56b608734" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::endRecovery</definition>
+        <argsstring>()</argsstring>
+        <name>endRecovery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called at the end of recovery. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="264" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2460" bodyend="2473"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a332da2a408a409b465a2d28511e4dcc3" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::syncSpaceGeometryMappings</definition>
+        <argsstring>() const </argsstring>
+        <name>syncSpaceGeometryMappings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method synchronizes space geometry mappings after recovery. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="266" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2479" bodyend="2489"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a883ba5cebbe538027d51be7aa718477e" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::syncSpaceArtificialMinLoad</definition>
+        <argsstring>() const </argsstring>
+        <name>syncSpaceArtificialMinLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method synchronizes space artificial min load after recovery. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="267" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2495" bodyend="2506"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a051cac6c5ff67ee5f15596a87c760ba9" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::syncSpaceData</definition>
+        <argsstring>() const </argsstring>
+        <name>syncSpaceData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method synchronizes space data after recovery. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="268" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2512" bodyend="2522"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a4c73a146a1290787a14c421086eb1dd8" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::syncSpaceRecording</definition>
+        <argsstring>() const </argsstring>
+        <name>syncSpaceRecording</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method synchronizes space recording session after recovery. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="269" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2528" bodyend="2538"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1accc0657c9c1403fbe438dd05de53c397" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::metaLoadBalance</definition>
+        <argsstring>()</argsstring>
+        <name>metaLoadBalance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks whether there needs to be any migration of spaces between cell applications. If so, it will take action. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="272" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="822" bodyend="843"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1ac107058fdd0212e8911108e71773a01e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::loadBalance</definition>
+        <argsstring>()</argsstring>
+        <name>loadBalance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method performs load balancing on each of the spaces. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="273" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="849" bodyend="875"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a9ab9989404bb56de4853bf650b10848e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::updateRanges</definition>
+        <argsstring>()</argsstring>
+        <name>updateRanges</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method performs load balancing on each of the spaces. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="274" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="881" bodyend="898"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a016213d902e1616f5df889a36ede6302" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CellAppMgr::checkLoadingSpaces</definition>
+        <argsstring>()</argsstring>
+        <name>checkLoadingSpaces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks whether there are any spaces that are loading geometry that could benefit from more loading cells. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="276" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="905" bodyend="944"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a23d036974470ade107955589ee3ddb39" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::overloadCheck</definition>
+        <argsstring>()</argsstring>
+        <name>overloadCheck</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks if we should report the <ref refid="class_cell_apps" kindref="compound">CellApps</ref> as overloaded. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="278" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="950" bodyend="965"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1aac8e7707eaf34146caea7f8ecbd039ed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CellAppMgr::calculateOverload</definition>
+        <argsstring>(bool areCellAppsOverloaded, uint64 tolerancePeriodInStamps, uint64 &amp;overloadStartTime, const char *warningMsg)</argsstring>
+        <name>calculateOverload</name>
+        <param>
+          <type>bool</type>
+          <declname>areCellAppsOverloaded</declname>
+        </param>
+        <param>
+          <type>uint64</type>
+          <declname>tolerancePeriodInStamps</declname>
+        </param>
+        <param>
+          <type>uint64 &amp;</type>
+          <declname>overloadStartTime</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>warningMsg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks if <ref refid="class_cell_apps" kindref="compound">CellApps</ref> overload exceeds tolerance period. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="279" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="971" bodyend="1004"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a3afbf6dcc6ab995594ad8e426447798a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SpaceID</type>
+        <definition>SpaceID CellAppMgr::generateSpaceID</definition>
+        <argsstring>(SpaceID spaceID=NULL_SPACE_ID)</argsstring>
+        <name>generateSpaceID</name>
+        <param>
+          <type>SpaceID</type>
+          <declname>spaceID</declname>
+          <defval>NULL_SPACE_ID</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method generates space ID or checks validity of the passed space ID <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spaceID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>space ID to use </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="298" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2408" bodyend="2422"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a4422b9076fa385cdf3a46369f9221237" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::addSpace</definition>
+        <argsstring>(Space *pSpace)</argsstring>
+        <name>addSpace</name>
+        <param>
+          <type><ref refid="class_space" kindref="compound">Space</ref> *</type>
+          <declname>pSpace</declname>
+          <defname>pNewSpace</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a new space to the system. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="299" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2427" bodyend="2430"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_1a4ef8fb9a97187302004ff760a765659b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgr::handleTimeout</definition>
+        <argsstring>(TimerHandle handle, void *arg)</argsstring>
+        <name>handleTimeout</name>
+        <param>
+          <type>TimerHandle</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method responds to timeout events. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr.hpp" line="300" column="1" bodyfile="cellappmgr/cellappmgr.cpp" bodystart="2544" bodyend="2670"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>An object of this type is the main object for the <ref refid="class_cell" kindref="compound">Cell</ref> App Manager application. It is used to manage the <ref refid="class_cell" kindref="compound">Cell</ref> Apps that are running on the server. It is responsible for maintaining the cells and the spaces and making sure the the <ref refid="class_cell" kindref="compound">Cell</ref> Apps are balanced. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="507">
+        <label>TimerHandler</label>
+      </node>
+      <node id="508">
+        <label>Singleton&lt; CellAppMgr &gt;</label>
+      </node>
+      <node id="505">
+        <label>CellAppMgr</label>
+        <link refid="class_cell_app_mgr"/>
+        <childnode refid="506" relation="public-inheritance">
+        </childnode>
+        <childnode refid="507" relation="public-inheritance">
+        </childnode>
+        <childnode refid="508" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="506">
+        <label>ManagerApp</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="511">
+        <label>TimerHandler</label>
+      </node>
+      <node id="512">
+        <label>Singleton&lt; CellAppMgr &gt;</label>
+      </node>
+      <node id="509">
+        <label>CellAppMgr</label>
+        <link refid="class_cell_app_mgr"/>
+        <childnode refid="510" relation="public-inheritance">
+        </childnode>
+        <childnode refid="511" relation="public-inheritance">
+        </childnode>
+        <childnode refid="512" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="510">
+        <label>ManagerApp</label>
+      </node>
+    </collaborationgraph>
+    <location file="cellappmgr/cellappmgr.hpp" line="49" column="1" bodyfile="cellappmgr/cellappmgr.hpp" bodystart="46" bodyend="356"/>
+    <listofallmembers>
+      <member refid="class_cell_app_mgr_1a80b4555e74146e98a3cb092888c77334" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>ackBaseAppsShutDown</name></member>
+      <member refid="class_cell_app_mgr_1ad25ae80025a8fc92a23a5dbf2394825c" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>ackCellAppDeath</name></member>
+      <member refid="class_cell_app_mgr_1a3094e275334c263f32b226d95865391a" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>addApp</name></member>
+      <member refid="class_cell_app_mgr_1a3e2e07488a31bff2d068b1bcd4c294b3" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>addServiceFragment</name></member>
+      <member refid="class_cell_app_mgr_1a4422b9076fa385cdf3a46369f9221237" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>addSpace</name></member>
+      <member refid="class_cell_app_mgr_1aeae031a8808f39ff071e8c971664a7be" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>addSpaceGeometryMapping</name></member>
+      <member refid="class_cell_app_mgr_1a7a3ca59c28338838267daf10612008fb" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>addWatchers</name></member>
+      <member refid="class_cell_app_mgr_1a4629f3b31b6561e8d4f0963098d31489" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>allowNewCellApps_</name></member>
+      <member refid="class_cell_app_mgr_1a970608d318f58b8ebd6276f2907e0eaf" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>avgCellAppLoad</name></member>
+      <member refid="class_cell_app_mgr_1af3ea05049035aff15fd78b7959310ff1" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>avgCellAppOverloadStartTime_</name></member>
+      <member refid="class_cell_app_mgr_1ab8a90fdd3cecaffd95c04fb09c69743f" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>baseAppAddr_</name></member>
+      <member refid="class_cell_app_mgr_1af5b5c48e9a3cfb09fcc56bb258f8d58f" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>baseAppMgr</name></member>
+      <member refid="class_cell_app_mgr_1a5a3f2e8c52c26079baf372bac0ae36b2" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>baseAppMgr_</name></member>
+      <member refid="class_cell_app_mgr_1aac8e7707eaf34146caea7f8ecbd039ed" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>calculateOverload</name></member>
+      <member refid="class_cell_app_mgr_1adbd0c689fc026da3588d253376333616" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>CellAppDeathHandlers</name></member>
+      <member refid="class_cell_app_mgr_1a5babb4ffb83bdf72800f51fbd73ac54c" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>cellAppDeathHandlers_</name></member>
+      <member refid="class_cell_app_mgr_1a412762cbb7e1143f6f09316ad19f0a5e" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>cellappDigest_</name></member>
+      <member refid="class_cell_app_mgr_1a7056b3baf730e2fa36450570f8311ea8" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>cellAppGroups</name></member>
+      <member refid="class_cell_app_mgr_1a42705a1a91d2a322d441d0e53cd914d0" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>CellAppMgr</name></member>
+      <member refid="class_cell_app_mgr_1a037b067f51606ea3d5efd5a95539d232" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>CellAppMgrCreateEntityHandler</name></member>
+      <member refid="class_cell_app_mgr_1a9368118d64e861aae69844566807f17c" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>CellAppMgrViewerConnection</name></member>
+      <member refid="class_cell_app_mgr_1a7f4d5f22c94ce5b4f7605ffb83120186" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>cellApps</name></member>
+      <member refid="class_cell_app_mgr_1ab373874f7d712bf02f25aa408186a840" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>cellApps_</name></member>
+      <member refid="class_cell_app_mgr_1a6227b28620f8528a15532c19311270b7" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>cellsPerMultiCellSpaceAvg</name></member>
+      <member refid="class_cell_app_mgr_1a103b9d174990e3d1bff818fbe998d923" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>cellsPerSpaceMax</name></member>
+      <member refid="class_cell_app_mgr_1acf35384af79825b1534cef1ad7d6f647" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>checkForDeadCellApps</name></member>
+      <member refid="class_cell_app_mgr_1a016213d902e1616f5df889a36ede6302" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>checkLoadingSpaces</name></member>
+      <member refid="class_cell_app_mgr_1acd03b83a9f0cae0d88f74434b5af88f8" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>checkStatus</name></member>
+      <member refid="class_cell_app_mgr_1ab4ed13152635492a9a00a1b204c4225c" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>clearCellAppDeathHandler</name></member>
+      <member refid="class_cell_app_mgr_1add29bddd8846b541b084b1eedf22aa69" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>clusterUniqueID_</name></member>
+      <member refid="class_cell_app_mgr_1aed5b58fa807a50edd99482a1556b9c6c" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>Config</name></member>
+      <member refid="class_cell_app_mgr_1a067e2c816444d283abcdc972a2b649ee" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>controlledShutDown</name></member>
+      <member refid="class_cell_app_mgr_1a6369a408110cf2f1a988224997eb2437" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>controlledShutDown</name></member>
+      <member refid="class_cell_app_mgr_1afd2bcdeecddd6a14ee31dda0334cb248" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>createEntity</name></member>
+      <member refid="class_cell_app_mgr_1a44dd32c0e25659620ea7092f075ae497" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>createEntityCommon</name></member>
+      <member refid="class_cell_app_mgr_1a1aa0b97fa58cf841dfa0a9b4c7e04ef5" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>createEntityInNewSpace</name></member>
+      <member refid="class_cell_app_mgr_1a17577d2113e99c0ba5f4667476a9b505" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>dbAppAlpha</name></member>
+      <member refid="class_cell_app_mgr_1ad647fa572fb57bfb534edc2ca809c055" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>dbAppAlpha_</name></member>
+      <member refid="class_cell_app_mgr_1a3e05a2b740b0889e1d2aa22bf34f5362" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>dbAppMgr</name></member>
+      <member refid="class_cell_app_mgr_1a7b82ce55ca6fdfe74ddd685d73e4f437" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>dbAppMgr_</name></member>
+      <member refid="class_cell_app_mgr_1ac23cd5b3a5736f21e0978127ec9eb7d7" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>delApp</name></member>
+      <member refid="class_cell_app_mgr_1abe8f14de82a517d50d8c899ab1b46c17" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>delServiceFragment</name></member>
+      <member refid="class_cell_app_mgr_1afa4ce338ac9c0d84a8c79ac1cdd8a26e" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>delSharedData</name></member>
+      <member refid="class_cell_app_mgr_1a54262780bf220b466ed133b56b608734" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>endRecovery</name></member>
+      <member refid="class_cell_app_mgr_1a0cc0219d8b41e04de0bfb47d8944aee9" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>findAlternateApp</name></member>
+      <member refid="class_cell_app_mgr_1a5006aaadab0aecb6c036c9d555299c3a" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>findApp</name></member>
+      <member refid="class_cell_app_mgr_1a7ab58c260f0ecde28e0607f5da9553cf" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>findSpace</name></member>
+      <member refid="class_cell_app_mgr_1a2cb2eb5cf4d8ce9759ffac5d51baabce" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>gameTimer_</name></member>
+      <member refid="class_cell_app_mgr_1a7e1fe9dec0c380232dfad48b8f28c7ec" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>gameTimeReading</name></member>
+      <member refid="class_cell_app_mgr_1a3afbf6dcc6ab995594ad8e426447798a" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>generateSpaceID</name></member>
+      <member refid="class_cell_app_mgr_1a3b21f8b8764f0ceb93fb3f262deb8594" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>getChannel</name></member>
+      <member refid="class_cell_app_mgr_1a3c8c68f6e047a8e8672963b7bc730f50" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>handleBaseAppDeath</name></member>
+      <member refid="class_cell_app_mgr_1a7550b25f579a904c762b5d0e228b9838" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>handleBaseAppMgrBirth</name></member>
+      <member refid="class_cell_app_mgr_1aecd9e3fa2c88211d81d2284a5372b9cd" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>handleCellAppDeath</name></member>
+      <member refid="class_cell_app_mgr_1ae7b047e5a89081b6389c36055eeba939" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>handleCellAppDeath</name></member>
+      <member refid="class_cell_app_mgr_1ad1118f26b5a8f0560300ecaf6a2abe60" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>handleCellAppMgrBirth</name></member>
+      <member refid="class_cell_app_mgr_1ad3682d3453e0e902ce20660e9c8e818b" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>handleDBAppMgrBirth</name></member>
+      <member refid="class_cell_app_mgr_1a4ef8fb9a97187302004ff760a765659b" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>handleTimeout</name></member>
+      <member refid="class_cell_app_mgr_1a8760701a9610c89370059fe04d9eea20" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>hasStarted</name></member>
+      <member refid="class_cell_app_mgr_1a8d94dabf2d19fd6b0177e773b3bc471a" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>hasStarted_</name></member>
+      <member refid="class_cell_app_mgr_1af58a8493288dcf0683f85c0d6a516c59" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>haveCellAppsReceivedStartup_</name></member>
+      <member refid="class_cell_app_mgr_1ad15280667b08ef6df400231bd1c0d03f" prot="private" virt="virtual"><scope>CellAppMgr</scope><name>init</name></member>
+      <member refid="class_cell_app_mgr_1a8f7c8448a3fc48c28b1278a556145def" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>initScript</name></member>
+      <member refid="class_cell_app_mgr_1aca6288b60a417c2cecb7b992a3f9e588" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>isRecovering</name></member>
+      <member refid="class_cell_app_mgr_1aaa3f6943fd3288cb9b8e551ea6498fd9" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>isRecovering_</name></member>
+      <member refid="class_cell_app_mgr_1a6d8439efe3a08c5773c324291b1c098c" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>isShuttingDown_</name></member>
+      <member refid="class_cell_app_mgr_1adbd87c214ca0c98fe766f7dc514ba07f" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>lastCellAppDeath_</name></member>
+      <member refid="class_cell_app_mgr_1a4fdb7e897934e24b0c61981665223a6b" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>lastCellAppID_</name></member>
+      <member refid="class_cell_app_mgr_1abec050d30d7f6c84ed8b2da1b99bff77" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>lastSpaceID_</name></member>
+      <member refid="class_cell_app_mgr_1ac107058fdd0212e8911108e71773a01e" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>loadBalance</name></member>
+      <member refid="class_cell_app_mgr_1ae88e32fc9cf4dcc9917758d7d9b133c6" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>loadBalanceTimer_</name></member>
+      <member refid="class_cell_app_mgr_1af219b70aeb0261e4316d515cf1ffa7c9" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>machinesPerMultiCellSpaceAvg</name></member>
+      <member refid="class_cell_app_mgr_1a44a2f20f9c8caa51aaaba832428ce51c" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>machinesPerMultiCellSpaceMax</name></member>
+      <member refid="class_cell_app_mgr_1a8342175d52837dbc0f213cbc2ac59333" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>maxCellAppLoad</name></member>
+      <member refid="class_cell_app_mgr_1a8fa112f343d970af7596e1b4308e705b" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>maxCellAppOverloadStartTime_</name></member>
+      <member refid="class_cell_app_mgr_1accc0657c9c1403fbe438dd05de53c397" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>metaLoadBalance</name></member>
+      <member refid="class_cell_app_mgr_1a1a0a5e0570806d5beccd47ed9791cf73" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>metaLoadBalanceTimer_</name></member>
+      <member refid="class_cell_app_mgr_1a0d84fdb4c4dcac0c9b0b8e9adcc1132e" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>minCellAppLoad</name></member>
+      <member refid="class_cell_app_mgr_1adc6a7301245e63128e370ff7634e4953" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>notifySpaceStartRecording</name></member>
+      <member refid="class_cell_app_mgr_1a6384037511333376d5e4a406368cc3c8" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>notifySpaceStopRecording</name></member>
+      <member refid="class_cell_app_mgr_1ad511c3915dc9a33fe85b69f0c750186a" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>numActiveCellApps</name></member>
+      <member refid="class_cell_app_mgr_1a9537b47d387ab763d6d2c0a473685702" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>numCellApps</name></member>
+      <member refid="class_cell_app_mgr_1a1ec9998a9c35ae4add13ee000230702d" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>numCells</name></member>
+      <member refid="class_cell_app_mgr_1a1d34ac9c28d434fac5c3de0d25d5ce6d" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>numEntities</name></member>
+      <member refid="class_cell_app_mgr_1a4fd4395085c59910d0966bb4ee47a866" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>numMachinePartitions</name></member>
+      <member refid="class_cell_app_mgr_1adf7bc53b74a75e43cf9e47149bec46ef" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>numMultiCellSpaces</name></member>
+      <member refid="class_cell_app_mgr_1a5007b4559a03c7a44da8aa3392c4225c" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>numMultiMachineSpaces</name></member>
+      <member refid="class_cell_app_mgr_1a44ba9ff0e4d79e53da90834881579859" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>numPartitions</name></member>
+      <member refid="class_cell_app_mgr_1a36c5c536053a5c5159b9e7d5f699134b" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>numSpaces</name></member>
+      <member refid="class_cell_app_mgr_1afa59837097ff3ea21d8605c3705bd1d6" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>numSpacesWithLoadedGeometry</name></member>
+      <member refid="class_cell_app_mgr_1a23d036974470ade107955589ee3ddb39" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>overloadCheck</name></member>
+      <member refid="class_cell_app_mgr_1aa5b02ca0aed1aef89bc7b032af685c09" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>overloadCheckTimer_</name></member>
+      <member refid="class_cell_app_mgr_1a8523c96b2710fa859a5b541f172b67c7" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>pCellAppMgrViewerServer_</name></member>
+      <member refid="class_cell_app_mgr_1a43830e2713c67e3a184f2d6e0b3d944f" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>pendingApps_</name></member>
+      <member refid="class_cell_app_mgr_1a4793ebae699bb09225fd37a0fa416a4d" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>prepareForRestoreFromDB</name></member>
+      <member refid="class_cell_app_mgr_1a25000bfc9a69b8a9c0327ce11b7e882c" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>pShutDownHandler</name></member>
+      <member refid="class_cell_app_mgr_1aa094c76db78b0449d0a1734ada110654" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>pShutDownHandler_</name></member>
+      <member refid="class_cell_app_mgr_1af70bb73e401806a6f2e7842780293000" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>pTimeKeeper_</name></member>
+      <member refid="class_cell_app_mgr_1a944d2231409fe41a6c806400dd844a13" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>ready</name></member>
+      <member refid="class_cell_app_mgr_1a09dd68f7cd22092ffc2e27f48f41171ea0596544298dd6bb16d9acfc809083487" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>READY_ALL</name></member>
+      <member refid="class_cell_app_mgr_1a09dd68f7cd22092ffc2e27f48f41171ea29fcb9cb04cb26d113053463e8da6dc8" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>READY_BASE_APP</name></member>
+      <member refid="class_cell_app_mgr_1a09dd68f7cd22092ffc2e27f48f41171eacc94f75338a4f79ae433bbc0056ed9dc" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>READY_BASE_APP_MGR</name></member>
+      <member refid="class_cell_app_mgr_1a09dd68f7cd22092ffc2e27f48f41171ea9f2d9cd4ef06d2dfda4a7ab2f4d4415d" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>READY_CELL_APP</name></member>
+      <member refid="class_cell_app_mgr_1a09dd68f7cd22092ffc2e27f48f41171ea8d9d882f91fed2c023fc0a9544f1409f" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>READY_CLUSTER_ID</name></member>
+      <member refid="class_cell_app_mgr_1a09dd68f7cd22092ffc2e27f48f41171e" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>ReadyComponent</name></member>
+      <member refid="class_cell_app_mgr_1a407aa46aac5e8855a7b5fc4e0e6339f7" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>recoverCellApp</name></member>
+      <member refid="class_cell_app_mgr_1a9084989c5f523870da8f92e3df1d9d0f" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>recoveryTimer_</name></member>
+      <member refid="class_cell_app_mgr_1ab7b1aac64c2f4a373133517ade065f8c" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>removeSpaceGeometryMapping</name></member>
+      <member refid="class_cell_app_mgr_1a02fe51906882169f0beea0e27685ce47" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>requestEntityPositions</name></member>
+      <member refid="class_cell_app_mgr_1a974c58423fd9d2348d3b60f0c5c4493f" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>sendUpdaterStepAck</name></member>
+      <member refid="class_cell_app_mgr_1a805dd81ca65c9660c0b15666bd79926b" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>servicesMap_</name></member>
+      <member refid="class_cell_app_mgr_1ae5b8e3bc38e2022746e1cc7210250457" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>setBaseApp</name></member>
+      <member refid="class_cell_app_mgr_1a7aaf6129c6620546eed7abdd77aacc08" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>setClusterID</name></member>
+      <member refid="class_cell_app_mgr_1addb94a96a6a538774a7d174f995e88b2" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>setDBAppAlpha</name></member>
+      <member refid="class_cell_app_mgr_1a31fdf682e169d64f41d810704852a7ff" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>setSharedData</name></member>
+      <member refid="class_cell_app_mgr_1a67990b7577507e89a173e3df541c0be3" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>setShouldLoadBalance</name></member>
+      <member refid="class_cell_app_mgr_1a1ec89b96b01391ad5eb51ae08889b8a3" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>setShouldMetaLoadBalance</name></member>
+      <member refid="class_cell_app_mgr_1af27f55a591df834260c3e1de53c0de08" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>setShutDownHandler</name></member>
+      <member refid="class_cell_app_mgr_1a5d364cff0f80af8ef2c95bba732c67bc" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>sharedCellAppData_</name></member>
+      <member refid="class_cell_app_mgr_1a577131dc887263c2041c6285adffc08f" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>SharedData</name></member>
+      <member refid="class_cell_app_mgr_1a3760ba2a1450eb61c559e757cba98b6f" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>sharedGlobalData_</name></member>
+      <member refid="class_cell_app_mgr_1a6e8854a7846ece009887303b543eb29b" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>shouldLoadBalance</name></member>
+      <member refid="class_cell_app_mgr_1a932bdd7b2f4b64c709141be6097ccac0" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>shouldLoadBalance_</name></member>
+      <member refid="class_cell_app_mgr_1af186972efc883d04c953eb0cf7ecae01" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>shouldMetaLoadBalance</name></member>
+      <member refid="class_cell_app_mgr_1ac18efe79a45433426981732d99586e0a" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>shouldMetaLoadBalance_</name></member>
+      <member refid="class_cell_app_mgr_1a665f7fbbd86cbdcd28cb1b58c4b01159" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>shouldOffload</name></member>
+      <member refid="class_cell_app_mgr_1a91c3356c06335ffbfabfbf50fb36834d" prot="public" virt="virtual"><scope>CellAppMgr</scope><name>shutDown</name></member>
+      <member refid="class_cell_app_mgr_1ad6c9fd50102b1adc6ae8ba11372e6114" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>shutDown</name></member>
+      <member refid="class_cell_app_mgr_1a49b7e1193ad125c76690aa5df717d42f" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>shutDown</name></member>
+      <member refid="class_cell_app_mgr_1ab4bf78ae7a1473d5b9b34b587b021ec7" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>shutDownSpace</name></member>
+      <member refid="class_cell_app_mgr_1ae1f6068a11c6a966e339c8f886cba81b" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>spaces_</name></member>
+      <member refid="class_cell_app_mgr_1ae3c41b9a58dcca1a073ff1c9b142f67d" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>spacesShuttingDown_</name></member>
+      <member refid="class_cell_app_mgr_1aad85702a0f020e557c9bbb846c6afeb8" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>startRecovery</name></member>
+      <member refid="class_cell_app_mgr_1a47caf8f4c171253a9f1bb0a66b623d05" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>startTimer</name></member>
+      <member refid="class_cell_app_mgr_1ac6d627d6bf2679b77fb55095272a7790" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>startup</name></member>
+      <member refid="class_cell_app_mgr_1a883ba5cebbe538027d51be7aa718477e" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>syncSpaceArtificialMinLoad</name></member>
+      <member refid="class_cell_app_mgr_1a051cac6c5ff67ee5f15596a87c760ba9" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>syncSpaceData</name></member>
+      <member refid="class_cell_app_mgr_1a332da2a408a409b465a2d28511e4dcc3" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>syncSpaceGeometryMappings</name></member>
+      <member refid="class_cell_app_mgr_1a4c73a146a1290787a14c421086eb1dd8" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>syncSpaceRecording</name></member>
+      <member refid="class_cell_app_mgr_1a6c385dbf9db880245a1107b79d1fd6cbadf063a65cf375dc8e1166d9919639426" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>TIMEOUT_END_OF_RECOVERY</name></member>
+      <member refid="class_cell_app_mgr_1a6c385dbf9db880245a1107b79d1fd6cba97f7716ee5712eb7dbba29aab31186e6" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>TIMEOUT_GAME_TICK</name></member>
+      <member refid="class_cell_app_mgr_1a6c385dbf9db880245a1107b79d1fd6cbad8300ad6b2a0dcc8b6b9a79177f69b1d" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>TIMEOUT_LOAD_BALANCE</name></member>
+      <member refid="class_cell_app_mgr_1a6c385dbf9db880245a1107b79d1fd6cba1b4a5f1c303693b04767a776698789ac" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>TIMEOUT_META_LOAD_BALANCE</name></member>
+      <member refid="class_cell_app_mgr_1a6c385dbf9db880245a1107b79d1fd6cbaf0d6d4d7f671da69caf21c9903ac7382" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>TIMEOUT_OVERLOAD_CHECK</name></member>
+      <member refid="class_cell_app_mgr_1a6c385dbf9db880245a1107b79d1fd6cb" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>TimeOutType</name></member>
+      <member refid="class_cell_app_mgr_1a5d35c5e13ff74afed7fcf87f11bd75dd" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>triggerControlledShutDown</name></member>
+      <member refid="class_cell_app_mgr_1a9ab9989404bb56de4853bf650b10848e" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>updateRanges</name></member>
+      <member refid="class_cell_app_mgr_1a457fcc4661eec6a90966996ff4e252ae" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>updateSpaceArtificialMinLoad</name></member>
+      <member refid="class_cell_app_mgr_1ae838d8c54709ce428c0fb513197d250e" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>updateSpaceLoadBounds</name></member>
+      <member refid="class_cell_app_mgr_1a34b14492118c601157f4bf7d2da5ad27" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>updateSpaceProperty</name></member>
+      <member refid="class_cell_app_mgr_1ab743d4d3780b5d8aee68f7b85fe22c16" prot="private" virt="non-virtual"><scope>CellAppMgr</scope><name>waitingFor_</name></member>
+      <member refid="class_cell_app_mgr_1a6b1fa0aae896159abaac06aebee45484" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>writeGameTimeToDB</name></member>
+      <member refid="class_cell_app_mgr_1a693926ab79e47554df91c551fbc025a1" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>writeSpacesToDB</name></member>
+      <member refid="class_cell_app_mgr_1aba0ba1da897b6d1f86ee35b981a0e566" prot="public" virt="non-virtual"><scope>CellAppMgr</scope><name>writeSpaceToDB</name></member>
+      <member refid="class_cell_app_mgr_1a774e1f705d915307684db5d245a339f6" prot="public" virt="virtual"><scope>CellAppMgr</scope><name>~CellAppMgr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

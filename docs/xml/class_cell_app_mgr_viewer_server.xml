@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_cell_app_mgr_viewer_server" kind="class" language="C++" prot="public">
+    <compoundname>CellAppMgrViewerServer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">InputNotificationHandler</basecompoundref>
+    <includes refid="cellappmgr__viewer__server_8hpp" local="no">cellappmgr_viewer_server.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_cell_app_mgr_viewer_server_1a148e288fc63197646876b34ee636780e" prot="private" static="no" mutable="no">
+        <type>BW::vector&lt; <ref refid="class_cell_app_mgr_viewer_connection" kindref="compound">CellAppMgrViewerConnection</ref> * &gt;</type>
+        <definition>BW::vector&lt;CellAppMgrViewerConnection*&gt; CellAppMgrViewerServer::connections_</definition>
+        <argsstring></argsstring>
+        <name>connections_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr_viewer_server.hpp" line="80" column="1" bodyfile="cellappmgr/cellappmgr_viewer_server.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_viewer_server_1a774e360af3e0020757b72a188f089c73" prot="private" static="no" mutable="no">
+        <type>Endpoint</type>
+        <definition>Endpoint CellAppMgrViewerServer::listener_</definition>
+        <argsstring></argsstring>
+        <name>listener_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr_viewer_server.hpp" line="82" column="1" bodyfile="cellappmgr/cellappmgr_viewer_server.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_viewer_server_1aaeb8b3fc7ab805b620c9b6d8522d6b56" prot="private" static="no" mutable="no">
+        <type>Mercury::EventDispatcher *</type>
+        <definition>Mercury::EventDispatcher* CellAppMgrViewerServer::pDispatcher_</definition>
+        <argsstring></argsstring>
+        <name>pDispatcher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr_viewer_server.hpp" line="83" column="1" bodyfile="cellappmgr/cellappmgr_viewer_server.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_viewer_server_1a15740205bbe6e20da64c092d24ee430f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> &amp;</type>
+        <definition>CellAppMgr&amp; CellAppMgrViewerServer::cellAppMgr_</definition>
+        <argsstring></argsstring>
+        <name>cellAppMgr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr_viewer_server.hpp" line="84" column="1" bodyfile="cellappmgr/cellappmgr_viewer_server.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_mgr_viewer_server_1a6c232a78b0b8f9ce359b771036cdcae5" prot="private" static="no" mutable="no">
+        <type>uint16</type>
+        <definition>uint16 CellAppMgrViewerServer::port_</definition>
+        <argsstring></argsstring>
+        <name>port_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr_viewer_server.hpp" line="85" column="1" bodyfile="cellappmgr/cellappmgr_viewer_server.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cell_app_mgr_viewer_server_1a6bb9095a57e33fc5e25e7de31f164231" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CellAppMgrViewerServer::CellAppMgrViewerServer</definition>
+        <argsstring>(CellAppMgr &amp;cellAppMgr)</argsstring>
+        <name>CellAppMgrViewerServer</name>
+        <param>
+          <type><ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> &amp;</type>
+          <declname>cellAppMgr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the constructor. It does not do any initialisation work, just puts the object into an initial sane state. Call startup to start the server.</para><para><simplesect kind="see"><para><ref refid="class_cell_app_mgr_viewer_server_1ae5b411d4942d478ce88d643dbd5a1206" kindref="member">startup</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr_viewer_server.hpp" line="69" column="1" bodyfile="cellappmgr/cellappmgr_viewer_server.cpp" bodystart="298" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_viewer_server_1af9cbb6855f2096e79080e46c77329b6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>CellAppMgrViewerServer::~CellAppMgrViewerServer</definition>
+        <argsstring>()</argsstring>
+        <name>~CellAppMgrViewerServer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the destructor. It calls shutDown to ensure that the server has shut down.</para><para><simplesect kind="see"><para><ref refid="class_cell_app_mgr_viewer_server_1abc3cb7935c6f44dbabd9544d83afa5ac" kindref="member">shutDown</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr_viewer_server.hpp" line="70" column="1" bodyfile="cellappmgr/cellappmgr_viewer_server.cpp" bodystart="312" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_viewer_server_1ae5b411d4942d478ce88d643dbd5a1206" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CellAppMgrViewerServer::startup</definition>
+        <argsstring>(Mercury::EventDispatcher &amp;dispatcher, uint16 port=0)</argsstring>
+        <name>startup</name>
+        <param>
+          <type>Mercury::EventDispatcher &amp;</type>
+          <declname>dispatcher</declname>
+        </param>
+        <param>
+          <type>uint16</type>
+          <declname>port</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method starts up the dfgdfg server, and begins listening on the given port. It redirects Python stdout and stderr, so that they can be sent to all Python connections as well as stdout.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dispatcher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Mercury Dispatcher with which to register file descriptors. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The port on which to listen. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr_viewer_server.hpp" line="72" column="1" bodyfile="cellappmgr/cellappmgr_viewer_server.cpp" bodystart="326" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_viewer_server_1abc3cb7935c6f44dbabd9544d83afa5ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgrViewerServer::shutDown</definition>
+        <argsstring>()</argsstring>
+        <name>shutDown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method shuts down the Python server. It closes the listener port, disconnects all connections, and restores Python stderr and stdout. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr_viewer_server.hpp" line="73" column="1" bodyfile="cellappmgr/cellappmgr_viewer_server.cpp" bodystart="367" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_viewer_server_1ae6729de3d2fbad58f0b7323cab97d782" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgrViewerServer::deleteConnection</definition>
+        <argsstring>(CellAppMgrViewerConnection *pConnection)</argsstring>
+        <name>deleteConnection</name>
+        <param>
+          <type><ref refid="class_cell_app_mgr_viewer_connection" kindref="compound">CellAppMgrViewerConnection</ref> *</type>
+          <declname>pConnection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr_viewer_server.hpp" line="74" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_viewer_server_1a8f37ce07cc1a8a5e26bf384da18abd1d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16</type>
+        <definition>uint16 CellAppMgrViewerServer::port</definition>
+        <argsstring>() const </argsstring>
+        <name>port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the port on which our file descriptor is listening. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr_viewer_server.hpp" line="75" column="1" bodyfile="cellappmgr/cellappmgr_viewer_server.cpp" bodystart="424" bodyend="427"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_cell_app_mgr_viewer_server_1a76345baa7dfeffd1e9cbab789ffec648" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int CellAppMgrViewerServer::handleInputNotification</definition>
+        <argsstring>(int fd)</argsstring>
+        <name>handleInputNotification</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called by Mercury when our file descriptor is ready for reading. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellappmgr_viewer_server.hpp" line="78" column="1" bodyfile="cellappmgr/cellappmgr_viewer_server.cpp" bodystart="397" bodyend="418"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class provides access to information need by viewer app. It starts listening on a given port, and creates a new <ref refid="class_cell_app_mgr_viewer_connection" kindref="compound">CellAppMgrViewerConnection</ref> for every connection it receives. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="525">
+        <label>CellAppMgrViewerServer</label>
+        <link refid="class_cell_app_mgr_viewer_server"/>
+        <childnode refid="526" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="526">
+        <label>InputNotificationHandler</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="527">
+        <label>CellAppMgrViewerServer</label>
+        <link refid="class_cell_app_mgr_viewer_server"/>
+        <childnode refid="528" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="528">
+        <label>InputNotificationHandler</label>
+      </node>
+    </collaborationgraph>
+    <location file="cellappmgr/cellappmgr_viewer_server.hpp" line="67" column="1" bodyfile="cellappmgr/cellappmgr_viewer_server.hpp" bodystart="66" bodyend="86"/>
+    <listofallmembers>
+      <member refid="class_cell_app_mgr_viewer_server_1a15740205bbe6e20da64c092d24ee430f" prot="private" virt="non-virtual"><scope>CellAppMgrViewerServer</scope><name>cellAppMgr_</name></member>
+      <member refid="class_cell_app_mgr_viewer_server_1a6bb9095a57e33fc5e25e7de31f164231" prot="public" virt="non-virtual"><scope>CellAppMgrViewerServer</scope><name>CellAppMgrViewerServer</name></member>
+      <member refid="class_cell_app_mgr_viewer_server_1a148e288fc63197646876b34ee636780e" prot="private" virt="non-virtual"><scope>CellAppMgrViewerServer</scope><name>connections_</name></member>
+      <member refid="class_cell_app_mgr_viewer_server_1ae6729de3d2fbad58f0b7323cab97d782" prot="public" virt="non-virtual"><scope>CellAppMgrViewerServer</scope><name>deleteConnection</name></member>
+      <member refid="class_cell_app_mgr_viewer_server_1a76345baa7dfeffd1e9cbab789ffec648" prot="private" virt="virtual"><scope>CellAppMgrViewerServer</scope><name>handleInputNotification</name></member>
+      <member refid="class_cell_app_mgr_viewer_server_1a774e360af3e0020757b72a188f089c73" prot="private" virt="non-virtual"><scope>CellAppMgrViewerServer</scope><name>listener_</name></member>
+      <member refid="class_cell_app_mgr_viewer_server_1aaeb8b3fc7ab805b620c9b6d8522d6b56" prot="private" virt="non-virtual"><scope>CellAppMgrViewerServer</scope><name>pDispatcher_</name></member>
+      <member refid="class_cell_app_mgr_viewer_server_1a8f37ce07cc1a8a5e26bf384da18abd1d" prot="public" virt="non-virtual"><scope>CellAppMgrViewerServer</scope><name>port</name></member>
+      <member refid="class_cell_app_mgr_viewer_server_1a6c232a78b0b8f9ce359b771036cdcae5" prot="private" virt="non-virtual"><scope>CellAppMgrViewerServer</scope><name>port_</name></member>
+      <member refid="class_cell_app_mgr_viewer_server_1abc3cb7935c6f44dbabd9544d83afa5ac" prot="public" virt="non-virtual"><scope>CellAppMgrViewerServer</scope><name>shutDown</name></member>
+      <member refid="class_cell_app_mgr_viewer_server_1ae5b411d4942d478ce88d643dbd5a1206" prot="public" virt="non-virtual"><scope>CellAppMgrViewerServer</scope><name>startup</name></member>
+      <member refid="class_cell_app_mgr_viewer_server_1af9cbb6855f2096e79080e46c77329b6f" prot="public" virt="virtual"><scope>CellAppMgrViewerServer</scope><name>~CellAppMgrViewerServer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

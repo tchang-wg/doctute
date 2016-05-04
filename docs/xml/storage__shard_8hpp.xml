@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="storage__shard_8hpp" kind="file" language="C++">
+    <compoundname>storage_shard.hpp</compoundname>
+    <includes refid="dbappmgr_2dbapp_8hpp" local="yes">dbapp.hpp</includes>
+    <includes local="yes">cstdmf/bw_string.hpp</includes>
+    <includes local="yes">cstdmf/smartpointer.hpp</includes>
+    <includes local="yes">db/db_hash_schemes.hpp</includes>
+    <includes local="yes">db/storage_shard_descriptor.hpp</includes>
+    <includedby refid="dbapp__hash__propagator_8hpp" local="yes">dbappmgr/dbapp_hash_propagator.hpp</includedby>
+    <includedby refid="dbappmgr_8hpp" local="yes">dbappmgr/dbappmgr.hpp</includedby>
+    <includedby refid="dbappmgr_2dbapp_8cpp" local="yes">dbappmgr/dbapp.cpp</includedby>
+    <includedby refid="loginapp__gateway_8cpp" local="yes">dbappmgr/loginapp_gateway.cpp</includedby>
+    <includedby refid="storage__shard_8cpp" local="yes">dbappmgr/storage_shard.cpp</includedby>
+    <incdepgraph>
+      <node id="15993">
+        <label>network/bundle.hpp</label>
+      </node>
+      <node id="15990">
+        <label>db/dbapp_interface.hpp</label>
+      </node>
+      <node id="15988">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="15995">
+        <label>cstdmf/bw_string.hpp</label>
+      </node>
+      <node id="15989">
+        <label>cstdmf/watcher.hpp</label>
+      </node>
+      <node id="15986">
+        <label>dbappmgr/storage_shard.hpp</label>
+        <link refid="storage_shard.hpp"/>
+        <childnode refid="15987" relation="include">
+        </childnode>
+        <childnode refid="15995" relation="include">
+        </childnode>
+        <childnode refid="15988" relation="include">
+        </childnode>
+        <childnode refid="15991" relation="include">
+        </childnode>
+        <childnode refid="15992" relation="include">
+        </childnode>
+      </node>
+      <node id="15987">
+        <label>dbapp.hpp</label>
+        <link refid="dbappmgr_2dbapp_8hpp_source"/>
+        <childnode refid="15988" relation="include">
+        </childnode>
+        <childnode refid="15989" relation="include">
+        </childnode>
+        <childnode refid="15990" relation="include">
+        </childnode>
+        <childnode refid="15991" relation="include">
+        </childnode>
+        <childnode refid="15992" relation="include">
+        </childnode>
+        <childnode refid="15993" relation="include">
+        </childnode>
+        <childnode refid="15994" relation="include">
+        </childnode>
+      </node>
+      <node id="15991">
+        <label>db/db_hash_schemes.hpp</label>
+      </node>
+      <node id="15992">
+        <label>db/storage_shard_descriptor.hpp</label>
+      </node>
+      <node id="15994">
+        <label>network/channel_owner.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="15997">
+        <label>dbappmgr/dbapp_hash_propagator.hpp</label>
+        <link refid="dbapp__hash__propagator_8hpp_source"/>
+        <childnode refid="15998" relation="include">
+        </childnode>
+      </node>
+      <node id="15996">
+        <label>dbappmgr/storage_shard.hpp</label>
+        <link refid="storage_shard.hpp"/>
+        <childnode refid="15997" relation="include">
+        </childnode>
+        <childnode refid="15998" relation="include">
+        </childnode>
+      </node>
+      <node id="15998">
+        <label>dbappmgr/dbappmgr.hpp</label>
+        <link refid="dbappmgr_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_storage_shard" prot="public">StorageShard</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="storage__shard_8hpp_1a8a4fa835f44fb1c9dc6c909839214d43" prot="public" static="no">
+        <name>AutoLoadStatus</name>
+        <enumvalue id="storage__shard_8hpp_1a8a4fa835f44fb1c9dc6c909839214d43a036e89eafae6fd6a84aad56084fd7b2b" prot="public">
+          <name>AUTO_LOAD_UNKNOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="storage__shard_8hpp_1a8a4fa835f44fb1c9dc6c909839214d43a39010299a7c089dbdf483d35209b5309" prot="public">
+          <name>AUTO_LOAD_LOADED_SOME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="storage__shard_8hpp_1a8a4fa835f44fb1c9dc6c909839214d43a6598c781a6c12e535c18c21f7ca692c5" prot="public">
+          <name>AUTO_LOAD_LOADED_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="20" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="19" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="storage__shard_8hpp_1aa731596ad341bf10d1a49cd08b6e8a53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_DECLARE_SMARTPOINTER</definition>
+        <argsstring>(StorageShard)</argsstring>
+        <name>BW_DECLARE_SMARTPOINTER</name>
+        <param>
+          <type><ref refid="class_storage_shard" kindref="compound">StorageShard</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="17" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="storage__shard_8hpp_1a1b2a215f764a359dfe6e536ca882c806" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BinaryOStream &amp;</type>
+        <definition>BinaryOStream&amp; operator&lt;&lt;</definition>
+        <argsstring>(BinaryOStream &amp;os, const StorageShard &amp;shard)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_storage_shard" kindref="compound">StorageShard</ref> &amp;</type>
+          <declname>shard</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Out-streaming operator for <ref refid="class_storage_shard" kindref="compound">StorageShard</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="193" column="1" bodyfile="dbappmgr/storage_shard.cpp" bodystart="49" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>STORAGE_SHARD_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STORAGE_SHARD_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;dbapp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_string.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/smartpointer.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;db/db_hash_schemes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;db/storage_shard_descriptor.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">BinaryIStream;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">BW_DECLARE_SMARTPOINTER(<sp/><ref refid="class_storage_shard" kindref="compound">StorageShard</ref><sp/>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>AutoLoadStatus</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>AUTO_LOAD_UNKNOWN,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>AUTO_LOAD_LOADED_SOME,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>AUTO_LOAD_LOADED_NONE</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_storage_shard" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_storage_shard" kindref="compound">StorageShard</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>ReferenceCount</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>DBHashSchemes::DBAppIDBuckets&lt;<sp/>DBAppPtr<sp/>&gt;::HashScheme<sp/>DBApps;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>DBApps::const_iterator<sp/>const_iterator;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>StorageShardDescriptor::Status<sp/>Status;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ShardGUID<sp/>GUID_SHARD_ALPHA;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_storage_shard_1a3bb278781d18e399b22804cff3491857" kindref="member">StorageShard</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_storage_shard_1a3bb278781d18e399b22804cff3491857" kindref="member">StorageShard</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>StorageShardDescriptor<sp/>&amp;<sp/><ref refid="class_storage_shard_1a8f5378040286070af570d0183c47e8b2" kindref="member">descriptor</ref><sp/>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>destroy();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_storage_shard_1a1dfe722d1c4f8ae76e60f9899c20df4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_storage_shard_1a1dfe722d1c4f8ae76e60f9899c20df4b" kindref="member">addAllocation</ref>()<sp/>{<sp/>++numOutstandingAllocations_;<sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_storage_shard_1ae40e0fcf4a72ce3be98f95fe50200a63" kindref="member">confirmDBAppConnection</ref>(<sp/><ref refid="class_d_b_app" kindref="compound">DBApp</ref><sp/>&amp;<sp/>dbApp<sp/>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_storage_shard_1a3ae7831d8268315cb2ae46bbc7f17c1e" kindref="member">recoverDBAppConnection</ref>(<sp/><ref refid="class_d_b_app" kindref="compound">DBApp</ref><sp/>&amp;<sp/>dbApp<sp/>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="class_storage_shard_1a99b8d5930f0a770e75cde463be0bd641" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_storage_shard_1a99b8d5930f0a770e75cde463be0bd641" kindref="member">numDBAppsAllocated</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="61"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dbApps_.size()<sp/>+<sp/>numOutstandingAllocations_;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="class_storage_shard_1aa38092392f563d81fef76f2b1d369926" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_storage_shard_1aa38092392f563d81fef76f2b1d369926" kindref="member">numDBAppsConnected</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dbApps_.size();<sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="class_storage_shard_1aa5d8653e34d29f86ceb24d3d7528a086" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_storage_shard_1aa5d8653e34d29f86ceb24d3d7528a086" kindref="member">hasDBApps</ref>(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>shouldIncludeAllocated<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="77"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!dbApps_.empty()<sp/>||<sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(shouldIncludeAllocated<sp/>&amp;&amp;<sp/>(numOutstandingAllocations_<sp/>&gt;<sp/>0));</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="class_storage_shard_1ac31d5fd422fde8b89b945373f9d8af0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_storage_shard_1ac31d5fd422fde8b89b945373f9d8af0b" kindref="member">isAlpha</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>descriptor_.isAlpha();<sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="class_storage_shard_1a8f5378040286070af570d0183c47e8b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>StorageShardDescriptor<sp/>&amp;<sp/><ref refid="class_storage_shard_1a8f5378040286070af570d0183c47e8b2" kindref="member">descriptor</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>descriptor_;<sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="class_storage_shard_1afb545fa0caebe6971785de9348f7d5bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ShardGUID<sp/><ref refid="class_storage_shard_1afb545fa0caebe6971785de9348f7d5bd" kindref="member">guid</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>descriptor_.guid();<sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_storage_shard_1afb545fa0caebe6971785de9348f7d5bd" kindref="member">guid</ref>(<sp/>ShardGUID<sp/><ref refid="class_storage_shard_1afb545fa0caebe6971785de9348f7d5bd" kindref="member">guid</ref><sp/>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="class_storage_shard_1a9aa6f3b385142235b7ec6e9954813612" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/><ref refid="class_storage_shard_1a9aa6f3b385142235b7ec6e9954813612" kindref="member">guidAsString</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>descriptor_.guidAsString();<sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="class_storage_shard_1acf1d5a63622dc0a1cfdb212a8ac76820" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/><ref refid="class_storage_shard_1acf1d5a63622dc0a1cfdb212a8ac76820" kindref="member">name</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>descriptor_.name();<sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="class_storage_shard_1ac6d7f90ae0472cf4b82837e101fcf2eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Status<sp/><ref refid="class_storage_shard_1ac6d7f90ae0472cf4b82837e101fcf2eb" kindref="member">status</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>descriptor_.status();<sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_storage_shard_1ac6d7f90ae0472cf4b82837e101fcf2eb" kindref="member">status</ref>(<sp/>Status<sp/><ref refid="class_storage_shard_1ac6d7f90ae0472cf4b82837e101fcf2eb" kindref="member">status</ref><sp/>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="class_storage_shard_1a841630312463299e44d15eedc0d89417" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/><ref refid="class_storage_shard_1a841630312463299e44d15eedc0d89417" kindref="member">statusAsString</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="121"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>descriptor_.statusAsString();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="class_storage_shard_1a37809f8c1f98742531b4072cece5e07c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>AutoLoadStatus<sp/><ref refid="class_storage_shard_1a37809f8c1f98742531b4072cece5e07c" kindref="member">hasAutoLoadFinished</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>autoLoadStatus_;<sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="class_storage_shard_1a4973a4974ac660836092eaa6c93d3027" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_storage_shard_1a4973a4974ac660836092eaa6c93d3027" kindref="member">hasAutoLoadFinished</ref>(<sp/>AutoLoadStatus<sp/>status<sp/>)<sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>autoLoadStatus_<sp/>=<sp/><ref refid="class_storage_shard_1ac6d7f90ae0472cf4b82837e101fcf2eb" kindref="member">status</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_b_app" kindref="compound">DBApp</ref><sp/>*<sp/><ref refid="class_storage_shard_1a62c987ccedaa5c85fd081c3e7a29f728" kindref="member">pDBAppAlpha</ref>();</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="class_storage_shard_1ae8109e59f2097b557ec92bb68ab65651" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_d_b_app" kindref="compound">DBApp</ref><sp/>*<sp/><ref refid="class_storage_shard_1ae8109e59f2097b557ec92bb68ab65651" kindref="member">pDBAppAlpha</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="145"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="normal"><sp/><ref refid="class_storage_shard" kindref="compound">StorageShard</ref><sp/>*<sp/></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/>this<sp/>)-&gt;<ref refid="class_storage_shard_1a62c987ccedaa5c85fd081c3e7a29f728" kindref="member">pDBAppAlpha</ref>();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_b_app" kindref="compound">DBApp</ref><sp/>*<sp/><ref refid="class_storage_shard_1a849ef3e261b0e8bce947f37950d5a361" kindref="member">pLeastLoadedDBApp</ref>();</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="157" refid="class_storage_shard_1a9577d35622d5fc3bb67b45ac1b4bd560" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_d_b_app" kindref="compound">DBApp</ref><sp/>*<sp/><ref refid="class_storage_shard_1a9577d35622d5fc3bb67b45ac1b4bd560" kindref="member">pLeastLoadedDBApp</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="158"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="normal"><sp/><ref refid="class_storage_shard" kindref="compound">StorageShard</ref><sp/>*<sp/></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/>this<sp/>)-&gt;<ref refid="class_storage_shard_1a849ef3e261b0e8bce947f37950d5a361" kindref="member">pLeastLoadedDBApp</ref>();</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_storage_shard_1a979dbeef9f8a44e17af5430e6f4e9645" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_storage_shard_1a30371921013136fc17dbaa4893c6a1b4" kindref="member">onDBAppDeath</ref>(<sp/><ref refid="class_d_b_app" kindref="compound">DBApp</ref><sp/>&amp;<sp/>dbApp<sp/>);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_storage_shard_1af87de194a189d590f49fc7b3d504c3d8" kindref="member">writeToStream</ref>(<sp/>BinaryOStream<sp/>&amp;<sp/>stream<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="class_storage_shard_1a8639c159173cdf20ebac32c876b8c12e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>const_iterator<sp/><ref refid="class_storage_shard_1a8639c159173cdf20ebac32c876b8c12e" kindref="member">dbAppsBegin</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dbApps_.begin();<sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="class_storage_shard_1acbe0fed7c84d5284f0db739286659023" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>const_iterator<sp/><ref refid="class_storage_shard_1acbe0fed7c84d5284f0db739286659023" kindref="member">dbAppsEnd</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dbApps_.end();<sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_smart_pointer" kindref="compound">WatcherPtr</ref><sp/><ref refid="class_storage_shard_1a6cc8f90c38262494ceaf6a48d27c6fb8" kindref="member">pWatcher</ref>();</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>StorageShardDescriptor<sp/><sp/>descriptor_;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>DBApps<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dbApps_;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numOutstandingAllocations_;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>AutoLoadStatus<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>autoLoadStatus_;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>BinaryOStream<sp/>&amp;<sp/><ref refid="class_storage_shard_1a1b2a215f764a359dfe6e536ca882c806" kindref="member">operator&lt;&lt;</ref>(<sp/>BinaryOStream<sp/>&amp;<sp/>os,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_storage_shard" kindref="compound">StorageShard</ref><sp/>&amp;<sp/>shard<sp/>);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal">BinaryOStream<sp/>&amp;<sp/><ref refid="class_storage_shard_1a1b2a215f764a359dfe6e536ca882c806" kindref="member">operator&lt;&lt;</ref>(<sp/>BinaryOStream<sp/>&amp;<sp/>os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_storage_shard" kindref="compound">StorageShard</ref><sp/>&amp;<sp/>shard<sp/>);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>STORAGE_SHARD_HPP</highlight></codeline>
+    </programlisting>
+    <location file="dbappmgr/storage_shard.hpp"/>
+  </compounddef>
+</doxygen>

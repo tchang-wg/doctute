@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_text_file_handler" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>TextFileHandler</compoundname>
+    <basecompoundref refid="class_file_handler" prot="public" virt="non-virtual">FileHandler</basecompoundref>
+    <derivedcompoundref refid="class_active_files" prot="public" virt="non-virtual">ActiveFiles</derivedcompoundref>
+    <derivedcompoundref refid="class_hostnames_m_l_d_b" prot="public" virt="non-virtual">HostnamesMLDB</derivedcompoundref>
+    <derivedcompoundref refid="class_hostnames_validator_m_l_d_b" prot="public" virt="non-virtual">HostnamesValidatorMLDB</derivedcompoundref>
+    <derivedcompoundref refid="class_log_component_names_m_l_d_b" prot="public" virt="non-virtual">LogComponentNamesMLDB</derivedcompoundref>
+    <derivedcompoundref refid="class_unary_integer_file" prot="public" virt="non-virtual">UnaryIntegerFile</derivedcompoundref>
+    <includes refid="text__file__handler_8hpp" local="no">text_file_handler.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_text_file_handler_1a2da8b86f768c119b1a3b1884a400f33d" prot="private" static="no">
+        <name>InodeStatus</name>
+        <enumvalue id="class_text_file_handler_1a2da8b86f768c119b1a3b1884a400f33dac8cfa62c7bcb3fa1a1a030b8ff68979a" prot="private">
+          <name>INODE_STATUS_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_text_file_handler_1a2da8b86f768c119b1a3b1884a400f33da5f951610fee38d29f123015a4eb6087f" prot="private">
+          <name>INODE_STATUS_UNCHANGED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_text_file_handler_1a2da8b86f768c119b1a3b1884a400f33da1213ec13bacb8c3dd6c9b8a77de7ec13" prot="private">
+          <name>INODE_STATUS_CHANGED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/text_file_handler.hpp" line="39" column="1" bodyfile="tools/message_logger/text_file_handler.hpp" bodystart="38" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_text_file_handler_1a7c9dc371685252d2da9ebf2e19fbe377" prot="protected" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* TextFileHandler::fp_</definition>
+        <argsstring></argsstring>
+        <name>fp_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/text_file_handler.hpp" line="33" column="1" bodyfile="tools/message_logger/text_file_handler.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_text_file_handler_1a30b61494814350e0f7cbf45b1772398d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE TextFileHandler::TextFileHandler</definition>
+        <argsstring>()</argsstring>
+        <name>TextFileHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/text_file_handler.hpp" line="17" column="1" bodyfile="tools/message_logger/text_file_handler.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_text_file_handler_1aeb62378466353be7c60431a83aea7027" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>TextFileHandler::~TextFileHandler</definition>
+        <argsstring>()</argsstring>
+        <name>~TextFileHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/text_file_handler.hpp" line="18" column="1" bodyfile="tools/message_logger/text_file_handler.cpp" bodystart="19" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_text_file_handler_1a48bce068c4a745ee90888594668d4c00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TextFileHandler::init</definition>
+        <argsstring>(const char *filename, const char *mode)</argsstring>
+        <name>init</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/text_file_handler.hpp" line="20" column="1" bodyfile="tools/message_logger/text_file_handler.cpp" bodystart="26" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_text_file_handler_1ad4ea6ba63dadcfda2cdb1d1b491f1059" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TextFileHandler::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/text_file_handler.hpp" line="21" column="1" bodyfile="tools/message_logger/text_file_handler.cpp" bodystart="47" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_text_file_handler_1ae8586110bb5b1dfd16681ba2d282ee17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TextFileHandler::isOpened</definition>
+        <argsstring>()</argsstring>
+        <name>isOpened</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/text_file_handler.hpp" line="22" column="1" bodyfile="tools/message_logger/text_file_handler.hpp" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_text_file_handler_1a392e4edf92f7725a3a37212da319d7e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TextFileHandler::reopenIfChanged</definition>
+        <argsstring>()</argsstring>
+        <name>reopenIfChanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks the inode status and reopens the file if it has changed.</para><para><simplesect kind="return"><para>true on success, false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/text_file_handler.hpp" line="23" column="1" bodyfile="tools/message_logger/text_file_handler.cpp" bodystart="132" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_text_file_handler_1a862ec561f457c469e70b1c8a6489df04" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>long</type>
+        <definition>long TextFileHandler::length</definition>
+        <argsstring>()</argsstring>
+        <name>length</name>
+        <reimplements refid="class_file_handler_1a115fb06c8296264b46a3ef98ac1afc28">length</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/text_file_handler.hpp" line="25" column="1" bodyfile="tools/message_logger/text_file_handler.cpp" bodystart="188" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_text_file_handler_1a2f455865be705691ce2795bbd1a48a30" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool TextFileHandler::read</definition>
+        <argsstring>()</argsstring>
+        <name>read</name>
+        <reimplements refid="class_file_handler_1a81e45df04afafdc54b27686861c4475c">read</reimplements>
+        <reimplementedby refid="class_active_files_1a2e79d821686c1d8670bcda8df05c92b9">read</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/text_file_handler.hpp" line="27" column="1" bodyfile="tools/message_logger/text_file_handler.cpp" bodystart="148" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_text_file_handler_1a7825ed5fab29814dcb91210c8e3e1d66" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool TextFileHandler::handleLine</definition>
+        <argsstring>(const char *line)=0</argsstring>
+        <name>handleLine</name>
+        <reimplementedby refid="class_active_files_1afa76c6e19d05daa823d96a8d4d41ce91">handleLine</reimplementedby>
+        <reimplementedby refid="class_unary_integer_file_1abf22b36c2f0d6bb82d0ab3ad16e2c623">handleLine</reimplementedby>
+        <reimplementedby refid="class_log_component_names_m_l_d_b_1a3c61cbcfe9c96f3c46b724837adb9c86">handleLine</reimplementedby>
+        <reimplementedby refid="class_hostnames_m_l_d_b_1a8c5c20222f428c02f6ea42be3f2cb4f0">handleLine</reimplementedby>
+        <reimplementedby refid="class_hostnames_validator_m_l_d_b_1af8852348079b7412c5ea5a967e6c2477">handleLine</reimplementedby>
+        <param>
+          <type>const char *</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/text_file_handler.hpp" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_text_file_handler_1a0cd996475e7d25910d6d081553c4a81d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TextFileHandler::writeLine</definition>
+        <argsstring>(const char *line) const </argsstring>
+        <name>writeLine</name>
+        <param>
+          <type>const char *</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/text_file_handler.hpp" line="30" column="1" bodyfile="tools/message_logger/text_file_handler.cpp" bodystart="205" bodyend="225"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_text_file_handler_1a6b3f42f9c1996d65efc2ff7229a17838" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TextFileHandler::reopen</definition>
+        <argsstring>()</argsstring>
+        <name>reopen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Closes and reinitialises the file handle.</para><para><simplesect kind="return"><para>true on success, false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/text_file_handler.hpp" line="36" column="1" bodyfile="tools/message_logger/text_file_handler.cpp" bodystart="67" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_text_file_handler_1a246cce21105e5f856f41bca0c871b398" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>InodeStatus</type>
+        <definition>TextFileHandler::InodeStatus TextFileHandler::getInodeStatus</definition>
+        <argsstring>()</argsstring>
+        <name>getInodeStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns whether the file has been replaced since last using it. It checks if the inode has changed (indicating that the old file has been unlinked and replaced by a new file).</para><para><simplesect kind="return"><para>InodeStatus </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/text_file_handler.hpp" line="45" column="1" bodyfile="tools/message_logger/text_file_handler.cpp" bodystart="85" bodyend="124"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Wraps line-based ASCII files. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2924">
+        <label>ActiveFiles</label>
+        <link refid="class_active_files"/>
+        <childnode refid="2922" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2923">
+        <label>FileHandler</label>
+        <link refid="class_file_handler"/>
+      </node>
+      <node id="2927">
+        <label>LogComponentNamesMLDB</label>
+        <link refid="class_log_component_names_m_l_d_b"/>
+        <childnode refid="2922" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2925">
+        <label>HostnamesMLDB</label>
+        <link refid="class_hostnames_m_l_d_b"/>
+        <childnode refid="2922" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2922">
+        <label>TextFileHandler</label>
+        <link refid="class_text_file_handler"/>
+        <childnode refid="2923" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2926">
+        <label>HostnamesValidatorMLDB</label>
+        <link refid="class_hostnames_validator_m_l_d_b"/>
+        <childnode refid="2922" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2928">
+        <label>UnaryIntegerFile</label>
+        <link refid="class_unary_integer_file"/>
+        <childnode refid="2922" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2930">
+        <label>FileHandler</label>
+        <link refid="class_file_handler"/>
+      </node>
+      <node id="2929">
+        <label>TextFileHandler</label>
+        <link refid="class_text_file_handler"/>
+        <childnode refid="2930" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/message_logger/text_file_handler.hpp" line="15" column="1" bodyfile="tools/message_logger/text_file_handler.hpp" bodystart="14" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_text_file_handler_1ad4ea6ba63dadcfda2cdb1d1b491f1059" prot="public" virt="non-virtual"><scope>TextFileHandler</scope><name>close</name></member>
+      <member refid="class_file_handler_1a21db311b76430aff514bf39a238b015d" prot="public" virt="non-virtual"><scope>TextFileHandler</scope><name>filename</name></member>
+      <member refid="class_file_handler_1a48f6ab15fbc95172ce6db0878cd4d5e7" prot="protected" virt="non-virtual"><scope>TextFileHandler</scope><name>filename_</name></member>
+      <member refid="class_file_handler_1aaa5e02b440b04dd78fe9ac2c8f19c69e" prot="protected" virt="virtual"><scope>TextFileHandler</scope><name>flush</name></member>
+      <member refid="class_text_file_handler_1a7c9dc371685252d2da9ebf2e19fbe377" prot="protected" virt="non-virtual"><scope>TextFileHandler</scope><name>fp_</name></member>
+      <member refid="class_text_file_handler_1a246cce21105e5f856f41bca0c871b398" prot="private" virt="non-virtual"><scope>TextFileHandler</scope><name>getInodeStatus</name></member>
+      <member refid="class_text_file_handler_1a7825ed5fab29814dcb91210c8e3e1d66" prot="public" virt="pure-virtual"><scope>TextFileHandler</scope><name>handleLine</name></member>
+      <member refid="class_text_file_handler_1a48bce068c4a745ee90888594668d4c00" prot="public" virt="non-virtual"><scope>TextFileHandler</scope><name>init</name></member>
+      <member refid="class_text_file_handler_1a2da8b86f768c119b1a3b1884a400f33da1213ec13bacb8c3dd6c9b8a77de7ec13" prot="private" virt="non-virtual"><scope>TextFileHandler</scope><name>INODE_STATUS_CHANGED</name></member>
+      <member refid="class_text_file_handler_1a2da8b86f768c119b1a3b1884a400f33dac8cfa62c7bcb3fa1a1a030b8ff68979a" prot="private" virt="non-virtual"><scope>TextFileHandler</scope><name>INODE_STATUS_ERROR</name></member>
+      <member refid="class_text_file_handler_1a2da8b86f768c119b1a3b1884a400f33da5f951610fee38d29f123015a4eb6087f" prot="private" virt="non-virtual"><scope>TextFileHandler</scope><name>INODE_STATUS_UNCHANGED</name></member>
+      <member refid="class_text_file_handler_1a2da8b86f768c119b1a3b1884a400f33d" prot="private" virt="non-virtual"><scope>TextFileHandler</scope><name>InodeStatus</name></member>
+      <member refid="class_file_handler_1a83d056536289a502e280ad909c998e29" prot="public" virt="non-virtual"><scope>TextFileHandler</scope><name>isDirty</name></member>
+      <member refid="class_text_file_handler_1ae8586110bb5b1dfd16681ba2d282ee17" prot="public" virt="non-virtual"><scope>TextFileHandler</scope><name>isOpened</name></member>
+      <member refid="class_file_handler_1aeca3703f7450120817ff241f9ab5cebc" prot="public" virt="non-virtual"><scope>TextFileHandler</scope><name>join</name></member>
+      <member refid="class_text_file_handler_1a862ec561f457c469e70b1c8a6489df04" prot="public" virt="virtual"><scope>TextFileHandler</scope><name>length</name></member>
+      <member refid="class_file_handler_1aa513ca77c5578ff7f931578c4e2f767c" prot="protected" virt="non-virtual"><scope>TextFileHandler</scope><name>length_</name></member>
+      <member refid="class_file_handler_1af160a3724165ff7d40488471ad2cfeba" prot="public" virt="non-virtual"><scope>TextFileHandler</scope><name>mode</name></member>
+      <member refid="class_file_handler_1a3d60ec446935def914042db894c1bd3a" prot="protected" virt="non-virtual"><scope>TextFileHandler</scope><name>mode_</name></member>
+      <member refid="class_text_file_handler_1a2f455865be705691ce2795bbd1a48a30" prot="public" virt="virtual"><scope>TextFileHandler</scope><name>read</name></member>
+      <member refid="class_file_handler_1aa529a9fd4b544fd8b85e8aba4da1b32b" prot="public" virt="non-virtual"><scope>TextFileHandler</scope><name>refresh</name></member>
+      <member refid="class_text_file_handler_1a6b3f42f9c1996d65efc2ff7229a17838" prot="private" virt="non-virtual"><scope>TextFileHandler</scope><name>reopen</name></member>
+      <member refid="class_text_file_handler_1a392e4edf92f7725a3a37212da319d7e3" prot="public" virt="non-virtual"><scope>TextFileHandler</scope><name>reopenIfChanged</name></member>
+      <member refid="class_file_handler_1a6beda2ae2fd3b91e1928615ebde690af" prot="protected" virt="non-virtual"><scope>TextFileHandler</scope><name>s_pathBuf_</name></member>
+      <member refid="class_text_file_handler_1a30b61494814350e0f7cbf45b1772398d" prot="public" virt="non-virtual"><scope>TextFileHandler</scope><name>TextFileHandler</name></member>
+      <member refid="class_text_file_handler_1a0cd996475e7d25910d6d081553c4a81d" prot="public" virt="non-virtual"><scope>TextFileHandler</scope><name>writeLine</name></member>
+      <member refid="class_text_file_handler_1aeb62378466353be7c60431a83aea7027" prot="public" virt="virtual"><scope>TextFileHandler</scope><name>~TextFileHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_user_segment_writer" kind="class" language="C++" prot="public">
+    <compoundname>UserSegmentWriter</compoundname>
+    <basecompoundref refid="class_user_segment" prot="public" virt="non-virtual">UserSegment</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_user_segment_writer_1ac17f20ab779060c95f619f629f5e31db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE UserSegmentWriter::UserSegmentWriter</definition>
+        <argsstring>(const BW::string userLogPath, const char *suffix)</argsstring>
+        <name>UserSegmentWriter</name>
+        <param>
+          <type>const BW::string</type>
+          <declname>userLogPath</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>suffix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_segment_writer.hpp" line="22" column="1" bodyfile="tools/message_logger/user_segment_writer.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_segment_writer_1a57800dc9dabad49d31c93af8262adc15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserSegmentWriter::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_segment_writer.hpp" line="25" column="1" bodyfile="tools/message_logger/user_segment_writer.cpp" bodystart="21" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_segment_writer_1a14cfb26c464af169ac30c675830c09cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserSegmentWriter::addEntry</definition>
+        <argsstring>(LoggingComponent *component, UserLogWriter *pUserLog, LogEntry &amp;entry, LogStringInterpolator &amp;handler, MemoryIStream &amp;inputStream, MessageLogger::NetworkVersion version)</argsstring>
+        <name>addEntry</name>
+        <param>
+          <type><ref refid="class_logging_component" kindref="compound">LoggingComponent</ref> *</type>
+          <declname>component</declname>
+          <defname>pComponent</defname>
+        </param>
+        <param>
+          <type><ref refid="class_user_log_writer" kindref="compound">UserLogWriter</ref> *</type>
+          <declname>pUserLog</declname>
+        </param>
+        <param>
+          <type><ref refid="class_log_entry" kindref="compound">LogEntry</ref> &amp;</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type><ref refid="class_log_string_interpolator" kindref="compound">LogStringInterpolator</ref> &amp;</type>
+          <declname>handler</declname>
+        </param>
+        <param>
+          <type>MemoryIStream &amp;</type>
+          <declname>inputStream</declname>
+        </param>
+        <param>
+          <type>MessageLogger::NetworkVersion</type>
+          <declname>version</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add an entry to this segment. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_segment_writer.hpp" line="27" column="1" bodyfile="tools/message_logger/user_segment_writer.cpp" bodystart="66" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_segment_writer_1a98fcaa124728a5cd2d5da04820e1c4f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserSegmentWriter::isFull</definition>
+        <argsstring>(const LogStorageMLDB *pLogStorage) const </argsstring>
+        <name>isFull</name>
+        <param>
+          <type>const <ref refid="class_log_storage_m_l_d_b" kindref="compound">LogStorageMLDB</ref> *</type>
+          <declname>pLogStorage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns whether the current segment has been completely filled.</para><para><simplesect kind="return"><para>true if segment is full, false if not full. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_segment_writer.hpp" line="32" column="1" bodyfile="tools/message_logger/user_segment_writer.cpp" bodystart="159" bodyend="165"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3129">
+        <label>UserSegmentWriter</label>
+        <link refid="class_user_segment_writer"/>
+        <childnode refid="3130" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3130">
+        <label>UserSegment</label>
+        <link refid="class_user_segment"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3134">
+        <label>BinaryFileHandler</label>
+        <link refid="class_binary_file_handler"/>
+        <childnode refid="3135" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3135">
+        <label>FileHandler</label>
+        <link refid="class_file_handler"/>
+      </node>
+      <node id="3133">
+        <label>MetadataMLDB</label>
+        <link refid="class_metadata_m_l_d_b"/>
+        <childnode refid="3134" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3131">
+        <label>UserSegmentWriter</label>
+        <link refid="class_user_segment_writer"/>
+        <childnode refid="3132" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3132">
+        <label>UserSegment</label>
+        <link refid="class_user_segment"/>
+        <childnode refid="3133" relation="usage">
+          <edgelabel>pMetadataMLDB_</edgelabel>
+        </childnode>
+        <childnode refid="3136" relation="usage">
+          <edgelabel>end_</edgelabel>
+          <edgelabel>start_</edgelabel>
+        </childnode>
+      </node>
+      <node id="3136">
+        <label>LogTime</label>
+        <link refid="class_log_time"/>
+      </node>
+    </collaborationgraph>
+    <location file="tools/message_logger/user_segment_writer.hpp" line="20" column="1" bodyfile="tools/message_logger/user_segment_writer.hpp" bodystart="19" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_user_segment_writer_1a14cfb26c464af169ac30c675830c09cf" prot="public" virt="non-virtual"><scope>UserSegmentWriter</scope><name>addEntry</name></member>
+      <member refid="class_user_segment_1a8792e68eb07aed93b131b377e9050c8e" prot="protected" virt="non-virtual"><scope>UserSegmentWriter</scope><name>argsSize_</name></member>
+      <member refid="class_user_segment_1a5a95b8856b669d33f3b0caf5db877dfe" prot="protected" virt="non-virtual"><scope>UserSegmentWriter</scope><name>buildSuffixFrom</name></member>
+      <member refid="class_user_segment_1a2d4d69f8e4bea8e360da8a57331f1d3a" prot="protected" virt="non-virtual"><scope>UserSegmentWriter</scope><name>end_</name></member>
+      <member refid="class_user_segment_1a1a1265748cb64348b45e1a3b82027b59" prot="public" virt="non-virtual"><scope>UserSegmentWriter</scope><name>getArgsFileName</name></member>
+      <member refid="class_user_segment_1a2025db6cd0d7d7eaf7731e4761df1017" prot="public" virt="non-virtual"><scope>UserSegmentWriter</scope><name>getEntriesFileName</name></member>
+      <member refid="class_user_segment_1a988e24be04de9c6e835044d193f64de1" prot="public" virt="non-virtual"><scope>UserSegmentWriter</scope><name>getMetadataFileName</name></member>
+      <member refid="class_user_segment_1acb7e3e10b321c5b54878b2026c1b8f8a" prot="public" virt="non-virtual"><scope>UserSegmentWriter</scope><name>getNumEntries</name></member>
+      <member refid="class_user_segment_1a267c311138d1f8086a2564657265c968" prot="public" virt="non-virtual"><scope>UserSegmentWriter</scope><name>getSuffix</name></member>
+      <member refid="class_user_segment_writer_1a57800dc9dabad49d31c93af8262adc15" prot="public" virt="non-virtual"><scope>UserSegmentWriter</scope><name>init</name></member>
+      <member refid="class_user_segment_writer_1a98fcaa124728a5cd2d5da04820e1c4f9" prot="public" virt="non-virtual"><scope>UserSegmentWriter</scope><name>isFull</name></member>
+      <member refid="class_user_segment_1a67ee032a209afffd976b0e9270a72618" prot="public" virt="non-virtual"><scope>UserSegmentWriter</scope><name>isGood</name></member>
+      <member refid="class_user_segment_1a0658b0103234e0d7f64f295280bb0896" prot="protected" virt="non-virtual"><scope>UserSegmentWriter</scope><name>isGood_</name></member>
+      <member refid="class_user_segment_1a8d1cc6021a6f4340939f71a5a6b92724" prot="protected" virt="non-virtual"><scope>UserSegmentWriter</scope><name>numEntries_</name></member>
+      <member refid="class_user_segment_1a77bb4592baf34db441b5eee6440b7266" prot="protected" virt="non-virtual"><scope>UserSegmentWriter</scope><name>pArgs_</name></member>
+      <member refid="class_user_segment_1a07357866b6e43fc13020acf796f5a938" prot="protected" virt="non-virtual"><scope>UserSegmentWriter</scope><name>pEntries_</name></member>
+      <member refid="class_user_segment_1a77ae5aa91638fa1a333ad8f9c705af4f" prot="protected" virt="non-virtual"><scope>UserSegmentWriter</scope><name>pMetadataMLDB_</name></member>
+      <member refid="class_user_segment_1adfe95e3601bbc84b8d9123fe2cf67b7a" prot="public" virt="non-virtual"><scope>UserSegmentWriter</scope><name>readEntry</name></member>
+      <member refid="class_user_segment_1aa0200bea2525fc3768b2a5e34ed61457" prot="protected" virt="non-virtual"><scope>UserSegmentWriter</scope><name>start_</name></member>
+      <member refid="class_user_segment_1a670b29a8970f19381464ec77cf235e87" prot="protected" virt="non-virtual"><scope>UserSegmentWriter</scope><name>suffix_</name></member>
+      <member refid="class_user_segment_1abb911b63aed4c7c4a3a257472437954f" prot="public" virt="non-virtual"><scope>UserSegmentWriter</scope><name>updateEntryBounds</name></member>
+      <member refid="class_user_segment_1a34378f50c35df2f3024b30f7b9383067" prot="protected" virt="non-virtual"><scope>UserSegmentWriter</scope><name>userLogPath_</name></member>
+      <member refid="class_user_segment_1a26d6e85a2ebd210c80fde78405b4b055" prot="public" virt="non-virtual"><scope>UserSegmentWriter</scope><name>UserSegment</name></member>
+      <member refid="class_user_segment_writer_1ac17f20ab779060c95f619f629f5e31db" prot="public" virt="non-virtual"><scope>UserSegmentWriter</scope><name>UserSegmentWriter</name></member>
+      <member refid="class_user_segment_1a3f4cfa62361b2583a58748149cedd90e" prot="public" virt="virtual"><scope>UserSegmentWriter</scope><name>~UserSegment</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

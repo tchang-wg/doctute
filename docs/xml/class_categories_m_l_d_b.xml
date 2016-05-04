@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_categories_m_l_d_b" kind="class" language="C++" prot="public">
+    <compoundname>CategoriesMLDB</compoundname>
+    <basecompoundref refid="class_binary_file_handler" prot="public" virt="non-virtual">BinaryFileHandler</basecompoundref>
+    <basecompoundref refid="class_categories" prot="public" virt="non-virtual">Categories</basecompoundref>
+    <includes refid="mldb_2categories_8hpp" local="no">categories.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_categories_m_l_d_b_1ad7a602977ccbcce5d22f5fc55e4a2420" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CategoriesMLDB::CategoriesMLDB</definition>
+        <argsstring>()</argsstring>
+        <name>CategoriesMLDB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/categories.hpp" line="24" column="1" bodyfile="tools/message_logger/mldb/categories.cpp" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_categories_m_l_d_b_1a752db3056772662a18e7fdee49fe70dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CategoriesMLDB::init</definition>
+        <argsstring>(const char *rootDirectory, const char *mode)</argsstring>
+        <name>init</name>
+        <param>
+          <type>const char *</type>
+          <declname>rootDirectory</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/categories.hpp" line="26" column="1" bodyfile="tools/message_logger/mldb/categories.cpp" bodystart="26" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_categories_m_l_d_b_1ae6f848aed996047bf34959e56296375b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool CategoriesMLDB::read</definition>
+        <argsstring>()</argsstring>
+        <name>read</name>
+        <reimplements refid="class_file_handler_1a81e45df04afafdc54b27686861c4475c">read</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/categories.hpp" line="28" column="1" bodyfile="tools/message_logger/mldb/categories.cpp" bodystart="36" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_categories_m_l_d_b_1aee478f7972d87645fdcb15df99ea1c55" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool CategoriesMLDB::writeCategoryToDB</definition>
+        <argsstring>(MessageLogger::CategoryID newCategoryID, const BW::string &amp;categoryName)</argsstring>
+        <name>writeCategoryToDB</name>
+        <reimplements refid="class_categories_1a44fe8d9d6e58e9ee1890e03613faa0a8">writeCategoryToDB</reimplements>
+        <param>
+          <type>MessageLogger::CategoryID</type>
+          <declname>newCategoryID</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>categoryName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write new categories to DB. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/categories.hpp" line="30" column="1" bodyfile="tools/message_logger/mldb/categories.cpp" bodystart="77" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_categories_m_l_d_b_1a31745ebff1b1ad7da159f511157a41f7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CategoriesMLDB::flush</definition>
+        <argsstring>()</argsstring>
+        <name>flush</name>
+        <reimplements refid="class_file_handler_1aaa5e02b440b04dd78fe9ac2c8f19c69e">flush</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/categories.hpp" line="35" column="1" bodyfile="tools/message_logger/mldb/categories.cpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class handles the mapping of Category ID&apos;s and Category Names.</para><para>The category file is shared between all users and the order of the file is based on the order in which the categories are first delivered. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="447">
+        <label>BinaryFileHandler</label>
+        <link refid="class_binary_file_handler"/>
+        <childnode refid="448" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="448">
+        <label>FileHandler</label>
+        <link refid="class_file_handler"/>
+      </node>
+      <node id="449">
+        <label>Categories</label>
+        <link refid="class_categories"/>
+      </node>
+      <node id="446">
+        <label>CategoriesMLDB</label>
+        <link refid="class_categories_m_l_d_b"/>
+        <childnode refid="447" relation="public-inheritance">
+        </childnode>
+        <childnode refid="449" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="451">
+        <label>BinaryFileHandler</label>
+        <link refid="class_binary_file_handler"/>
+        <childnode refid="452" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="452">
+        <label>FileHandler</label>
+        <link refid="class_file_handler"/>
+      </node>
+      <node id="453">
+        <label>Categories</label>
+        <link refid="class_categories"/>
+      </node>
+      <node id="450">
+        <label>CategoriesMLDB</label>
+        <link refid="class_categories_m_l_d_b"/>
+        <childnode refid="451" relation="public-inheritance">
+        </childnode>
+        <childnode refid="453" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/message_logger/mldb/categories.hpp" line="22" column="1" bodyfile="tools/message_logger/mldb/categories.hpp" bodystart="21" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_categories_1a0ec891e81525a482397496029adcf15d" prot="protected" virt="non-virtual"><scope>CategoriesMLDB</scope><name>addCategoryToMap</name></member>
+      <member refid="class_binary_file_handler_1a0cb04b5e807edbbcf09160a0718a75f9" prot="public" virt="non-virtual"><scope>CategoriesMLDB</scope><name>BinaryFileHandler</name></member>
+      <member refid="class_categories_1aa5450587261bdf99fe707a805ffb8b52" prot="public" virt="non-virtual"><scope>CategoriesMLDB</scope><name>Categories</name></member>
+      <member refid="class_categories_m_l_d_b_1ad7a602977ccbcce5d22f5fc55e4a2420" prot="public" virt="non-virtual"><scope>CategoriesMLDB</scope><name>CategoriesMLDB</name></member>
+      <member refid="class_categories_1a15c6c65fcc37b07033f3f2a934f9a09b" prot="protected" virt="non-virtual"><scope>CategoriesMLDB</scope><name>clear</name></member>
+      <member refid="class_file_handler_1a21db311b76430aff514bf39a238b015d" prot="public" virt="non-virtual"><scope>CategoriesMLDB</scope><name>filename</name></member>
+      <member refid="class_file_handler_1a48f6ab15fbc95172ce6db0878cd4d5e7" prot="protected" virt="non-virtual"><scope>CategoriesMLDB</scope><name>filename_</name></member>
+      <member refid="class_categories_m_l_d_b_1a31745ebff1b1ad7da159f511157a41f7" prot="protected" virt="virtual"><scope>CategoriesMLDB</scope><name>flush</name></member>
+      <member refid="class_categories_m_l_d_b_1a752db3056772662a18e7fdee49fe70dd" prot="public" virt="non-virtual"><scope>CategoriesMLDB</scope><name>init</name></member>
+      <member refid="class_file_handler_1a83d056536289a502e280ad909c998e29" prot="public" virt="non-virtual"><scope>CategoriesMLDB</scope><name>isDirty</name></member>
+      <member refid="class_file_handler_1aeca3703f7450120817ff241f9ab5cebc" prot="public" virt="non-virtual"><scope>CategoriesMLDB</scope><name>join</name></member>
+      <member refid="class_binary_file_handler_1a2f569a2a2f1478ec6312a9f559cade02" prot="public" virt="virtual"><scope>CategoriesMLDB</scope><name>length</name></member>
+      <member refid="class_file_handler_1aa513ca77c5578ff7f931578c4e2f767c" prot="protected" virt="non-virtual"><scope>CategoriesMLDB</scope><name>length_</name></member>
+      <member refid="class_file_handler_1af160a3724165ff7d40488471ad2cfeba" prot="public" virt="non-virtual"><scope>CategoriesMLDB</scope><name>mode</name></member>
+      <member refid="class_file_handler_1a3d60ec446935def914042db894c1bd3a" prot="protected" virt="non-virtual"><scope>CategoriesMLDB</scope><name>mode_</name></member>
+      <member refid="class_binary_file_handler_1a13bdd4383c425937da751b83380cd479" prot="protected" virt="non-virtual"><scope>CategoriesMLDB</scope><name>pFile_</name></member>
+      <member refid="class_categories_m_l_d_b_1ae6f848aed996047bf34959e56296375b" prot="public" virt="virtual"><scope>CategoriesMLDB</scope><name>read</name></member>
+      <member refid="class_file_handler_1aa529a9fd4b544fd8b85e8aba4da1b32b" prot="public" virt="non-virtual"><scope>CategoriesMLDB</scope><name>refresh</name></member>
+      <member refid="class_binary_file_handler_1a210e605b34b892af78197e6667f89bf8" prot="public" virt="non-virtual"><scope>CategoriesMLDB</scope><name>reloadFileAndRefresh</name></member>
+      <member refid="class_categories_1ac75347bddd1f2f312f68ffbf17915d76" prot="public" virt="non-virtual"><scope>CategoriesMLDB</scope><name>resolveIDToName</name></member>
+      <member refid="class_categories_1a4898a86f29576a3d9b3205cd2d522093" prot="public" virt="non-virtual"><scope>CategoriesMLDB</scope><name>resolveNameToID</name></member>
+      <member refid="class_categories_1a0d84b3100c9304e2c22e23774a73f255" prot="public" virt="non-virtual"><scope>CategoriesMLDB</scope><name>resolveOrCreateNameToID</name></member>
+      <member refid="class_file_handler_1a6beda2ae2fd3b91e1928615ebde690af" prot="protected" virt="non-virtual"><scope>CategoriesMLDB</scope><name>s_pathBuf_</name></member>
+      <member refid="class_categories_1a5896ab79458d96f2d17414ee4806e0eb" prot="public" virt="non-virtual"><scope>CategoriesMLDB</scope><name>visitAllWith</name></member>
+      <member refid="class_categories_m_l_d_b_1aee478f7972d87645fdcb15df99ea1c55" prot="public" virt="virtual"><scope>CategoriesMLDB</scope><name>writeCategoryToDB</name></member>
+      <member refid="class_binary_file_handler_1ac0e6becf7617edfa335daec6e2bb658e" prot="public" virt="virtual"><scope>CategoriesMLDB</scope><name>~BinaryFileHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

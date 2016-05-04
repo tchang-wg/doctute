@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_primary_snapshot_helper" kind="class" language="C++" prot="public">
+    <compoundname>PrimarySnapshotHelper</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IChildProcess</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_primary_snapshot_helper_1a325279e742b0f7ea35c4b7f863d80a25" prot="private" static="no" mutable="no">
+        <type><ref refid="class_snapshot" kindref="compound">Snapshot</ref> &amp;</type>
+        <definition>Snapshot&amp; PrimarySnapshotHelper::snapshotter_</definition>
+        <argsstring></argsstring>
+        <name>snapshotter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.cpp" line="46" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_primary_snapshot_helper_1ace493c032b775cd812510fdba17de561" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PrimarySnapshotHelper::snapshotStatus_</definition>
+        <argsstring></argsstring>
+        <name>snapshotStatus_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.cpp" line="48" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_primary_snapshot_helper_1a7a8780214cef552729b8716cce3cbc6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PrimarySnapshotHelper::PrimarySnapshotHelper</definition>
+        <argsstring>(Snapshot &amp;snapshotter)</argsstring>
+        <name>PrimarySnapshotHelper</name>
+        <param>
+          <type><ref refid="class_snapshot" kindref="compound">Snapshot</ref> &amp;</type>
+          <declname>snapshotter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.cpp" line="37" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="55" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_primary_snapshot_helper_1a8650bdf399d06127738670e81a112d4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PrimarySnapshotHelper::onChildComplete</definition>
+        <argsstring>(int status, ChildProcess *process)</argsstring>
+        <name>onChildComplete</name>
+        <param>
+          <type>int</type>
+          <declname>status</declname>
+        </param>
+        <param>
+          <type>ChildProcess *</type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.cpp" line="39" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="65" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_primary_snapshot_helper_1aad513a3b3e10378bde34775fa75b205a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PrimarySnapshotHelper::onChildAboutToExec</definition>
+        <argsstring>()</argsstring>
+        <name>onChildAboutToExec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.cpp" line="41" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_primary_snapshot_helper_1a84b69c94a69b7cd44602f3bd0fdb7724" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PrimarySnapshotHelper::wasSuccessful</definition>
+        <argsstring>()</argsstring>
+        <name>wasSuccessful</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.cpp" line="43" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="43" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class handles the termination of a child snapshotting process. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2139">
+        <label>PrimarySnapshotHelper</label>
+        <link refid="class_primary_snapshot_helper"/>
+        <childnode refid="2140" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2140">
+        <label>IChildProcess</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2141">
+        <label>PrimarySnapshotHelper</label>
+        <link refid="class_primary_snapshot_helper"/>
+        <childnode refid="2142" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2142">
+        <label>IChildProcess</label>
+      </node>
+    </collaborationgraph>
+    <location file="tools/transfer_db/snapshot.cpp" line="35" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="34" bodyend="49"/>
+    <listofallmembers>
+      <member refid="class_primary_snapshot_helper_1aad513a3b3e10378bde34775fa75b205a" prot="public" virt="virtual"><scope>PrimarySnapshotHelper</scope><name>onChildAboutToExec</name></member>
+      <member refid="class_primary_snapshot_helper_1a8650bdf399d06127738670e81a112d4d" prot="public" virt="virtual"><scope>PrimarySnapshotHelper</scope><name>onChildComplete</name></member>
+      <member refid="class_primary_snapshot_helper_1a7a8780214cef552729b8716cce3cbc6a" prot="public" virt="non-virtual"><scope>PrimarySnapshotHelper</scope><name>PrimarySnapshotHelper</name></member>
+      <member refid="class_primary_snapshot_helper_1ace493c032b775cd812510fdba17de561" prot="private" virt="non-virtual"><scope>PrimarySnapshotHelper</scope><name>snapshotStatus_</name></member>
+      <member refid="class_primary_snapshot_helper_1a325279e742b0f7ea35c4b7f863d80a25" prot="private" virt="non-virtual"><scope>PrimarySnapshotHelper</scope><name>snapshotter_</name></member>
+      <member refid="class_primary_snapshot_helper_1a84b69c94a69b7cd44602f3bd0fdb7724" prot="public" virt="non-virtual"><scope>PrimarySnapshotHelper</scope><name>wasSuccessful</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

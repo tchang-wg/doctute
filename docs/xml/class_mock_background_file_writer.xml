@@ -1,0 +1,463 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_mock_background_file_writer" kind="class" language="C++" prot="public">
+    <compoundname>MockBackgroundFileWriter</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IBackgroundFileWriter</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_mock_background_file_writer_1a9b9889d0491b284cefa18b3d20a53305" prot="private" static="no">
+        <type>std::pair&lt; long, int &gt;</type>
+        <definition>typedef std::pair&lt; long, int &gt; MockBackgroundFileWriter::Request</definition>
+        <argsstring></argsstring>
+        <name>Request</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="138" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_mock_background_file_writer_1a63a6cca41e098575067d430e7c5cc0cd" prot="private" static="no">
+        <type>BW::vector&lt; Request &gt;</type>
+        <definition>typedef BW::vector&lt; Request &gt; MockBackgroundFileWriter::Requests</definition>
+        <argsstring></argsstring>
+        <name>Requests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="139" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mock_background_file_writer_1a681dd695802da47cf5a029a000e83a50" prot="private" static="no" mutable="no">
+        <type>BackgroundFileWriterListener *</type>
+        <definition>BackgroundFileWriterListener* MockBackgroundFileWriter::pListener_</definition>
+        <argsstring></argsstring>
+        <name>pListener_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="133" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mock_background_file_writer_1a33ff73bafdd8eaf8b3d97b4e657fedbf" prot="private" static="no" mutable="no">
+        <type>BW::vector&lt; char &gt;</type>
+        <definition>BW::vector&lt; char &gt; MockBackgroundFileWriter::buffer_</definition>
+        <argsstring></argsstring>
+        <name>buffer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="134" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mock_background_file_writer_1a90a8445477ed147718edd3f5b189e25d" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t MockBackgroundFileWriter::writeCursor_</definition>
+        <argsstring></argsstring>
+        <name>writeCursor_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="135" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mock_background_file_writer_1a36b7a26787ea4e7cfa0bb867fd52dbf0" prot="private" static="no" mutable="no">
+        <type>mode_t</type>
+        <definition>mode_t MockBackgroundFileWriter::mode_</definition>
+        <argsstring></argsstring>
+        <name>mode_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="136" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mock_background_file_writer_1a69a004433ae846dbbf085269f582ed41" prot="private" static="no" mutable="no">
+        <type>Requests</type>
+        <definition>Requests MockBackgroundFileWriter::queuedRequests_</definition>
+        <argsstring></argsstring>
+        <name>queuedRequests_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="140" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_mock_background_file_writer_1a7bdf8fa9e249f6399cf8ce7baf56ccba" prot="private" static="yes" mutable="no">
+        <type>uint</type>
+        <definition>uint MockBackgroundFileWriter::s_numInstances_</definition>
+        <argsstring></argsstring>
+        <name>s_numInstances_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="142" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mock_background_file_writer_1accbe20b9baba1131745845ecb23457ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MockBackgroundFileWriter::MockBackgroundFileWriter</definition>
+        <argsstring>(const char *existingContents=NULL, size_t existingContentsLength=0U)</argsstring>
+        <name>MockBackgroundFileWriter</name>
+        <param>
+          <type>const char *</type>
+          <declname>existingContents</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>existingContentsLength</declname>
+          <defval>0U</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>existingContents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If not NULL, this is used to mock an existing file&apos;s contents. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>existingContentsLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the existing contents. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="91" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="157" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mock_background_file_writer_1a2ffec908512cf0c604b1a1f7ad01f246" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MockBackgroundFileWriter::~MockBackgroundFileWriter</definition>
+        <argsstring>()</argsstring>
+        <name>~MockBackgroundFileWriter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="94" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="180" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mock_background_file_writer_1aa8f0387f537739fc9205dc8804304f80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MockBackgroundFileWriter::processRequestCallbacks</definition>
+        <argsstring>()</argsstring>
+        <name>processRequestCallbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="96" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="296" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mock_background_file_writer_1ad9eda6d5e6ec6910db9199256851a521" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* MockBackgroundFileWriter::bufferData</definition>
+        <argsstring>()</argsstring>
+        <name>bufferData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the buffer data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="101" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="101" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mock_background_file_writer_1a819e0518d1f90bf96f8ab46f46e7ade3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t MockBackgroundFileWriter::bufferSize</definition>
+        <argsstring>() const </argsstring>
+        <name>bufferSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the buffer size. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="106" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mock_background_file_writer_1ab93ae8f5dfd0addad732f2ff41977504" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>mode_t</type>
+        <definition>mode_t MockBackgroundFileWriter::mode</definition>
+        <argsstring>()</argsstring>
+        <name>mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The mode of the mocked file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="112" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mock_background_file_writer_1af98fa044f0f040d73dfba8e98dcd4240" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const BW::string &amp;</type>
+        <definition>const BW::string &amp; MockBackgroundFileWriter::path</definition>
+        <argsstring>() const </argsstring>
+        <name>path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="117" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="198" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mock_background_file_writer_1a930b623c2908d483b56261fdec6ce882" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MockBackgroundFileWriter::closeFile</definition>
+        <argsstring>()</argsstring>
+        <name>closeFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="118" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="208" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mock_background_file_writer_1a9a102240905d5a3faad3dda7832c43eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MockBackgroundFileWriter::queueWrite</definition>
+        <argsstring>(BinaryIStream &amp;stream, int userData=0)</argsstring>
+        <name>queueWrite</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>userData</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="119" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="218" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mock_background_file_writer_1a42e281927e2ba5f14ccc4b73c52faad9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MockBackgroundFileWriter::queueSeek</definition>
+        <argsstring>(long offset, int whence, int userData=0)</argsstring>
+        <name>queueSeek</name>
+        <param>
+          <type>long</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>whence</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>userData</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="120" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="239" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mock_background_file_writer_1a9426ad67e3de057ac2a0f6282edbc5de" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MockBackgroundFileWriter::queueChmod</definition>
+        <argsstring>(int mode, int userData=0)</argsstring>
+        <name>queueChmod</name>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>userData</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="121" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="267" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mock_background_file_writer_1a756ac8d47be0d258bd52168024ebb77c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MockBackgroundFileWriter::setListener</definition>
+        <argsstring>(BackgroundFileWriterListener *pListener)</argsstring>
+        <name>setListener</name>
+        <param>
+          <type>BackgroundFileWriterListener *</type>
+          <declname>pListener</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="122" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="122" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mock_background_file_writer_1ab5acb6d02724ad53475b46b71ed6c847" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool MockBackgroundFileWriter::hasError</definition>
+        <argsstring>() const </argsstring>
+        <name>hasError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="126" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="126" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mock_background_file_writer_1a1c88b5fcd2c85ef62b9395b249fd1cd9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>BW::string</type>
+        <definition>virtual BW::string MockBackgroundFileWriter::errorString</definition>
+        <argsstring>() const </argsstring>
+        <name>errorString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="127" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="127" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_mock_background_file_writer_1ae1b39f9c07398abdff19333680e1dda3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint MockBackgroundFileWriter::numInstances</definition>
+        <argsstring>()</argsstring>
+        <name>numInstances</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the number of instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="114" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="189" bodyend="192"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_mock_background_file_writer_1a77345567c070870182eb1c333c914fd5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MockBackgroundFileWriter::queueRequest</definition>
+        <argsstring>(int userData)</argsstring>
+        <name>queueRequest</name>
+        <param>
+          <type>int</type>
+          <declname>userData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="130" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="277" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mock_background_file_writer_1a65e6dfa28d21d589d178e935f481ebf0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * MockBackgroundFileWriter::writePosition</definition>
+        <argsstring>()</argsstring>
+        <name>writePosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/unit_test/test_recording.cpp" line="131" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="287" bodyend="290"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class mocks the background file writer interface. All data written is redirected to a memory buffer. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1920">
+        <label>IBackgroundFileWriter</label>
+      </node>
+      <node id="1919">
+        <label>MockBackgroundFileWriter</label>
+        <link refid="class_mock_background_file_writer"/>
+        <childnode refid="1920" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1922">
+        <label>IBackgroundFileWriter</label>
+      </node>
+      <node id="1921">
+        <label>MockBackgroundFileWriter</label>
+        <link refid="class_mock_background_file_writer"/>
+        <childnode refid="1922" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/unit_test/test_recording.cpp" line="89" column="1" bodyfile="baseapp/unit_test/test_recording.cpp" bodystart="88" bodyend="144"/>
+    <listofallmembers>
+      <member refid="class_mock_background_file_writer_1a33ff73bafdd8eaf8b3d97b4e657fedbf" prot="private" virt="non-virtual"><scope>MockBackgroundFileWriter</scope><name>buffer_</name></member>
+      <member refid="class_mock_background_file_writer_1ad9eda6d5e6ec6910db9199256851a521" prot="public" virt="non-virtual"><scope>MockBackgroundFileWriter</scope><name>bufferData</name></member>
+      <member refid="class_mock_background_file_writer_1a819e0518d1f90bf96f8ab46f46e7ade3" prot="public" virt="non-virtual"><scope>MockBackgroundFileWriter</scope><name>bufferSize</name></member>
+      <member refid="class_mock_background_file_writer_1a930b623c2908d483b56261fdec6ce882" prot="public" virt="virtual"><scope>MockBackgroundFileWriter</scope><name>closeFile</name></member>
+      <member refid="class_mock_background_file_writer_1a1c88b5fcd2c85ef62b9395b249fd1cd9" prot="public" virt="virtual"><scope>MockBackgroundFileWriter</scope><name>errorString</name></member>
+      <member refid="class_mock_background_file_writer_1ab5acb6d02724ad53475b46b71ed6c847" prot="public" virt="virtual"><scope>MockBackgroundFileWriter</scope><name>hasError</name></member>
+      <member refid="class_mock_background_file_writer_1accbe20b9baba1131745845ecb23457ad" prot="public" virt="non-virtual"><scope>MockBackgroundFileWriter</scope><name>MockBackgroundFileWriter</name></member>
+      <member refid="class_mock_background_file_writer_1ab93ae8f5dfd0addad732f2ff41977504" prot="public" virt="non-virtual"><scope>MockBackgroundFileWriter</scope><name>mode</name></member>
+      <member refid="class_mock_background_file_writer_1a36b7a26787ea4e7cfa0bb867fd52dbf0" prot="private" virt="non-virtual"><scope>MockBackgroundFileWriter</scope><name>mode_</name></member>
+      <member refid="class_mock_background_file_writer_1ae1b39f9c07398abdff19333680e1dda3" prot="public" virt="non-virtual"><scope>MockBackgroundFileWriter</scope><name>numInstances</name></member>
+      <member refid="class_mock_background_file_writer_1af98fa044f0f040d73dfba8e98dcd4240" prot="public" virt="virtual"><scope>MockBackgroundFileWriter</scope><name>path</name></member>
+      <member refid="class_mock_background_file_writer_1a681dd695802da47cf5a029a000e83a50" prot="private" virt="non-virtual"><scope>MockBackgroundFileWriter</scope><name>pListener_</name></member>
+      <member refid="class_mock_background_file_writer_1aa8f0387f537739fc9205dc8804304f80" prot="public" virt="non-virtual"><scope>MockBackgroundFileWriter</scope><name>processRequestCallbacks</name></member>
+      <member refid="class_mock_background_file_writer_1a9426ad67e3de057ac2a0f6282edbc5de" prot="public" virt="virtual"><scope>MockBackgroundFileWriter</scope><name>queueChmod</name></member>
+      <member refid="class_mock_background_file_writer_1a69a004433ae846dbbf085269f582ed41" prot="private" virt="non-virtual"><scope>MockBackgroundFileWriter</scope><name>queuedRequests_</name></member>
+      <member refid="class_mock_background_file_writer_1a77345567c070870182eb1c333c914fd5" prot="private" virt="non-virtual"><scope>MockBackgroundFileWriter</scope><name>queueRequest</name></member>
+      <member refid="class_mock_background_file_writer_1a42e281927e2ba5f14ccc4b73c52faad9" prot="public" virt="virtual"><scope>MockBackgroundFileWriter</scope><name>queueSeek</name></member>
+      <member refid="class_mock_background_file_writer_1a9a102240905d5a3faad3dda7832c43eb" prot="public" virt="virtual"><scope>MockBackgroundFileWriter</scope><name>queueWrite</name></member>
+      <member refid="class_mock_background_file_writer_1a9b9889d0491b284cefa18b3d20a53305" prot="private" virt="non-virtual"><scope>MockBackgroundFileWriter</scope><name>Request</name></member>
+      <member refid="class_mock_background_file_writer_1a63a6cca41e098575067d430e7c5cc0cd" prot="private" virt="non-virtual"><scope>MockBackgroundFileWriter</scope><name>Requests</name></member>
+      <member refid="class_mock_background_file_writer_1a7bdf8fa9e249f6399cf8ce7baf56ccba" prot="private" virt="non-virtual"><scope>MockBackgroundFileWriter</scope><name>s_numInstances_</name></member>
+      <member refid="class_mock_background_file_writer_1a756ac8d47be0d258bd52168024ebb77c" prot="public" virt="virtual"><scope>MockBackgroundFileWriter</scope><name>setListener</name></member>
+      <member refid="class_mock_background_file_writer_1a90a8445477ed147718edd3f5b189e25d" prot="private" virt="non-virtual"><scope>MockBackgroundFileWriter</scope><name>writeCursor_</name></member>
+      <member refid="class_mock_background_file_writer_1a65e6dfa28d21d589d178e935f481ebf0" prot="private" virt="non-virtual"><scope>MockBackgroundFileWriter</scope><name>writePosition</name></member>
+      <member refid="class_mock_background_file_writer_1a2ffec908512cf0c604b1a1f7ad01f246" prot="public" virt="non-virtual"><scope>MockBackgroundFileWriter</scope><name>~MockBackgroundFileWriter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

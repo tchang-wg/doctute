@@ -1,0 +1,392 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_event_history" kind="class" language="C++" prot="public">
+    <compoundname>EventHistory</compoundname>
+    <includes refid="history__event_8hpp" local="no">history_event.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_event_history_1a5d670ddf363f7125ade27d6df3ee1bf3" prot="private" static="no">
+        <type>BW::list&lt; <ref refid="class_history_event" kindref="compound">HistoryEvent</ref> * &gt;</type>
+        <definition>typedef BW::list&lt; HistoryEvent * &gt; EventHistory::Container</definition>
+        <argsstring></argsstring>
+        <name>Container</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="139" column="1" bodyfile="cellapp/history_event.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_event_history_1a4739c129752b559b933be0024cc8a5f1" prot="private" static="no">
+        <type>BW::vector&lt; Container::iterator &gt;</type>
+        <definition>typedef BW::vector&lt; Container::iterator &gt; EventHistory::LatestChangePointers</definition>
+        <argsstring></argsstring>
+        <name>LatestChangePointers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="180" column="1" bodyfile="cellapp/history_event.hpp" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_event_history_1a95f14ae0e784785faf4531526c227862" prot="public" static="no">
+        <type>Container::const_reverse_iterator</type>
+        <definition>typedef Container::const_reverse_iterator EventHistory::const_reverse_iterator</definition>
+        <argsstring></argsstring>
+        <name>const_reverse_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="142" column="1" bodyfile="cellapp/history_event.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_event_history_1af15a25fc082ae368b6a0ab657b5ed3cd" prot="private" static="no" mutable="no">
+        <type>Container</type>
+        <definition>Container EventHistory::container_</definition>
+        <argsstring></argsstring>
+        <name>container_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="173" column="1" bodyfile="cellapp/history_event.hpp" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_event_history_1af58b812336bd5f2e103a09c4ea5c4c14" prot="private" static="no" mutable="no">
+        <type>EventNumber</type>
+        <definition>EventNumber EventHistory::trimToEvent_</definition>
+        <argsstring></argsstring>
+        <name>trimToEvent_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="174" column="1" bodyfile="cellapp/history_event.hpp" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_event_history_1afe45ef6bb60f81bb4d7b6f02ef2d6c9f" prot="private" static="no" mutable="no">
+        <type>EventNumber</type>
+        <definition>EventNumber EventHistory::lastTrimmedEventNumber_</definition>
+        <argsstring></argsstring>
+        <name>lastTrimmedEventNumber_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="177" column="1" bodyfile="cellapp/history_event.hpp" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_event_history_1a376791535977043dde698ea768bcca0e" prot="private" static="no" mutable="no">
+        <type>LatestChangePointers</type>
+        <definition>LatestChangePointers EventHistory::latestEventPointers_</definition>
+        <argsstring></argsstring>
+        <name>latestEventPointers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="181" column="1" bodyfile="cellapp/history_event.hpp" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_event_history_1a01e655cd851482a52144ec308c4b874c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>INLINE EventHistory::EventHistory</definition>
+        <argsstring>(unsigned int numLatestChangeOnlyMembers)</argsstring>
+        <name>EventHistory</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>numLatestChangeOnlyMembers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="144" column="1" bodyfile="cellapp/history_event.ipp" bodystart="80" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_history_1ab364f0bf4e5ffa15d5b77f29223abc1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EventHistory::~EventHistory</definition>
+        <argsstring>()</argsstring>
+        <name>~EventHistory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="145" column="1" bodyfile="cellapp/history_event.cpp" bodystart="134" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_history_1a60a871673738635d2ab9fa475c0e544b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>EventNumber</type>
+        <definition>EventNumber EventHistory::addFromStream</definition>
+        <argsstring>(BinaryIStream &amp;stream)</argsstring>
+        <name>addFromStream</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a history event that has been streamed over the network. This is done from the real entity to its ghost entities. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="147" column="1" bodyfile="cellapp/history_event.cpp" bodystart="146" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_history_1a814b60f4f724e2cf5fe7d0de53640336" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_history_event" kindref="compound">HistoryEvent</ref> *</type>
+        <definition>HistoryEvent * EventHistory::add</definition>
+        <argsstring>(EventNumber eventNumber, uint8 type, MemoryOStream &amp;stream, const MemberDescription &amp;description, HistoryEvent::Level level, int16 msgStreamSize)</argsstring>
+        <name>add</name>
+        <param>
+          <type>EventNumber</type>
+          <declname>eventNumber</declname>
+        </param>
+        <param>
+          <type>uint8</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>MemoryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const MemberDescription &amp;</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type><ref refid="class_history_event_1_1_level" kindref="compound">HistoryEvent::Level</ref></type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>int16</type>
+          <declname>msgStreamSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a new event to the event history. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="149" column="1" bodyfile="cellapp/history_event.cpp" bodystart="194" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_history_1a2fbdfb010a58417f93d82e85e93191df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_history_event" kindref="compound">HistoryEvent</ref> *</type>
+        <definition>HistoryEvent * EventHistory::add</definition>
+        <argsstring>(EventNumber eventNumber, const Mercury::InterfaceElement &amp;ie, MemoryOStream &amp;stream, HistoryEvent::Level level=FLT_MAX, bool isReliable=true)</argsstring>
+        <name>add</name>
+        <param>
+          <type>EventNumber</type>
+          <declname>eventNumber</declname>
+        </param>
+        <param>
+          <type>const Mercury::InterfaceElement &amp;</type>
+          <declname>ie</declname>
+        </param>
+        <param>
+          <type>MemoryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type><ref refid="class_history_event_1_1_level" kindref="compound">HistoryEvent::Level</ref></type>
+          <declname>level</declname>
+          <defval>FLT_MAX</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isReliable</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a new event to the event history. It is a version without binding to a member description. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="153" column="1" bodyfile="cellapp/history_event.cpp" bodystart="251" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_history_1adc7e9c589cf83decfbc191d74f5beefe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EventHistory::trim</definition>
+        <argsstring>()</argsstring>
+        <name>trim</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is used to trim the <ref refid="class_event_history" kindref="compound">EventHistory</ref>. It deletes all of the events that were added before the last trim call (leaving only those events added since the last trim call).</para><para>This method should not be called more frequently than it takes any RealEntityWithWitnesses to go through all histories. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="157" column="1" bodyfile="cellapp/history_event.cpp" bodystart="274" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_history_1ac25bcceb40c673823736d36aa05a4a3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EventHistory::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method clears this event history. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="158" column="1" bodyfile="cellapp/history_event.cpp" bodystart="298" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_history_1ac6d9d48c9f3f4b6756ee33b20ebdbc45" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EventHistory::empty</definition>
+        <argsstring>() const </argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="160" column="1" bodyfile="cellapp/history_event.hpp" bodystart="160" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_history_1a7fd4003e5262991c3bead327f678a8df" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const_reverse_iterator</type>
+        <definition>const_reverse_iterator EventHistory::rbegin</definition>
+        <argsstring>() const </argsstring>
+        <name>rbegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="161" column="1" bodyfile="cellapp/history_event.hpp" bodystart="161" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_history_1ab1378e120e68ebe87ebe62cd757a2e34" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const_reverse_iterator</type>
+        <definition>const_reverse_iterator EventHistory::rend</definition>
+        <argsstring>() const </argsstring>
+        <name>rend</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="162" column="1" bodyfile="cellapp/history_event.hpp" bodystart="162" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_history_1ad4680675f4453c5a72d056733a7b1fc1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>EventNumber</type>
+        <definition>EventNumber EventHistory::lastTrimmedEventNumber</definition>
+        <argsstring>() const </argsstring>
+        <name>lastTrimmedEventNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="164" column="1" bodyfile="cellapp/history_event.hpp" bodystart="164" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_history_1a223b6b21b9b136f1ad048403d57dc5db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EventHistory::lastTrimmedEventNumber</definition>
+        <argsstring>(EventNumber v)</argsstring>
+        <name>lastTrimmedEventNumber</name>
+        <param>
+          <type>EventNumber</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="166" column="1" bodyfile="cellapp/history_event.hpp" bodystart="166" bodyend="167"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_event_history_1a80e3d58d7f9c1bf5903b2c50bd7f3fe7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>INLINE void EventHistory::add</definition>
+        <argsstring>(HistoryEvent *pEvent)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="class_history_event" kindref="compound">HistoryEvent</ref> *</type>
+          <declname>pEvent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds an event to the event history.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pEvent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event to add. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="170" column="1" bodyfile="cellapp/history_event.ipp" bodystart="95" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_history_1a202544c5e70596f1f8c82c42076ac1a4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EventHistory::deleteEvent</definition>
+        <argsstring>(HistoryEvent *pEvent)</argsstring>
+        <name>deleteEvent</name>
+        <param>
+          <type><ref refid="class_history_event" kindref="compound">HistoryEvent</ref> *</type>
+          <declname>pEvent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method deletes a <ref refid="class_history_event" kindref="compound">HistoryEvent</ref>. It ensures that any other state is cleaned up correctly. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/history_event.hpp" line="171" column="1" bodyfile="cellapp/history_event.cpp" bodystart="320" bodyend="331"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to store a queue of history events. </para>    </detaileddescription>
+    <location file="cellapp/history_event.hpp" line="137" column="1" bodyfile="cellapp/history_event.hpp" bodystart="136" bodyend="182"/>
+    <listofallmembers>
+      <member refid="class_event_history_1a814b60f4f724e2cf5fe7d0de53640336" prot="public" virt="non-virtual"><scope>EventHistory</scope><name>add</name></member>
+      <member refid="class_event_history_1a2fbdfb010a58417f93d82e85e93191df" prot="public" virt="non-virtual"><scope>EventHistory</scope><name>add</name></member>
+      <member refid="class_event_history_1a80e3d58d7f9c1bf5903b2c50bd7f3fe7" prot="private" virt="non-virtual"><scope>EventHistory</scope><name>add</name></member>
+      <member refid="class_event_history_1a60a871673738635d2ab9fa475c0e544b" prot="public" virt="non-virtual"><scope>EventHistory</scope><name>addFromStream</name></member>
+      <member refid="class_event_history_1ac25bcceb40c673823736d36aa05a4a3f" prot="public" virt="non-virtual"><scope>EventHistory</scope><name>clear</name></member>
+      <member refid="class_event_history_1a95f14ae0e784785faf4531526c227862" prot="public" virt="non-virtual"><scope>EventHistory</scope><name>const_reverse_iterator</name></member>
+      <member refid="class_event_history_1a5d670ddf363f7125ade27d6df3ee1bf3" prot="private" virt="non-virtual"><scope>EventHistory</scope><name>Container</name></member>
+      <member refid="class_event_history_1af15a25fc082ae368b6a0ab657b5ed3cd" prot="private" virt="non-virtual"><scope>EventHistory</scope><name>container_</name></member>
+      <member refid="class_event_history_1a202544c5e70596f1f8c82c42076ac1a4" prot="private" virt="non-virtual"><scope>EventHistory</scope><name>deleteEvent</name></member>
+      <member refid="class_event_history_1ac6d9d48c9f3f4b6756ee33b20ebdbc45" prot="public" virt="non-virtual"><scope>EventHistory</scope><name>empty</name></member>
+      <member refid="class_event_history_1a01e655cd851482a52144ec308c4b874c" prot="public" virt="non-virtual"><scope>EventHistory</scope><name>EventHistory</name></member>
+      <member refid="class_event_history_1ad4680675f4453c5a72d056733a7b1fc1" prot="public" virt="non-virtual"><scope>EventHistory</scope><name>lastTrimmedEventNumber</name></member>
+      <member refid="class_event_history_1a223b6b21b9b136f1ad048403d57dc5db" prot="public" virt="non-virtual"><scope>EventHistory</scope><name>lastTrimmedEventNumber</name></member>
+      <member refid="class_event_history_1afe45ef6bb60f81bb4d7b6f02ef2d6c9f" prot="private" virt="non-virtual"><scope>EventHistory</scope><name>lastTrimmedEventNumber_</name></member>
+      <member refid="class_event_history_1a4739c129752b559b933be0024cc8a5f1" prot="private" virt="non-virtual"><scope>EventHistory</scope><name>LatestChangePointers</name></member>
+      <member refid="class_event_history_1a376791535977043dde698ea768bcca0e" prot="private" virt="non-virtual"><scope>EventHistory</scope><name>latestEventPointers_</name></member>
+      <member refid="class_event_history_1a7fd4003e5262991c3bead327f678a8df" prot="public" virt="non-virtual"><scope>EventHistory</scope><name>rbegin</name></member>
+      <member refid="class_event_history_1ab1378e120e68ebe87ebe62cd757a2e34" prot="public" virt="non-virtual"><scope>EventHistory</scope><name>rend</name></member>
+      <member refid="class_event_history_1adc7e9c589cf83decfbc191d74f5beefe" prot="public" virt="non-virtual"><scope>EventHistory</scope><name>trim</name></member>
+      <member refid="class_event_history_1af58b812336bd5f2e103a09c4ea5c4c14" prot="private" virt="non-virtual"><scope>EventHistory</scope><name>trimToEvent_</name></member>
+      <member refid="class_event_history_1ab364f0bf4e5ffa15d5b77f29223abc1f" prot="public" virt="non-virtual"><scope>EventHistory</scope><name>~EventHistory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

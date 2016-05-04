@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_cell_profiler" kind="class" language="C++" prot="public">
+    <compoundname>CellProfiler</compoundname>
+    <includes refid="cell__profiler_8hpp" local="no">cell_profiler.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_cell_profiler_1a277a74284d654fdb76e5aa10fa2de104" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CellProfiler::currSmoothedLoad_</definition>
+        <argsstring></argsstring>
+        <name>currSmoothedLoad_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_profiler.hpp" line="42" column="1" bodyfile="cellapp/cell_profiler.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_profiler_1a30438ee26d7930efaf49732755e86a25" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CellProfiler::currRawLoad_</definition>
+        <argsstring></argsstring>
+        <name>currRawLoad_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_profiler.hpp" line="43" column="1" bodyfile="cellapp/cell_profiler.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_profiler_1a082426bbc8abf300d48d7c708c02da41" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CellProfiler::maxRawLoad_</definition>
+        <argsstring></argsstring>
+        <name>maxRawLoad_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_profiler.hpp" line="44" column="1" bodyfile="cellapp/cell_profiler.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_profiler_1a90697ab8e63f3ebd7c0af246ea435cf2" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CellProfiler::accSmoothedLoad_</definition>
+        <argsstring></argsstring>
+        <name>accSmoothedLoad_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_profiler.hpp" line="46" column="1" bodyfile="cellapp/cell_profiler.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_profiler_1a1ac5fa26fca333237f760ced4f19042a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CellProfiler::accRawLoad_</definition>
+        <argsstring></argsstring>
+        <name>accRawLoad_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_profiler.hpp" line="47" column="1" bodyfile="cellapp/cell_profiler.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cell_profiler_1a3d9407c76735e9049f365ba72076f769" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE CellProfiler::CellProfiler</definition>
+        <argsstring>()</argsstring>
+        <name>CellProfiler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_profiler.hpp" line="18" column="1" bodyfile="cellapp/cell_profiler.cpp" bodystart="11" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_profiler_1a593c7eec55a35f71cc22d7062b9407df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>INLINE void CellProfiler::addEntityLoad</definition>
+        <argsstring>(float entitySmoothedLoad, float entityRawLoad)</argsstring>
+        <name>addEntityLoad</name>
+        <param>
+          <type>float</type>
+          <declname>entitySmoothedLoad</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>entityRawLoad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method should be called once per entity per tick. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_profiler.hpp" line="23" column="1" bodyfile="cellapp/cell_profiler.ipp" bodystart="9" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_profiler_1ac1e923f25282533c09cb732fb1ffce7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>INLINE void CellProfiler::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method should be called every tick after all entity loads have been added. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_profiler.hpp" line="30" column="1" bodyfile="cellapp/cell_profiler.ipp" bodystart="17" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_profiler_1a8bbde657412b90f1812bb97e040de110" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float CellProfiler::load</definition>
+        <argsstring>() const </argsstring>
+        <name>load</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_profiler.hpp" line="33" column="1" bodyfile="cellapp/cell_profiler.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_profiler_1aae269b1c006111b1c52c119d8728f33f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float CellProfiler::rawLoad</definition>
+        <argsstring>() const </argsstring>
+        <name>rawLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_profiler.hpp" line="34" column="1" bodyfile="cellapp/cell_profiler.hpp" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_profiler_1a99ebd78638c70ce85864ae2c254df3a6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float CellProfiler::maxRawLoad</definition>
+        <argsstring>() const </argsstring>
+        <name>maxRawLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_profiler.hpp" line="35" column="1" bodyfile="cellapp/cell_profiler.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is responsible for tracking load on a <ref refid="class_cell" kindref="compound">Cell</ref> instance. </para>    </detaileddescription>
+    <location file="cellapp/cell_profiler.hpp" line="16" column="1" bodyfile="cellapp/cell_profiler.hpp" bodystart="15" bodyend="48"/>
+    <listofallmembers>
+      <member refid="class_cell_profiler_1a1ac5fa26fca333237f760ced4f19042a" prot="private" virt="non-virtual"><scope>CellProfiler</scope><name>accRawLoad_</name></member>
+      <member refid="class_cell_profiler_1a90697ab8e63f3ebd7c0af246ea435cf2" prot="private" virt="non-virtual"><scope>CellProfiler</scope><name>accSmoothedLoad_</name></member>
+      <member refid="class_cell_profiler_1a593c7eec55a35f71cc22d7062b9407df" prot="public" virt="non-virtual"><scope>CellProfiler</scope><name>addEntityLoad</name></member>
+      <member refid="class_cell_profiler_1a3d9407c76735e9049f365ba72076f769" prot="public" virt="non-virtual"><scope>CellProfiler</scope><name>CellProfiler</name></member>
+      <member refid="class_cell_profiler_1a30438ee26d7930efaf49732755e86a25" prot="private" virt="non-virtual"><scope>CellProfiler</scope><name>currRawLoad_</name></member>
+      <member refid="class_cell_profiler_1a277a74284d654fdb76e5aa10fa2de104" prot="private" virt="non-virtual"><scope>CellProfiler</scope><name>currSmoothedLoad_</name></member>
+      <member refid="class_cell_profiler_1a8bbde657412b90f1812bb97e040de110" prot="public" virt="non-virtual"><scope>CellProfiler</scope><name>load</name></member>
+      <member refid="class_cell_profiler_1a99ebd78638c70ce85864ae2c254df3a6" prot="public" virt="non-virtual"><scope>CellProfiler</scope><name>maxRawLoad</name></member>
+      <member refid="class_cell_profiler_1a082426bbc8abf300d48d7c708c02da41" prot="private" virt="non-virtual"><scope>CellProfiler</scope><name>maxRawLoad_</name></member>
+      <member refid="class_cell_profiler_1aae269b1c006111b1c52c119d8728f33f" prot="public" virt="non-virtual"><scope>CellProfiler</scope><name>rawLoad</name></member>
+      <member refid="class_cell_profiler_1ac1e923f25282533c09cb732fb1ffce7e" prot="public" virt="non-virtual"><scope>CellProfiler</scope><name>tick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

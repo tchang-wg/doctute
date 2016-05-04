@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_download_streamer" kind="class" language="C++" prot="public">
+    <compoundname>DownloadStreamer</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_download_streamer_1ad3beff2af8a0720caadf805d1a7effff" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DownloadStreamer::curDownloadRate_</definition>
+        <argsstring></argsstring>
+        <name>curDownloadRate_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/download_streamer.hpp" line="24" column="1" bodyfile="baseapp/download_streamer.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_download_streamer_1abfbe5aa018f7fa99dccc0efc8e85e176" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE DownloadStreamer::DownloadStreamer</definition>
+        <argsstring>()</argsstring>
+        <name>DownloadStreamer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/download_streamer.hpp" line="12" column="1" bodyfile="baseapp/download_streamer.cpp" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_download_streamer_1a0e4fc8e4b9156cd0689fae112bfa7914" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DownloadStreamer::maxDownloadRate</definition>
+        <argsstring>() const </argsstring>
+        <name>maxDownloadRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum downstream bitrate for stream*ToClient() stuff, in bytes/tick. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/download_streamer.hpp" line="14" column="1" bodyfile="baseapp/download_streamer.cpp" bodystart="26" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_download_streamer_1a4876a86188cdb0f0f425490218c33758" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DownloadStreamer::curDownloadRate</definition>
+        <argsstring>() const </argsstring>
+        <name>curDownloadRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Actual downstream bandwidth in use by all proxies, in bytes/tick. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/download_streamer.hpp" line="15" column="1" bodyfile="baseapp/download_streamer.cpp" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_download_streamer_1ace4a6dca352d5964e0c92c9fa54ce8ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DownloadStreamer::maxClientDownloadRate</definition>
+        <argsstring>() const </argsstring>
+        <name>maxClientDownloadRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum downstream bitrate per client, in bytes/tick. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/download_streamer.hpp" line="16" column="1" bodyfile="baseapp/download_streamer.cpp" bodystart="45" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_download_streamer_1ab890e1ff45e82e78a90cc45a86c6d0f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DownloadStreamer::downloadRampUpRate</definition>
+        <argsstring>() const </argsstring>
+        <name>downloadRampUpRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum increase in download rate to a single client per tick, in bytes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/download_streamer.hpp" line="17" column="1" bodyfile="baseapp/download_streamer.cpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_download_streamer_1a82de3ae725a0e068f6de0aa16cf2affe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DownloadStreamer::downloadBacklogLimit</definition>
+        <argsstring>() const </argsstring>
+        <name>downloadBacklogLimit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unacked packet age at which we throttle downloads. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/download_streamer.hpp" line="18" column="1" bodyfile="baseapp/download_streamer.cpp" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_download_streamer_1ae694d7b40e47814174cb71850e0d5a07" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float DownloadStreamer::downloadScaleBack</definition>
+        <argsstring>() const </argsstring>
+        <name>downloadScaleBack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/download_streamer.hpp" line="20" column="1" bodyfile="baseapp/download_streamer.cpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_download_streamer_1ac7dc4acf8f153aec83864cc90f09d039" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DownloadStreamer::modifyDownloadRate</definition>
+        <argsstring>(int delta)</argsstring>
+        <name>modifyDownloadRate</name>
+        <param>
+          <type>int</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/download_streamer.hpp" line="21" column="1" bodyfile="baseapp/download_streamer.cpp" bodystart="76" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="baseapp/download_streamer.hpp" line="10" column="1" bodyfile="baseapp/download_streamer.hpp" bodystart="9" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_download_streamer_1a4876a86188cdb0f0f425490218c33758" prot="public" virt="non-virtual"><scope>DownloadStreamer</scope><name>curDownloadRate</name></member>
+      <member refid="class_download_streamer_1ad3beff2af8a0720caadf805d1a7effff" prot="private" virt="non-virtual"><scope>DownloadStreamer</scope><name>curDownloadRate_</name></member>
+      <member refid="class_download_streamer_1a82de3ae725a0e068f6de0aa16cf2affe" prot="public" virt="non-virtual"><scope>DownloadStreamer</scope><name>downloadBacklogLimit</name></member>
+      <member refid="class_download_streamer_1ab890e1ff45e82e78a90cc45a86c6d0f7" prot="public" virt="non-virtual"><scope>DownloadStreamer</scope><name>downloadRampUpRate</name></member>
+      <member refid="class_download_streamer_1ae694d7b40e47814174cb71850e0d5a07" prot="public" virt="non-virtual"><scope>DownloadStreamer</scope><name>downloadScaleBack</name></member>
+      <member refid="class_download_streamer_1abfbe5aa018f7fa99dccc0efc8e85e176" prot="public" virt="non-virtual"><scope>DownloadStreamer</scope><name>DownloadStreamer</name></member>
+      <member refid="class_download_streamer_1ace4a6dca352d5964e0c92c9fa54ce8ce" prot="public" virt="non-virtual"><scope>DownloadStreamer</scope><name>maxClientDownloadRate</name></member>
+      <member refid="class_download_streamer_1a0e4fc8e4b9156cd0689fae112bfa7914" prot="public" virt="non-virtual"><scope>DownloadStreamer</scope><name>maxDownloadRate</name></member>
+      <member refid="class_download_streamer_1ac7dc4acf8f153aec83864cc90f09d039" prot="public" virt="non-virtual"><scope>DownloadStreamer</scope><name>modifyDownloadRate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

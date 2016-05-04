@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="user__log__buffer_8hpp" kind="file" language="C++">
+    <compoundname>user_log_buffer.hpp</compoundname>
+    <includes refid="tools_2message__logger_2mongodb_2types_8hpp" local="yes">types.hpp</includes>
+    <includes local="yes">cstdmf/bw_string.hpp</includes>
+    <includes local="yes">cstdmf/smartpointer.hpp</includes>
+    <includedby refid="mongodb_2log__storage_8hpp" local="yes">tools/message_logger/mongodb/log_storage.hpp</includedby>
+    <includedby refid="mongodb_2log__storage_8cpp" local="yes">tools/message_logger/mongodb/log_storage.cpp</includedby>
+    <includedby refid="flush__task_8hpp" local="yes">tools/message_logger/mongodb/tasks/flush_task.hpp</includedby>
+    <includedby refid="flush__task_8cpp" local="yes">tools/message_logger/mongodb/tasks/flush_task.cpp</includedby>
+    <incdepgraph>
+      <node id="21400">
+        <label>list</label>
+      </node>
+      <node id="21398">
+        <label>cstdmf/stdmf.hpp</label>
+      </node>
+      <node id="21395">
+        <label>types.hpp</label>
+        <link refid="tools_2message__logger_2mongodb_2types_8hpp_source"/>
+        <childnode refid="21396" relation="include">
+        </childnode>
+        <childnode refid="21397" relation="include">
+        </childnode>
+        <childnode refid="21398" relation="include">
+        </childnode>
+        <childnode refid="21399" relation="include">
+        </childnode>
+        <childnode refid="21400" relation="include">
+        </childnode>
+        <childnode refid="21401" relation="include">
+        </childnode>
+        <childnode refid="21402" relation="include">
+        </childnode>
+      </node>
+      <node id="21401">
+        <label>string</label>
+      </node>
+      <node id="21403">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="21396">
+        <label>cstdmf/bw_string.hpp</label>
+      </node>
+      <node id="21399">
+        <label>mongo/client/dbclient.h</label>
+      </node>
+      <node id="21394">
+        <label>tools/message_logger/mongodb/user_log_buffer.hpp</label>
+        <link refid="user_log_buffer.hpp"/>
+        <childnode refid="21395" relation="include">
+        </childnode>
+        <childnode refid="21396" relation="include">
+        </childnode>
+        <childnode refid="21403" relation="include">
+        </childnode>
+      </node>
+      <node id="21402">
+        <label>vector</label>
+      </node>
+      <node id="21397">
+        <label>cstdmf/bw_list.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="21404">
+        <label>tools/message_logger/mongodb/user_log_buffer.hpp</label>
+        <link refid="user_log_buffer.hpp"/>
+        <childnode refid="21405" relation="include">
+        </childnode>
+        <childnode refid="21406" relation="include">
+        </childnode>
+      </node>
+      <node id="21405">
+        <label>tools/message_logger/mongodb/log_storage.hpp</label>
+        <link refid="mongodb_2log__storage_8hpp_source"/>
+      </node>
+      <node id="21406">
+        <label>tools/message_logger/mongodb/tasks/flush_task.hpp</label>
+        <link refid="flush__task_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_mongo_d_b_1_1_user_log_buffer" prot="public">MongoDB::UserLogBuffer</innerclass>
+    <innernamespace refid="namespace_mongo_d_b">MongoDB</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>USER_LOG_BUFFER_MONGODB_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USER_LOG_BUFFER_MONGODB_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;types.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_string.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/smartpointer.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_mongo_d_b" kindref="compound">MongoDB</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_mongo_d_b_1_1_user_log_buffer" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mongo_d_b_1_1_user_log_buffer" kindref="compound">UserLogBuffer</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>SafeReferenceCount</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mongo_d_b_1_1_user_log_buffer" kindref="compound">UserLogBuffer</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>username<sp/>)<sp/>:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logBuffer_(),</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>username_(<sp/>username<sp/>)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logBuffer_.reserve(<sp/>RESERVE_LOG_BUFFER_SIZE<sp/>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>getUsername()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>username_;<sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>append(<sp/>mongo::BSONObj<sp/>logBson<sp/>)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logBuffer_.push_back(<sp/>logBson<sp/>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clear()</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logBuffer_.clear();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>BSONObjBuffer::size_type<sp/>size()</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>logBuffer_.size();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Must<sp/>be<sp/>publicly<sp/>visible<sp/>as<sp/>non-const<sp/>so<sp/>that<sp/>it<sp/>can<sp/>be<sp/>swapped<sp/>into<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>flush<sp/>task.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>BSONObjBuffer<sp/>logBuffer_;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>BW::string<sp/>username_;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="class_smart_pointer" kindref="compound">SmartPointer&lt; MongoDB::UserLogBuffer &gt;</ref><sp/><ref refid="class_smart_pointer" kindref="compound">UserLogBufferPtr</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>MongoDB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>USER_LOG_BUFFER_MONGODB_HPP</highlight></codeline>
+    </programlisting>
+    <location file="tools/message_logger/mongodb/user_log_buffer.hpp"/>
+  </compounddef>
+</doxygen>

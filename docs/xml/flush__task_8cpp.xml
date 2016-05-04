@@ -1,0 +1,617 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="flush__task_8cpp" kind="file" language="C++">
+    <compoundname>flush_task.cpp</compoundname>
+    <includes refid="flush__task_8hpp" local="yes">flush_task.hpp</includes>
+    <includes refid="connection__thread__data_8hpp" local="yes">../connection_thread_data.hpp</includes>
+    <includes refid="mongodb_2constants_8hpp" local="yes">../constants.hpp</includes>
+    <includes refid="mongodb_2log__storage_8hpp" local="yes">../log_storage.hpp</includes>
+    <includes refid="tools_2message__logger_2mongodb_2types_8hpp" local="yes">../types.hpp</includes>
+    <includes refid="user__log__buffer_8hpp" local="yes">../user_log_buffer.hpp</includes>
+    <includes refid="mongodb_2user__log__writer_8hpp" local="yes">../user_log_writer.hpp</includes>
+    <includes local="yes">cstdmf/bgtask_manager.hpp</includes>
+    <includes local="yes">cstdmf/debug.hpp</includes>
+    <incdepgraph>
+      <node id="21112">
+        <label>list</label>
+      </node>
+      <node id="21101">
+        <label>tools/message_logger/mongodb/tasks/flush_task.cpp</label>
+        <link refid="flush_task.cpp"/>
+        <childnode refid="21102" relation="include">
+        </childnode>
+        <childnode refid="21104" relation="include">
+        </childnode>
+        <childnode refid="21106" relation="include">
+        </childnode>
+        <childnode refid="21124" relation="include">
+        </childnode>
+        <childnode refid="21107" relation="include">
+        </childnode>
+        <childnode refid="21123" relation="include">
+        </childnode>
+        <childnode refid="21115" relation="include">
+        </childnode>
+        <childnode refid="21119" relation="include">
+        </childnode>
+        <childnode refid="21122" relation="include">
+        </childnode>
+      </node>
+      <node id="21152">
+        <label>unary_integer_file.hpp</label>
+        <link refid="unary__integer__file_8hpp_source"/>
+        <childnode refid="21153" relation="include">
+        </childnode>
+        <childnode refid="21155" relation="include">
+        </childnode>
+      </node>
+      <node id="21138">
+        <label>network/bsd_snprintf.h</label>
+      </node>
+      <node id="21122">
+        <label>cstdmf/debug.hpp</label>
+      </node>
+      <node id="21110">
+        <label>cstdmf/stdmf.hpp</label>
+      </node>
+      <node id="21103">
+        <label>mongodb_background_task.hpp</label>
+        <link refid="mongodb__background__task_8hpp_source"/>
+        <childnode refid="21104" relation="include">
+        </childnode>
+        <childnode refid="21119" relation="include">
+        </childnode>
+        <childnode refid="21122" relation="include">
+        </childnode>
+      </node>
+      <node id="21155">
+        <label>stdlib.h</label>
+      </node>
+      <node id="21143">
+        <label>log_time.hpp</label>
+        <link refid="log__time_8hpp_source"/>
+        <childnode refid="21144" relation="include">
+        </childnode>
+        <childnode refid="21110" relation="include">
+        </childnode>
+        <childnode refid="21136" relation="include">
+        </childnode>
+        <childnode refid="21145" relation="include">
+        </childnode>
+      </node>
+      <node id="21137">
+        <label>format_data.hpp</label>
+        <link refid="format__data_8hpp_source"/>
+        <childnode refid="21110" relation="include">
+        </childnode>
+        <childnode refid="21136" relation="include">
+        </childnode>
+      </node>
+      <node id="21158">
+        <label>network/machine_guard.hpp</label>
+      </node>
+      <node id="21136">
+        <label>cstdmf/binary_stream.hpp</label>
+      </node>
+      <node id="21147">
+        <label>log_component_names.hpp</label>
+        <link refid="mongodb_2log__component__names_8hpp_source"/>
+        <childnode refid="21148" relation="include">
+        </childnode>
+        <childnode refid="21127" relation="include">
+        </childnode>
+        <childnode refid="21108" relation="include">
+        </childnode>
+        <childnode refid="21119" relation="include">
+        </childnode>
+        <childnode refid="21111" relation="include">
+        </childnode>
+      </node>
+      <node id="21107">
+        <label>types.hpp</label>
+        <link refid="tools_2message__logger_2mongodb_2types_8hpp_source"/>
+        <childnode refid="21108" relation="include">
+        </childnode>
+        <childnode refid="21109" relation="include">
+        </childnode>
+        <childnode refid="21110" relation="include">
+        </childnode>
+        <childnode refid="21111" relation="include">
+        </childnode>
+        <childnode refid="21112" relation="include">
+        </childnode>
+        <childnode refid="21113" relation="include">
+        </childnode>
+        <childnode refid="21114" relation="include">
+        </childnode>
+      </node>
+      <node id="21113">
+        <label>string</label>
+      </node>
+      <node id="21120">
+        <label>cstdmf/concurrency.hpp</label>
+      </node>
+      <node id="21150">
+        <label>server/config_reader.hpp</label>
+      </node>
+      <node id="21121">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="21108">
+        <label>cstdmf/bw_string.hpp</label>
+      </node>
+      <node id="21119">
+        <label>cstdmf/bgtask_manager.hpp</label>
+      </node>
+      <node id="21129">
+        <label>../hostnames.hpp</label>
+        <link refid="hostnames_8hpp_source"/>
+        <childnode refid="21127" relation="include">
+        </childnode>
+        <childnode refid="21108" relation="include">
+        </childnode>
+        <childnode refid="21110" relation="include">
+        </childnode>
+        <childnode refid="21116" relation="include">
+        </childnode>
+      </node>
+      <node id="21128">
+        <label>hostnames.hpp</label>
+        <link refid="mongodb_2hostnames_8hpp_source"/>
+        <childnode refid="21129" relation="include">
+        </childnode>
+        <childnode refid="21130" relation="include">
+        </childnode>
+        <childnode refid="21108" relation="include">
+        </childnode>
+        <childnode refid="21119" relation="include">
+        </childnode>
+        <childnode refid="21111" relation="include">
+        </childnode>
+      </node>
+      <node id="21140">
+        <label>network/format_string_handler.hpp</label>
+      </node>
+      <node id="21115">
+        <label>user_log_writer.hpp</label>
+        <link refid="mongodb_2user__log__writer_8hpp_source"/>
+        <childnode refid="21104" relation="include">
+        </childnode>
+        <childnode refid="21107" relation="include">
+        </childnode>
+        <childnode refid="21116" relation="include">
+        </childnode>
+        <childnode refid="21119" relation="include">
+        </childnode>
+        <childnode refid="21111" relation="include">
+        </childnode>
+      </node>
+      <node id="21159">
+        <label>network/watcher_nub.hpp</label>
+      </node>
+      <node id="21127">
+        <label>cstdmf/bw_map.hpp</label>
+      </node>
+      <node id="21146">
+        <label>cstdmf/debug_message_source.hpp</label>
+      </node>
+      <node id="21111">
+        <label>mongo/client/dbclient.h</label>
+      </node>
+      <node id="21104">
+        <label>../connection_thread_data.hpp</label>
+        <link refid="connection__thread__data_8hpp_source"/>
+        <childnode refid="21105" relation="include">
+        </childnode>
+        <childnode refid="21115" relation="include">
+        </childnode>
+        <childnode refid="21116" relation="include">
+        </childnode>
+        <childnode refid="21119" relation="include">
+        </childnode>
+        <childnode refid="21120" relation="include">
+        </childnode>
+        <childnode refid="21121" relation="include">
+        </childnode>
+        <childnode refid="21111" relation="include">
+        </childnode>
+      </node>
+      <node id="21123">
+        <label>../user_log_buffer.hpp</label>
+        <link refid="user__log__buffer_8hpp_source"/>
+        <childnode refid="21107" relation="include">
+        </childnode>
+        <childnode refid="21108" relation="include">
+        </childnode>
+        <childnode refid="21121" relation="include">
+        </childnode>
+      </node>
+      <node id="21142">
+        <label>log_entry.hpp</label>
+        <link refid="log__entry_8hpp_source"/>
+        <childnode refid="21143" relation="include">
+        </childnode>
+        <childnode refid="21116" relation="include">
+        </childnode>
+        <childnode refid="21110" relation="include">
+        </childnode>
+        <childnode refid="21146" relation="include">
+        </childnode>
+        <childnode refid="21136" relation="include">
+        </childnode>
+      </node>
+      <node id="21149">
+        <label>../log_storage.hpp</label>
+        <link refid="log__storage_8hpp_source"/>
+        <childnode refid="21141" relation="include">
+        </childnode>
+        <childnode refid="21150" relation="include">
+        </childnode>
+        <childnode refid="21126" relation="include">
+        </childnode>
+        <childnode refid="21144" relation="include">
+        </childnode>
+        <childnode refid="21132" relation="include">
+        </childnode>
+        <childnode refid="21129" relation="include">
+        </childnode>
+        <childnode refid="21130" relation="include">
+        </childnode>
+        <childnode refid="21151" relation="include">
+        </childnode>
+        <childnode refid="21116" relation="include">
+        </childnode>
+      </node>
+      <node id="21151">
+        <label>logger.hpp</label>
+        <link refid="logger_8hpp_source"/>
+        <childnode refid="21152" relation="include">
+        </childnode>
+        <childnode refid="21116" relation="include">
+        </childnode>
+        <childnode refid="21156" relation="include">
+        </childnode>
+        <childnode refid="21157" relation="include">
+        </childnode>
+        <childnode refid="21141" relation="include">
+        </childnode>
+        <childnode refid="21158" relation="include">
+        </childnode>
+        <childnode refid="21159" relation="include">
+        </childnode>
+      </node>
+      <node id="21114">
+        <label>vector</label>
+      </node>
+      <node id="21109">
+        <label>cstdmf/bw_list.hpp</label>
+      </node>
+      <node id="21133">
+        <label>log_string_interpolator.hpp</label>
+        <link refid="log__string__interpolator_8hpp_source"/>
+        <childnode refid="21134" relation="include">
+        </childnode>
+        <childnode refid="21137" relation="include">
+        </childnode>
+        <childnode refid="21116" relation="include">
+        </childnode>
+        <childnode refid="21138" relation="include">
+        </childnode>
+        <childnode refid="21139" relation="include">
+        </childnode>
+        <childnode refid="21140" relation="include">
+        </childnode>
+        <childnode refid="21141" relation="include">
+        </childnode>
+        <childnode refid="21108" relation="include">
+        </childnode>
+        <childnode refid="21118" relation="include">
+        </childnode>
+      </node>
+      <node id="21106">
+        <label>constants.hpp</label>
+        <link refid="mongodb_2constants_8hpp_source"/>
+        <childnode refid="21107" relation="include">
+        </childnode>
+        <childnode refid="21108" relation="include">
+        </childnode>
+        <childnode refid="21110" relation="include">
+        </childnode>
+      </node>
+      <node id="21153">
+        <label>text_file_handler.hpp</label>
+        <link refid="text__file__handler_8hpp_source"/>
+        <childnode refid="21154" relation="include">
+        </childnode>
+        <childnode refid="21155" relation="include">
+        </childnode>
+      </node>
+      <node id="21130">
+        <label>../hostnames_validator.hpp</label>
+        <link refid="hostnames__validator_8hpp_source"/>
+        <childnode refid="21110" relation="include">
+        </childnode>
+        <childnode refid="21127" relation="include">
+        </childnode>
+        <childnode refid="21108" relation="include">
+        </childnode>
+        <childnode refid="21116" relation="include">
+        </childnode>
+        <childnode refid="21129" relation="include">
+        </childnode>
+      </node>
+      <node id="21144">
+        <label>constants.hpp</label>
+        <link refid="constants_8hpp_source"/>
+        <childnode refid="21141" relation="include">
+        </childnode>
+        <childnode refid="21135" relation="include">
+        </childnode>
+        <childnode refid="21116" relation="include">
+        </childnode>
+      </node>
+      <node id="21145">
+        <label>time.h</label>
+      </node>
+      <node id="21124">
+        <label>../log_storage.hpp</label>
+        <link refid="mongodb_2log__storage_8hpp_source"/>
+        <childnode refid="21125" relation="include">
+        </childnode>
+        <childnode refid="21105" relation="include">
+        </childnode>
+        <childnode refid="21104" relation="include">
+        </childnode>
+        <childnode refid="21128" relation="include">
+        </childnode>
+        <childnode refid="21131" relation="include">
+        </childnode>
+        <childnode refid="21147" relation="include">
+        </childnode>
+        <childnode refid="21107" relation="include">
+        </childnode>
+        <childnode refid="21123" relation="include">
+        </childnode>
+        <childnode refid="21115" relation="include">
+        </childnode>
+        <childnode refid="21144" relation="include">
+        </childnode>
+        <childnode refid="21130" relation="include">
+        </childnode>
+        <childnode refid="21149" relation="include">
+        </childnode>
+        <childnode refid="21116" relation="include">
+        </childnode>
+        <childnode refid="21127" relation="include">
+        </childnode>
+        <childnode refid="21108" relation="include">
+        </childnode>
+        <childnode refid="21121" relation="include">
+        </childnode>
+        <childnode refid="21111" relation="include">
+        </childnode>
+      </node>
+      <node id="21117">
+        <label>network/basictypes.hpp</label>
+      </node>
+      <node id="21148">
+        <label>../log_component_names.hpp</label>
+        <link refid="log__component__names_8hpp_source"/>
+        <childnode refid="21116" relation="include">
+        </childnode>
+      </node>
+      <node id="21126">
+        <label>../categories.hpp</label>
+        <link refid="categories_8hpp_source"/>
+        <childnode refid="21127" relation="include">
+        </childnode>
+        <childnode refid="21108" relation="include">
+        </childnode>
+        <childnode refid="21116" relation="include">
+        </childnode>
+      </node>
+      <node id="21116">
+        <label>../types.hpp</label>
+        <link refid="tools_2message__logger_2types_8hpp_source"/>
+        <childnode refid="21117" relation="include">
+        </childnode>
+        <childnode refid="21108" relation="include">
+        </childnode>
+        <childnode refid="21118" relation="include">
+        </childnode>
+        <childnode refid="21110" relation="include">
+        </childnode>
+      </node>
+      <node id="21102">
+        <label>flush_task.hpp</label>
+        <link refid="flush__task_8hpp_source"/>
+        <childnode refid="21103" relation="include">
+        </childnode>
+        <childnode refid="21104" relation="include">
+        </childnode>
+        <childnode refid="21107" relation="include">
+        </childnode>
+        <childnode refid="21123" relation="include">
+        </childnode>
+        <childnode refid="21116" relation="include">
+        </childnode>
+        <childnode refid="21119" relation="include">
+        </childnode>
+      </node>
+      <node id="21125">
+        <label>categories.hpp</label>
+        <link refid="mongodb_2categories_8hpp_source"/>
+        <childnode refid="21126" relation="include">
+        </childnode>
+        <childnode refid="21108" relation="include">
+        </childnode>
+        <childnode refid="21119" relation="include">
+        </childnode>
+        <childnode refid="21111" relation="include">
+        </childnode>
+      </node>
+      <node id="21141">
+        <label>network/logger_message_forwarder.hpp</label>
+      </node>
+      <node id="21135">
+        <label>cstdmf/bw_namespace.hpp</label>
+      </node>
+      <node id="21132">
+        <label>../format_strings.hpp</label>
+        <link refid="format__strings_8hpp_source"/>
+        <childnode refid="21127" relation="include">
+        </childnode>
+        <childnode refid="21133" relation="include">
+        </childnode>
+        <childnode refid="21142" relation="include">
+        </childnode>
+      </node>
+      <node id="21134">
+        <label>string_offset.hpp</label>
+        <link refid="string__offset_8hpp_source"/>
+        <childnode refid="21135" relation="include">
+        </childnode>
+        <childnode refid="21110" relation="include">
+        </childnode>
+        <childnode refid="21118" relation="include">
+        </childnode>
+        <childnode refid="21136" relation="include">
+        </childnode>
+      </node>
+      <node id="21154">
+        <label>file_handler.hpp</label>
+        <link refid="file__handler_8hpp_source"/>
+        <childnode refid="21135" relation="include">
+        </childnode>
+        <childnode refid="21108" relation="include">
+        </childnode>
+      </node>
+      <node id="21131">
+        <label>format_strings.hpp</label>
+        <link refid="mongodb_2format__strings_8hpp_source"/>
+        <childnode refid="21116" relation="include">
+        </childnode>
+        <childnode refid="21132" relation="include">
+        </childnode>
+        <childnode refid="21127" relation="include">
+        </childnode>
+        <childnode refid="21108" relation="include">
+        </childnode>
+        <childnode refid="21119" relation="include">
+        </childnode>
+        <childnode refid="21111" relation="include">
+        </childnode>
+      </node>
+      <node id="21118">
+        <label>cstdmf/bw_vector.hpp</label>
+      </node>
+      <node id="21157">
+        <label>network/event_dispatcher.hpp</label>
+      </node>
+      <node id="21139">
+        <label>network/file_stream.hpp</label>
+      </node>
+      <node id="21105">
+        <label>connection_info.hpp</label>
+        <link refid="connection__info_8hpp_source"/>
+        <childnode refid="21106" relation="include">
+        </childnode>
+      </node>
+      <node id="21156">
+        <label>cstdmf/timer_handler.hpp</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_mongo_d_b">MongoDB</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;flush_task.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../connection_thread_data.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../constants.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../log_storage.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../types.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../user_log_buffer.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../user_log_writer.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bgtask_manager.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/debug.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_mongo_d_b" kindref="compound">MongoDB</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Section:<sp/>FlushTask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><ref refid="class_mongo_d_b_1_1_flush_task_1a365d46727f68c3bb9f6afd0f200e3a6f" kindref="member">FlushTask::FlushTask</ref>(<sp/>MessageLogger::UID<sp/>uid,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>UserLogBufferPtr<sp/>&amp;<sp/>pUserLogBuffer,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ConnectionThreadDataPtr<sp/>&amp;<sp/>pConnectionThreadData<sp/>)<sp/>:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>MongoDBBackgroundTask(<sp/></highlight><highlight class="stringliteral">&quot;FlushTask&quot;</highlight><highlight class="normal"><sp/>),</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>uid_(<sp/>uid<sp/>),</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>username_(<sp/>pUserLogBuffer-&gt;getUsername()<sp/>),</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>logBuffer_()</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>logBuffer_.reserve(<sp/>RESERVE_LOG_BUFFER_SIZE<sp/>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>&quot;Consume&quot;<sp/>the<sp/>passed-in<sp/>log<sp/>buffer<sp/>by<sp/>replacing<sp/>it<sp/>with<sp/>an<sp/>empty<sp/>one.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>logBuffer_.swap(<sp/>pUserLogBuffer-&gt;logBuffer_<sp/>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>pConnectionThreadData_<sp/>=<sp/>pConnectionThreadData;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>pConnectionThreadData_-&gt;increaseCacheSize(<sp/>logBuffer_.size()<sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><ref refid="class_mongo_d_b_1_1_flush_task_1a5ca693438551b4366e551381b052ef9b" kindref="member">FlushTask::~FlushTask</ref>()</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Just<sp/>to<sp/>make<sp/>sure<sp/>the<sp/>log<sp/>buffer<sp/>will<sp/>be<sp/>cleared<sp/>and<sp/>the<sp/>size<sp/>will<sp/>be</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>deducted.<sp/>This<sp/>could<sp/>be<sp/>valid<sp/>when<sp/>this<sp/>task<sp/>is<sp/>never<sp/>performed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;clearLogBuffer();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mongo_d_b_1_1_flush_task_1a480b7143eedbd3d838d1d93f4b017048" kindref="member">FlushTask::performBackgroundTask</ref>(<sp/>TaskManager<sp/>&amp;<sp/>mgr,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>ConnectionThreadData<sp/>&amp;<sp/>connectionData<sp/>)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Prepare<sp/>user<sp/>log<sp/>writer.<sp/>Create<sp/>a<sp/>new<sp/>one<sp/>if<sp/>it&apos;s<sp/>a<sp/>new<sp/>user.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_smart_pointer" kindref="compound">UserLogWriterPtr</ref><sp/>pUserLogWriter<sp/>=</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>connectionData.getUserLogWriter(<sp/>uid_,<sp/>username_<sp/>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pUserLogWriter<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ERROR_MSG(<sp/></highlight><highlight class="stringliteral">&quot;FlushTask::performBackgroundTask:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>get<sp/>a<sp/>UserLog<sp/>for<sp/>UID<sp/>%hu.\n&quot;</highlight><highlight class="normal">,<sp/>uid_<sp/>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;clearLogBuffer();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>pUserLogWriter-&gt;flush(<sp/>logBuffer_<sp/>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;clearLogBuffer();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>FlushTask::clearLogBuffer()</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!logBuffer_.empty())</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pConnectionThreadData_-&gt;dereaseCacheSize(<sp/>logBuffer_.size()<sp/>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logBuffer_.clear();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>MongoDB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">//<sp/>flush_task.cpp</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="tools/message_logger/mongodb/tasks/flush_task.cpp"/>
+  </compounddef>
+</doxygen>

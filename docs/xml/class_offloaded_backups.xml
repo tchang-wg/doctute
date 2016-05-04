@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_offloaded_backups" kind="class" language="C++" prot="public">
+    <compoundname>OffloadedBackups</compoundname>
+    <includes refid="offloaded__backups_8hpp" local="no">offloaded_backups.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_offloaded_backups_1ae3bd107b58fc3a8f8684325531736691" prot="private" static="no">
+        <type>BW::map&lt; Mercury::Address, <ref refid="class_backed_up_entities" kindref="compound">BackedUpEntities</ref> &gt;</type>
+        <definition>typedef BW::map&lt; Mercury::Address, BackedUpEntities &gt; OffloadedBackups::Container</definition>
+        <argsstring></argsstring>
+        <name>Container</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/offloaded_backups.hpp" line="32" column="1" bodyfile="baseapp/offloaded_backups.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_offloaded_backups_1a58067c33b2a9ef5a9c74475abcd1e1f1" prot="private" static="no" mutable="no">
+        <type>Container</type>
+        <definition>Container OffloadedBackups::apps_</definition>
+        <argsstring></argsstring>
+        <name>apps_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/offloaded_backups.hpp" line="33" column="1" bodyfile="baseapp/offloaded_backups.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_offloaded_backups_1ae5e9bbb9e4e1d29086092a4bf4ba5d06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE OffloadedBackups::OffloadedBackups</definition>
+        <argsstring>()</argsstring>
+        <name>OffloadedBackups</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/offloaded_backups.hpp" line="21" column="1" bodyfile="baseapp/offloaded_backups.cpp" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_offloaded_backups_1a37e0130812cf2117998bdc46033a9bf2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool OffloadedBackups::wasOffloaded</definition>
+        <argsstring>(EntityID entityID) const </argsstring>
+        <name>wasOffloaded</name>
+        <param>
+          <type>EntityID</type>
+          <declname>entityID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if the given entity ID has been registered as an offloaded entity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/offloaded_backups.hpp" line="23" column="1" bodyfile="baseapp/offloaded_backups.cpp" bodystart="58" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_offloaded_backups_1a9b41c5388de6ee0ae45037a133c6d618" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OffloadedBackups::backUpEntity</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, BinaryIStream &amp;data)</argsstring>
+        <name>backUpEntity</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method stores entity backup data for entities that have been offloaded to another <ref refid="class_base_app" kindref="compound">BaseApp</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/offloaded_backups.hpp" line="25" column="1" bodyfile="baseapp/offloaded_backups.cpp" bodystart="25" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_offloaded_backups_1ae70130586adca93d9ede61079737d5e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OffloadedBackups::handleBaseAppDeath</definition>
+        <argsstring>(const Mercury::Address &amp;deadAddr, const BackupHashChain &amp;backedUpHashChain)</argsstring>
+        <name>handleBaseAppDeath</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>deadAddr</declname>
+        </param>
+        <param>
+          <type>const BackupHashChain &amp;</type>
+          <declname>backedUpHashChain</declname>
+          <defname>backedUpHash</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a <ref refid="class_base_app" kindref="compound">BaseApp</ref> death by restoring entities that were offloaded to the dead <ref refid="class_base_app" kindref="compound">BaseApp</ref> onto a live <ref refid="class_base_app" kindref="compound">BaseApp</ref> according to the backup hash. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/offloaded_backups.hpp" line="27" column="1" bodyfile="baseapp/offloaded_backups.cpp" bodystart="42" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_offloaded_backups_1a325c93e5e4c23d65b2e1e0041082c9d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OffloadedBackups::stopBackingUpEntity</definition>
+        <argsstring>(EntityID entityID)</argsstring>
+        <name>stopBackingUpEntity</name>
+        <param>
+          <type>EntityID</type>
+          <declname>entityID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Another <ref refid="class_base_app" kindref="compound">BaseApp</ref> has taken responsibility for backing up this entity we may cease to back it up ourselves. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/offloaded_backups.hpp" line="29" column="1" bodyfile="baseapp/offloaded_backups.cpp" bodystart="76" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_offloaded_backups_1a451f30308ca9de5e1b89bfc86f8f9f25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool OffloadedBackups::isEmpty</definition>
+        <argsstring>()</argsstring>
+        <name>isEmpty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/offloaded_backups.hpp" line="30" column="1" bodyfile="baseapp/offloaded_backups.hpp" bodystart="30" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is responsible for holding entity backup data for entities that have been offloaded to other BaseApps. During retirement, the <ref refid="class_base_app" kindref="compound">BaseApp</ref> becomes the backup for any entities that it offloads to other BaseApps. </para>    </detaileddescription>
+    <location file="baseapp/offloaded_backups.hpp" line="19" column="1" bodyfile="baseapp/offloaded_backups.hpp" bodystart="18" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_offloaded_backups_1a58067c33b2a9ef5a9c74475abcd1e1f1" prot="private" virt="non-virtual"><scope>OffloadedBackups</scope><name>apps_</name></member>
+      <member refid="class_offloaded_backups_1a9b41c5388de6ee0ae45037a133c6d618" prot="public" virt="non-virtual"><scope>OffloadedBackups</scope><name>backUpEntity</name></member>
+      <member refid="class_offloaded_backups_1ae3bd107b58fc3a8f8684325531736691" prot="private" virt="non-virtual"><scope>OffloadedBackups</scope><name>Container</name></member>
+      <member refid="class_offloaded_backups_1ae70130586adca93d9ede61079737d5e5" prot="public" virt="non-virtual"><scope>OffloadedBackups</scope><name>handleBaseAppDeath</name></member>
+      <member refid="class_offloaded_backups_1a451f30308ca9de5e1b89bfc86f8f9f25" prot="public" virt="non-virtual"><scope>OffloadedBackups</scope><name>isEmpty</name></member>
+      <member refid="class_offloaded_backups_1ae5e9bbb9e4e1d29086092a4bf4ba5d06" prot="public" virt="non-virtual"><scope>OffloadedBackups</scope><name>OffloadedBackups</name></member>
+      <member refid="class_offloaded_backups_1a325c93e5e4c23d65b2e1e0041082c9d2" prot="public" virt="non-virtual"><scope>OffloadedBackups</scope><name>stopBackingUpEntity</name></member>
+      <member refid="class_offloaded_backups_1a37e0130812cf2117998bdc46033a9bf2" prot="public" virt="non-virtual"><scope>OffloadedBackups</scope><name>wasOffloaded</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

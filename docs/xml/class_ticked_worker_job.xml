@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_ticked_worker_job" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>TickedWorkerJob</compoundname>
+    <basecompoundref refid="class_worker_job" prot="public" virt="non-virtual">WorkerJob</basecompoundref>
+    <derivedcompoundref refid="class_fetch_data_section_job" prot="public" virt="non-virtual">FetchDataSectionJob</derivedcompoundref>
+    <derivedcompoundref refid="class_fetch_from_chunks_job" prot="public" virt="non-virtual">FetchFromChunksJob</derivedcompoundref>
+    <includes refid="loading__thread_8hpp" local="no">loading_thread.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_ticked_worker_job_1acd980b6641dc78b6e7ec7c7760c7a9fd" prot="private" static="no">
+        <type>BW::list&lt; <ref refid="class_ticked_worker_job" kindref="compound">TickedWorkerJob</ref> * &gt;</type>
+        <definition>typedef BW::list&lt; TickedWorkerJob * &gt; TickedWorkerJob::Jobs</definition>
+        <argsstring></argsstring>
+        <name>Jobs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.hpp" line="29" column="1" bodyfile="baseapp/loading_thread.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_ticked_worker_job_1a89e161c6c39e9c7ac5d589c339c7dc49" prot="private" static="yes" mutable="no">
+        <type>Jobs</type>
+        <definition>BW_BEGIN_NAMESPACE TickedWorkerJob::Jobs TickedWorkerJob::jobs_</definition>
+        <argsstring></argsstring>
+        <name>jobs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.hpp" line="30" column="1" bodyfile="baseapp/loading_thread.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_ticked_worker_job_1a02d005e07a6e04d449a74f38c04154d6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TickedWorkerJob::tickJobs</definition>
+        <argsstring>()</argsstring>
+        <name>tickJobs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This static method calls tick on each job. If tick returns true, that job is deleted and no longer ticked. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.hpp" line="20" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="41" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_ticked_worker_job_1ac41d66d1064f1d178fec6f1494afa3a9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TickedWorkerJob::TickedWorkerJob</definition>
+        <argsstring>()</argsstring>
+        <name>TickedWorkerJob</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. Constructing an object of this type adds the object to the static collection of ticked jobs. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.hpp" line="23" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ticked_worker_job_1aa2658b0c262aa07cf815161fcaf07510" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual TickedWorkerJob::~TickedWorkerJob</definition>
+        <argsstring>()</argsstring>
+        <name>~TickedWorkerJob</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.hpp" line="24" column="1" bodyfile="baseapp/loading_thread.hpp" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ticked_worker_job_1aa85ac78f0740263ae78d1c68d383f996" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool TickedWorkerJob::tick</definition>
+        <argsstring>()=0</argsstring>
+        <name>tick</name>
+        <reimplementedby refid="class_fetch_data_section_job_1a95e39cb28d73f67d0d101a4d51151f24">tick</reimplementedby>
+        <reimplementedby refid="class_fetch_from_chunks_job_1a5728700c74c2fab8974d72a9ad3c024d">tick</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.hpp" line="26" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This abstract class extends <ref refid="class_worker_job" kindref="compound">WorkerJob</ref> to add jobs that will be ticked periodically. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2933">
+        <label>TickedWorkerJob</label>
+        <link refid="class_ticked_worker_job"/>
+        <childnode refid="2934" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2934">
+        <label>WorkerJob</label>
+        <link refid="class_worker_job"/>
+      </node>
+      <node id="2936">
+        <label>FetchFromChunksJob</label>
+        <link refid="class_fetch_from_chunks_job"/>
+        <childnode refid="2933" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2935">
+        <label>FetchDataSectionJob</label>
+        <link refid="class_fetch_data_section_job"/>
+        <childnode refid="2933" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2937">
+        <label>TickedWorkerJob</label>
+        <link refid="class_ticked_worker_job"/>
+        <childnode refid="2938" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2938">
+        <label>WorkerJob</label>
+        <link refid="class_worker_job"/>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/loading_thread.hpp" line="18" column="1" bodyfile="baseapp/loading_thread.hpp" bodystart="17" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_worker_job_1ab85f534e0406cbe24acd9997a9f2ab20" prot="public" virt="non-virtual"><scope>TickedWorkerJob</scope><name>deleteSelf</name></member>
+      <member refid="class_worker_job_1a45c6bd51df30d9effe7665b1b0370344" prot="public" virt="non-virtual"><scope>TickedWorkerJob</scope><name>DONT_RESCHEDULE</name></member>
+      <member refid="class_worker_job_1a54aa01ef176dc2241b56c438ac02213b" prot="public" virt="non-virtual"><scope>TickedWorkerJob</scope><name>DONT_RESCHEDULE_AND_DESTROY</name></member>
+      <member refid="class_worker_job_1a915d4203d1b0dbf592a89f4ecc3dd78d" prot="public" virt="non-virtual"><scope>TickedWorkerJob</scope><name>isDisowned</name></member>
+      <member refid="class_ticked_worker_job_1acd980b6641dc78b6e7ec7c7760c7a9fd" prot="private" virt="non-virtual"><scope>TickedWorkerJob</scope><name>Jobs</name></member>
+      <member refid="class_ticked_worker_job_1a89e161c6c39e9c7ac5d589c339c7dc49" prot="private" virt="non-virtual"><scope>TickedWorkerJob</scope><name>jobs_</name></member>
+      <member refid="class_worker_job_1afd3c79ced2bbc23cd3cf9dacc49ea09c" prot="public" virt="pure-virtual"><scope>TickedWorkerJob</scope><name>operator()</name></member>
+      <member refid="class_worker_job_1a803b6fc05912dc5b6b9e2afbaa4fcf3a" prot="public" virt="non-virtual"><scope>TickedWorkerJob</scope><name>submit</name></member>
+      <member refid="class_ticked_worker_job_1aa85ac78f0740263ae78d1c68d383f996" prot="protected" virt="pure-virtual"><scope>TickedWorkerJob</scope><name>tick</name></member>
+      <member refid="class_ticked_worker_job_1ac41d66d1064f1d178fec6f1494afa3a9" prot="protected" virt="non-virtual"><scope>TickedWorkerJob</scope><name>TickedWorkerJob</name></member>
+      <member refid="class_ticked_worker_job_1a02d005e07a6e04d449a74f38c04154d6" prot="public" virt="non-virtual"><scope>TickedWorkerJob</scope><name>tickJobs</name></member>
+      <member refid="class_worker_job_1a69d5df98ea6d0ee989610be780a18555" prot="public" virt="non-virtual"><scope>TickedWorkerJob</scope><name>withdraw</name></member>
+      <member refid="class_worker_job_1a99e3d7e946b7302500c2b71ec6b5e92a" prot="public" virt="non-virtual"><scope>TickedWorkerJob</scope><name>WorkerJob</name></member>
+      <member refid="class_ticked_worker_job_1aa2658b0c262aa07cf815161fcaf07510" prot="protected" virt="virtual"><scope>TickedWorkerJob</scope><name>~TickedWorkerJob</name></member>
+      <member refid="class_worker_job_1a2021f357efe65197ce3cbff302e34df1" prot="protected" virt="virtual"><scope>TickedWorkerJob</scope><name>~WorkerJob</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

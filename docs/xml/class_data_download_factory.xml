@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_data_download_factory" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>DataDownloadFactory</compoundname>
+    <derivedcompoundref refid="class_file_data_download_factory" prot="public" virt="non-virtual">FileDataDownloadFactory</derivedcompoundref>
+    <derivedcompoundref refid="class_string_data_download_factory" prot="public" virt="non-virtual">StringDataDownloadFactory</derivedcompoundref>
+    <includes refid="data__downloads_8hpp" local="no">data_downloads.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_data_download_factory_1aebcea73802a8a21f977f92fe3a5502c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_data_download" kindref="compound">DataDownload</ref> *</type>
+        <definition>DataDownload * DataDownloadFactory::create</definition>
+        <argsstring>(PyObjectPtr pDesc, uint16 id, DataDownloads &amp;dls)</argsstring>
+        <name>create</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+          <declname>pDesc</declname>
+        </param>
+        <param>
+          <type>uint16</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_data_downloads" kindref="compound">DataDownloads</ref> &amp;</type>
+          <declname>dls</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a <ref refid="class_data_download" kindref="compound">DataDownload</ref> instance. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="126" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="346" bodyend="355"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_data_download_factory_1a888271f23c2a10cacd6c57b76f7aee75" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="class_data_download" kindref="compound">DataDownload</ref> *</type>
+        <definition>virtual DataDownload* DataDownloadFactory::onCreate</definition>
+        <argsstring>(PyObjectPtr pDesc, uint16 id, DataDownloads &amp;dls)=0</argsstring>
+        <name>onCreate</name>
+        <reimplementedby refid="class_string_data_download_factory_1aeef62a997baa9b78672d04bb1f9f709d">onCreate</reimplementedby>
+        <reimplementedby refid="class_file_data_download_factory_1a1fa160f51f02fd61fa6df602141851b0">onCreate</reimplementedby>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+          <declname>pDesc</declname>
+        </param>
+        <param>
+          <type>uint16</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_data_downloads" kindref="compound">DataDownloads</ref> &amp;</type>
+          <declname>dls</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="130" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_data_download_factory_1af624e89b0942fcacd1b1eec06560f32f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DataDownloadFactory::checkDescription</definition>
+        <argsstring>(PyObjectPtr &amp;rpDesc)</argsstring>
+        <name>checkDescription</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref> &amp;</type>
+          <declname>rpDesc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper function for stream*ToClient() methods below, mostly common arg checking stuff. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="134" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="362" bodyend="386"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This interface is used to create <ref refid="class_data_download" kindref="compound">DataDownload</ref> instances. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="969">
+        <label>StringDataDownloadFactory</label>
+        <link refid="class_string_data_download_factory"/>
+        <childnode refid="967" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="967">
+        <label>DataDownloadFactory</label>
+        <link refid="class_data_download_factory"/>
+      </node>
+      <node id="968">
+        <label>FileDataDownloadFactory</label>
+        <link refid="class_file_data_download_factory"/>
+        <childnode refid="967" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="baseapp/data_downloads.hpp" line="124" column="1" bodyfile="baseapp/data_downloads.hpp" bodystart="123" bodyend="135"/>
+    <listofallmembers>
+      <member refid="class_data_download_factory_1af624e89b0942fcacd1b1eec06560f32f" prot="private" virt="non-virtual"><scope>DataDownloadFactory</scope><name>checkDescription</name></member>
+      <member refid="class_data_download_factory_1aebcea73802a8a21f977f92fe3a5502c3" prot="public" virt="non-virtual"><scope>DataDownloadFactory</scope><name>create</name></member>
+      <member refid="class_data_download_factory_1a888271f23c2a10cacd6c57b76f7aee75" prot="protected" virt="pure-virtual"><scope>DataDownloadFactory</scope><name>onCreate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

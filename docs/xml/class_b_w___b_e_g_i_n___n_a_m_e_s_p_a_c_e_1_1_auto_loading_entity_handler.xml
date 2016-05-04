@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler" kind="class" language="C++" prot="public">
+    <compoundname>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ShutdownSafeReplyMessageHandler</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IGetEntityHandler</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IPutEntityHandler</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a507bdc98bdef1e391f88847060aa382d" prot="private" static="no">
+        <name>State</name>
+        <enumvalue id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a507bdc98bdef1e391f88847060aa382da7697b90b065517fba026701502f79e7e" prot="private">
+          <name>STATE_INIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a507bdc98bdef1e391f88847060aa382da742ca8a7e2672e03ffdd72f2e1752532" prot="private">
+          <name>STATE_WAITING_FOR_SET_BASE_TO_LOGGING_ON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a507bdc98bdef1e391f88847060aa382dad76cfa97dc0f2ae3c1d3ccb439213fef" prot="private">
+          <name>STATE_WAITING_FOR_CREATE_BASE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a507bdc98bdef1e391f88847060aa382daedb41e63ad4018cc2327866b4e2c5af5" prot="private">
+          <name>STATE_WAITING_FOR_SET_BASE_TO_FINAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.cpp" line="60" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="59" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a5546e7bfcd27f6cd4a4b47b6371ea6f3" prot="private" static="no" mutable="no">
+        <type>State</type>
+        <definition>State BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler::state_</definition>
+        <argsstring></argsstring>
+        <name>state_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.cpp" line="67" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a023cbf32ee8cb061412a38a0ea0675bf" prot="private" static="no" mutable="no">
+        <type>EntityDBKey</type>
+        <definition>EntityDBKey BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler::ekey_</definition>
+        <argsstring></argsstring>
+        <name>ekey_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.cpp" line="68" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a594f32a90f54bea26ea114719b2886c7" prot="private" static="no" mutable="no">
+        <type>Mercury::UDPBundle</type>
+        <definition>Mercury::UDPBundle BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler::createBaseBundle_</definition>
+        <argsstring></argsstring>
+        <name>createBaseBundle_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.cpp" line="69" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1ac44d4285703b74c85e19de9f83e8bfa4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_entity_auto_loader" kindref="compound">EntityAutoLoader</ref> &amp;</type>
+        <definition>EntityAutoLoader&amp; BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler::mgr_</definition>
+        <argsstring></argsstring>
+        <name>mgr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.cpp" line="70" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a81955f72126275a783071912f30dd648" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler::isOK_</definition>
+        <argsstring></argsstring>
+        <name>isOK_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.cpp" line="71" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1ac441f0578ae8cc6c8fe0a7d8976977ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler::AutoLoadingEntityHandler</definition>
+        <argsstring>(EntityTypeID entityTypeID, DatabaseID dbID, EntityAutoLoader &amp;mgr)</argsstring>
+        <name>AutoLoadingEntityHandler</name>
+        <param>
+          <type>EntityTypeID</type>
+          <declname>entityTypeID</declname>
+          <defname>typeID</defname>
+        </param>
+        <param>
+          <type>DatabaseID</type>
+          <declname>dbID</declname>
+        </param>
+        <param>
+          <type><ref refid="class_entity_auto_loader" kindref="compound">EntityAutoLoader</ref> &amp;</type>
+          <declname>mgr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.cpp" line="32" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="78" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1ada0d51ffd3cdb3eb7c5d8a2bb59e4d11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler::~AutoLoadingEntityHandler</definition>
+        <argsstring>()</argsstring>
+        <name>~AutoLoadingEntityHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.cpp" line="36" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1aaad6f0c0b6f305cfb3211fd325874a54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler::autoLoad</definition>
+        <argsstring>()</argsstring>
+        <name>autoLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Start auto-loading the entity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.cpp" line="41" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="91" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a8e4b1f9466e0887fc6281cd4d2b9846d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler::handleMessage</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data, void *)</argsstring>
+        <name>handleMessage</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles response from <ref refid="class_base_app_mgr" kindref="compound">BaseAppMgr</ref> that base was created successfully. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.cpp" line="44" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="118" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a92fdd4723aaf65d3936c4e3c46a1895f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler::handleException</definition>
+        <argsstring>(const Mercury::NubException &amp;ne, void *)</argsstring>
+        <name>handleException</name>
+        <param>
+          <type>const Mercury::NubException &amp;</type>
+          <declname>ne</declname>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles response from <ref refid="class_base_app_mgr" kindref="compound">BaseAppMgr</ref> that base creation has failed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.cpp" line="47" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="161" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1ae182b9d795dc6ffd92dbf765d8aace62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler::onGetEntityComplete</definition>
+        <argsstring>(const DatabaseOperationResult &amp;result, const EntityDBKey &amp;entityKey)</argsstring>
+        <name>onGetEntityComplete</name>
+        <param>
+          <type>const DatabaseOperationResult &amp;</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>const EntityDBKey &amp;</type>
+          <declname>entityKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.cpp" line="51" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="172" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a19d428906754cb7b9ea373df478f99fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler::onPutEntityComplete</definition>
+        <argsstring>(const DatabaseOperationResult &amp;result, const EntityKey &amp;key)</argsstring>
+        <name>onPutEntityComplete</name>
+        <param>
+          <type>const DatabaseOperationResult &amp;</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>const EntityKey &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/entity_auto_loader.cpp" line="55" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="206" bodyend="222"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class handles auto loading an entity from the database. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="124">
+        <label>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</label>
+        <link refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler"/>
+        <childnode refid="125" relation="public-inheritance">
+        </childnode>
+        <childnode refid="126" relation="public-inheritance">
+        </childnode>
+        <childnode refid="127" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="125">
+        <label>ShutdownSafeReplyMessageHandler</label>
+      </node>
+      <node id="126">
+        <label>IDatabase::IGetEntityHandler</label>
+      </node>
+      <node id="127">
+        <label>IPutEntityHandler</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="128">
+        <label>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</label>
+        <link refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler"/>
+        <childnode refid="129" relation="public-inheritance">
+        </childnode>
+        <childnode refid="130" relation="public-inheritance">
+        </childnode>
+        <childnode refid="131" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="129">
+        <label>ShutdownSafeReplyMessageHandler</label>
+      </node>
+      <node id="130">
+        <label>IDatabase::IGetEntityHandler</label>
+      </node>
+      <node id="131">
+        <label>IPutEntityHandler</label>
+      </node>
+    </collaborationgraph>
+    <location file="dbapp/entity_auto_loader.cpp" line="30" column="1" bodyfile="dbapp/entity_auto_loader.cpp" bodystart="26" bodyend="72"/>
+    <listofallmembers>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1aaad6f0c0b6f305cfb3211fd325874a54" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</scope><name>autoLoad</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1ac441f0578ae8cc6c8fe0a7d8976977ea" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</scope><name>AutoLoadingEntityHandler</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a594f32a90f54bea26ea114719b2886c7" prot="private" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</scope><name>createBaseBundle_</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a023cbf32ee8cb061412a38a0ea0675bf" prot="private" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</scope><name>ekey_</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a92fdd4723aaf65d3936c4e3c46a1895f" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</scope><name>handleException</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a8e4b1f9466e0887fc6281cd4d2b9846d" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</scope><name>handleMessage</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a81955f72126275a783071912f30dd648" prot="private" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</scope><name>isOK_</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1ac44d4285703b74c85e19de9f83e8bfa4" prot="private" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</scope><name>mgr_</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1ae182b9d795dc6ffd92dbf765d8aace62" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</scope><name>onGetEntityComplete</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a19d428906754cb7b9ea373df478f99fa" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</scope><name>onPutEntityComplete</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a507bdc98bdef1e391f88847060aa382d" prot="private" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</scope><name>State</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a5546e7bfcd27f6cd4a4b47b6371ea6f3" prot="private" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</scope><name>state_</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a507bdc98bdef1e391f88847060aa382da7697b90b065517fba026701502f79e7e" prot="private" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</scope><name>STATE_INIT</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a507bdc98bdef1e391f88847060aa382dad76cfa97dc0f2ae3c1d3ccb439213fef" prot="private" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</scope><name>STATE_WAITING_FOR_CREATE_BASE</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a507bdc98bdef1e391f88847060aa382daedb41e63ad4018cc2327866b4e2c5af5" prot="private" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</scope><name>STATE_WAITING_FOR_SET_BASE_TO_FINAL</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1a507bdc98bdef1e391f88847060aa382da742ca8a7e2672e03ffdd72f2e1752532" prot="private" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</scope><name>STATE_WAITING_FOR_SET_BASE_TO_LOGGING_ON</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_auto_loading_entity_handler_1ada0d51ffd3cdb3eb7c5d8a2bb59e4d11" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::AutoLoadingEntityHandler</scope><name>~AutoLoadingEntityHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

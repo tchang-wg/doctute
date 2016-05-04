@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_cell_app_mgr_gateway" kind="class" language="C++" prot="public">
+    <compoundname>CellAppMgrGateway</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ManagerAppGateway</basecompoundref>
+    <includes refid="cellappmgr__gateway_8hpp" local="no">cellappmgr_gateway.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cell_app_mgr_gateway_1acab2da0785031e36692008fe151a0c95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE CellAppMgrGateway::CellAppMgrGateway</definition>
+        <argsstring>(Mercury::NetworkInterface &amp;interface)</argsstring>
+        <name>CellAppMgrGateway</name>
+        <param>
+          <type>Mercury::NetworkInterface &amp;</type>
+          <declname>interface</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The constructor for <ref refid="class_cell_app_mgr_gateway" kindref="compound">CellAppMgrGateway</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellappmgr_gateway.hpp" line="29" column="1" bodyfile="cellapp/cellappmgr_gateway.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_gateway_1a6b5d4ca3a41033694ff71d18e2fb7a47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgrGateway::add</definition>
+        <argsstring>(const Mercury::Address &amp;addr, uint16 viewerPort, const MD5::Digest &amp;cellappDigest, Mercury::ReplyMessageHandler *pReplyHandler)</argsstring>
+        <name>add</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint16</type>
+          <declname>viewerPort</declname>
+        </param>
+        <param>
+          <type>const MD5::Digest &amp;</type>
+          <declname>cellappDigest</declname>
+        </param>
+        <param>
+          <type>Mercury::ReplyMessageHandler *</type>
+          <declname>pReplyHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is used to make an add call to the real <ref refid="class_cell" kindref="compound">Cell</ref> App Manager. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellappmgr_gateway.hpp" line="31" column="1" bodyfile="cellapp/cellappmgr_gateway.cpp" bodystart="33" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_gateway_1a912f45eb340a85cc8bcec4c3850e4157" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgrGateway::informOfLoad</definition>
+        <argsstring>(float load)</argsstring>
+        <name>informOfLoad</name>
+        <param>
+          <type>float</type>
+          <declname>load</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is used to inform the <ref refid="class_cell" kindref="compound">Cell</ref> App Manager of this application&apos;s current load. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellappmgr_gateway.hpp" line="35" column="1" bodyfile="cellapp/cellappmgr_gateway.cpp" bodystart="51" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_gateway_1a7367bd18ea1a101da8793070fda9c4c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgrGateway::handleCellAppDeath</definition>
+        <argsstring>(const Mercury::Address &amp;addr)</argsstring>
+        <name>handleCellAppDeath</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is used to inform the <ref refid="class_cell" kindref="compound">Cell</ref> App Manager of a dead <ref refid="class_cell" kindref="compound">Cell</ref> App. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellappmgr_gateway.hpp" line="37" column="1" bodyfile="cellapp/cellappmgr_gateway.cpp" bodystart="67" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_gateway_1a795d44caafccd66bf7746086da57b9cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgrGateway::setSharedData</definition>
+        <argsstring>(const BW::string &amp;key, const BW::string &amp;value, SharedDataType type)</argsstring>
+        <name>setSharedData</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>SharedDataType</type>
+          <declname>type</declname>
+          <defname>dataType</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends a message to the <ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> informing it that a shared data value has changed. This may be data shared between <ref refid="class_cell_apps" kindref="compound">CellApps</ref>, BaseApps, or both. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellappmgr_gateway.hpp" line="39" column="1" bodyfile="cellapp/cellappmgr_gateway.cpp" bodystart="82" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_gateway_1ae5655d0c86d2b35d72defa7aa4318f28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgrGateway::delSharedData</definition>
+        <argsstring>(const BW::string &amp;key, SharedDataType type)</argsstring>
+        <name>delSharedData</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>SharedDataType</type>
+          <declname>type</declname>
+          <defname>dataType</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends a message to the <ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> informing it that a shared data value has been deleted. This may be data shared between <ref refid="class_cell_apps" kindref="compound">CellApps</ref>, BaseApps or both. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellappmgr_gateway.hpp" line="41" column="1" bodyfile="cellapp/cellappmgr_gateway.cpp" bodystart="99" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_gateway_1a4af99deeca670d776e042e8fbf0bb02f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgrGateway::ackCellAppDeath</definition>
+        <argsstring>(const Mercury::Address &amp;deadAddr)</argsstring>
+        <name>ackCellAppDeath</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>deadAddr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellappmgr_gateway.hpp" line="43" column="1" bodyfile="cellapp/cellappmgr_gateway.cpp" bodystart="114" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_gateway_1a46da7364140ed1629539cb2daf04dfd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgrGateway::ackShutdown</definition>
+        <argsstring>(ShutDownStage stage)</argsstring>
+        <name>ackShutdown</name>
+        <param>
+          <type>ShutDownStage</type>
+          <declname>stage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellappmgr_gateway.hpp" line="44" column="1" bodyfile="cellapp/cellappmgr_gateway.cpp" bodystart="128" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_gateway_1ac48f1803b5466b3b17530a039f3cbfbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgrGateway::updateBounds</definition>
+        <argsstring>(const Cells &amp;cells)</argsstring>
+        <name>updateBounds</name>
+        <param>
+          <type>const <ref refid="class_cells" kindref="compound">Cells</ref> &amp;</type>
+          <declname>cells</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method informs the <ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> of data that it needs for load balancing.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cells</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Collection of cells on this <ref refid="class_cell_app" kindref="compound">CellApp</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellappmgr_gateway.hpp" line="46" column="1" bodyfile="cellapp/cellappmgr_gateway.cpp" bodystart="145" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_gateway_1a09471b50b53f483ea20f7d166f12168d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgrGateway::onManagerRebirth</definition>
+        <argsstring>(CellApp &amp;cellApp, const Mercury::Address &amp;addr)</argsstring>
+        <name>onManagerRebirth</name>
+        <param>
+          <type><ref refid="class_cell_app" kindref="compound">CellApp</ref> &amp;</type>
+          <declname>cellApp</declname>
+        </param>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellappmgr_gateway.hpp" line="48" column="1" bodyfile="cellapp/cellappmgr_gateway.cpp" bodystart="159" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_gateway_1aa5e2f4ee8ae80cff88296d5ebbacc1c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgrGateway::shutDownSpace</definition>
+        <argsstring>(SpaceID spaceID)</argsstring>
+        <name>shutDownSpace</name>
+        <param>
+          <type>SpaceID</type>
+          <declname>spaceID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellappmgr_gateway.hpp" line="50" column="1" bodyfile="cellapp/cellappmgr_gateway.cpp" bodystart="176" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_gateway_1a3e0427c3a9c69904f1173077aa776607" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Mercury::Address &amp;</type>
+        <definition>const Mercury::Address&amp; CellAppMgrGateway::addr</definition>
+        <argsstring>() const </argsstring>
+        <name>addr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellappmgr_gateway.hpp" line="53" column="1" bodyfile="cellapp/cellappmgr_gateway.hpp" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_gateway_1a4e7453295715975d6815b0cf2b9bcb17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Mercury::Bundle &amp;</type>
+        <definition>Mercury::Bundle&amp; CellAppMgrGateway::bundle</definition>
+        <argsstring>()</argsstring>
+        <name>bundle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellappmgr_gateway.hpp" line="54" column="1" bodyfile="cellapp/cellappmgr_gateway.hpp" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_mgr_gateway_1a0451a945fcbb04fc954f9903cf225754" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppMgrGateway::send</definition>
+        <argsstring>()</argsstring>
+        <name>send</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cellappmgr_gateway.hpp" line="55" column="1" bodyfile="cellapp/cellappmgr_gateway.hpp" bodystart="55" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is a simple helper class that is used to represent the remote cell manager. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="517">
+        <label>CellAppMgrGateway</label>
+        <link refid="class_cell_app_mgr_gateway"/>
+        <childnode refid="518" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="518">
+        <label>ManagerAppGateway</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="519">
+        <label>CellAppMgrGateway</label>
+        <link refid="class_cell_app_mgr_gateway"/>
+        <childnode refid="520" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="520">
+        <label>ManagerAppGateway</label>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/cellappmgr_gateway.hpp" line="27" column="1" bodyfile="cellapp/cellappmgr_gateway.hpp" bodystart="26" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_cell_app_mgr_gateway_1a4af99deeca670d776e042e8fbf0bb02f" prot="public" virt="non-virtual"><scope>CellAppMgrGateway</scope><name>ackCellAppDeath</name></member>
+      <member refid="class_cell_app_mgr_gateway_1a46da7364140ed1629539cb2daf04dfd7" prot="public" virt="non-virtual"><scope>CellAppMgrGateway</scope><name>ackShutdown</name></member>
+      <member refid="class_cell_app_mgr_gateway_1a6b5d4ca3a41033694ff71d18e2fb7a47" prot="public" virt="non-virtual"><scope>CellAppMgrGateway</scope><name>add</name></member>
+      <member refid="class_cell_app_mgr_gateway_1a3e0427c3a9c69904f1173077aa776607" prot="public" virt="non-virtual"><scope>CellAppMgrGateway</scope><name>addr</name></member>
+      <member refid="class_cell_app_mgr_gateway_1a4e7453295715975d6815b0cf2b9bcb17" prot="public" virt="non-virtual"><scope>CellAppMgrGateway</scope><name>bundle</name></member>
+      <member refid="class_cell_app_mgr_gateway_1acab2da0785031e36692008fe151a0c95" prot="public" virt="non-virtual"><scope>CellAppMgrGateway</scope><name>CellAppMgrGateway</name></member>
+      <member refid="class_cell_app_mgr_gateway_1ae5655d0c86d2b35d72defa7aa4318f28" prot="public" virt="non-virtual"><scope>CellAppMgrGateway</scope><name>delSharedData</name></member>
+      <member refid="class_cell_app_mgr_gateway_1a7367bd18ea1a101da8793070fda9c4c5" prot="public" virt="non-virtual"><scope>CellAppMgrGateway</scope><name>handleCellAppDeath</name></member>
+      <member refid="class_cell_app_mgr_gateway_1a912f45eb340a85cc8bcec4c3850e4157" prot="public" virt="non-virtual"><scope>CellAppMgrGateway</scope><name>informOfLoad</name></member>
+      <member refid="class_cell_app_mgr_gateway_1a09471b50b53f483ea20f7d166f12168d" prot="public" virt="non-virtual"><scope>CellAppMgrGateway</scope><name>onManagerRebirth</name></member>
+      <member refid="class_cell_app_mgr_gateway_1a0451a945fcbb04fc954f9903cf225754" prot="public" virt="non-virtual"><scope>CellAppMgrGateway</scope><name>send</name></member>
+      <member refid="class_cell_app_mgr_gateway_1a795d44caafccd66bf7746086da57b9cb" prot="public" virt="non-virtual"><scope>CellAppMgrGateway</scope><name>setSharedData</name></member>
+      <member refid="class_cell_app_mgr_gateway_1aa5e2f4ee8ae80cff88296d5ebbacc1c2" prot="public" virt="non-virtual"><scope>CellAppMgrGateway</scope><name>shutDownSpace</name></member>
+      <member refid="class_cell_app_mgr_gateway_1ac48f1803b5466b3b17530a039f3cbfbe" prot="public" virt="non-virtual"><scope>CellAppMgrGateway</scope><name>updateBounds</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

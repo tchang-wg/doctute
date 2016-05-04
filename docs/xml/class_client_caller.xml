@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_client_caller" kind="class" language="C++" prot="public">
+    <compoundname>ClientCaller</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">PyObjectPlus</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_client_caller_1a23e45ee951e2e7464cffd9e04e80bd74" prot="private" static="no" mutable="no">
+        <type><ref refid="class_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity&amp; ClientCaller::entity_</definition>
+        <argsstring></argsstring>
+        <name>entity_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/py_client.cpp" line="72" column="1" bodyfile="cellapp/py_client.cpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_caller_1a2ebf64b7311f320cf8d373fce2892f86" prot="private" static="no" mutable="no">
+        <type>const MethodDescription &amp;</type>
+        <definition>const MethodDescription&amp; ClientCaller::methodDescription_</definition>
+        <argsstring></argsstring>
+        <name>methodDescription_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/py_client.cpp" line="73" column="1" bodyfile="cellapp/py_client.cpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_caller_1ad1246770874604ed9a9603dfd19d7ce0" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClientCaller::isForOwn_</definition>
+        <argsstring></argsstring>
+        <name>isForOwn_</name>
+        <briefdescription>
+<para>Call is destined for our client? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/py_client.cpp" line="75" column="1" bodyfile="cellapp/py_client.cpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_caller_1aa5e9c213619854e95da69fdf0880b608" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClientCaller::isForOthers_</definition>
+        <argsstring></argsstring>
+        <name>isForOthers_</name>
+        <briefdescription>
+<para>Call is destined for other clients? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/py_client.cpp" line="76" column="1" bodyfile="cellapp/py_client.cpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_caller_1ae213f13b803ec349f497d892c3d0a883" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClientCaller::isExposedForReplay_</definition>
+        <argsstring></argsstring>
+        <name>isExposedForReplay_</name>
+        <briefdescription>
+<para>Call is exposed for replay? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/py_client.cpp" line="77" column="1" bodyfile="cellapp/py_client.cpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_caller_1a337e91021fa7692dbcba2febe3c0fea7" prot="private" static="no" mutable="no">
+        <type>EntityID</type>
+        <definition>EntityID ClientCaller::destID_</definition>
+        <argsstring></argsstring>
+        <name>destID_</name>
+        <briefdescription>
+<para>ID of entity on client. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/py_client.cpp" line="79" column="1" bodyfile="cellapp/py_client.cpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_client_caller_1a9f8458ecf0b3562f0226f8f5e36ef08a" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string ClientCaller::destEntityTypeName_</definition>
+        <argsstring></argsstring>
+        <name>destEntityTypeName_</name>
+        <briefdescription>
+<para>Name of the destination entity type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/py_client.cpp" line="80" column="1" bodyfile="cellapp/py_client.cpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_client_caller_1acf4001d35646f064aa599e9a972015a7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientCaller::PY_RO_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(destID_, entityID)</argsstring>
+        <name>PY_RO_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>destID_</type>
+        </param>
+        <param>
+          <type>entityID</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/py_client.cpp" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_caller_1a5bb046970e0225ed3ada663e46faa989" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientCaller::PY_RO_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(entity_.id(), clientID)</argsstring>
+        <name>PY_RO_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>entity_.</type>
+          <declname>id</declname>
+          <array>()</array>
+        </param>
+        <param>
+          <type>clientID</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/py_client.cpp" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_caller_1a8b11efeb79a9d892254be95740d81a33" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientCaller::PY_RO_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(methodDescription_.name(), methodName)</argsstring>
+        <name>PY_RO_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>methodDescription_.</type>
+          <declname>name</declname>
+          <array>()</array>
+        </param>
+        <param>
+          <type>methodName</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/py_client.cpp" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_caller_1aa0e8fbd4cda97dd9a9f5df36ca2b74ad" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientCaller::PY_RO_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(isForOwn_, isForOwn)</argsstring>
+        <name>PY_RO_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>isForOwn_</type>
+        </param>
+        <param>
+          <type>isForOwn</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/py_client.cpp" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_caller_1a44fc4eed6d50034a67e93fd7e6024735" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientCaller::PY_RO_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(isForOthers_, isForOthers)</argsstring>
+        <name>PY_RO_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>isForOthers_</type>
+        </param>
+        <param>
+          <type>isForOthers</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/py_client.cpp" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_caller_1a7138db152abbf9a0b225fa900fefd925" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientCaller::PY_RO_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(isExposedForReplay_, isRecording)</argsstring>
+        <name>PY_RO_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>isExposedForReplay_</type>
+        </param>
+        <param>
+          <type>isRecording</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/py_client.cpp" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_caller_1a61b3cbcaf5805cc7f6adda55db840f6c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientCaller::PY_RO_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(isExposedForReplay_ &amp;&amp;!isForOwn_ &amp;&amp;!isForOthers_, isRecordingOnly)</argsstring>
+        <name>PY_RO_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>isExposedForReplay_ &amp;&amp;!isForOwn_ &amp;&amp;!</type>
+          <declname>isForOthers_</declname>
+        </param>
+        <param>
+          <type>isRecordingOnly</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/py_client.cpp" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_client_caller_1a9c0226607d613990a7ad47dbbb5b4c0d" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject * ClientCaller::pyRepr</definition>
+        <argsstring>() const </argsstring>
+        <name>pyRepr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the Python string representation for instances of this class. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/py_client.cpp" line="69" column="1" bodyfile="cellapp/py_client.cpp" bodystart="215" bodyend="249"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements a simple helper Python type. Objects of this type are used to represent methods that the server can call on the client. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="664">
+        <label>PyObjectPlus</label>
+      </node>
+      <node id="663">
+        <label>ClientCaller</label>
+        <link refid="class_client_caller"/>
+        <childnode refid="664" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="666">
+        <label>PyObjectPlus</label>
+      </node>
+      <node id="665">
+        <label>ClientCaller</label>
+        <link refid="class_client_caller"/>
+        <childnode refid="666" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/py_client.cpp" line="37" column="1" bodyfile="cellapp/py_client.cpp" bodystart="36" bodyend="81"/>
+    <listofallmembers>
+      <member refid="class_client_caller_1a9f8458ecf0b3562f0226f8f5e36ef08a" prot="private" virt="non-virtual"><scope>ClientCaller</scope><name>destEntityTypeName_</name></member>
+      <member refid="class_client_caller_1a337e91021fa7692dbcba2febe3c0fea7" prot="private" virt="non-virtual"><scope>ClientCaller</scope><name>destID_</name></member>
+      <member refid="class_client_caller_1a23e45ee951e2e7464cffd9e04e80bd74" prot="private" virt="non-virtual"><scope>ClientCaller</scope><name>entity_</name></member>
+      <member refid="class_client_caller_1ae213f13b803ec349f497d892c3d0a883" prot="private" virt="non-virtual"><scope>ClientCaller</scope><name>isExposedForReplay_</name></member>
+      <member refid="class_client_caller_1aa5e9c213619854e95da69fdf0880b608" prot="private" virt="non-virtual"><scope>ClientCaller</scope><name>isForOthers_</name></member>
+      <member refid="class_client_caller_1ad1246770874604ed9a9603dfd19d7ce0" prot="private" virt="non-virtual"><scope>ClientCaller</scope><name>isForOwn_</name></member>
+      <member refid="class_client_caller_1a2ebf64b7311f320cf8d373fce2892f86" prot="private" virt="non-virtual"><scope>ClientCaller</scope><name>methodDescription_</name></member>
+      <member refid="class_client_caller_1acf4001d35646f064aa599e9a972015a7" prot="private" virt="non-virtual"><scope>ClientCaller</scope><name>PY_RO_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_caller_1a5bb046970e0225ed3ada663e46faa989" prot="private" virt="non-virtual"><scope>ClientCaller</scope><name>PY_RO_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_caller_1a8b11efeb79a9d892254be95740d81a33" prot="private" virt="non-virtual"><scope>ClientCaller</scope><name>PY_RO_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_caller_1aa0e8fbd4cda97dd9a9f5df36ca2b74ad" prot="private" virt="non-virtual"><scope>ClientCaller</scope><name>PY_RO_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_caller_1a44fc4eed6d50034a67e93fd7e6024735" prot="private" virt="non-virtual"><scope>ClientCaller</scope><name>PY_RO_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_caller_1a7138db152abbf9a0b225fa900fefd925" prot="private" virt="non-virtual"><scope>ClientCaller</scope><name>PY_RO_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_caller_1a61b3cbcaf5805cc7f6adda55db840f6c" prot="private" virt="non-virtual"><scope>ClientCaller</scope><name>PY_RO_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_client_caller_1a9c0226607d613990a7ad47dbbb5b4c0d" prot="private" virt="non-virtual"><scope>ClientCaller</scope><name>pyRepr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

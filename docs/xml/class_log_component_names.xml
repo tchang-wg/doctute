@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_log_component_names" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>LogComponentNames</compoundname>
+    <derivedcompoundref refid="class_log_component_names_m_l_d_b" prot="public" virt="non-virtual">LogComponentNamesMLDB</derivedcompoundref>
+    <derivedcompoundref refid="class_log_component_names_mongo_d_b" prot="public" virt="non-virtual">LogComponentNamesMongoDB</derivedcompoundref>
+    <includes refid="log__component__names_8hpp" local="no">log_component_names.hpp</includes>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_log_component_names_1aceeebcc731df8d98f1d40ee695ef9d9e" prot="protected" static="yes" mutable="no">
+        <type>const MessageLogger::AppTypeID</type>
+        <definition>const MessageLogger::AppTypeID LogComponentNames::MAX_COMPONENTS</definition>
+        <argsstring></argsstring>
+        <name>MAX_COMPONENTS</name>
+        <initializer>= 31</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_component_names.hpp" line="47" column="1" bodyfile="tools/message_logger/log_component_names.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_log_component_names_1a0aa54d1044a66f9e00cda77e2df1b53e" prot="private" static="no" mutable="no">
+        <type>MessageLogger::StringList</type>
+        <definition>MessageLogger::StringList LogComponentNames::componentNames_</definition>
+        <argsstring></argsstring>
+        <name>componentNames_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_component_names.hpp" line="50" column="1" bodyfile="tools/message_logger/log_component_names.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_log_component_names_1ad27cacf5fe19e38d5a9b9880958d822b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool LogComponentNames::writeComponentNameToDB</definition>
+        <argsstring>(const BW::string &amp;componentName)=0</argsstring>
+        <name>writeComponentNameToDB</name>
+        <reimplementedby refid="class_log_component_names_mongo_d_b_1af8b64663f60a1a5da6901cf9fccf780d">writeComponentNameToDB</reimplementedby>
+        <reimplementedby refid="class_log_component_names_m_l_d_b_1a3be7bf7f9d369c919f67723837194764">writeComponentNameToDB</reimplementedby>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>componentName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_component_names.hpp" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_component_names_1a7445c1348ffb5693fb6f4601a77db29b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MessageLogger::AppTypeID</type>
+        <definition>MessageLogger::AppTypeID LogComponentNames::getAppTypeIDFromName</definition>
+        <argsstring>(const BW::string &amp;componentName)</argsstring>
+        <name>getAppTypeIDFromName</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>componentName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method retrieves the ID associated with the specified component name.</para><para>If no component name -&gt; ID mapping is already known, a new ID will be allocated and written to DB.</para><para><simplesect kind="return"><para>ID associated with the component. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_component_names.hpp" line="30" column="1" bodyfile="tools/message_logger/log_component_names.cpp" bodystart="28" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_component_names_1a417d6362f12d675f400bd7acd86e1a04" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * LogComponentNames::getNameFromID</definition>
+        <argsstring>(int componentID) const </argsstring>
+        <name>getNameFromID</name>
+        <param>
+          <type>int</type>
+          <declname>componentID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method retrieves the component name associated to the specified component ID.</para><para><simplesect kind="return"><para>Component name as a string on success, NULL on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_component_names.hpp" line="33" column="1" bodyfile="tools/message_logger/log_component_names.cpp" bodystart="66" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_component_names_1ac60ab4fce3ca9af0fe7cd3190234b0f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LogComponentNames::visitAllWith</definition>
+        <argsstring>(LogComponentsVisitor &amp;visitor) const </argsstring>
+        <name>visitAllWith</name>
+        <param>
+          <type><ref refid="class_log_components_visitor" kindref="compound">LogComponentsVisitor</ref> &amp;</type>
+          <declname>visitor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method invokes onComponent on the visitor for all the known component names stored in the component map.</para><para><simplesect kind="return"><para>true on success, false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_component_names.hpp" line="35" column="1" bodyfile="tools/message_logger/log_component_names.cpp" bodystart="86" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_log_component_names_1ae7db9ef26d0323cce813eaed8b3d61d0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>BW_BEGIN_NAMESPACE void LogComponentNames::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_component_names.hpp" line="38" column="1" bodyfile="tools/message_logger/log_component_names.cpp" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_component_names_1a6488b29a2aea5638008cc285c427b658" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>MessageLogger::AppTypeID</type>
+        <definition>MessageLogger::AppTypeID LogComponentNames::getComponentNameSize</definition>
+        <argsstring>()</argsstring>
+        <name>getComponentNameSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_component_names.hpp" line="40" column="1" bodyfile="tools/message_logger/log_component_names.hpp" bodystart="40" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_component_names_1ab047b64b1fdd4a7914b75181cf53fcc4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LogComponentNames::pushbackComponentName</definition>
+        <argsstring>(BW::string &amp;name)</argsstring>
+        <name>pushbackComponentName</name>
+        <param>
+          <type>BW::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_component_names.hpp" line="43" column="1" bodyfile="tools/message_logger/log_component_names.hpp" bodystart="43" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Handles the mapping between ids and component names, i.e. 0 -&gt; cellapp, 1 -&gt; baseapp etc. This is shared amongst all users, and is based on the order in which messages from unique components are delivered. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1667">
+        <label>LogComponentNamesMLDB</label>
+        <link refid="class_log_component_names_m_l_d_b"/>
+        <childnode refid="1666" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1666">
+        <label>LogComponentNames</label>
+        <link refid="class_log_component_names"/>
+      </node>
+      <node id="1668">
+        <label>LogComponentNamesMongoDB</label>
+        <link refid="class_log_component_names_mongo_d_b"/>
+        <childnode refid="1666" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="tools/message_logger/log_component_names.hpp" line="26" column="1" bodyfile="tools/message_logger/log_component_names.hpp" bodystart="25" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_log_component_names_1ae7db9ef26d0323cce813eaed8b3d61d0" prot="protected" virt="non-virtual"><scope>LogComponentNames</scope><name>clear</name></member>
+      <member refid="class_log_component_names_1a0aa54d1044a66f9e00cda77e2df1b53e" prot="private" virt="non-virtual"><scope>LogComponentNames</scope><name>componentNames_</name></member>
+      <member refid="class_log_component_names_1a7445c1348ffb5693fb6f4601a77db29b" prot="public" virt="non-virtual"><scope>LogComponentNames</scope><name>getAppTypeIDFromName</name></member>
+      <member refid="class_log_component_names_1a6488b29a2aea5638008cc285c427b658" prot="protected" virt="non-virtual"><scope>LogComponentNames</scope><name>getComponentNameSize</name></member>
+      <member refid="class_log_component_names_1a417d6362f12d675f400bd7acd86e1a04" prot="public" virt="non-virtual"><scope>LogComponentNames</scope><name>getNameFromID</name></member>
+      <member refid="class_log_component_names_1aceeebcc731df8d98f1d40ee695ef9d9e" prot="protected" virt="non-virtual"><scope>LogComponentNames</scope><name>MAX_COMPONENTS</name></member>
+      <member refid="class_log_component_names_1ab047b64b1fdd4a7914b75181cf53fcc4" prot="protected" virt="non-virtual"><scope>LogComponentNames</scope><name>pushbackComponentName</name></member>
+      <member refid="class_log_component_names_1ac60ab4fce3ca9af0fe7cd3190234b0f9" prot="public" virt="non-virtual"><scope>LogComponentNames</scope><name>visitAllWith</name></member>
+      <member refid="class_log_component_names_1ad27cacf5fe19e38d5a9b9880958d822b" prot="public" virt="pure-virtual"><scope>LogComponentNames</scope><name>writeComponentNameToDB</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

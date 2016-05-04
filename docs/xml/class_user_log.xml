@@ -1,0 +1,444 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_user_log" kind="class" language="C++" prot="public">
+    <compoundname>UserLog</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">SafeReferenceCount</basecompoundref>
+    <derivedcompoundref refid="class_user_log_reader" prot="public" virt="non-virtual">UserLogReader</derivedcompoundref>
+    <derivedcompoundref refid="class_user_log_writer" prot="public" virt="non-virtual">UserLogWriter</derivedcompoundref>
+    <includes refid="user__log_8hpp" local="no">user_log.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_user_log_1ab1e16c1a6bef093e344e544a4111f2ba" prot="protected" static="no" mutable="no">
+        <type>uint16</type>
+        <definition>uint16 UserLog::uid_</definition>
+        <argsstring></argsstring>
+        <name>uid_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="70" column="1" bodyfile="tools/message_logger/user_log.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_user_log_1ad145fe519c8d826817d4786dd82b9935" prot="protected" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string UserLog::username_</definition>
+        <argsstring></argsstring>
+        <name>username_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="73" column="1" bodyfile="tools/message_logger/user_log.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_user_log_1a3d62b43feb6fb7dd250c7d25b489bcf6" prot="protected" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string UserLog::path_</definition>
+        <argsstring></argsstring>
+        <name>path_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="76" column="1" bodyfile="tools/message_logger/user_log.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_user_log_1a31a1c989cda19589acf502519bdf1634" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool UserLog::isGood_</definition>
+        <argsstring></argsstring>
+        <name>isGood_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="79" column="1" bodyfile="tools/message_logger/user_log.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_user_log_1aa5ad7a076931055067acb17a2222bbaa" prot="protected" static="no" mutable="no">
+        <type>UserSegments</type>
+        <definition>UserSegments UserLog::userSegments_</definition>
+        <argsstring></argsstring>
+        <name>userSegments_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="82" column="1" bodyfile="tools/message_logger/user_log.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_user_log_1a987d1bc61c15d6f81e1ec32416051936" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_user_components" kindref="compound">UserComponents</ref></type>
+        <definition>UserComponents UserLog::userComponents_</definition>
+        <argsstring></argsstring>
+        <name>userComponents_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="85" column="1" bodyfile="tools/message_logger/user_log.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_user_log_1a3b80fd48672d5d8b24319f05366bb049" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_unary_integer_file" kindref="compound">UnaryIntegerFile</ref></type>
+        <definition>UnaryIntegerFile UserLog::uidFile_</definition>
+        <argsstring></argsstring>
+        <name>uidFile_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="88" column="1" bodyfile="tools/message_logger/user_log.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_user_log_1ac0fd1edcae86ea8f824b00abe6e1cc19" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int UserLog::maxHostnameLen_</definition>
+        <argsstring></argsstring>
+        <name>maxHostnameLen_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="91" column="1" bodyfile="tools/message_logger/user_log.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_user_log_1a8999bf4ca66fb49eee93b23cf6409b6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>UserLog::UserLog</definition>
+        <argsstring>(uint16 uid, const BW::string &amp;username)</argsstring>
+        <name>UserLog</name>
+        <param>
+          <type>uint16</type>
+          <declname>uid</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="44" column="1" bodyfile="tools/message_logger/user_log.cpp" bodystart="39" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_log_1afad43034245613e1006240965166168b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>UserLog::~UserLog</definition>
+        <argsstring>()</argsstring>
+        <name>~UserLog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="45" column="1" bodyfile="tools/message_logger/user_log.cpp" bodystart="50" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_log_1a4a72327001d0eac1d6268eb7e950e2de" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool UserLog::init</definition>
+        <argsstring>(const BW::string rootPath)</argsstring>
+        <name>init</name>
+        <reimplementedby refid="class_user_log_reader_1a7d65f767ec0502d909b61ed748bcdb88">init</reimplementedby>
+        <param>
+          <type>const BW::string</type>
+          <declname>rootPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialises the base <ref refid="class_user_log" kindref="compound">UserLog</ref> instance. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="47" column="1" bodyfile="tools/message_logger/user_log.cpp" bodystart="62" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_log_1a260d36eec4b98b77cc698165e2eb3e54" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLog::isGood</definition>
+        <argsstring>() const </argsstring>
+        <name>isGood</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether the <ref refid="class_user_log" kindref="compound">UserLog</ref> is in a fit state to use or not.</para><para><simplesect kind="return"><para>true if the <ref refid="class_user_log" kindref="compound">UserLog</ref> is ready to use, false if not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="49" column="1" bodyfile="tools/message_logger/user_log.cpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_log_1a7be8b13c428ae161ff8cd0361c7147e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16</type>
+        <definition>uint16 UserLog::getUID</definition>
+        <argsstring>() const </argsstring>
+        <name>getUID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the UID this <ref refid="class_user_log" kindref="compound">UserLog</ref> represents.</para><para><simplesect kind="return"><para>UID the current <ref refid="class_user_log" kindref="compound">UserLog</ref> represents. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="51" column="1" bodyfile="tools/message_logger/user_log.cpp" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_log_1a4deca1b488f26a86684c21434ddad9f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>BW::string</type>
+        <definition>BW::string UserLog::getUsername</definition>
+        <argsstring>() const </argsstring>
+        <name>getUsername</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the username this <ref refid="class_user_log" kindref="compound">UserLog</ref> represents.</para><para><simplesect kind="return"><para>An BW::string of the username the current <ref refid="class_user_log" kindref="compound">UserLog</ref> represents. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="52" column="1" bodyfile="tools/message_logger/user_log.cpp" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_log_1a18ef9654a5284634113a9ecbb65b6af4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLog::hasActiveSegments</definition>
+        <argsstring>() const </argsstring>
+        <name>hasActiveSegments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns whether there are any UserSegments currently being written to by a MessageLogger process.</para><para><simplesect kind="return"><para>true if <ref refid="class_user_log" kindref="compound">UserLog</ref> has active segments, false if not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="54" column="1" bodyfile="tools/message_logger/user_log.cpp" bodystart="111" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_log_1a07ad5af3e3c126f107f851f8cbf325c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>BW::string</type>
+        <definition>BW::string UserLog::activeSegmentSuffix</definition>
+        <argsstring>() const </argsstring>
+        <name>activeSegmentSuffix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the suffix of the current segment being written to.</para><para><simplesect kind="return"><para>Active segment suffix string, empty string if there is no active segment. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="55" column="1" bodyfile="tools/message_logger/user_log.cpp" bodystart="123" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_log_1a018d5f2bc0cd7a062a4a317a7e529d8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLog::loadSegmentFilesUsage</definition>
+        <argsstring>(UserSegmentUsage &amp;usage)</argsstring>
+        <name>loadSegmentFilesUsage</name>
+        <param>
+          <type><ref refid="class_user_segment_usage" kindref="compound">UserSegmentUsage</ref> &amp;</type>
+          <declname>usage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Load the total disk usage details for the current user&apos;s segment files. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="57" column="1" bodyfile="tools/message_logger/user_log.cpp" bodystart="204" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_log_1a4fd05dfb95b963f056b7cea7ab22133a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UserLog::maxHostnameLen</definition>
+        <argsstring>() const </argsstring>
+        <name>maxHostnameLen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the longest hostname length from the user log</para><para><simplesect kind="return"><para>maximum hostname length </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="59" column="1" bodyfile="tools/message_logger/user_log.cpp" bodystart="222" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_log_1a0cbf11a1381ef45e100e863e50180656" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UserLog::maxHostnameLen</definition>
+        <argsstring>(int len)</argsstring>
+        <name>maxHostnameLen</name>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the longest hostname length from the user log </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="60" column="1" bodyfile="tools/message_logger/user_log.cpp" bodystart="231" bodyend="234"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="class_user_log_1a61cb2a3b6923476bebba54248e6b067f" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UserLog::filterSegmentFiles</definition>
+        <argsstring>(const struct dirent *ent)</argsstring>
+        <name>filterSegmentFiles</name>
+        <param>
+          <type>const struct dirent *</type>
+          <declname>ent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Find the segment files matching entries.* </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="63" column="1" bodyfile="tools/message_logger/user_log.cpp" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_log_1a24176161d7ae7452822c31190a64a1e7" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UserLog::freeDirents</definition>
+        <argsstring>(struct dirent **list, int numEntries)</argsstring>
+        <name>freeDirents</name>
+        <param>
+          <type>struct dirent **</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numEntries</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper function to assist in releasing a list of directory entries </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="65" column="1" bodyfile="tools/message_logger/user_log.cpp" bodystart="146" bodyend="153"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_user_log_1a18c00aade45b8f58d4bfd4a2162fa2c9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLog::visitAllSegmentFiles</definition>
+        <argsstring>(UserSegmentFileVisitor &amp;visitor)</argsstring>
+        <name>visitAllSegmentFiles</name>
+        <param>
+          <type><ref refid="class_user_segment_file_visitor" kindref="compound">UserSegmentFileVisitor</ref> &amp;</type>
+          <declname>visitor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Iterates through all the segment files on disk, passing each segment&apos;s worth to the given visitor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_log.hpp" line="67" column="1" bodyfile="tools/message_logger/user_log.cpp" bodystart="160" bodyend="198"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A <ref refid="class_user_log" kindref="compound">UserLog</ref> manages a single user&apos;s section of a log. It is mainly responsible for managing the monolithic files in the user&apos;s directory. The segmented files are managed by UserSegments. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="3054">
+        <label>UserLogWriter</label>
+        <link refid="class_user_log_writer"/>
+        <childnode refid="3051" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3052">
+        <label>SafeReferenceCount</label>
+      </node>
+      <node id="3053">
+        <label>UserLogReader</label>
+        <link refid="class_user_log_reader"/>
+        <childnode refid="3051" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3051">
+        <label>UserLog</label>
+        <link refid="class_user_log"/>
+        <childnode refid="3052" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3061">
+        <label>BinaryFileHandler</label>
+        <link refid="class_binary_file_handler"/>
+        <childnode refid="3059" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3059">
+        <label>FileHandler</label>
+        <link refid="class_file_handler"/>
+      </node>
+      <node id="3060">
+        <label>UserComponents</label>
+        <link refid="class_user_components"/>
+        <childnode refid="3061" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3056">
+        <label>SafeReferenceCount</label>
+      </node>
+      <node id="3055">
+        <label>UserLog</label>
+        <link refid="class_user_log"/>
+        <childnode refid="3056" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3057" relation="usage">
+          <edgelabel>uidFile_</edgelabel>
+        </childnode>
+        <childnode refid="3060" relation="usage">
+          <edgelabel>userComponents_</edgelabel>
+        </childnode>
+      </node>
+      <node id="3058">
+        <label>TextFileHandler</label>
+        <link refid="class_text_file_handler"/>
+        <childnode refid="3059" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3057">
+        <label>UnaryIntegerFile</label>
+        <link refid="class_unary_integer_file"/>
+        <childnode refid="3058" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/message_logger/user_log.hpp" line="42" column="1" bodyfile="tools/message_logger/user_log.hpp" bodystart="41" bodyend="92"/>
+    <listofallmembers>
+      <member refid="class_user_log_1a07ad5af3e3c126f107f851f8cbf325c4" prot="public" virt="non-virtual"><scope>UserLog</scope><name>activeSegmentSuffix</name></member>
+      <member refid="class_user_log_1a61cb2a3b6923476bebba54248e6b067f" prot="protected" virt="non-virtual"><scope>UserLog</scope><name>filterSegmentFiles</name></member>
+      <member refid="class_user_log_1a24176161d7ae7452822c31190a64a1e7" prot="protected" virt="non-virtual"><scope>UserLog</scope><name>freeDirents</name></member>
+      <member refid="class_user_log_1a7be8b13c428ae161ff8cd0361c7147e9" prot="public" virt="non-virtual"><scope>UserLog</scope><name>getUID</name></member>
+      <member refid="class_user_log_1a4deca1b488f26a86684c21434ddad9f0" prot="public" virt="non-virtual"><scope>UserLog</scope><name>getUsername</name></member>
+      <member refid="class_user_log_1a18ef9654a5284634113a9ecbb65b6af4" prot="public" virt="non-virtual"><scope>UserLog</scope><name>hasActiveSegments</name></member>
+      <member refid="class_user_log_1a4a72327001d0eac1d6268eb7e950e2de" prot="public" virt="virtual"><scope>UserLog</scope><name>init</name></member>
+      <member refid="class_user_log_1a260d36eec4b98b77cc698165e2eb3e54" prot="public" virt="non-virtual"><scope>UserLog</scope><name>isGood</name></member>
+      <member refid="class_user_log_1a31a1c989cda19589acf502519bdf1634" prot="protected" virt="non-virtual"><scope>UserLog</scope><name>isGood_</name></member>
+      <member refid="class_user_log_1a018d5f2bc0cd7a062a4a317a7e529d8e" prot="public" virt="non-virtual"><scope>UserLog</scope><name>loadSegmentFilesUsage</name></member>
+      <member refid="class_user_log_1a4fd05dfb95b963f056b7cea7ab22133a" prot="public" virt="non-virtual"><scope>UserLog</scope><name>maxHostnameLen</name></member>
+      <member refid="class_user_log_1a0cbf11a1381ef45e100e863e50180656" prot="public" virt="non-virtual"><scope>UserLog</scope><name>maxHostnameLen</name></member>
+      <member refid="class_user_log_1ac0fd1edcae86ea8f824b00abe6e1cc19" prot="protected" virt="non-virtual"><scope>UserLog</scope><name>maxHostnameLen_</name></member>
+      <member refid="class_user_log_1a3d62b43feb6fb7dd250c7d25b489bcf6" prot="protected" virt="non-virtual"><scope>UserLog</scope><name>path_</name></member>
+      <member refid="class_user_log_1ab1e16c1a6bef093e344e544a4111f2ba" prot="protected" virt="non-virtual"><scope>UserLog</scope><name>uid_</name></member>
+      <member refid="class_user_log_1a3b80fd48672d5d8b24319f05366bb049" prot="protected" virt="non-virtual"><scope>UserLog</scope><name>uidFile_</name></member>
+      <member refid="class_user_log_1a987d1bc61c15d6f81e1ec32416051936" prot="protected" virt="non-virtual"><scope>UserLog</scope><name>userComponents_</name></member>
+      <member refid="class_user_log_1a8999bf4ca66fb49eee93b23cf6409b6a" prot="public" virt="non-virtual"><scope>UserLog</scope><name>UserLog</name></member>
+      <member refid="class_user_log_1ad145fe519c8d826817d4786dd82b9935" prot="protected" virt="non-virtual"><scope>UserLog</scope><name>username_</name></member>
+      <member refid="class_user_log_1aa5ad7a076931055067acb17a2222bbaa" prot="protected" virt="non-virtual"><scope>UserLog</scope><name>userSegments_</name></member>
+      <member refid="class_user_log_1a18c00aade45b8f58d4bfd4a2162fa2c9" prot="protected" virt="non-virtual"><scope>UserLog</scope><name>visitAllSegmentFiles</name></member>
+      <member refid="class_user_log_1afad43034245613e1006240965166168b" prot="public" virt="virtual"><scope>UserLog</scope><name>~UserLog</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

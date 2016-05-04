@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_msg_receiver" kind="class" language="C++" prot="public">
+    <compoundname>MsgReceiver</compoundname>
+    <includes refid="msg__receiver_8hpp" local="no">msg_receiver.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_msg_receiver_1a21430624c45adb7a5e3bf4426b9f24bc" prot="private" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* MsgReceiver::pBuf_</definition>
+        <argsstring></argsstring>
+        <name>pBuf_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/msg_receiver.hpp" line="44" column="1" bodyfile="tools/consolidate_dbs/msg_receiver.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_msg_receiver_1a3ecc519af1689265a0d52239c68b4785" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t MsgReceiver::bufCap_</definition>
+        <argsstring></argsstring>
+        <name>bufCap_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/msg_receiver.hpp" line="45" column="1" bodyfile="tools/consolidate_dbs/msg_receiver.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_msg_receiver_1ad44cdc49df35b66b7cd19d694b8ed073" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t MsgReceiver::bufUsed_</definition>
+        <argsstring></argsstring>
+        <name>bufUsed_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/msg_receiver.hpp" line="46" column="1" bodyfile="tools/consolidate_dbs/msg_receiver.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_msg_receiver_1ab72de165d5c052321b5d060fb3958bc2" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t MsgReceiver::msgSize_</definition>
+        <argsstring></argsstring>
+        <name>msgSize_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/msg_receiver.hpp" line="47" column="1" bodyfile="tools/consolidate_dbs/msg_receiver.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_msg_receiver_1a67ba09cce55457a16a8824eefaca7e38" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MsgReceiver::MsgReceiver</definition>
+        <argsstring>(size_t bufSize)</argsstring>
+        <name>MsgReceiver</name>
+        <param>
+          <type>size_t</type>
+          <declname>bufSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/msg_receiver.hpp" line="22" column="1" bodyfile="tools/consolidate_dbs/msg_receiver.hpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_receiver_1a1b426d7aee452539e04e74eb8d34238f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MsgReceiver::~MsgReceiver</definition>
+        <argsstring>()</argsstring>
+        <name>~MsgReceiver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/msg_receiver.hpp" line="26" column="1" bodyfile="tools/consolidate_dbs/msg_receiver.hpp" bodystart="26" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_receiver_1ad0fe1297a7f081adf28842afd7921adb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>BW_BEGIN_NAMESPACE void MsgReceiver::setMsgSize</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>setMsgSize</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets up this <ref refid="class_msg_receiver" kindref="compound">MsgReceiver</ref> to receive a message of the specified size. When size is 0, we just receive whatever we can from the socket (limited by our buffer size) and isDone() is true no matter what. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/msg_receiver.hpp" line="32" column="1" bodyfile="tools/consolidate_dbs/msg_receiver.cpp" bodystart="15" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_receiver_1a0e80fe09c5a70b26e72beb93c4cba428" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MsgReceiver::recvMsg</definition>
+        <argsstring>(Endpoint &amp;endPoint)</argsstring>
+        <name>recvMsg</name>
+        <param>
+          <type>Endpoint &amp;</type>
+          <declname>endPoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tries to read from the socket. Returns false if there was an error. When we finishes receiving our current message, isDone() will be true. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/msg_receiver.hpp" line="33" column="1" bodyfile="tools/consolidate_dbs/msg_receiver.cpp" bodystart="33" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_receiver_1a38d6f7df522ab41043aa6e7dda738b40" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const void *</type>
+        <definition>const void* MsgReceiver::msg</definition>
+        <argsstring>() const </argsstring>
+        <name>msg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/msg_receiver.hpp" line="35" column="1" bodyfile="tools/consolidate_dbs/msg_receiver.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_receiver_1a62c2fc3b1798ca37f6f35ec9ae5b94cb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t MsgReceiver::msgLen</definition>
+        <argsstring>() const </argsstring>
+        <name>msgLen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/msg_receiver.hpp" line="36" column="1" bodyfile="tools/consolidate_dbs/msg_receiver.hpp" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_receiver_1aa6fce6ec66bad45efcdefdc446b8bd17" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t MsgReceiver::capacity</definition>
+        <argsstring>() const </argsstring>
+        <name>capacity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/msg_receiver.hpp" line="37" column="1" bodyfile="tools/consolidate_dbs/msg_receiver.hpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_receiver_1a9540ac0b0b6823a9fdf43bce1e79184e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MsgReceiver::isDone</definition>
+        <argsstring>() const </argsstring>
+        <name>isDone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/msg_receiver.hpp" line="38" column="1" bodyfile="tools/consolidate_dbs/msg_receiver.hpp" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_receiver_1ae2fe51bcee79704d0bab8aff9a8fc659" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MsgReceiver::isAlwaysDone</definition>
+        <argsstring>() const </argsstring>
+        <name>isAlwaysDone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/msg_receiver.hpp" line="39" column="1" bodyfile="tools/consolidate_dbs/msg_receiver.hpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_msg_receiver_1a695a7040d7b59916984d5d42c860cd74" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MsgReceiver::reallocBuf</definition>
+        <argsstring>(size_t bufSize)</argsstring>
+        <name>reallocBuf</name>
+        <param>
+          <type>size_t</type>
+          <declname>bufSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reallocates our buffer to be the specified size. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/msg_receiver.hpp" line="42" column="1" bodyfile="tools/consolidate_dbs/msg_receiver.cpp" bodystart="61" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class helps receives a &quot;message&quot; of a specific size. </para>    </detaileddescription>
+    <location file="tools/consolidate_dbs/msg_receiver.hpp" line="20" column="1" bodyfile="tools/consolidate_dbs/msg_receiver.hpp" bodystart="19" bodyend="48"/>
+    <listofallmembers>
+      <member refid="class_msg_receiver_1a3ecc519af1689265a0d52239c68b4785" prot="private" virt="non-virtual"><scope>MsgReceiver</scope><name>bufCap_</name></member>
+      <member refid="class_msg_receiver_1ad44cdc49df35b66b7cd19d694b8ed073" prot="private" virt="non-virtual"><scope>MsgReceiver</scope><name>bufUsed_</name></member>
+      <member refid="class_msg_receiver_1aa6fce6ec66bad45efcdefdc446b8bd17" prot="public" virt="non-virtual"><scope>MsgReceiver</scope><name>capacity</name></member>
+      <member refid="class_msg_receiver_1ae2fe51bcee79704d0bab8aff9a8fc659" prot="public" virt="non-virtual"><scope>MsgReceiver</scope><name>isAlwaysDone</name></member>
+      <member refid="class_msg_receiver_1a9540ac0b0b6823a9fdf43bce1e79184e" prot="public" virt="non-virtual"><scope>MsgReceiver</scope><name>isDone</name></member>
+      <member refid="class_msg_receiver_1a38d6f7df522ab41043aa6e7dda738b40" prot="public" virt="non-virtual"><scope>MsgReceiver</scope><name>msg</name></member>
+      <member refid="class_msg_receiver_1a62c2fc3b1798ca37f6f35ec9ae5b94cb" prot="public" virt="non-virtual"><scope>MsgReceiver</scope><name>msgLen</name></member>
+      <member refid="class_msg_receiver_1a67ba09cce55457a16a8824eefaca7e38" prot="public" virt="non-virtual"><scope>MsgReceiver</scope><name>MsgReceiver</name></member>
+      <member refid="class_msg_receiver_1ab72de165d5c052321b5d060fb3958bc2" prot="private" virt="non-virtual"><scope>MsgReceiver</scope><name>msgSize_</name></member>
+      <member refid="class_msg_receiver_1a21430624c45adb7a5e3bf4426b9f24bc" prot="private" virt="non-virtual"><scope>MsgReceiver</scope><name>pBuf_</name></member>
+      <member refid="class_msg_receiver_1a695a7040d7b59916984d5d42c860cd74" prot="private" virt="non-virtual"><scope>MsgReceiver</scope><name>reallocBuf</name></member>
+      <member refid="class_msg_receiver_1a0e80fe09c5a70b26e72beb93c4cba428" prot="public" virt="non-virtual"><scope>MsgReceiver</scope><name>recvMsg</name></member>
+      <member refid="class_msg_receiver_1ad0fe1297a7f081adf28842afd7921adb" prot="public" virt="non-virtual"><scope>MsgReceiver</scope><name>setMsgSize</name></member>
+      <member refid="class_msg_receiver_1a1b426d7aee452539e04e74eb8d34238f" prot="public" virt="non-virtual"><scope>MsgReceiver</scope><name>~MsgReceiver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_mongo_d_b_1_1_add_server_start_task" kind="class" language="C++" prot="public">
+    <compoundname>MongoDB::AddServerStartTask</compoundname>
+    <basecompoundref refid="class_mongo_d_b_1_1_mongo_d_b_background_task" prot="public" virt="non-virtual">MongoDB::MongoDBBackgroundTask</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_add_server_start_task_1ab96eda50d53bd265c9776519c351a819" prot="private" static="no" mutable="no">
+        <type>MessageLogger::UID</type>
+        <definition>MessageLogger::UID MongoDB::AddServerStartTask::uid_</definition>
+        <argsstring></argsstring>
+        <name>uid_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/add_server_start_task.hpp" line="30" column="1" bodyfile="tools/message_logger/mongodb/tasks/add_server_start_task.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_add_server_start_task_1af3ca978e039bdbfd4027936d752cd8ee" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string MongoDB::AddServerStartTask::username_</definition>
+        <argsstring></argsstring>
+        <name>username_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/add_server_start_task.hpp" line="31" column="1" bodyfile="tools/message_logger/mongodb/tasks/add_server_start_task.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_add_server_start_task_1ac93ffdae7084f2a580174a8eba8e1053" prot="private" static="no" mutable="no">
+        <type>uint64</type>
+        <definition>uint64 MongoDB::AddServerStartTask::serverStartTime_</definition>
+        <argsstring></argsstring>
+        <name>serverStartTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/add_server_start_task.hpp" line="32" column="1" bodyfile="tools/message_logger/mongodb/tasks/add_server_start_task.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mongo_d_b_1_1_add_server_start_task_1a32e5fbbf2a5cd4a7812e5e8b2db0d3d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MongoDB::AddServerStartTask::AddServerStartTask</definition>
+        <argsstring>(MessageLogger::UID uid, const BW::string &amp;username, uint64 serverStartTime)</argsstring>
+        <name>AddServerStartTask</name>
+        <param>
+          <type>MessageLogger::UID</type>
+          <declname>uid</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>uint64</type>
+          <declname>serverStartTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The creation of this task consumes the passed-in log buffer, making it so that the contained BSON objects should belong only to this task. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/add_server_start_task.hpp" line="22" column="1" bodyfile="tools/message_logger/mongodb/tasks/add_server_start_task.cpp" bodystart="26" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_mongo_d_b_1_1_add_server_start_task_1a838e18c09fbb26deeab6873fc90531db" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MongoDB::AddServerStartTask::performBackgroundTask</definition>
+        <argsstring>(TaskManager &amp;mgr, ConnectionThreadData &amp;connectionData)</argsstring>
+        <name>performBackgroundTask</name>
+        <reimplements refid="class_mongo_d_b_1_1_mongo_d_b_background_task_1afa658d48de7addb5b97e449dd3c182fe">performBackgroundTask</reimplements>
+        <param>
+          <type>TaskManager &amp;</type>
+          <declname>mgr</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mongo_d_b_1_1_connection_thread_data" kindref="compound">ConnectionThreadData</ref> &amp;</type>
+          <declname>connectionData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/add_server_start_task.hpp" line="26" column="1" bodyfile="tools/message_logger/mongodb/tasks/add_server_start_task.cpp" bodystart="39" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="72">
+        <label>MongoDB::MongoDBBackgroundTask</label>
+        <link refid="class_mongo_d_b_1_1_mongo_d_b_background_task"/>
+        <childnode refid="73" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>MongoDB::AddServerStartTask</label>
+        <link refid="class_mongo_d_b_1_1_add_server_start_task"/>
+        <childnode refid="72" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>BackgroundTask</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="75">
+        <label>MongoDB::MongoDBBackgroundTask</label>
+        <link refid="class_mongo_d_b_1_1_mongo_d_b_background_task"/>
+        <childnode refid="76" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>MongoDB::AddServerStartTask</label>
+        <link refid="class_mongo_d_b_1_1_add_server_start_task"/>
+        <childnode refid="75" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>BackgroundTask</label>
+      </node>
+    </collaborationgraph>
+    <location file="tools/message_logger/mongodb/tasks/add_server_start_task.hpp" line="20" column="1" bodyfile="tools/message_logger/mongodb/tasks/add_server_start_task.hpp" bodystart="19" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_mongo_d_b_1_1_add_server_start_task_1a32e5fbbf2a5cd4a7812e5e8b2db0d3d3" prot="public" virt="non-virtual"><scope>MongoDB::AddServerStartTask</scope><name>AddServerStartTask</name></member>
+      <member refid="class_mongo_d_b_1_1_mongo_d_b_background_task_1a50ca0ec7c9b3842b648f21db4e076a09" prot="protected" virt="non-virtual"><scope>MongoDB::AddServerStartTask</scope><name>doBackgroundTask</name></member>
+      <member refid="class_mongo_d_b_1_1_mongo_d_b_background_task_1a05fb4c0e7cfcf525a84f6fdb5619091e" prot="protected" virt="non-virtual"><scope>MongoDB::AddServerStartTask</scope><name>doBackgroundTask</name></member>
+      <member refid="class_mongo_d_b_1_1_mongo_d_b_background_task_1a7788d75382d6f561cb9a72656634826a" prot="public" virt="non-virtual"><scope>MongoDB::AddServerStartTask</scope><name>MongoDBBackgroundTask</name></member>
+      <member refid="class_mongo_d_b_1_1_add_server_start_task_1a838e18c09fbb26deeab6873fc90531db" prot="protected" virt="virtual"><scope>MongoDB::AddServerStartTask</scope><name>performBackgroundTask</name></member>
+      <member refid="class_mongo_d_b_1_1_add_server_start_task_1ac93ffdae7084f2a580174a8eba8e1053" prot="private" virt="non-virtual"><scope>MongoDB::AddServerStartTask</scope><name>serverStartTime_</name></member>
+      <member refid="class_mongo_d_b_1_1_add_server_start_task_1ab96eda50d53bd265c9776519c351a819" prot="private" virt="non-virtual"><scope>MongoDB::AddServerStartTask</scope><name>uid_</name></member>
+      <member refid="class_mongo_d_b_1_1_add_server_start_task_1af3ca978e039bdbfd4027936d752cd8ee" prot="private" virt="non-virtual"><scope>MongoDB::AddServerStartTask</scope><name>username_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,428 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_log_entry" kind="class" language="C++" prot="public">
+    <compoundname>LogEntry</compoundname>
+    <includes refid="log__entry_8hpp" local="no">log_entry.hpp</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_log_entry_1ad99347573dd744949301fc92cf242607" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class UserSegmentWriter</definition>
+        <argsstring></argsstring>
+        <name>UserSegmentWriter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="20" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_log_entry_1a5fa7d0946bf2ce99a209f52857e5c381" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend BinaryOStream &amp;</type>
+        <definition>BinaryOStream&amp; operator&lt;&lt;</definition>
+        <argsstring>(BinaryOStream &amp;os, const LogEntry &amp;v)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_log_entry" kindref="compound">LogEntry</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="126" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="126" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_log_entry_1ad8b8f413e95b2bdd3079c9e3effef532" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend BinaryIStream &amp;</type>
+        <definition>BinaryIStream&amp; operator&gt;&gt;</definition>
+        <argsstring>(BinaryIStream &amp;is, LogEntry &amp;v)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>is</declname>
+        </param>
+        <param>
+          <type><ref refid="class_log_entry" kindref="compound">LogEntry</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="137" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="137" bodyend="146"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_log_entry_1a2ca3498dc5d2fbfe9a37fe2873d94a3c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_log_time" kindref="compound">LogTime</ref></type>
+        <definition>LogTime LogEntry::time_</definition>
+        <argsstring></argsstring>
+        <name>time_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="108" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_entry_1a01c17e9b8d4b01778aa1d36d5b81d912" prot="private" static="no" mutable="no">
+        <type>MessageLogger::UserComponentID</type>
+        <definition>MessageLogger::UserComponentID LogEntry::componentID_</definition>
+        <argsstring></argsstring>
+        <name>componentID_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="110" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_entry_1ac3a364dd0a5b07b94e1d001070c49238" prot="private" static="no" mutable="no">
+        <type>MessageLogger::CategoryID</type>
+        <definition>MessageLogger::CategoryID LogEntry::categoryID_</definition>
+        <argsstring></argsstring>
+        <name>categoryID_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="112" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_entry_1ac9eb6b476af514bcc011367444485f8f" prot="private" static="no" mutable="no">
+        <type>DebugMessageSource</type>
+        <definition>DebugMessageSource LogEntry::messageSource_</definition>
+        <argsstring></argsstring>
+        <name>messageSource_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="114" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_entry_1ac22b095bc82be09647cd81c194a3a91d" prot="private" static="no" mutable="no">
+        <type>MessageLogger::NetworkMessagePriority</type>
+        <definition>MessageLogger::NetworkMessagePriority LogEntry::messagePriority_</definition>
+        <argsstring></argsstring>
+        <name>messagePriority_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="116" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_entry_1ac044f7b7a398e116a5cd22a579308fb4" prot="private" static="no" mutable="no">
+        <type>MessageLogger::FormatStringOffsetId</type>
+        <definition>MessageLogger::FormatStringOffsetId LogEntry::stringOffset_</definition>
+        <argsstring></argsstring>
+        <name>stringOffset_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="118" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_entry_1a808c81a971b4cad1c8137ac111d6ab01" prot="private" static="no" mutable="no">
+        <type>uint32</type>
+        <definition>uint32 LogEntry::argsOffset_</definition>
+        <argsstring></argsstring>
+        <name>argsOffset_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="120" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_entry_1af7ce9df1118b3fccbab524693a9f12c8" prot="private" static="no" mutable="no">
+        <type>uint16</type>
+        <definition>uint16 LogEntry::argsLen_</definition>
+        <argsstring></argsstring>
+        <name>argsLen_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="121" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_entry_1a57dba6951561fadbeccd1aaf4ee7db84" prot="private" static="no" mutable="no">
+        <type>uint32</type>
+        <definition>uint32 LogEntry::metadataOffset_</definition>
+        <argsstring></argsstring>
+        <name>metadataOffset_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="123" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_entry_1a6b8054d7332de571c86e9902211217fc" prot="private" static="no" mutable="no">
+        <type>uint16</type>
+        <definition>uint16 LogEntry::metadataLen_</definition>
+        <argsstring></argsstring>
+        <name>metadataLen_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="124" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_log_entry_1a997fba6e2f241ec6d933f557a3b4bfef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>LogEntry::LogEntry</definition>
+        <argsstring>(const struct timeval &amp;tv, MessageLogger::UserComponentID userComponentID, MessageLogger::NetworkMessagePriority messagePriority, MessageLogger::FormatStringOffsetId stringOffset, MessageLogger::CategoryID categoryID, DebugMessageSource messageSource)</argsstring>
+        <name>LogEntry</name>
+        <param>
+          <type>const struct timeval &amp;</type>
+          <declname>tv</declname>
+        </param>
+        <param>
+          <type>MessageLogger::UserComponentID</type>
+          <declname>userComponentID</declname>
+        </param>
+        <param>
+          <type>MessageLogger::NetworkMessagePriority</type>
+          <declname>messagePriority</declname>
+        </param>
+        <param>
+          <type>MessageLogger::FormatStringOffsetId</type>
+          <declname>stringOffset</declname>
+        </param>
+        <param>
+          <type>MessageLogger::CategoryID</type>
+          <declname>categoryID</declname>
+        </param>
+        <param>
+          <type>DebugMessageSource</type>
+          <declname>messageSource</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="23" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="23" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_entry_1a78c2786c30d8d6ba4b2aa8b372f58305" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>LogEntry::LogEntry</definition>
+        <argsstring>()</argsstring>
+        <name>LogEntry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="39" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_entry_1a444f0411993d5c04965d1750860c4a21" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_log_time" kindref="compound">LogTime</ref> &amp;</type>
+        <definition>const LogTime&amp; LogEntry::time</definition>
+        <argsstring>() const </argsstring>
+        <name>time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="43" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_entry_1a2703da2b90ec0c546e19bf8b823b6a18" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>MessageLogger::CategoryID</type>
+        <definition>MessageLogger::CategoryID LogEntry::categoryID</definition>
+        <argsstring>() const </argsstring>
+        <name>categoryID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="48" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_entry_1a89e7d3433a6f83360c71256fbeeb93c2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>DebugMessageSource</type>
+        <definition>DebugMessageSource LogEntry::messageSource</definition>
+        <argsstring>() const </argsstring>
+        <name>messageSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="53" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_entry_1acc8e3dccff2d22fb8132a07f16c142b3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>MessageLogger::NetworkMessagePriority</type>
+        <definition>MessageLogger::NetworkMessagePriority LogEntry::messagePriority</definition>
+        <argsstring>() const </argsstring>
+        <name>messagePriority</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="58" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_entry_1ade7d967922388cc90948867028d97295" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>MessageLogger::FormatStringOffsetId</type>
+        <definition>MessageLogger::FormatStringOffsetId LogEntry::stringOffset</definition>
+        <argsstring>() const </argsstring>
+        <name>stringOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="63" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_entry_1ae6e1f69c21c8f269913638857917464e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32</type>
+        <definition>uint32 LogEntry::argsOffset</definition>
+        <argsstring>() const </argsstring>
+        <name>argsOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="68" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_entry_1afaab039ec667c03f836e38f7a4382d7d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint16</type>
+        <definition>uint16 LogEntry::argsLength</definition>
+        <argsstring>() const </argsstring>
+        <name>argsLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="73" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_entry_1ae6d26eb73228d86f2b8295a5a0995d23" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>MessageLogger::UserComponentID</type>
+        <definition>MessageLogger::UserComponentID LogEntry::userComponentID</definition>
+        <argsstring>() const </argsstring>
+        <name>userComponentID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="78" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_entry_1a5a2cd21d2c796e67df1461ccf0efa3dc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>MessageLogger::MetaDataOffset</type>
+        <definition>MessageLogger::MetaDataOffset LogEntry::metadataOffset</definition>
+        <argsstring>() const </argsstring>
+        <name>metadataOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="83" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_entry_1a1c9a91d4735868f76b82f7d4eb95916c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint16</type>
+        <definition>uint16 LogEntry::metadataLength</definition>
+        <argsstring>() const </argsstring>
+        <name>metadataLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="88" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_entry_1a1efc8eb7a78acd74b25c8ae702936fa8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LogEntry::operator==</definition>
+        <argsstring>(const LogEntry &amp;logEntry) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="class_log_entry" kindref="compound">LogEntry</ref> &amp;</type>
+          <declname>logEntry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_entry.hpp" line="93" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="93" bodyend="105"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The fixed-length portion of a log entry (i.e. the bit that gets written to the &apos;entries&apos; file). </para>    </detaileddescription>
+    <location file="tools/message_logger/log_entry.hpp" line="19" column="1" bodyfile="tools/message_logger/log_entry.hpp" bodystart="18" bodyend="147"/>
+    <listofallmembers>
+      <member refid="class_log_entry_1af7ce9df1118b3fccbab524693a9f12c8" prot="private" virt="non-virtual"><scope>LogEntry</scope><name>argsLen_</name></member>
+      <member refid="class_log_entry_1afaab039ec667c03f836e38f7a4382d7d" prot="public" virt="non-virtual"><scope>LogEntry</scope><name>argsLength</name></member>
+      <member refid="class_log_entry_1ae6e1f69c21c8f269913638857917464e" prot="public" virt="non-virtual"><scope>LogEntry</scope><name>argsOffset</name></member>
+      <member refid="class_log_entry_1a808c81a971b4cad1c8137ac111d6ab01" prot="private" virt="non-virtual"><scope>LogEntry</scope><name>argsOffset_</name></member>
+      <member refid="class_log_entry_1a2703da2b90ec0c546e19bf8b823b6a18" prot="public" virt="non-virtual"><scope>LogEntry</scope><name>categoryID</name></member>
+      <member refid="class_log_entry_1ac3a364dd0a5b07b94e1d001070c49238" prot="private" virt="non-virtual"><scope>LogEntry</scope><name>categoryID_</name></member>
+      <member refid="class_log_entry_1a01c17e9b8d4b01778aa1d36d5b81d912" prot="private" virt="non-virtual"><scope>LogEntry</scope><name>componentID_</name></member>
+      <member refid="class_log_entry_1a997fba6e2f241ec6d933f557a3b4bfef" prot="public" virt="non-virtual"><scope>LogEntry</scope><name>LogEntry</name></member>
+      <member refid="class_log_entry_1a78c2786c30d8d6ba4b2aa8b372f58305" prot="public" virt="non-virtual"><scope>LogEntry</scope><name>LogEntry</name></member>
+      <member refid="class_log_entry_1acc8e3dccff2d22fb8132a07f16c142b3" prot="public" virt="non-virtual"><scope>LogEntry</scope><name>messagePriority</name></member>
+      <member refid="class_log_entry_1ac22b095bc82be09647cd81c194a3a91d" prot="private" virt="non-virtual"><scope>LogEntry</scope><name>messagePriority_</name></member>
+      <member refid="class_log_entry_1a89e7d3433a6f83360c71256fbeeb93c2" prot="public" virt="non-virtual"><scope>LogEntry</scope><name>messageSource</name></member>
+      <member refid="class_log_entry_1ac9eb6b476af514bcc011367444485f8f" prot="private" virt="non-virtual"><scope>LogEntry</scope><name>messageSource_</name></member>
+      <member refid="class_log_entry_1a6b8054d7332de571c86e9902211217fc" prot="private" virt="non-virtual"><scope>LogEntry</scope><name>metadataLen_</name></member>
+      <member refid="class_log_entry_1a1c9a91d4735868f76b82f7d4eb95916c" prot="public" virt="non-virtual"><scope>LogEntry</scope><name>metadataLength</name></member>
+      <member refid="class_log_entry_1a5a2cd21d2c796e67df1461ccf0efa3dc" prot="public" virt="non-virtual"><scope>LogEntry</scope><name>metadataOffset</name></member>
+      <member refid="class_log_entry_1a57dba6951561fadbeccd1aaf4ee7db84" prot="private" virt="non-virtual"><scope>LogEntry</scope><name>metadataOffset_</name></member>
+      <member refid="class_log_entry_1a5fa7d0946bf2ce99a209f52857e5c381" prot="private" virt="non-virtual"><scope>LogEntry</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_log_entry_1a1efc8eb7a78acd74b25c8ae702936fa8" prot="public" virt="non-virtual"><scope>LogEntry</scope><name>operator==</name></member>
+      <member refid="class_log_entry_1ad8b8f413e95b2bdd3079c9e3effef532" prot="private" virt="non-virtual"><scope>LogEntry</scope><name>operator&gt;&gt;</name></member>
+      <member refid="class_log_entry_1ade7d967922388cc90948867028d97295" prot="public" virt="non-virtual"><scope>LogEntry</scope><name>stringOffset</name></member>
+      <member refid="class_log_entry_1ac044f7b7a398e116a5cd22a579308fb4" prot="private" virt="non-virtual"><scope>LogEntry</scope><name>stringOffset_</name></member>
+      <member refid="class_log_entry_1a444f0411993d5c04965d1750860c4a21" prot="public" virt="non-virtual"><scope>LogEntry</scope><name>time</name></member>
+      <member refid="class_log_entry_1a2ca3498dc5d2fbfe9a37fe2873d94a3c" prot="private" virt="non-virtual"><scope>LogEntry</scope><name>time_</name></member>
+      <member refid="class_log_entry_1ae6d26eb73228d86f2b8295a5a0995d23" prot="public" virt="non-virtual"><scope>LogEntry</scope><name>userComponentID</name></member>
+      <member refid="class_log_entry_1ad99347573dd744949301fc92cf242607" prot="private" virt="non-virtual"><scope>LogEntry</scope><name>UserSegmentWriter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

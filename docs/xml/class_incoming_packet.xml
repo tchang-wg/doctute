@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_incoming_packet" kind="class" language="C++" prot="public">
+    <compoundname>IncomingPacket</compoundname>
+    <includes refid="incoming__packet_8hpp" local="no">incoming_packet.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_incoming_packet_1a38760d0474a8020bc5376aa77f44cd63" prot="private" static="no" mutable="no">
+        <type><ref refid="class_b_w_machined" kindref="compound">BWMachined</ref> &amp;</type>
+        <definition>BWMachined&amp; IncomingPacket::machined_</definition>
+        <argsstring></argsstring>
+        <name>machined_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/incoming_packet.hpp" line="27" column="1" bodyfile="tools/bwmachined/incoming_packet.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_incoming_packet_1aff448baee52852a357a32759b10e6443" prot="private" static="no" mutable="no">
+        <type>MGMPacket *</type>
+        <definition>MGMPacket* IncomingPacket::pPacket_</definition>
+        <argsstring></argsstring>
+        <name>pPacket_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/incoming_packet.hpp" line="28" column="1" bodyfile="tools/bwmachined/incoming_packet.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_incoming_packet_1a7e39751d238540ea1d344ad90f8a10fa" prot="private" static="no" mutable="no">
+        <type>sockaddr_in</type>
+        <definition>sockaddr_in IncomingPacket::sin_</definition>
+        <argsstring></argsstring>
+        <name>sin_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/incoming_packet.hpp" line="29" column="1" bodyfile="tools/bwmachined/incoming_packet.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_incoming_packet_1a4a40975ee8fe8810e67b32cb9f42af85" prot="private" static="no" mutable="no">
+        <type><ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref></type>
+        <definition>ConnectionWrapperPtr IncomingPacket::pConnection_</definition>
+        <argsstring></argsstring>
+        <name>pConnection_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/incoming_packet.hpp" line="30" column="1" bodyfile="tools/bwmachined/incoming_packet.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_incoming_packet_1aab27711fd6fa35015cd494f60af698ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE IncomingPacket::IncomingPacket</definition>
+        <argsstring>(BWMachined &amp;machined, MGMPacket *pPacket, sockaddr_in &amp;sin, ConnectionWrapperPtr pConnection)</argsstring>
+        <name>IncomingPacket</name>
+        <param>
+          <type><ref refid="class_b_w_machined" kindref="compound">BWMachined</ref> &amp;</type>
+          <declname>machined</declname>
+        </param>
+        <param>
+          <type>MGMPacket *</type>
+          <declname>pPacket</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref></type>
+          <declname>pConnection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/incoming_packet.hpp" line="20" column="1" bodyfile="tools/bwmachined/incoming_packet.cpp" bodystart="14" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_incoming_packet_1a9e5aad579690682f9d9cd19069620a96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>IncomingPacket::~IncomingPacket</definition>
+        <argsstring>()</argsstring>
+        <name>~IncomingPacket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/incoming_packet.hpp" line="22" column="1" bodyfile="tools/bwmachined/incoming_packet.cpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_incoming_packet_1a8d837afd19fb49633f28eeeb86cf77e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IncomingPacket::handle</definition>
+        <argsstring>()</argsstring>
+        <name>handle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/incoming_packet.hpp" line="24" column="1" bodyfile="tools/bwmachined/incoming_packet.cpp" bodystart="42" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class represents an incoming bwmachined packet to be handled. </para>    </detaileddescription>
+    <location file="tools/bwmachined/incoming_packet.hpp" line="18" column="1" bodyfile="tools/bwmachined/incoming_packet.hpp" bodystart="17" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_incoming_packet_1a8d837afd19fb49633f28eeeb86cf77e6" prot="public" virt="non-virtual"><scope>IncomingPacket</scope><name>handle</name></member>
+      <member refid="class_incoming_packet_1aab27711fd6fa35015cd494f60af698ee" prot="public" virt="non-virtual"><scope>IncomingPacket</scope><name>IncomingPacket</name></member>
+      <member refid="class_incoming_packet_1a38760d0474a8020bc5376aa77f44cd63" prot="private" virt="non-virtual"><scope>IncomingPacket</scope><name>machined_</name></member>
+      <member refid="class_incoming_packet_1a4a40975ee8fe8810e67b32cb9f42af85" prot="private" virt="non-virtual"><scope>IncomingPacket</scope><name>pConnection_</name></member>
+      <member refid="class_incoming_packet_1aff448baee52852a357a32759b10e6443" prot="private" virt="non-virtual"><scope>IncomingPacket</scope><name>pPacket_</name></member>
+      <member refid="class_incoming_packet_1a7e39751d238540ea1d344ad90f8a10fa" prot="private" virt="non-virtual"><scope>IncomingPacket</scope><name>sin_</name></member>
+      <member refid="class_incoming_packet_1a9e5aad579690682f9d9cd19069620a96" prot="public" virt="non-virtual"><scope>IncomingPacket</scope><name>~IncomingPacket</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

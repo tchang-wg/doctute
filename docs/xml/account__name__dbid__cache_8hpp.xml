@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="account__name__dbid__cache_8hpp" kind="file" language="C++">
+    <compoundname>account_name_dbid_cache.hpp</compoundname>
+    <includes local="yes">cstdmf/bw_map.hpp</includes>
+    <includes local="yes">cstdmf/bw_string.hpp</includes>
+    <includes local="yes">cstdmf/lru_cache.hpp</includes>
+    <includes local="yes">db_storage/entity_key.hpp</includes>
+    <includes local="yes">network/basictypes.hpp</includes>
+    <includedby refid="account__name__dbid__cache_8cpp" local="yes">dbapp/account_name_dbid_cache.cpp</includedby>
+    <includedby refid="dbapp_2dbapp_8hpp" local="yes">dbapp/dbapp.hpp</includedby>
+    <incdepgraph>
+      <node id="13901">
+        <label>cstdmf/bw_string.hpp</label>
+      </node>
+      <node id="13903">
+        <label>db_storage/entity_key.hpp</label>
+      </node>
+      <node id="13902">
+        <label>cstdmf/lru_cache.hpp</label>
+      </node>
+      <node id="13900">
+        <label>cstdmf/bw_map.hpp</label>
+      </node>
+      <node id="13899">
+        <label>dbapp/account_name_dbid_cache.hpp</label>
+        <link refid="account_name_dbid_cache.hpp"/>
+        <childnode refid="13900" relation="include">
+        </childnode>
+        <childnode refid="13901" relation="include">
+        </childnode>
+        <childnode refid="13902" relation="include">
+        </childnode>
+        <childnode refid="13903" relation="include">
+        </childnode>
+        <childnode refid="13904" relation="include">
+        </childnode>
+      </node>
+      <node id="13904">
+        <label>network/basictypes.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="13908">
+        <label>dbapp/load_entity_handler.hpp</label>
+        <link refid="dbapp_2load__entity__handler_8hpp_source"/>
+      </node>
+      <node id="13907">
+        <label>dbapp/get_entity_types_max_dbids_request.hpp</label>
+        <link refid="get__entity__types__max__dbids__request_8hpp_source"/>
+      </node>
+      <node id="13905">
+        <label>dbapp/account_name_dbid_cache.hpp</label>
+        <link refid="account_name_dbid_cache.hpp"/>
+        <childnode refid="13906" relation="include">
+        </childnode>
+      </node>
+      <node id="13906">
+        <label>dbapp/dbapp.hpp</label>
+        <link refid="dbapp_2dbapp_8hpp_source"/>
+        <childnode refid="13907" relation="include">
+        </childnode>
+        <childnode refid="13908" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_account_name_d_b_i_d_cache" prot="public">AccountNameDBIDCache</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ACCOUNT_NAME_DBID_CACHE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ACCOUNT_NAME_DBID_CACHE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_map.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_string.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/lru_cache.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>ENABLE_WATCHERS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/watcher.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ENABLE_WATCHERS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;db_storage/entity_key.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/basictypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_account_name_d_b_i_d_cache" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_account_name_d_b_i_d_cache" kindref="compound">AccountNameDBIDCache</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_account_name_d_b_i_d_cache_1a373afcfb7639bc6faa920685ba6dd728" kindref="member">AccountNameDBIDCache</ref>(<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_account_name_d_b_i_d_cache_1aa21b721e4e17ad4f3146a48399eb9d48" kindref="member">maxSize</ref><sp/>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_account_name_d_b_i_d_cache_1a17d521703ca22cc4daf089b1f1221b54" kindref="member">query</ref>(<sp/>EntityDBKey<sp/>&amp;<sp/>entityKey<sp/>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_account_name_d_b_i_d_cache_1ac020c7496bb3ad48cccf58997c21a735" kindref="member">insert</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EntityDBKey<sp/>&amp;<sp/>key<sp/>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_account_name_d_b_i_d_cache_1adf6c99187a76f65f27cf4d5aebf59a1b" kindref="member">erase</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EntityDBKey<sp/>&amp;<sp/>key<sp/>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_account_name_d_b_i_d_cache_1a969dd5c730e52663a80dc5d7ecb6440b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_account_name_d_b_i_d_cache_1a969dd5c730e52663a80dc5d7ecb6440b" kindref="member">hitAverage</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hitAverage_;<sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_account_name_d_b_i_d_cache_1a3b082bb0cf48fc6dd53f1b205c24ba8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint<sp/><ref refid="class_account_name_d_b_i_d_cache_1a3b082bb0cf48fc6dd53f1b205c24ba8e" kindref="member">numQueries</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>numQueries_;<sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_account_name_d_b_i_d_cache_1ab077a68cf1e02f0667daa381d9763a30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_account_name_d_b_i_d_cache_1ab077a68cf1e02f0667daa381d9763a30" kindref="member">size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cache_.size();<sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="class_account_name_d_b_i_d_cache_1aa21b721e4e17ad4f3146a48399eb9d48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_account_name_d_b_i_d_cache_1aa21b721e4e17ad4f3146a48399eb9d48" kindref="member">maxSize</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cache_.maxSize();<sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_account_name_d_b_i_d_cache_1acde58c96d59793ac5f9b654a80852614" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_account_name_d_b_i_d_cache_1acde58c96d59793ac5f9b654a80852614" kindref="member">maxSize</ref>(<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>newMaxSize)<sp/>{<sp/>cache_.resize(<sp/>newMaxSize<sp/>);<sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>ENABLE_WATCHERS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_smart_pointer" kindref="compound">WatcherPtr</ref><sp/>pWatcher();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ENABLE_WATCHERS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::pair&lt;<sp/>EntityTypeID,<sp/>BW::string<sp/>&gt;<sp/>CacheKey;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>LRUCacheT&lt;<sp/>CacheKey,<sp/>DatabaseID<sp/>&gt;<sp/>Cache;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>Cache<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cache_;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>hitAverage_;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>uint<sp/><sp/><sp/><sp/>numQueries_;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ACCOUNT_NAME_DBID_CACHE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="dbapp/account_name_dbid_cache.hpp"/>
+  </compounddef>
+</doxygen>

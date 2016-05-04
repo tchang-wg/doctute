@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_ring_cluster_1_1_flood_trigger_handler" kind="class" language="C++" prot="protected">
+    <compoundname>RingCluster::FloodTriggerHandler</compoundname>
+    <basecompoundref refid="class_ring_cluster_1_1_cluster_timeout_handler" prot="public" virt="non-virtual">RingCluster::ClusterTimeoutHandler</basecompoundref>
+    <includes refid="ring__cluster_8hpp" local="no">ring_cluster.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_ring_cluster_1_1_flood_trigger_handler_1a9768bf373c347a73a0f46fa17752c4c5" prot="public" static="yes" mutable="no">
+        <type>const TimeQueue::TimeStamp</type>
+        <definition>const TimeQueue::TimeStamp RingCluster::FloodTriggerHandler::AVERAGE_INTERVAL</definition>
+        <argsstring></argsstring>
+        <name>AVERAGE_INTERVAL</name>
+        <initializer>= 2000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_cluster.hpp" line="56" column="1" bodyfile="tools/bwmachined/ring_cluster.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ring_cluster_1_1_flood_trigger_handler_1aa26366eaec839f4e3f56c85b2254adfa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RingCluster::FloodTriggerHandler::FloodTriggerHandler</definition>
+        <argsstring>(RingCluster &amp;cluster)</argsstring>
+        <name>FloodTriggerHandler</name>
+        <param>
+          <type><ref refid="class_ring_cluster" kindref="compound">RingCluster</ref> &amp;</type>
+          <declname>cluster</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_cluster.hpp" line="58" column="1" bodyfile="tools/bwmachined/ring_cluster.hpp" bodystart="58" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_cluster_1_1_flood_trigger_handler_1a9bf411ab48047e90d2df769be9359c05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RingCluster::FloodTriggerHandler::handleTimeout</definition>
+        <argsstring>(TimerHandle handle, void *pUser)</argsstring>
+        <name>handleTimeout</name>
+        <param>
+          <type>TimerHandle</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pUser</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: Document me </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_cluster.hpp" line="60" column="1" bodyfile="tools/bwmachined/ring_cluster.cpp" bodystart="135" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_cluster_1_1_flood_trigger_handler_1afee07a3ad1ad59af4c75067191a56bd0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>TimeQueue::TimeStamp</type>
+        <definition>TimeQueue::TimeStamp RingCluster::FloodTriggerHandler::interval</definition>
+        <argsstring>() const </argsstring>
+        <name>interval</name>
+        <reimplements refid="class_ring_cluster_1_1_cluster_timeout_handler_1ae514c6d518fa13d1d6aef3f0437b6079">interval</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: Document me </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_cluster.hpp" line="62" column="1" bodyfile="tools/bwmachined/ring_cluster.cpp" bodystart="175" bodyend="185"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>TODO: Document me </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1336">
+        <label>RingCluster::ClusterTimeoutHandler</label>
+        <link refid="class_ring_cluster_1_1_cluster_timeout_handler"/>
+        <childnode refid="1337" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1337">
+        <label>TimerHandler</label>
+      </node>
+      <node id="1335">
+        <label>RingCluster::FloodTriggerHandler</label>
+        <link refid="class_ring_cluster_1_1_flood_trigger_handler"/>
+        <childnode refid="1336" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1339">
+        <label>RingCluster::ClusterTimeoutHandler</label>
+        <link refid="class_ring_cluster_1_1_cluster_timeout_handler"/>
+        <childnode refid="1340" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1341" relation="usage">
+          <edgelabel>cluster_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1341">
+        <label>RingCluster</label>
+        <link refid="class_ring_cluster"/>
+        <childnode refid="1342" relation="usage">
+          <edgelabel>machined_</edgelabel>
+        </childnode>
+        <childnode refid="1353" relation="usage">
+          <edgelabel>birthHandler_</edgelabel>
+        </childnode>
+        <childnode refid="1354" relation="usage">
+          <edgelabel>pFloodReplyHandler_</edgelabel>
+        </childnode>
+        <childnode refid="1338" relation="usage">
+          <edgelabel>floodTriggerHandler_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1344">
+        <label>WrappedMessageHandler</label>
+        <link refid="class_wrapped_message_handler"/>
+      </node>
+      <node id="1347">
+        <label>Listeners&lt; ListenerMessage &gt;</label>
+        <link refid="class_listeners"/>
+      </node>
+      <node id="1342">
+        <label>BWMachined</label>
+        <link refid="class_b_w_machined"/>
+        <childnode refid="1343" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1344" relation="usage">
+          <edgelabel>wrappedMessageHandler_</edgelabel>
+        </childnode>
+        <childnode refid="1345" relation="usage">
+          <edgelabel>syslogHandler_</edgelabel>
+        </childnode>
+        <childnode refid="1347" relation="usage">
+          <edgelabel>deathListeners_</edgelabel>
+          <edgelabel>birthListeners_</edgelabel>
+        </childnode>
+        <childnode refid="1348" relation="usage">
+          <edgelabel>systemInfo_</edgelabel>
+        </childnode>
+        <childnode refid="1351" relation="usage">
+          <edgelabel>pServerPlatform_</edgelabel>
+        </childnode>
+        <childnode refid="1352" relation="usage">
+          <edgelabel>users_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1350">
+        <label>MaxStat</label>
+        <link refid="struct_max_stat"/>
+        <childnode refid="1349" relation="usage">
+          <edgelabel>val</edgelabel>
+          <edgelabel>max</edgelabel>
+        </childnode>
+      </node>
+      <node id="1353">
+        <label>RingCluster::BirthReplyHandler</label>
+        <link refid="class_ring_cluster_1_1_birth_reply_handler"/>
+        <childnode refid="1339" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1340">
+        <label>TimerHandler</label>
+      </node>
+      <node id="1343">
+        <label>Singleton&lt; BWMachined &gt;</label>
+      </node>
+      <node id="1354">
+        <label>RingCluster::FloodReplyHandler</label>
+        <link refid="class_ring_cluster_1_1_flood_reply_handler"/>
+        <childnode refid="1339" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1351">
+        <label>ServerPlatform</label>
+        <link refid="class_server_platform"/>
+        <childnode refid="1342" relation="usage">
+          <edgelabel>machined_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1338">
+        <label>RingCluster::FloodTriggerHandler</label>
+        <link refid="class_ring_cluster_1_1_flood_trigger_handler"/>
+        <childnode refid="1339" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1348">
+        <label>SystemInfo</label>
+        <link refid="struct_system_info"/>
+        <childnode refid="1349" relation="usage">
+          <edgelabel>packTotIn</edgelabel>
+          <edgelabel>packDropOut</edgelabel>
+          <edgelabel>packTotOut</edgelabel>
+          <edgelabel>packDropIn</edgelabel>
+        </childnode>
+        <childnode refid="1350" relation="usage">
+          <edgelabel>iowait</edgelabel>
+          <edgelabel>mem</edgelabel>
+        </childnode>
+      </node>
+      <node id="1352">
+        <label>UserMap</label>
+        <link refid="class_user_map"/>
+      </node>
+      <node id="1349">
+        <label>Stat&lt; uint64 &gt;</label>
+        <link refid="class_stat"/>
+      </node>
+      <node id="1346">
+        <label>DebugMessageCallback</label>
+      </node>
+      <node id="1345">
+        <label>SyslogMessageHandler</label>
+        <link refid="class_syslog_message_handler"/>
+        <childnode refid="1346" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/bwmachined/ring_cluster.hpp" line="54" column="1" bodyfile="tools/bwmachined/ring_cluster.hpp" bodystart="53" bodyend="63"/>
+    <listofallmembers>
+      <member refid="class_ring_cluster_1_1_cluster_timeout_handler_1a5a29310cb8155e1172a683d3a3ffaf84" prot="public" virt="non-virtual"><scope>RingCluster::FloodTriggerHandler</scope><name>addTimer</name></member>
+      <member refid="class_ring_cluster_1_1_flood_trigger_handler_1a9768bf373c347a73a0f46fa17752c4c5" prot="public" virt="non-virtual"><scope>RingCluster::FloodTriggerHandler</scope><name>AVERAGE_INTERVAL</name></member>
+      <member refid="class_ring_cluster_1_1_cluster_timeout_handler_1aaf68f5a1ef4498858bfea838a38690aa" prot="public" virt="non-virtual"><scope>RingCluster::FloodTriggerHandler</scope><name>cancel</name></member>
+      <member refid="class_ring_cluster_1_1_cluster_timeout_handler_1a09e448af7cf61463c523ac472a40a26d" prot="protected" virt="non-virtual"><scope>RingCluster::FloodTriggerHandler</scope><name>cluster_</name></member>
+      <member refid="class_ring_cluster_1_1_cluster_timeout_handler_1ac6a24a90835b9a755adb8d690cd76dbe" prot="public" virt="non-virtual"><scope>RingCluster::FloodTriggerHandler</scope><name>ClusterTimeoutHandler</name></member>
+      <member refid="class_ring_cluster_1_1_flood_trigger_handler_1aa26366eaec839f4e3f56c85b2254adfa" prot="public" virt="non-virtual"><scope>RingCluster::FloodTriggerHandler</scope><name>FloodTriggerHandler</name></member>
+      <member refid="class_ring_cluster_1_1_cluster_timeout_handler_1ab1b06f68fdc78452ad3838e7b4b0086a" prot="public" virt="non-virtual"><scope>RingCluster::FloodTriggerHandler</scope><name>handle</name></member>
+      <member refid="class_ring_cluster_1_1_cluster_timeout_handler_1a17675a6b9d95922bfcc20cd52977d1c0" prot="protected" virt="non-virtual"><scope>RingCluster::FloodTriggerHandler</scope><name>handle_</name></member>
+      <member refid="class_ring_cluster_1_1_flood_trigger_handler_1a9bf411ab48047e90d2df769be9359c05" prot="public" virt="non-virtual"><scope>RingCluster::FloodTriggerHandler</scope><name>handleTimeout</name></member>
+      <member refid="class_ring_cluster_1_1_flood_trigger_handler_1afee07a3ad1ad59af4c75067191a56bd0" prot="public" virt="virtual"><scope>RingCluster::FloodTriggerHandler</scope><name>interval</name></member>
+      <member refid="class_ring_cluster_1_1_cluster_timeout_handler_1ae710da65d4660051c22fe8a662c6cd7b" prot="public" virt="non-virtual"><scope>RingCluster::FloodTriggerHandler</scope><name>onRelease</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

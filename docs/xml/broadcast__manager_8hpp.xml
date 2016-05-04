@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="broadcast__manager_8hpp" kind="file" language="C++">
+    <compoundname>broadcast_manager.hpp</compoundname>
+    <includes refid="connection__wrapper_8hpp" local="yes">connection_wrapper.hpp</includes>
+    <includes local="yes">network/endpoint.hpp</includes>
+    <includes local="yes">network/machine_guard.hpp</includes>
+    <includes local="yes">cstdmf/bw_list.hpp</includes>
+    <includes local="yes">cstdmf/time_queue.hpp</includes>
+    <includedby refid="broadcast__manager_8cpp" local="yes">tools/bwmachined/broadcast_manager.cpp</includedby>
+    <includedby refid="network__node_8hpp" local="yes">tools/bwmachined/network_node.hpp</includedby>
+    <includedby refid="bwmachined_8hpp" local="yes">tools/bwmachined/bwmachined.hpp</includedby>
+    <includedby refid="wrapped__message__handler_8hpp" local="yes">tools/bwmachined/wrapped_message_handler.hpp</includedby>
+    <includedby refid="ring__network__node_8hpp" local="yes">tools/bwmachined/ring_network_node.hpp</includedby>
+    <includedby refid="top__level__network__node_8hpp" local="yes">tools/bwmachined/top_level_network_node.hpp</includedby>
+    <includedby refid="leaf__network__node_8hpp" local="yes">tools/bwmachined/leaf_network_node.hpp</includedby>
+    <includedby refid="leaf__network__node_8cpp" local="yes">tools/bwmachined/leaf_network_node.cpp</includedby>
+    <includedby refid="leaf__node__broadcast__manager_8hpp" local="yes">tools/bwmachined/leaf_node_broadcast_manager.hpp</includedby>
+    <includedby refid="network__node_8cpp" local="yes">tools/bwmachined/network_node.cpp</includedby>
+    <includedby refid="ring__broadcast__manager_8hpp" local="yes">tools/bwmachined/ring_broadcast_manager.hpp</includedby>
+    <includedby refid="ring__network__node_8cpp" local="yes">tools/bwmachined/ring_network_node.cpp</includedby>
+    <includedby refid="top__level__network__node_8cpp" local="yes">tools/bwmachined/top_level_network_node.cpp</includedby>
+    <includedby refid="top__level__node__broadcast__manager_8hpp" local="yes">tools/bwmachined/top_level_node_broadcast_manager.hpp</includedby>
+    <includedby refid="test__wrapped__message__handler_8cpp" local="yes">tools/bwmachined/unit_test/test_wrapped_message_handler.cpp</includedby>
+    <incdepgraph>
+      <node id="17269">
+        <label>cstdmf/memory_stream.hpp</label>
+      </node>
+      <node id="17267">
+        <label>network/endpoint.hpp</label>
+      </node>
+      <node id="17271">
+        <label>network/machine_guard.hpp</label>
+      </node>
+      <node id="17268">
+        <label>cstdmf/binary_stream.hpp</label>
+      </node>
+      <node id="17270">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="17273">
+        <label>cstdmf/time_queue.hpp</label>
+      </node>
+      <node id="17266">
+        <label>connection_wrapper.hpp</label>
+        <link refid="connection__wrapper_8hpp_source"/>
+        <childnode refid="17267" relation="include">
+        </childnode>
+        <childnode refid="17268" relation="include">
+        </childnode>
+        <childnode refid="17269" relation="include">
+        </childnode>
+        <childnode refid="17270" relation="include">
+        </childnode>
+      </node>
+      <node id="17272">
+        <label>cstdmf/bw_list.hpp</label>
+      </node>
+      <node id="17265">
+        <label>tools/bwmachined/broadcast_manager.hpp</label>
+        <link refid="broadcast_manager.hpp"/>
+        <childnode refid="17266" relation="include">
+        </childnode>
+        <childnode refid="17267" relation="include">
+        </childnode>
+        <childnode refid="17271" relation="include">
+        </childnode>
+        <childnode refid="17272" relation="include">
+        </childnode>
+        <childnode refid="17273" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="17282">
+        <label>tools/bwmachined/top_level_node_broadcast_manager.hpp</label>
+        <link refid="top__level__node__broadcast__manager_8hpp_source"/>
+      </node>
+      <node id="17275">
+        <label>tools/bwmachined/network_node.hpp</label>
+        <link refid="network__node_8hpp_source"/>
+        <childnode refid="17276" relation="include">
+        </childnode>
+        <childnode refid="17277" relation="include">
+        </childnode>
+        <childnode refid="17279" relation="include">
+        </childnode>
+        <childnode refid="17281" relation="include">
+        </childnode>
+        <childnode refid="17283" relation="include">
+        </childnode>
+      </node>
+      <node id="17280">
+        <label>tools/bwmachined/ring_broadcast_manager.hpp</label>
+        <link refid="ring__broadcast__manager_8hpp_source"/>
+      </node>
+      <node id="17283">
+        <label>tools/bwmachined/leaf_network_node.hpp</label>
+        <link refid="leaf__network__node_8hpp_source"/>
+        <childnode refid="17284" relation="include">
+        </childnode>
+      </node>
+      <node id="17279">
+        <label>tools/bwmachined/ring_network_node.hpp</label>
+        <link refid="ring__network__node_8hpp_source"/>
+        <childnode refid="17280" relation="include">
+        </childnode>
+      </node>
+      <node id="17284">
+        <label>tools/bwmachined/leaf_node_broadcast_manager.hpp</label>
+        <link refid="leaf__node__broadcast__manager_8hpp_source"/>
+      </node>
+      <node id="17281">
+        <label>tools/bwmachined/top_level_network_node.hpp</label>
+        <link refid="top__level__network__node_8hpp_source"/>
+        <childnode refid="17282" relation="include">
+        </childnode>
+      </node>
+      <node id="17278">
+        <label>tools/bwmachined/incoming_packet.hpp</label>
+        <link refid="incoming__packet_8hpp_source"/>
+      </node>
+      <node id="17277">
+        <label>tools/bwmachined/bwmachined.hpp</label>
+        <link refid="bwmachined_8hpp_source"/>
+        <childnode refid="17278" relation="include">
+        </childnode>
+      </node>
+      <node id="17276">
+        <label>tools/bwmachined/mock_handler.hpp</label>
+        <link refid="mock__handler_8hpp_source"/>
+        <childnode refid="17277" relation="include">
+        </childnode>
+      </node>
+      <node id="17274">
+        <label>tools/bwmachined/broadcast_manager.hpp</label>
+        <link refid="broadcast_manager.hpp"/>
+        <childnode refid="17275" relation="include">
+        </childnode>
+        <childnode refid="17277" relation="include">
+        </childnode>
+        <childnode refid="17285" relation="include">
+        </childnode>
+        <childnode refid="17279" relation="include">
+        </childnode>
+        <childnode refid="17281" relation="include">
+        </childnode>
+        <childnode refid="17283" relation="include">
+        </childnode>
+        <childnode refid="17284" relation="include">
+        </childnode>
+        <childnode refid="17280" relation="include">
+        </childnode>
+        <childnode refid="17282" relation="include">
+        </childnode>
+      </node>
+      <node id="17285">
+        <label>tools/bwmachined/wrapped_message_handler.hpp</label>
+        <link refid="wrapped__message__handler_8hpp_source"/>
+        <childnode refid="17277" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_broadcast_manager" prot="public">BroadcastManager</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="broadcast__manager_8hpp_1aede9a3741f623ef1c10b9f43cacfde8e" prot="public" static="no">
+        <type>uint16</type>
+        <definition>typedef uint16 SequenceNumber</definition>
+        <argsstring></argsstring>
+        <name>SequenceNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/broadcast_manager.hpp" line="17" column="1" bodyfile="tools/bwmachined/broadcast_manager.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="broadcast__manager_8hpp_1a94e54034d9d362bf6857f1f4be6343ad" prot="public" static="no">
+        <type>BW::list&lt; <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref> * &gt;</type>
+        <definition>typedef BW::list&lt; BroadcastManager * &gt; SortedManagers</definition>
+        <argsstring></argsstring>
+        <name>SortedManagers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/broadcast_manager.hpp" line="18" column="1" bodyfile="tools/bwmachined/broadcast_manager.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="broadcast__manager_8hpp_1aeb627b98b60b7c3ecdc96f959c80f5b1" prot="public" static="no">
+        <type>BW::map&lt; SequenceNumber, <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref> * &gt;</type>
+        <definition>typedef BW::map&lt; SequenceNumber, BroadcastManager * &gt; ManagerLookup</definition>
+        <argsstring></argsstring>
+        <name>ManagerLookup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/broadcast_manager.hpp" line="19" column="1" bodyfile="tools/bwmachined/broadcast_manager.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BROADCAST_MANAGER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BROADCAST_MANAGER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;connection_wrapper.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/endpoint.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/machine_guard.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_list.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/time_queue.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_network_node" kindref="compound">NetworkNode</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint16<sp/>SequenceNumber;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BW::list&lt;<sp/>BroadcastManager<sp/>*<sp/>&gt;<sp/>SortedManagers;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BW::map&lt;<sp/>SequenceNumber,<sp/>BroadcastManager<sp/>*<sp/>&gt;<sp/>ManagerLookup;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_broadcast_manager" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>MGMPacket::MGMs::const_iterator<sp/>MGMIterator;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_broadcast_manager_1aa11531a6e562c70c31d47f36beea3fcc" kindref="member">BroadcastManager</ref>(<sp/>BroadcastWrapperMessage<sp/>&amp;<sp/>bwm,<sp/><ref refid="class_network_node" kindref="compound">NetworkNode</ref><sp/>&amp;<sp/>networkNode,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref><sp/>pReplyConnection,<sp/>ManagerLookup<sp/>&amp;<sp/>lookup<sp/>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_broadcast_manager_1af70408c1cf900590747d3e0a9c81b1ca" kindref="member">~BroadcastManager</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_broadcast_manager_1af638da1cefff403501e41e23155ff310" kindref="member">sendBroadcast</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_broadcast_manager_1ae47843f900b292e63df8ce50021c5397" kindref="member">addResponse</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MGMPacket<sp/>&amp;<sp/>packet,<sp/>uint32<sp/>address<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_broadcast_manager_1a545eb16c10f40a389ae636ee84e69cca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>TimeQueue64::TimeStamp<sp/><ref refid="class_broadcast_manager_1a545eb16c10f40a389ae636ee84e69cca" kindref="member">broadcastTime</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>broadcastTime_;<sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="class_broadcast_manager_1ae57e223218c240dcecdf431796f47986" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_broadcast_manager_1ae57e223218c240dcecdf431796f47986" kindref="member">hasPacket</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pSourcePacket_<sp/>!=<sp/>NULL;<sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="class_broadcast_manager_1a23d748c1034c821e27cbbf48745f3366" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_broadcast_manager_1a23d748c1034c821e27cbbf48745f3366" kindref="member">hasTimedOut</ref>(<sp/>TimeQueue64::TimeStamp<sp/>timeoutMillis<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="73"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sendAttempts_<sp/>&gt;<sp/>0<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_broadcast_manager_1a826a6db616b21b99cf41f296b6988e0c" kindref="member">timeStamp</ref>()<sp/>-<sp/>broadcastTime_<sp/>&gt;<sp/>timeoutMillis;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="class_broadcast_manager_1a6f72534a0b75695acb2023eede7c1068" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8<sp/><ref refid="class_broadcast_manager_1a6f72534a0b75695acb2023eede7c1068" kindref="member">sendAttempts</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sendAttempts_;<sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="class_broadcast_manager_1a8aa6117e2e9ee6cd899f7c97f056c9e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_broadcast_manager_1a8aa6117e2e9ee6cd899f7c97f056c9e3" kindref="member">isComplete</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>response_.isComplete();<sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_broadcast_manager_1a3c05b9edf69329b77a54f09a7c0c2634" kindref="member">sendResponse</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_broadcast_manager_1a5f97c9022e16efe8a901d741f278e3d5" kindref="member">restoreSequenceNumbers</ref>(<sp/>MGMPacket<sp/>*<sp/>pPacket<sp/>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>TimeQueue64::TimeStamp<sp/><ref refid="class_broadcast_manager_1a826a6db616b21b99cf41f296b6988e0c" kindref="member">timeStamp</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_broadcast_manager_1a0d49333c5f2ce4d192bd3635b86d4562" kindref="member">cleanup</ref>();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_broadcast_manager_1a8c19c2f5e04ebad63a6e99ad3dde7892" kindref="member">isPacketContentStateOutgoing</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MGMPacket<sp/>&amp;<sp/>packet<sp/>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_broadcast_manager_1aeb0f332f2f989a85b04330d77db4fbf8" kindref="member">sendBroadcastImpl</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="class_broadcast_manager_1a326121678eec814fc22abeeb02b074f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_broadcast_manager_1a326121678eec814fc22abeeb02b074f5" kindref="member">cleanupImpl</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>ResponseWrapperMessage<sp/>response_;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>MGMPacket<sp/>*<sp/>pSourcePacket_;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>ManagerLookup<sp/>&amp;<sp/>lookup_;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Keep<sp/>track<sp/>of<sp/>which<sp/>new<sp/>sequence<sp/>number<sp/>maps<sp/>to<sp/>which<sp/>original</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sequence<sp/>number,<sp/>so<sp/>that<sp/>we<sp/>can<sp/>modify<sp/>them<sp/>in<sp/>place<sp/>when<sp/>broadcasting.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>BW::vector&lt;<sp/>SequenceNumber<sp/>&gt;<sp/>originalSeq_;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>BW::map&lt;<sp/>SequenceNumber,<sp/>SequenceNumber<sp/>&gt;<sp/>newToOriginalSeq_;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_network_node" kindref="compound">NetworkNode</ref><sp/>&amp;<sp/>networkNode_;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>TimeQueue64::TimeStamp<sp/>broadcastTime_;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8<sp/>sendAttempts_;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref><sp/>pReplyConnection_;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>BROADCAST_MANAGER_HPP</highlight></codeline>
+    </programlisting>
+    <location file="tools/bwmachined/broadcast_manager.hpp"/>
+  </compounddef>
+</doxygen>

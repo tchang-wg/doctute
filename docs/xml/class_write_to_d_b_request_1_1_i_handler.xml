@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_write_to_d_b_request_1_1_i_handler" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>WriteToDBRequest::IHandler</compoundname>
+    <derivedcompoundref refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler" prot="public" virt="non-virtual">BW_BEGIN_NAMESPACE::ControlledShutDownHandler</derivedcompoundref>
+    <derivedcompoundref refid="class_write_to_d_b_script_callback_handler" prot="private" virt="non-virtual">WriteToDBScriptCallbackHandler</derivedcompoundref>
+    <includes refid="write__to__db__request_8hpp" local="no">write_to_db_request.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28a" prot="public" static="no">
+        <name>CompletionStatus</name>
+        <enumvalue id="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28aad619cc9e084ce160f1ff7568acd158d9" prot="public">
+          <name>COMPLETED_SUCCESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28aaf37607473e6e6b0c9b7c4b2aafc2aa1e" prot="public">
+          <name>COMPLETED_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28aab1fa5026495737e5415a45c1cd9fea0b" prot="public">
+          <name>SHUTTING_DOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/write_to_db_request.hpp" line="44" column="1" bodyfile="baseapp/write_to_db_request.hpp" bodystart="43" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_write_to_d_b_request_1_1_i_handler_1a4eb6fe869cf90c28f097b2dd850bba14" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void WriteToDBRequest::IHandler::onWriteToDBComplete</definition>
+        <argsstring>(CompletionStatus completionStatus)=0</argsstring>
+        <name>onWriteToDBComplete</name>
+        <reimplementedby refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_with_secondary_d_b_1a3d0a2ef155f3ce7e680c1f76f51f2d00">onWriteToDBComplete</reimplementedby>
+        <reimplementedby refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_without_secondary_d_b_1a5af22a702746aa538c8b06bd3f330951">onWriteToDBComplete</reimplementedby>
+        <reimplementedby refid="class_write_to_d_b_script_callback_handler_1acf81a88eb2c41173f11ff4332ba085e0">onWriteToDBComplete</reimplementedby>
+        <param>
+          <type>CompletionStatus</type>
+          <declname>completionStatus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called when a <ref refid="class_write_to_d_b_request" kindref="compound">WriteToDBRequest</ref> instance has completed its operation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>completionStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of the CompletionStatus values, indicating the success of the operation, or otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/write_to_db_request.hpp" line="58" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_write_to_d_b_request_1_1_i_handler_1a8734d12827e0ed82bc842d7a64c2a7ba" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual WriteToDBRequest::IHandler::~IHandler</definition>
+        <argsstring>()</argsstring>
+        <name>~IHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/write_to_db_request.hpp" line="63" column="1" bodyfile="baseapp/write_to_db_request.hpp" bodystart="63" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is a handler class for requests. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1507">
+        <label>WriteToDBScriptCallbackHandler</label>
+        <link refid="class_write_to_d_b_script_callback_handler"/>
+        <childnode refid="1503" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1503">
+        <label>WriteToDBRequest::IHandler</label>
+        <link refid="class_write_to_d_b_request_1_1_i_handler"/>
+      </node>
+      <node id="1504">
+        <label>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</label>
+        <link refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler"/>
+        <childnode refid="1503" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1506">
+        <label>BW_BEGIN_NAMESPACE::ShutDownHandlerWithSecondaryDB</label>
+        <link refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_with_secondary_d_b"/>
+        <childnode refid="1504" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1505">
+        <label>BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</label>
+        <link refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_without_secondary_d_b"/>
+        <childnode refid="1504" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="baseapp/write_to_db_request.hpp" line="41" column="1" bodyfile="baseapp/write_to_db_request.hpp" bodystart="40" bodyend="64"/>
+    <listofallmembers>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28aaf37607473e6e6b0c9b7c4b2aafc2aa1e" prot="public" virt="non-virtual"><scope>WriteToDBRequest::IHandler</scope><name>COMPLETED_FAILED</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28aad619cc9e084ce160f1ff7568acd158d9" prot="public" virt="non-virtual"><scope>WriteToDBRequest::IHandler</scope><name>COMPLETED_SUCCESS</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28a" prot="public" virt="non-virtual"><scope>WriteToDBRequest::IHandler</scope><name>CompletionStatus</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1a4eb6fe869cf90c28f097b2dd850bba14" prot="public" virt="pure-virtual"><scope>WriteToDBRequest::IHandler</scope><name>onWriteToDBComplete</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28aab1fa5026495737e5415a45c1cd9fea0b" prot="public" virt="non-virtual"><scope>WriteToDBRequest::IHandler</scope><name>SHUTTING_DOWN</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1a8734d12827e0ed82bc842d7a64c2a7ba" prot="protected" virt="virtual"><scope>WriteToDBRequest::IHandler</scope><name>~IHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

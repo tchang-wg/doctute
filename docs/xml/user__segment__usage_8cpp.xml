@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="user__segment__usage_8cpp" kind="file" language="C++">
+    <compoundname>user_segment_usage.cpp</compoundname>
+    <includes refid="user__segment__usage_8hpp" local="yes">user_segment_usage.hpp</includes>
+    <incdepgraph>
+      <node id="23102">
+        <label>cstdmf/stdmf.hpp</label>
+      </node>
+      <node id="23100">
+        <label>user_segment_usage.hpp</label>
+        <link refid="user__segment__usage_8hpp_source"/>
+        <childnode refid="23101" relation="include">
+        </childnode>
+        <childnode refid="23102" relation="include">
+        </childnode>
+      </node>
+      <node id="23099">
+        <label>tools/message_logger/user_segment_usage.cpp</label>
+        <link refid="user_segment_usage.cpp"/>
+        <childnode refid="23100" relation="include">
+        </childnode>
+      </node>
+      <node id="23101">
+        <label>cstdmf/bw_list.hpp</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;user_segment_usage.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UserSegmentUsage::addSegmentSize(<sp/>uint32<sp/>size<sp/>)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>segmentSizes_.push_back(<sp/>size<sp/>);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>biggestSegmentSize_<sp/>=<sp/>std::max(<sp/>biggestSegmentSize_,<sp/>size<sp/>);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>tally_<sp/>+=<sp/>size;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>user_segment_usage.hpp</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="tools/message_logger/user_segment_usage.cpp"/>
+  </compounddef>
+</doxygen>

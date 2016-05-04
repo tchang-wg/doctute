@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="base__message__forwarder_8cpp" kind="file" language="C++">
+    <compoundname>base_message_forwarder.cpp</compoundname>
+    <includes refid="base__message__forwarder_8hpp" local="yes">base_message_forwarder.hpp</includes>
+    <includes refid="baseapp__int__interface_8hpp" local="yes">baseapp_int_interface.hpp</includes>
+    <includes local="yes">cstdmf/binary_stream.hpp</includes>
+    <includes local="yes">network/bundle.hpp</includes>
+    <includes local="yes">network/channel.hpp</includes>
+    <includes local="yes">network/network_interface.hpp</includes>
+    <includes local="yes">network/unpacked_message_header.hpp</includes>
+    <incdepgraph>
+      <node id="638">
+        <label>connection/common_baseapp_interface.hpp</label>
+      </node>
+      <node id="640">
+        <label>baseapp_int_interface_stream_helpers.hpp</label>
+        <link refid="baseapp__int__interface__stream__helpers_8hpp_source"/>
+        <childnode refid="632" relation="include">
+        </childnode>
+        <childnode refid="641" relation="include">
+        </childnode>
+      </node>
+      <node id="631">
+        <label>base_message_forwarder.hpp</label>
+        <link refid="base__message__forwarder_8hpp_source"/>
+        <childnode refid="632" relation="include">
+        </childnode>
+        <childnode refid="633" relation="include">
+        </childnode>
+        <childnode refid="634" relation="include">
+        </childnode>
+      </node>
+      <node id="639">
+        <label>buffered_input_message_handler.hpp</label>
+        <link refid="baseapp_2buffered__input__message__handler_8hpp_source"/>
+      </node>
+      <node id="646">
+        <label>network/bundle.hpp</label>
+      </node>
+      <node id="636">
+        <label>network/network_interface.hpp</label>
+      </node>
+      <node id="645">
+        <label>cstdmf/binary_stream.hpp</label>
+      </node>
+      <node id="642">
+        <label>server/common.hpp</label>
+      </node>
+      <node id="630">
+        <label>baseapp/base_message_forwarder.cpp</label>
+        <link refid="base_message_forwarder.cpp"/>
+        <childnode refid="631" relation="include">
+        </childnode>
+        <childnode refid="635" relation="include">
+        </childnode>
+        <childnode refid="645" relation="include">
+        </childnode>
+        <childnode refid="646" relation="include">
+        </childnode>
+        <childnode refid="633" relation="include">
+        </childnode>
+        <childnode refid="636" relation="include">
+        </childnode>
+        <childnode refid="647" relation="include">
+        </childnode>
+      </node>
+      <node id="641">
+        <label>network/stream_helpers.hpp</label>
+      </node>
+      <node id="634">
+        <label>cstdmf/bw_map.hpp</label>
+      </node>
+      <node id="633">
+        <label>network/channel.hpp</label>
+      </node>
+      <node id="635">
+        <label>baseapp_int_interface.hpp</label>
+        <link refid="baseapp__int__interface_8hpp_source"/>
+        <childnode refid="632" relation="include">
+        </childnode>
+        <childnode refid="636" relation="include">
+        </childnode>
+        <childnode refid="637" relation="include">
+        </childnode>
+        <childnode refid="638" relation="include">
+        </childnode>
+        <childnode refid="639" relation="include">
+        </childnode>
+        <childnode refid="640" relation="include">
+        </childnode>
+        <childnode refid="642" relation="include">
+        </childnode>
+        <childnode refid="643" relation="include">
+        </childnode>
+        <childnode refid="644" relation="include">
+        </childnode>
+      </node>
+      <node id="647">
+        <label>network/unpacked_message_header.hpp</label>
+      </node>
+      <node id="632">
+        <label>network/basictypes.hpp</label>
+      </node>
+      <node id="637">
+        <label>server/anonymous_channel_client.hpp</label>
+      </node>
+      <node id="643">
+        <label>network/msgtypes.hpp</label>
+      </node>
+      <node id="644">
+        <label>connection/common_client_interface.hpp</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;base_message_forwarder.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;baseapp_int_interface.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/binary_stream.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/bundle.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/channel.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/network_interface.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/unpacked_message_header.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><ref refid="class_base_message_forwarder_1a41fee989bfd3858b5bc425e2c57535fc" kindref="member">BaseMessageForwarder::BaseMessageForwarder</ref>(<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mercury::NetworkInterface<sp/>&amp;<sp/>networkInterface<sp/>):</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map_(),</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>networkInterface_(<sp/>networkInterface<sp/>)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_base_message_forwarder_1af9ddc607c17101fe42a61aab3037cbaa" kindref="member">BaseMessageForwarder::addForwardingMapping</ref>(<sp/>EntityID<sp/>entityID,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>destAddr<sp/>)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>map_[entityID]<sp/>=<sp/>destAddr;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_base_message_forwarder_1a85b810f182399fd7b786c86e6516788e" kindref="member">BaseMessageForwarder::forwardIfNecessary</ref>(<sp/>EntityID<sp/>entityID,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>srcAddr,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::UnpackedMessageHeader<sp/>&amp;<sp/>header,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BinaryIStream<sp/>&amp;<sp/>data<sp/>)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>Map::iterator<sp/>iMapping<sp/>=<sp/>map_.find(<sp/>entityID<sp/>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(iMapping<sp/>!=<sp/>map_.end())</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>destAddr<sp/>=<sp/>iMapping-&gt;second;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mercury::Channel<sp/>&amp;<sp/>channel<sp/>=</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>networkInterface_.findOrCreateChannel(<sp/>destAddr<sp/>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mercury::Bundle<sp/>&amp;<sp/>bundle<sp/>=<sp/>channel.bundle();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bundle.startMessage(<sp/>BaseAppIntInterface::forwardedBaseMessage<sp/>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bundle<sp/>&lt;&lt;<sp/>srcAddr<sp/>&lt;&lt;<sp/>header.identifier<sp/>&lt;&lt;<sp/>header.replyID<sp/>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>REAL<sp/>handler<sp/>would<sp/>use<sp/>this:<sp/>bundle<sp/>&lt;&lt;<sp/>entityID;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bundle.transfer(<sp/>data,<sp/>data.remainingLength()<sp/>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">Mercury::ChannelPtr<sp/><ref refid="class_base_message_forwarder_1a7058dfa06501abea04ceb806752aee0a" kindref="member">BaseMessageForwarder::getForwardingChannel</ref>(<sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EntityID<sp/>entityID<sp/>)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>Map::iterator<sp/>iMapping<sp/>=<sp/>map_.find(<sp/>entityID<sp/>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(iMapping<sp/>!=<sp/>map_.end())</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>destAddr<sp/>=<sp/>iMapping-&gt;second;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>networkInterface_.findChannel(<sp/>destAddr,<sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>createAnonymous:<sp/>*/</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">//<sp/>base_message_forwarder.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="baseapp/base_message_forwarder.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_sluggish_progress_reporter" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>SluggishProgressReporter</compoundname>
+    <derivedcompoundref refid="class_consolidation_progress_reporter" prot="private" virt="non-virtual">ConsolidationProgressReporter</derivedcompoundref>
+    <derivedcompoundref refid="class_file_transfer_progress_reporter" prot="private" virt="non-virtual">FileTransferProgressReporter</derivedcompoundref>
+    <includes refid="sluggish__progress__reporter_8hpp" local="no">sluggish_progress_reporter.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sluggish_progress_reporter_1a73aef7a0e9f66696a51b97250ea032ab" prot="private" static="no" mutable="no">
+        <type><ref refid="class_d_b_app_status_reporter" kindref="compound">DBAppStatusReporter</ref> &amp;</type>
+        <definition>DBAppStatusReporter&amp; SluggishProgressReporter::reporter_</definition>
+        <argsstring></argsstring>
+        <name>reporter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/sluggish_progress_reporter.hpp" line="47" column="1" bodyfile="tools/consolidate_dbs/sluggish_progress_reporter.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sluggish_progress_reporter_1afec01a69df280bf69aba6f12b8c3bde8" prot="private" static="no" mutable="no">
+        <type>uint64</type>
+        <definition>uint64 SluggishProgressReporter::reportInterval_</definition>
+        <argsstring></argsstring>
+        <name>reportInterval_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/sluggish_progress_reporter.hpp" line="49" column="1" bodyfile="tools/consolidate_dbs/sluggish_progress_reporter.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sluggish_progress_reporter_1ae01a91005f5a697af8a0eb06e7a052d1" prot="private" static="no" mutable="no">
+        <type>uint64</type>
+        <definition>uint64 SluggishProgressReporter::lastReportTime_</definition>
+        <argsstring></argsstring>
+        <name>lastReportTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/sluggish_progress_reporter.hpp" line="50" column="1" bodyfile="tools/consolidate_dbs/sluggish_progress_reporter.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sluggish_progress_reporter_1ab807400b3da190ed09ef0441dbea5046" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SluggishProgressReporter::SluggishProgressReporter</definition>
+        <argsstring>(DBAppStatusReporter &amp;reporter, float reportInterval=0.5)</argsstring>
+        <name>SluggishProgressReporter</name>
+        <param>
+          <type><ref refid="class_d_b_app_status_reporter" kindref="compound">DBAppStatusReporter</ref> &amp;</type>
+          <declname>reporter</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>reportInterval</declname>
+          <defval>0.5</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/sluggish_progress_reporter.hpp" line="22" column="1" bodyfile="tools/consolidate_dbs/sluggish_progress_reporter.hpp" bodystart="22" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sluggish_progress_reporter_1a513e4d67fc4e85c0328d8191c4a86d53" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SluggishProgressReporter::reportProgress</definition>
+        <argsstring>()</argsstring>
+        <name>reportProgress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/sluggish_progress_reporter.hpp" line="29" column="1" bodyfile="tools/consolidate_dbs/sluggish_progress_reporter.hpp" bodystart="29" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sluggish_progress_reporter_1a7c336d6847d24a9b6cefdcc77b534346" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SluggishProgressReporter::reportProgressNow</definition>
+        <argsstring>()=0</argsstring>
+        <name>reportProgressNow</name>
+        <reimplementedby refid="class_consolidation_progress_reporter_1ab1c675c18de3068ef80c2635693c8736">reportProgressNow</reimplementedby>
+        <reimplementedby refid="class_file_transfer_progress_reporter_1a107814711981513b44a134afec35b0ed">reportProgressNow</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/sluggish_progress_reporter.hpp" line="40" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_sluggish_progress_reporter_1abff1e44cef9eee4288b63f82f1f66b97" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_d_b_app_status_reporter" kindref="compound">DBAppStatusReporter</ref> &amp;</type>
+        <definition>DBAppStatusReporter&amp; SluggishProgressReporter::reporter</definition>
+        <argsstring>()</argsstring>
+        <name>reporter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/sluggish_progress_reporter.hpp" line="43" column="1" bodyfile="tools/consolidate_dbs/sluggish_progress_reporter.hpp" bodystart="43" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is a base class for progress reporters. reportProgress() can be called very often, but reportProgressNow() will only be called once every reportInterval. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2722">
+        <label>SluggishProgressReporter</label>
+        <link refid="class_sluggish_progress_reporter"/>
+      </node>
+      <node id="2724">
+        <label>FileTransferProgressReporter</label>
+        <link refid="class_file_transfer_progress_reporter"/>
+        <childnode refid="2722" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="2723">
+        <label>ConsolidationProgressReporter</label>
+        <link refid="class_consolidation_progress_reporter"/>
+        <childnode refid="2722" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="tools/consolidate_dbs/sluggish_progress_reporter.hpp" line="17" column="1" bodyfile="tools/consolidate_dbs/sluggish_progress_reporter.hpp" bodystart="16" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_sluggish_progress_reporter_1ae01a91005f5a697af8a0eb06e7a052d1" prot="private" virt="non-virtual"><scope>SluggishProgressReporter</scope><name>lastReportTime_</name></member>
+      <member refid="class_sluggish_progress_reporter_1abff1e44cef9eee4288b63f82f1f66b97" prot="protected" virt="non-virtual"><scope>SluggishProgressReporter</scope><name>reporter</name></member>
+      <member refid="class_sluggish_progress_reporter_1a73aef7a0e9f66696a51b97250ea032ab" prot="private" virt="non-virtual"><scope>SluggishProgressReporter</scope><name>reporter_</name></member>
+      <member refid="class_sluggish_progress_reporter_1afec01a69df280bf69aba6f12b8c3bde8" prot="private" virt="non-virtual"><scope>SluggishProgressReporter</scope><name>reportInterval_</name></member>
+      <member refid="class_sluggish_progress_reporter_1a513e4d67fc4e85c0328d8191c4a86d53" prot="public" virt="non-virtual"><scope>SluggishProgressReporter</scope><name>reportProgress</name></member>
+      <member refid="class_sluggish_progress_reporter_1a7c336d6847d24a9b6cefdcc77b534346" prot="public" virt="pure-virtual"><scope>SluggishProgressReporter</scope><name>reportProgressNow</name></member>
+      <member refid="class_sluggish_progress_reporter_1ab807400b3da190ed09ef0441dbea5046" prot="public" virt="non-virtual"><scope>SluggishProgressReporter</scope><name>SluggishProgressReporter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

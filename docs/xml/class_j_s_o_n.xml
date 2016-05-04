@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_j_s_o_n" kind="class" language="C++" prot="public">
+    <compoundname>JSON</compoundname>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_j_s_o_n_1ad2efeda1c797ac7a1371213b1b6ffdcf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class JSONValue</definition>
+        <argsstring></argsstring>
+        <name>JSONValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/JSON.h" line="72" column="1" bodyfile="dbapp_extensions/wgbilling_spa/JSON.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_j_s_o_n_1a7f3d733e38c15aaeee7223831f9739a3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_value" kindref="compound">JSONValue</ref> *</type>
+        <definition>JSONValue * JSON::Parse</definition>
+        <argsstring>(const char *data)</argsstring>
+        <name>Parse</name>
+        <param>
+          <type>const char *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parses a complete <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> encoded string This is just a wrapper around the UNICODE <ref refid="class_j_s_o_n_1a7f3d733e38c15aaeee7223831f9739a3" kindref="member">Parse()</ref>.</para><para>public</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>char*</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data The <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> text</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>JSONValue* Returns a <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> Value representing the root, or NULL on error </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/JSON.h" line="75" column="1" bodyfile="dbapp_extensions/wgbilling_spa/JSON.cpp" bodystart="48" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1ae0a007d45cbcbfabb54bce9a3c334fa3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_value" kindref="compound">JSONValue</ref> *</type>
+        <definition>JSONValue * JSON::Parse</definition>
+        <argsstring>(const wchar_t *data)</argsstring>
+        <name>Parse</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parses a complete <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> encoded string (UNICODE input version)</para><para>public</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wchar_t*</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data The <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> text</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>JSONValue* Returns a <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> Value representing the root, or NULL on error </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/JSON.h" line="76" column="1" bodyfile="dbapp_extensions/wgbilling_spa/JSON.cpp" bodystart="82" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1aafcc0f6956a429b9fbaa78a94a4610a9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BW::wstring</type>
+        <definition>BW::wstring JSON::Stringify</definition>
+        <argsstring>(const JSONValue *value)</argsstring>
+        <name>Stringify</name>
+        <param>
+          <type>const <ref refid="class_j_s_o_n_value" kindref="compound">JSONValue</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Turns the passed in <ref refid="class_j_s_o_n_value" kindref="compound">JSONValue</ref> into a <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> encode string</para><para>public</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>JSONValue*</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value The root value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>BW::wstring Returns a <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> encoded string representation of the given value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/JSON.h" line="77" column="1" bodyfile="dbapp_extensions/wgbilling_spa/JSON.cpp" bodystart="113" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="class_j_s_o_n_1af94562ab72cd8d95cb99d8b15475bdce" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool JSON::SkipWhitespace</definition>
+        <argsstring>(const wchar_t **data)</argsstring>
+        <name>SkipWhitespace</name>
+        <param>
+          <type>const wchar_t **</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Skips over any whitespace characters (space, tab,  or <linebreak/>
+) defined by the <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> spec</para><para>protected</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wchar_t**</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data Pointer to a wchar_t* that contains the <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> text</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool Returns true if there is more data, or false if the end of the text was reached </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/JSON.h" line="79" column="1" bodyfile="dbapp_extensions/wgbilling_spa/JSON.cpp" bodystart="130" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1a659574313c71ffa9406df4ffed5bcaf7" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool JSON::ExtractString</definition>
+        <argsstring>(const wchar_t **data, BW::wstring &amp;str)</argsstring>
+        <name>ExtractString</name>
+        <param>
+          <type>const wchar_t **</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>BW::wstring &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Extracts a <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> String as defined by the spec - &quot;&lt;some chars&gt;&quot; Any escaped characters are swapped out for their unescaped values</para><para>protected</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wchar_t**</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data Pointer to a wchar_t* that contains the <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> text </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>BW::wstring&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>str Reference to a BW::wstring to receive the extracted string</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool Returns true on success, false on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/JSON.h" line="80" column="1" bodyfile="dbapp_extensions/wgbilling_spa/JSON.cpp" bodystart="149" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1a2461184d91fe6286b26d1e056fca6909" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double JSON::ParseInt</definition>
+        <argsstring>(const wchar_t **data)</argsstring>
+        <name>ParseInt</name>
+        <param>
+          <type>const wchar_t **</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parses some text as though it is an integer</para><para>protected</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wchar_t**</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data Pointer to a wchar_t* that contains the <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> text</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double Returns the double value of the number found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/JSON.h" line="81" column="1" bodyfile="dbapp_extensions/wgbilling_spa/JSON.cpp" bodystart="248" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1af2d51873ecc483a21cf2d9fe16595495" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double JSON::ParseDecimal</definition>
+        <argsstring>(const wchar_t **data)</argsstring>
+        <name>ParseDecimal</name>
+        <param>
+          <type>const wchar_t **</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parses some text as though it is a decimal</para><para>protected</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wchar_t**</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data Pointer to a wchar_t* that contains the <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> text</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double Returns the double value of the decimal found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/JSON.h" line="82" column="1" bodyfile="dbapp_extensions/wgbilling_spa/JSON.cpp" bodystart="266" bodyend="277"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_j_s_o_n_1acf359a0f5efc57e6e844ad58abbd6480" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JSON::JSON</definition>
+        <argsstring>()</argsstring>
+        <name>JSON</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Blocks off the public constructor</para><para>private </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/JSON.h" line="84" column="1" bodyfile="dbapp_extensions/wgbilling_spa/JSON.cpp" bodystart="34" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dbapp_extensions/wgbilling_spa/JSON.h" line="71" column="1" bodyfile="dbapp_extensions/wgbilling_spa/JSON.h" bodystart="70" bodyend="85"/>
+    <listofallmembers>
+      <member refid="class_j_s_o_n_1a659574313c71ffa9406df4ffed5bcaf7" prot="protected" virt="non-virtual"><scope>JSON</scope><name>ExtractString</name></member>
+      <member refid="class_j_s_o_n_1acf359a0f5efc57e6e844ad58abbd6480" prot="private" virt="non-virtual"><scope>JSON</scope><name>JSON</name></member>
+      <member refid="class_j_s_o_n_1ad2efeda1c797ac7a1371213b1b6ffdcf" prot="private" virt="non-virtual"><scope>JSON</scope><name>JSONValue</name></member>
+      <member refid="class_j_s_o_n_1a7f3d733e38c15aaeee7223831f9739a3" prot="public" virt="non-virtual"><scope>JSON</scope><name>Parse</name></member>
+      <member refid="class_j_s_o_n_1ae0a007d45cbcbfabb54bce9a3c334fa3" prot="public" virt="non-virtual"><scope>JSON</scope><name>Parse</name></member>
+      <member refid="class_j_s_o_n_1af2d51873ecc483a21cf2d9fe16595495" prot="protected" virt="non-virtual"><scope>JSON</scope><name>ParseDecimal</name></member>
+      <member refid="class_j_s_o_n_1a2461184d91fe6286b26d1e056fca6909" prot="protected" virt="non-virtual"><scope>JSON</scope><name>ParseInt</name></member>
+      <member refid="class_j_s_o_n_1af94562ab72cd8d95cb99d8b15475bdce" prot="protected" virt="non-virtual"><scope>JSON</scope><name>SkipWhitespace</name></member>
+      <member refid="class_j_s_o_n_1aafcc0f6956a429b9fbaa78a94a4610a9" prot="public" virt="non-virtual"><scope>JSON</scope><name>Stringify</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

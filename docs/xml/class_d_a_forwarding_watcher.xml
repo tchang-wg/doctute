@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_d_a_forwarding_watcher" kind="class" language="C++" prot="public">
+    <compoundname>DAForwardingWatcher</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ForwardingWatcher</basecompoundref>
+    <includes refid="watcher__forwarding__dbapp_8hpp" local="no">watcher_forwarding_dbapp.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_a_forwarding_watcher_1ac725552ea89dbb13a9019b12396f90f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ForwardingCollector *</type>
+        <definition>BW_BEGIN_NAMESPACE ForwardingCollector * DAForwardingWatcher::newCollector</definition>
+        <argsstring>(WatcherPathRequestV2 &amp;pathRequest, const BW::string &amp;destWatcher, const BW::string &amp;targetInfo)</argsstring>
+        <name>newCollector</name>
+        <param>
+          <type>WatcherPathRequestV2 &amp;</type>
+          <declname>pathRequest</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>destWatcher</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>targetInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override from ForwardingCollector </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/watcher_forwarding_dbapp.hpp" line="21" column="1" bodyfile="dbappmgr/watcher_forwarding_dbapp.cpp" bodystart="13" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_d_a_forwarding_watcher_1af1497630fa0be3332d5b225809e09838" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>AddressList *</type>
+        <definition>AddressList * DAForwardingWatcher::getComponentAddressList</definition>
+        <argsstring>(const BW::string &amp;targetInfo) const </argsstring>
+        <name>getComponentAddressList</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>targetInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generate a list of <ref refid="class_d_b_app" kindref="compound">DBApp(s)</ref> (Component ID, Address pair) as determined by the target information for the forwarding watchers.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>targetInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string describing which component(s) to add to the list.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of AddressPair&apos;s to forward a watcher request to. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/watcher_forwarding_dbapp.hpp" line="26" column="1" bodyfile="dbappmgr/watcher_forwarding_dbapp.cpp" bodystart="53" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_a_forwarding_watcher_1ae906d9bcdd7157bb33069441aa3e7d9c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>AddressList *</type>
+        <definition>AddressList * DAForwardingWatcher::listLeastLoaded</definition>
+        <argsstring>() const </argsstring>
+        <name>listLeastLoaded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method lists the least-loaded <ref refid="class_d_b_app" kindref="compound">DBApp</ref>.</para><para><simplesect kind="return"><para>A list containing the least-loaded <ref refid="class_d_b_app" kindref="compound">DBApp</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/watcher_forwarding_dbapp.hpp" line="28" column="1" bodyfile="dbappmgr/watcher_forwarding_dbapp.cpp" bodystart="74" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_a_forwarding_watcher_1ac5c246c8d8d808fc8ebae67c7338879a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>AddressList *</type>
+        <definition>AddressList * DAForwardingWatcher::listAll</definition>
+        <argsstring>() const </argsstring>
+        <name>listAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns a list of all DBApps.</para><para><simplesect kind="return"><para>List of all DBApps. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/watcher_forwarding_dbapp.hpp" line="29" column="1" bodyfile="dbappmgr/watcher_forwarding_dbapp.cpp" bodystart="99" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_a_forwarding_watcher_1afed85f193983959ee9fa91789bc3c10b" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>AddressPair</type>
+        <definition>AddressPair DAForwardingWatcher::addressPair</definition>
+        <argsstring>(const DBApp &amp;dbApp) const </argsstring>
+        <name>addressPair</name>
+        <param>
+          <type>const <ref refid="class_d_b_app" kindref="compound">DBApp</ref> &amp;</type>
+          <declname>dbApp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns an AddressPair for a <ref refid="class_base_app" kindref="compound">BaseApp</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/watcher_forwarding_dbapp.hpp" line="30" column="1" bodyfile="dbappmgr/watcher_forwarding_dbapp.cpp" bodystart="120" bodyend="123"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements a <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref> specific Forwarding Watcher. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="955">
+        <label>ForwardingWatcher</label>
+      </node>
+      <node id="954">
+        <label>DAForwardingWatcher</label>
+        <link refid="class_d_a_forwarding_watcher"/>
+        <childnode refid="955" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="957">
+        <label>ForwardingWatcher</label>
+      </node>
+      <node id="956">
+        <label>DAForwardingWatcher</label>
+        <link refid="class_d_a_forwarding_watcher"/>
+        <childnode refid="957" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="dbappmgr/watcher_forwarding_dbapp.hpp" line="19" column="1" bodyfile="dbappmgr/watcher_forwarding_dbapp.hpp" bodystart="18" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_d_a_forwarding_watcher_1afed85f193983959ee9fa91789bc3c10b" prot="private" virt="non-virtual"><scope>DAForwardingWatcher</scope><name>addressPair</name></member>
+      <member refid="class_d_a_forwarding_watcher_1af1497630fa0be3332d5b225809e09838" prot="private" virt="non-virtual"><scope>DAForwardingWatcher</scope><name>getComponentAddressList</name></member>
+      <member refid="class_d_a_forwarding_watcher_1ac5c246c8d8d808fc8ebae67c7338879a" prot="private" virt="non-virtual"><scope>DAForwardingWatcher</scope><name>listAll</name></member>
+      <member refid="class_d_a_forwarding_watcher_1ae906d9bcdd7157bb33069441aa3e7d9c" prot="private" virt="non-virtual"><scope>DAForwardingWatcher</scope><name>listLeastLoaded</name></member>
+      <member refid="class_d_a_forwarding_watcher_1ac725552ea89dbb13a9019b12396f90f9" prot="public" virt="non-virtual"><scope>DAForwardingWatcher</scope><name>newCollector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

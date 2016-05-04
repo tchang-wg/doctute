@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_hostnames" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Hostnames</compoundname>
+    <derivedcompoundref refid="class_hostnames_m_l_d_b" prot="public" virt="non-virtual">HostnamesMLDB</derivedcompoundref>
+    <derivedcompoundref refid="class_hostnames_mongo_d_b" prot="public" virt="non-virtual">HostnamesMongoDB</derivedcompoundref>
+    <includes refid="hostnames_8hpp" local="no">hostnames.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_hostnames_1ae71a6c8731b124798946b357015a1acb" prot="private" static="no">
+        <type>BW::map&lt; MessageLogger::IPAddress, BW::string &gt;</type>
+        <definition>typedef BW::map&lt; MessageLogger::IPAddress, BW::string &gt; Hostnames::HostnamesMap</definition>
+        <argsstring></argsstring>
+        <name>HostnamesMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/hostnames.hpp" line="65" column="1" bodyfile="tools/message_logger/hostnames.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_hostnames_1a95b8284bb9917bfcef6f558fa19592a0" prot="private" static="no" mutable="no">
+        <type>HostnamesMap</type>
+        <definition>HostnamesMap Hostnames::hostnames_</definition>
+        <argsstring></argsstring>
+        <name>hostnames_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/hostnames.hpp" line="66" column="1" bodyfile="tools/message_logger/hostnames.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_hostnames_1a94cf6e04ffbd16e4dbab41e63dd28a74" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool Hostnames::writeHostnameToDB</definition>
+        <argsstring>(const MessageLogger::IPAddress &amp;addr, const BW::string &amp;hostname)=0</argsstring>
+        <name>writeHostnameToDB</name>
+        <reimplementedby refid="class_hostnames_mongo_d_b_1ac5d77e22ced9525fa0be84e0cf94f837">writeHostnameToDB</reimplementedby>
+        <reimplementedby refid="class_hostnames_m_l_d_b_1a2b45c2b97641e19a74dca18c46a09937">writeHostnameToDB</reimplementedby>
+        <param>
+          <type>const MessageLogger::IPAddress &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>hostname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/hostnames.hpp" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hostnames_1a11fb2267e0893c3e9329d6f6fe4c0334" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GetHostResult</type>
+        <definition>GetHostResult Hostnames::getHostByAddr</definition>
+        <argsstring>(MessageLogger::IPAddress addr, BW::string &amp;hostname)</argsstring>
+        <name>getHostByAddr</name>
+        <param>
+          <type>MessageLogger::IPAddress</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>BW::string &amp;</type>
+          <declname>hostname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method attempts to discover the hostname associated with the provided IP address.</para><para>If the hostname does not already exist in the hostname map a network query will occur to try and resolve the host.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The IP address for the hostname lookup </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hostname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reference to a BW::string where the hostname is stored</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>GetHostResult status (Found in cache; Added to cache; or Error) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/hostnames.hpp" line="42" column="1" bodyfile="tools/message_logger/hostnames.cpp" bodystart="35" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hostnames_1a11117adbc92da4ae3660105c24e3122d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32</type>
+        <definition>MessageLogger::IPAddress Hostnames::getHostByName</definition>
+        <argsstring>(const char *hostname) const </argsstring>
+        <name>getHostByName</name>
+        <param>
+          <type>const char *</type>
+          <declname>hostname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method retrieves the address associated with the specified hostname from the hostname map.</para><para><simplesect kind="return"><para>IP address of the hostname on success, 0 if not known. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/hostnames.hpp" line="45" column="1" bodyfile="tools/message_logger/hostnames.cpp" bodystart="97" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hostnames_1a9ea4a0cb4297aaf4f41ff7420da906af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Hostnames::visitAllWith</definition>
+        <argsstring>(HostnameVisitor &amp;visitor) const </argsstring>
+        <name>visitAllWith</name>
+        <param>
+          <type><ref refid="class_hostname_visitor" kindref="compound">HostnameVisitor</ref> &amp;</type>
+          <declname>visitor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method invokes onHost on the visitor for all the hostname entries stored in the hostname map.</para><para><simplesect kind="return"><para>true on success, false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/hostnames.hpp" line="47" column="1" bodyfile="tools/message_logger/hostnames.cpp" bodystart="122" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hostnames_1a7ee1745c4472c326782f788a27a91c02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hostnames::updateHostname</definition>
+        <argsstring>(const MessageLogger::IPAddress &amp;addr, const BW::string &amp;hostname)</argsstring>
+        <name>updateHostname</name>
+        <param>
+          <type>const MessageLogger::IPAddress &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>hostname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/hostnames.hpp" line="49" column="1" bodyfile="tools/message_logger/hostnames.hpp" bodystart="49" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_hostnames_1a0c24bc685d1c7f6c608d6e45c34ea12b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>BW_BEGIN_NAMESPACE void Hostnames::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/hostnames.hpp" line="59" column="1" bodyfile="tools/message_logger/hostnames.cpp" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hostnames_1a136c9c4ec2a93bc3c72f58fbb70252ea" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Hostnames::addHostnameToMap</definition>
+        <argsstring>(const MessageLogger::IPAddress &amp;addr, const BW::string &amp;hostname)</argsstring>
+        <name>addHostnameToMap</name>
+        <param>
+          <type>const MessageLogger::IPAddress &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>hostname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/hostnames.hpp" line="61" column="1" bodyfile="tools/message_logger/hostnames.hpp" bodystart="61" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class handles the mapping between IP addresses and hostnames </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1438">
+        <label>HostnamesMongoDB</label>
+        <link refid="class_hostnames_mongo_d_b"/>
+        <childnode refid="1436" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1437">
+        <label>HostnamesMLDB</label>
+        <link refid="class_hostnames_m_l_d_b"/>
+        <childnode refid="1436" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1436">
+        <label>Hostnames</label>
+        <link refid="class_hostnames"/>
+      </node>
+    </inheritancegraph>
+    <location file="tools/message_logger/hostnames.hpp" line="37" column="1" bodyfile="tools/message_logger/hostnames.hpp" bodystart="36" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_hostnames_1a136c9c4ec2a93bc3c72f58fbb70252ea" prot="protected" virt="non-virtual"><scope>Hostnames</scope><name>addHostnameToMap</name></member>
+      <member refid="class_hostnames_1a0c24bc685d1c7f6c608d6e45c34ea12b" prot="protected" virt="non-virtual"><scope>Hostnames</scope><name>clear</name></member>
+      <member refid="class_hostnames_1a11fb2267e0893c3e9329d6f6fe4c0334" prot="public" virt="non-virtual"><scope>Hostnames</scope><name>getHostByAddr</name></member>
+      <member refid="class_hostnames_1a11117adbc92da4ae3660105c24e3122d" prot="public" virt="non-virtual"><scope>Hostnames</scope><name>getHostByName</name></member>
+      <member refid="class_hostnames_1a95b8284bb9917bfcef6f558fa19592a0" prot="private" virt="non-virtual"><scope>Hostnames</scope><name>hostnames_</name></member>
+      <member refid="class_hostnames_1ae71a6c8731b124798946b357015a1acb" prot="private" virt="non-virtual"><scope>Hostnames</scope><name>HostnamesMap</name></member>
+      <member refid="class_hostnames_1a7ee1745c4472c326782f788a27a91c02" prot="public" virt="non-virtual"><scope>Hostnames</scope><name>updateHostname</name></member>
+      <member refid="class_hostnames_1a9ea4a0cb4297aaf4f41ff7420da906af" prot="public" virt="non-virtual"><scope>Hostnames</scope><name>visitAllWith</name></member>
+      <member refid="class_hostnames_1a94cf6e04ffbd16e4dbab41e63dd28a74" prot="public" virt="pure-virtual"><scope>Hostnames</scope><name>writeHostnameToDB</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

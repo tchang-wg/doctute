@@ -1,0 +1,778 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_log_storage_m_l_d_b" kind="class" language="C++" prot="public">
+    <compoundname>LogStorageMLDB</compoundname>
+    <basecompoundref refid="class_log_common_m_l_d_b" prot="public" virt="non-virtual">LogCommonMLDB</basecompoundref>
+    <basecompoundref refid="class_log_storage" prot="public" virt="non-virtual">LogStorage</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_log_storage_m_l_d_b_1ae1fe7e76bf784a74ab214af5489851c1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LogStorageMLDB::maxSegmentSize_</definition>
+        <argsstring></argsstring>
+        <name>maxSegmentSize_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="72" column="1" bodyfile="tools/message_logger/mldb/log_storage.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_storage_m_l_d_b_1a6d6fe967ba5285860e93f1c9540bbcda" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string LogStorageMLDB::logDir_</definition>
+        <argsstring></argsstring>
+        <name>logDir_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="74" column="1" bodyfile="tools/message_logger/mldb/log_storage.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_storage_m_l_d_b_1a87f4fc1e03abefc7d66e89b390a7cd68" prot="private" static="no" mutable="no">
+        <type><ref refid="class_unary_integer_file" kindref="compound">UnaryIntegerFile</ref></type>
+        <definition>UnaryIntegerFile LogStorageMLDB::lock_</definition>
+        <argsstring></argsstring>
+        <name>lock_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="76" column="1" bodyfile="tools/message_logger/mldb/log_storage.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_storage_m_l_d_b_1a6e68b9437080bb2acb8b761e7f0e707e" prot="private" static="no" mutable="no">
+        <type>UserLogs</type>
+        <definition>UserLogs LogStorageMLDB::userLogs_</definition>
+        <argsstring></argsstring>
+        <name>userLogs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="81" column="1" bodyfile="tools/message_logger/mldb/log_storage.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_storage_m_l_d_b_1a06231f58861e449f1839dcae4de1709a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_active_files" kindref="compound">ActiveFiles</ref></type>
+        <definition>ActiveFiles LogStorageMLDB::activeFiles_</definition>
+        <argsstring></argsstring>
+        <name>activeFiles_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="85" column="1" bodyfile="tools/message_logger/mldb/log_storage.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_storage_m_l_d_b_1a76499239066eea4e8b69779d9f27f52b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_quota_config" kindref="compound">QuotaConfig</ref></type>
+        <definition>QuotaConfig LogStorageMLDB::quotaConfig_</definition>
+        <argsstring></argsstring>
+        <name>quotaConfig_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="87" column="1" bodyfile="tools/message_logger/mldb/log_storage.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_storage_m_l_d_b_1a93ee9730f52437ff4a5e07a431c1f2c0" prot="private" static="no" mutable="no">
+        <type><ref refid="class_hostnames_validator_m_l_d_b" kindref="compound">HostnamesValidatorMLDB</ref> *</type>
+        <definition>HostnamesValidatorMLDB* LogStorageMLDB::pHostnamesValidator_</definition>
+        <argsstring></argsstring>
+        <name>pHostnamesValidator_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="89" column="1" bodyfile="tools/message_logger/mldb/log_storage.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1ab1daa49602326e50284cc78c76908197" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LogStorageMLDB::LogStorageMLDB</definition>
+        <argsstring>(Logger &amp;logger)</argsstring>
+        <name>LogStorageMLDB</name>
+        <param>
+          <type><ref refid="class_logger" kindref="compound">Logger</ref> &amp;</type>
+          <declname>logger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="24" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="21" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1a4adf045efba604cdab0304e362bc9af6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LogStorageMLDB::~LogStorageMLDB</definition>
+        <argsstring>()</argsstring>
+        <name>~LogStorageMLDB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="25" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="31" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1a0e35cb3151e79da5aed31a4c5efb2e84" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LogStorageMLDB::onUserLogInit</definition>
+        <argsstring>(uint16 uid, const BW::string &amp;username)</argsstring>
+        <name>onUserLogInit</name>
+        <reimplements refid="class_log_common_m_l_d_b_1a2b283a9686b43f57bf51e8a89633a2b4">onUserLogInit</reimplements>
+        <param>
+          <type>uint16</type>
+          <declname>uid</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback method invoked from <ref refid="class_log_common_m_l_d_b" kindref="compound">LogCommonMLDB</ref> during <ref refid="class_log_common_m_l_d_b_1a6f27811a0eec932201f4ecf330ed9690" kindref="member">initUserLogs()</ref>.</para><para>This method creates a unique <ref refid="class_user_log" kindref="compound">UserLog</ref> instance for the newly discovered user. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="27" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="149" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1a55a62b62672f0d2f722bc7d2736ae911" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LogStorageMLDB::init</definition>
+        <argsstring>(const ConfigReader &amp;config, const char *root)</argsstring>
+        <name>init</name>
+        <reimplements refid="class_log_storage_1a12fbfd9c33447d881dcd381ff3c95c63">init</reimplements>
+        <param>
+          <type>const ConfigReader &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>root</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialises the <ref refid="class_log_storage_m_l_d_b" kindref="compound">LogStorageMLDB</ref> instance for use.</para><para><simplesect kind="return"><para>true on successful initialisation, false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="29" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="162" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1aecb848978778465fff7cf93a2c38c454" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void LogStorageMLDB::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <reimplements refid="class_log_storage_1a4ea44cc8d860d001371e639664177797">tick</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="30" column="1" bodyfile="tools/message_logger/mldb/log_storage.hpp" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1ad26afc02a190424798adfeec1b57b85a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LogStorageMLDB::roll</definition>
+        <argsstring>()</argsstring>
+        <name>roll</name>
+        <reimplements refid="class_log_storage_1a0d9879f1ae182940bf81e33fb34fcbaf">roll</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Terminates all current log segments.</para><para><simplesect kind="return"><para>true on success, false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="32" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="244" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1a21fb200645cf852488279a56cd396826" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LogStorageMLDB::setAppInstanceID</definition>
+        <argsstring>(const Mercury::Address &amp;addr, int id)</argsstring>
+        <name>setAppInstanceID</name>
+        <reimplements refid="class_log_storage_1a01a715ce3061931e04f7a5ddcd31d0a7">setAppInstanceID</reimplements>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Finds the component associated with the provided address and sets the instance ID of that component.</para><para>This is used to update a component with information from bwmachined so we know that we know which process (eg: cellapp01 or cellapp02) we are are referring to.</para><para><simplesect kind="return"><para>true on success, false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="33" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="278" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1a866a1953dddd30233f1987ff12fe3ede" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LogStorageMLDB::stopLoggingFromComponent</definition>
+        <argsstring>(const Mercury::Address &amp;addr)</argsstring>
+        <name>stopLoggingFromComponent</name>
+        <reimplements refid="class_log_storage_1acad8876928ff3b9e62069dede8b7a9f5">stopLoggingFromComponent</reimplements>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method removes a process from the list of currently logging user processes.</para><para><simplesect kind="return"><para>true on success, false on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="34" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="300" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1a7a26380f9658e6cc7df138960f171cbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>AddLogMessageResult</type>
+        <definition>AddLogMessageResult LogStorageMLDB::writeLogToDB</definition>
+        <argsstring>(const LoggerComponentMessage &amp;componentMessage, const Mercury::Address &amp;address, MemoryIStream &amp;inputStream, const LoggerMessageHeader &amp;header, LogStringInterpolator *pHandler, MessageLogger::CategoryID categoryID)</argsstring>
+        <name>writeLogToDB</name>
+        <reimplements refid="class_log_storage_1a0651089583bf3e3660b4c0a629c7e466">writeLogToDB</reimplements>
+        <param>
+          <type>const LoggerComponentMessage &amp;</type>
+          <declname>componentMessage</declname>
+        </param>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>MemoryIStream &amp;</type>
+          <declname>inputStream</declname>
+        </param>
+        <param>
+          <type>const LoggerMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type><ref refid="class_log_string_interpolator" kindref="compound">LogStringInterpolator</ref> *</type>
+          <declname>pHandler</declname>
+        </param>
+        <param>
+          <type>MessageLogger::CategoryID</type>
+          <declname>categoryID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method write an incoming log to the db.</para><para>It is responsible for determining which user the log message belongs to, and handing off the message to the appropriate <ref refid="class_user_log" kindref="compound">UserLog</ref> to be written.</para><para><simplesect kind="return"><para>enum type AddLogMessageResult </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="36" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="327" bodyend="400"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1afaa471428316db6330d79687879a9dcc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="class_format_strings_m_l_d_b" kindref="compound">FormatStringsMLDB</ref> *</type>
+        <definition>FormatStringsMLDB* LogStorageMLDB::getFormatStrings</definition>
+        <argsstring>()</argsstring>
+        <name>getFormatStrings</name>
+        <reimplements refid="class_log_storage_1a42cedcc0167478c2c5a3511b899d961b">getFormatStrings</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="42" column="1" bodyfile="tools/message_logger/mldb/log_storage.hpp" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1af30ec57b8a88e0523f88a7def95143b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="class_hostnames_m_l_d_b" kindref="compound">HostnamesMLDB</ref> *</type>
+        <definition>HostnamesMLDB* LogStorageMLDB::getHostnames</definition>
+        <argsstring>()</argsstring>
+        <name>getHostnames</name>
+        <reimplements refid="class_log_storage_1a5c3e0078fda44c489113c73c4dc6a641">getHostnames</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="43" column="1" bodyfile="tools/message_logger/mldb/log_storage.hpp" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1a5b2e7c8daa55166899d8cdb9b34fd6a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="class_hostnames_validator_m_l_d_b" kindref="compound">HostnamesValidatorMLDB</ref> *</type>
+        <definition>HostnamesValidatorMLDB* LogStorageMLDB::getHostnamesValidator</definition>
+        <argsstring>()</argsstring>
+        <name>getHostnamesValidator</name>
+        <reimplements refid="class_log_storage_1a05f39e95df725b40ffaeac3763774647">getHostnamesValidator</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="44" column="1" bodyfile="tools/message_logger/mldb/log_storage.hpp" bodystart="44" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1af8d318813449c64ada6963aa25f7482c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="class_categories_m_l_d_b" kindref="compound">CategoriesMLDB</ref> *</type>
+        <definition>CategoriesMLDB* LogStorageMLDB::getCategories</definition>
+        <argsstring>()</argsstring>
+        <name>getCategories</name>
+        <reimplements refid="class_log_storage_1a9bbcfc0ca040f15af0786430f0e8ce38">getCategories</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="46" column="1" bodyfile="tools/message_logger/mldb/log_storage.hpp" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1a7faeeae4f687afa5caf8095e72d296b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LogStorageMLDB::updateActiveFiles</definition>
+        <argsstring>()</argsstring>
+        <name>updateActiveFiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method forces the active files to update in case any new files have been created by a <ref refid="class_user_log" kindref="compound">UserLog</ref>.</para><para><simplesect kind="return"><para>true on success, false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="48" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="409" bodyend="412"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1a01843ba3ad4613aaeb86542d49d9dfb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LogStorageMLDB::deleteActiveFiles</definition>
+        <argsstring>()</argsstring>
+        <name>deleteActiveFiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method forces the deletion of the active segments file.</para><para>It is used only to avoid a potential race condition when adding an entry to the UserLogs. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="49" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="421" bodyend="424"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1a400708632881da74028309c0282d4a8a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LogStorageMLDB::getMaxSegmentSize</definition>
+        <argsstring>() const </argsstring>
+        <name>getMaxSegmentSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the maximum allowable size that UserSegments should consume before rolling into a new segment file.</para><para><simplesect kind="return"><para>Maximum segment size allowable (in bytes). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="51" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="433" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1ab4a7adbdd4ff4d3a8ef656ec2df8b808" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>HostnamesValidatorProcessStatus</type>
+        <definition>HostnamesValidatorProcessStatus LogStorageMLDB::validateNextHostname</definition>
+        <argsstring>()</argsstring>
+        <name>validateNextHostname</name>
+        <reimplements refid="class_log_storage_1a8b6022714692f2511d9067a6a18de5e5">validateNextHostname</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialises the validation process (if it is not already) and then checks the next unvalidated hostname in the list</para><para><simplesect kind="return"><para>true on continue processing, false on do not continue (ie. error/finished) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="53" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="743" bodyend="785"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1a8f070b96978a1750fd3f1e7e615bd9c6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LogStorageMLDB::initFromConfig</definition>
+        <argsstring>(const ConfigReader &amp;config)</argsstring>
+        <name>initFromConfig</name>
+        <param>
+          <type>const ConfigReader &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialises the <ref refid="class_log_storage_m_l_d_b" kindref="compound">LogStorageMLDB</ref> instance with any available config options.</para><para><simplesect kind="return"><para>true on success, false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="56" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="64" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1a0ef544ee14b18756e4c499ab2c895ec2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_smart_pointer" kindref="compound">UserLogWriterPtr</ref></type>
+        <definition>UserLogWriterPtr LogStorageMLDB::createUserLog</definition>
+        <argsstring>(uint16 uid, const BW::string &amp;username)</argsstring>
+        <name>createUserLog</name>
+        <param>
+          <type>uint16</type>
+          <declname>uid</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new <ref refid="class_user_log_writer" kindref="compound">UserLogWriter</ref> and adds it to the list of UserLogs.</para><para><simplesect kind="return"><para>A <ref refid="class_smart_pointer" kindref="compound">SmartPointer</ref> to a <ref refid="class_user_log_writer" kindref="compound">UserLogWriter</ref> on success, NULL on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="58" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="444" bodyend="460"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1ac276eff82c42a4a21d516a70fe83aae5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_smart_pointer" kindref="compound">UserLogWriterPtr</ref></type>
+        <definition>UserLogWriterPtr LogStorageMLDB::getUserLog</definition>
+        <argsstring>(uint16 uid)</argsstring>
+        <name>getUserLog</name>
+        <param>
+          <type>uint16</type>
+          <declname>uid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the <ref refid="class_user_log" kindref="compound">UserLog</ref> object for the requested UID.</para><para>UserLogs should exist for all users necessary by the time this method is invoked.</para><para><simplesect kind="return"><para>A <ref refid="class_smart_pointer" kindref="compound">SmartPointer</ref> to a <ref refid="class_user_log_writer" kindref="compound">UserLogWriter</ref> on success, NULL on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="59" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="471" bodyend="480"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1a5444ffb519ad073c2491ff9f39b36df2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_logging_component" kindref="compound">LoggingComponent</ref> *</type>
+        <definition>LoggingComponent * LogStorageMLDB::findLoggingComponent</definition>
+        <argsstring>(const Mercury::Address &amp;addr)</argsstring>
+        <name>findLoggingComponent</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method retrieves the current logging component associated with the specified address.</para><para><simplesect kind="return"><para>A pointer to a <ref refid="class_logging_component" kindref="compound">LoggingComponent</ref> on success, NULL if no <ref refid="class_logging_component" kindref="compound">LoggingComponent</ref> matches the specified address. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="61" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="795" bodyend="815"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1a61d7690179c2d8e14fd45c194f560eae" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LogStorageMLDB::initValidatedHostnames</definition>
+        <argsstring>()</argsstring>
+        <name>initValidatedHostnames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialises hostnames validation process using <ref refid="class_hostnames_validator_m_l_d_b" kindref="compound">HostnamesValidatorMLDB</ref> class.</para><para><simplesect kind="return"><para>true on success, false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="63" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="488" bodyend="513"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1aa8f422019a1c7a0953ac5741105edd22" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LogStorageMLDB::cleanupTempHostnames</definition>
+        <argsstring>(const char *tempFilename) const </argsstring>
+        <name>cleanupTempHostnames</name>
+        <param>
+          <type>const char *</type>
+          <declname>tempFilename</declname>
+          <defname>pTempFilename</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method deletes the temporary hostnames file and directory.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pTempFilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temporary filename to delete.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="64" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="523" bodyend="541"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1adf6719771e5be3e4cc30fd0cff2e6d70" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LogStorageMLDB::restoreBackupHostnames</definition>
+        <argsstring>(const char *backupFilename, const char *restoreToFilename) const </argsstring>
+        <name>restoreBackupHostnames</name>
+        <param>
+          <type>const char *</type>
+          <declname>backupFilename</declname>
+          <defname>pBackupFilename</defname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>restoreToFilename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Restores a backed-up hostnames file.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pBackupFilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the backup file. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>restoreToFilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename to restore to.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="65" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="552" bodyend="568"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1ad60fca20ea0d699a99601e57b2ac2a9b" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>BW::string</type>
+        <definition>BW::string LogStorageMLDB::getBackupHostnamesFile</definition>
+        <argsstring>() const </argsstring>
+        <name>getBackupHostnamesFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="67" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="571" bodyend="613"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1a2a20863948e0682dfce47917e74fbb19" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LogStorageMLDB::relinkValidatedHostnames</definition>
+        <argsstring>()</argsstring>
+        <name>relinkValidatedHostnames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Replaces the hostnames file with a newly validated hostnames. Includes a file backup and recovery process in case of link failure.</para><para><simplesect kind="return"><para>true on success, false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="68" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="622" bodyend="717"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_m_l_d_b_1a865f0bfc47b89b65cf3fcaba846c9be3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LogStorageMLDB::cleanupValidatedHostnames</definition>
+        <argsstring>()</argsstring>
+        <name>cleanupValidatedHostnames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is used to finalise a hostnames validation process.</para><para>The destruction of pHostnamesValidator_ will clean up resources, and setting it to NULL will indicate that we are no longer in the validation process. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/log_storage.hpp" line="69" column="1" bodyfile="tools/message_logger/mldb/log_storage.cpp" bodystart="726" bodyend="733"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1788">
+        <label>LogStorage</label>
+        <link refid="class_log_storage"/>
+      </node>
+      <node id="1786">
+        <label>LogStorageMLDB</label>
+        <link refid="class_log_storage_m_l_d_b"/>
+        <childnode refid="1787" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1788" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1787">
+        <label>LogCommonMLDB</label>
+        <link refid="class_log_common_m_l_d_b"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1795">
+        <label>BinaryFileHandler</label>
+        <link refid="class_binary_file_handler"/>
+        <childnode refid="1793" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1793">
+        <label>FileHandler</label>
+        <link refid="class_file_handler"/>
+      </node>
+      <node id="1799">
+        <label>LogComponentNamesMLDB</label>
+        <link refid="class_log_component_names_m_l_d_b"/>
+        <childnode refid="1792" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1800" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1803">
+        <label>LogStorage</label>
+        <link refid="class_log_storage"/>
+      </node>
+      <node id="1796">
+        <label>Categories</label>
+        <link refid="class_categories"/>
+      </node>
+      <node id="1801">
+        <label>HostnamesMLDB</label>
+        <link refid="class_hostnames_m_l_d_b"/>
+        <childnode refid="1792" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1802" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1794">
+        <label>CategoriesMLDB</label>
+        <link refid="class_categories_m_l_d_b"/>
+        <childnode refid="1795" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1796" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1802">
+        <label>Hostnames</label>
+        <link refid="class_hostnames"/>
+      </node>
+      <node id="1800">
+        <label>LogComponentNames</label>
+        <link refid="class_log_component_names"/>
+      </node>
+      <node id="1797">
+        <label>FormatStringsMLDB</label>
+        <link refid="class_format_strings_m_l_d_b"/>
+        <childnode refid="1795" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1798" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1792">
+        <label>TextFileHandler</label>
+        <link refid="class_text_file_handler"/>
+        <childnode refid="1793" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1789">
+        <label>LogStorageMLDB</label>
+        <link refid="class_log_storage_m_l_d_b"/>
+        <childnode refid="1790" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1803" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1791">
+        <label>UnaryIntegerFile</label>
+        <link refid="class_unary_integer_file"/>
+        <childnode refid="1792" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1798">
+        <label>FormatStrings</label>
+        <link refid="class_format_strings"/>
+      </node>
+      <node id="1790">
+        <label>LogCommonMLDB</label>
+        <link refid="class_log_common_m_l_d_b"/>
+        <childnode refid="1791" relation="usage">
+          <edgelabel>version_</edgelabel>
+        </childnode>
+        <childnode refid="1794" relation="usage">
+          <edgelabel>categories_</edgelabel>
+        </childnode>
+        <childnode refid="1797" relation="usage">
+          <edgelabel>formatStrings_</edgelabel>
+        </childnode>
+        <childnode refid="1799" relation="usage">
+          <edgelabel>componentNames_</edgelabel>
+        </childnode>
+        <childnode refid="1801" relation="usage">
+          <edgelabel>hostnames_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/message_logger/mldb/log_storage.hpp" line="22" column="1" bodyfile="tools/message_logger/mldb/log_storage.hpp" bodystart="21" bodyend="90"/>
+    <listofallmembers>
+      <member refid="class_log_storage_m_l_d_b_1a06231f58861e449f1839dcae4de1709a" prot="private" virt="non-virtual"><scope>LogStorageMLDB</scope><name>activeFiles_</name></member>
+      <member refid="class_log_storage_1af66ef56c2b42c6f3068ee6ac65768501" prot="public" virt="virtual"><scope>LogStorageMLDB</scope><name>addLogMessage</name></member>
+      <member refid="class_log_common_m_l_d_b_1a3101fe06a39282df32d2a5dbf400999c" prot="protected" virt="non-virtual"><scope>LogStorageMLDB</scope><name>categories_</name></member>
+      <member refid="class_log_storage_m_l_d_b_1aa8f422019a1c7a0953ac5741105edd22" prot="private" virt="non-virtual"><scope>LogStorageMLDB</scope><name>cleanupTempHostnames</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a865f0bfc47b89b65cf3fcaba846c9be3" prot="private" virt="non-virtual"><scope>LogStorageMLDB</scope><name>cleanupValidatedHostnames</name></member>
+      <member refid="class_log_common_m_l_d_b_1a909c6d9b45e6ab3782b92b5dc05e4324" prot="protected" virt="non-virtual"><scope>LogStorageMLDB</scope><name>componentNames_</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a0ef544ee14b18756e4c499ab2c895ec2" prot="private" virt="non-virtual"><scope>LogStorageMLDB</scope><name>createUserLog</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a01843ba3ad4613aaeb86542d49d9dfb2" prot="public" virt="non-virtual"><scope>LogStorageMLDB</scope><name>deleteActiveFiles</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a5444ffb519ad073c2491ff9f39b36df2" prot="private" virt="non-virtual"><scope>LogStorageMLDB</scope><name>findLoggingComponent</name></member>
+      <member refid="class_log_common_m_l_d_b_1af34b8d5422491268aa1b7d16647d52da" prot="protected" virt="non-virtual"><scope>LogStorageMLDB</scope><name>formatStrings_</name></member>
+      <member refid="class_log_storage_m_l_d_b_1ad60fca20ea0d699a99601e57b2ac2a9b" prot="private" virt="non-virtual"><scope>LogStorageMLDB</scope><name>getBackupHostnamesFile</name></member>
+      <member refid="class_log_storage_m_l_d_b_1af8d318813449c64ada6963aa25f7482c" prot="public" virt="virtual"><scope>LogStorageMLDB</scope><name>getCategories</name></member>
+      <member refid="class_log_common_m_l_d_b_1a6d1995294bcc7a2f3608e50662df8cc8" prot="public" virt="non-virtual"><scope>LogStorageMLDB</scope><name>getCategoryNameByID</name></member>
+      <member refid="class_log_common_m_l_d_b_1a8702d9d9cd80a17610d824d67cb476ca" prot="public" virt="non-virtual"><scope>LogStorageMLDB</scope><name>getComponentNameByAppTypeID</name></member>
+      <member refid="class_log_storage_m_l_d_b_1afaa471428316db6330d79687879a9dcc" prot="public" virt="virtual"><scope>LogStorageMLDB</scope><name>getFormatStrings</name></member>
+      <member refid="class_log_common_m_l_d_b_1a11206fae2bcf2ceba6c4732fa1c15b9c" prot="public" virt="non-virtual"><scope>LogStorageMLDB</scope><name>getHostByAddr</name></member>
+      <member refid="class_log_storage_m_l_d_b_1af30ec57b8a88e0523f88a7def95143b7" prot="public" virt="virtual"><scope>LogStorageMLDB</scope><name>getHostnames</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a5b2e7c8daa55166899d8cdb9b34fd6a1" prot="public" virt="virtual"><scope>LogStorageMLDB</scope><name>getHostnamesValidator</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a400708632881da74028309c0282d4a8a" prot="public" virt="non-virtual"><scope>LogStorageMLDB</scope><name>getMaxSegmentSize</name></member>
+      <member refid="class_log_storage_m_l_d_b_1ac276eff82c42a4a21d516a70fe83aae5" prot="private" virt="non-virtual"><scope>LogStorageMLDB</scope><name>getUserLog</name></member>
+      <member refid="class_log_common_m_l_d_b_1a9958da2ca28ec0286dbaee93e3b86e40" prot="protected" virt="non-virtual"><scope>LogStorageMLDB</scope><name>hostnames_</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a55a62b62672f0d2f722bc7d2736ae911" prot="public" virt="virtual"><scope>LogStorageMLDB</scope><name>init</name></member>
+      <member refid="class_log_common_m_l_d_b_1a3d36734cc0960dcf92a86225e3e398f6" prot="protected" virt="non-virtual"><scope>LogStorageMLDB</scope><name>initCommonFiles</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a8f070b96978a1750fd3f1e7e615bd9c6" prot="private" virt="non-virtual"><scope>LogStorageMLDB</scope><name>initFromConfig</name></member>
+      <member refid="class_log_common_m_l_d_b_1a4eac8e2af77ce51e732b424df5b825aa" prot="protected" virt="non-virtual"><scope>LogStorageMLDB</scope><name>initRootLogPath</name></member>
+      <member refid="class_log_common_m_l_d_b_1a6f27811a0eec932201f4ecf330ed9690" prot="protected" virt="non-virtual"><scope>LogStorageMLDB</scope><name>initUserLogs</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a61d7690179c2d8e14fd45c194f560eae" prot="private" virt="non-virtual"><scope>LogStorageMLDB</scope><name>initValidatedHostnames</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a87f4fc1e03abefc7d66e89b390a7cd68" prot="private" virt="non-virtual"><scope>LogStorageMLDB</scope><name>lock_</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a6d6fe967ba5285860e93f1c9540bbcda" prot="private" virt="non-virtual"><scope>LogStorageMLDB</scope><name>logDir_</name></member>
+      <member refid="class_log_storage_1a52d61df7f346353bdee03e762c8b68ee" prot="public" virt="non-virtual"><scope>LogStorageMLDB</scope><name>LogStorage</name></member>
+      <member refid="class_log_storage_m_l_d_b_1ab1daa49602326e50284cc78c76908197" prot="public" virt="non-virtual"><scope>LogStorageMLDB</scope><name>LogStorageMLDB</name></member>
+      <member refid="class_log_storage_m_l_d_b_1ae1fe7e76bf784a74ab214af5489851c1" prot="private" virt="non-virtual"><scope>LogStorageMLDB</scope><name>maxSegmentSize_</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a0e35cb3151e79da5aed31a4c5efb2e84" prot="public" virt="virtual"><scope>LogStorageMLDB</scope><name>onUserLogInit</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a93ee9730f52437ff4a5e07a431c1f2c0" prot="private" virt="non-virtual"><scope>LogStorageMLDB</scope><name>pHostnamesValidator_</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a76499239066eea4e8b69779d9f27f52b" prot="private" virt="non-virtual"><scope>LogStorageMLDB</scope><name>quotaConfig_</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a2a20863948e0682dfce47917e74fbb19" prot="private" virt="non-virtual"><scope>LogStorageMLDB</scope><name>relinkValidatedHostnames</name></member>
+      <member refid="class_log_storage_1a11b5bbf9056e55e773d1e6a7b4c2c9ed" prot="public" virt="non-virtual"><scope>LogStorageMLDB</scope><name>resolveUID</name></member>
+      <member refid="class_log_storage_m_l_d_b_1adf6719771e5be3e4cc30fd0cff2e6d70" prot="private" virt="non-virtual"><scope>LogStorageMLDB</scope><name>restoreBackupHostnames</name></member>
+      <member refid="class_log_storage_m_l_d_b_1ad26afc02a190424798adfeec1b57b85a" prot="public" virt="virtual"><scope>LogStorageMLDB</scope><name>roll</name></member>
+      <member refid="class_log_common_m_l_d_b_1a38e69d0bf927a795a4b0e0b7f802818a" prot="protected" virt="non-virtual"><scope>LogStorageMLDB</scope><name>rootLogPath_</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a21fb200645cf852488279a56cd396826" prot="public" virt="virtual"><scope>LogStorageMLDB</scope><name>setAppInstanceID</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a866a1953dddd30233f1987ff12fe3ede" prot="public" virt="virtual"><scope>LogStorageMLDB</scope><name>stopLoggingFromComponent</name></member>
+      <member refid="class_log_storage_m_l_d_b_1aecb848978778465fff7cf93a2c38c454" prot="public" virt="virtual"><scope>LogStorageMLDB</scope><name>tick</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a7faeeae4f687afa5caf8095e72d296b3" prot="public" virt="non-virtual"><scope>LogStorageMLDB</scope><name>updateActiveFiles</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a6e68b9437080bb2acb8b761e7f0e707e" prot="private" virt="non-virtual"><scope>LogStorageMLDB</scope><name>userLogs_</name></member>
+      <member refid="class_log_storage_m_l_d_b_1ab4a7adbdd4ff4d3a8ef656ec2df8b808" prot="public" virt="virtual"><scope>LogStorageMLDB</scope><name>validateNextHostname</name></member>
+      <member refid="class_log_common_m_l_d_b_1a25692c20371e4b4d216c1f64baf496dd" prot="protected" virt="non-virtual"><scope>LogStorageMLDB</scope><name>version_</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a7a26380f9658e6cc7df138960f171cbb" prot="public" virt="virtual"><scope>LogStorageMLDB</scope><name>writeLogToDB</name></member>
+      <member refid="class_log_storage_1a5aa7a05fed0b9d0e9c22e3a360d95d8d" prot="public" virt="non-virtual"><scope>LogStorageMLDB</scope><name>writeToStdout</name></member>
+      <member refid="class_log_storage_1abda7927b1354a16005f8ca5b37a739b1" prot="protected" virt="non-virtual"><scope>LogStorageMLDB</scope><name>writeToStdout_</name></member>
+      <member refid="class_log_common_m_l_d_b_1a5223cb78e65be90365767917e850c00e" prot="public" virt="virtual"><scope>LogStorageMLDB</scope><name>~LogCommonMLDB</name></member>
+      <member refid="class_log_storage_1ad9e92e507c284c1e6fc2b6d9e8eefce5" prot="public" virt="virtual"><scope>LogStorageMLDB</scope><name>~LogStorage</name></member>
+      <member refid="class_log_storage_m_l_d_b_1a4adf045efba604cdab0304e362bc9af6" prot="public" virt="non-virtual"><scope>LogStorageMLDB</scope><name>~LogStorageMLDB</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,498 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_vision_controller" kind="class" language="C++" prot="public">
+    <compoundname>VisionController</compoundname>
+    <basecompoundref refid="class_controller" prot="public" virt="non-virtual">Controller</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Updatable</basecompoundref>
+    <derivedcompoundref refid="class_scan_vision_controller" prot="public" virt="non-virtual">ScanVisionController</derivedcompoundref>
+    <includes refid="vision__controller_8hpp" local="no">vision_controller.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_vision_controller_1ae4a6a992b171aa056d561c0849ee83b9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float VisionController::visionAngle_</definition>
+        <argsstring></argsstring>
+        <name>visionAngle_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="46" column="1" bodyfile="cellapp/vision_controller.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vision_controller_1ad093275399edf3a6ca9ccf25368c0151" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float VisionController::visionRange_</definition>
+        <argsstring></argsstring>
+        <name>visionRange_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="47" column="1" bodyfile="cellapp/vision_controller.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vision_controller_1a2947590d2b4097ad4ca157a731f602de" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float VisionController::seeingHeight_</definition>
+        <argsstring></argsstring>
+        <name>seeingHeight_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="49" column="1" bodyfile="cellapp/vision_controller.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vision_controller_1a8bdd553bfbeec8051b242de5b43af1da" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int VisionController::updatePeriod_</definition>
+        <argsstring></argsstring>
+        <name>updatePeriod_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="50" column="1" bodyfile="cellapp/vision_controller.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vision_controller_1a141f4b2e3ad523e00f60aab22eaa434c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int VisionController::tickSinceLast_</definition>
+        <argsstring></argsstring>
+        <name>tickSinceLast_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="51" column="1" bodyfile="cellapp/vision_controller.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vision_controller_1afe0d90e825198cfe8355d07a48044b1d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_vision_range_trigger" kindref="compound">VisionRangeTrigger</ref> *</type>
+        <definition>VisionRangeTrigger* VisionController::pVisionTrigger_</definition>
+        <argsstring></argsstring>
+        <name>pVisionTrigger_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="53" column="1" bodyfile="cellapp/vision_controller.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vision_controller_1a61bcdff55cc906a1fd8d6ec25836d51c" prot="private" static="no" mutable="no">
+        <type>BW::vector&lt; EntityID &gt; *</type>
+        <definition>BW::vector&lt; EntityID &gt;* VisionController::pOnloadedVisible_</definition>
+        <argsstring></argsstring>
+        <name>pOnloadedVisible_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="55" column="1" bodyfile="cellapp/vision_controller.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_vision_controller_1a6a3d966add70d739d48f8ea6d53be275" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>VisionController::VisionController</definition>
+        <argsstring>(float visionAngle=1.f, float visionRange=20.f, float seeingHeight=2.f, int updatePeriod=10)</argsstring>
+        <name>VisionController</name>
+        <param>
+          <type>float</type>
+          <declname>visionAngle</declname>
+          <defval>1.f</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>visionRange</declname>
+          <defval>20.f</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>seeingHeight</declname>
+          <defval>2.f</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>updatePeriod</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_vision_controller" kindref="compound">VisionController</ref> constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>visionAngle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is angle (in radians) of the vision cone. The field of view is double this value. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>visionRange</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The range of the vision. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seeingHeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height above the entity position to see from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>updatePeriod</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is how much in between checking vision (in ticks). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="23" column="1" bodyfile="cellapp/vision_controller.cpp" bodystart="79" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vision_controller_1adb07a77e63114b0edd3c3406b69fa54f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VisionController::startReal</definition>
+        <argsstring>(bool isInitialStart)</argsstring>
+        <name>startReal</name>
+        <reimplements refid="class_controller_1a18d601aacf49c6f9f5234ba83921285d">startReal</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>isInitialStart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method overrides the <ref refid="class_controller" kindref="compound">Controller</ref> method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="26" column="1" bodyfile="cellapp/vision_controller.cpp" bodystart="95" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vision_controller_1aa17ba6f0ee414f81714628a8240c9296" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VisionController::stopReal</definition>
+        <argsstring>(bool isFinalStop)</argsstring>
+        <name>stopReal</name>
+        <reimplements refid="class_controller_1a806642c29ced79e6da8bd62c159c8294">stopReal</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>isFinalStop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method overrides the <ref refid="class_controller" kindref="compound">Controller</ref> method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="27" column="1" bodyfile="cellapp/vision_controller.cpp" bodystart="127" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vision_controller_1a6dc5ada6d419859ba02788040dd28b1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>float</type>
+        <definition>float VisionController::getYawOffset</definition>
+        <argsstring>()</argsstring>
+        <name>getYawOffset</name>
+        <reimplementedby refid="class_scan_vision_controller_1ae85f29b124f19f9d1bf397d91f48acb7">getYawOffset</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Yaw offset for vision </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="29" column="1" bodyfile="cellapp/vision_controller.cpp" bodystart="150" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vision_controller_1ab606da1466ff834e127a331b3c2ab5af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VisionController::writeRealToStream</definition>
+        <argsstring>(BinaryOStream &amp;stream)</argsstring>
+        <name>writeRealToStream</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method writes our state to a stream.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stream to which we should write </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="31" column="1" bodyfile="cellapp/vision_controller.cpp" bodystart="185" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vision_controller_1a168c358ed20ed3c440eefc0333c1afe4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool VisionController::readRealFromStream</definition>
+        <argsstring>(BinaryIStream &amp;stream)</argsstring>
+        <name>readRealFromStream</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method reads our state from a stream.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stream from which to read </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successful, false otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="32" column="1" bodyfile="cellapp/vision_controller.cpp" bodystart="210" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vision_controller_1acc5f7c4aa240cb6aedc782780db027cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VisionController::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called every tick. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="34" column="1" bodyfile="cellapp/vision_controller.cpp" bodystart="158" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vision_controller_1aa475d8e30ab182ef44c5c3437d078fff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float VisionController::fieldOfView</definition>
+        <argsstring>() const </argsstring>
+        <name>fieldOfView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="36" column="1" bodyfile="cellapp/vision_controller.hpp" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vision_controller_1ae3016769ca9134eb09fdefeef12e2e40" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float VisionController::visionAngle</definition>
+        <argsstring>() const </argsstring>
+        <name>visionAngle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="37" column="1" bodyfile="cellapp/vision_controller.hpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vision_controller_1a6746d5218cf8f5e862425f05766e1297" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float VisionController::visionRange</definition>
+        <argsstring>() const </argsstring>
+        <name>visionRange</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="38" column="1" bodyfile="cellapp/vision_controller.hpp" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vision_controller_1a91f5ef302dd091694132dce91edf76d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VisionController::setVisionRange</definition>
+        <argsstring>(float visionAngle, float range)</argsstring>
+        <name>setVisionRange</name>
+        <param>
+          <type>float</type>
+          <declname>visionAngle</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the range of your vision. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="40" column="1" bodyfile="cellapp/vision_controller.cpp" bodystart="245" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vision_controller_1acb3bf1895a221dfa8b3ec174a3fbb813" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float VisionController::seeingHeight</definition>
+        <argsstring>() const </argsstring>
+        <name>seeingHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="42" column="1" bodyfile="cellapp/vision_controller.hpp" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vision_controller_1a0732e77aedbf97cf22fb8f9383c0eed6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VisionController::seeingHeight</definition>
+        <argsstring>(float h)</argsstring>
+        <name>seeingHeight</name>
+        <param>
+          <type>float</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the height that you look from. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/vision_controller.hpp" line="43" column="1" bodyfile="cellapp/vision_controller.cpp" bodystart="234" bodyend="239"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is the controller for an entity&apos;s vision. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="3148">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="3149">
+        <label>Updatable</label>
+      </node>
+      <node id="3150">
+        <label>ScanVisionController</label>
+        <link refid="class_scan_vision_controller"/>
+        <childnode refid="3146" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3147">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="3148" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3146">
+        <label>VisionController</label>
+        <link refid="class_vision_controller"/>
+        <childnode refid="3147" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3149" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3153">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="3157">
+        <label>Updatable</label>
+      </node>
+      <node id="3156">
+        <label>PyObjectPlus</label>
+      </node>
+      <node id="3154">
+        <label>Entity</label>
+        <link refid="class_entity"/>
+        <childnode refid="3155" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3156" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3155">
+        <label>BWEntity</label>
+      </node>
+      <node id="3152">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="3153" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3154" relation="usage">
+          <edgelabel>s_factoryFnEntity_</edgelabel>
+        </childnode>
+      </node>
+      <node id="3151">
+        <label>VisionController</label>
+        <link refid="class_vision_controller"/>
+        <childnode refid="3152" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3157" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/vision_controller.hpp" line="18" column="1" bodyfile="cellapp/vision_controller.hpp" bodystart="17" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_controller_1a5c08d1a7974edb523c97f03c843b7a2a" prot="public" virt="non-virtual"><scope>VisionController</scope><name>addControllerDigest</name></member>
+      <member refid="class_controller_1a3332cc6b7c51b257f6b5bf8cccf6b296" prot="public" virt="non-virtual"><scope>VisionController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a797d7bd68f93f36fbd4edc92c9de300e" prot="public" virt="non-virtual"><scope>VisionController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a31d2c2c443222d9134e511eb734493fd" prot="public" virt="non-virtual"><scope>VisionController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a6ef0365a5bc295f4a92430ef0e809367" prot="public" virt="non-virtual"><scope>VisionController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a8972473450e1ea11239ac96c370fddd0" prot="public" virt="non-virtual"><scope>VisionController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a0dab5e21880d0c861495fa1909f95cbe" prot="public" virt="non-virtual"><scope>VisionController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a9e5ce4bd55f4d6cac2380bf3dfe95d5e" prot="public" virt="non-virtual"><scope>VisionController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1aef85b8faeee04f32c6c8fc384537be0d" prot="protected" virt="non-virtual"><scope>VisionController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a2a148ee762b8dae72593a0fb38a029bb" prot="public" virt="non-virtual"><scope>VisionController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a130a7805734c754c3ff8ab59ee01dea2" prot="public" virt="non-virtual"><scope>VisionController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1ade939a909a83784f4e733140c5f6be0f" prot="public" virt="non-virtual"><scope>VisionController</scope><name>create</name></member>
+      <member refid="class_controller_1a7c32bc59c340ade9d98e20d72ae40e7a" prot="public" virt="non-virtual"><scope>VisionController</scope><name>createIfNecessary</name></member>
+      <member refid="class_controller_1a3a96f5d838427d0b251f1cf5792350db" prot="public" virt="non-virtual"><scope>VisionController</scope><name>CreatorFn</name></member>
+      <member refid="class_controller_1aa251a2d5e3be8104a67eb22cc7b33781" prot="public" virt="non-virtual"><scope>VisionController</scope><name>ct</name></member>
+      <member refid="class_controller_1ad0a29b9b91700a808c328fb828ea5433" prot="public" virt="non-virtual"><scope>VisionController</scope><name>disowned</name></member>
+      <member refid="class_controller_1a18e942dbb34d82bc4cfcc9718b1c970f" prot="public" virt="pure-virtual"><scope>VisionController</scope><name>domain</name></member>
+      <member refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" prot="public" virt="non-virtual"><scope>VisionController</scope><name>entity</name></member>
+      <member refid="class_controller_1a30b2745a2b74633dac7bba027bfe5eda" prot="public" virt="non-virtual"><scope>VisionController</scope><name>EXCLUSIVE_CONTROLLER_ID_MASK</name></member>
+      <member refid="class_controller_1ad5aa8f4242778920938f18a19ca039ab" prot="public" virt="pure-virtual"><scope>VisionController</scope><name>exclusiveID</name></member>
+      <member refid="class_controller_1a4399843065da63b4d68e76bcba1c9b33" prot="public" virt="non-virtual"><scope>VisionController</scope><name>factories</name></member>
+      <member refid="class_controller_1a59b8e5ee7602267120c203e2d73a4aad" prot="public" virt="non-virtual"><scope>VisionController</scope><name>factory</name></member>
+      <member refid="class_controller_1a8c83b29edd91cff97310b85fd2dd62a9" prot="public" virt="non-virtual"><scope>VisionController</scope><name>FactoryFn</name></member>
+      <member refid="class_controller_1a01630a3d95bde81822c3ac80cc68bd72" prot="public" virt="non-virtual"><scope>VisionController</scope><name>ffn</name></member>
+      <member refid="class_vision_controller_1aa475d8e30ab182ef44c5c3437d078fff" prot="public" virt="non-virtual"><scope>VisionController</scope><name>fieldOfView</name></member>
+      <member refid="class_vision_controller_1a6dc5ada6d419859ba02788040dd28b1f" prot="public" virt="virtual"><scope>VisionController</scope><name>getYawOffset</name></member>
+      <member refid="class_controller_1a912cc50ab630c16d340e6750571c7d36" prot="protected" virt="non-virtual"><scope>VisionController</scope><name>ghost</name></member>
+      <member refid="class_controller_1a8c2f39fc63cd53d3a098b14310cdbc6c" prot="public" virt="non-virtual"><scope>VisionController</scope><name>id</name></member>
+      <member refid="class_controller_1a97d6e40743b8130b496b1aa604670c83" prot="public" virt="non-virtual"><scope>VisionController</scope><name>init</name></member>
+      <member refid="class_controller_1a31bb10031669992bd8611769195460a0" prot="public" virt="non-virtual"><scope>VisionController</scope><name>isAttached</name></member>
+      <member refid="class_vision_controller_1a61bcdff55cc906a1fd8d6ec25836d51c" prot="private" virt="non-virtual"><scope>VisionController</scope><name>pOnloadedVisible_</name></member>
+      <member refid="class_vision_controller_1afe0d90e825198cfe8355d07a48044b1d" prot="private" virt="non-virtual"><scope>VisionController</scope><name>pVisionTrigger_</name></member>
+      <member refid="class_vision_controller_1a168c358ed20ed3c440eefc0333c1afe4" prot="public" virt="non-virtual"><scope>VisionController</scope><name>readRealFromStream</name></member>
+      <member refid="class_controller_1a27d88cafe564f8c3e97477f82b392b74" prot="public" virt="non-virtual"><scope>VisionController</scope><name>s_factoryFnEntity_</name></member>
+      <member refid="class_vision_controller_1acb3bf1895a221dfa8b3ec174a3fbb813" prot="public" virt="non-virtual"><scope>VisionController</scope><name>seeingHeight</name></member>
+      <member refid="class_vision_controller_1a0732e77aedbf97cf22fb8f9383c0eed6" prot="public" virt="non-virtual"><scope>VisionController</scope><name>seeingHeight</name></member>
+      <member refid="class_vision_controller_1a2947590d2b4097ad4ca157a731f602de" prot="private" virt="non-virtual"><scope>VisionController</scope><name>seeingHeight_</name></member>
+      <member refid="class_vision_controller_1a91f5ef302dd091694132dce91edf76d1" prot="public" virt="non-virtual"><scope>VisionController</scope><name>setVisionRange</name></member>
+      <member refid="class_controller_1a28fbc433135ec5668b0de6286b0fb1fe" prot="protected" virt="non-virtual"><scope>VisionController</scope><name>standardCallback</name></member>
+      <member refid="class_vision_controller_1adb07a77e63114b0edd3c3406b69fa54f" prot="public" virt="virtual"><scope>VisionController</scope><name>startReal</name></member>
+      <member refid="class_vision_controller_1aa17ba6f0ee414f81714628a8240c9296" prot="public" virt="virtual"><scope>VisionController</scope><name>stopReal</name></member>
+      <member refid="class_vision_controller_1a141f4b2e3ad523e00f60aab22eaa434c" prot="private" virt="non-virtual"><scope>VisionController</scope><name>tickSinceLast_</name></member>
+      <member refid="class_controller_1aae5de9edfa47a204f2094fdeb8091dbd" prot="public" virt="pure-virtual"><scope>VisionController</scope><name>type</name></member>
+      <member refid="class_controller_1ac066a12fbae3979fbe86f4ee20c02904" prot="public" virt="non-virtual"><scope>VisionController</scope><name>typeName</name></member>
+      <member refid="class_vision_controller_1acc5f7c4aa240cb6aedc782780db027cb" prot="public" virt="non-virtual"><scope>VisionController</scope><name>update</name></member>
+      <member refid="class_vision_controller_1a8bdd553bfbeec8051b242de5b43af1da" prot="private" virt="non-virtual"><scope>VisionController</scope><name>updatePeriod_</name></member>
+      <member refid="class_controller_1aad8a489249dcc3b5edde468d05cb5c7f" prot="public" virt="non-virtual"><scope>VisionController</scope><name>userArg</name></member>
+      <member refid="class_vision_controller_1ae3016769ca9134eb09fdefeef12e2e40" prot="public" virt="non-virtual"><scope>VisionController</scope><name>visionAngle</name></member>
+      <member refid="class_vision_controller_1ae4a6a992b171aa056d561c0849ee83b9" prot="private" virt="non-virtual"><scope>VisionController</scope><name>visionAngle_</name></member>
+      <member refid="class_vision_controller_1a6a3d966add70d739d48f8ea6d53be275" prot="public" virt="non-virtual"><scope>VisionController</scope><name>VisionController</name></member>
+      <member refid="class_vision_controller_1a6746d5218cf8f5e862425f05766e1297" prot="public" virt="non-virtual"><scope>VisionController</scope><name>visionRange</name></member>
+      <member refid="class_vision_controller_1ad093275399edf3a6ca9ccf25368c0151" prot="private" virt="non-virtual"><scope>VisionController</scope><name>visionRange_</name></member>
+      <member refid="class_vision_controller_1ab606da1466ff834e127a331b3c2ab5af" prot="public" virt="non-virtual"><scope>VisionController</scope><name>writeRealToStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="buffered__ghost__messages__for__entity_8hpp" kind="file" language="C++">
+    <compoundname>buffered_ghost_messages_for_entity.hpp</compoundname>
+    <includes refid="buffered__ghost__message__queue_8hpp" local="yes">buffered_ghost_message_queue.hpp</includes>
+    <includes local="yes">cstdmf/bw_map.hpp</includes>
+    <includedby refid="buffered__ghost__messages_8hpp" local="yes">cellapp/buffered_ghost_messages.hpp</includedby>
+    <includedby refid="buffered__ghost__messages_8cpp" local="yes">cellapp/buffered_ghost_messages.cpp</includedby>
+    <includedby refid="buffered__ghost__messages__for__entity_8cpp" local="yes">cellapp/buffered_ghost_messages_for_entity.cpp</includedby>
+    <incdepgraph>
+      <node id="6769">
+        <label>cellapp/buffered_ghost_messages_for_entity.hpp</label>
+        <link refid="buffered_ghost_messages_for_entity.hpp"/>
+        <childnode refid="6770" relation="include">
+        </childnode>
+        <childnode refid="6774" relation="include">
+        </childnode>
+      </node>
+      <node id="6771">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="6774">
+        <label>cstdmf/bw_map.hpp</label>
+      </node>
+      <node id="6770">
+        <label>buffered_ghost_message_queue.hpp</label>
+        <link refid="buffered__ghost__message__queue_8hpp_source"/>
+        <childnode refid="6771" relation="include">
+        </childnode>
+        <childnode refid="6772" relation="include">
+        </childnode>
+        <childnode refid="6773" relation="include">
+        </childnode>
+      </node>
+      <node id="6773">
+        <label>cstdmf/bw_list.hpp</label>
+      </node>
+      <node id="6772">
+        <label>network/basictypes.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6776">
+        <label>cellapp/buffered_ghost_messages.hpp</label>
+        <link refid="buffered__ghost__messages_8hpp_source"/>
+      </node>
+      <node id="6775">
+        <label>cellapp/buffered_ghost_messages_for_entity.hpp</label>
+        <link refid="buffered_ghost_messages_for_entity.hpp"/>
+        <childnode refid="6776" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_buffered_ghost_messages_for_entity" prot="public">BufferedGhostMessagesForEntity</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BUFFERED_GHOST_MESSAGES_FOR_ENTITY_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUFFERED_GHOST_MESSAGES_FOR_ENTITY_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;buffered_ghost_message_queue.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_map.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_buffered_ghost_messages_for_entity" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_buffered_ghost_messages_for_entity" kindref="compound">BufferedGhostMessagesForEntity</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_buffered_ghost_messages_for_entity" kindref="compound">BufferedGhostMessagesForEntity</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_buffered_ghost_messages_for_entity_1aee7a872ba7ef31c017b9310920022d49" kindref="member">add</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>addr,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_buffered_ghost_message" kindref="compound">BufferedGhostMessage</ref><sp/>*<sp/>pMessage<sp/>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_buffered_ghost_messages_for_entity_1a1e41fe5752976191e3d1183f2d60dc74" kindref="member">playSubsequence</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>srcAddr<sp/>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_buffered_ghost_messages_for_entity_1a0da9f93eaf692a9194fb47eb36baa12b" kindref="member">playNewLifespan</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>delaySubsequence(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>addr,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_buffered_ghost_message" kindref="compound">BufferedGhostMessage</ref><sp/>*<sp/>pFirstMessage<sp/>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_buffered_ghost_messages_for_entity_1a561dba91542f8df594992689c785467b" kindref="member">hasMessagesFrom</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>addr<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_buffered_ghost_messages_for_entity_1a7d46a747f7a45f7dc6fd0bd35382ed1c" kindref="member">isDelayingMessagesFor</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>addr<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_smart_pointer" kindref="compound">BufferedGhostMessageQueuePtr</ref><sp/>find(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>addr<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_smart_pointer" kindref="compound">BufferedGhostMessageQueuePtr</ref><sp/>findOrCreate(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>addr<sp/>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BW::map&lt;<sp/>Mercury::Address,<sp/>BufferedGhostMessageQueuePtr<sp/>&gt;<sp/>Queues;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>Queues<sp/>queues_;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>BUFFERED_GHOST_MESSAGES_FOR_ENTITY_HPP</highlight></codeline>
+    </programlisting>
+    <location file="cellapp/buffered_ghost_messages_for_entity.hpp"/>
+  </compounddef>
+</doxygen>

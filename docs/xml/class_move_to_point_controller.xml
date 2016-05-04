@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_move_to_point_controller" kind="class" language="C++" prot="public">
+    <compoundname>MoveToPointController</compoundname>
+    <basecompoundref refid="class_move_controller" prot="public" virt="non-virtual">MoveController</basecompoundref>
+    <includes refid="move__controller_8hpp" local="no">move_controller.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_move_to_point_controller_1a96549b741744fcc27c6051a4d50fbc3a" prot="private" static="no" mutable="no">
+        <type>Position3D</type>
+        <definition>Position3D MoveToPointController::destination_</definition>
+        <argsstring></argsstring>
+        <name>destination_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="69" column="1" bodyfile="cellapp/move_controller.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_move_to_point_controller_1ae5c8ab6f0b7abcfb227efd03e19aedd8" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string MoveToPointController::destinationChunk_</definition>
+        <argsstring></argsstring>
+        <name>destinationChunk_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="70" column="1" bodyfile="cellapp/move_controller.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_move_to_point_controller_1af7a8534a9fcb6b410ebcbb899b513f9c" prot="private" static="no" mutable="no">
+        <type>int32</type>
+        <definition>int32 MoveToPointController::destinationWaypoint_</definition>
+        <argsstring></argsstring>
+        <name>destinationWaypoint_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="71" column="1" bodyfile="cellapp/move_controller.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_move_to_point_controller_1aef2100b38dec379ffc28594e215bfe8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MoveToPointController::MoveToPointController</definition>
+        <argsstring>(const Position3D &amp;destination=Position3D(0, 0, 0), const BW::string &amp;destinationChunk=&quot;&quot;, int32 destinationWaypoint=0, float velocity=0.0f, bool faceMovement=true, bool moveVertically=false)</argsstring>
+        <name>MoveToPointController</name>
+        <param>
+          <type>const Position3D &amp;</type>
+          <declname>destination</declname>
+          <defval>Position3D(0, 0, 0)</defval>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>destinationChunk</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>int32</type>
+          <declname>destinationWaypoint</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>velocity</declname>
+          <defval>0.0f</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>faceMovement</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>moveVertically</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_to_point_controller_1a15753de304d20f4ffffb6fc621accc3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MoveToPointController::writeRealToStream</definition>
+        <argsstring>(BinaryOStream &amp;stream)</argsstring>
+        <name>writeRealToStream</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method writes our state to a stream.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stream to which we should write </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="64" column="1" bodyfile="cellapp/move_controller.cpp" bodystart="239" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_to_point_controller_1a1bdac32ae347a79906763c9d1f07363d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MoveToPointController::readRealFromStream</definition>
+        <argsstring>(BinaryIStream &amp;stream)</argsstring>
+        <name>readRealFromStream</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method reads our state from a stream.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stream from which to read </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successful, false otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="65" column="1" bodyfile="cellapp/move_controller.cpp" bodystart="252" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_to_point_controller_1affbf12a0cf82c9cb76033bc29fc0eb4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MoveToPointController::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called every tick. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="66" column="1" bodyfile="cellapp/move_controller.cpp" bodystart="264" bodyend="282"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This controller moves an entity towards a given point. It registers itself to be called every game tick. The velocity is measured in metres per second. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1995">
+        <label>MoveToPointController</label>
+        <link refid="class_move_to_point_controller"/>
+        <childnode refid="1996" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1998">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="1996">
+        <label>MoveController</label>
+        <link refid="class_move_controller"/>
+        <childnode refid="1997" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1999" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1999">
+        <label>Updatable</label>
+      </node>
+      <node id="1997">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="1998" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2000">
+        <label>MoveToPointController</label>
+        <link refid="class_move_to_point_controller"/>
+        <childnode refid="2001" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2003">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="2001">
+        <label>MoveController</label>
+        <link refid="class_move_controller"/>
+        <childnode refid="2002" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2007" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2007">
+        <label>Updatable</label>
+      </node>
+      <node id="2006">
+        <label>PyObjectPlus</label>
+      </node>
+      <node id="2004">
+        <label>Entity</label>
+        <link refid="class_entity"/>
+        <childnode refid="2005" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2006" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2005">
+        <label>BWEntity</label>
+      </node>
+      <node id="2002">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="2003" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2004" relation="usage">
+          <edgelabel>s_factoryFnEntity_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/move_controller.hpp" line="53" column="1" bodyfile="cellapp/move_controller.hpp" bodystart="52" bodyend="72"/>
+    <listofallmembers>
+      <member refid="class_controller_1a5c08d1a7974edb523c97f03c843b7a2a" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>addControllerDigest</name></member>
+      <member refid="class_controller_1a3332cc6b7c51b257f6b5bf8cccf6b296" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a797d7bd68f93f36fbd4edc92c9de300e" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a31d2c2c443222d9134e511eb734493fd" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a6ef0365a5bc295f4a92430ef0e809367" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a8972473450e1ea11239ac96c370fddd0" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a0dab5e21880d0c861495fa1909f95cbe" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a9e5ce4bd55f4d6cac2380bf3dfe95d5e" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1aef85b8faeee04f32c6c8fc384537be0d" prot="protected" virt="non-virtual"><scope>MoveToPointController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a2a148ee762b8dae72593a0fb38a029bb" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a130a7805734c754c3ff8ab59ee01dea2" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1ade939a909a83784f4e733140c5f6be0f" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>create</name></member>
+      <member refid="class_controller_1a7c32bc59c340ade9d98e20d72ae40e7a" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>createIfNecessary</name></member>
+      <member refid="class_controller_1a3a96f5d838427d0b251f1cf5792350db" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>CreatorFn</name></member>
+      <member refid="class_controller_1aa251a2d5e3be8104a67eb22cc7b33781" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>ct</name></member>
+      <member refid="class_move_to_point_controller_1a96549b741744fcc27c6051a4d50fbc3a" prot="private" virt="non-virtual"><scope>MoveToPointController</scope><name>destination_</name></member>
+      <member refid="class_move_to_point_controller_1ae5c8ab6f0b7abcfb227efd03e19aedd8" prot="private" virt="non-virtual"><scope>MoveToPointController</scope><name>destinationChunk_</name></member>
+      <member refid="class_move_to_point_controller_1af7a8534a9fcb6b410ebcbb899b513f9c" prot="private" virt="non-virtual"><scope>MoveToPointController</scope><name>destinationWaypoint_</name></member>
+      <member refid="class_controller_1ad0a29b9b91700a808c328fb828ea5433" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>disowned</name></member>
+      <member refid="class_controller_1a18e942dbb34d82bc4cfcc9718b1c970f" prot="public" virt="pure-virtual"><scope>MoveToPointController</scope><name>domain</name></member>
+      <member refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>entity</name></member>
+      <member refid="class_controller_1a30b2745a2b74633dac7bba027bfe5eda" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>EXCLUSIVE_CONTROLLER_ID_MASK</name></member>
+      <member refid="class_controller_1ad5aa8f4242778920938f18a19ca039ab" prot="public" virt="pure-virtual"><scope>MoveToPointController</scope><name>exclusiveID</name></member>
+      <member refid="class_move_controller_1aca61ece3abc266c8dc743a9f347bc205" prot="protected" virt="non-virtual"><scope>MoveToPointController</scope><name>faceMovement</name></member>
+      <member refid="class_controller_1a4399843065da63b4d68e76bcba1c9b33" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>factories</name></member>
+      <member refid="class_controller_1a59b8e5ee7602267120c203e2d73a4aad" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>factory</name></member>
+      <member refid="class_controller_1a8c83b29edd91cff97310b85fd2dd62a9" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>FactoryFn</name></member>
+      <member refid="class_controller_1a01630a3d95bde81822c3ac80cc68bd72" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>ffn</name></member>
+      <member refid="class_controller_1a912cc50ab630c16d340e6750571c7d36" prot="protected" virt="non-virtual"><scope>MoveToPointController</scope><name>ghost</name></member>
+      <member refid="class_controller_1a8c2f39fc63cd53d3a098b14310cdbc6c" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>id</name></member>
+      <member refid="class_controller_1a97d6e40743b8130b496b1aa604670c83" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>init</name></member>
+      <member refid="class_controller_1a31bb10031669992bd8611769195460a0" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>isAttached</name></member>
+      <member refid="class_move_controller_1ad818709aad84ba8633b3554447cb01f2" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>move</name></member>
+      <member refid="class_move_controller_1acf3285411ce9fb4ae49d14de99f67d56" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>MoveController</name></member>
+      <member refid="class_move_to_point_controller_1aef2100b38dec379ffc28594e215bfe8e" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>MoveToPointController</name></member>
+      <member refid="class_move_controller_1a02f91149fe74192a8ad1c1dbc2fa711f" prot="protected" virt="non-virtual"><scope>MoveToPointController</scope><name>moveVertically</name></member>
+      <member refid="class_move_to_point_controller_1a1bdac32ae347a79906763c9d1f07363d" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>readRealFromStream</name></member>
+      <member refid="class_controller_1a27d88cafe564f8c3e97477f82b392b74" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>s_factoryFnEntity_</name></member>
+      <member refid="class_move_controller_1adea7b1f4677b271b22a3a9c98815af69" prot="protected" virt="virtual"><scope>MoveToPointController</scope><name>setEntityPosition</name></member>
+      <member refid="class_controller_1a28fbc433135ec5668b0de6286b0fb1fe" prot="protected" virt="non-virtual"><scope>MoveToPointController</scope><name>standardCallback</name></member>
+      <member refid="class_move_controller_1a5694f884aaba561b19c9e52efcaaa265" prot="public" virt="virtual"><scope>MoveToPointController</scope><name>startReal</name></member>
+      <member refid="class_move_controller_1a3ae341674d764efc7962cbc76de3e940" prot="public" virt="virtual"><scope>MoveToPointController</scope><name>stopReal</name></member>
+      <member refid="class_controller_1aae5de9edfa47a204f2094fdeb8091dbd" prot="public" virt="pure-virtual"><scope>MoveToPointController</scope><name>type</name></member>
+      <member refid="class_controller_1ac066a12fbae3979fbe86f4ee20c02904" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>typeName</name></member>
+      <member refid="class_move_to_point_controller_1affbf12a0cf82c9cb76033bc29fc0eb4c" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>update</name></member>
+      <member refid="class_controller_1aad8a489249dcc3b5edde468d05cb5c7f" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>userArg</name></member>
+      <member refid="class_move_to_point_controller_1a15753de304d20f4ffffb6fc621accc3d" prot="public" virt="non-virtual"><scope>MoveToPointController</scope><name>writeRealToStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

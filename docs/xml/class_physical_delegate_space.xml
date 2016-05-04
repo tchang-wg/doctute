@@ -1,0 +1,481 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_physical_delegate_space" kind="class" language="C++" prot="public">
+    <compoundname>PhysicalDelegateSpace</compoundname>
+    <basecompoundref refid="class_i_physical_space" prot="public" virt="non-virtual">IPhysicalSpace</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_physical_delegate_space_1ac5c478daa75bae94e499fb0b327517cd" prot="private" static="no">
+        <type>std::map&lt; SpaceEntryID, BW::string &gt;</type>
+        <definition>typedef std::map&lt; SpaceEntryID, BW::string &gt; PhysicalDelegateSpace::PathMap</definition>
+        <argsstring></argsstring>
+        <name>PathMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="115" column="1" bodyfile="cellapp/physical_delegate_space.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_physical_delegate_space_1a1edba17fbb7b4648205c5b9d32daaff8" prot="private" static="no">
+        <type>std::map&lt; BW::string, SpaceEntryID &gt;</type>
+        <definition>typedef std::map&lt; BW::string, SpaceEntryID &gt; PhysicalDelegateSpace::ReversePathMap</definition>
+        <argsstring></argsstring>
+        <name>ReversePathMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="118" column="1" bodyfile="cellapp/physical_delegate_space.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_physical_delegate_space_1a6060eb965d8c8ee2b0343530b1917655" prot="private" static="no" mutable="no">
+        <type>SpaceID</type>
+        <definition>SpaceID PhysicalDelegateSpace::id_</definition>
+        <argsstring></argsstring>
+        <name>id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="107" column="1" bodyfile="cellapp/physical_delegate_space.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_physical_delegate_space_1a8942396d3ae05ca4d3a80c7ede958814" prot="private" static="no" mutable="no">
+        <type>Scene</type>
+        <definition>Scene PhysicalDelegateSpace::scene_</definition>
+        <argsstring></argsstring>
+        <name>scene_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The scene interface is dummy since no providers/views are currently implemented for Delegate <ref refid="class_space" kindref="compound">Space</ref>. This is to moved to <ref refid="class_i_physical_space" kindref="compound">IPhysicalSpace</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="113" column="1" bodyfile="cellapp/physical_delegate_space.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_physical_delegate_space_1a9d8f0de1bdf07b73826e906266d40e8f" prot="private" static="no" mutable="no">
+        <type>PathMap</type>
+        <definition>PathMap PhysicalDelegateSpace::paths_</definition>
+        <argsstring></argsstring>
+        <name>paths_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="116" column="1" bodyfile="cellapp/physical_delegate_space.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_physical_delegate_space_1a1de60c13cd8d56aa6258e2e74d359ccd" prot="private" static="no" mutable="no">
+        <type>ReversePathMap</type>
+        <definition>ReversePathMap PhysicalDelegateSpace::reversePaths_</definition>
+        <argsstring></argsstring>
+        <name>reversePaths_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="119" column="1" bodyfile="cellapp/physical_delegate_space.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_physical_delegate_space_1a00fe4215ec315bf01afdceb5c5a27fea" prot="private" static="no" mutable="no">
+        <type>ISpaceDelegateFactory *</type>
+        <definition>ISpaceDelegateFactory* PhysicalDelegateSpace::spaceDelegateFactory_</definition>
+        <argsstring></argsstring>
+        <name>spaceDelegateFactory_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="121" column="1" bodyfile="cellapp/physical_delegate_space.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_physical_delegate_space_1a7253837bf2f05b03de232bc4b8b65472" prot="private" static="no" mutable="no">
+        <type>ISpaceDelegatePtr</type>
+        <definition>ISpaceDelegatePtr PhysicalDelegateSpace::spaceDelegate_</definition>
+        <argsstring></argsstring>
+        <name>spaceDelegate_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="123" column="1" bodyfile="cellapp/physical_delegate_space.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_physical_delegate_space_1a54d736acfb47f7a90c09f02f8ed7d9aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE PhysicalDelegateSpace::PhysicalDelegateSpace</definition>
+        <argsstring>(SpaceID id)</argsstring>
+        <name>PhysicalDelegateSpace</name>
+        <param>
+          <type>SpaceID</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="24" column="1" bodyfile="cellapp/physical_delegate_space.cpp" bodystart="13" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_delegate_space_1aae73425eeb54d3e8d2a5862f8f9db2df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PhysicalDelegateSpace::~PhysicalDelegateSpace</definition>
+        <argsstring>()</argsstring>
+        <name>~PhysicalDelegateSpace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="25" column="1" bodyfile="cellapp/physical_delegate_space.cpp" bodystart="45" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_delegate_space_1ac024b8db12255a502202ee9fc3334f4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PhysicalDelegateSpace::loadResource</definition>
+        <argsstring>(const SpaceEntryID &amp;mappingID, const BW::string &amp;path, const Matrix &amp;matrix=Matrix::identity)</argsstring>
+        <name>loadResource</name>
+        <reimplements refid="class_i_physical_space_1ad4bf6afa9821ec80944e29f0307f4f7d">loadResource</reimplements>
+        <param>
+          <type>const SpaceEntryID &amp;</type>
+          <declname>mappingID</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const Matrix &amp;</type>
+          <declname>matrix</declname>
+          <defval>Matrix::identity</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method requests to load the specified resource, possibly using a translation matrix, and assigns it the given SpaceEntryID. (The loading itself may be performed asynchronously.)</para><para>This method requests to load the specified resource, possibly using a translation matrix (which is currently ignored), and assigns it the given SpaceEntryID. (The loading itself may be performed asynchronously.) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="33" column="1" bodyfile="cellapp/physical_delegate_space.cpp" bodystart="58" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_delegate_space_1a373f53e47415accb6d12af67d1f2483f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PhysicalDelegateSpace::unloadResource</definition>
+        <argsstring>(const SpaceEntryID &amp;mappingID)</argsstring>
+        <name>unloadResource</name>
+        <reimplements refid="class_i_physical_space_1a66f5f1353ca3f5d31662ed24b4384092">unloadResource</reimplements>
+        <param>
+          <type>const SpaceEntryID &amp;</type>
+          <declname>mappingID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method requests to unload the resource specified by the given SpaceEntryID. (The unloading itself may be performed asynchronously.) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="42" column="1" bodyfile="cellapp/physical_delegate_space.cpp" bodystart="92" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_delegate_space_1a6685c5f39acfea4e7d44661ceccc5cec" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool PhysicalDelegateSpace::update</definition>
+        <argsstring>(const BW::Rect &amp;rect, bool unloadOnly)</argsstring>
+        <name>update</name>
+        <reimplements refid="class_i_physical_space_1a84cc7d0187bd020f8455cf8d1b08b32e">update</reimplements>
+        <param>
+          <type>const BW::Rect &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>unloadOnly</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method loads and/or unloads resources, to cover the axis-aligned rectangle (the updated area that we serve). Return value: whether any new resources have been loaded. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="50" column="1" bodyfile="cellapp/physical_delegate_space.cpp" bodystart="127" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_delegate_space_1a70527ddd74a2cb2e0ead6f63ed616b4a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PhysicalDelegateSpace::getLoadedRect</definition>
+        <argsstring>(BW::Rect &amp;rect) const </argsstring>
+        <name>getLoadedRect</name>
+        <reimplements refid="class_i_physical_space_1a664f84b7d38ac0c87a1bb55570ff9043">getLoadedRect</reimplements>
+        <param>
+          <type>BW::Rect &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method does the best it can to determine an axis-aligned rectangle that has been loaded. If there is no loaded resource, then a very big rectangle is returned. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="57" column="1" bodyfile="cellapp/physical_delegate_space.cpp" bodystart="138" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_delegate_space_1a335232515e8eefd7d1e79276d89e955e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool PhysicalDelegateSpace::getLoadableRects</definition>
+        <argsstring>(IPhysicalSpace::BoundsList &amp;rects) const </argsstring>
+        <name>getLoadableRects</name>
+        <reimplements refid="class_i_physical_space_1a04668c9891fc677334611554fd3d9c84">getLoadableRects</reimplements>
+        <param>
+          <type>IPhysicalSpace::BoundsList &amp;</type>
+          <declname>rects</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method fills the list of Rects with loadable bounds of all mappings. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rects</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to list of Rects to be filled with loadable bounds of all mappings. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false if a full answer cannot be provided immediately, perhaps because resources are still being loaded, true otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="59" column="1" bodyfile="cellapp/physical_delegate_space.cpp" bodystart="172" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_delegate_space_1ab94d903c4432f106f8f7b58d9015c02b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>BoundingBox</type>
+        <definition>BoundingBox PhysicalDelegateSpace::bounds</definition>
+        <argsstring>() const </argsstring>
+        <name>bounds</name>
+        <reimplements refid="class_i_physical_space_1a90222f03c3b303e65df7b30eae94628b">bounds</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the minimal axis-aligned bounding box that contains all physical objects (including the terrain) in the space. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="65" column="1" bodyfile="cellapp/physical_delegate_space.cpp" bodystart="185" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_delegate_space_1a1d0e2c0a032c9e6bf007c3b320a805d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PhysicalDelegateSpace::cancelCurrentlyLoading</definition>
+        <argsstring>()</argsstring>
+        <name>cancelCurrentlyLoading</name>
+        <reimplements refid="class_i_physical_space_1a32893c92809c430fbe935414def2a73b">cancelCurrentlyLoading</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function goes through any resources that have been requested to be loaded, and cancels their loading process. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="71" column="1" bodyfile="cellapp/physical_delegate_space.cpp" bodystart="199" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_delegate_space_1aee5ad0463e46b05ca3fcc9921e78c54e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool PhysicalDelegateSpace::isFullyUnloaded</definition>
+        <argsstring>() const </argsstring>
+        <name>isFullyUnloaded</name>
+        <reimplements refid="class_i_physical_space_1a0b8c4865b1f1413425f436997e3c2b86">isFullyUnloaded</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns whether or not the space is fully unloaded. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="76" column="1" bodyfile="cellapp/physical_delegate_space.cpp" bodystart="211" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_delegate_space_1a4b10c95ddbf1f9dc52c4f675776149a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool PhysicalDelegateSpace::isFullyLoaded</definition>
+        <argsstring>() const </argsstring>
+        <name>isFullyLoaded</name>
+        <reimplements refid="class_i_physical_space_1a8ea6099ea1ff3fda89d18bf7747d32b8">isFullyLoaded</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns whether or not the space is fully loaded. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="81" column="1" bodyfile="cellapp/physical_delegate_space.cpp" bodystart="220" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_delegate_space_1a2c6b20d159ad363e593251d3744c07fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PhysicalDelegateSpace::reuse</definition>
+        <argsstring>()</argsstring>
+        <name>reuse</name>
+        <reimplements refid="class_i_physical_space_1a979d4591e8ea39046b91536f4d34a414">reuse</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method prepares the space to be reused. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="86" column="1" bodyfile="cellapp/physical_delegate_space.cpp" bodystart="232" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_delegate_space_1a6efa79b0ef3c07363dfe1736f4e48848" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PhysicalDelegateSpace::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <reimplements refid="class_i_physical_space_1aa2d11e478be0f5e6e4f9d65aec640908">clear</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method unloads all resources and clears all state. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="91" column="1" bodyfile="cellapp/physical_delegate_space.cpp" bodystart="241" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_delegate_space_1a249b64415fc6423f6517096526f6a403" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PhysicalDelegateSpace::getMatrixForGeometry</definition>
+        <argsstring>(const StringRef path, const MatrixProviderPtr &amp;pMapper, Matrix &amp;matrix)</argsstring>
+        <name>getMatrixForGeometry</name>
+        <reimplements refid="class_i_physical_space_1a43f9319863c466901cf09c2237cd328a">getMatrixForGeometry</reimplements>
+        <param>
+          <type>const StringRef</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const MatrixProviderPtr &amp;</type>
+          <declname>pMapper</declname>
+        </param>
+        <param>
+          <type>Matrix &amp;</type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method extracts a Matrix suitable for loadResource from the MatrixProvider.</para><para>This method get matrix by MatrixProvider. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="96" column="1" bodyfile="cellapp/physical_delegate_space.cpp" bodystart="251" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_delegate_space_1a9c6ff78c0ddb3bc17deca8e52ce28b70" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const Scene &amp;</type>
+        <definition>const Scene&amp; PhysicalDelegateSpace::scene</definition>
+        <argsstring>() const </argsstring>
+        <name>scene</name>
+        <reimplements refid="class_i_physical_space_1ad02a52007c19413098e63d65a5a53ec6">scene</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>These methods return Scene interface. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="103" column="1" bodyfile="cellapp/physical_delegate_space.hpp" bodystart="103" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_delegate_space_1a951ad9937060b1338978a46124295b6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>Scene &amp;</type>
+        <definition>Scene&amp; PhysicalDelegateSpace::scene</definition>
+        <argsstring>()</argsstring>
+        <name>scene</name>
+        <reimplements refid="class_i_physical_space_1ae87c93ad5f4a58c6715ebbabe046fd82">scene</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="104" column="1" bodyfile="cellapp/physical_delegate_space.hpp" bodystart="104" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_physical_delegate_space_1aea6058065b0bf34c8295259feda20860" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PhysicalDelegateSpace::createSpaceDelegate</definition>
+        <argsstring>()</argsstring>
+        <name>createSpaceDelegate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/physical_delegate_space.hpp" line="125" column="1" bodyfile="cellapp/physical_delegate_space.cpp" bodystart="27" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2112">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="2111">
+        <label>IPhysicalSpace</label>
+        <link refid="class_i_physical_space"/>
+        <childnode refid="2112" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2110">
+        <label>PhysicalDelegateSpace</label>
+        <link refid="class_physical_delegate_space"/>
+        <childnode refid="2111" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2115">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="2114">
+        <label>IPhysicalSpace</label>
+        <link refid="class_i_physical_space"/>
+        <childnode refid="2115" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2113">
+        <label>PhysicalDelegateSpace</label>
+        <link refid="class_physical_delegate_space"/>
+        <childnode refid="2114" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/physical_delegate_space.hpp" line="21" column="1" bodyfile="cellapp/physical_delegate_space.hpp" bodystart="20" bodyend="126"/>
+    <listofallmembers>
+      <member refid="class_physical_delegate_space_1ab94d903c4432f106f8f7b58d9015c02b" prot="public" virt="virtual"><scope>PhysicalDelegateSpace</scope><name>bounds</name></member>
+      <member refid="class_i_physical_space_1a4f9b844ef47b8e9fa49a5ba4be6c4878" prot="public" virt="non-virtual"><scope>PhysicalDelegateSpace</scope><name>BoundsList</name></member>
+      <member refid="class_physical_delegate_space_1a1d0e2c0a032c9e6bf007c3b320a805d7" prot="public" virt="virtual"><scope>PhysicalDelegateSpace</scope><name>cancelCurrentlyLoading</name></member>
+      <member refid="class_physical_delegate_space_1a6efa79b0ef3c07363dfe1736f4e48848" prot="public" virt="virtual"><scope>PhysicalDelegateSpace</scope><name>clear</name></member>
+      <member refid="class_physical_delegate_space_1aea6058065b0bf34c8295259feda20860" prot="private" virt="non-virtual"><scope>PhysicalDelegateSpace</scope><name>createSpaceDelegate</name></member>
+      <member refid="class_physical_delegate_space_1a335232515e8eefd7d1e79276d89e955e" prot="public" virt="virtual"><scope>PhysicalDelegateSpace</scope><name>getLoadableRects</name></member>
+      <member refid="class_physical_delegate_space_1a70527ddd74a2cb2e0ead6f63ed616b4a" prot="public" virt="virtual"><scope>PhysicalDelegateSpace</scope><name>getLoadedRect</name></member>
+      <member refid="class_physical_delegate_space_1a249b64415fc6423f6517096526f6a403" prot="public" virt="virtual"><scope>PhysicalDelegateSpace</scope><name>getMatrixForGeometry</name></member>
+      <member refid="class_physical_delegate_space_1a6060eb965d8c8ee2b0343530b1917655" prot="private" virt="non-virtual"><scope>PhysicalDelegateSpace</scope><name>id_</name></member>
+      <member refid="class_physical_delegate_space_1a4b10c95ddbf1f9dc52c4f675776149a6" prot="public" virt="virtual"><scope>PhysicalDelegateSpace</scope><name>isFullyLoaded</name></member>
+      <member refid="class_physical_delegate_space_1aee5ad0463e46b05ca3fcc9921e78c54e" prot="public" virt="virtual"><scope>PhysicalDelegateSpace</scope><name>isFullyUnloaded</name></member>
+      <member refid="class_physical_delegate_space_1ac024b8db12255a502202ee9fc3334f4a" prot="public" virt="virtual"><scope>PhysicalDelegateSpace</scope><name>loadResource</name></member>
+      <member refid="class_physical_delegate_space_1ac5c478daa75bae94e499fb0b327517cd" prot="private" virt="non-virtual"><scope>PhysicalDelegateSpace</scope><name>PathMap</name></member>
+      <member refid="class_physical_delegate_space_1a9d8f0de1bdf07b73826e906266d40e8f" prot="private" virt="non-virtual"><scope>PhysicalDelegateSpace</scope><name>paths_</name></member>
+      <member refid="class_physical_delegate_space_1a54d736acfb47f7a90c09f02f8ed7d9aa" prot="public" virt="non-virtual"><scope>PhysicalDelegateSpace</scope><name>PhysicalDelegateSpace</name></member>
+      <member refid="class_physical_delegate_space_1a2c6b20d159ad363e593251d3744c07fd" prot="public" virt="virtual"><scope>PhysicalDelegateSpace</scope><name>reuse</name></member>
+      <member refid="class_physical_delegate_space_1a1edba17fbb7b4648205c5b9d32daaff8" prot="private" virt="non-virtual"><scope>PhysicalDelegateSpace</scope><name>ReversePathMap</name></member>
+      <member refid="class_physical_delegate_space_1a1de60c13cd8d56aa6258e2e74d359ccd" prot="private" virt="non-virtual"><scope>PhysicalDelegateSpace</scope><name>reversePaths_</name></member>
+      <member refid="class_physical_delegate_space_1a9c6ff78c0ddb3bc17deca8e52ce28b70" prot="public" virt="virtual"><scope>PhysicalDelegateSpace</scope><name>scene</name></member>
+      <member refid="class_physical_delegate_space_1a951ad9937060b1338978a46124295b6c" prot="public" virt="virtual"><scope>PhysicalDelegateSpace</scope><name>scene</name></member>
+      <member refid="class_physical_delegate_space_1a8942396d3ae05ca4d3a80c7ede958814" prot="private" virt="non-virtual"><scope>PhysicalDelegateSpace</scope><name>scene_</name></member>
+      <member refid="class_physical_delegate_space_1a7253837bf2f05b03de232bc4b8b65472" prot="private" virt="non-virtual"><scope>PhysicalDelegateSpace</scope><name>spaceDelegate_</name></member>
+      <member refid="class_physical_delegate_space_1a00fe4215ec315bf01afdceb5c5a27fea" prot="private" virt="non-virtual"><scope>PhysicalDelegateSpace</scope><name>spaceDelegateFactory_</name></member>
+      <member refid="class_i_physical_space_1a2b1485999fb6b6922a961c01c9e19595" prot="public" virt="virtual"><scope>PhysicalDelegateSpace</scope><name>subBounds</name></member>
+      <member refid="class_physical_delegate_space_1a373f53e47415accb6d12af67d1f2483f" prot="public" virt="virtual"><scope>PhysicalDelegateSpace</scope><name>unloadResource</name></member>
+      <member refid="class_physical_delegate_space_1a6685c5f39acfea4e7d44661ceccc5cec" prot="public" virt="virtual"><scope>PhysicalDelegateSpace</scope><name>update</name></member>
+      <member refid="class_i_physical_space_1a6e8afeaa3ba55fcadbd15573288d5efa" prot="public" virt="virtual"><scope>PhysicalDelegateSpace</scope><name>~IPhysicalSpace</name></member>
+      <member refid="class_physical_delegate_space_1aae73425eeb54d3e8d2a5862f8f9db2df" prot="public" virt="non-virtual"><scope>PhysicalDelegateSpace</scope><name>~PhysicalDelegateSpace</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

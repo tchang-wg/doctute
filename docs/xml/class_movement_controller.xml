@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_movement_controller" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>MovementController</compoundname>
+    <derivedcompoundref refid="class_beeline_1_1_beeline_controller" prot="public" virt="non-virtual">Beeline::BeelineController</derivedcompoundref>
+    <derivedcompoundref refid="class_patrol_1_1_graph_traverser" prot="public" virt="non-virtual">Patrol::GraphTraverser</derivedcompoundref>
+    <includes refid="movement__controller_8hpp" local="no">movement_controller.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_movement_controller_1a7d808aa1d9b805fb5691b1b13c4ca5ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual MovementController::~MovementController</definition>
+        <argsstring>()</argsstring>
+        <name>~MovementController</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/movement_controller.hpp" line="16" column="1" bodyfile="tools/bots/movement_controller.hpp" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_movement_controller_1a8508178ae0c00abc45edcec8ad80e587" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool MovementController::nextStep</definition>
+        <argsstring>(float &amp;speed, float dTime, Vector3 &amp;pos, Direction3D &amp;dir)=0</argsstring>
+        <name>nextStep</name>
+        <reimplementedby refid="class_beeline_1_1_beeline_controller_1ac6dbb22730f131665637b8d341ffbd54">nextStep</reimplementedby>
+        <reimplementedby refid="class_zigzag_patrol_1_1_zigzag_graph_traverser_1a259c308f622d59497c28624ab1d6f131">nextStep</reimplementedby>
+        <reimplementedby refid="class_patrol_1_1_graph_traverser_1ae08ed6bcbb434c3111ab69cf01c6edf9">nextStep</reimplementedby>
+        <param>
+          <type>float &amp;</type>
+          <declname>speed</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dTime</declname>
+        </param>
+        <param>
+          <type>Vector3 &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>Direction3D &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/movement_controller.hpp" line="18" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is the interface for movement controllers. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1977">
+        <label>Patrol::GraphTraverser</label>
+        <link refid="class_patrol_1_1_graph_traverser"/>
+        <childnode refid="1975" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1978">
+        <label>ZigzagPatrol::ZigzagGraphTraverser</label>
+        <link refid="class_zigzag_patrol_1_1_zigzag_graph_traverser"/>
+        <childnode refid="1977" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1975">
+        <label>MovementController</label>
+        <link refid="class_movement_controller"/>
+      </node>
+      <node id="1976">
+        <label>Beeline::BeelineController</label>
+        <link refid="class_beeline_1_1_beeline_controller"/>
+        <childnode refid="1975" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="tools/bots/movement_controller.hpp" line="14" column="1" bodyfile="tools/bots/movement_controller.hpp" bodystart="13" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_movement_controller_1a8508178ae0c00abc45edcec8ad80e587" prot="public" virt="pure-virtual"><scope>MovementController</scope><name>nextStep</name></member>
+      <member refid="class_movement_controller_1a7d808aa1d9b805fb5691b1b13c4ca5ff" prot="public" virt="virtual"><scope>MovementController</scope><name>~MovementController</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

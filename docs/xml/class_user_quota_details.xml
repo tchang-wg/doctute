@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_user_quota_details" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>UserQuotaDetails</compoundname>
+    <derivedcompoundref refid="class_m_l_d_b_user_quota_details" prot="public" virt="non-virtual">MLDBUserQuotaDetails</derivedcompoundref>
+    <includes refid="user__quota__details_8hpp" local="no">user_quota_details.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_user_quota_details_1a380fb37967410b205e337b94a819c996" prot="protected" static="no" mutable="no">
+        <type>QuotaPolicyPtr</type>
+        <definition>QuotaPolicyPtr UserQuotaDetails::pPolicy_</definition>
+        <argsstring></argsstring>
+        <name>pPolicy_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_quota_details.hpp" line="52" column="1" bodyfile="tools/message_logger/user_quota_details.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_user_quota_details_1a4a0167c83cf3965f9208d0144315d8c6" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool UserQuotaDetails::configured_</definition>
+        <argsstring></argsstring>
+        <name>configured_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_quota_details.hpp" line="54" column="1" bodyfile="tools/message_logger/user_quota_details.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_user_quota_details_1ab45a9c86e6d154e1bedc0d0448e211d4" prot="protected" static="no" mutable="no">
+        <type>const uint16</type>
+        <definition>const uint16 UserQuotaDetails::uid_</definition>
+        <argsstring></argsstring>
+        <name>uid_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_quota_details.hpp" line="56" column="1" bodyfile="tools/message_logger/user_quota_details.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_user_quota_details_1a6c48e02205284b95b059813de587df38" prot="protected" static="no" mutable="no">
+        <type>uint32</type>
+        <definition>uint32 UserQuotaDetails::currentUsageBytes_</definition>
+        <argsstring></argsstring>
+        <name>currentUsageBytes_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_quota_details.hpp" line="58" column="1" bodyfile="tools/message_logger/user_quota_details.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_user_quota_details_1a0765828816e2440099eae07574bf2746" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>UserQuotaDetails::UserQuotaDetails</definition>
+        <argsstring>(uint16 uid)</argsstring>
+        <name>UserQuotaDetails</name>
+        <param>
+          <type>uint16</type>
+          <declname>uid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_quota_details.hpp" line="24" column="1" bodyfile="tools/message_logger/user_quota_details.hpp" bodystart="24" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_quota_details_1a4cf4b20a210827b1794b4ad739299c45" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>BW_BEGIN_NAMESPACE bool UserQuotaDetails::init</definition>
+        <argsstring>(const QuotaConfig &amp;config, UserSegmentUsage &amp;usage)</argsstring>
+        <name>init</name>
+        <param>
+          <type>const <ref refid="class_quota_config" kindref="compound">QuotaConfig</ref> &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type><ref refid="class_user_segment_usage" kindref="compound">UserSegmentUsage</ref> &amp;</type>
+          <declname>usage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_quota_details.hpp" line="31" column="1" bodyfile="tools/message_logger/user_quota_details.cpp" bodystart="9" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_quota_details_1a16d7d20f01dfd01c54b796e91c6210ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BW::string</type>
+        <definition>BW::string UserQuotaDetails::getPolicyType</definition>
+        <argsstring>()</argsstring>
+        <name>getPolicyType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_quota_details.hpp" line="33" column="1" bodyfile="tools/message_logger/user_quota_details.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_quota_details_1a198f1896552da11490fce510cdacff6e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserQuotaDetails::canAddEntries</definition>
+        <argsstring>() const </argsstring>
+        <name>canAddEntries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_quota_details.hpp" line="36" column="1" bodyfile="tools/message_logger/user_quota_details.hpp" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_quota_details_1a62c79d10506419e5cff628bc91baf602" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserQuotaDetails::shouldDeleteOldData</definition>
+        <argsstring>() const </argsstring>
+        <name>shouldDeleteOldData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_quota_details.hpp" line="41" column="1" bodyfile="tools/message_logger/user_quota_details.hpp" bodystart="41" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_quota_details_1a6f348b6b0a130cd1185ead5d3137e5da" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32</type>
+        <definition>uint32 UserQuotaDetails::getUsage</definition>
+        <argsstring>() const </argsstring>
+        <name>getUsage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_quota_details.hpp" line="45" column="1" bodyfile="tools/message_logger/user_quota_details.hpp" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_quota_details_1aeb9946e0c7a34d853115922f59b15921" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint32</type>
+        <definition>virtual uint32 UserQuotaDetails::addUsage</definition>
+        <argsstring>(uint32 bytes)=0</argsstring>
+        <name>addUsage</name>
+        <reimplementedby refid="class_m_l_d_b_user_quota_details_1ad5ccf717827d29c490da1710caa77676">addUsage</reimplementedby>
+        <param>
+          <type>uint32</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_quota_details.hpp" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_quota_details_1a735562a8492e8c721eea9481ed05c517" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint32</type>
+        <definition>virtual uint32 UserQuotaDetails::removeUsage</definition>
+        <argsstring>(uint32 bytes)=0</argsstring>
+        <name>removeUsage</name>
+        <reimplementedby refid="class_m_l_d_b_user_quota_details_1a9de3674a8d162b6b6bbdf250a3eb2e50">removeUsage</reimplementedby>
+        <param>
+          <type>uint32</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/user_quota_details.hpp" line="49" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_base" kindref="compound">Base</ref> class that holds a given user&apos;s quota limits and current usage. Sub-classes implement the different storage technologies. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="3095">
+        <label>MLDBUserQuotaDetails</label>
+        <link refid="class_m_l_d_b_user_quota_details"/>
+        <childnode refid="3094" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3094">
+        <label>UserQuotaDetails</label>
+        <link refid="class_user_quota_details"/>
+      </node>
+    </inheritancegraph>
+    <location file="tools/message_logger/user_quota_details.hpp" line="22" column="1" bodyfile="tools/message_logger/user_quota_details.hpp" bodystart="21" bodyend="59"/>
+    <listofallmembers>
+      <member refid="class_user_quota_details_1aeb9946e0c7a34d853115922f59b15921" prot="public" virt="pure-virtual"><scope>UserQuotaDetails</scope><name>addUsage</name></member>
+      <member refid="class_user_quota_details_1a198f1896552da11490fce510cdacff6e" prot="public" virt="non-virtual"><scope>UserQuotaDetails</scope><name>canAddEntries</name></member>
+      <member refid="class_user_quota_details_1a4a0167c83cf3965f9208d0144315d8c6" prot="protected" virt="non-virtual"><scope>UserQuotaDetails</scope><name>configured_</name></member>
+      <member refid="class_user_quota_details_1a6c48e02205284b95b059813de587df38" prot="protected" virt="non-virtual"><scope>UserQuotaDetails</scope><name>currentUsageBytes_</name></member>
+      <member refid="class_user_quota_details_1a16d7d20f01dfd01c54b796e91c6210ee" prot="public" virt="non-virtual"><scope>UserQuotaDetails</scope><name>getPolicyType</name></member>
+      <member refid="class_user_quota_details_1a6f348b6b0a130cd1185ead5d3137e5da" prot="public" virt="non-virtual"><scope>UserQuotaDetails</scope><name>getUsage</name></member>
+      <member refid="class_user_quota_details_1a4cf4b20a210827b1794b4ad739299c45" prot="public" virt="virtual"><scope>UserQuotaDetails</scope><name>init</name></member>
+      <member refid="class_user_quota_details_1a380fb37967410b205e337b94a819c996" prot="protected" virt="non-virtual"><scope>UserQuotaDetails</scope><name>pPolicy_</name></member>
+      <member refid="class_user_quota_details_1a735562a8492e8c721eea9481ed05c517" prot="public" virt="pure-virtual"><scope>UserQuotaDetails</scope><name>removeUsage</name></member>
+      <member refid="class_user_quota_details_1a62c79d10506419e5cff628bc91baf602" prot="public" virt="non-virtual"><scope>UserQuotaDetails</scope><name>shouldDeleteOldData</name></member>
+      <member refid="class_user_quota_details_1ab45a9c86e6d154e1bedc0d0448e211d4" prot="protected" virt="non-virtual"><scope>UserQuotaDetails</scope><name>uid_</name></member>
+      <member refid="class_user_quota_details_1a0765828816e2440099eae07574bf2746" prot="public" virt="non-virtual"><scope>UserQuotaDetails</scope><name>UserQuotaDetails</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

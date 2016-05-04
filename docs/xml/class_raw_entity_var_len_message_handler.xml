@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_raw_entity_var_len_message_handler" kind="class" language="C++" prot="public">
+    <compoundname>RawEntityVarLenMessageHandler</compoundname>
+    <basecompoundref refid="class_entity_message_handler" prot="public" virt="non-virtual">EntityMessageHandler</basecompoundref>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_raw_entity_var_len_message_handler_1ae367b318cacd06e3d5f6cffaea294acc" prot="public" static="no">
+        <type>void(Entity::*</type>
+        <definition>typedef void(Entity::* RawEntityVarLenMessageHandler::Handler) (const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;stream)</definition>
+        <argsstring>)(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;stream)</argsstring>
+        <name>Handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This type is the function pointer type that handles the incoming message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/message_handlers.cpp" line="497" column="1" bodyfile="cellapp/message_handlers.cpp" bodystart="497" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_raw_entity_var_len_message_handler_1ab746c3f0b606c57be8f24f9ac4d538b4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_raw_entity_var_len_message_handler_1ae367b318cacd06e3d5f6cffaea294acc" kindref="member">Handler</ref></type>
+        <definition>Handler RawEntityVarLenMessageHandler::handler_</definition>
+        <argsstring></argsstring>
+        <name>handler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/message_handlers.cpp" line="517" column="1" bodyfile="cellapp/message_handlers.cpp" bodystart="517" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_raw_entity_var_len_message_handler_1a2cc3822accc4298158c113c134958e73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RawEntityVarLenMessageHandler::RawEntityVarLenMessageHandler</definition>
+        <argsstring>(std::pair&lt; Handler, EntityReality &gt; args)</argsstring>
+        <name>RawEntityVarLenMessageHandler</name>
+        <param>
+          <type>std::pair&lt; <ref refid="class_raw_entity_var_len_message_handler_1ae367b318cacd06e3d5f6cffaea294acc" kindref="member">Handler</ref>, EntityReality &gt;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/message_handlers.cpp" line="504" column="1" bodyfile="cellapp/message_handlers.cpp" bodystart="504" bodyend="507"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_raw_entity_var_len_message_handler_1a932c46438d230e5ae889879df4b23611" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RawEntityVarLenMessageHandler::callHandler</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data, Entity *pEntity)</argsstring>
+        <name>callHandler</name>
+        <reimplements refid="class_entity_message_handler_1a3ea14f6084db8a7e0d63f18069586151">callHandler</reimplements>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> *</type>
+          <declname>pEntity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method actually causes the message to be fed through to the handler, after it has passed the various checks imposed in <ref refid="class_entity_message_handler_1a333713f5b63dd8114f74a2de7414475a" kindref="member">handleMessage()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/message_handlers.cpp" line="510" column="1" bodyfile="cellapp/message_handlers.cpp" bodystart="510" bodyend="515"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Objects of this type are used to handle variable length messages destined for an entity. This also passes the source address and header to the handling function. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2370">
+        <label>RawEntityVarLenMessageHandler</label>
+        <link refid="class_raw_entity_var_len_message_handler"/>
+        <childnode refid="2371" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2372">
+        <label>InputMessageHandler</label>
+      </node>
+      <node id="2371">
+        <label>EntityMessageHandler</label>
+        <link refid="class_entity_message_handler"/>
+        <childnode refid="2372" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2373">
+        <label>RawEntityVarLenMessageHandler</label>
+        <link refid="class_raw_entity_var_len_message_handler"/>
+        <childnode refid="2374" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2375">
+        <label>InputMessageHandler</label>
+      </node>
+      <node id="2374">
+        <label>EntityMessageHandler</label>
+        <link refid="class_entity_message_handler"/>
+        <childnode refid="2375" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/message_handlers.cpp" line="491" column="1" bodyfile="cellapp/message_handlers.cpp" bodystart="490" bodyend="518"/>
+    <listofallmembers>
+      <member refid="class_raw_entity_var_len_message_handler_1a932c46438d230e5ae889879df4b23611" prot="private" virt="virtual"><scope>RawEntityVarLenMessageHandler</scope><name>callHandler</name></member>
+      <member refid="class_entity_message_handler_1aa7615166f38f04f8097581601d7475d6" prot="protected" virt="non-virtual"><scope>RawEntityVarLenMessageHandler</scope><name>EntityMessageHandler</name></member>
+      <member refid="class_entity_message_handler_1a333713f5b63dd8114f74a2de7414475a" prot="public" virt="non-virtual"><scope>RawEntityVarLenMessageHandler</scope><name>handleMessage</name></member>
+      <member refid="class_entity_message_handler_1ac6fb9eca04a2ca1135a4af7752484ddd" prot="protected" virt="virtual"><scope>RawEntityVarLenMessageHandler</scope><name>handleMessage</name></member>
+      <member refid="class_raw_entity_var_len_message_handler_1ae367b318cacd06e3d5f6cffaea294acc" prot="public" virt="non-virtual"><scope>RawEntityVarLenMessageHandler</scope><name>Handler</name></member>
+      <member refid="class_raw_entity_var_len_message_handler_1ab746c3f0b606c57be8f24f9ac4d538b4" prot="private" virt="non-virtual"><scope>RawEntityVarLenMessageHandler</scope><name>handler_</name></member>
+      <member refid="class_raw_entity_var_len_message_handler_1a2cc3822accc4298158c113c134958e73" prot="public" virt="non-virtual"><scope>RawEntityVarLenMessageHandler</scope><name>RawEntityVarLenMessageHandler</name></member>
+      <member refid="class_entity_message_handler_1a355acd7ae51435fa803c074f66843ab6" prot="protected" virt="non-virtual"><scope>RawEntityVarLenMessageHandler</scope><name>reality_</name></member>
+      <member refid="class_entity_message_handler_1ad8cf26f7e4005caa951e9d7bc4146187" prot="protected" virt="virtual"><scope>RawEntityVarLenMessageHandler</scope><name>sendFailure</name></member>
+      <member refid="class_entity_message_handler_1a110f589b7378160eb4d545467313d260" prot="protected" virt="non-virtual"><scope>RawEntityVarLenMessageHandler</scope><name>shouldBufferIfTickPending_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

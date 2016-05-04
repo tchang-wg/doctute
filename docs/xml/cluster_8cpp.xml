@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cluster_8cpp" kind="file" language="C++">
+    <compoundname>cluster.cpp</compoundname>
+    <includes refid="cluster_8hpp" local="yes">cluster.hpp</includes>
+    <includes refid="interclustermgr_8hpp" local="yes">interclustermgr.hpp</includes>
+    <includes refid="interclustermgr__config_8hpp" local="yes">interclustermgr_config.hpp</includes>
+    <includes refid="baseappmgr__interface_8hpp" local="yes">baseappmgr/baseappmgr_interface.hpp</includes>
+    <includes local="yes">cstdmf/bw_std.hpp</includes>
+    <includes local="yes">cstdmf/stdmf.hpp</includes>
+    <includes local="yes">network/event_dispatcher.hpp</includes>
+    <incdepgraph>
+      <node id="16045">
+        <label>baseappmgr/baseappmgr_interface.hpp</label>
+        <link refid="baseappmgr__interface_8hpp_source"/>
+        <childnode refid="16046" relation="include">
+        </childnode>
+        <childnode refid="16033" relation="include">
+        </childnode>
+        <childnode refid="16047" relation="include">
+        </childnode>
+        <childnode refid="16037" relation="include">
+        </childnode>
+        <childnode refid="16041" relation="include">
+        </childnode>
+        <childnode refid="16048" relation="include">
+        </childnode>
+        <childnode refid="16049" relation="include">
+        </childnode>
+      </node>
+      <node id="16040">
+        <label>cstdmf/singleton.hpp</label>
+      </node>
+      <node id="16042">
+        <label>server/manager_app.hpp</label>
+      </node>
+      <node id="16030">
+        <label>cluster.hpp</label>
+        <link refid="cluster_8hpp_source"/>
+        <childnode refid="16031" relation="include">
+        </childnode>
+        <childnode refid="16032" relation="include">
+        </childnode>
+        <childnode refid="16033" relation="include">
+        </childnode>
+        <childnode refid="16034" relation="include">
+        </childnode>
+      </node>
+      <node id="16051">
+        <label>cstdmf/stdmf.hpp</label>
+      </node>
+      <node id="16043">
+        <label>interclustermgr_config.hpp</label>
+        <link refid="interclustermgr__config_8hpp_source"/>
+        <childnode refid="16033" relation="include">
+        </childnode>
+        <childnode refid="16044" relation="include">
+        </childnode>
+      </node>
+      <node id="16047">
+        <label>cstdmf/binary_stream.hpp</label>
+      </node>
+      <node id="16041">
+        <label>server/common.hpp</label>
+      </node>
+      <node id="16050">
+        <label>cstdmf/bw_std.hpp</label>
+      </node>
+      <node id="16031">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="16029">
+        <label>interclustermgr/cluster.cpp</label>
+        <link refid="cluster.cpp"/>
+        <childnode refid="16030" relation="include">
+        </childnode>
+        <childnode refid="16035" relation="include">
+        </childnode>
+        <childnode refid="16043" relation="include">
+        </childnode>
+        <childnode refid="16045" relation="include">
+        </childnode>
+        <childnode refid="16050" relation="include">
+        </childnode>
+        <childnode refid="16051" relation="include">
+        </childnode>
+        <childnode refid="16052" relation="include">
+        </childnode>
+      </node>
+      <node id="16036">
+        <label>interclustermgr_interface.hpp</label>
+        <link refid="interclustermgr__interface_8hpp_source"/>
+        <childnode refid="16033" relation="include">
+        </childnode>
+        <childnode refid="16037" relation="include">
+        </childnode>
+      </node>
+      <node id="16038">
+        <label>cstdmf/bw_map.hpp</label>
+      </node>
+      <node id="16039">
+        <label>cstdmf/bw_set.hpp</label>
+      </node>
+      <node id="16044">
+        <label>server/server_app_config.hpp</label>
+      </node>
+      <node id="16049">
+        <label>server/reviver_subject.hpp</label>
+      </node>
+      <node id="16033">
+        <label>network/basictypes.hpp</label>
+      </node>
+      <node id="16048">
+        <label>server/anonymous_channel_client.hpp</label>
+      </node>
+      <node id="16035">
+        <label>interclustermgr.hpp</label>
+        <link refid="interclustermgr_8hpp_source"/>
+        <childnode refid="16036" relation="include">
+        </childnode>
+        <childnode refid="16038" relation="include">
+        </childnode>
+        <childnode refid="16039" relation="include">
+        </childnode>
+        <childnode refid="16040" relation="include">
+        </childnode>
+        <childnode refid="16032" relation="include">
+        </childnode>
+        <childnode refid="16041" relation="include">
+        </childnode>
+        <childnode refid="16042" relation="include">
+        </childnode>
+      </node>
+      <node id="16046">
+        <label>cstdmf/bw_namespace.hpp</label>
+      </node>
+      <node id="16037">
+        <label>network/common_interface_macros.hpp</label>
+      </node>
+      <node id="16052">
+        <label>network/event_dispatcher.hpp</label>
+      </node>
+      <node id="16034">
+        <label>network/channel_owner.hpp</label>
+      </node>
+      <node id="16032">
+        <label>cstdmf/unique_id.hpp</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_b_w">BW</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;cluster.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;interclustermgr.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;interclustermgr_config.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;baseappmgr/baseappmgr_interface.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_std.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/stdmf.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/event_dispatcher.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_b_w" kindref="compound">BW</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>InterClusterMgrConfig<sp/>Config;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">Cluster::Cluster(<sp/>InterClusterMgr<sp/>&amp;<sp/>interClusterMgr,<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>intAddr,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ClusterID<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>UniqueID<sp/>uniqueID<sp/>)<sp/>:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>ChannelOwner(<sp/>interClusterMgr.networkInterface(),<sp/>intAddr<sp/>),</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>interClusterMgr_(<sp/>interClusterMgr<sp/>),</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>timerHandle_(),</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>id_(<sp/>id<sp/>),</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>uniqueID_(<sp/>uniqueID<sp/>)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;channel().isLocalRegular(<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;channel().isRemoteRegular(<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>timerHandle_<sp/>=<sp/>interClusterMgr_.mainDispatcher().addOnceOffTimer(</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Config::clusterPingPeriodInStamps(),</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL,<sp/></highlight><highlight class="stringliteral">&quot;ClusterPingTimeout&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">Cluster::~Cluster()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>timerHandle_.cancel();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Cluster::handleTimeout(<sp/>TimerHandle<sp/></highlight><highlight class="comment">/*handle*/</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="comment">/*arg*/</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64<sp/>currTime<sp/>=<sp/>timestamp();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(currTime<sp/>&gt;<sp/>this-&gt;channel().lastReceivedTime()<sp/>+<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Config::clusterRevivingTimeoutInStamps())</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>interClusterMgr_.onClusterTimedOut(<sp/>this-&gt;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">()<sp/>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64<sp/>pingPeriod<sp/>=<sp/>Config::clusterPingPeriodInStamps();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64<sp/>nextPingTime<sp/>=<sp/>this-&gt;channel().lastReliableSendTime()<sp/>+<sp/>pingPeriod;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nextPingTime<sp/>&lt;=<sp/>currTime)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;sendPing();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nextPingTime<sp/>=<sp/>currTime<sp/>+<sp/>pingPeriod;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>timeToWait<sp/>=<sp/>TimeStamp::toSeconds(<sp/>nextPingTime<sp/>-<sp/>currTime<sp/>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>timerHandle_<sp/>=<sp/>interClusterMgr_.mainDispatcher().addOnceOffTimer(</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64(<sp/>timeToWait<sp/>*<sp/>1000000<sp/>),<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL,<sp/></highlight><highlight class="stringliteral">&quot;ClusterPingTimeout&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">/*static*/</highlight><highlight class="normal"><sp/><ref refid="class_smart_pointer" kindref="compound">WatcherPtr</ref><sp/>Cluster::pWatcher()</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>generic<sp/>watcher<sp/>of<sp/>a<sp/>Cluster<sp/>structure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_smart_pointer" kindref="compound">WatcherPtr</ref><sp/>pWatcher<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>DirectoryWatcher();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>pWatcher-&gt;addChild(<sp/></highlight><highlight class="stringliteral">&quot;id&quot;</highlight><highlight class="normal">,<sp/>makeWatcher(<sp/>&amp;Cluster::id_<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOTE:<sp/><sp/><sp/><sp/>When<sp/>adding<sp/>the<sp/>&quot;channel&quot;<sp/>watcher<sp/>the<sp/>code<sp/>assumes<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Cluster<sp/>is<sp/>a<sp/>derived<sp/>of<sp/>ChannelOwner.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STATIC_ASSERT(<sp/>(std::is_base_of&lt;Mercury::ChannelOwner,<sp/>Cluster&gt;::value),</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Assumes_Cluster_is_derived_from_ChannelOwner<sp/>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>pWatcher-&gt;addChild(<sp/></highlight><highlight class="stringliteral">&quot;channel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mercury::ChannelOwner::pWatcher()<sp/>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pWatcher;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">DeregisterClusterReplyHandler<sp/>:<sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Mercury::ShutdownSafeReplyMessageHandler</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>DeregisterClusterReplyHandler(<sp/>ClusterPtr<sp/>pCluster,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DeregisterClusterTaskPtr<sp/>pTask<sp/>)<sp/>:</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pCluster_(<sp/>pCluster<sp/>),</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pTask_(<sp/>pTask<sp/>)<sp/>{}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleMessage(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address&amp;<sp/></highlight><highlight class="comment">/*srcAddr*/</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mercury::UnpackedMessageHeader&amp;<sp/></highlight><highlight class="comment">/*header*/</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BinaryIStream&amp;<sp/>data,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="comment">/*arg*/</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pTask_-&gt;onRequestComplete();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleException(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::NubException&amp;,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WARNING_MSG(<sp/></highlight><highlight class="stringliteral">&quot;DeregisterClusterReplyHandler::handleException:&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>clusterID<sp/>%u<sp/>addr<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pCluster_-&gt;id(),<sp/>pCluster_-&gt;addr().c_str()<sp/>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pTask_-&gt;onRequestComplete();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>ClusterPtr<sp/>pCluster_;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>DeregisterClusterTaskPtr<sp/>pTask_;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>anonymous<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Cluster::onAnotherClusterDeregistered(<sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>ClusterID<sp/>clusterID,<sp/>DeregisterClusterTaskPtr<sp/>pTask<sp/>)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>BaseAppMgrInterface::onAnotherClusterDeregisteredArgs<sp/>&amp;<sp/>args<sp/>=</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>args.startRequest(<sp/>this-&gt;bundle(),</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>DeregisterClusterReplyHandler(<sp/>ClusterPtr(<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>),<sp/>pTask<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;send();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Cluster::sendPing()</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;bundle().startMessage(<sp/>BaseAppMgrInterface::interClusterMgrPing<sp/>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;send();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>BaseAppMgr<sp/>will<sp/>reply<sp/>with<sp/>InterClusterMgrInterface::baseAppMgrPong</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>BW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="comment">//<sp/>baseapp.cpp</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="interclustermgr/cluster.cpp"/>
+  </compounddef>
+</doxygen>

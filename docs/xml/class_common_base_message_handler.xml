@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_common_base_message_handler" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>CommonBaseMessageHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">InputMessageHandler</basecompoundref>
+    <derivedcompoundref refid="class_base_message_stream_handler" prot="public" virt="non-virtual">BaseMessageStreamHandler</derivedcompoundref>
+    <derivedcompoundref refid="class_base_message_stream_handler_ex" prot="public" virt="non-virtual">BaseMessageStreamHandlerEx</derivedcompoundref>
+    <derivedcompoundref refid="class_base_message_struct_handler_ex" prot="public" virt="non-virtual">BaseMessageStructHandlerEx&lt; ARGS_TYPE &gt;</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_common_base_message_handler_1ad0f220fc8e3b0a0d13098440c56bffe0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CommonBaseMessageHandler::handleMessage</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>handleMessage</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/message_handlers.cpp" line="386" column="1" bodyfile="baseapp/message_handlers.cpp" bodystart="386" bodyend="433"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_common_base_message_handler_1a9b8303edb1c317fb8ce09a7f197312bc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void CommonBaseMessageHandler::callHandler</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data, Base *pBase)=0</argsstring>
+        <name>callHandler</name>
+        <reimplementedby refid="class_base_message_struct_handler_ex_1a7a85972ad564294c15a93dd260398925">callHandler</reimplementedby>
+        <reimplementedby refid="class_base_message_stream_handler_1ae5e8b48b9d41a1a04b574c1dbcafc4ca">callHandler</reimplementedby>
+        <reimplementedby refid="class_base_message_stream_handler_ex_1a40457a7606f1e5524743654c592726b0">callHandler</reimplementedby>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="class_base" kindref="compound">Base</ref> *</type>
+          <declname>pBase</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/message_handlers.cpp" line="436" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Objects of this type are used to handle base messages </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="770">
+        <label>CommonBaseMessageHandler</label>
+        <link refid="class_common_base_message_handler"/>
+        <childnode refid="771" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="771">
+        <label>Mercury::InputMessageHandler</label>
+      </node>
+      <node id="772">
+        <label>BaseMessageStreamHandler</label>
+        <link refid="class_base_message_stream_handler"/>
+        <childnode refid="770" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="774">
+        <label>BaseMessageStructHandlerEx&lt; ARGS_TYPE &gt;</label>
+        <link refid="class_base_message_struct_handler_ex"/>
+        <childnode refid="770" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="773">
+        <label>BaseMessageStreamHandlerEx</label>
+        <link refid="class_base_message_stream_handler_ex"/>
+        <childnode refid="770" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="775">
+        <label>CommonBaseMessageHandler</label>
+        <link refid="class_common_base_message_handler"/>
+        <childnode refid="776" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="776">
+        <label>Mercury::InputMessageHandler</label>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/message_handlers.cpp" line="384" column="1" bodyfile="baseapp/message_handlers.cpp" bodystart="383" bodyend="440"/>
+    <listofallmembers>
+      <member refid="class_common_base_message_handler_1a9b8303edb1c317fb8ce09a7f197312bc" prot="protected" virt="pure-virtual"><scope>CommonBaseMessageHandler</scope><name>callHandler</name></member>
+      <member refid="class_common_base_message_handler_1ad0f220fc8e3b0a0d13098440c56bffe0" prot="public" virt="virtual"><scope>CommonBaseMessageHandler</scope><name>handleMessage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_syslog_message_handler" kind="class" language="C++" prot="public">
+    <compoundname>SyslogMessageHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">DebugMessageCallback</basecompoundref>
+    <includes refid="syslog__message__handler_8hpp" local="no">syslog_message_handler.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_syslog_message_handler_1a9e231136dfb4239d8036b4dea3bba06f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SyslogMessageHandler::shouldLogTrace_</definition>
+        <argsstring></argsstring>
+        <name>shouldLogTrace_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/syslog_message_handler.hpp" line="37" column="1" bodyfile="tools/bwmachined/syslog_message_handler.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_syslog_message_handler_1af21f320c894e2ceee136502f44f5a8f6" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char SyslogMessageHandler::logBuffer_[32768]</definition>
+        <argsstring>[32768]</argsstring>
+        <name>logBuffer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/syslog_message_handler.hpp" line="42" column="1" bodyfile="tools/bwmachined/syslog_message_handler.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_syslog_message_handler_1a8084cde612bd73c6b92560436768b303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE SyslogMessageHandler::SyslogMessageHandler</definition>
+        <argsstring>(const char *pLoggerName)</argsstring>
+        <name>SyslogMessageHandler</name>
+        <param>
+          <type>const char *</type>
+          <declname>pLoggerName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pLoggerName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string containing the &apos;ident&apos; to use by openlog(). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/syslog_message_handler.hpp" line="27" column="1" bodyfile="tools/bwmachined/syslog_message_handler.cpp" bodystart="18" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_syslog_message_handler_1a20cc2c27aa6dcf97f294db392144d87f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool SyslogMessageHandler::handleMessage</definition>
+        <argsstring>(DebugMessagePriority messagePriority, const char *pCategory, DebugMessageSource, const LogMetaData &amp;, const char *pFormat, va_list argPtr)</argsstring>
+        <name>handleMessage</name>
+        <param>
+          <type>DebugMessagePriority</type>
+          <declname>messagePriority</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pCategory</declname>
+        </param>
+        <param>
+          <type>DebugMessageSource</type>
+        </param>
+        <param>
+          <type>const LogMetaData &amp;</type>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pFormat</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+          <declname>argPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/syslog_message_handler.hpp" line="29" column="1" bodyfile="tools/bwmachined/syslog_message_handler.cpp" bodystart="28" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class provides the ability to log into syslog from the regular BigWorld message macro hooks. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2862">
+        <label>DebugMessageCallback</label>
+      </node>
+      <node id="2861">
+        <label>SyslogMessageHandler</label>
+        <link refid="class_syslog_message_handler"/>
+        <childnode refid="2862" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2864">
+        <label>DebugMessageCallback</label>
+      </node>
+      <node id="2863">
+        <label>SyslogMessageHandler</label>
+        <link refid="class_syslog_message_handler"/>
+        <childnode refid="2864" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/bwmachined/syslog_message_handler.hpp" line="25" column="1" bodyfile="tools/bwmachined/syslog_message_handler.hpp" bodystart="24" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_syslog_message_handler_1a20cc2c27aa6dcf97f294db392144d87f" prot="public" virt="virtual"><scope>SyslogMessageHandler</scope><name>handleMessage</name></member>
+      <member refid="class_syslog_message_handler_1af21f320c894e2ceee136502f44f5a8f6" prot="private" virt="non-virtual"><scope>SyslogMessageHandler</scope><name>logBuffer_</name></member>
+      <member refid="class_syslog_message_handler_1a9e231136dfb4239d8036b4dea3bba06f" prot="private" virt="non-virtual"><scope>SyslogMessageHandler</scope><name>shouldLogTrace_</name></member>
+      <member refid="class_syslog_message_handler_1a8084cde612bd73c6b92560436768b303" prot="public" virt="non-virtual"><scope>SyslogMessageHandler</scope><name>SyslogMessageHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

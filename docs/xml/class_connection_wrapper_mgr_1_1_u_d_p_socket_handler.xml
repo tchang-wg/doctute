@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_connection_wrapper_mgr_1_1_u_d_p_socket_handler" kind="class" language="C++" prot="private">
+    <compoundname>ConnectionWrapperMgr::UDPSocketHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">InputNotificationHandler</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_connection_wrapper_mgr_1_1_u_d_p_socket_handler_1a4590f749c8a7ec70f3663f472e83b16a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_connection_wrapper_mgr" kindref="compound">ConnectionWrapperMgr</ref> &amp;</type>
+        <definition>ConnectionWrapperMgr&amp; ConnectionWrapperMgr::UDPSocketHandler::connectionWrapperMgr_</definition>
+        <argsstring></argsstring>
+        <name>connectionWrapperMgr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/connection_wrapper_mgr.hpp" line="110" column="1" bodyfile="tools/bwmachined/connection_wrapper_mgr.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_connection_wrapper_mgr_1_1_u_d_p_socket_handler_1a29feca09448471946fc23646126b5981" prot="private" static="no" mutable="no">
+        <type>Endpoint &amp;</type>
+        <definition>Endpoint&amp; ConnectionWrapperMgr::UDPSocketHandler::inEndpoint_</definition>
+        <argsstring></argsstring>
+        <name>inEndpoint_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/connection_wrapper_mgr.hpp" line="111" column="1" bodyfile="tools/bwmachined/connection_wrapper_mgr.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_connection_wrapper_mgr_1_1_u_d_p_socket_handler_1afbecbd8a3da79e3a0f77c0ac59e23afb" prot="private" static="no" mutable="no">
+        <type>Endpoint &amp;</type>
+        <definition>Endpoint&amp; ConnectionWrapperMgr::UDPSocketHandler::outEndpoint_</definition>
+        <argsstring></argsstring>
+        <name>outEndpoint_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/connection_wrapper_mgr.hpp" line="112" column="1" bodyfile="tools/bwmachined/connection_wrapper_mgr.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_connection_wrapper_mgr_1_1_u_d_p_socket_handler_1a223c90b8df337ccd8e0e9599f857984c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_connection_wrapper_1_1_read_handler" kindref="compound">ConnectionWrapper::ReadHandler</ref> *</type>
+        <definition>ConnectionWrapper::ReadHandler* ConnectionWrapperMgr::UDPSocketHandler::pConnectionReadHandler_</definition>
+        <argsstring></argsstring>
+        <name>pConnectionReadHandler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/connection_wrapper_mgr.hpp" line="113" column="1" bodyfile="tools/bwmachined/connection_wrapper_mgr.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_connection_wrapper_mgr_1_1_u_d_p_socket_handler_1a33b99852693ebd10b9dc2f9c2f03119d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ConnectionWrapperMgr::UDPSocketHandler::UDPSocketHandler</definition>
+        <argsstring>(ConnectionWrapperMgr &amp;connectionWrapperMgr, Endpoint &amp;in, Endpoint &amp;out, ConnectionWrapper::ReadHandler *pConnectionReadHandler)</argsstring>
+        <name>UDPSocketHandler</name>
+        <param>
+          <type><ref refid="class_connection_wrapper_mgr" kindref="compound">ConnectionWrapperMgr</ref> &amp;</type>
+          <declname>connectionWrapperMgr</declname>
+        </param>
+        <param>
+          <type>Endpoint &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>Endpoint &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type><ref refid="class_connection_wrapper_1_1_read_handler" kindref="compound">ConnectionWrapper::ReadHandler</ref> *</type>
+          <declname>pConnectionReadHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/connection_wrapper_mgr.hpp" line="96" column="1" bodyfile="tools/bwmachined/connection_wrapper_mgr.hpp" bodystart="96" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_connection_wrapper_mgr_1_1_u_d_p_socket_handler_1a2a3f10a9c78b1496df615ae96c14d71e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int ConnectionWrapperMgr::UDPSocketHandler::handleInputNotification</definition>
+        <argsstring>(int fd)</argsstring>
+        <name>handleInputNotification</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: BWT-31842 - Document me </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/connection_wrapper_mgr.hpp" line="105" column="1" bodyfile="tools/bwmachined/connection_wrapper_mgr.cpp" bodystart="239" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="class_connection_wrapper_mgr_1_1_u_d_p_socket_handler_1a6a1ea0982c823dd952f8b75a4d26c9b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ConnectionWrapperMgr::UDPSocketHandler::handleErrorNotification</definition>
+        <argsstring>(int fd)</argsstring>
+        <name>handleErrorNotification</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: BWT-31842 - Document me </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/connection_wrapper_mgr.hpp" line="107" column="1" bodyfile="tools/bwmachined/connection_wrapper_mgr.cpp" bodystart="259" bodyend="263"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2989">
+        <label>InputNotificationHandler</label>
+      </node>
+      <node id="2988">
+        <label>ConnectionWrapperMgr::UDPSocketHandler</label>
+        <childnode refid="2989" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2991">
+        <label>InputNotificationHandler</label>
+      </node>
+      <node id="2990">
+        <label>ConnectionWrapperMgr::UDPSocketHandler</label>
+        <childnode refid="2991" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/bwmachined/connection_wrapper_mgr.hpp" line="94" column="1" bodyfile="tools/bwmachined/connection_wrapper_mgr.hpp" bodystart="93" bodyend="114"/>
+    <listofallmembers>
+      <member refid="class_connection_wrapper_mgr_1_1_u_d_p_socket_handler_1a4590f749c8a7ec70f3663f472e83b16a" prot="private" virt="non-virtual"><scope>ConnectionWrapperMgr::UDPSocketHandler</scope><name>connectionWrapperMgr_</name></member>
+      <member refid="class_connection_wrapper_mgr_1_1_u_d_p_socket_handler_1a6a1ea0982c823dd952f8b75a4d26c9b3" prot="public" virt="virtual"><scope>ConnectionWrapperMgr::UDPSocketHandler</scope><name>handleErrorNotification</name></member>
+      <member refid="class_connection_wrapper_mgr_1_1_u_d_p_socket_handler_1a2a3f10a9c78b1496df615ae96c14d71e" prot="public" virt="virtual"><scope>ConnectionWrapperMgr::UDPSocketHandler</scope><name>handleInputNotification</name></member>
+      <member refid="class_connection_wrapper_mgr_1_1_u_d_p_socket_handler_1a29feca09448471946fc23646126b5981" prot="private" virt="non-virtual"><scope>ConnectionWrapperMgr::UDPSocketHandler</scope><name>inEndpoint_</name></member>
+      <member refid="class_connection_wrapper_mgr_1_1_u_d_p_socket_handler_1afbecbd8a3da79e3a0f77c0ac59e23afb" prot="private" virt="non-virtual"><scope>ConnectionWrapperMgr::UDPSocketHandler</scope><name>outEndpoint_</name></member>
+      <member refid="class_connection_wrapper_mgr_1_1_u_d_p_socket_handler_1a223c90b8df337ccd8e0e9599f857984c" prot="private" virt="non-virtual"><scope>ConnectionWrapperMgr::UDPSocketHandler</scope><name>pConnectionReadHandler_</name></member>
+      <member refid="class_connection_wrapper_mgr_1_1_u_d_p_socket_handler_1a33b99852693ebd10b9dc2f9c2f03119d" prot="public" virt="non-virtual"><scope>ConnectionWrapperMgr::UDPSocketHandler</scope><name>UDPSocketHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

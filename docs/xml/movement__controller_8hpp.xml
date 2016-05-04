@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="movement__controller_8hpp" kind="file" language="C++">
+    <compoundname>movement_controller.hpp</compoundname>
+    <includes local="yes">math/vector3.hpp</includes>
+    <includes local="yes">network/basictypes.hpp</includes>
+    <includedby refid="beeline__controller_8hpp" local="yes">tools/bots/beeline_controller.hpp</includedby>
+    <includedby refid="client__app_8cpp" local="yes">tools/bots/client_app.cpp</includedby>
+    <includedby refid="patrol__graph_8hpp" local="yes">tools/bots/patrol_graph.hpp</includedby>
+    <includedby refid="movement__controller_8cpp" local="yes">tools/bots/movement_controller.cpp</includedby>
+    <incdepgraph>
+      <node id="16919">
+        <label>tools/bots/movement_controller.hpp</label>
+        <link refid="movement_controller.hpp"/>
+        <childnode refid="16920" relation="include">
+        </childnode>
+        <childnode refid="16921" relation="include">
+        </childnode>
+      </node>
+      <node id="16920">
+        <label>math/vector3.hpp</label>
+      </node>
+      <node id="16921">
+        <label>network/basictypes.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="16924">
+        <label>tools/bots/patrol_graph.hpp</label>
+        <link refid="patrol__graph_8hpp_source"/>
+        <childnode refid="16925" relation="include">
+        </childnode>
+      </node>
+      <node id="16923">
+        <label>tools/bots/beeline_controller.hpp</label>
+        <link refid="beeline__controller_8hpp_source"/>
+      </node>
+      <node id="16925">
+        <label>tools/bots/zigzag_patrol_graph.hpp</label>
+        <link refid="zigzag__patrol__graph_8hpp_source"/>
+      </node>
+      <node id="16922">
+        <label>tools/bots/movement_controller.hpp</label>
+        <link refid="movement_controller.hpp"/>
+        <childnode refid="16923" relation="include">
+        </childnode>
+        <childnode refid="16924" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_movement_controller" prot="public">MovementController</innerclass>
+    <innerclass refid="class_movement_factory" prot="public">MovementFactory</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MOVEMENT_CONTROLLER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOVEMENT_CONTROLLER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;math/vector3.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/basictypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_movement_controller" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_movement_controller" kindref="compound">MovementController</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="class_movement_controller" kindref="compound">MovementController</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>nextStep(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<sp/>speed,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dTime,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector3<sp/>&amp;<sp/>pos,<sp/>Direction3D<sp/>&amp;<sp/>dir<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_movement_factory" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_movement_factory" kindref="compound">MovementFactory</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_movement_factory" kindref="compound">MovementFactory</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>name<sp/>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_movement_controller" kindref="compound">MovementController</ref><sp/>*<sp/>create(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>data,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<sp/>speed,<sp/>Vector3<sp/>&amp;<sp/>startPos<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>MOVEMENT_CONTROLLER_HPP</highlight></codeline>
+    </programlisting>
+    <location file="tools/bots/movement_controller.hpp"/>
+  </compounddef>
+</doxygen>

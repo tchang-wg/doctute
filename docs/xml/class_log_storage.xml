@@ -1,0 +1,414 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_log_storage" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>LogStorage</compoundname>
+    <derivedcompoundref refid="class_log_storage_m_l_d_b" prot="public" virt="non-virtual">LogStorageMLDB</derivedcompoundref>
+    <derivedcompoundref refid="class_log_storage_mongo_d_b" prot="public" virt="non-virtual">LogStorageMongoDB</derivedcompoundref>
+    <includes refid="log__storage_8hpp" local="no">log_storage.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_log_storage_1abda7927b1354a16005f8ca5b37a739b1" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LogStorage::writeToStdout_</definition>
+        <argsstring></argsstring>
+        <name>writeToStdout_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_storage.hpp" line="58" column="1" bodyfile="tools/message_logger/log_storage.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_log_storage_1ab59912c2e6d2650b503b3e8e0ae3be54" prot="private" static="no" mutable="no">
+        <type><ref refid="class_logger" kindref="compound">Logger</ref> &amp;</type>
+        <definition>Logger&amp; LogStorage::logger_</definition>
+        <argsstring></argsstring>
+        <name>logger_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_storage.hpp" line="61" column="1" bodyfile="tools/message_logger/log_storage.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_log_storage_1a52d61df7f346353bdee03e762c8b68ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LogStorage::LogStorage</definition>
+        <argsstring>(Logger &amp;logger)</argsstring>
+        <name>LogStorage</name>
+        <param>
+          <type><ref refid="class_logger" kindref="compound">Logger</ref> &amp;</type>
+          <declname>logger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_storage.hpp" line="25" column="1" bodyfile="tools/message_logger/log_storage.cpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_1ad9e92e507c284c1e6fc2b6d9e8eefce5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>LogStorage::~LogStorage</definition>
+        <argsstring>()</argsstring>
+        <name>~LogStorage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_storage.hpp" line="27" column="1" bodyfile="tools/message_logger/log_storage.cpp" bodystart="25" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_1a12fbfd9c33447d881dcd381ff3c95c63" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool LogStorage::init</definition>
+        <argsstring>(const ConfigReader &amp;config, const char *root)=0</argsstring>
+        <name>init</name>
+        <reimplementedby refid="class_log_storage_m_l_d_b_1a55a62b62672f0d2f722bc7d2736ae911">init</reimplementedby>
+        <reimplementedby refid="class_log_storage_mongo_d_b_1a07673271de84449f7e8a7605e37aa1c5">init</reimplementedby>
+        <param>
+          <type>const ConfigReader &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>root</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_storage.hpp" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_1a4ea44cc8d860d001371e639664177797" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void LogStorage::tick</definition>
+        <argsstring>()=0</argsstring>
+        <name>tick</name>
+        <reimplementedby refid="class_log_storage_m_l_d_b_1aecb848978778465fff7cf93a2c38c454">tick</reimplementedby>
+        <reimplementedby refid="class_log_storage_mongo_d_b_1a97d0463492e0d3ddc8c2dbf40cecb9fb">tick</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_storage.hpp" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_1a0d9879f1ae182940bf81e33fb34fcbaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool LogStorage::roll</definition>
+        <argsstring>()=0</argsstring>
+        <name>roll</name>
+        <reimplementedby refid="class_log_storage_m_l_d_b_1ad26afc02a190424798adfeec1b57b85a">roll</reimplementedby>
+        <reimplementedby refid="class_log_storage_mongo_d_b_1a372e6375bb27ae0ac73d0e9ce2d73ca9">roll</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_storage.hpp" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_1acad8876928ff3b9e62069dede8b7a9f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool LogStorage::stopLoggingFromComponent</definition>
+        <argsstring>(const Mercury::Address &amp;addr)=0</argsstring>
+        <name>stopLoggingFromComponent</name>
+        <reimplementedby refid="class_log_storage_m_l_d_b_1a866a1953dddd30233f1987ff12fe3ede">stopLoggingFromComponent</reimplementedby>
+        <reimplementedby refid="class_log_storage_mongo_d_b_1a53cb8c471a933ceb0f83924582126845">stopLoggingFromComponent</reimplementedby>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_storage.hpp" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_1a8b6022714692f2511d9067a6a18de5e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>HostnamesValidatorProcessStatus</type>
+        <definition>virtual HostnamesValidatorProcessStatus LogStorage::validateNextHostname</definition>
+        <argsstring>()=0</argsstring>
+        <name>validateNextHostname</name>
+        <reimplementedby refid="class_log_storage_m_l_d_b_1ab4a7adbdd4ff4d3a8ef656ec2df8b808">validateNextHostname</reimplementedby>
+        <reimplementedby refid="class_log_storage_mongo_d_b_1ac3ca612e2b14cbd2b1f34b80720a252f">validateNextHostname</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_storage.hpp" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_1a01a715ce3061931e04f7a5ddcd31d0a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool LogStorage::setAppInstanceID</definition>
+        <argsstring>(const Mercury::Address &amp;addr, int id)=0</argsstring>
+        <name>setAppInstanceID</name>
+        <reimplementedby refid="class_log_storage_m_l_d_b_1a21fb200645cf852488279a56cd396826">setAppInstanceID</reimplementedby>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_storage.hpp" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_1a0651089583bf3e3660b4c0a629c7e466" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>AddLogMessageResult</type>
+        <definition>virtual AddLogMessageResult LogStorage::writeLogToDB</definition>
+        <argsstring>(const LoggerComponentMessage &amp;componentMessage, const Mercury::Address &amp;address, MemoryIStream &amp;inputStream, const LoggerMessageHeader &amp;header, LogStringInterpolator *pHandler, MessageLogger::CategoryID categoryID)=0</argsstring>
+        <name>writeLogToDB</name>
+        <reimplementedby refid="class_log_storage_m_l_d_b_1a7a26380f9658e6cc7df138960f171cbb">writeLogToDB</reimplementedby>
+        <reimplementedby refid="class_log_storage_mongo_d_b_1a321d90f5f4d854d14a8fbc7af84a1f00">writeLogToDB</reimplementedby>
+        <param>
+          <type>const LoggerComponentMessage &amp;</type>
+          <declname>componentMessage</declname>
+        </param>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>MemoryIStream &amp;</type>
+          <declname>inputStream</declname>
+        </param>
+        <param>
+          <type>const LoggerMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type><ref refid="class_log_string_interpolator" kindref="compound">LogStringInterpolator</ref> *</type>
+          <declname>pHandler</declname>
+        </param>
+        <param>
+          <type>MessageLogger::CategoryID</type>
+          <declname>categoryID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_storage.hpp" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_1a42cedcc0167478c2c5a3511b899d961b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="class_format_strings" kindref="compound">FormatStrings</ref> *</type>
+        <definition>virtual FormatStrings* LogStorage::getFormatStrings</definition>
+        <argsstring>()=0</argsstring>
+        <name>getFormatStrings</name>
+        <reimplementedby refid="class_log_storage_m_l_d_b_1afaa471428316db6330d79687879a9dcc">getFormatStrings</reimplementedby>
+        <reimplementedby refid="class_log_storage_mongo_d_b_1a0e3903704171f9959849f1ac84931e23">getFormatStrings</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_storage.hpp" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_1a5c3e0078fda44c489113c73c4dc6a641" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="class_hostnames" kindref="compound">Hostnames</ref> *</type>
+        <definition>virtual Hostnames* LogStorage::getHostnames</definition>
+        <argsstring>()=0</argsstring>
+        <name>getHostnames</name>
+        <reimplementedby refid="class_log_storage_m_l_d_b_1af30ec57b8a88e0523f88a7def95143b7">getHostnames</reimplementedby>
+        <reimplementedby refid="class_log_storage_mongo_d_b_1a5ee2afd1c47600b84bd9dc7b38735e72">getHostnames</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_storage.hpp" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_1a05f39e95df725b40ffaeac3763774647" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="class_hostnames_validator" kindref="compound">HostnamesValidator</ref> *</type>
+        <definition>virtual HostnamesValidator* LogStorage::getHostnamesValidator</definition>
+        <argsstring>()=0</argsstring>
+        <name>getHostnamesValidator</name>
+        <reimplementedby refid="class_log_storage_m_l_d_b_1a5b2e7c8daa55166899d8cdb9b34fd6a1">getHostnamesValidator</reimplementedby>
+        <reimplementedby refid="class_log_storage_mongo_d_b_1ab42223a70a2dc13b8e54c31b1804fa3a">getHostnamesValidator</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_storage.hpp" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_1a9bbcfc0ca040f15af0786430f0e8ce38" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="class_categories" kindref="compound">Categories</ref> *</type>
+        <definition>virtual Categories* LogStorage::getCategories</definition>
+        <argsstring>()=0</argsstring>
+        <name>getCategories</name>
+        <reimplementedby refid="class_log_storage_m_l_d_b_1af8d318813449c64ada6963aa25f7482c">getCategories</reimplementedby>
+        <reimplementedby refid="class_log_storage_mongo_d_b_1a2d57fa0707dc8b7af1ba3a20abc1bdc3">getCategories</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_storage.hpp" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_1a5aa7a05fed0b9d0e9c22e3a360d95d8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LogStorage::writeToStdout</definition>
+        <argsstring>(bool status)</argsstring>
+        <name>writeToStdout</name>
+        <param>
+          <type>bool</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_storage.hpp" line="48" column="1" bodyfile="tools/message_logger/log_storage.cpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_1af66ef56c2b42c6f3068ee6ac65768501" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>AddLogMessageResult</type>
+        <definition>AddLogMessageResult LogStorage::addLogMessage</definition>
+        <argsstring>(const LoggerComponentMessage &amp;componentMessage, const Mercury::Address &amp;address, MemoryIStream &amp;inputStream)</argsstring>
+        <name>addLogMessage</name>
+        <reimplementedby refid="class_log_storage_mongo_d_b_1a546438f7cc44a68e6888778db402cff1">addLogMessage</reimplementedby>
+        <param>
+          <type>const LoggerComponentMessage &amp;</type>
+          <declname>componentMessage</declname>
+        </param>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>MemoryIStream &amp;</type>
+          <declname>inputStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds an incoming message to the logs.</para><para><simplesect kind="return"><para>enum type AddLogMessageResult </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_storage.hpp" line="50" column="1" bodyfile="tools/message_logger/log_storage.cpp" bodystart="72" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_storage_1a11b5bbf9056e55e773d1e6a7b4c2c9ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Mercury::Reason</type>
+        <definition>Mercury::Reason LogStorage::resolveUID</definition>
+        <argsstring>(uint16 uid, MessageLogger::IPAddress ipAddress, BW::string &amp;result)</argsstring>
+        <name>resolveUID</name>
+        <param>
+          <type>uint16</type>
+          <declname>uid</declname>
+        </param>
+        <param>
+          <type>MessageLogger::IPAddress</type>
+          <declname>ipAddress</declname>
+        </param>
+        <param>
+          <type>BW::string &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Queries <ref refid="class_b_w_machined" kindref="compound">BWMachined</ref> in an attempt to resolve the username associated to uid.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The UID to query BWmachined to resolve. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ipAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the machine to initially query (where the log initially came from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Username that has been resolved from uid.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Mercury::REASON_SUCCESS on success, other on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/log_storage.hpp" line="54" column="1" bodyfile="tools/message_logger/log_storage.cpp" bodystart="169" bodyend="227"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Subclasses of <ref refid="class_log_storage" kindref="compound">LogStorage</ref> are used for storing the log data into the device, such as MLDB. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1782">
+        <label>LogStorage</label>
+        <link refid="class_log_storage"/>
+      </node>
+      <node id="1784">
+        <label>LogStorageMongoDB</label>
+        <link refid="class_log_storage_mongo_d_b"/>
+        <childnode refid="1782" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1783">
+        <label>LogStorageMLDB</label>
+        <link refid="class_log_storage_m_l_d_b"/>
+        <childnode refid="1782" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="tools/message_logger/log_storage.hpp" line="23" column="1" bodyfile="tools/message_logger/log_storage.hpp" bodystart="22" bodyend="62"/>
+    <listofallmembers>
+      <member refid="class_log_storage_1af66ef56c2b42c6f3068ee6ac65768501" prot="public" virt="virtual"><scope>LogStorage</scope><name>addLogMessage</name></member>
+      <member refid="class_log_storage_1a9bbcfc0ca040f15af0786430f0e8ce38" prot="public" virt="pure-virtual"><scope>LogStorage</scope><name>getCategories</name></member>
+      <member refid="class_log_storage_1a42cedcc0167478c2c5a3511b899d961b" prot="public" virt="pure-virtual"><scope>LogStorage</scope><name>getFormatStrings</name></member>
+      <member refid="class_log_storage_1a5c3e0078fda44c489113c73c4dc6a641" prot="public" virt="pure-virtual"><scope>LogStorage</scope><name>getHostnames</name></member>
+      <member refid="class_log_storage_1a05f39e95df725b40ffaeac3763774647" prot="public" virt="pure-virtual"><scope>LogStorage</scope><name>getHostnamesValidator</name></member>
+      <member refid="class_log_storage_1a12fbfd9c33447d881dcd381ff3c95c63" prot="public" virt="pure-virtual"><scope>LogStorage</scope><name>init</name></member>
+      <member refid="class_log_storage_1ab59912c2e6d2650b503b3e8e0ae3be54" prot="private" virt="non-virtual"><scope>LogStorage</scope><name>logger_</name></member>
+      <member refid="class_log_storage_1a52d61df7f346353bdee03e762c8b68ee" prot="public" virt="non-virtual"><scope>LogStorage</scope><name>LogStorage</name></member>
+      <member refid="class_log_storage_1a11b5bbf9056e55e773d1e6a7b4c2c9ed" prot="public" virt="non-virtual"><scope>LogStorage</scope><name>resolveUID</name></member>
+      <member refid="class_log_storage_1a0d9879f1ae182940bf81e33fb34fcbaf" prot="public" virt="pure-virtual"><scope>LogStorage</scope><name>roll</name></member>
+      <member refid="class_log_storage_1a01a715ce3061931e04f7a5ddcd31d0a7" prot="public" virt="pure-virtual"><scope>LogStorage</scope><name>setAppInstanceID</name></member>
+      <member refid="class_log_storage_1acad8876928ff3b9e62069dede8b7a9f5" prot="public" virt="pure-virtual"><scope>LogStorage</scope><name>stopLoggingFromComponent</name></member>
+      <member refid="class_log_storage_1a4ea44cc8d860d001371e639664177797" prot="public" virt="pure-virtual"><scope>LogStorage</scope><name>tick</name></member>
+      <member refid="class_log_storage_1a8b6022714692f2511d9067a6a18de5e5" prot="public" virt="pure-virtual"><scope>LogStorage</scope><name>validateNextHostname</name></member>
+      <member refid="class_log_storage_1a0651089583bf3e3660b4c0a629c7e466" prot="public" virt="pure-virtual"><scope>LogStorage</scope><name>writeLogToDB</name></member>
+      <member refid="class_log_storage_1a5aa7a05fed0b9d0e9c22e3a360d95d8d" prot="public" virt="non-virtual"><scope>LogStorage</scope><name>writeToStdout</name></member>
+      <member refid="class_log_storage_1abda7927b1354a16005f8ca5b37a739b1" prot="protected" virt="non-virtual"><scope>LogStorage</scope><name>writeToStdout_</name></member>
+      <member refid="class_log_storage_1ad9e92e507c284c1e6fc2b6d9e8eefce5" prot="public" virt="virtual"><scope>LogStorage</scope><name>~LogStorage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

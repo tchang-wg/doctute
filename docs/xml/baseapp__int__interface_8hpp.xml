@@ -1,0 +1,853 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="baseapp__int__interface_8hpp" kind="file" language="C++">
+    <compoundname>baseapp_int_interface.hpp</compoundname>
+    <includes local="yes">network/basictypes.hpp</includes>
+    <includes local="yes">network/network_interface.hpp</includes>
+    <includes local="yes">server/anonymous_channel_client.hpp</includes>
+    <includes local="yes">connection/common_baseapp_interface.hpp</includes>
+    <includes refid="baseapp_2buffered__input__message__handler_8hpp" local="yes">buffered_input_message_handler.hpp</includes>
+    <includes refid="baseapp__int__interface__stream__helpers_8hpp" local="yes">baseapp_int_interface_stream_helpers.hpp</includes>
+    <includes local="yes">server/common.hpp</includes>
+    <includes local="yes">network/msgtypes.hpp</includes>
+    <includes local="yes">connection/common_client_interface.hpp</includes>
+    <includedby refid="baseapp_8hpp" local="yes">baseapp/baseapp.hpp</includedby>
+    <includedby refid="base_8hpp" local="yes">baseapp/base.hpp</includedby>
+    <includedby refid="proxy_8hpp" local="yes">baseapp/proxy.hpp</includedby>
+    <includedby refid="base__message__forwarder_8cpp" local="yes">baseapp/base_message_forwarder.cpp</includedby>
+    <includedby refid="baseapp_8cpp" local="yes">baseapp/baseapp.cpp</includedby>
+    <includedby refid="baseapp__int__interface_8cpp" local="yes">baseapp/baseapp_int_interface.cpp</includedby>
+    <includedby refid="baseapp__int__interface__stream__helpers_8cpp" local="yes">baseapp/baseapp_int_interface_stream_helpers.cpp</includedby>
+    <includedby refid="baseapp_2message__handlers_8cpp" local="yes">baseapp/message_handlers.cpp</includedby>
+    <includedby refid="gr_2baseapp_8hpp" local="yes">baseappmgr/baseapp.hpp</includedby>
+    <includedby refid="baseappmgr_8cpp" local="yes">baseappmgr/baseappmgr.cpp</includedby>
+    <includedby refid="baseappmgr_2message__handlers_8cpp" local="yes">baseappmgr/message_handlers.cpp</includedby>
+    <includedby refid="reply__handlers_8cpp" local="yes">baseappmgr/reply_handlers.cpp</includedby>
+    <includedby refid="watcher__forwarding__baseapp_8cpp" local="yes">baseappmgr/watcher_forwarding_baseapp.cpp</includedby>
+    <includedby refid="cellapp_8cpp" local="yes">cellapp/cellapp.cpp</includedby>
+    <includedby refid="cellapp_2entity_8cpp" local="yes">cellapp/entity.cpp</includedby>
+    <includedby refid="entity__cache_8cpp" local="yes">cellapp/entity_cache.cpp</includedby>
+    <includedby refid="entity__population_8cpp" local="yes">cellapp/entity_population.cpp</includedby>
+    <includedby refid="history__event_8cpp" local="yes">cellapp/history_event.cpp</includedby>
+    <includedby refid="cellapp_2mailbox_8cpp" local="yes">cellapp/mailbox.cpp</includedby>
+    <includedby refid="real__entity_8cpp" local="yes">cellapp/real_entity.cpp</includedby>
+    <includedby refid="space_8cpp" local="yes">cellapp/space.cpp</includedby>
+    <includedby refid="space__data__object_8cpp" local="yes">cellapp/space_data_object.cpp</includedby>
+    <includedby refid="witness_8cpp" local="yes">cellapp/witness.cpp</includedby>
+    <includedby refid="relogon__attempt__handler_8hpp" local="yes">dbapp/relogon_attempt_handler.hpp</includedby>
+    <includedby refid="dbapp_2dbapp_8cpp" local="yes">dbapp/dbapp.cpp</includedby>
+    <includedby refid="relogon__attempt__handler_8cpp" local="yes">dbapp/relogon_attempt_handler.cpp</includedby>
+    <incdepgraph>
+      <node id="994">
+        <label>connection/common_baseapp_interface.hpp</label>
+      </node>
+      <node id="996">
+        <label>baseapp_int_interface_stream_helpers.hpp</label>
+        <link refid="baseapp__int__interface__stream__helpers_8hpp_source"/>
+        <childnode refid="991" relation="include">
+        </childnode>
+        <childnode refid="997" relation="include">
+        </childnode>
+      </node>
+      <node id="995">
+        <label>buffered_input_message_handler.hpp</label>
+        <link refid="baseapp_2buffered__input__message__handler_8hpp_source"/>
+      </node>
+      <node id="992">
+        <label>network/network_interface.hpp</label>
+      </node>
+      <node id="998">
+        <label>server/common.hpp</label>
+      </node>
+      <node id="997">
+        <label>network/stream_helpers.hpp</label>
+      </node>
+      <node id="990">
+        <label>baseapp/baseapp_int_interface.hpp</label>
+        <link refid="baseapp_int_interface.hpp"/>
+        <childnode refid="991" relation="include">
+        </childnode>
+        <childnode refid="992" relation="include">
+        </childnode>
+        <childnode refid="993" relation="include">
+        </childnode>
+        <childnode refid="994" relation="include">
+        </childnode>
+        <childnode refid="995" relation="include">
+        </childnode>
+        <childnode refid="996" relation="include">
+        </childnode>
+        <childnode refid="998" relation="include">
+        </childnode>
+        <childnode refid="999" relation="include">
+        </childnode>
+        <childnode refid="1000" relation="include">
+        </childnode>
+      </node>
+      <node id="991">
+        <label>network/basictypes.hpp</label>
+      </node>
+      <node id="993">
+        <label>server/anonymous_channel_client.hpp</label>
+      </node>
+      <node id="999">
+        <label>network/msgtypes.hpp</label>
+      </node>
+      <node id="1000">
+        <label>connection/common_client_interface.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1005">
+        <label>baseapp/base.hpp</label>
+        <link refid="base_8hpp_source"/>
+        <childnode refid="1006" relation="include">
+        </childnode>
+        <childnode refid="1008" relation="include">
+        </childnode>
+      </node>
+      <node id="1010">
+        <label>dbapp/relogon_attempt_handler.hpp</label>
+        <link refid="relogon__attempt__handler_8hpp_source"/>
+      </node>
+      <node id="1003">
+        <label>baseapp/add_to_baseappmgr_helper.hpp</label>
+        <link refid="add__to__baseappmgr__helper_8hpp_source"/>
+      </node>
+      <node id="1006">
+        <label>baseapp/proxy.hpp</label>
+        <link refid="proxy_8hpp_source"/>
+        <childnode refid="1002" relation="include">
+        </childnode>
+        <childnode refid="1007" relation="include">
+        </childnode>
+      </node>
+      <node id="1004">
+        <label>baseapp/service_app.hpp</label>
+        <link refid="service__app_8hpp_source"/>
+      </node>
+      <node id="1007">
+        <label>baseapp/rate_limit_message_filter.hpp</label>
+        <link refid="rate__limit__message__filter_8hpp_source"/>
+        <childnode refid="1002" relation="include">
+        </childnode>
+      </node>
+      <node id="1001">
+        <label>baseapp/baseapp_int_interface.hpp</label>
+        <link refid="baseapp_int_interface.hpp"/>
+        <childnode refid="1002" relation="include">
+        </childnode>
+        <childnode refid="1005" relation="include">
+        </childnode>
+        <childnode refid="1006" relation="include">
+        </childnode>
+        <childnode refid="1009" relation="include">
+        </childnode>
+        <childnode refid="1010" relation="include">
+        </childnode>
+      </node>
+      <node id="1008">
+        <label>baseapp/service.hpp</label>
+        <link refid="service_8hpp_source"/>
+      </node>
+      <node id="1009">
+        <label>baseappmgr/baseapp.hpp</label>
+        <link refid="gr_2baseapp_8hpp_source"/>
+      </node>
+      <node id="1002">
+        <label>baseapp/baseapp.hpp</label>
+        <link refid="baseapp_8hpp_source"/>
+        <childnode refid="1003" relation="include">
+        </childnode>
+        <childnode refid="1004" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespace_base_app_int_interface">BaseAppIntInterface</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="baseapp__int__interface_8hpp_1a22793e243a449fdfffc039b3ca02a625" prot="public" static="no">
+        <name>BASEAPP_INT_INTERFACE_HPP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="6" column="9" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="baseapp__int__interface_8hpp_1a70edfa98edf047d3b1212b022ec026ac" prot="public" static="no">
+        <name>INTERFACE_NAME</name>
+        <initializer>BaseAppIntInterface</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="14" column="10" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="baseapp__int__interface_8hpp_1a954e4bc79699194d60e3e7dd51479c26" prot="public" static="no">
+        <name>MF_BEGIN_BASE_STRUCT_MSG_EX</name>
+        <param><defname>NAME</defname></param>
+        <initializer>BEGIN_HANDLED_STRUCT_MESSAGE( NAME, 									\
+			<ref refid="class_base_message_struct_handler_ex" kindref="compound">BaseMessageStructHandlerEx</ref>&lt; INTERFACE_NAME::NAME##Args &gt;, 		\
+			&amp;Base::NAME )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="21" column="9" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="baseapp__int__interface_8hpp_1a316899d74e00052d3b853d15834a65fe" prot="public" static="no">
+        <name>MF_BASE_STREAM_MSG</name>
+        <param><defname>NAME</defname></param>
+        <initializer>MERCURY_HANDLED_VARIABLE_MESSAGE( NAME, 2,								\
+			<ref refid="class_base_message_stream_handler" kindref="compound">BaseMessageStreamHandler</ref>, 										\
+			&amp;Base::NAME )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="26" column="9" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="baseapp__int__interface_8hpp_1aa390b07d42089313c0e5a28c6031fbdd" prot="public" static="no">
+        <name>MF_BASE_STREAM_MSG_EX</name>
+        <param><defname>NAME</defname></param>
+        <initializer>MERCURY_HANDLED_VARIABLE_MESSAGE( NAME, 2,								\
+			<ref refid="class_base_message_stream_handler_ex" kindref="compound">BaseMessageStreamHandlerEx</ref>, 									\
+			&amp;Base::NAME )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="31" column="9" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="baseapp__int__interface_8hpp_1a3b3032505c2a176a240e510276f9afc3" prot="public" static="no">
+        <name>BW_CREATE_ENTITY_MSG</name>
+        <param><defname>TYPE</defname></param>
+        <param><defname>NAME</defname></param>
+        <initializer>MERCURY_HANDLED_VARIABLE_MESSAGE( NAME, 2,								\
+			<ref refid="class_buffered_input_message_handler" kindref="compound">BufferedInputMessageHandler</ref>&lt; 									\
+				<ref refid="class_create_entity_handler" kindref="compound">CreateEntityHandler</ref>&lt;										\
+					StreamHelpers::BaseAppIntInterface::NAME::Request		\
+				&gt;															\
+			&gt;, &amp;TYPE::NAME )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="36" column="9" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="baseapp__int__interface_8hpp_1ac7f7af1a4ea0bd9b93a1de6ca9cd872a" prot="public" static="no">
+        <name>BASEAPP_INT_INTERFACE_HPP_ONCE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="56" column="9" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="baseapp__int__interface_8hpp_1a65bb15939a47a0a2016551eb09d3f8b9" prot="public" static="no">
+        <name>MF_EMPTY_COMMON_RELIABLE_MSG</name>
+        <initializer>MF_EMPTY_PROXY_MSG</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="219" column="9" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="baseapp__int__interface_8hpp_1a69c5d13af11a84b5b9cbe33c03838aef" prot="public" static="no">
+        <name>MF_BEGIN_COMMON_RELIABLE_MSG</name>
+        <initializer>MF_BEGIN_PROXY_MSG</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="220" column="9" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="baseapp__int__interface_8hpp_1a3aff45ad686c3cad4f007d8fb106dfb7" prot="public" static="no">
+        <name>MF_BEGIN_COMMON_PASSENGER_MSG</name>
+        <initializer>MF_BEGIN_PROXY_MSG</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="221" column="9" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="baseapp__int__interface_8hpp_1aaabc2a8c670db3dcfad4661480bf5d2c" prot="public" static="no">
+        <name>MF_BEGIN_COMMON_UNRELIABLE_MSG</name>
+        <initializer>MF_BEGIN_PROXY_MSG</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="222" column="9" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1a4775b6c87673cc794bf7e10b999fe537" prot="public" static="no" mutable="no">
+        <type>Mercury::Address</type>
+        <definition>Mercury::Address addr</definition>
+        <argsstring></argsstring>
+        <name>addr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="96" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1a6f15f59455b8a63f8af4e17b852d2b1d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool bootstrap</definition>
+        <argsstring></argsstring>
+        <name>bootstrap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="106" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1a88fd34de6991e060376af12644d61e9e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool didAutoLoadEntitiesFromDB</definition>
+        <argsstring></argsstring>
+        <name>didAutoLoadEntitiesFromDB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="107" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1a4f0b84cb56b3f5ba09735fdf243b9194" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool isSigInt</definition>
+        <argsstring></argsstring>
+        <name>isSigInt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="111" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1a8649ac44cbab4e426cd5975e3a690d47" prot="public" static="no" mutable="no">
+        <type>Mercury::Address</type>
+        <definition>Mercury::Address realBaseAppAddr</definition>
+        <argsstring></argsstring>
+        <name>realBaseAppAddr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="123" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1a5a9439d5aa6c77675e290c3dd5e3cc61" prot="public" static="no" mutable="no">
+        <type>uint32</type>
+        <definition>uint32 index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="124" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1ae8e18d999eba93eee68a4af5c3a29232" prot="public" static="no" mutable="no">
+        <type>uint32</type>
+        <definition>uint32 hashSize</definition>
+        <argsstring></argsstring>
+        <name>hashSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="125" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1a0efe9d5ea5c3dba30e518b8ed36341a9" prot="public" static="no" mutable="no">
+        <type>uint32</type>
+        <definition>uint32 prime</definition>
+        <argsstring></argsstring>
+        <name>prime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="126" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1a1be8d666205447c0916625c7ba7f3634" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool isInitial</definition>
+        <argsstring></argsstring>
+        <name>isInitial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="127" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1a1083ec48788e6cb73c33b44851fefb08" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool isPending</definition>
+        <argsstring></argsstring>
+        <name>isPending</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="135" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1a39f665a88499999f55321963e8b9f560" prot="public" static="no" mutable="no">
+        <type>EntityID</type>
+        <definition>EntityID entityID</definition>
+        <argsstring></argsstring>
+        <name>entityID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="142" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1acf1bb8e09ef6b272748584be18973c20" prot="public" static="no" mutable="no">
+        <type>EntityID</type>
+        <definition>EntityID id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="166" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1a46f31fa5cea8c27922e94fd5346ef473" prot="public" static="no" mutable="no">
+        <type>SpaceID</type>
+        <definition>SpaceID newSpaceID</definition>
+        <argsstring></argsstring>
+        <name>newSpaceID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="171" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1a914c1941b3fba6cf32c0e00d5c50ec7a" prot="public" static="no" mutable="no">
+        <type>Mercury::Address</type>
+        <definition>Mercury::Address newCellAddr</definition>
+        <argsstring></argsstring>
+        <name>newCellAddr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="172" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1a01ba80b2afdb805fd1503d94cb3e9863" prot="public" static="no" mutable="no">
+        <type>EntityMailBoxRef</type>
+        <definition>EntityMailBoxRef cellMailBox</definition>
+        <argsstring></argsstring>
+        <name>cellMailBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="176" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1ae823810de4e385f9439bea47be3bfefc" prot="public" static="no" mutable="no">
+        <type>IDAlias</type>
+        <definition>IDAlias idAlias</definition>
+        <argsstring></argsstring>
+        <name>idAlias</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="196" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1ae18eddf9c7190a70c999966bc011b39f" prot="public" static="no" mutable="no">
+        <type>EntityID</type>
+        <definition>EntityID vehicleID</definition>
+        <argsstring></argsstring>
+        <name>vehicleID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="201" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1a85c2bec07c3d226cca540b29848c8eb4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool isReliable</definition>
+        <argsstring></argsstring>
+        <name>isReliable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="230" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1aaa928c9a62449f7946da1e32f66c70d2" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool on</definition>
+        <argsstring></argsstring>
+        <name>on</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="235" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="baseapp__int__interface_8hpp_1aafceb1ce74eae4ea6fbf807ab5fb7f55" prot="public" static="no" mutable="no">
+        <type>uint32</type>
+        <definition>uint32 interval</definition>
+        <argsstring></argsstring>
+        <name>interval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This message is used to signal to the base that it should be kept alive for at least the specified interval, even if the client disconnects or is not connected. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp_int_interface.hpp" line="259" column="1" bodyfile="baseapp/baseapp_int_interface.hpp" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#if<sp/>defined(<sp/>DEFINE_INTERFACE_HERE<sp/>)<sp/>||<sp/>defined(<sp/>DEFINE_SERVER_HERE<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#undef<sp/>BASEAPP_INT_INTERFACE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BASEAPP_INT_INTERFACE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BASEAPP_INT_INTERFACE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/basictypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/network_interface.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;server/anonymous_channel_client.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>INTERFACE_NAME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERFACE_NAME<sp/>BaseAppIntInterface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;connection/common_baseapp_interface.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;buffered_input_message_handler.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;baseapp_int_interface_stream_helpers.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>For<sp/>Base<sp/>entity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MF_BEGIN_BASE_STRUCT_MSG_EX(<sp/>NAME<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>BEGIN_HANDLED_STRUCT_MESSAGE(<sp/>NAME,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BaseMessageStructHandlerEx&lt;<sp/>INTERFACE_NAME::NAME##Args<sp/>&gt;,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;Base::NAME<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MF_BASE_STREAM_MSG(<sp/>NAME<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>MERCURY_HANDLED_VARIABLE_MESSAGE(<sp/>NAME,<sp/>2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BaseMessageStreamHandler,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;Base::NAME<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MF_BASE_STREAM_MSG_EX(<sp/>NAME<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>MERCURY_HANDLED_VARIABLE_MESSAGE(<sp/>NAME,<sp/>2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BaseMessageStreamHandlerEx,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;Base::NAME<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BW_CREATE_ENTITY_MSG(<sp/>TYPE,<sp/>NAME<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>MERCURY_HANDLED_VARIABLE_MESSAGE(<sp/>NAME,<sp/>2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BufferedInputMessageHandler&lt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CreateEntityHandler&lt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>StreamHelpers::BaseAppIntInterface::NAME::Request<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;,<sp/>&amp;TYPE::NAME<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Section:<sp/>Includes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;server/common.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/msgtypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BASEAPP_INT_INTERFACE_HPP_ONCE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BASEAPP_INT_INTERFACE_HPP_ONCE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/>These<sp/>constants<sp/>apply<sp/>to<sp/>the<sp/>BaseAppIntInterface::logOnAttempt<sp/>message.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_base_app_int_interface" kindref="compound">BaseAppIntInterface</ref></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8<sp/>LOG_ON_ATTEMPT_REJECTED<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8<sp/>LOG_ON_ATTEMPT_TOOK_CONTROL<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8<sp/>LOG_ON_ATTEMPT_WAIT_FOR_DESTROY<sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>BASEAPP_INT_INTERFACE_HPP_ONCE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Section:<sp/>Proxy<sp/>Internal<sp/>Interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>pack(push,<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">BEGIN_MERCURY_INTERFACE(<sp/><ref refid="namespace_base_app_int_interface" kindref="compound">BaseAppIntInterface</ref><sp/>)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_CREATE_ENTITY_MSG(<sp/><ref refid="class_base_app" kindref="compound">BaseApp</ref>,<sp/>createBaseWithCellData<sp/>)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stream<sp/>format<sp/>implemented<sp/>by:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>StreamHelpers::BaseAppIntInterface::createBaseWithCellData</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG_EX(<sp/>BaseApp,<sp/>createBaseFromDB<sp/>)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stream<sp/>format<sp/>implemented<sp/>by:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>StreamHelpers::BaseAppIntInterface::createBaseFromDB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_CREATE_ENTITY_MSG(<sp/>BaseApp,<sp/>createBaseFromTemplate<sp/>)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stream<sp/>format<sp/>implemented<sp/>by:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>StreamHelpers::BaseAppIntInterface::createBaseFromTemplate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG_EX(<sp/>BaseApp,<sp/>logOnAttempt<sp/>)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG(<sp/>BaseApp,<sp/>addGlobalBase<sp/>)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG(<sp/>BaseApp,<sp/>delGlobalBase<sp/>)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG(<sp/>BaseApp,<sp/>addServiceFragment<sp/>)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG(<sp/>BaseApp,<sp/>delServiceFragment<sp/>)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_BEGIN_STRUCT_MSG(<sp/>BaseApp,<sp/>handleCellAppMgrBirth<sp/>)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_mercury" kindref="compound">Mercury</ref>::Address<sp/><sp/><sp/><sp/>addr;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>END_STRUCT_MESSAGE()</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_BEGIN_STRUCT_MSG(<sp/>BaseApp,<sp/>handleBaseAppMgrBirth<sp/>)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_mercury" kindref="compound">Mercury</ref>::Address<sp/><sp/><sp/><sp/>addr;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>END_STRUCT_MESSAGE()</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG(<sp/>BaseApp,<sp/>handleCellAppDeath<sp/>)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_BEGIN_STRUCT_MSG(<sp/>BaseApp,<sp/>startup<sp/>)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bootstrap;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>didAutoLoadEntitiesFromDB;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>END_STRUCT_MESSAGE()</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_BEGIN_STRUCT_MSG(<sp/>BaseApp,<sp/>shutDown<sp/>)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>isSigInt;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>END_STRUCT_MESSAGE()</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG_EX(<sp/>BaseApp,<sp/>controlledShutDown<sp/>)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG(<sp/>BaseApp,<sp/>startOffloading<sp/>)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG(<sp/>BaseApp,<sp/>setCreateBaseInfo<sp/>)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>***<sp/>messages<sp/>for<sp/>the<sp/>new<sp/>style<sp/>BaseApp<sp/>backup.<sp/>Base<sp/>entities<sp/>are<sp/>now</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>backed<sp/>up<sp/>individually<sp/>***</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_BEGIN_STRUCT_MSG(<sp/>BaseApp,<sp/>startBaseEntitiesBackup<sp/>)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_mercury" kindref="compound">Mercury</ref>::Address<sp/><sp/><sp/><sp/>realBaseAppAddr;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hashSize;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prime;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isInitial;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>END_STRUCT_MESSAGE()</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_BEGIN_STRUCT_MSG(<sp/>BaseApp,<sp/>stopBaseEntitiesBackup<sp/>)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_mercury" kindref="compound">Mercury</ref>::Address<sp/><sp/><sp/><sp/>realBaseAppAddr;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hashSize;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prime;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isPending;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>END_STRUCT_MESSAGE()</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_BIG_STREAM_MSG_EX(<sp/>BaseApp,<sp/>backupBaseEntity<sp/>)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG(<sp/>BaseApp,<sp/>ackOffloadBackup<sp/>)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_BEGIN_STRUCT_MSG_EX(<sp/>BaseApp,<sp/>stopBaseEntityBackup<sp/>)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EntityID<sp/>entityID;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>END_STRUCT_MESSAGE()</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG_EX(<sp/>BaseApp,<sp/>handleBaseAppBirth<sp/>)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG_EX(<sp/>BaseApp,<sp/>handleBaseAppDeath<sp/>)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Concerned<sp/>with<sp/>backing<sp/>up<sp/>this<sp/>app.<sp/>Other<sp/>messages<sp/>are<sp/>concerned<sp/>with</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>backing<sp/>up<sp/>others.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG_EX(<sp/>BaseApp,<sp/>setBackupBaseApps<sp/>)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_EMPTY_MSG_EX(<sp/>BaseApp,<sp/>barrierDBAppHash<sp/>)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG(<sp/>BaseApp,<sp/>updateDBAppHash<sp/>)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>***<sp/>messages<sp/>related<sp/>to<sp/>shared<sp/>data<sp/>***</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG(<sp/>BaseApp,<sp/>setSharedData<sp/>)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG(<sp/>BaseApp,<sp/>delSharedData<sp/>)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>***<sp/>messages<sp/>from<sp/>the<sp/>cell<sp/>concerning<sp/>the<sp/>client<sp/>***</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>identify<sp/>the<sp/>client<sp/>that<sp/>future<sp/>messages</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>(in<sp/>this<sp/>bundle)<sp/>are<sp/>destined<sp/>for.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_BEGIN_STRUCT_MSG(<sp/>BaseApp,<sp/>setClient<sp/>)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EntityID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>END_STRUCT_MESSAGE()</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>cell<sp/>that<sp/>owns<sp/>this<sp/>base</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_BEGIN_BASE_STRUCT_MSG_EX(<sp/>currentCell<sp/>)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpaceID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newSpaceID;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_mercury" kindref="compound">Mercury</ref>::Address<sp/><sp/><sp/><sp/>newCellAddr;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>END_STRUCT_MESSAGE()</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_BEGIN_BASE_STRUCT_MSG_EX(<sp/>teleportOther<sp/>)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EntityMailBoxRef<sp/>cellMailBox;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>END_STRUCT_MESSAGE()</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>cell<sp/>that<sp/>owns<sp/>this<sp/>base,<sp/>in<sp/>an<sp/>emergency.<sp/>This<sp/>will<sp/>be<sp/>called<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>an<sp/>old<sp/>ghost.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG_EX(<sp/>BaseApp,<sp/>emergencySetCurrentCell<sp/>)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>SpaceID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newSpaceID;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Mercury::Address<sp/><sp/><sp/><sp/>newCellAddr;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG(<sp/>BaseApp,<sp/>forwardedBaseMessage<sp/>)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_EMPTY_PROXY_MSG(<sp/>sendToClient<sp/>)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>of<sp/>messages<sp/>to<sp/>forward<sp/>from<sp/>cell<sp/>to<sp/>client...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_VARLEN_PROXY_MSG(<sp/>createCellPlayer<sp/>)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_VARLEN_PROXY_MSG(<sp/>spaceProperty<sp/>)</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_BEGIN_PROXY_MSG(<sp/>enterAoI<sp/>)</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EntityID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IDAlias<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idAlias;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>END_STRUCT_MESSAGE()</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_BEGIN_PROXY_MSG(<sp/>enterAoIOnVehicle<sp/>)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EntityID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EntityID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vehicleID;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IDAlias<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idAlias;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>END_STRUCT_MESSAGE()</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_VARLEN_PROXY_MSG(<sp/>leaveAoI<sp/>)</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>EntityID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>id;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>EventNumber[]<sp/><sp/><sp/>lastEventNumbers;<sp/><sp/><sp/>//<sp/>rest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_VARLEN_PROXY_MSG(<sp/>createEntity<sp/>)</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_VARLEN_PROXY_MSG(<sp/>createEntityDetailed<sp/>)</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_VARLEN_PROXY_MSG(<sp/>updateEntity<sp/>)</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>interface<sp/>that<sp/>is<sp/>shared<sp/>between<sp/>this<sp/>interface<sp/>and<sp/>the<sp/>client</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>interface.<sp/>This<sp/>includes<sp/>messages<sp/>such<sp/>as<sp/>all<sp/>of<sp/>the<sp/>avatarUpdate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>messages.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MF_EMPTY_COMMON_RELIABLE_MSG<sp/>MF_EMPTY_PROXY_MSG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MF_BEGIN_COMMON_RELIABLE_MSG<sp/>MF_BEGIN_PROXY_MSG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MF_BEGIN_COMMON_PASSENGER_MSG<sp/>MF_BEGIN_PROXY_MSG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MF_BEGIN_COMMON_UNRELIABLE_MSG<sp/>MF_BEGIN_PROXY_MSG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;connection/common_client_interface.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>MF_EMPTY_COMMON_RELIABLE_MSG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>MF_BEGIN_COMMON_RELIABLE_MSG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>MF_BEGIN_COMMON_PASSENGER_MSG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>MF_BEGIN_COMMON_UNRELIABLE_MSG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_BEGIN_STRUCT_MSG(<sp/>BaseApp,<sp/>makeNextMessageReliable<sp/>)</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isReliable;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>END_STRUCT_MESSAGE()</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_BEGIN_PROXY_MSG(<sp/>modWard<sp/>)</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EntityID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>on;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>END_STRUCT_MESSAGE()</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_VARLEN_PROXY_MSG(<sp/>callClientMethod<sp/>)</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...<sp/>end<sp/>of<sp/>messages<sp/>to<sp/>forward<sp/>from<sp/>cell<sp/>to<sp/>client.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG_EX(<sp/>BaseApp,<sp/>acceptClient<sp/>)</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>***<sp/>Message<sp/>from<sp/>the<sp/>cell<sp/>not<sp/>concerning<sp/>the<sp/>client<sp/>***</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Messages<sp/>for<sp/>proxies</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_BASE_STREAM_MSG(<sp/>backupCellEntity<sp/>)</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_BASE_STREAM_MSG(<sp/>writeToDB<sp/>)</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_BASE_STREAM_MSG_EX(<sp/>cellEntityLost<sp/>)</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_BEGIN_BASE_STRUCT_MSG_EX(<sp/>startKeepAlive<sp/>)</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>interval;<sp/></highlight><highlight class="comment">//<sp/>in<sp/>seconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>END_STRUCT_MESSAGE()</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_BASE_STREAM_MSG_EX(<sp/>callBaseMethod<sp/>)</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_BASE_STREAM_MSG_EX(<sp/>callCellMethod<sp/>)</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_BASE_STREAM_MSG_EX(<sp/>getCellAddr<sp/>)</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_VARLEN_PROXY_MSG(<sp/>sendMessageToClient<sp/>)</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_VARLEN_PROXY_MSG(<sp/>sendMessageToClientUnreliable<sp/>)</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Watcher<sp/>messages</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Message<sp/>to<sp/>forward<sp/>watcher<sp/>requests<sp/>via</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG_EX(<sp/>BaseApp,<sp/>callWatcher<sp/>)</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal">END_MERCURY_INTERFACE()</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>pack(<sp/>pop<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>BASEAPP_INT_INTERFACE_HPP</highlight></codeline>
+    </programlisting>
+    <location file="baseapp/baseapp_int_interface.hpp"/>
+  </compounddef>
+</doxygen>

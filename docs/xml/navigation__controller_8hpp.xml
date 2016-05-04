@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="navigation__controller_8hpp" kind="file" language="C++">
+    <compoundname>navigation_controller.hpp</compoundname>
+    <includes refid="controller_8hpp" local="yes">controller.hpp</includes>
+    <includes local="yes">network/basictypes.hpp</includes>
+    <includes local="yes">server/updatable.hpp</includes>
+    <includes local="yes">waypoint/navigator.hpp</includes>
+    <includes local="yes">waypoint/navloc.hpp</includes>
+    <includes local="yes">cstdmf/bw_vector.hpp</includes>
+    <includedby refid="navmesh__navigation__system_8hpp" local="yes">cellapp/navmesh_navigation_system.hpp</includedby>
+    <includedby refid="navigation__controller_8cpp" local="yes">cellapp/navigation_controller.cpp</includedby>
+    <incdepgraph>
+      <node id="10068">
+        <label>build/bwapi.hpp</label>
+      </node>
+      <node id="10066">
+        <label>script/script_object.hpp</label>
+      </node>
+      <node id="10064">
+        <label>cstdmf/binary_stream.hpp</label>
+      </node>
+      <node id="10067">
+        <label>cstdmf/md5.hpp</label>
+      </node>
+      <node id="10065">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="10069">
+        <label>server/updatable.hpp</label>
+      </node>
+      <node id="10062">
+        <label>Python.h</label>
+      </node>
+      <node id="10061">
+        <label>controller.hpp</label>
+        <link refid="controller_8hpp_source"/>
+        <childnode refid="10062" relation="include">
+        </childnode>
+        <childnode refid="10063" relation="include">
+        </childnode>
+        <childnode refid="10064" relation="include">
+        </childnode>
+        <childnode refid="10065" relation="include">
+        </childnode>
+        <childnode refid="10066" relation="include">
+        </childnode>
+        <childnode refid="10067" relation="include">
+        </childnode>
+        <childnode refid="10068" relation="include">
+        </childnode>
+      </node>
+      <node id="10071">
+        <label>waypoint/navloc.hpp</label>
+      </node>
+      <node id="10060">
+        <label>cellapp/navigation_controller.hpp</label>
+        <link refid="navigation_controller.hpp"/>
+        <childnode refid="10061" relation="include">
+        </childnode>
+        <childnode refid="10063" relation="include">
+        </childnode>
+        <childnode refid="10069" relation="include">
+        </childnode>
+        <childnode refid="10070" relation="include">
+        </childnode>
+        <childnode refid="10071" relation="include">
+        </childnode>
+        <childnode refid="10072" relation="include">
+        </childnode>
+      </node>
+      <node id="10063">
+        <label>network/basictypes.hpp</label>
+      </node>
+      <node id="10070">
+        <label>waypoint/navigator.hpp</label>
+      </node>
+      <node id="10072">
+        <label>cstdmf/bw_vector.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="10073">
+        <label>cellapp/navigation_controller.hpp</label>
+        <link refid="navigation_controller.hpp"/>
+        <childnode refid="10074" relation="include">
+        </childnode>
+      </node>
+      <node id="10074">
+        <label>cellapp/navmesh_navigation_system.hpp</label>
+        <link refid="navmesh__navigation__system_8hpp_source"/>
+        <childnode refid="10075" relation="include">
+        </childnode>
+      </node>
+      <node id="10075">
+        <label>cellapp/entity_navigate.hpp</label>
+        <link refid="entity__navigate_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_navigation_controller" prot="public">NavigationController</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>NAV_CONTROLLER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NAV_CONTROLLER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;controller.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/basictypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;server/updatable.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;waypoint/navigator.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;waypoint/navloc.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_vector.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_navigation_controller" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_navigation_controller" kindref="compound">NavigationController</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_controller" kindref="compound">Controller</ref>,<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Updatable</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>DECLARE_CONTROLLER_TYPE(<sp/><ref refid="class_navigation_controller" kindref="compound">NavigationController</ref><sp/>)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_navigation_controller" kindref="compound">NavigationController</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Position3D<sp/>&amp;<sp/>destination<sp/>=<sp/>Position3D(<sp/>0,<sp/>0,<sp/>0<sp/>),</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>velocity<sp/>=<sp/>0.f,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>faceMovement<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxDistance<sp/>=<sp/>-1.f,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>girth<sp/>=<sp/>0.5f,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>closeEnough<sp/>=<sp/>0.01f<sp/>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>NavigationStatus</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NAVIGATION_CANCELLED<sp/>=<sp/>-2,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NAVIGATION_FAILED<sp/>=<sp/>-1,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NAVIGATION_IN_PROGRESS<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NAVIGATION_COMPLETE<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_navigation_controller_1a1766c48a50095d0138ef2f90aca8e6ee" kindref="member">startReal</ref>(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isInitialStart<sp/>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_navigation_controller_1acd77f180ec05482fd18d73836d639dd3" kindref="member">stopReal</ref>(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isFinalStop<sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>NavigationStatus<sp/><ref refid="class_navigation_controller_1ad5ea8b110ac9f113919b2aea3198deb1" kindref="member">move</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_navigation_controller_1ab1ebe69610d05457eff46919037baab3" kindref="member">writeRealToStream</ref>(<sp/>BinaryOStream<sp/>&amp;<sp/>stream<sp/>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_navigation_controller_1a5165aebc46dbeaa9f7bdd3b03728adfd" kindref="member">readRealFromStream</ref>(<sp/>BinaryIStream<sp/>&amp;<sp/>stream<sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_navigation_controller_1ac5d5b8144c3c09da5e8ed2741fde1cad" kindref="member">update</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>generateTraversalPath(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NavLoc<sp/>&amp;<sp/>srcLoc<sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>metresPerTick_;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>maxDistance_;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>girth_;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>closeEnough_;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>faceMovement_;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>Position3D<sp/><sp/>nextPosition_;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>Position3D<sp/><sp/>destination_;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>NavLoc<sp/>*<sp/><sp/><sp/><sp/>pDstLoc_;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>Vector3Path<sp/>path_;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentNode_;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//NAV_CONTROLLER_HPP</highlight></codeline>
+    </programlisting>
+    <location file="cellapp/navigation_controller.hpp"/>
+  </compounddef>
+</doxygen>

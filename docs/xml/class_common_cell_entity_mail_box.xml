@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_common_cell_entity_mail_box" kind="class" language="C++" prot="public">
+    <compoundname>CommonCellEntityMailBox</compoundname>
+    <basecompoundref refid="class_server_entity_mail_box" prot="public" virt="non-virtual">ServerEntityMailBox</basecompoundref>
+    <derivedcompoundref refid="class_base_via_cell_mail_box" prot="public" virt="non-virtual">BaseViaCellMailBox</derivedcompoundref>
+    <derivedcompoundref refid="class_cell_entity_mail_box" prot="public" virt="non-virtual">CellEntityMailBox</derivedcompoundref>
+    <includes refid="baseapp_2mailbox_8hpp" local="no">mailbox.hpp</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_common_cell_entity_mail_box_1af92aaa9d060e5db2d9bb674c906ba4fc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CommonCellEntityMailBox::Py_Header</definition>
+        <argsstring>(CommonCellEntityMailBox, ServerEntityMailBox) public</argsstring>
+        <name>Py_Header</name>
+        <param>
+          <type><ref refid="class_common_cell_entity_mail_box" kindref="compound">CommonCellEntityMailBox</ref></type>
+        </param>
+        <param>
+          <type><ref refid="class_server_entity_mail_box" kindref="compound">ServerEntityMailBox</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/mailbox.hpp" line="97" column="1" bodyfile="baseapp/mailbox.hpp" bodystart="97" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_common_cell_entity_mail_box_1a6e07b6b2bf712c7150135017e90a64c1" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Mercury::UDPChannel *</type>
+        <definition>Mercury::UDPChannel * CommonCellEntityMailBox::pChannel</definition>
+        <argsstring>() const </argsstring>
+        <name>pChannel</name>
+        <reimplements refid="class_server_entity_mail_box_1a832ba292d175d9c69cf47042e7f7fe18">pChannel</reimplements>
+        <reimplementedby refid="class_cell_entity_mail_box_1ab3b8038037b512f27d9e14d4c4f63a35">pChannel</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the best channel for this mailbox. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/mailbox.hpp" line="106" column="1" bodyfile="baseapp/mailbox.cpp" bodystart="741" bodyend="772"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_common_cell_entity_mail_box_1af08bedf7471f28ea774ad9517b9c9df5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BinaryOStream *</type>
+        <definition>BinaryOStream * CommonCellEntityMailBox::getStreamCommon</definition>
+        <argsstring>(const MethodDescription &amp;methodDesc, const Mercury::InterfaceElement &amp;ie, std::auto_ptr&lt; Mercury::ReplyMessageHandler &gt; pHandler)</argsstring>
+        <name>getStreamCommon</name>
+        <param>
+          <type>const MethodDescription &amp;</type>
+          <declname>methodDesc</declname>
+        </param>
+        <param>
+          <type>const Mercury::InterfaceElement &amp;</type>
+          <declname>ie</declname>
+        </param>
+        <param>
+          <type>std::auto_ptr&lt; Mercury::ReplyMessageHandler &gt;</type>
+          <declname>pHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is used by derived classes to the initial part of their getStream methods. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/mailbox.hpp" line="108" column="1" bodyfile="baseapp/mailbox.cpp" bodystart="779" bodyend="806"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is common to all mailboxes that send to the cell entity or via the cell entity. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="781">
+        <label>CommonCellEntityMailBox</label>
+        <link refid="class_common_cell_entity_mail_box"/>
+        <childnode refid="782" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="785">
+        <label>CellEntityMailBox</label>
+        <link refid="class_cell_entity_mail_box"/>
+        <childnode refid="781" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="783">
+        <label>PyEntityMailBox</label>
+      </node>
+      <node id="782">
+        <label>ServerEntityMailBox</label>
+        <link refid="class_server_entity_mail_box"/>
+        <childnode refid="783" relation="public-inheritance">
+        </childnode>
+        <childnode refid="783" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="786">
+        <label>ClientViaCellMailBox</label>
+        <link refid="class_client_via_cell_mail_box"/>
+        <childnode refid="785" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="784">
+        <label>BaseViaCellMailBox</label>
+        <link refid="class_base_via_cell_mail_box"/>
+        <childnode refid="781" relation="public-inheritance">
+        </childnode>
+        <childnode refid="785" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="787">
+        <label>CommonCellEntityMailBox</label>
+        <link refid="class_common_cell_entity_mail_box"/>
+        <childnode refid="788" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="789">
+        <label>PyEntityMailBox</label>
+      </node>
+      <node id="788">
+        <label>ServerEntityMailBox</label>
+        <link refid="class_server_entity_mail_box"/>
+        <childnode refid="789" relation="public-inheritance">
+        </childnode>
+        <childnode refid="789" relation="public-inheritance">
+        </childnode>
+        <childnode refid="790" relation="usage">
+          <edgelabel>pLocalType_</edgelabel>
+        </childnode>
+      </node>
+      <node id="790">
+        <label>SmartPointer&lt; EntityType &gt;</label>
+        <link refid="class_smart_pointer"/>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/mailbox.hpp" line="96" column="1" bodyfile="baseapp/mailbox.hpp" bodystart="95" bodyend="112"/>
+    <listofallmembers>
+      <member refid="class_server_entity_mail_box_1a37fa9fde4551bda091d33eed21013963" prot="protected" virt="non-virtual"><scope>CommonCellEntityMailBox</scope><name>addr_</name></member>
+      <member refid="class_server_entity_mail_box_1aa74a6727a32255a12afd670896ca0ebf" prot="protected" virt="non-virtual"><scope>CommonCellEntityMailBox</scope><name>clusterID_</name></member>
+      <member refid="class_common_cell_entity_mail_box_1af08bedf7471f28ea774ad9517b9c9df5" prot="protected" virt="non-virtual"><scope>CommonCellEntityMailBox</scope><name>getStreamCommon</name></member>
+      <member refid="class_server_entity_mail_box_1aac93f482e4dc14b9f2ae55281e45c090" prot="protected" virt="pure-virtual"><scope>CommonCellEntityMailBox</scope><name>getStreamEx</name></member>
+      <member refid="class_server_entity_mail_box_1a08d188a0e07455f51514799fac1f92da" prot="protected" virt="non-virtual"><scope>CommonCellEntityMailBox</scope><name>id_</name></member>
+      <member refid="class_common_cell_entity_mail_box_1a6e07b6b2bf712c7150135017e90a64c1" prot="private" virt="virtual"><scope>CommonCellEntityMailBox</scope><name>pChannel</name></member>
+      <member refid="class_server_entity_mail_box_1af95a74119a60168567696de3372410c9" prot="protected" virt="non-virtual"><scope>CommonCellEntityMailBox</scope><name>pLocalType_</name></member>
+      <member refid="class_common_cell_entity_mail_box_1af92aaa9d060e5db2d9bb674c906ba4fc" prot="private" virt="non-virtual"><scope>CommonCellEntityMailBox</scope><name>Py_Header</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

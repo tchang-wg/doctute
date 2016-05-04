@@ -1,0 +1,366 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_leak_tracer" kind="class" language="C++" prot="public">
+    <compoundname>LeakTracer</compoundname>
+    <innerclass refid="struct_leak_tracer_1_1_leak" prot="private">LeakTracer::Leak</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_leak_tracer_1ac4bbeeec22ff2c589328e46716385f32" prot="private" static="no">
+        <name>abortReason_t</name>
+        <enumvalue id="class_leak_tracer_1ac4bbeeec22ff2c589328e46716385f32a8216d9a8ee8e27700d7ecdada36d3fde" prot="private">
+          <name>OVERWRITE_MEMORY</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_leak_tracer_1ac4bbeeec22ff2c589328e46716385f32a85c8cd2a89a2ece0a520597599c33d0e" prot="private">
+          <name>DELETE_NONEXISTENT</name>
+          <initializer>= 0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_leak_tracer_1ac4bbeeec22ff2c589328e46716385f32ac50cc57e11990907a486e22866d5e6b5" prot="private">
+          <name>NEW_DELETE_MISMATCH</name>
+          <initializer>= 0x04</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="149" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="149" bodyend="153"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_leak_tracer_1af82105ffed57378d94e693abf1cc90b4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LeakTracer::newCount</definition>
+        <argsstring></argsstring>
+        <name>newCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="116" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leak_tracer_1ac0579093851c13206a7addec86121ed9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LeakTracer::leaksCount</definition>
+        <argsstring></argsstring>
+        <name>leaksCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="117" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leak_tracer_1a1ad8ac657e6a4585e7c404450093fa46" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LeakTracer::firstFreeSpot</definition>
+        <argsstring></argsstring>
+        <name>firstFreeSpot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="118" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leak_tracer_1a39a83002876600912d1ce322ce8395e5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LeakTracer::currentAllocated</definition>
+        <argsstring></argsstring>
+        <name>currentAllocated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="119" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leak_tracer_1a2baf1db18b81f6793e7fee156af5298d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LeakTracer::maxAllocated</definition>
+        <argsstring></argsstring>
+        <name>maxAllocated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="120" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leak_tracer_1abca44309b158177d9ee6c06d4db09b9d" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long LeakTracer::totalAllocations</definition>
+        <argsstring></argsstring>
+        <name>totalAllocations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="121" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leak_tracer_1a9eb53f505174bfcbdc83ae0e8fe80d79" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int LeakTracer::abortOn</definition>
+        <argsstring></argsstring>
+        <name>abortOn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="122" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leak_tracer_1ad3b30c3c9437ac5bcce1abe2e9ce9ab4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LeakTracer::initialized</definition>
+        <argsstring></argsstring>
+        <name>initialized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Have we been initialized yet? We depend on this being false before constructor has been called! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="128" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leak_tracer_1a74828f030a485bee9d4fe1901bae926c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LeakTracer::destroyed</definition>
+        <argsstring></argsstring>
+        <name>destroyed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="129" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leak_tracer_1a375698cf59ef62db77310bb9dd67d85e" prot="private" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* LeakTracer::report</definition>
+        <argsstring></argsstring>
+        <name>report</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="132" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leak_tracer_1ab30257268bd6f39c2db2985618225c09" prot="private" static="no" mutable="no">
+        <type>Leak *</type>
+        <definition>Leak* LeakTracer::leaks</definition>
+        <argsstring></argsstring>
+        <name>leaks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pre-allocated array of leak info structs. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="137" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leak_tracer_1a6cac21873aa4aeedb8431f3e193dbdac" prot="private" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* LeakTracer::leakHash</definition>
+        <argsstring></argsstring>
+        <name>leakHash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>fast hash to lookup the spot where an allocation is stored in case of an delete. map&lt;void*,index-in-leaks-array&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="143" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_leak_tracer_1a4122648a887967d697461b239b3efc2d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>LeakTracer::LeakTracer</definition>
+        <argsstring>()</argsstring>
+        <name>LeakTracer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="156" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="156" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leak_tracer_1ac8679048ef015ed24f5f225ac77e8178" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeakTracer::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="160" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="160" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leak_tracer_1a9409939c5bc8df1b5f7294f7559796b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * LeakTracer::registerAlloc</definition>
+        <argsstring>(size_t size, bool type)</argsstring>
+        <name>registerAlloc</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="271" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="312" bodyend="397"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leak_tracer_1a610f8a62f79ba5787ee1f79987049dde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeakTracer::registerFree</definition>
+        <argsstring>(void *p, bool type)</argsstring>
+        <name>registerFree</name>
+        <param>
+          <type>void *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="272" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="415" bodyend="510"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leak_tracer_1af613ce2d25a2f02fda96972b53d9dff4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeakTracer::hexdump</definition>
+        <argsstring>(const unsigned char *area, int size)</argsstring>
+        <name>hexdump</name>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>area</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>write a hexdump of the given area. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="277" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="399" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leak_tracer_1a394db2a3d3d5770119588d2cc4c111f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeakTracer::progAbort</definition>
+        <argsstring>(abortReason_t reason)</argsstring>
+        <name>progAbort</name>
+        <param>
+          <type>abortReason_t</type>
+          <declname>reason</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Terminate current running program. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="282" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="282" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leak_tracer_1a3b2f9cdedcff67d61b80c17a9d0c6e56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeakTracer::writeLeakReport</definition>
+        <argsstring>()</argsstring>
+        <name>writeLeakReport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>write a Report over leaks, e.g. still pending deletes </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="296" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="513" bodyend="537"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leak_tracer_1a3370585e87c25ab0420a1cd1e82d3e0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>LeakTracer::~LeakTracer</definition>
+        <argsstring>()</argsstring>
+        <name>~LeakTracer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/LeakTracer.cpp" line="298" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="298" bodyend="309"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The LeakTracer class. </para>    </detaileddescription>
+    <location file="cellapp/LeakTracer.cpp" line="107" column="1" bodyfile="cellapp/LeakTracer.cpp" bodystart="107" bodyend="310"/>
+    <listofallmembers>
+      <member refid="class_leak_tracer_1a9eb53f505174bfcbdc83ae0e8fe80d79" prot="private" virt="non-virtual"><scope>LeakTracer</scope><name>abortOn</name></member>
+      <member refid="class_leak_tracer_1ac4bbeeec22ff2c589328e46716385f32" prot="private" virt="non-virtual"><scope>LeakTracer</scope><name>abortReason_t</name></member>
+      <member refid="class_leak_tracer_1a39a83002876600912d1ce322ce8395e5" prot="private" virt="non-virtual"><scope>LeakTracer</scope><name>currentAllocated</name></member>
+      <member refid="class_leak_tracer_1ac4bbeeec22ff2c589328e46716385f32a85c8cd2a89a2ece0a520597599c33d0e" prot="private" virt="non-virtual"><scope>LeakTracer</scope><name>DELETE_NONEXISTENT</name></member>
+      <member refid="class_leak_tracer_1a74828f030a485bee9d4fe1901bae926c" prot="private" virt="non-virtual"><scope>LeakTracer</scope><name>destroyed</name></member>
+      <member refid="class_leak_tracer_1a1ad8ac657e6a4585e7c404450093fa46" prot="private" virt="non-virtual"><scope>LeakTracer</scope><name>firstFreeSpot</name></member>
+      <member refid="class_leak_tracer_1af613ce2d25a2f02fda96972b53d9dff4" prot="public" virt="non-virtual"><scope>LeakTracer</scope><name>hexdump</name></member>
+      <member refid="class_leak_tracer_1ac8679048ef015ed24f5f225ac77e8178" prot="public" virt="non-virtual"><scope>LeakTracer</scope><name>initialize</name></member>
+      <member refid="class_leak_tracer_1ad3b30c3c9437ac5bcce1abe2e9ce9ab4" prot="private" virt="non-virtual"><scope>LeakTracer</scope><name>initialized</name></member>
+      <member refid="class_leak_tracer_1a6cac21873aa4aeedb8431f3e193dbdac" prot="private" virt="non-virtual"><scope>LeakTracer</scope><name>leakHash</name></member>
+      <member refid="class_leak_tracer_1ab30257268bd6f39c2db2985618225c09" prot="private" virt="non-virtual"><scope>LeakTracer</scope><name>leaks</name></member>
+      <member refid="class_leak_tracer_1ac0579093851c13206a7addec86121ed9" prot="private" virt="non-virtual"><scope>LeakTracer</scope><name>leaksCount</name></member>
+      <member refid="class_leak_tracer_1a4122648a887967d697461b239b3efc2d" prot="public" virt="non-virtual"><scope>LeakTracer</scope><name>LeakTracer</name></member>
+      <member refid="class_leak_tracer_1a2baf1db18b81f6793e7fee156af5298d" prot="private" virt="non-virtual"><scope>LeakTracer</scope><name>maxAllocated</name></member>
+      <member refid="class_leak_tracer_1ac4bbeeec22ff2c589328e46716385f32ac50cc57e11990907a486e22866d5e6b5" prot="private" virt="non-virtual"><scope>LeakTracer</scope><name>NEW_DELETE_MISMATCH</name></member>
+      <member refid="class_leak_tracer_1af82105ffed57378d94e693abf1cc90b4" prot="private" virt="non-virtual"><scope>LeakTracer</scope><name>newCount</name></member>
+      <member refid="class_leak_tracer_1ac4bbeeec22ff2c589328e46716385f32a8216d9a8ee8e27700d7ecdada36d3fde" prot="private" virt="non-virtual"><scope>LeakTracer</scope><name>OVERWRITE_MEMORY</name></member>
+      <member refid="class_leak_tracer_1a394db2a3d3d5770119588d2cc4c111f3" prot="public" virt="non-virtual"><scope>LeakTracer</scope><name>progAbort</name></member>
+      <member refid="class_leak_tracer_1a9409939c5bc8df1b5f7294f7559796b6" prot="public" virt="non-virtual"><scope>LeakTracer</scope><name>registerAlloc</name></member>
+      <member refid="class_leak_tracer_1a610f8a62f79ba5787ee1f79987049dde" prot="public" virt="non-virtual"><scope>LeakTracer</scope><name>registerFree</name></member>
+      <member refid="class_leak_tracer_1a375698cf59ef62db77310bb9dd67d85e" prot="private" virt="non-virtual"><scope>LeakTracer</scope><name>report</name></member>
+      <member refid="class_leak_tracer_1abca44309b158177d9ee6c06d4db09b9d" prot="private" virt="non-virtual"><scope>LeakTracer</scope><name>totalAllocations</name></member>
+      <member refid="class_leak_tracer_1a3b2f9cdedcff67d61b80c17a9d0c6e56" prot="public" virt="non-virtual"><scope>LeakTracer</scope><name>writeLeakReport</name></member>
+      <member refid="class_leak_tracer_1a3370585e87c25ab0420a1cd1e82d3e0f" prot="public" virt="non-virtual"><scope>LeakTracer</scope><name>~LeakTracer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="profile_8cpp" kind="file" language="C++">
+    <compoundname>profile.cpp</compoundname>
+    <includes refid="profile_8hpp" local="yes">profile.hpp</includes>
+    <includes local="yes">cstdmf/debug.hpp</includes>
+    <includes local="yes">server/bwconfig.hpp</includes>
+    <includes refid="profile_8ipp" local="yes">profile.ipp</includes>
+    <includedby refid="cellapp__profile_8cpp" local="yes">cellapp/unit_test/cellapp_profile.cpp</includedby>
+    <incdepgraph>
+      <node id="10899">
+        <label>server/bwconfig.hpp</label>
+      </node>
+      <node id="10898">
+        <label>cstdmf/debug.hpp</label>
+      </node>
+      <node id="10895">
+        <label>cellapp/profile.cpp</label>
+        <link refid="profile.cpp"/>
+        <childnode refid="10896" relation="include">
+        </childnode>
+        <childnode refid="10898" relation="include">
+        </childnode>
+        <childnode refid="10899" relation="include">
+        </childnode>
+      </node>
+      <node id="10896">
+        <label>profile.hpp</label>
+        <link refid="profile_8hpp_source"/>
+        <childnode refid="10897" relation="include">
+        </childnode>
+      </node>
+      <node id="10897">
+        <label>cstdmf/profile.hpp</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_cell_profile_group">CellProfileGroup</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="profile_8cpp_1a55a6f70474903cf03ec27369a6488f0a" prot="public" static="no">
+        <name>CELLAPP_PROFILE_INTERNAL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/profile.cpp" line="1" column="9" bodyfile="cellapp/profile.cpp" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="profile_8cpp_1aebbc29db097d8f7ad2bdbacd7690de10" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int g_profileInitGhostSizeLevel</definition>
+        <argsstring></argsstring>
+        <name>g_profileInitGhostSizeLevel</name>
+        <initializer>= 5 * 1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/profile.cpp" line="15" column="1" bodyfile="cellapp/profile.cpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="profile_8cpp_1a4906826837c5ad7d1320fe64a8401d62" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int g_profileInitRealSizeLevel</definition>
+        <argsstring></argsstring>
+        <name>g_profileInitRealSizeLevel</name>
+        <initializer>= 10 * 1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/profile.cpp" line="17" column="1" bodyfile="cellapp/profile.cpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="profile_8cpp_1a9878dfd576cb47c975cb7b86792a77b4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int g_profileOnloadSizeLevel</definition>
+        <argsstring></argsstring>
+        <name>g_profileOnloadSizeLevel</name>
+        <initializer>= 10 * 1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/profile.cpp" line="19" column="1" bodyfile="cellapp/profile.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="profile_8cpp_1a8d421413c4e36f4049bbfd528168ffea" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int g_profileBackupSizeLevel</definition>
+        <argsstring></argsstring>
+        <name>g_profileBackupSizeLevel</name>
+        <initializer>= 10 * 1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/profile.cpp" line="20" column="1" bodyfile="cellapp/profile.cpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="profile_8cpp_1aaac096b7499583d8c183b77b27718dac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BW_BEGIN_NAMESPACE TimeStamp</type>
+        <definition>BW_BEGIN_NAMESPACE TimeStamp g_profileInitGhostTimeLevel</definition>
+        <argsstring>(TimeStamp::fromSeconds(0.1))</argsstring>
+        <name>g_profileInitGhostTimeLevel</name>
+        <param>
+          <type>TimeStamp::fromSeconds(0.1)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/profile.cpp" line="14" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="profile_8cpp_1abd88c793dd340d0181f2b2c8dc9c4a55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TimeStamp</type>
+        <definition>TimeStamp g_profileInitRealTimeLevel</definition>
+        <argsstring>(TimeStamp::fromSeconds(0.1))</argsstring>
+        <name>g_profileInitRealTimeLevel</name>
+        <param>
+          <type>TimeStamp::fromSeconds(0.1)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/profile.cpp" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="profile_8cpp_1ad881718dc6ce3f29d2ead2b00666fd91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TimeStamp</type>
+        <definition>TimeStamp g_profileOnloadTimeLevel</definition>
+        <argsstring>(TimeStamp::fromSeconds(0.1))</argsstring>
+        <name>g_profileOnloadTimeLevel</name>
+        <param>
+          <type>TimeStamp::fromSeconds(0.1)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/profile.cpp" line="18" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="profile_8cpp_1ad26721d9dc94531711c72f6045f8ffe9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ProfileVal</type>
+        <definition>ProfileVal SCRIPT_CALL_PROFILE</definition>
+        <argsstring>(&quot;scriptCall&quot;)</argsstring>
+        <name>SCRIPT_CALL_PROFILE</name>
+        <param>
+          <type>&quot;scriptCall&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/profile.cpp" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="profile_8cpp_1ad5866879ca176dab2a3361e5f2702085" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ProfileVal</type>
+        <definition>ProfileVal ON_MOVE_PROFILE</definition>
+        <argsstring>(&quot;onMove&quot;)</argsstring>
+        <name>ON_MOVE_PROFILE</name>
+        <param>
+          <type>&quot;onMove&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/profile.cpp" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="profile_8cpp_1ac920f48fcebd2f5163d689d52f64c559" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ProfileVal</type>
+        <definition>ProfileVal ON_NAVIGATE_PROFILE</definition>
+        <argsstring>(&quot;onNavigate&quot;)</argsstring>
+        <name>ON_NAVIGATE_PROFILE</name>
+        <param>
+          <type>&quot;onNavigate&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/profile.cpp" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="profile_8cpp_1abfcae434f48fbb7c6814ec7de4b14b27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ProfileVal</type>
+        <definition>ProfileVal SHUFFLE_ENTITY_PROFILE</definition>
+        <argsstring>(&quot;shuffleEntity&quot;)</argsstring>
+        <name>SHUFFLE_ENTITY_PROFILE</name>
+        <param>
+          <type>&quot;shuffleEntity&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/profile.cpp" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="profile_8cpp_1a33a1930a1d631cbba194c9ce02bd4e9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ProfileVal</type>
+        <definition>ProfileVal SHUFFLE_TRIGGERS_PROFILE</definition>
+        <argsstring>(&quot;shuffleTriggers&quot;)</argsstring>
+        <name>SHUFFLE_TRIGGERS_PROFILE</name>
+        <param>
+          <type>&quot;shuffleTriggers&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/profile.cpp" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="profile_8cpp_1acdada0bb97ece08cb4be58ff27b30e92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ProfileVal</type>
+        <definition>ProfileVal SHUFFLE_AOI_TRIGGERS_PROFILE</definition>
+        <argsstring>(&quot;shuffleAoITriggers&quot;)</argsstring>
+        <name>SHUFFLE_AOI_TRIGGERS_PROFILE</name>
+        <param>
+          <type>&quot;shuffleAoITriggers&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/profile.cpp" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="profile_8cpp_1aaa86f6852d284297ef592d3a457aae56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ProfileVal</type>
+        <definition>ProfileVal CLIENT_UPDATE_PROFILE</definition>
+        <argsstring>(&quot;clientUpdate&quot;)</argsstring>
+        <name>CLIENT_UPDATE_PROFILE</name>
+        <param>
+          <type>&quot;clientUpdate&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/profile.cpp" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="profile_8cpp_1a73a2ac3fb1e8bb7ac433dc8059e7689c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ProfileVal</type>
+        <definition>ProfileVal TRANSIENT_LOAD_PROFILE</definition>
+        <argsstring>(&quot;transientLoad&quot;)</argsstring>
+        <name>TRANSIENT_LOAD_PROFILE</name>
+        <param>
+          <type>&quot;transientLoad&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/profile.cpp" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="profile_8cpp_1a9f7d92376a3bb1068fbde92794ccd771" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ProfileVal</type>
+        <definition>ProfileVal DROP_POSITION</definition>
+        <argsstring>(&quot;setAndDropGlobalPositionAndDirection&quot;)</argsstring>
+        <name>DROP_POSITION</name>
+        <param>
+          <type>&quot;setAndDropGlobalPositionAndDirection&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/profile.cpp" line="41" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#define<sp/>CELLAPP_PROFILE_INTERNAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;profile.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/debug.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;server/bwconfig.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">DECLARE_DEBUG_COMPONENT(<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>__kyl__(30/7/2007)<sp/>Special<sp/>profile<sp/>thresholds<sp/>for<sp/>T2CN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">TimeStamp<sp/><sp/><sp/>g_profileInitGhostTimeLevel(<sp/>TimeStamp::fromSeconds(<sp/>0.1<sp/>)<sp/>);<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>100<sp/>ms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g_profileInitGhostSizeLevel<sp/>=<sp/>5<sp/>*<sp/>1024;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">TimeStamp<sp/><sp/><sp/>g_profileInitRealTimeLevel(<sp/>TimeStamp::fromSeconds(<sp/>0.1<sp/>)<sp/>);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>100<sp/>ms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g_profileInitRealSizeLevel<sp/>=<sp/>10<sp/>*<sp/>1024;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">TimeStamp<sp/><sp/><sp/>g_profileOnloadTimeLevel(<sp/>TimeStamp::fromSeconds(<sp/>0.1<sp/>)<sp/>);<sp/><sp/></highlight><highlight class="comment">//<sp/>100<sp/>ms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g_profileOnloadSizeLevel<sp/>=<sp/>10<sp/>*<sp/>1024;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g_profileBackupSizeLevel<sp/>=<sp/>10<sp/>*<sp/>1024;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CODE_INLINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;profile.ipp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Section:<sp/>Profile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">ProfileVal<sp/>SCRIPT_CALL_PROFILE(<sp/></highlight><highlight class="stringliteral">&quot;scriptCall&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">ProfileVal<sp/>ON_MOVE_PROFILE(<sp/></highlight><highlight class="stringliteral">&quot;onMove&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">ProfileVal<sp/>ON_NAVIGATE_PROFILE(<sp/></highlight><highlight class="stringliteral">&quot;onNavigate&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">ProfileVal<sp/>SHUFFLE_ENTITY_PROFILE(<sp/></highlight><highlight class="stringliteral">&quot;shuffleEntity&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">ProfileVal<sp/>SHUFFLE_TRIGGERS_PROFILE(<sp/></highlight><highlight class="stringliteral">&quot;shuffleTriggers&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">ProfileVal<sp/>SHUFFLE_AOI_TRIGGERS_PROFILE(<sp/></highlight><highlight class="stringliteral">&quot;shuffleAoITriggers&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">ProfileVal<sp/>CLIENT_UPDATE_PROFILE(<sp/></highlight><highlight class="stringliteral">&quot;clientUpdate&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">ProfileVal<sp/>TRANSIENT_LOAD_PROFILE(<sp/></highlight><highlight class="stringliteral">&quot;transientLoad&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">ProfileVal<sp/>DROP_POSITION(<sp/></highlight><highlight class="stringliteral">&quot;setAndDropGlobalPositionAndDirection&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_cell_profile_group" kindref="compound">CellProfileGroup</ref></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init()</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>make<sp/>all<sp/>our<sp/>profiles<sp/>get<sp/>reset<sp/>when<sp/>the<sp/>&apos;running<sp/>time&apos;<sp/>one<sp/>does</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>ProfileGroup<sp/>&amp;<sp/>group<sp/>=<sp/>ProfileGroup::defaultGroup();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>ProfileGroupResetter::instance().nominateProfileVal(<sp/>group.pRunningTime()<sp/>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>ProfileGroupResetter::instance().addProfileGroup(<sp/>&amp;group<sp/>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>__kyl__(30/7/2007)<sp/>Init<sp/>special<sp/>T2CN<sp/>profile<sp/>thresholds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>initGhostTime<sp/>=<sp/>g_profileInitGhostTimeLevel.inSeconds();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>BWConfig::update(<sp/></highlight><highlight class="stringliteral">&quot;cellApp/profiles/initGhost/timeWarningLevel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>initGhostTime<sp/>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>g_profileInitGhostTimeLevel.setInSeconds(<sp/>initGhostTime<sp/>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>BWConfig::update(<sp/></highlight><highlight class="stringliteral">&quot;cellApp/profiles/initGhost/sizeWarningLevel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g_profileInitGhostSizeLevel<sp/>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>initRealTime<sp/>=<sp/>g_profileInitRealTimeLevel.inSeconds();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>BWConfig::update(<sp/></highlight><highlight class="stringliteral">&quot;cellApp/profiles/initReal/timeWarningLevel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>initRealTime<sp/>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>g_profileInitRealTimeLevel.setInSeconds(<sp/>initRealTime<sp/>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>BWConfig::update(<sp/></highlight><highlight class="stringliteral">&quot;cellApp/profiles/initReal/sizeWarningLevel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g_profileInitRealSizeLevel<sp/>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>onloadTime<sp/>=<sp/>g_profileOnloadTimeLevel.inSeconds();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>BWConfig::update(<sp/></highlight><highlight class="stringliteral">&quot;cellApp/profiles/onload/timeWarningLevel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>onloadTime<sp/>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>g_profileOnloadTimeLevel.setInSeconds(<sp/>onloadTime<sp/>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>BWConfig::update(<sp/></highlight><highlight class="stringliteral">&quot;cellApp/profiles/onload/sizeWarningLevel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g_profileOnloadSizeLevel<sp/>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>BWConfig::update(<sp/></highlight><highlight class="stringliteral">&quot;cellApp/profiles/backup/sizeWarningLevel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g_profileBackupSizeLevel<sp/>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_WATCH(<sp/></highlight><highlight class="stringliteral">&quot;profilesConfig/initGhost/timeWarningLevel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g_profileInitGhostTimeLevel<sp/>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_WATCH(<sp/></highlight><highlight class="stringliteral">&quot;profilesConfig/initGhost/sizeWarningLevel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g_profileInitGhostSizeLevel<sp/>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_WATCH(<sp/></highlight><highlight class="stringliteral">&quot;profilesConfig/initReal/timeWarningLevel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g_profileInitRealTimeLevel<sp/>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_WATCH(<sp/></highlight><highlight class="stringliteral">&quot;profilesConfig/initReal/sizeWarningLevel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g_profileInitRealSizeLevel<sp/>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_WATCH(<sp/></highlight><highlight class="stringliteral">&quot;profilesConfig/onload/timeWarningLevel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g_profileOnloadTimeLevel<sp/>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_WATCH(<sp/></highlight><highlight class="stringliteral">&quot;profilesConfig/onload/sizeWarningLevel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g_profileOnloadSizeLevel<sp/>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_WATCH(<sp/></highlight><highlight class="stringliteral">&quot;profilesConfig/backup/sizeWarningLevel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g_profileBackupSizeLevel<sp/>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">//<sp/>cellapp.cpp</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="cellapp/profile.cpp"/>
+  </compounddef>
+</doxygen>

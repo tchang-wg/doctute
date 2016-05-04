@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="offloaded__backups_8hpp" kind="file" language="C++">
+    <compoundname>offloaded_backups.hpp</compoundname>
+    <includes refid="backed__up__base__app_8hpp" local="yes">backed_up_base_app.hpp</includes>
+    <includes local="yes">network/basictypes.hpp</includes>
+    <includes local="yes">server/backup_hash_chain.hpp</includes>
+    <includes local="yes">cstdmf/bw_string.hpp</includes>
+    <includes local="yes">cstdmf/bw_map.hpp</includes>
+    <includedby refid="backed__up__base__app_8cpp" local="yes">baseapp/backed_up_base_app.cpp</includedby>
+    <includedby refid="baseapp_8cpp" local="yes">baseapp/baseapp.cpp</includedby>
+    <includedby refid="offloaded__backups_8cpp" local="yes">baseapp/offloaded_backups.cpp</includedby>
+    <incdepgraph>
+      <node id="4360">
+        <label>cstdmf/stdmf.hpp</label>
+      </node>
+      <node id="4358">
+        <label>baseapp/offloaded_backups.hpp</label>
+        <link refid="offloaded_backups.hpp"/>
+        <childnode refid="4359" relation="include">
+        </childnode>
+        <childnode refid="4364" relation="include">
+        </childnode>
+        <childnode refid="4361" relation="include">
+        </childnode>
+        <childnode refid="4365" relation="include">
+        </childnode>
+        <childnode refid="4362" relation="include">
+        </childnode>
+      </node>
+      <node id="4361">
+        <label>server/backup_hash_chain.hpp</label>
+      </node>
+      <node id="4365">
+        <label>cstdmf/bw_string.hpp</label>
+      </node>
+      <node id="4362">
+        <label>cstdmf/bw_map.hpp</label>
+      </node>
+      <node id="4363">
+        <label>cstdmf/watcher.hpp</label>
+      </node>
+      <node id="4359">
+        <label>backed_up_base_app.hpp</label>
+        <link refid="backed__up__base__app_8hpp_source"/>
+        <childnode refid="4360" relation="include">
+        </childnode>
+        <childnode refid="4361" relation="include">
+        </childnode>
+        <childnode refid="4362" relation="include">
+        </childnode>
+        <childnode refid="4363" relation="include">
+        </childnode>
+      </node>
+      <node id="4364">
+        <label>network/basictypes.hpp</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_offloaded_backups" prot="public">OffloadedBackups</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>OFFLOADED_BACKUPS_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OFFLOADED_BACKUPS_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;backed_up_base_app.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/basictypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;server/backup_hash_chain.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_string.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_map.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_offloaded_backups" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_offloaded_backups" kindref="compound">OffloadedBackups</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_offloaded_backups_1ae5e9bbb9e4e1d29086092a4bf4ba5d06" kindref="member">OffloadedBackups</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_offloaded_backups_1a37e0130812cf2117998bdc46033a9bf2" kindref="member">wasOffloaded</ref>(<sp/>EntityID<sp/>entityID<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_offloaded_backups_1a9b41c5388de6ee0ae45037a133c6d618" kindref="member">backUpEntity</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>srcAddr,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BinaryIStream<sp/>&amp;<sp/>data<sp/>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_offloaded_backups_1ae70130586adca93d9ede61079737d5e5" kindref="member">handleBaseAppDeath</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>deadAddr,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BackupHashChain<sp/>&amp;<sp/>backedUpHashChain<sp/>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_offloaded_backups_1a325c93e5e4c23d65b2e1e0041082c9d2" kindref="member">stopBackingUpEntity</ref>(<sp/>EntityID<sp/>entityID<sp/>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isEmpty()<sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>apps_.empty();<sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BW::map&lt;<sp/>Mercury::Address,<sp/>BackedUpEntities<sp/>&gt;<sp/>Container;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>Container<sp/>apps_;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>OFFLOADED_BACKUPS_HPP</highlight></codeline>
+    </programlisting>
+    <location file="baseapp/offloaded_backups.hpp"/>
+  </compounddef>
+</doxygen>

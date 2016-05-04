@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_without_secondary_d_b" kind="class" language="C++" prot="public">
+    <compoundname>BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</compoundname>
+    <basecompoundref refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler" prot="public" virt="non-virtual">BW_BEGIN_NAMESPACE::ControlledShutDownHandler</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_without_secondary_d_b_1ad213f6c983a9d59732ed79942f1f0fbd" prot="private" static="no" mutable="no">
+        <type>BW::vector&lt; <ref refid="class_smart_pointer" kindref="compound">BasePtr</ref> &gt;</type>
+        <definition>BW::vector&lt; BasePtr &gt; BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB::bases_</definition>
+        <argsstring></argsstring>
+        <name>bases_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/controlled_shutdown_handler.cpp" line="211" column="1" bodyfile="baseapp/controlled_shutdown_handler.cpp" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_without_secondary_d_b_1a5af22a702746aa538c8b06bd3f330951" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB::onWriteToDBComplete</definition>
+        <argsstring>(WriteToDBRequest::IHandler::CompletionStatus status)</argsstring>
+        <name>onWriteToDBComplete</name>
+        <reimplements refid="class_write_to_d_b_request_1_1_i_handler_1a4eb6fe869cf90c28f097b2dd850bba14">onWriteToDBComplete</reimplements>
+        <param>
+          <type>WriteToDBRequest::IHandler::CompletionStatus</type>
+          <declname>completionStatus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called when a <ref refid="class_write_to_d_b_request" kindref="compound">WriteToDBRequest</ref> instance has completed its operation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>completionStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of the CompletionStatus values, indicating the success of the operation, or otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/controlled_shutdown_handler.cpp" line="206" column="1" bodyfile="baseapp/controlled_shutdown_handler.cpp" bodystart="270" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_without_secondary_d_b_1aae75111a26b628fe93b997121dadae07" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB::onInit</definition>
+        <argsstring>(const Bases &amp;bases)</argsstring>
+        <name>onInit</name>
+        <reimplements refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1aa46c4837482148b62f8ed27ec5e4fd1b">onInit</reimplements>
+        <param>
+          <type>const <ref refid="class_bases" kindref="compound">Bases</ref> &amp;</type>
+          <declname>bases</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/controlled_shutdown_handler.cpp" line="208" column="1" bodyfile="baseapp/controlled_shutdown_handler.cpp" bodystart="218" bodyend="264"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This handler is used when there is not a secondary database. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2702">
+        <label>WriteToDBRequest::IHandler</label>
+        <link refid="class_write_to_d_b_request_1_1_i_handler"/>
+      </node>
+      <node id="2701">
+        <label>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</label>
+        <link refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler"/>
+        <childnode refid="2702" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2700">
+        <label>BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</label>
+        <link refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_without_secondary_d_b"/>
+        <childnode refid="2701" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2705">
+        <label>WriteToDBRequest::IHandler</label>
+        <link refid="class_write_to_d_b_request_1_1_i_handler"/>
+      </node>
+      <node id="2704">
+        <label>BW_BEGIN_NAMESPACE::ControlledShutDownHandler</label>
+        <link refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler"/>
+        <childnode refid="2705" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2703">
+        <label>BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</label>
+        <link refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_without_secondary_d_b"/>
+        <childnode refid="2704" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/controlled_shutdown_handler.cpp" line="204" column="1" bodyfile="baseapp/controlled_shutdown_handler.cpp" bodystart="203" bodyend="212"/>
+    <listofallmembers>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_without_secondary_d_b_1ad213f6c983a9d59732ed79942f1f0fbd" prot="private" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</scope><name>bases_</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1ae41c8fdc3f652599d3dbfe34426d189b" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</scope><name>checkFinished</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28aaf37607473e6e6b0c9b7c4b2aafc2aa1e" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</scope><name>COMPLETED_FAILED</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28aad619cc9e084ce160f1ff7568acd158d9" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</scope><name>COMPLETED_SUCCESS</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28a" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</scope><name>CompletionStatus</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1a5756262a52e74126d9a90ffff334bd05" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</scope><name>ControlledShutDownHandler</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1a132819726734555beb916b435b022e3a" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</scope><name>init</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1acd6d48f86edb1dd354ba73ef0f2ccdd2" prot="protected" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</scope><name>numOutstanding_</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_without_secondary_d_b_1aae75111a26b628fe93b997121dadae07" prot="protected" virt="virtual"><scope>BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</scope><name>onInit</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_shut_down_handler_without_secondary_d_b_1a5af22a702746aa538c8b06bd3f330951" prot="protected" virt="virtual"><scope>BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</scope><name>onWriteToDBComplete</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28aab1fa5026495737e5415a45c1cd9fea0b" prot="public" virt="non-virtual"><scope>BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</scope><name>SHUTTING_DOWN</name></member>
+      <member refid="class_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e_1_1_controlled_shut_down_handler_1acf4dc62a37266301235b765f4fcc66ba" prot="public" virt="virtual"><scope>BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</scope><name>~ControlledShutDownHandler</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1a8734d12827e0ed82bc842d7a64c2a7ba" prot="protected" virt="virtual"><scope>BW_BEGIN_NAMESPACE::ShutDownHandlerWithoutSecondaryDB</scope><name>~IHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

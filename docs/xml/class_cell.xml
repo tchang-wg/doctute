@@ -1,0 +1,1220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_cell" kind="class" language="C++" prot="public">
+    <compoundname>Cell</compoundname>
+    <includes refid="cell_8hpp" local="no">cell.hpp</includes>
+    <innerclass refid="class_cell_1_1_entities" prot="public">Cell::Entities</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_cell_1ad566fa269a2289aa36efa09a001e3682" prot="private" static="no">
+        <name>StoppingState</name>
+        <enumvalue id="class_cell_1ad566fa269a2289aa36efa09a001e3682a2d588d1dba29ff3d7f73a5f0f0b9e932" prot="private">
+          <name>STOPPING_STATE_NOT_STOPPING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_cell_1ad566fa269a2289aa36efa09a001e3682a4f898903cd6c6779b2106dc16fbc8f9c" prot="private">
+          <name>STOPPING_STATE_STOPPING_SHOULD_USE_CALLBACKS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_cell_1ad566fa269a2289aa36efa09a001e3682a80ce2ddc1b6af188ef4d624c2ebe1c8b" prot="private">
+          <name>STOPPING_STATE_STOPPING_SHOULD_NOT_USE_CALLBACKS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="206" column="1" bodyfile="cellapp/cell.hpp" bodystart="206" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_cell_1a31749030f6bcd6a28851313eafa0af5c" prot="private" static="no">
+        <type>BW::multiset&lt; Mercury::Address &gt;</type>
+        <definition>typedef BW::multiset&lt; Mercury::Address &gt; Cell::RemovalAcks</definition>
+        <argsstring></argsstring>
+        <name>RemovalAcks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="200" column="1" bodyfile="cellapp/cell.hpp" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_cell_1a4eb4c703ed6af233bf9ace825196b49d" prot="public" static="no" mutable="no">
+        <type>const ScriptDict &amp;</type>
+        <definition>const ScriptDict&amp; Cell::properties</definition>
+        <argsstring></argsstring>
+        <name>properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="104" column="1" bodyfile="cellapp/cell.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_1a9240e6bd570b82ea56d2d3bd683853b3" prot="public" static="no" mutable="no">
+        <type>const ScriptDict bool</type>
+        <definition>const ScriptDict bool Cell::isRestore</definition>
+        <argsstring></argsstring>
+        <name>isRestore</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="104" column="1" bodyfile="cellapp/cell.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_1afa382d6a99692ee31460a5af57073872" prot="public" static="no" mutable="no">
+        <type>const ScriptDict bool Mercury::ChannelVersion</type>
+        <definition>const ScriptDict bool Mercury::ChannelVersion Cell::channelVersion</definition>
+        <argsstring></argsstring>
+        <name>channelVersion</name>
+        <initializer>= Mercury::SEQ_NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="105" column="1" bodyfile="cellapp/cell.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_1a041b7a4e93e0cbe302bed1b0693bc7af" prot="public" static="no" mutable="no">
+        <type>const ScriptDict bool Mercury::ChannelVersion <ref refid="class_smart_pointer" kindref="compound">EntityPtr</ref></type>
+        <definition>const ScriptDict bool Mercury::ChannelVersion EntityPtr Cell::pNearbyEntity</definition>
+        <argsstring></argsstring>
+        <name>pNearbyEntity</name>
+        <initializer>= NULL )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="106" column="1" bodyfile="cellapp/cell.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_cell_1a0ab253a9fd8b7fc2b0e535b7d42dff42" prot="private" static="no" mutable="no">
+        <type><ref refid="class_cell_1_1_entities" kindref="compound">Entities</ref></type>
+        <definition>Entities Cell::realEntities_</definition>
+        <argsstring></argsstring>
+        <name>realEntities_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="182" column="1" bodyfile="cellapp/cell.hpp" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_1ad7b9e4357e8728cba1415f5f989e58c1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Cell::shouldOffload_</definition>
+        <argsstring></argsstring>
+        <name>shouldOffload_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="184" column="1" bodyfile="cellapp/cell.hpp" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_1ab3c0a956d3a2e7e78c7469731c585ba9" prot="private" static="no" mutable="yes">
+        <type>float</type>
+        <definition>float Cell::lastERTFactor_</definition>
+        <argsstring></argsstring>
+        <name>lastERTFactor_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="186" column="1" bodyfile="cellapp/cell.hpp" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_1a1e18ae12a6b5a977f025ac38385d7fb3" prot="private" static="no" mutable="yes">
+        <type>uint64</type>
+        <definition>uint64 Cell::lastERTCalcTime_</definition>
+        <argsstring></argsstring>
+        <name>lastERTCalcTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="187" column="1" bodyfile="cellapp/cell.hpp" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_1af985183eff6bc3c5862788b9371881d2" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Cell::initialTimeOfDay_</definition>
+        <argsstring></argsstring>
+        <name>initialTimeOfDay_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="190" column="1" bodyfile="cellapp/cell.hpp" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_1a2c208d3d233ffeef0750a064a256de89" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Cell::gameSecondsPerSecond_</definition>
+        <argsstring></argsstring>
+        <name>gameSecondsPerSecond_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="191" column="1" bodyfile="cellapp/cell.hpp" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_1a240747178d756f7bb3f1ee2580725cf2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Cell::isRetiring_</definition>
+        <argsstring></argsstring>
+        <name>isRetiring_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="192" column="1" bodyfile="cellapp/cell.hpp" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_1a05ad62403e5bafc3bdd3a90f9182da66" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Cell::isRemoved_</definition>
+        <argsstring></argsstring>
+        <name>isRemoved_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="193" column="1" bodyfile="cellapp/cell.hpp" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_1a0b7a2d3a58b87158f81b4d915d77e9da" prot="private" static="no" mutable="no">
+        <type><ref refid="class_space" kindref="compound">Space</ref> &amp;</type>
+        <definition>Space&amp; Cell::space_</definition>
+        <argsstring></argsstring>
+        <name>space_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="195" column="1" bodyfile="cellapp/cell.hpp" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_1a24e6687d503f8dfbca86f785798d09b2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Cell::backupIndex_</definition>
+        <argsstring></argsstring>
+        <name>backupIndex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="197" column="1" bodyfile="cellapp/cell.hpp" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_1abdda8af92ff9e3f38fd1f9b5a3f0d398" prot="private" static="no" mutable="no">
+        <type>ConstCellInfoPtr</type>
+        <definition>ConstCellInfoPtr Cell::pCellInfo_</definition>
+        <argsstring></argsstring>
+        <name>pCellInfo_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="198" column="1" bodyfile="cellapp/cell.hpp" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_1a07d5edd4d5fb89bfded65ccdecdddab6" prot="private" static="no" mutable="no">
+        <type>RemovalAcks</type>
+        <definition>RemovalAcks Cell::pendingAcks_</definition>
+        <argsstring></argsstring>
+        <name>pendingAcks_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="201" column="1" bodyfile="cellapp/cell.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_1add0b1c24e51a167a618b43ad3c42d9bb" prot="private" static="no" mutable="no">
+        <type>RemovalAcks</type>
+        <definition>RemovalAcks Cell::receivedAcks_</definition>
+        <argsstring></argsstring>
+        <name>receivedAcks_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="202" column="1" bodyfile="cellapp/cell.hpp" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_1a2a144086538e8a216e1d7656373d590c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_replay_data_collector" kindref="compound">ReplayDataCollector</ref> *</type>
+        <definition>ReplayDataCollector* Cell::pReplayData_</definition>
+        <argsstring></argsstring>
+        <name>pReplayData_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="204" column="1" bodyfile="cellapp/cell.hpp" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_1ab58f837e2f7d087d75a81be7ad9390af" prot="private" static="no" mutable="no">
+        <type>StoppingState</type>
+        <definition>StoppingState Cell::stoppingState_</definition>
+        <argsstring></argsstring>
+        <name>stoppingState_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="212" column="1" bodyfile="cellapp/cell.hpp" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_1a634b6cb4fb406a67b1819dc76212b355" prot="private" static="no" mutable="no">
+        <type><ref refid="class_cell_profiler" kindref="compound">CellProfiler</ref></type>
+        <definition>CellProfiler Cell::profiler_</definition>
+        <argsstring></argsstring>
+        <name>profiler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="217" column="1" bodyfile="cellapp/cell.hpp" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_cell_1a5031f43b618425c08b81b199b6065374" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class CellViewerConnection</definition>
+        <argsstring></argsstring>
+        <name>CellViewerConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="214" column="1" bodyfile="cellapp/cell.hpp" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cell_1a1c3d0b6cb80efb3f95f51a0af6421609" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Cell::Cell</definition>
+        <argsstring>(Space &amp;space, const CellInfo &amp;cellInfo)</argsstring>
+        <name>Cell</name>
+        <param>
+          <type><ref refid="class_space" kindref="compound">Space</ref> &amp;</type>
+          <declname>space</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_cell_info" kindref="compound">CellInfo</ref> &amp;</type>
+          <declname>cellInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The constructor for <ref refid="class_cell" kindref="compound">Cell</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>space</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The space that this cell is in. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cellInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The information associated with this cell. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="86" column="1" bodyfile="cellapp/cell.cpp" bodystart="73" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a9fa559f7a28e2b4336c6879ca09304d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Cell::~Cell</definition>
+        <argsstring>()</argsstring>
+        <name>~Cell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The destructor for <ref refid="class_cell" kindref="compound">Cell</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="88" column="1" bodyfile="cellapp/cell.cpp" bodystart="99" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a4a55550a06da4b7b0665bf1ec48e9fee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::shutDown</definition>
+        <argsstring>()</argsstring>
+        <name>shutDown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="90" column="1" bodyfile="cellapp/cell.cpp" bodystart="128" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a480070118d37910e3634c6c501dccb20" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_cell_info" kindref="compound">CellInfo</ref> &amp;</type>
+        <definition>const CellInfo&amp; Cell::cellInfo</definition>
+        <argsstring>()</argsstring>
+        <name>cellInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="93" column="1" bodyfile="cellapp/cell.hpp" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a049390b685a0dc8e44bdee98df7fdd2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::offloadEntity</definition>
+        <argsstring>(Entity *pEntity, CellAppChannel *pChannel, bool isTeleport=false)</argsstring>
+        <name>offloadEntity</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> *</type>
+          <declname>pEntity</declname>
+        </param>
+        <param>
+          <type><ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref> *</type>
+          <declname>pChannel</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isTeleport</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method moves a real entity from this cell to an adjacent cell.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pEntity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity to offload. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pChannel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel to send on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isTeleport</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Indicates whether this is a teleport </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="96" column="1" bodyfile="cellapp/cell.cpp" bodystart="184" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a0ab3bd08b01fed5cc5cdc6d224259297" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::addRealEntity</definition>
+        <argsstring>(Entity *pEntity, bool shouldSendNow)</argsstring>
+        <name>addRealEntity</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> *</type>
+          <declname>pEntity</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>shouldSendNow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds the input entity to the cell&apos;s internal list of real entities.</para><para>It is called from <ref refid="class_cell_1ac920d6611d9751f87e4fc213e2ed4d97" kindref="member">Cell::createEntity</ref> and by the <ref refid="class_entity" kindref="compound">Entity</ref> itself when it is onloaded. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="99" column="1" bodyfile="cellapp/cell.cpp" bodystart="242" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a4c65c33343dff0c452d34c4d00f9cee9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::entityDestroyed</definition>
+        <argsstring>(Entity *pEntity)</argsstring>
+        <name>entityDestroyed</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> *</type>
+          <declname>pEntity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method does everything that the cell has to do when a real entity is destroyed. Basically, it just removes it from the map of real entities.</para><para>It assumes that the entity&apos;s internal &apos;die&apos; method has already been called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="101" column="1" bodyfile="cellapp/cell.cpp" bodystart="264" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a5664885a6750bc5ad3fdcff17a18191c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Cell::BWAPI</definition>
+        <argsstring>(CELLAPP_API) EntityPtr createEntityInternal(BinaryIStream &amp;data</argsstring>
+        <name>BWAPI</name>
+        <param>
+          <type>CELLAPP_API</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a8fd0386a775cd24e26dea2d9bbd087c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::backup</definition>
+        <argsstring>(int index, int period)</argsstring>
+        <name>backup</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called to write backup data for real entities on this cell. The cell should back up part of itself each time this is called.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A value in the range [0, period - 1] that increments with each call. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Indicates what the index can go up to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="108" column="1" bodyfile="cellapp/cell.cpp" bodystart="457" bodyend="483"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a6dc9d9f608c287f823c371a658e2b0e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Cell::checkOffloadsAndGhosts</definition>
+        <argsstring>()</argsstring>
+        <name>checkOffloadsAndGhosts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>We want to periodically update the <ref refid="class_cell_apps" kindref="compound">CellApps</ref> that we have created ghosts for our reals on, and also offload them there if appropriate.</para><para><simplesect kind="return"><para>True if this cell should be killed, otherwise false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="110" column="1" bodyfile="cellapp/cell.cpp" bodystart="164" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1aed98c01b882671c6a971750832d65598" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::checkChunkLoading</definition>
+        <argsstring>()</argsstring>
+        <name>checkChunkLoading</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="111" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1aca5e5be325ed50f7ce7c5f559ba2c264" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::onSpaceGone</definition>
+        <argsstring>()</argsstring>
+        <name>onSpaceGone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called when this space wants to be destroyed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="113" column="1" bodyfile="cellapp/cell.cpp" bodystart="844" bodyend="880"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a12f7727284eb7ec04b8be59c4dabdd69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::debugDump</definition>
+        <argsstring>()</argsstring>
+        <name>debugDump</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="115" column="1" bodyfile="cellapp/cell.cpp" bodystart="887" bodyend="901"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1ac920d6611d9751f87e4fc213e2ed4d97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::createEntity</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data, EntityPtr pNearbyEntity)</argsstring>
+        <name>createEntity</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">EntityPtr</ref></type>
+          <declname>pNearbyEntity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method creates a new real entity on this cell according to the parameters in &apos;data&apos;.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>srcAddr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address from which this request originated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mercury header </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pNearbyEntity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a nearby entity to use during entity creation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>createEntityInternal </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="118" column="1" bodyfile="cellapp/cell.cpp" bodystart="502" bodyend="565"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a069f2c38545837db77c164d04bcbeb33" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::createEntity</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>createEntity</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="123" column="1" bodyfile="cellapp/cell.hpp" bodystart="123" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1aeb3a5d22c5b62e3e3370d2d460ef6513" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SpaceID</type>
+        <definition>SpaceID Cell::spaceID</definition>
+        <argsstring>() const </argsstring>
+        <name>spaceID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the id of this cell. This id is unique between cells. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="133" column="1" bodyfile="cellapp/cell.cpp" bodystart="835" bodyend="838"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1aba9345454e4381f81efc9c2a2a6dde40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_space" kindref="compound">Space</ref> &amp;</type>
+        <definition>Space&amp; Cell::space</definition>
+        <argsstring>()</argsstring>
+        <name>space</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="134" column="1" bodyfile="cellapp/cell.hpp" bodystart="134" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1aac440968e96613a9b3faa381de293296" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_space" kindref="compound">Space</ref> &amp;</type>
+        <definition>const Space&amp; Cell::space</definition>
+        <argsstring>() const </argsstring>
+        <name>space</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="136" column="1" bodyfile="cellapp/cell.hpp" bodystart="136" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a382e84edee2b5892519543bb1bbd637d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const BW::Rect &amp;</type>
+        <definition>const BW::Rect&amp; Cell::rect</definition>
+        <argsstring>() const </argsstring>
+        <name>rect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="138" column="1" bodyfile="cellapp/cell.hpp" bodystart="138" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a8169933d0df347c7f71b21b3248c759e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>INLINE int Cell::numRealEntities</definition>
+        <argsstring>() const </argsstring>
+        <name>numRealEntities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the number of real entities on this cell. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="140" column="1" bodyfile="cellapp/cell.ipp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1aea25367fa39d3fb8c93a8995885dcf55" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::sendEntityPositions</definition>
+        <argsstring>(Mercury::Bundle &amp;bundle) const </argsstring>
+        <name>sendEntityPositions</name>
+        <param>
+          <type>Mercury::Bundle &amp;</type>
+          <declname>bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends this entity positions to the cell app manager. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="142" column="1" bodyfile="cellapp/cell.cpp" bodystart="785" bodyend="829"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a8e84d2e405f1a6477014b46b1bb23bef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_cell_1_1_entities" kindref="compound">Entities</ref> &amp;</type>
+        <definition>INLINE Cell::Entities &amp; Cell::realEntities</definition>
+        <argsstring>()</argsstring>
+        <name>realEntities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns a map of the real entities on this cell. The map is keyed by their IDs. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="144" column="1" bodyfile="cellapp/cell.ipp" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1ab0b30bda905ccbc50374853bd92ba540" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Cell::shouldOffload</definition>
+        <argsstring>() const </argsstring>
+        <name>shouldOffload</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns true if this cell is allowed to offload and the app is permitting offloads. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="147" column="1" bodyfile="cellapp/cell.cpp" bodystart="618" bodyend="621"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a11f02d7991321f04c8652b61c8cac061" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::shouldOffload</definition>
+        <argsstring>(bool shouldOffload)</argsstring>
+        <name>shouldOffload</name>
+        <param>
+          <type>bool</type>
+          <declname>shouldOffload</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method enables or disables offloading of entities. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="148" column="1" bodyfile="cellapp/cell.cpp" bodystart="627" bodyend="630"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a0e8a8b07238d4e4c1f69d9cc85db39c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::shouldOffload</definition>
+        <argsstring>(BinaryIStream &amp;data)</argsstring>
+        <name>shouldOffload</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method enables or disables offloading of entities. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="149" column="1" bodyfile="cellapp/cell.cpp" bodystart="636" bodyend="639"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a86c62bf84cc5c071aaf06dc98345d26c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::retireCell</definition>
+        <argsstring>(BinaryIStream &amp;data)</argsstring>
+        <name>retireCell</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method tells us to remove this cell from the application. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="151" column="1" bodyfile="cellapp/cell.cpp" bodystart="645" bodyend="659"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a8ea0bdaa7988f27550be4351f975ab80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::removeCell</definition>
+        <argsstring>(BinaryIStream &amp;data)</argsstring>
+        <name>removeCell</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called by the <ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> to inform us that this cell should be removed. It also sends a list of <ref refid="class_cell_app" kindref="compound">CellApp</ref> addresses. This cell should not be deleted until all these <ref refid="class_cell_apps" kindref="compound">CellApps</ref> have confirmed that no more entities are on their way. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="152" column="1" bodyfile="cellapp/cell.cpp" bodystart="668" bodyend="692"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a901700a2a2144dbea336b52a9236e352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::notifyOfCellRemoval</definition>
+        <argsstring>(BinaryIStream &amp;data)</argsstring>
+        <name>notifyOfCellRemoval</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles a message from the <ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> telling us that a neighbouring cell has been removed. This <ref refid="class_cell_app" kindref="compound">CellApp</ref> send a message to the cell being removed to inform it that no more entities will be created on it from this app and it is safe to remove. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="154" column="1" bodyfile="cellapp/cell.cpp" bodystart="701" bodyend="714"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a0d765b777b0c2fa7cd1cffd1a2755454" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::ackCellRemoval</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>ackCellRemoval</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>const Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is call by neighbouring <ref refid="class_cell_apps" kindref="compound">CellApps</ref> to inform us that it will no longer create any entities in this cell and so it is safe to remove. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="156" column="1" bodyfile="cellapp/cell.cpp" bodystart="721" bodyend="746"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a6f6ccf566b8978b45912e181ccd023ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Cell::reuse</definition>
+        <argsstring>()</argsstring>
+        <name>reuse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method causes this cell to come back from the dead. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="160" column="1" bodyfile="cellapp/cell.cpp" bodystart="752" bodyend="762"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a2dc642f543030f46a485e0528d3dace2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::handleCellAppDeath</definition>
+        <argsstring>(const Mercury::Address &amp;addr)</argsstring>
+        <name>handleCellAppDeath</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is used to notify this cell that a cell application has died unexpectedly. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="162" column="1" bodyfile="cellapp/cell.cpp" bodystart="769" bodyend="775"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1acfe5c99b843ea3c13cb3725ed18c071a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::writeBounds</definition>
+        <argsstring>(BinaryOStream &amp;stream) const </argsstring>
+        <name>writeBounds</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method streams on various boundaries to inform the <ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> for the purposes of load balancing. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="164" column="1" bodyfile="cellapp/cell.cpp" bodystart="997" bodyend="1003"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a9e68c766c2a07fa6c93e429e899f0f1e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Cell::isRemoved</definition>
+        <argsstring>() const </argsstring>
+        <name>isRemoved</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="166" column="1" bodyfile="cellapp/cell.hpp" bodystart="166" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a9ca71d9e4cc4b67625578b1a70901ea7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_replay_data_collector" kindref="compound">ReplayDataCollector</ref> *</type>
+        <definition>ReplayDataCollector* Cell::pReplayData</definition>
+        <argsstring>()</argsstring>
+        <name>pReplayData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="168" column="1" bodyfile="cellapp/cell.hpp" bodystart="168" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a937d6bff38202441926ba22106ea0b4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Cell::startRecording</definition>
+        <argsstring>(const SpaceEntryID &amp;entryID, const BW::string &amp;name, bool shouldRecordAoIEvents, bool isInitial=true)</argsstring>
+        <name>startRecording</name>
+        <param>
+          <type>const SpaceEntryID &amp;</type>
+          <declname>entryID</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>shouldRecordAoIEvents</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isInitial</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method starts the collection of replay data for this space.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entryID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The space data entry ID used to register the recording space data key. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name to give to the recorder to use to identify this replay data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shouldRecordAoIEvents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, then AoI events will be recorded, otherwise they will not be. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isInitial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, indicates that this is the initial script call from the originating <ref refid="class_cell_app" kindref="compound">CellApp</ref>. Otherwise, this is being called in response from space data change.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="169" column="1" bodyfile="cellapp/cell.cpp" bodystart="1022" bodyend="1097"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a6a38f9e8ce9e27464230a361c903bc8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::tickRecording</definition>
+        <argsstring>()</argsstring>
+        <name>tickRecording</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method collects this tick&apos;s worth of replay data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="171" column="1" bodyfile="cellapp/cell.cpp" bodystart="1103" bodyend="1148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a8999b06c6ac67808acd47242e0645e3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::stopRecording</definition>
+        <argsstring>(bool isInitial)</argsstring>
+        <name>stopRecording</name>
+        <param>
+          <type>bool</type>
+          <declname>isInitial</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method stops the collection of replay data for this space. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="172" column="1" bodyfile="cellapp/cell.cpp" bodystart="1154" bodyend="1165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1ab12d42c5a2e22be8a514b54d00be933b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_cell_profiler" kindref="compound">CellProfiler</ref> &amp;</type>
+        <definition>const CellProfiler&amp; Cell::profiler</definition>
+        <argsstring>() const </argsstring>
+        <name>profiler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="175" column="1" bodyfile="cellapp/cell.hpp" bodystart="175" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a61ef9001cbcde7112944091d43f7bbea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::tickProfilers</definition>
+        <argsstring>(uint64 tickDtInStamps, float smoothingFactor)</argsstring>
+        <name>tickProfilers</name>
+        <param>
+          <type>uint64</type>
+          <declname>tickDtInStamps</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>smoothingFactor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method ticks profilers on the real entities on a <ref refid="class_cell" kindref="compound">Cell</ref> instance. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="176" column="1" bodyfile="cellapp/cell.cpp" bodystart="1170" bodyend="1186"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_cell_1a67eae179c370213744a9c17028f8d00b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_smart_pointer" kindref="compound">WatcherPtr</ref></type>
+        <definition>WatcherPtr Cell::pWatcher</definition>
+        <argsstring>()</argsstring>
+        <name>pWatcher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Static method to get a generic watcher for the class <ref refid="class_cell" kindref="compound">Cell</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="131" column="1" bodyfile="cellapp/cell.cpp" bodystart="575" bodyend="607"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_cell_1ac51cdfebb1fda2a04f5e35c7323910fe" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Cell::isReadyForDeletion</definition>
+        <argsstring>() const </argsstring>
+        <name>isReadyForDeletion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns whether this cell is ready to be deleted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell.hpp" line="179" column="1" bodyfile="cellapp/cell.cpp" bodystart="140" bodyend="150"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to represent a cell. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="462">
+        <label>Cell</label>
+        <link refid="class_cell"/>
+        <childnode refid="463" relation="usage">
+          <edgelabel>pNearbyEntity</edgelabel>
+        </childnode>
+      </node>
+      <node id="463">
+        <label>SmartPointer&lt; TYPE &gt;</label>
+        <link refid="class_smart_pointer"/>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/cell.hpp" line="47" column="1" bodyfile="cellapp/cell.hpp" bodystart="46" bodyend="219"/>
+    <listofallmembers>
+      <member refid="class_cell_1a0d765b777b0c2fa7cd1cffd1a2755454" prot="public" virt="non-virtual"><scope>Cell</scope><name>ackCellRemoval</name></member>
+      <member refid="class_cell_1a0ab3bd08b01fed5cc5cdc6d224259297" prot="public" virt="non-virtual"><scope>Cell</scope><name>addRealEntity</name></member>
+      <member refid="class_cell_1a8fd0386a775cd24e26dea2d9bbd087c5" prot="public" virt="non-virtual"><scope>Cell</scope><name>backup</name></member>
+      <member refid="class_cell_1a24e6687d503f8dfbca86f785798d09b2" prot="private" virt="non-virtual"><scope>Cell</scope><name>backupIndex_</name></member>
+      <member refid="class_cell_1a5664885a6750bc5ad3fdcff17a18191c" prot="public" virt="non-virtual"><scope>Cell</scope><name>BWAPI</name></member>
+      <member refid="class_cell_1a1c3d0b6cb80efb3f95f51a0af6421609" prot="public" virt="non-virtual"><scope>Cell</scope><name>Cell</name></member>
+      <member refid="class_cell_1a480070118d37910e3634c6c501dccb20" prot="public" virt="non-virtual"><scope>Cell</scope><name>cellInfo</name></member>
+      <member refid="class_cell_1a5031f43b618425c08b81b199b6065374" prot="private" virt="non-virtual"><scope>Cell</scope><name>CellViewerConnection</name></member>
+      <member refid="class_cell_1afa382d6a99692ee31460a5af57073872" prot="public" virt="non-virtual"><scope>Cell</scope><name>channelVersion</name></member>
+      <member refid="class_cell_1aed98c01b882671c6a971750832d65598" prot="public" virt="non-virtual"><scope>Cell</scope><name>checkChunkLoading</name></member>
+      <member refid="class_cell_1a6dc9d9f608c287f823c371a658e2b0e2" prot="public" virt="non-virtual"><scope>Cell</scope><name>checkOffloadsAndGhosts</name></member>
+      <member refid="class_cell_1ac920d6611d9751f87e4fc213e2ed4d97" prot="public" virt="non-virtual"><scope>Cell</scope><name>createEntity</name></member>
+      <member refid="class_cell_1a069f2c38545837db77c164d04bcbeb33" prot="public" virt="non-virtual"><scope>Cell</scope><name>createEntity</name></member>
+      <member refid="class_cell_1a12f7727284eb7ec04b8be59c4dabdd69" prot="public" virt="non-virtual"><scope>Cell</scope><name>debugDump</name></member>
+      <member refid="class_cell_1a4c65c33343dff0c452d34c4d00f9cee9" prot="public" virt="non-virtual"><scope>Cell</scope><name>entityDestroyed</name></member>
+      <member refid="class_cell_1a2c208d3d233ffeef0750a064a256de89" prot="private" virt="non-virtual"><scope>Cell</scope><name>gameSecondsPerSecond_</name></member>
+      <member refid="class_cell_1a2dc642f543030f46a485e0528d3dace2" prot="public" virt="non-virtual"><scope>Cell</scope><name>handleCellAppDeath</name></member>
+      <member refid="class_cell_1af985183eff6bc3c5862788b9371881d2" prot="private" virt="non-virtual"><scope>Cell</scope><name>initialTimeOfDay_</name></member>
+      <member refid="class_cell_1ac51cdfebb1fda2a04f5e35c7323910fe" prot="private" virt="non-virtual"><scope>Cell</scope><name>isReadyForDeletion</name></member>
+      <member refid="class_cell_1a9e68c766c2a07fa6c93e429e899f0f1e" prot="public" virt="non-virtual"><scope>Cell</scope><name>isRemoved</name></member>
+      <member refid="class_cell_1a05ad62403e5bafc3bdd3a90f9182da66" prot="private" virt="non-virtual"><scope>Cell</scope><name>isRemoved_</name></member>
+      <member refid="class_cell_1a9240e6bd570b82ea56d2d3bd683853b3" prot="public" virt="non-virtual"><scope>Cell</scope><name>isRestore</name></member>
+      <member refid="class_cell_1a240747178d756f7bb3f1ee2580725cf2" prot="private" virt="non-virtual"><scope>Cell</scope><name>isRetiring_</name></member>
+      <member refid="class_cell_1a1e18ae12a6b5a977f025ac38385d7fb3" prot="private" virt="non-virtual"><scope>Cell</scope><name>lastERTCalcTime_</name></member>
+      <member refid="class_cell_1ab3c0a956d3a2e7e78c7469731c585ba9" prot="private" virt="non-virtual"><scope>Cell</scope><name>lastERTFactor_</name></member>
+      <member refid="class_cell_1a901700a2a2144dbea336b52a9236e352" prot="public" virt="non-virtual"><scope>Cell</scope><name>notifyOfCellRemoval</name></member>
+      <member refid="class_cell_1a8169933d0df347c7f71b21b3248c759e" prot="public" virt="non-virtual"><scope>Cell</scope><name>numRealEntities</name></member>
+      <member refid="class_cell_1a049390b685a0dc8e44bdee98df7fdd2f" prot="public" virt="non-virtual"><scope>Cell</scope><name>offloadEntity</name></member>
+      <member refid="class_cell_1aca5e5be325ed50f7ce7c5f559ba2c264" prot="public" virt="non-virtual"><scope>Cell</scope><name>onSpaceGone</name></member>
+      <member refid="class_cell_1abdda8af92ff9e3f38fd1f9b5a3f0d398" prot="private" virt="non-virtual"><scope>Cell</scope><name>pCellInfo_</name></member>
+      <member refid="class_cell_1a07d5edd4d5fb89bfded65ccdecdddab6" prot="private" virt="non-virtual"><scope>Cell</scope><name>pendingAcks_</name></member>
+      <member refid="class_cell_1a041b7a4e93e0cbe302bed1b0693bc7af" prot="public" virt="non-virtual"><scope>Cell</scope><name>pNearbyEntity</name></member>
+      <member refid="class_cell_1a9ca71d9e4cc4b67625578b1a70901ea7" prot="public" virt="non-virtual"><scope>Cell</scope><name>pReplayData</name></member>
+      <member refid="class_cell_1a2a144086538e8a216e1d7656373d590c" prot="private" virt="non-virtual"><scope>Cell</scope><name>pReplayData_</name></member>
+      <member refid="class_cell_1ab12d42c5a2e22be8a514b54d00be933b" prot="public" virt="non-virtual"><scope>Cell</scope><name>profiler</name></member>
+      <member refid="class_cell_1a634b6cb4fb406a67b1819dc76212b355" prot="private" virt="non-virtual"><scope>Cell</scope><name>profiler_</name></member>
+      <member refid="class_cell_1a4eb4c703ed6af233bf9ace825196b49d" prot="public" virt="non-virtual"><scope>Cell</scope><name>properties</name></member>
+      <member refid="class_cell_1a67eae179c370213744a9c17028f8d00b" prot="public" virt="non-virtual"><scope>Cell</scope><name>pWatcher</name></member>
+      <member refid="class_cell_1a8e84d2e405f1a6477014b46b1bb23bef" prot="public" virt="non-virtual"><scope>Cell</scope><name>realEntities</name></member>
+      <member refid="class_cell_1a0ab253a9fd8b7fc2b0e535b7d42dff42" prot="private" virt="non-virtual"><scope>Cell</scope><name>realEntities_</name></member>
+      <member refid="class_cell_1add0b1c24e51a167a618b43ad3c42d9bb" prot="private" virt="non-virtual"><scope>Cell</scope><name>receivedAcks_</name></member>
+      <member refid="class_cell_1a382e84edee2b5892519543bb1bbd637d" prot="public" virt="non-virtual"><scope>Cell</scope><name>rect</name></member>
+      <member refid="class_cell_1a31749030f6bcd6a28851313eafa0af5c" prot="private" virt="non-virtual"><scope>Cell</scope><name>RemovalAcks</name></member>
+      <member refid="class_cell_1a8ea0bdaa7988f27550be4351f975ab80" prot="public" virt="non-virtual"><scope>Cell</scope><name>removeCell</name></member>
+      <member refid="class_cell_1a86c62bf84cc5c071aaf06dc98345d26c" prot="public" virt="non-virtual"><scope>Cell</scope><name>retireCell</name></member>
+      <member refid="class_cell_1a6f6ccf566b8978b45912e181ccd023ae" prot="public" virt="non-virtual"><scope>Cell</scope><name>reuse</name></member>
+      <member refid="class_cell_1aea25367fa39d3fb8c93a8995885dcf55" prot="public" virt="non-virtual"><scope>Cell</scope><name>sendEntityPositions</name></member>
+      <member refid="class_cell_1ab0b30bda905ccbc50374853bd92ba540" prot="public" virt="non-virtual"><scope>Cell</scope><name>shouldOffload</name></member>
+      <member refid="class_cell_1a11f02d7991321f04c8652b61c8cac061" prot="public" virt="non-virtual"><scope>Cell</scope><name>shouldOffload</name></member>
+      <member refid="class_cell_1a0e8a8b07238d4e4c1f69d9cc85db39c4" prot="public" virt="non-virtual"><scope>Cell</scope><name>shouldOffload</name></member>
+      <member refid="class_cell_1ad7b9e4357e8728cba1415f5f989e58c1" prot="private" virt="non-virtual"><scope>Cell</scope><name>shouldOffload_</name></member>
+      <member refid="class_cell_1a4a55550a06da4b7b0665bf1ec48e9fee" prot="public" virt="non-virtual"><scope>Cell</scope><name>shutDown</name></member>
+      <member refid="class_cell_1aba9345454e4381f81efc9c2a2a6dde40" prot="public" virt="non-virtual"><scope>Cell</scope><name>space</name></member>
+      <member refid="class_cell_1aac440968e96613a9b3faa381de293296" prot="public" virt="non-virtual"><scope>Cell</scope><name>space</name></member>
+      <member refid="class_cell_1a0b7a2d3a58b87158f81b4d915d77e9da" prot="private" virt="non-virtual"><scope>Cell</scope><name>space_</name></member>
+      <member refid="class_cell_1aeb3a5d22c5b62e3e3370d2d460ef6513" prot="public" virt="non-virtual"><scope>Cell</scope><name>spaceID</name></member>
+      <member refid="class_cell_1a937d6bff38202441926ba22106ea0b4e" prot="public" virt="non-virtual"><scope>Cell</scope><name>startRecording</name></member>
+      <member refid="class_cell_1ad566fa269a2289aa36efa09a001e3682a2d588d1dba29ff3d7f73a5f0f0b9e932" prot="private" virt="non-virtual"><scope>Cell</scope><name>STOPPING_STATE_NOT_STOPPING</name></member>
+      <member refid="class_cell_1ad566fa269a2289aa36efa09a001e3682a80ce2ddc1b6af188ef4d624c2ebe1c8b" prot="private" virt="non-virtual"><scope>Cell</scope><name>STOPPING_STATE_STOPPING_SHOULD_NOT_USE_CALLBACKS</name></member>
+      <member refid="class_cell_1ad566fa269a2289aa36efa09a001e3682a4f898903cd6c6779b2106dc16fbc8f9c" prot="private" virt="non-virtual"><scope>Cell</scope><name>STOPPING_STATE_STOPPING_SHOULD_USE_CALLBACKS</name></member>
+      <member refid="class_cell_1ad566fa269a2289aa36efa09a001e3682" prot="private" virt="non-virtual"><scope>Cell</scope><name>StoppingState</name></member>
+      <member refid="class_cell_1ab58f837e2f7d087d75a81be7ad9390af" prot="private" virt="non-virtual"><scope>Cell</scope><name>stoppingState_</name></member>
+      <member refid="class_cell_1a8999b06c6ac67808acd47242e0645e3a" prot="public" virt="non-virtual"><scope>Cell</scope><name>stopRecording</name></member>
+      <member refid="class_cell_1a61ef9001cbcde7112944091d43f7bbea" prot="public" virt="non-virtual"><scope>Cell</scope><name>tickProfilers</name></member>
+      <member refid="class_cell_1a6a38f9e8ce9e27464230a361c903bc8f" prot="public" virt="non-virtual"><scope>Cell</scope><name>tickRecording</name></member>
+      <member refid="class_cell_1acfe5c99b843ea3c13cb3725ed18c071a" prot="public" virt="non-virtual"><scope>Cell</scope><name>writeBounds</name></member>
+      <member refid="class_cell_1a9fa559f7a28e2b4336c6879ca09304d8" prot="public" virt="non-virtual"><scope>Cell</scope><name>~Cell</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

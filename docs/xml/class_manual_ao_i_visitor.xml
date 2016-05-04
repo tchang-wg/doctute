@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_manual_ao_i_visitor" kind="class" language="C++" prot="public">
+    <compoundname>ManualAoIVisitor</compoundname>
+    <basecompoundref refid="class_entity_cache_visitor" prot="public" virt="non-virtual">EntityCacheVisitor</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_manual_ao_i_visitor_1a50bf9f896a7a9348d4d1acaececb4189" prot="private" static="no">
+        <type>BW::set&lt; <ref refid="class_entity" kindref="compound">Entity</ref> * &gt;</type>
+        <definition>typedef BW::set&lt; Entity * &gt; ManualAoIVisitor::EntitySet</definition>
+        <argsstring></argsstring>
+        <name>EntitySet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.cpp" line="3176" column="1" bodyfile="cellapp/witness.cpp" bodystart="3176" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_manual_ao_i_visitor_1a3d587fdc02ac791c2af58a16a3f54d94" prot="private" static="no" mutable="no">
+        <type>EntitySet</type>
+        <definition>EntitySet ManualAoIVisitor::manualAoIEntities_</definition>
+        <argsstring></argsstring>
+        <name>manualAoIEntities_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.cpp" line="3178" column="1" bodyfile="cellapp/witness.cpp" bodystart="3178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_manual_ao_i_visitor_1a68b85fd750fa03c14437710c821a530e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_witness" kindref="compound">Witness</ref> &amp;</type>
+        <definition>Witness&amp; ManualAoIVisitor::witness_</definition>
+        <argsstring></argsstring>
+        <name>witness_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.cpp" line="3179" column="1" bodyfile="cellapp/witness.cpp" bodystart="3179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_manual_ao_i_visitor_1a3247a82c5e9f80c399e966c0f6af9dec" prot="private" static="no" mutable="no">
+        <type>const uint</type>
+        <definition>const uint ManualAoIVisitor::aoiSubsystem_</definition>
+        <argsstring></argsstring>
+        <name>aoiSubsystem_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.cpp" line="3180" column="1" bodyfile="cellapp/witness.cpp" bodystart="3180" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_manual_ao_i_visitor_1a0cd6e78827aea579185fba83ff0a92e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ManualAoIVisitor::ManualAoIVisitor</definition>
+        <argsstring>(Witness &amp;witness, uint aoiSubsystem)</argsstring>
+        <name>ManualAoIVisitor</name>
+        <param>
+          <type><ref refid="class_witness" kindref="compound">Witness</ref> &amp;</type>
+          <declname>witness</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>aoiSubsystem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>witness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The witness, whose AoI we are visiting. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aoiSubsystem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>AoI subsystem index to visit. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.cpp" line="3116" column="1" bodyfile="cellapp/witness.cpp" bodystart="3116" bodyend="3119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_manual_ao_i_visitor_1abed3f9b6460fccf6f59d025bd6e2d5ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ManualAoIVisitor::visit</definition>
+        <argsstring>(const EntityCache &amp;cache)</argsstring>
+        <name>visit</name>
+        <reimplements refid="class_entity_cache_visitor_1ae1fa3e5de06a56b6b085ff961266f1a4">visit</reimplements>
+        <param>
+          <type>const <ref refid="class_entity_cache" kindref="compound">EntityCache</ref> &amp;</type>
+          <declname>cache</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.cpp" line="3125" column="1" bodyfile="cellapp/witness.cpp" bodystart="3125" bodyend="3144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_manual_ao_i_visitor_1a76632ee7b94ae0184616bdb1022a81bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ManualAoIVisitor::addManualAoIEntity</definition>
+        <argsstring>(Entity *pEntity)</argsstring>
+        <name>addManualAoIEntity</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> *</type>
+          <declname>pEntity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a manual-AoI entity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.cpp" line="3150" column="1" bodyfile="cellapp/witness.cpp" bodystart="3150" bodyend="3153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_manual_ao_i_visitor_1aa6d9dc75b06c100ebf30ab70751e4802" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ManualAoIVisitor::addNewManualAoIEntities</definition>
+        <argsstring>()</argsstring>
+        <name>addNewManualAoIEntities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add the collected manual-AoI entities that still need to be added to the AoI. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.cpp" line="3160" column="1" bodyfile="cellapp/witness.cpp" bodystart="3160" bodyend="3172"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is using to update the manual AoI list. We visit and check each entity in the <ref refid="class_witness" kindref="compound">Witness</ref>&apos; AoI and adding new entities for those that are manually updated. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1863">
+        <label>EntityCacheVisitor</label>
+        <link refid="class_entity_cache_visitor"/>
+      </node>
+      <node id="1862">
+        <label>ManualAoIVisitor</label>
+        <link refid="class_manual_ao_i_visitor"/>
+        <childnode refid="1863" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1865">
+        <label>EntityCacheVisitor</label>
+        <link refid="class_entity_cache_visitor"/>
+      </node>
+      <node id="1864">
+        <label>ManualAoIVisitor</label>
+        <link refid="class_manual_ao_i_visitor"/>
+        <childnode refid="1865" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/witness.cpp" line="3108" column="1" bodyfile="cellapp/witness.cpp" bodystart="3107" bodyend="3181"/>
+    <listofallmembers>
+      <member refid="class_manual_ao_i_visitor_1a76632ee7b94ae0184616bdb1022a81bb" prot="public" virt="non-virtual"><scope>ManualAoIVisitor</scope><name>addManualAoIEntity</name></member>
+      <member refid="class_manual_ao_i_visitor_1aa6d9dc75b06c100ebf30ab70751e4802" prot="public" virt="non-virtual"><scope>ManualAoIVisitor</scope><name>addNewManualAoIEntities</name></member>
+      <member refid="class_manual_ao_i_visitor_1a3247a82c5e9f80c399e966c0f6af9dec" prot="private" virt="non-virtual"><scope>ManualAoIVisitor</scope><name>aoiSubsystem_</name></member>
+      <member refid="class_manual_ao_i_visitor_1a50bf9f896a7a9348d4d1acaececb4189" prot="private" virt="non-virtual"><scope>ManualAoIVisitor</scope><name>EntitySet</name></member>
+      <member refid="class_manual_ao_i_visitor_1a3d587fdc02ac791c2af58a16a3f54d94" prot="private" virt="non-virtual"><scope>ManualAoIVisitor</scope><name>manualAoIEntities_</name></member>
+      <member refid="class_manual_ao_i_visitor_1a0cd6e78827aea579185fba83ff0a92e0" prot="public" virt="non-virtual"><scope>ManualAoIVisitor</scope><name>ManualAoIVisitor</name></member>
+      <member refid="class_manual_ao_i_visitor_1abed3f9b6460fccf6f59d025bd6e2d5ce" prot="public" virt="virtual"><scope>ManualAoIVisitor</scope><name>visit</name></member>
+      <member refid="class_manual_ao_i_visitor_1a68b85fd750fa03c14437710c821a530e" prot="private" virt="non-virtual"><scope>ManualAoIVisitor</scope><name>witness_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

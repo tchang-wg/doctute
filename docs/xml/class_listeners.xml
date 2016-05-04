@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_listeners" kind="class" language="C++" prot="public">
+    <compoundname>Listeners</compoundname>
+    <innerclass refid="class_listeners_1_1_member" prot="private">Listeners::Member</innerclass>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>MGM</declname>
+        <defname>MGM</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_listeners_1a392c61ddaba14596e2b3af9d15282f42" prot="private" static="no">
+        <type>BW::vector&lt; Member &gt;</type>
+        <definition>typedef BW::vector&lt; Member &gt; Listeners&lt; MGM &gt;::Members</definition>
+        <argsstring></argsstring>
+        <name>Members</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/listeners.hpp" line="65" column="1" bodyfile="tools/bwmachined/listeners.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_listeners_1afa187f68e616b9760a0302ebdb778c64" prot="private" static="no" mutable="no">
+        <type>Members</type>
+        <definition>Members Listeners&lt; MGM &gt;::members_</definition>
+        <argsstring></argsstring>
+        <name>members_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/listeners.hpp" line="66" column="1" bodyfile="tools/bwmachined/listeners.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_listeners_1a271293bb4369764991faa22d1c4e0e39" prot="private" static="no" mutable="no">
+        <type>const <ref refid="class_server_platform" kindref="compound">ServerPlatform</ref> &amp;</type>
+        <definition>const ServerPlatform&amp; Listeners&lt; MGM &gt;::serverPlatform_</definition>
+        <argsstring></argsstring>
+        <name>serverPlatform_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/listeners.hpp" line="68" column="1" bodyfile="tools/bwmachined/listeners.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_listeners_1a5f3cca5d552aa6b93e64962252ca5b29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Listeners&lt; MGM &gt;::Listeners</definition>
+        <argsstring>(const ServerPlatform &amp;platform)</argsstring>
+        <name>Listeners</name>
+        <param>
+          <type>const <ref refid="class_server_platform" kindref="compound">ServerPlatform</ref> &amp;</type>
+          <declname>platform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/listeners.hpp" line="30" column="1" bodyfile="tools/bwmachined/listeners.hpp" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_listeners_1a358abe741f08c3f8bc3b63007620665c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Listeners&lt; MGM &gt;::add</definition>
+        <argsstring>(const MGM &amp;mgm, u_int32_t addr)</argsstring>
+        <name>add</name>
+        <param>
+          <type>const MGM &amp;</type>
+          <declname>mgm</declname>
+        </param>
+        <param>
+          <type>u_int32_t</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/listeners.hpp" line="35" column="1" bodyfile="tools/bwmachined/listeners.hpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_listeners_1a9254a76289b60b902f32d9fe14cbb3ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Listeners&lt; MGM &gt;::checkListeners</definition>
+        <argsstring>()</argsstring>
+        <name>checkListeners</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/listeners.hpp" line="40" column="1" bodyfile="tools/bwmachined/listeners.hpp" bodystart="40" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_listeners_1a763a25f99ba23b655523667d56905587" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Listeners&lt; MGM &gt;::handleNotify</definition>
+        <argsstring>(const Endpoint &amp;endpoint, const ProcessMessage &amp;pm, in_addr addr)</argsstring>
+        <name>handleNotify</name>
+        <param>
+          <type>const Endpoint &amp;</type>
+          <declname>endpoint</declname>
+        </param>
+        <param>
+          <type>const ProcessMessage &amp;</type>
+          <declname>pm</declname>
+        </param>
+        <param>
+          <type>in_addr</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/listeners.hpp" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_listeners_1a2b0a3b6e72bcfa3b817abf3870ad9301" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Listeners&lt; MGM &gt;::handleNotify</definition>
+        <argsstring>(const Endpoint &amp;endpoint, const SignalMessage &amp;pm, in_addr addr)</argsstring>
+        <name>handleNotify</name>
+        <param>
+          <type>const Endpoint &amp;</type>
+          <declname>endpoint</declname>
+        </param>
+        <param>
+          <type>const SignalMessage &amp;</type>
+          <declname>pm</declname>
+        </param>
+        <param>
+          <type>in_addr</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/listeners.hpp" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_listeners_1ab26c13d3e4058c9cb4a4e36d379e3047" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void Listeners&lt; SignalListenerMessage &gt;::handleNotify</definition>
+        <argsstring>(const Endpoint &amp;endpoint, const SignalMessage &amp;sm, in_addr addr)</argsstring>
+        <name>handleNotify</name>
+        <param>
+          <type>const Endpoint &amp;</type>
+          <declname>endpoint</declname>
+        </param>
+        <param>
+          <type>const SignalMessage &amp;</type>
+          <declname>sm</declname>
+        </param>
+        <param>
+          <type>in_addr</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This handles a signal message and send signal to corresponding process. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/listeners.cpp" line="52" column="1" bodyfile="tools/bwmachined/listeners.cpp" bodystart="52" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tools/bwmachined/listeners.hpp" line="16" column="1" bodyfile="tools/bwmachined/listeners.hpp" bodystart="15" bodyend="69"/>
+    <listofallmembers>
+      <member refid="class_listeners_1a358abe741f08c3f8bc3b63007620665c" prot="public" virt="non-virtual"><scope>Listeners</scope><name>add</name></member>
+      <member refid="class_listeners_1a9254a76289b60b902f32d9fe14cbb3ac" prot="public" virt="non-virtual"><scope>Listeners</scope><name>checkListeners</name></member>
+      <member refid="class_listeners_1a763a25f99ba23b655523667d56905587" prot="public" virt="non-virtual"><scope>Listeners</scope><name>handleNotify</name></member>
+      <member refid="class_listeners_1a2b0a3b6e72bcfa3b817abf3870ad9301" prot="public" virt="non-virtual"><scope>Listeners</scope><name>handleNotify</name></member>
+      <member refid="class_listeners_1ab26c13d3e4058c9cb4a4e36d379e3047" prot="public" virt="non-virtual"><scope>Listeners</scope><name>handleNotify</name></member>
+      <member refid="class_listeners_1a5f3cca5d552aa6b93e64962252ca5b29" prot="public" virt="non-virtual"><scope>Listeners</scope><name>Listeners</name></member>
+      <member refid="class_listeners_1a392c61ddaba14596e2b3af9d15282f42" prot="private" virt="non-virtual"><scope>Listeners</scope><name>Members</name></member>
+      <member refid="class_listeners_1afa187f68e616b9760a0302ebdb778c64" prot="private" virt="non-virtual"><scope>Listeners</scope><name>members_</name></member>
+      <member refid="class_listeners_1a271293bb4369764991faa22d1c4e0e39" prot="private" virt="non-virtual"><scope>Listeners</scope><name>serverPlatform_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

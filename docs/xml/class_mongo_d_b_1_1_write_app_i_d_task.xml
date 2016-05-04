@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_mongo_d_b_1_1_write_app_i_d_task" kind="class" language="C++" prot="public">
+    <compoundname>MongoDB::WriteAppIDTask</compoundname>
+    <basecompoundref refid="class_mongo_d_b_1_1_mongo_d_b_background_task" prot="public" virt="non-virtual">MongoDB::MongoDBBackgroundTask</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_write_app_i_d_task_1acaebfb4475a73f1ea7972a7c9f29487a" prot="private" static="no" mutable="no">
+        <type>MessageLogger::UID</type>
+        <definition>MessageLogger::UID MongoDB::WriteAppIDTask::uid_</definition>
+        <argsstring></argsstring>
+        <name>uid_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/write_appid_task.hpp" line="57" column="1" bodyfile="tools/message_logger/mongodb/tasks/write_appid_task.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_write_app_i_d_task_1a757f13b058ce0966afb2aaa60e395bba" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string MongoDB::WriteAppIDTask::username_</definition>
+        <argsstring></argsstring>
+        <name>username_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/write_appid_task.hpp" line="58" column="1" bodyfile="tools/message_logger/mongodb/tasks/write_appid_task.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_write_app_i_d_task_1adfad6582273fd49d50e3253c4aec9a4f" prot="private" static="no" mutable="no">
+        <type>mongo::BSONObj</type>
+        <definition>mongo::BSONObj MongoDB::WriteAppIDTask::obj_</definition>
+        <argsstring></argsstring>
+        <name>obj_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/write_appid_task.hpp" line="59" column="1" bodyfile="tools/message_logger/mongodb/tasks/write_appid_task.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mongo_d_b_1_1_write_app_i_d_task_1a8a6c72cd539b1ce11adfb1f5c859a1f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MongoDB::WriteAppIDTask::WriteAppIDTask</definition>
+        <argsstring>(MessageLogger::UID uid, const BW::string &amp;userName, const mongo::BSONObj &amp;obj)</argsstring>
+        <name>WriteAppIDTask</name>
+        <param>
+          <type>MessageLogger::UID</type>
+          <declname>uid</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>userName</declname>
+        </param>
+        <param>
+          <type>const mongo::BSONObj &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/write_appid_task.hpp" line="28" column="1" bodyfile="tools/message_logger/mongodb/tasks/write_appid_task.hpp" bodystart="28" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_mongo_d_b_1_1_write_app_i_d_task_1a4403484d02e5d3650db7eef14d5ef2b7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void MongoDB::WriteAppIDTask::performBackgroundTask</definition>
+        <argsstring>(TaskManager &amp;mgr, ConnectionThreadData &amp;connectionData)</argsstring>
+        <name>performBackgroundTask</name>
+        <reimplements refid="class_mongo_d_b_1_1_mongo_d_b_background_task_1afa658d48de7addb5b97e449dd3c182fe">performBackgroundTask</reimplements>
+        <param>
+          <type>TaskManager &amp;</type>
+          <declname>mgr</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mongo_d_b_1_1_connection_thread_data" kindref="compound">ConnectionThreadData</ref> &amp;</type>
+          <declname>connectionData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/write_appid_task.hpp" line="38" column="1" bodyfile="tools/message_logger/mongodb/tasks/write_appid_task.hpp" bodystart="38" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3183">
+        <label>MongoDB::MongoDBBackgroundTask</label>
+        <link refid="class_mongo_d_b_1_1_mongo_d_b_background_task"/>
+        <childnode refid="3184" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3184">
+        <label>BackgroundTask</label>
+      </node>
+      <node id="3182">
+        <label>MongoDB::WriteAppIDTask</label>
+        <link refid="class_mongo_d_b_1_1_write_app_i_d_task"/>
+        <childnode refid="3183" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3186">
+        <label>MongoDB::MongoDBBackgroundTask</label>
+        <link refid="class_mongo_d_b_1_1_mongo_d_b_background_task"/>
+        <childnode refid="3187" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3187">
+        <label>BackgroundTask</label>
+      </node>
+      <node id="3185">
+        <label>MongoDB::WriteAppIDTask</label>
+        <link refid="class_mongo_d_b_1_1_write_app_i_d_task"/>
+        <childnode refid="3186" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/message_logger/mongodb/tasks/write_appid_task.hpp" line="26" column="1" bodyfile="tools/message_logger/mongodb/tasks/write_appid_task.hpp" bodystart="25" bodyend="60"/>
+    <listofallmembers>
+      <member refid="class_mongo_d_b_1_1_mongo_d_b_background_task_1a50ca0ec7c9b3842b648f21db4e076a09" prot="protected" virt="non-virtual"><scope>MongoDB::WriteAppIDTask</scope><name>doBackgroundTask</name></member>
+      <member refid="class_mongo_d_b_1_1_mongo_d_b_background_task_1a05fb4c0e7cfcf525a84f6fdb5619091e" prot="protected" virt="non-virtual"><scope>MongoDB::WriteAppIDTask</scope><name>doBackgroundTask</name></member>
+      <member refid="class_mongo_d_b_1_1_mongo_d_b_background_task_1a7788d75382d6f561cb9a72656634826a" prot="public" virt="non-virtual"><scope>MongoDB::WriteAppIDTask</scope><name>MongoDBBackgroundTask</name></member>
+      <member refid="class_mongo_d_b_1_1_write_app_i_d_task_1adfad6582273fd49d50e3253c4aec9a4f" prot="private" virt="non-virtual"><scope>MongoDB::WriteAppIDTask</scope><name>obj_</name></member>
+      <member refid="class_mongo_d_b_1_1_write_app_i_d_task_1a4403484d02e5d3650db7eef14d5ef2b7" prot="protected" virt="virtual"><scope>MongoDB::WriteAppIDTask</scope><name>performBackgroundTask</name></member>
+      <member refid="class_mongo_d_b_1_1_write_app_i_d_task_1acaebfb4475a73f1ea7972a7c9f29487a" prot="private" virt="non-virtual"><scope>MongoDB::WriteAppIDTask</scope><name>uid_</name></member>
+      <member refid="class_mongo_d_b_1_1_write_app_i_d_task_1a757f13b058ce0966afb2aaa60e395bba" prot="private" virt="non-virtual"><scope>MongoDB::WriteAppIDTask</scope><name>username_</name></member>
+      <member refid="class_mongo_d_b_1_1_write_app_i_d_task_1a8a6c72cd539b1ce11adfb1f5c859a1f2" prot="public" virt="non-virtual"><scope>MongoDB::WriteAppIDTask</scope><name>WriteAppIDTask</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

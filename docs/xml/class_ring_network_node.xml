@@ -1,0 +1,716 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_ring_network_node" kind="class" language="C++" prot="public">
+    <compoundname>RingNetworkNode</compoundname>
+    <basecompoundref refid="class_network_node" prot="public" virt="non-virtual">NetworkNode</basecompoundref>
+    <includes refid="ring__network__node_8hpp" local="no">ring_network_node.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ring_network_node_1aff31f5d0ed1b92242b166fc28144a6b4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_ring_cluster" kindref="compound">RingCluster</ref></type>
+        <definition>RingCluster RingNetworkNode::cluster_</definition>
+        <argsstring></argsstring>
+        <name>cluster_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="77" column="1" bodyfile="tools/bwmachined/ring_network_node.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ring_network_node_1a54008bcabfc0747b77682e9e447ff74f" prot="private" static="no" mutable="no">
+        <type>Endpoint</type>
+        <definition>Endpoint RingNetworkNode::epBroadcaster_</definition>
+        <argsstring></argsstring>
+        <name>epBroadcaster_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="97" column="1" bodyfile="tools/bwmachined/ring_network_node.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ring_network_node_1a7b3cf80d198547c67b49afb7bc2fa010" prot="private" static="no" mutable="no">
+        <type>Endpoint</type>
+        <definition>Endpoint RingNetworkNode::epNetwork_</definition>
+        <argsstring></argsstring>
+        <name>epNetwork_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="98" column="1" bodyfile="tools/bwmachined/ring_network_node.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ring_network_node_1a343ec8342e27d96695607dc37f262b9d" prot="private" static="no" mutable="no">
+        <type>Endpoint</type>
+        <definition>Endpoint RingNetworkNode::epWrappedBroadcast_</definition>
+        <argsstring></argsstring>
+        <name>epWrappedBroadcast_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="101" column="1" bodyfile="tools/bwmachined/ring_network_node.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ring_network_node_1a9e219750745a6f5d5b262949fd0d0b63" prot="private" static="no" mutable="no">
+        <type>Endpoint</type>
+        <definition>Endpoint RingNetworkNode::epNetworkTCP_</definition>
+        <argsstring></argsstring>
+        <name>epNetworkTCP_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="104" column="1" bodyfile="tools/bwmachined/ring_network_node.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ring_network_node_1abde6139c15e264adff2c7813d408d249" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE RingNetworkNode::RingNetworkNode</definition>
+        <argsstring>(BWMachined &amp;machined, Mercury::EventDispatcher &amp;dispatcher, ConnectionWrapper::ReadHandler *pConnectionReadHandler, uint16 port)</argsstring>
+        <name>RingNetworkNode</name>
+        <param>
+          <type><ref refid="class_b_w_machined" kindref="compound">BWMachined</ref> &amp;</type>
+          <declname>machined</declname>
+        </param>
+        <param>
+          <type>Mercury::EventDispatcher &amp;</type>
+          <declname>dispatcher</declname>
+        </param>
+        <param>
+          <type><ref refid="class_connection_wrapper_1_1_read_handler" kindref="compound">ConnectionWrapper::ReadHandler</ref> *</type>
+          <declname>pConnectionReadHandler</declname>
+        </param>
+        <param>
+          <type>uint16</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>machined</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_b_w_machined" kindref="compound">BWMachined</ref> object (required by the cluster object) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dispatcher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Event Dispatcher object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pConnectionReadHandler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A handler for packet data read off connections </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The port on which the <ref refid="class_b_w_machined" kindref="compound">BWMachined</ref> Network is communicating. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="56" column="1" bodyfile="tools/bwmachined/ring_network_node.cpp" bodystart="25" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_network_node_1abae73fce9402cfe3b33ec2f0f9b88325" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RingNetworkNode::sendBroadcast</definition>
+        <argsstring>(MachineGuardMessage *pMGM)</argsstring>
+        <name>sendBroadcast</name>
+        <reimplements refid="class_network_node_1a86cc9b4937b3eaafd2bc9bf25f734277">sendBroadcast</reimplements>
+        <param>
+          <type>MachineGuardMessage *</type>
+          <declname>pMGM</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Broadcasts the provided mgm to the cluster.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pMGM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MGM to broadcast</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, otherwise false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="61" column="1" bodyfile="tools/bwmachined/ring_network_node.cpp" bodystart="183" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_network_node_1ab49a8b9c9ba482b11bbc82f7f1c15763" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RingNetworkNode::sendBroadcast</definition>
+        <argsstring>(MGMPacket *pPacket)</argsstring>
+        <name>sendBroadcast</name>
+        <reimplements refid="class_network_node_1a1be580af296fb1893b14237762170ea5">sendBroadcast</reimplements>
+        <param>
+          <type>MGMPacket *</type>
+          <declname>pPacket</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Broadcasts the provided packet to the cluster.</para><para>This method differs from sendWrappedBroadcastPacket in that responses will be handled by this <ref refid="class_b_w_machined" kindref="compound">BWMachined</ref> as a normal MGM response.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pPacket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The packet to broadcast</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, otherwise false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="62" column="1" bodyfile="tools/bwmachined/ring_network_node.cpp" bodystart="193" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_network_node_1acc6c8ad7e976f6d6a1ff96e80eb6ca39" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RingNetworkNode::sendWrappedBroadcastPacket</definition>
+        <argsstring>(MGMPacket *pPacket)</argsstring>
+        <name>sendWrappedBroadcastPacket</name>
+        <reimplements refid="class_network_node_1a36002a456a2583950e986e6a6f02b180">sendWrappedBroadcastPacket</reimplements>
+        <param>
+          <type>MGMPacket *</type>
+          <declname>pPacket</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Broadcasts the provided wrapped packet to the cluster.</para><para>This method differs to sendBroadcast in that it is for sending packets that were wrapped within a BroadcastWrapperMessage, and therefore responses will be treated as a response to a wrapped broadcast.</para><para>These responses are intended to be gathered together as a ResponseWrapperMessage and forwarded on to the original sender via a <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pPacket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The wrapped packet to broadcast.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, otherwise false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="63" column="1" bodyfile="tools/bwmachined/ring_network_node.cpp" bodystart="202" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_network_node_1a8ee4ed66770b47fa5b84babe80ed942f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RingNetworkNode::isBroadcastResponse</definition>
+        <argsstring>(const ConnectionWrapperPtr pConnection, MGMPacket &amp;packet) const </argsstring>
+        <name>isBroadcastResponse</name>
+        <reimplements refid="class_network_node_1aa1319f908f02d0ec2d978671d4ae290d">isBroadcastResponse</reimplements>
+        <param>
+          <type>const <ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref></type>
+          <declname>pConnection</declname>
+        </param>
+        <param>
+          <type>MGMPacket &amp;</type>
+          <declname>packet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether the provided parameters indicate that this is a broadcast response message.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>endpoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The endpoint on which the MGM arrived </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>packet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received packet</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the provided mgm was a broadcast response, otherwise false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="64" column="1" bodyfile="tools/bwmachined/ring_network_node.cpp" bodystart="235" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_network_node_1ae5359cb00a527b4b54a3d3cccdfbb47d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>Endpoint &amp;</type>
+        <definition>virtual Endpoint&amp; RingNetworkNode::outgoingUDPEndpoint</definition>
+        <argsstring>()</argsstring>
+        <name>outgoingUDPEndpoint</name>
+        <reimplements refid="class_network_node_1acba74dd33fa9e64e0096c521f132a982">outgoingUDPEndpoint</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the UDP endpoint which is to be used for sending directed messages to a destination. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="67" column="1" bodyfile="tools/bwmachined/ring_network_node.hpp" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_network_node_1a84b73de4462b1f73265b7208fa7821d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref> *</type>
+        <definition>BroadcastManager * RingNetworkNode::createBroadcastManager</definition>
+        <argsstring>(BroadcastWrapperMessage &amp;bwm, ConnectionWrapperPtr pReplyConnection, ManagerLookup &amp;lookup)</argsstring>
+        <name>createBroadcastManager</name>
+        <reimplements refid="class_network_node_1a5d49ce01329d82f326d534e378ec16a5">createBroadcastManager</reimplements>
+        <param>
+          <type>BroadcastWrapperMessage &amp;</type>
+          <declname>bwm</declname>
+        </param>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref></type>
+          <declname>pReplyConnection</declname>
+        </param>
+        <param>
+          <type>ManagerLookup &amp;</type>
+          <declname>lookup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A generator method which creates a <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref> that handles broadcasts sent by this network node.</para><para>The <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref>&apos;s subclass will be specific to this type of <ref refid="class_network_node" kindref="compound">NetworkNode</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bwm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The BroadcastWrapperMessage that the new <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref> sends and handles responses for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pReplyConnection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The connection wrapper to handle sending responses </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lookup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The table to update with sequence number references to the new <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to a <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref> object. This memory must be managed by the caller. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="72" column="1" bodyfile="tools/bwmachined/ring_network_node.cpp" bodystart="245" bodyend="250"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_ring_network_node_1a0592c1318247b3400a964b803b92c37c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RingNetworkNode::broadcastPacketFromEndpoint</definition>
+        <argsstring>(MGMPacket *pPacket, const Endpoint &amp;endpoint) const </argsstring>
+        <name>broadcastPacketFromEndpoint</name>
+        <param>
+          <type>MGMPacket *</type>
+          <declname>pPacket</declname>
+        </param>
+        <param>
+          <type>const Endpoint &amp;</type>
+          <declname>endpoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sends the provided MGMPacket to the specified endpoint</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pPacket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MGMPacket to broadcast. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>endpoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The endpoint on which to broadcast the MGM.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success otherwise false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="106" column="1" bodyfile="tools/bwmachined/ring_network_node.cpp" bodystart="216" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_network_node_1a32d7bdc1dfdc989bda853d83878180bd" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RingNetworkNode::initExternalNetworkInterfaces</definition>
+        <argsstring>()</argsstring>
+        <name>initExternalNetworkInterfaces</name>
+        <reimplements refid="class_network_node_1afbbdbf252700a4f76d011912fdb943f0">initExternalNetworkInterfaces</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialises external endpoints.</para><para><simplesect kind="return"><para>true on success, otherwise false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="109" column="1" bodyfile="tools/bwmachined/ring_network_node.cpp" bodystart="58" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_network_node_1af46a8b364fd684ffdcc636e96ce318c6" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RingNetworkNode::startHeartbeat</definition>
+        <argsstring>()</argsstring>
+        <name>startHeartbeat</name>
+        <reimplements refid="class_network_node_1a69e0f788ad274f7268455975c428466f">startHeartbeat</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts the inter-machined announcement/heartbeat/keepalive system. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="110" column="1" bodyfile="tools/bwmachined/ring_network_node.cpp" bodystart="159" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_network_node_1ab556aca247d5fdb524a3205662af0080" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RingNetworkNode::listenOnExternalEndpoints</definition>
+        <argsstring>()</argsstring>
+        <name>listenOnExternalEndpoints</name>
+        <reimplements refid="class_network_node_1aaebcbb0bd4bb1b687d03eb4a813e65f6">listenOnExternalEndpoints</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Registers external endpoints for dispatching and socket handling. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="111" column="1" bodyfile="tools/bwmachined/ring_network_node.cpp" bodystart="169" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_network_node_1ab2bd56ee9ce93935394a8a2cccd07f2e" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RingNetworkNode::closeExternalEndpoints</definition>
+        <argsstring>()</argsstring>
+        <name>closeExternalEndpoints</name>
+        <reimplements refid="class_network_node_1a848358d82476d2c5bbf0bb8feb5631d6">closeExternalEndpoints</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Closes external endpoints. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="112" column="1" bodyfile="tools/bwmachined/ring_network_node.cpp" bodystart="46" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_network_node_1acc815d14a1366f24c0375639df79d373" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RingNetworkNode::handleWholeMachineMessageReply</definition>
+        <argsstring>(WholeMachineMessage &amp;wmm, sockaddr_in &amp;sin)</argsstring>
+        <name>handleWholeMachineMessageReply</name>
+        <reimplements refid="class_network_node_1a2f6da3a9dc5d366ab8a5d155f5e64e3f">handleWholeMachineMessageReply</reimplements>
+        <param>
+          <type>WholeMachineMessage &amp;</type>
+          <declname>wmm</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles WholeMachineMessages sent by another <ref refid="class_b_w_machined" kindref="compound">BWMachined</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wmm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received WholeMachineMessage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket address that received the message.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if handled, otherwise false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="114" column="1" bodyfile="tools/bwmachined/ring_network_node.cpp" bodystart="256" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_network_node_1add155bcc9d72bdb7427b308eaa217978" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RingNetworkNode::handleHighPrecisionMachineMessageReply</definition>
+        <argsstring>(HighPrecisionMachineMessage &amp;hpmm, sockaddr_in &amp;sin)</argsstring>
+        <name>handleHighPrecisionMachineMessageReply</name>
+        <reimplements refid="class_network_node_1a2e52e8a4ae330c682b4b1f6c0bce10f3">handleHighPrecisionMachineMessageReply</reimplements>
+        <param>
+          <type>HighPrecisionMachineMessage &amp;</type>
+          <declname>hpmm</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles HighPrecisionMachineMessages sent by another <ref refid="class_b_w_machined" kindref="compound">BWMachined</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hpmm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received HighPrecisionMachineMessage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket address that received the message.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if handled, otherwise false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="116" column="1" bodyfile="tools/bwmachined/ring_network_node.cpp" bodystart="277" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_network_node_1ab4f690a4f8354ae57b6a60e4e4a3dcf4" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RingNetworkNode::handleMachinedAnnounceBirth</definition>
+        <argsstring>(MachinedAnnounceMessage &amp;mam, sockaddr_in &amp;sin, MGMPacket &amp;replies)</argsstring>
+        <name>handleMachinedAnnounceBirth</name>
+        <reimplements refid="class_network_node_1a8a6e43d2bd94491fac81db96160874a9">handleMachinedAnnounceBirth</reimplements>
+        <param>
+          <type>MachinedAnnounceMessage &amp;</type>
+          <declname>mam</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <param>
+          <type>MGMPacket &amp;</type>
+          <declname>replies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles MachinedAnnounceMessage type ANNOUNCE_BIRTH.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received MachinedAnnounceMessage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket address that received the message. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>replies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The package to append birth replies to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="119" column="1" bodyfile="tools/bwmachined/ring_network_node.cpp" bodystart="320" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_network_node_1a008ac8d9f4017a2d23105828703c69ec" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RingNetworkNode::handleMachinedAnnounceDeath</definition>
+        <argsstring>(MachinedAnnounceMessage &amp;mam, sockaddr_in &amp;sin)</argsstring>
+        <name>handleMachinedAnnounceDeath</name>
+        <reimplements refid="class_network_node_1a1776c9aab09009a1d6f5c07102adface">handleMachinedAnnounceDeath</reimplements>
+        <param>
+          <type>MachinedAnnounceMessage &amp;</type>
+          <declname>mam</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles MachinedAnnounceMessage type ANNOUNCE_DEATH.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received MachinedAnnounceMessage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket address that received the message. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="121" column="1" bodyfile="tools/bwmachined/ring_network_node.cpp" bodystart="353" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_network_node_1a3a46aa0c93ea07adec6b1c183f1e311c" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RingNetworkNode::handleMachinedAnnounceExists</definition>
+        <argsstring>(MachinedAnnounceMessage &amp;mam, sockaddr_in &amp;sin)</argsstring>
+        <name>handleMachinedAnnounceExists</name>
+        <reimplements refid="class_network_node_1a49e8e8ef3d832d28ffaba2371a5e74a1">handleMachinedAnnounceExists</reimplements>
+        <param>
+          <type>MachinedAnnounceMessage &amp;</type>
+          <declname>mam</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles MachinedAnnounceMessage type ANNOUNCE_EXISTS.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received MachinedAnnounceMessage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket address that received the message. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="123" column="1" bodyfile="tools/bwmachined/ring_network_node.cpp" bodystart="380" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ring_network_node_1a4c77aa0d078829f7cdd0759151a8c6a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RingNetworkNode::markMachineMessageReceived</definition>
+        <argsstring>(MachineGuardMessage &amp;mgm, sockaddr_in &amp;sin)</argsstring>
+        <name>markMachineMessageReceived</name>
+        <param>
+          <type>MachineGuardMessage &amp;</type>
+          <declname>mgm</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Notifies the cluster that a MachineMessage (either WholeMachineMessage or HighPrecisionMachineMessage) has been received. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/ring_network_node.hpp" line="126" column="1" bodyfile="tools/bwmachined/ring_network_node.cpp" bodystart="298" bodyend="314"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is a ring implementation of <ref refid="class_network_node" kindref="compound">NetworkNode</ref>. All machines on a ring implementation are equal.</para><para>As well as inheriting the localhost endpoints of <ref refid="class_network_node" kindref="compound">NetworkNode</ref>, it has external endpoints for receiving both broadcast messages and directed messages, which differ based on the operating system.</para><para>This is because Windows and Linux are inconsistent when it comes to receiving broadcast packets, so these Endpoints are used differently between the two platforms.</para><para>On Linux:<itemizedlist>
+<listitem><para>epBroadcaster_ is used to send broadcast packets, and receive network packets sent directly to the network IP address</para></listitem><listitem><para>epNetwork_ is used to send packets directly to an IP address and receives broadcast packets</para><para>On Windows:</para></listitem><listitem><para>epBroadcaster_ is used to send broadcast packets, and should not receive any packets. (It does not bind to the same port otherwise duplicate packets will appear with epNetwork_)</para></listitem><listitem><para>epNetwork_ is used to send packets directly to an IP address and receives broadcast packets, as well as packets sent directly to the server IP</para></listitem></itemizedlist>
+</para><para>Other endpoints are:<itemizedlist>
+<listitem><para>epWrappedBroadcast_ for sending and receiving wrapped broadcast responses</para></listitem><listitem><para>epNetworkTCP_ for receiving TCP connections. Connections to this endpoint are disconnected when the message transaction has completed (eg. a response is sent or no response is required) or has experienced an error.</para></listitem></itemizedlist>
+</para><para>All broadcast packets in a ring network are sent to the standard UDP network BROADCAST addresses (255.255.255.255). Responses sent to wrapped broadcast requests are collated and sent back to their source connection wrapper via the <ref refid="class_ring_broadcast_manager" kindref="compound">RingBroadcastManager</ref>. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2511">
+        <label>RingNetworkNode</label>
+        <link refid="class_ring_network_node"/>
+        <childnode refid="2512" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2512">
+        <label>NetworkNode</label>
+        <link refid="class_network_node"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2515">
+        <label>ConnectionWrapperMgr</label>
+        <link refid="class_connection_wrapper_mgr"/>
+      </node>
+      <node id="2513">
+        <label>RingNetworkNode</label>
+        <link refid="class_ring_network_node"/>
+        <childnode refid="2514" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2514">
+        <label>NetworkNode</label>
+        <link refid="class_network_node"/>
+        <childnode refid="2515" relation="usage">
+          <edgelabel>connectionWrapperMgr_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/bwmachined/ring_network_node.hpp" line="54" column="1" bodyfile="tools/bwmachined/ring_network_node.hpp" bodystart="53" bodyend="128"/>
+    <listofallmembers>
+      <member refid="class_ring_network_node_1a0592c1318247b3400a964b803b92c37c" prot="private" virt="non-virtual"><scope>RingNetworkNode</scope><name>broadcastPacketFromEndpoint</name></member>
+      <member refid="class_network_node_1ae46a963d5928e991d1be31524c8ddf62" prot="public" virt="non-virtual"><scope>RingNetworkNode</scope><name>cleanupConnectionHandlers</name></member>
+      <member refid="class_network_node_1a5d7ead3a7f13ef8209e654c3122f970e" prot="public" virt="non-virtual"><scope>RingNetworkNode</scope><name>closeEndpoints</name></member>
+      <member refid="class_ring_network_node_1ab2bd56ee9ce93935394a8a2cccd07f2e" prot="private" virt="virtual"><scope>RingNetworkNode</scope><name>closeExternalEndpoints</name></member>
+      <member refid="class_ring_network_node_1aff31f5d0ed1b92242b166fc28144a6b4" prot="private" virt="non-virtual"><scope>RingNetworkNode</scope><name>cluster_</name></member>
+      <member refid="class_network_node_1a95fa25b039d62d0ef9f9ac796cef20e1" prot="protected" virt="non-virtual"><scope>RingNetworkNode</scope><name>connectionWrapperMgr_</name></member>
+      <member refid="class_ring_network_node_1a84b73de4462b1f73265b7208fa7821d4" prot="public" virt="virtual"><scope>RingNetworkNode</scope><name>createBroadcastManager</name></member>
+      <member refid="class_network_node_1abacbf8daab390687c7fee13d21cec12e" prot="protected" virt="non-virtual"><scope>RingNetworkNode</scope><name>discoveryPort</name></member>
+      <member refid="class_ring_network_node_1a54008bcabfc0747b77682e9e447ff74f" prot="private" virt="non-virtual"><scope>RingNetworkNode</scope><name>epBroadcaster_</name></member>
+      <member refid="class_ring_network_node_1a7b3cf80d198547c67b49afb7bc2fa010" prot="private" virt="non-virtual"><scope>RingNetworkNode</scope><name>epNetwork_</name></member>
+      <member refid="class_ring_network_node_1a9e219750745a6f5d5b262949fd0d0b63" prot="private" virt="non-virtual"><scope>RingNetworkNode</scope><name>epNetworkTCP_</name></member>
+      <member refid="class_ring_network_node_1a343ec8342e27d96695607dc37f262b9d" prot="private" virt="non-virtual"><scope>RingNetworkNode</scope><name>epWrappedBroadcast_</name></member>
+      <member refid="class_ring_network_node_1add155bcc9d72bdb7427b308eaa217978" prot="private" virt="virtual"><scope>RingNetworkNode</scope><name>handleHighPrecisionMachineMessageReply</name></member>
+      <member refid="class_ring_network_node_1ab4f690a4f8354ae57b6a60e4e4a3dcf4" prot="private" virt="virtual"><scope>RingNetworkNode</scope><name>handleMachinedAnnounceBirth</name></member>
+      <member refid="class_ring_network_node_1a008ac8d9f4017a2d23105828703c69ec" prot="private" virt="virtual"><scope>RingNetworkNode</scope><name>handleMachinedAnnounceDeath</name></member>
+      <member refid="class_ring_network_node_1a3a46aa0c93ea07adec6b1c183f1e311c" prot="private" virt="virtual"><scope>RingNetworkNode</scope><name>handleMachinedAnnounceExists</name></member>
+      <member refid="class_ring_network_node_1acc815d14a1366f24c0375639df79d373" prot="private" virt="virtual"><scope>RingNetworkNode</scope><name>handleWholeMachineMessageReply</name></member>
+      <member refid="class_ring_network_node_1a32d7bdc1dfdc989bda853d83878180bd" prot="private" virt="virtual"><scope>RingNetworkNode</scope><name>initExternalNetworkInterfaces</name></member>
+      <member refid="class_network_node_1a2b0a5947366d4e22c7a6c7396556a761" prot="public" virt="non-virtual"><scope>RingNetworkNode</scope><name>initNetworkInterfaces</name></member>
+      <member refid="class_ring_network_node_1a8ee4ed66770b47fa5b84babe80ed942f" prot="public" virt="virtual"><scope>RingNetworkNode</scope><name>isBroadcastResponse</name></member>
+      <member refid="class_network_node_1ad4449bcbf4ce02e3ca57552ce4fb71d5" prot="public" virt="non-virtual"><scope>RingNetworkNode</scope><name>isDefaultPort</name></member>
+      <member refid="class_network_node_1a0162469d287b9bde677fd2d8fda5bf9e" prot="public" virt="non-virtual"><scope>RingNetworkNode</scope><name>listenOnEndpoints</name></member>
+      <member refid="class_ring_network_node_1ab556aca247d5fdb524a3205662af0080" prot="private" virt="virtual"><scope>RingNetworkNode</scope><name>listenOnExternalEndpoints</name></member>
+      <member refid="class_ring_network_node_1a4c77aa0d078829f7cdd0759151a8c6a6" prot="private" virt="non-virtual"><scope>RingNetworkNode</scope><name>markMachineMessageReceived</name></member>
+      <member refid="class_network_node_1aa52b6fb625756b157e33f0f10e2cd98b" prot="public" virt="non-virtual"><scope>RingNetworkNode</scope><name>networkAddr</name></member>
+      <member refid="class_network_node_1a8ea43d56e13f46b2a1819e5b96ad3478" prot="public" virt="non-virtual"><scope>RingNetworkNode</scope><name>NetworkNode</name></member>
+      <member refid="class_network_node_1a7581ca5d2410231b999f367487e4a84ca1cdc9fcaead5ce7048dd19951c818ccd" prot="public" virt="non-virtual"><scope>RingNetworkNode</scope><name>NODE_LEAF</name></member>
+      <member refid="class_network_node_1a7581ca5d2410231b999f367487e4a84cadd46432278229d8ac679fbfeb21e2cc9" prot="public" virt="non-virtual"><scope>RingNetworkNode</scope><name>NODE_RING_NETWORK</name></member>
+      <member refid="class_network_node_1a7581ca5d2410231b999f367487e4a84cad003b2e47c1e88e14ada5c4a8e75eb32" prot="public" virt="non-virtual"><scope>RingNetworkNode</scope><name>NODE_TOP_LEVEL</name></member>
+      <member refid="class_network_node_1a7581ca5d2410231b999f367487e4a84ca5d429b377cb75808342dec855e5d09e0" prot="public" virt="non-virtual"><scope>RingNetworkNode</scope><name>NODE_UNKNOWN_NETWORK</name></member>
+      <member refid="class_network_node_1a7581ca5d2410231b999f367487e4a84c" prot="public" virt="non-virtual"><scope>RingNetworkNode</scope><name>NodeType</name></member>
+      <member refid="class_ring_network_node_1ae5359cb00a527b4b54a3d3cccdfbb47d" prot="public" virt="virtual"><scope>RingNetworkNode</scope><name>outgoingUDPEndpoint</name></member>
+      <member refid="class_network_node_1a214eacbc97325fc7290634954d43fdc5" prot="public" virt="non-virtual"><scope>RingNetworkNode</scope><name>port</name></member>
+      <member refid="class_ring_network_node_1abde6139c15e264adff2c7813d408d249" prot="public" virt="non-virtual"><scope>RingNetworkNode</scope><name>RingNetworkNode</name></member>
+      <member refid="class_ring_network_node_1abae73fce9402cfe3b33ec2f0f9b88325" prot="public" virt="virtual"><scope>RingNetworkNode</scope><name>sendBroadcast</name></member>
+      <member refid="class_ring_network_node_1ab49a8b9c9ba482b11bbc82f7f1c15763" prot="public" virt="virtual"><scope>RingNetworkNode</scope><name>sendBroadcast</name></member>
+      <member refid="class_ring_network_node_1acc6c8ad7e976f6d6a1ff96e80eb6ca39" prot="public" virt="virtual"><scope>RingNetworkNode</scope><name>sendWrappedBroadcastPacket</name></member>
+      <member refid="class_network_node_1ad8c42da72e920b4b2470d24c588019b3" prot="public" virt="non-virtual"><scope>RingNetworkNode</scope><name>setInternalInterface</name></member>
+      <member refid="class_ring_network_node_1af46a8b364fd684ffdcc636e96ce318c6" prot="private" virt="virtual"><scope>RingNetworkNode</scope><name>startHeartbeat</name></member>
+      <member refid="class_network_node_1ac17508bae117c8a432a361c02c224e13" prot="public" virt="non-virtual"><scope>RingNetworkNode</scope><name>strToNodeType</name></member>
+      <member refid="class_network_node_1a37bc8d64c323d46841bdbac935a43dbb" prot="public" virt="non-virtual"><scope>RingNetworkNode</scope><name>strToNodeType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

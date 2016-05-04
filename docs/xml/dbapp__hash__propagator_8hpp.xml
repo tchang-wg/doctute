@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dbapp__hash__propagator_8hpp" kind="file" language="C++">
+    <compoundname>dbapp_hash_propagator.hpp</compoundname>
+    <includes refid="loginapp__gateway_8hpp" local="yes">loginapp_gateway.hpp</includes>
+    <includes refid="storage__shard_8hpp" local="yes">storage_shard.hpp</includes>
+    <includedby refid="dbappmgr_8hpp" local="yes">dbappmgr/dbappmgr.hpp</includedby>
+    <includedby refid="dbapp__hash__propagator_8cpp" local="yes">dbappmgr/dbapp_hash_propagator.cpp</includedby>
+    <includedby refid="loginapp__gateway_8cpp" local="yes">dbappmgr/loginapp_gateway.cpp</includedby>
+    <incdepgraph>
+      <node id="15820">
+        <label>network/misc.hpp</label>
+      </node>
+      <node id="15825">
+        <label>network/bundle.hpp</label>
+      </node>
+      <node id="15823">
+        <label>db/dbapp_interface.hpp</label>
+      </node>
+      <node id="15814">
+        <label>dbappmgr/dbapp_hash_propagator.hpp</label>
+        <link refid="dbapp_hash_propagator.hpp"/>
+        <childnode refid="15815" relation="include">
+        </childnode>
+        <childnode refid="15821" relation="include">
+        </childnode>
+      </node>
+      <node id="15816">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="15827">
+        <label>cstdmf/bw_string.hpp</label>
+      </node>
+      <node id="15817">
+        <label>cstdmf/watcher.hpp</label>
+      </node>
+      <node id="15815">
+        <label>loginapp_gateway.hpp</label>
+        <link refid="loginapp__gateway_8hpp_source"/>
+        <childnode refid="15816" relation="include">
+        </childnode>
+        <childnode refid="15817" relation="include">
+        </childnode>
+        <childnode refid="15818" relation="include">
+        </childnode>
+        <childnode refid="15819" relation="include">
+        </childnode>
+        <childnode refid="15820" relation="include">
+        </childnode>
+      </node>
+      <node id="15821">
+        <label>storage_shard.hpp</label>
+        <link refid="storage__shard_8hpp_source"/>
+        <childnode refid="15822" relation="include">
+        </childnode>
+        <childnode refid="15827" relation="include">
+        </childnode>
+        <childnode refid="15816" relation="include">
+        </childnode>
+        <childnode refid="15818" relation="include">
+        </childnode>
+        <childnode refid="15824" relation="include">
+        </childnode>
+      </node>
+      <node id="15822">
+        <label>dbapp.hpp</label>
+        <link refid="dbappmgr_2dbapp_8hpp_source"/>
+        <childnode refid="15816" relation="include">
+        </childnode>
+        <childnode refid="15817" relation="include">
+        </childnode>
+        <childnode refid="15823" relation="include">
+        </childnode>
+        <childnode refid="15818" relation="include">
+        </childnode>
+        <childnode refid="15824" relation="include">
+        </childnode>
+        <childnode refid="15825" relation="include">
+        </childnode>
+        <childnode refid="15826" relation="include">
+        </childnode>
+      </node>
+      <node id="15819">
+        <label>network/basictypes.hpp</label>
+      </node>
+      <node id="15818">
+        <label>db/db_hash_schemes.hpp</label>
+      </node>
+      <node id="15824">
+        <label>db/storage_shard_descriptor.hpp</label>
+      </node>
+      <node id="15826">
+        <label>network/channel_owner.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="15828">
+        <label>dbappmgr/dbapp_hash_propagator.hpp</label>
+        <link refid="dbapp_hash_propagator.hpp"/>
+        <childnode refid="15829" relation="include">
+        </childnode>
+      </node>
+      <node id="15829">
+        <label>dbappmgr/dbappmgr.hpp</label>
+        <link refid="dbappmgr_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_d_b_app_hash_propagator" prot="public">DBAppHashPropagator</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DBAPP_HASH_PROPAGATOR_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DBAPP_HASH_PROPAGATOR_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;loginapp_gateway.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;storage_shard.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_d_b_app_hash_propagator" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_d_b_app_hash_propagator" kindref="compound">DBAppHashPropagator</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BW::map&lt;<sp/>Mercury::Address,<sp/>LoginAppGateway<sp/>&gt;<sp/>LoginApps;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BW::map&lt;<sp/>Mercury::Address,<sp/>DBAppPtr<sp/>&gt;<sp/>DBAppAddressMap;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>Mercury::ChannelOwner<sp/><ref refid="class_base_app_mgr" kindref="compound">BaseAppMgr</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>Mercury::ChannelOwner<sp/><ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>DBHashSchemes::ShardGUIDBuckets&lt;<sp/>StorageShardPtr<sp/>&gt;::HashScheme</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>ShardHash;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_b_app_hash_propagator_1a602880c99aafcf8e27768efda551ea99" kindref="member">DBAppHashPropagator</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_d_b_app_hash_propagator_1a2f2a899845e94edf7540b05acf95b36d" kindref="member">barrier</ref>(<sp/>LoginApps<sp/>&amp;<sp/>loginApps,<sp/>BaseAppMgr<sp/>&amp;<sp/>baseAppMgr<sp/>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_d_b_app_hash_propagator_1a5b774db039d5614f5a62ae48f321803d" kindref="member">update</ref>(<sp/>LoginApps<sp/>&amp;<sp/>loginApps,<sp/>BaseAppMgr<sp/>&amp;<sp/>baseAppMgr,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CellAppMgr<sp/>&amp;<sp/>cellAppMgr,<sp/>MemoryOStream<sp/>&amp;<sp/>shardHashData,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>shouldResetGameServerState,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>needsBarrier<sp/>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_d_b_app_hash_propagator_1a1526087e7ded30aac20e93c08ccbccbf" kindref="member">updateBaseAppMgr</ref>(<sp/>BaseAppMgr<sp/>&amp;<sp/>baseAppMgr,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MemoryOStream<sp/>&amp;<sp/>shardHashData<sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_d_b_app_hash_propagator_1a531c6d5a059bc9e5357f240674d37715" kindref="member">updateCellAppMgr</ref>(<sp/>CellAppMgr<sp/>&amp;<sp/>cellAppMgr,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>addr<sp/>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>isWaitingForReceipts(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>value<sp/>)<sp/>{<sp/>isWaitingForReceipts_<sp/>=<sp/>value;<sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isWaitingForReceipts_;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>DBAPP_HASH_PROPAGATOR_HPP</highlight></codeline>
+    </programlisting>
+    <location file="dbappmgr/dbapp_hash_propagator.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_timer_controller" kind="class" language="C++" prot="public">
+    <compoundname>TimerController</compoundname>
+    <basecompoundref refid="class_controller" prot="public" virt="non-virtual">Controller</basecompoundref>
+    <includes refid="timer__controller_8hpp" local="no">timer_controller.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_timer_controller_1ac6d5cc88e9544118063b1786a35808b8" prot="public" static="no" mutable="no">
+        <type>PY_AUTO_CONTROLLER_FACTORY_DECLARE(<ref refid="class_timer_controller" kindref="compound">TimerController</ref>, ARG(float, OPTARG(float, 0.f, OPTARG(int, 0, END)))) private Handler *</type>
+        <definition>PY_AUTO_CONTROLLER_FACTORY_DECLARE ( TimerController, ARG( float, OPTARG( float, 0.f, OPTARG( int, 0, END ) ) ) ) private Handler* TimerController::pHandler_</definition>
+        <argsstring></argsstring>
+        <name>pHandler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handler for a timer to go into the global time queue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/timer_controller.hpp" line="59" column="1" bodyfile="cellapp/timer_controller.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_timer_controller_1a9dbbbfdd8af5432813536a6597930816" prot="public" static="no" mutable="no">
+        <type>GameTime</type>
+        <definition>GameTime TimerController::start_</definition>
+        <argsstring></argsstring>
+        <name>start_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/timer_controller.hpp" line="61" column="1" bodyfile="cellapp/timer_controller.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_timer_controller_1ae606bc3e0e7dfad1cab0be4b8d77f5e6" prot="public" static="no" mutable="no">
+        <type>GameTime</type>
+        <definition>GameTime TimerController::interval_</definition>
+        <argsstring></argsstring>
+        <name>interval_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/timer_controller.hpp" line="62" column="1" bodyfile="cellapp/timer_controller.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_timer_controller_1a75cc8afd97e2f0c56181f83697ed7a0a" prot="public" static="no" mutable="no">
+        <type>TimerHandle</type>
+        <definition>TimerHandle TimerController::timerHandle_</definition>
+        <argsstring></argsstring>
+        <name>timerHandle_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/timer_controller.hpp" line="63" column="1" bodyfile="cellapp/timer_controller.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_timer_controller_1abc0bfee3df6f93114234d1d54b1b0703" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TimerController::TimerController</definition>
+        <argsstring>(GameTime start=0, GameTime interval=0)</argsstring>
+        <name>TimerController</name>
+        <param>
+          <type>GameTime</type>
+          <declname>start</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>GameTime</type>
+          <declname>interval</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct the <ref refid="class_timer_controller" kindref="compound">TimerController</ref>. is zero, there will be only a single callback, and the controller will destroy itself automatically after that callback.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timestamp of the first callback </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Duration in game ticks between subsequent callbacks </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/timer_controller.hpp" line="21" column="1" bodyfile="cellapp/timer_controller.cpp" bodystart="78" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_controller_1a52cfd0753e3f544db8a314ab1b9743fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TimerController::writeRealToStream</definition>
+        <argsstring>(BinaryOStream &amp;stream)</argsstring>
+        <name>writeRealToStream</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write out our current state. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/timer_controller.hpp" line="23" column="1" bodyfile="cellapp/timer_controller.cpp" bodystart="133" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_controller_1a690b62d47342abb639dc1520c4ecd054" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TimerController::readRealFromStream</definition>
+        <argsstring>(BinaryIStream &amp;stream)</argsstring>
+        <name>readRealFromStream</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read our state from the stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/timer_controller.hpp" line="24" column="1" bodyfile="cellapp/timer_controller.cpp" bodystart="143" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_controller_1acf3cc43ac2f43459fe2752b1720f7dab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TimerController::handleTimeout</definition>
+        <argsstring>()</argsstring>
+        <name>handleTimeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle timer callbacks from TimeQueue and pass them on. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/timer_controller.hpp" line="26" column="1" bodyfile="cellapp/timer_controller.cpp" bodystart="161" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_controller_1a9f6063f74efe013bbcdfedcaefa5024e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TimerController::onHandlerRelease</definition>
+        <argsstring>()</argsstring>
+        <name>onHandlerRelease</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called when the handler releases us </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/timer_controller.hpp" line="27" column="1" bodyfile="cellapp/timer_controller.cpp" bodystart="180" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_controller_1a3b84e3fb335975c663fa2e7ef19debfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TimerController::startReal</definition>
+        <argsstring>(bool isInitialStart)</argsstring>
+        <name>startReal</name>
+        <reimplements refid="class_controller_1a18d601aacf49c6f9f5234ba83921285d">startReal</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>isInitialStart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Start the timer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/timer_controller.hpp" line="30" column="1" bodyfile="cellapp/timer_controller.cpp" bodystart="90" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_controller_1af37eb194d0fe72a747a3724a27dc6aad" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TimerController::stopReal</definition>
+        <argsstring>(bool isFinalStop)</argsstring>
+        <name>stopReal</name>
+        <reimplements refid="class_controller_1a806642c29ced79e6da8bd62c159c8294">stopReal</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>isFinalStop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stop the timer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/timer_controller.hpp" line="31" column="1" bodyfile="cellapp/timer_controller.cpp" bodystart="115" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_timer_controller_1a1f80b98eb444111e6a16089905663da5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_controller_1_1_factory_fn_ret" kindref="compound">FactoryFnRet</ref></type>
+        <definition>BW_BEGIN_NAMESPACE Controller::FactoryFnRet TimerController::New</definition>
+        <argsstring>(float initialOffset, float repeatOffset, int userArg=0)</argsstring>
+        <name>New</name>
+        <param>
+          <type>float</type>
+          <declname>initialOffset</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>repeatOffset</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>userArg</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/timer_controller.hpp" line="33" column="1" bodyfile="cellapp/timer_controller.cpp" bodystart="36" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements server objects owned by an entity script, that move between cells when the script object moves. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2943">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="2942">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="2943" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2941">
+        <label>TimerController</label>
+        <link refid="class_timer_controller"/>
+        <childnode refid="2942" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2946">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="2949">
+        <label>PyObjectPlus</label>
+      </node>
+      <node id="2947">
+        <label>Entity</label>
+        <link refid="class_entity"/>
+        <childnode refid="2948" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2949" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2948">
+        <label>BWEntity</label>
+      </node>
+      <node id="2945">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="2946" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2947" relation="usage">
+          <edgelabel>s_factoryFnEntity_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2944">
+        <label>TimerController</label>
+        <link refid="class_timer_controller"/>
+        <childnode refid="2945" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2944" relation="usage">
+          <edgelabel>pHandler_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/timer_controller.hpp" line="17" column="1" bodyfile="cellapp/timer_controller.hpp" bodystart="16" bodyend="64"/>
+    <listofallmembers>
+      <member refid="class_controller_1a5c08d1a7974edb523c97f03c843b7a2a" prot="public" virt="non-virtual"><scope>TimerController</scope><name>addControllerDigest</name></member>
+      <member refid="class_controller_1a3332cc6b7c51b257f6b5bf8cccf6b296" prot="public" virt="non-virtual"><scope>TimerController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a797d7bd68f93f36fbd4edc92c9de300e" prot="public" virt="non-virtual"><scope>TimerController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a31d2c2c443222d9134e511eb734493fd" prot="public" virt="non-virtual"><scope>TimerController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a6ef0365a5bc295f4a92430ef0e809367" prot="public" virt="non-virtual"><scope>TimerController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a8972473450e1ea11239ac96c370fddd0" prot="public" virt="non-virtual"><scope>TimerController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a0dab5e21880d0c861495fa1909f95cbe" prot="public" virt="non-virtual"><scope>TimerController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a9e5ce4bd55f4d6cac2380bf3dfe95d5e" prot="public" virt="non-virtual"><scope>TimerController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1aef85b8faeee04f32c6c8fc384537be0d" prot="protected" virt="non-virtual"><scope>TimerController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a2a148ee762b8dae72593a0fb38a029bb" prot="public" virt="non-virtual"><scope>TimerController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a130a7805734c754c3ff8ab59ee01dea2" prot="public" virt="non-virtual"><scope>TimerController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1ade939a909a83784f4e733140c5f6be0f" prot="public" virt="non-virtual"><scope>TimerController</scope><name>create</name></member>
+      <member refid="class_controller_1a7c32bc59c340ade9d98e20d72ae40e7a" prot="public" virt="non-virtual"><scope>TimerController</scope><name>createIfNecessary</name></member>
+      <member refid="class_controller_1a3a96f5d838427d0b251f1cf5792350db" prot="public" virt="non-virtual"><scope>TimerController</scope><name>CreatorFn</name></member>
+      <member refid="class_controller_1aa251a2d5e3be8104a67eb22cc7b33781" prot="public" virt="non-virtual"><scope>TimerController</scope><name>ct</name></member>
+      <member refid="class_controller_1ad0a29b9b91700a808c328fb828ea5433" prot="public" virt="non-virtual"><scope>TimerController</scope><name>disowned</name></member>
+      <member refid="class_controller_1a18e942dbb34d82bc4cfcc9718b1c970f" prot="public" virt="pure-virtual"><scope>TimerController</scope><name>domain</name></member>
+      <member refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" prot="public" virt="non-virtual"><scope>TimerController</scope><name>entity</name></member>
+      <member refid="class_controller_1a30b2745a2b74633dac7bba027bfe5eda" prot="public" virt="non-virtual"><scope>TimerController</scope><name>EXCLUSIVE_CONTROLLER_ID_MASK</name></member>
+      <member refid="class_controller_1ad5aa8f4242778920938f18a19ca039ab" prot="public" virt="pure-virtual"><scope>TimerController</scope><name>exclusiveID</name></member>
+      <member refid="class_controller_1a4399843065da63b4d68e76bcba1c9b33" prot="public" virt="non-virtual"><scope>TimerController</scope><name>factories</name></member>
+      <member refid="class_controller_1a59b8e5ee7602267120c203e2d73a4aad" prot="public" virt="non-virtual"><scope>TimerController</scope><name>factory</name></member>
+      <member refid="class_controller_1a8c83b29edd91cff97310b85fd2dd62a9" prot="public" virt="non-virtual"><scope>TimerController</scope><name>FactoryFn</name></member>
+      <member refid="class_controller_1a01630a3d95bde81822c3ac80cc68bd72" prot="public" virt="non-virtual"><scope>TimerController</scope><name>ffn</name></member>
+      <member refid="class_controller_1a912cc50ab630c16d340e6750571c7d36" prot="protected" virt="non-virtual"><scope>TimerController</scope><name>ghost</name></member>
+      <member refid="class_timer_controller_1acf3cc43ac2f43459fe2752b1720f7dab" prot="public" virt="non-virtual"><scope>TimerController</scope><name>handleTimeout</name></member>
+      <member refid="class_controller_1a8c2f39fc63cd53d3a098b14310cdbc6c" prot="public" virt="non-virtual"><scope>TimerController</scope><name>id</name></member>
+      <member refid="class_controller_1a97d6e40743b8130b496b1aa604670c83" prot="public" virt="non-virtual"><scope>TimerController</scope><name>init</name></member>
+      <member refid="class_timer_controller_1ae606bc3e0e7dfad1cab0be4b8d77f5e6" prot="public" virt="non-virtual"><scope>TimerController</scope><name>interval_</name></member>
+      <member refid="class_controller_1a31bb10031669992bd8611769195460a0" prot="public" virt="non-virtual"><scope>TimerController</scope><name>isAttached</name></member>
+      <member refid="class_timer_controller_1a1f80b98eb444111e6a16089905663da5" prot="public" virt="non-virtual"><scope>TimerController</scope><name>New</name></member>
+      <member refid="class_timer_controller_1a9f6063f74efe013bbcdfedcaefa5024e" prot="public" virt="non-virtual"><scope>TimerController</scope><name>onHandlerRelease</name></member>
+      <member refid="class_timer_controller_1ac6d5cc88e9544118063b1786a35808b8" prot="public" virt="non-virtual"><scope>TimerController</scope><name>pHandler_</name></member>
+      <member refid="class_timer_controller_1a690b62d47342abb639dc1520c4ecd054" prot="public" virt="non-virtual"><scope>TimerController</scope><name>readRealFromStream</name></member>
+      <member refid="class_controller_1a27d88cafe564f8c3e97477f82b392b74" prot="public" virt="non-virtual"><scope>TimerController</scope><name>s_factoryFnEntity_</name></member>
+      <member refid="class_controller_1a28fbc433135ec5668b0de6286b0fb1fe" prot="protected" virt="non-virtual"><scope>TimerController</scope><name>standardCallback</name></member>
+      <member refid="class_timer_controller_1a9dbbbfdd8af5432813536a6597930816" prot="public" virt="non-virtual"><scope>TimerController</scope><name>start_</name></member>
+      <member refid="class_timer_controller_1a3b84e3fb335975c663fa2e7ef19debfd" prot="public" virt="virtual"><scope>TimerController</scope><name>startReal</name></member>
+      <member refid="class_timer_controller_1af37eb194d0fe72a747a3724a27dc6aad" prot="public" virt="virtual"><scope>TimerController</scope><name>stopReal</name></member>
+      <member refid="class_timer_controller_1abc0bfee3df6f93114234d1d54b1b0703" prot="public" virt="non-virtual"><scope>TimerController</scope><name>TimerController</name></member>
+      <member refid="class_timer_controller_1a75cc8afd97e2f0c56181f83697ed7a0a" prot="public" virt="non-virtual"><scope>TimerController</scope><name>timerHandle_</name></member>
+      <member refid="class_controller_1aae5de9edfa47a204f2094fdeb8091dbd" prot="public" virt="pure-virtual"><scope>TimerController</scope><name>type</name></member>
+      <member refid="class_controller_1ac066a12fbae3979fbe86f4ee20c02904" prot="public" virt="non-virtual"><scope>TimerController</scope><name>typeName</name></member>
+      <member refid="class_controller_1aad8a489249dcc3b5edde468d05cb5c7f" prot="public" virt="non-virtual"><scope>TimerController</scope><name>userArg</name></member>
+      <member refid="class_timer_controller_1a52cfd0753e3f544db8a314ab1b9743fe" prot="public" virt="non-virtual"><scope>TimerController</scope><name>writeRealToStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

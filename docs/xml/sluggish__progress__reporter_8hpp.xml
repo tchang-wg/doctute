@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="sluggish__progress__reporter_8hpp" kind="file" language="C++">
+    <compoundname>sluggish_progress_reporter.hpp</compoundname>
+    <includes refid="dbapp__status__reporter_8hpp" local="yes">dbapp_status_reporter.hpp</includes>
+    <includes local="yes">cstdmf/timestamp.hpp</includes>
+    <includedby refid="consolidation__progress__reporter_8hpp" local="yes">tools/consolidate_dbs/consolidation_progress_reporter.hpp</includedby>
+    <includedby refid="file__transfer__progress__reporter_8hpp" local="yes">tools/consolidate_dbs/file_transfer_progress_reporter.hpp</includedby>
+    <incdepgraph>
+      <node id="18885">
+        <label>cstdmf/bw_string.hpp</label>
+      </node>
+      <node id="18883">
+        <label>dbapp_status_reporter.hpp</label>
+        <link refid="dbapp__status__reporter_8hpp_source"/>
+        <childnode refid="18884" relation="include">
+        </childnode>
+        <childnode refid="18885" relation="include">
+        </childnode>
+      </node>
+      <node id="18886">
+        <label>cstdmf/timestamp.hpp</label>
+      </node>
+      <node id="18882">
+        <label>tools/consolidate_dbs/sluggish_progress_reporter.hpp</label>
+        <link refid="sluggish_progress_reporter.hpp"/>
+        <childnode refid="18883" relation="include">
+        </childnode>
+        <childnode refid="18886" relation="include">
+        </childnode>
+      </node>
+      <node id="18884">
+        <label>cstdmf/bw_namespace.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="18888">
+        <label>tools/consolidate_dbs/consolidation_progress_reporter.hpp</label>
+        <link refid="consolidation__progress__reporter_8hpp_source"/>
+      </node>
+      <node id="18887">
+        <label>tools/consolidate_dbs/sluggish_progress_reporter.hpp</label>
+        <link refid="sluggish_progress_reporter.hpp"/>
+        <childnode refid="18888" relation="include">
+        </childnode>
+        <childnode refid="18889" relation="include">
+        </childnode>
+      </node>
+      <node id="18889">
+        <label>tools/consolidate_dbs/file_transfer_progress_reporter.hpp</label>
+        <link refid="file__transfer__progress__reporter_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_sluggish_progress_reporter" prot="public">SluggishProgressReporter</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CONSOLIDATE_DBS__SLUGGISH_PROGRESS_REPORTER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONSOLIDATE_DBS__SLUGGISH_PROGRESS_REPORTER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;dbapp_status_reporter.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/timestamp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_sluggish_progress_reporter" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sluggish_progress_reporter" kindref="compound">SluggishProgressReporter</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22" refid="class_sluggish_progress_reporter_1ab807400b3da190ed09ef0441dbea5046" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sluggish_progress_reporter_1ab807400b3da190ed09ef0441dbea5046" kindref="member">SluggishProgressReporter</ref>(<sp/><ref refid="class_d_b_app_status_reporter" kindref="compound">DBAppStatusReporter</ref><sp/>&amp;<sp/>reporter,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>reportInterval<sp/>=<sp/>0.5<sp/>)<sp/>:<sp/></highlight><highlight class="comment">//<sp/>Half<sp/>a<sp/>second</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reporter_(<sp/>reporter<sp/>),</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reportInterval_(<sp/>uint64(<sp/>reportInterval<sp/>*<sp/>stampsPerSecondD()<sp/>)<sp/>),</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lastReportTime_(<sp/>timestamp()<sp/>)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reportProgress()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64<sp/>now<sp/>=<sp/>timestamp();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((now<sp/>-<sp/>lastReportTime_)<sp/>&gt;<sp/>reportInterval_)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;reportProgressNow();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lastReportTime_<sp/>=<sp/>now;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Should<sp/>be<sp/>overridden<sp/>by<sp/>derived<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reportProgressNow()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_b_app_status_reporter" kindref="compound">DBAppStatusReporter</ref><sp/>&amp;<sp/>reporter()</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>reporter_;<sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_b_app_status_reporter" kindref="compound">DBAppStatusReporter</ref><sp/>&amp;<sp/>reporter_;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64<sp/><sp/>reportInterval_;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64<sp/><sp/>lastReportTime_;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>CONSOLIDATE_DBS__SLUGGISH_PROGRESS_REPORTER_HPP</highlight></codeline>
+    </programlisting>
+    <location file="tools/consolidate_dbs/sluggish_progress_reporter.hpp"/>
+  </compounddef>
+</doxygen>

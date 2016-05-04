@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_wrapped_message_handler" kind="class" language="C++" prot="public">
+    <compoundname>WrappedMessageHandler</compoundname>
+    <includes refid="wrapped__message__handler_8hpp" local="no">wrapped_message_handler.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_wrapped_message_handler_1a3f49b6ae11c2e06b007e3a939a378f0b" prot="private" static="no" mutable="no">
+        <type>SortedManagers</type>
+        <definition>SortedManagers WrappedMessageHandler::sortedManagers_</definition>
+        <argsstring></argsstring>
+        <name>sortedManagers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/wrapped_message_handler.hpp" line="43" column="1" bodyfile="tools/bwmachined/wrapped_message_handler.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wrapped_message_handler_1a53572b3cb5cd325f2729dfc6ef5347c1" prot="private" static="no" mutable="no">
+        <type>ManagerLookup</type>
+        <definition>ManagerLookup WrappedMessageHandler::managersBySeq_</definition>
+        <argsstring></argsstring>
+        <name>managersBySeq_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/wrapped_message_handler.hpp" line="46" column="1" bodyfile="tools/bwmachined/wrapped_message_handler.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wrapped_message_handler_1a0ee9ffbd75481b281c4199eeef12ce1a" prot="private" static="no" mutable="no">
+        <type>TimeQueue64::TimeStamp</type>
+        <definition>TimeQueue64::TimeStamp WrappedMessageHandler::timeoutMillis_</definition>
+        <argsstring></argsstring>
+        <name>timeoutMillis_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/wrapped_message_handler.hpp" line="48" column="1" bodyfile="tools/bwmachined/wrapped_message_handler.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wrapped_message_handler_1a903e4b25b4f7d4347a0383ca9e8f01d4" prot="private" static="no" mutable="no">
+        <type>uint8</type>
+        <definition>uint8 WrappedMessageHandler::maxAttempts_</definition>
+        <argsstring></argsstring>
+        <name>maxAttempts_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/wrapped_message_handler.hpp" line="49" column="1" bodyfile="tools/bwmachined/wrapped_message_handler.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_wrapped_message_handler_1a3aead9ca75a8f9d7a88873d129419201" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE WrappedMessageHandler::WrappedMessageHandler</definition>
+        <argsstring>(TimeQueue64::TimeStamp timeoutMillis=(MachineGuardMessage::TIMEOUT_SECONDS *1000), uint8 maxAttempts=MachineGuardMessage::MAX_SEND_ATTEMPTS)</argsstring>
+        <name>WrappedMessageHandler</name>
+        <param>
+          <type>TimeQueue64::TimeStamp</type>
+          <declname>timeoutMillis</declname>
+          <defval>(MachineGuardMessage::TIMEOUT_SECONDS *1000)</defval>
+        </param>
+        <param>
+          <type>uint8</type>
+          <declname>maxAttempts</declname>
+          <defval>MachineGuardMessage::MAX_SEND_ATTEMPTS</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timeoutMillis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of milliseconds until a broadcast is considered to have timed out. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxAttempts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of broadcast attempts to make before giving up and sending an incomplete response. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/wrapped_message_handler.hpp" line="27" column="1" bodyfile="tools/bwmachined/wrapped_message_handler.cpp" bodystart="19" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wrapped_message_handler_1ad071324cfe83591820724a6765e43e97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WrappedMessageHandler::~WrappedMessageHandler</definition>
+        <argsstring>()</argsstring>
+        <name>~WrappedMessageHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/wrapped_message_handler.hpp" line="32" column="1" bodyfile="tools/bwmachined/wrapped_message_handler.cpp" bodystart="33" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wrapped_message_handler_1a56e3da0813bbdcf6d754c7fee761224d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool WrappedMessageHandler::addBroadcastRequest</definition>
+        <argsstring>(BroadcastWrapperMessage &amp;bwm, BWMachined &amp;machined, ConnectionWrapperPtr pReplyConnection)</argsstring>
+        <name>addBroadcastRequest</name>
+        <param>
+          <type>BroadcastWrapperMessage &amp;</type>
+          <declname>bwm</declname>
+        </param>
+        <param>
+          <type><ref refid="class_b_w_machined" kindref="compound">BWMachined</ref> &amp;</type>
+          <declname>machined</declname>
+        </param>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref></type>
+          <declname>pReplyConnection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unwraps the packet from the given message and broadcasts it to the cluster.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bwm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message holding the wrapped packet </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pReplyConnection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The connection to send the response on</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Whether the broadcast was initiated successfully </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/wrapped_message_handler.hpp" line="34" column="1" bodyfile="tools/bwmachined/wrapped_message_handler.cpp" bodystart="50" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wrapped_message_handler_1a4cd6d99a09478fc57991842bad7f7464" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool WrappedMessageHandler::interceptPacket</definition>
+        <argsstring>(const MGMPacket &amp;packet, uint32 ip)</argsstring>
+        <name>interceptPacket</name>
+        <param>
+          <type>const MGMPacket &amp;</type>
+          <declname>packet</declname>
+        </param>
+        <param>
+          <type>uint32</type>
+          <declname>ip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Intercept this packet before it undergoes regular BWMachineD processing. If it contain a response to a broadcast this handler sent, then the packet is added to the appropriate response message, and a final response sent if the broadcast is complete.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>packet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The packet to extract a response from </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ipAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The host that sent the packet</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Whether the packet has been intercepted. If true, then BWMachineD should not process the packet any further. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/wrapped_message_handler.hpp" line="37" column="1" bodyfile="tools/bwmachined/wrapped_message_handler.cpp" bodystart="106" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wrapped_message_handler_1a396b61d19aa572b4992813af02fcdb16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WrappedMessageHandler::process</definition>
+        <argsstring>()</argsstring>
+        <name>process</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check each of the active broadcasts for timeouts or completion, and cleanup, re-broadcast or send an incomplete reply as necessary. Should be called regularly from within the BWMachineD main loop. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/wrapped_message_handler.hpp" line="39" column="1" bodyfile="tools/bwmachined/wrapped_message_handler.cpp" bodystart="145" bodyend="190"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class accepts wrapped messages from other hosts, forwards them on to other BWMachineD instances as appropriate, then returns the response back to the source. Tracks the forwarding via collections of manager objects. Currently only handles broadcasts, on behalf of tools/apps. </para>    </detaileddescription>
+    <location file="tools/bwmachined/wrapped_message_handler.hpp" line="25" column="1" bodyfile="tools/bwmachined/wrapped_message_handler.hpp" bodystart="24" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_wrapped_message_handler_1a56e3da0813bbdcf6d754c7fee761224d" prot="public" virt="non-virtual"><scope>WrappedMessageHandler</scope><name>addBroadcastRequest</name></member>
+      <member refid="class_wrapped_message_handler_1a4cd6d99a09478fc57991842bad7f7464" prot="public" virt="non-virtual"><scope>WrappedMessageHandler</scope><name>interceptPacket</name></member>
+      <member refid="class_wrapped_message_handler_1a53572b3cb5cd325f2729dfc6ef5347c1" prot="private" virt="non-virtual"><scope>WrappedMessageHandler</scope><name>managersBySeq_</name></member>
+      <member refid="class_wrapped_message_handler_1a903e4b25b4f7d4347a0383ca9e8f01d4" prot="private" virt="non-virtual"><scope>WrappedMessageHandler</scope><name>maxAttempts_</name></member>
+      <member refid="class_wrapped_message_handler_1a396b61d19aa572b4992813af02fcdb16" prot="public" virt="non-virtual"><scope>WrappedMessageHandler</scope><name>process</name></member>
+      <member refid="class_wrapped_message_handler_1a3f49b6ae11c2e06b007e3a939a378f0b" prot="private" virt="non-virtual"><scope>WrappedMessageHandler</scope><name>sortedManagers_</name></member>
+      <member refid="class_wrapped_message_handler_1a0ee9ffbd75481b281c4199eeef12ce1a" prot="private" virt="non-virtual"><scope>WrappedMessageHandler</scope><name>timeoutMillis_</name></member>
+      <member refid="class_wrapped_message_handler_1a3aead9ca75a8f9d7a88873d129419201" prot="public" virt="non-virtual"><scope>WrappedMessageHandler</scope><name>WrappedMessageHandler</name></member>
+      <member refid="class_wrapped_message_handler_1ad071324cfe83591820724a6765e43e97" prot="public" virt="non-virtual"><scope>WrappedMessageHandler</scope><name>~WrappedMessageHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

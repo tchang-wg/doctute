@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_space_chooser" kind="class" language="C++" prot="public">
+    <compoundname>SpaceChooser</compoundname>
+    <basecompoundref refid="class_space_visitor" prot="public" virt="non-virtual">SpaceVisitor</basecompoundref>
+    <derivedcompoundref refid="class_hybrid_space_chooser" prot="public" virt="non-virtual">HybridSpaceChooser</derivedcompoundref>
+    <derivedcompoundref refid="class_largest_space_chooser" prot="public" virt="non-virtual">LargestSpaceChooser</derivedcompoundref>
+    <derivedcompoundref refid="class_smallest_space_chooser" prot="public" virt="non-virtual">SmallestSpaceChooser</derivedcompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_space_chooser_1ac3c7d0ac6c68b1bdf22daab55c2c1d78" prot="protected" static="no" mutable="no">
+        <type>const <ref refid="class_space" kindref="compound">Space</ref> *</type>
+        <definition>const Space* SpaceChooser::pSpace_</definition>
+        <argsstring></argsstring>
+        <name>pSpace_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_group.cpp" line="44" column="1" bodyfile="cellappmgr/cell_app_group.cpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_space_chooser_1accf4cd240cf3bf5e63b3f499cca6f26e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SpaceChooser::SpaceChooser</definition>
+        <argsstring>()</argsstring>
+        <name>SpaceChooser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_group.cpp" line="40" column="1" bodyfile="cellappmgr/cell_app_group.cpp" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_space_chooser_1acf791a1e5c3e562223b7f75e76b25364" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_space" kindref="compound">Space</ref> *</type>
+        <definition>const Space* SpaceChooser::pSpace</definition>
+        <argsstring>()</argsstring>
+        <name>pSpace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_group.cpp" line="41" column="1" bodyfile="cellappmgr/cell_app_group.cpp" bodystart="41" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is an interface used to choose a space from a collection. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2761">
+        <label>SmallestSpaceChooser</label>
+        <link refid="class_smallest_space_chooser"/>
+        <childnode refid="2757" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2760">
+        <label>LargestSpaceChooser</label>
+        <link refid="class_largest_space_chooser"/>
+        <childnode refid="2757" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2758">
+        <label>SpaceVisitor</label>
+        <link refid="class_space_visitor"/>
+      </node>
+      <node id="2757">
+        <label>SpaceChooser</label>
+        <link refid="class_space_chooser"/>
+        <childnode refid="2758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2759">
+        <label>HybridSpaceChooser</label>
+        <link refid="class_hybrid_space_chooser"/>
+        <childnode refid="2757" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2765">
+        <label>TimerHandler</label>
+      </node>
+      <node id="2763">
+        <label>SpaceVisitor</label>
+        <link refid="class_space_visitor"/>
+      </node>
+      <node id="2766">
+        <label>GeometryMapper</label>
+      </node>
+      <node id="2762">
+        <label>SpaceChooser</label>
+        <link refid="class_space_chooser"/>
+        <childnode refid="2763" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2764" relation="usage">
+          <edgelabel>pSpace_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2764">
+        <label>Space</label>
+        <link refid="class_space"/>
+        <childnode refid="2765" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2766" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellappmgr/cell_app_group.cpp" line="38" column="1" bodyfile="cellappmgr/cell_app_group.cpp" bodystart="37" bodyend="45"/>
+    <listofallmembers>
+      <member refid="class_space_visitor_1a4593c7fafb4ece0a4c3411efa85c6b15" prot="public" virt="pure-virtual"><scope>SpaceChooser</scope><name>onSpace</name></member>
+      <member refid="class_space_chooser_1acf791a1e5c3e562223b7f75e76b25364" prot="public" virt="non-virtual"><scope>SpaceChooser</scope><name>pSpace</name></member>
+      <member refid="class_space_chooser_1ac3c7d0ac6c68b1bdf22daab55c2c1d78" prot="protected" virt="non-virtual"><scope>SpaceChooser</scope><name>pSpace_</name></member>
+      <member refid="class_space_chooser_1accf4cd240cf3bf5e63b3f499cca6f26e" prot="public" virt="non-virtual"><scope>SpaceChooser</scope><name>SpaceChooser</name></member>
+      <member refid="class_space_visitor_1abf6b5292c556fe38e74724f7b5e95a99" prot="public" virt="virtual"><scope>SpaceChooser</scope><name>~SpaceVisitor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

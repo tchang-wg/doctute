@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="tools_2bots_2entity__type_8hpp" kind="file" language="C++">
+    <compoundname>entity_type.hpp</compoundname>
+    <includes local="yes">Python.h</includes>
+    <includes local="yes">cstdmf/bw_vector.hpp</includes>
+    <includes local="yes">connection/entity_def_constants.hpp</includes>
+    <includes local="yes">cstdmf/stdmf.hpp</includes>
+    <includes local="yes">entitydef/entity_description_map.hpp</includes>
+    <includedby refid="tools_2bots_2entity_8hpp" local="yes">tools/bots/entity.hpp</includedby>
+    <includedby refid="bot__entity_8hpp" local="yes">tools/bots/bot_entity.hpp</includedby>
+    <includedby refid="bot__space_8cpp" local="yes">tools/bots/bot_space.cpp</includedby>
+    <includedby refid="script__bot__entity_8hpp" local="yes">tools/bots/script_bot_entity.hpp</includedby>
+    <includedby refid="client__app_8cpp" local="yes">tools/bots/client_app.cpp</includedby>
+    <includedby refid="tools_2bots_2entity__type_8cpp" local="yes">tools/bots/entity_type.cpp</includedby>
+    <includedby refid="tools_2bots_2py__space_8hpp" local="yes">tools/bots/py_space.hpp</includedby>
+    <includedby refid="py__server_8cpp" local="yes">tools/bots/py_server.cpp</includedby>
+    <includedby refid="tools_2bots_2py__space_8cpp" local="yes">tools/bots/py_space.cpp</includedby>
+    <includedby refid="tools_2bots_2py__spaces_8cpp" local="yes">tools/bots/py_spaces.cpp</includedby>
+    <incdepgraph>
+      <node id="2462">
+        <label>cstdmf/stdmf.hpp</label>
+      </node>
+      <node id="2461">
+        <label>connection/entity_def_constants.hpp</label>
+      </node>
+      <node id="2459">
+        <label>Python.h</label>
+      </node>
+      <node id="2463">
+        <label>entitydef/entity_description_map.hpp</label>
+      </node>
+      <node id="2458">
+        <label>tools/bots/entity_type.hpp</label>
+        <link refid="tools/bots/entity_type.hpp"/>
+        <childnode refid="2459" relation="include">
+        </childnode>
+        <childnode refid="2460" relation="include">
+        </childnode>
+        <childnode refid="2461" relation="include">
+        </childnode>
+        <childnode refid="2462" relation="include">
+        </childnode>
+        <childnode refid="2463" relation="include">
+        </childnode>
+      </node>
+      <node id="2460">
+        <label>cstdmf/bw_vector.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2468">
+        <label>tools/bots/script_bot_entity.hpp</label>
+        <link refid="script__bot__entity_8hpp_source"/>
+      </node>
+      <node id="2469">
+        <label>tools/bots/py_space.hpp</label>
+        <link refid="tools_2bots_2py__space_8hpp_source"/>
+      </node>
+      <node id="2466">
+        <label>tools/bots/bot_entity.hpp</label>
+        <link refid="bot__entity_8hpp_source"/>
+      </node>
+      <node id="2465">
+        <label>tools/bots/entity.hpp</label>
+        <link refid="tools_2bots_2entity_8hpp_source"/>
+        <childnode refid="2466" relation="include">
+        </childnode>
+        <childnode refid="2467" relation="include">
+        </childnode>
+        <childnode refid="2468" relation="include">
+        </childnode>
+      </node>
+      <node id="2467">
+        <label>tools/bots/py_entity.hpp</label>
+        <link refid="py__entity_8hpp_source"/>
+      </node>
+      <node id="2464">
+        <label>tools/bots/entity_type.hpp</label>
+        <link refid="tools/bots/entity_type.hpp"/>
+        <childnode refid="2465" relation="include">
+        </childnode>
+        <childnode refid="2466" relation="include">
+        </childnode>
+        <childnode refid="2468" relation="include">
+        </childnode>
+        <childnode refid="2469" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_entity_type" prot="public">EntityType</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ENTITY_TYPE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ENTITY_TYPE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Python.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_vector.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;connection/entity_def_constants.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/stdmf.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;entitydef/entity_description_map.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_client_app" kindref="compound">ClientApp</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_entity_type" kindref="compound">EntityType</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_entity_type_1a92ea8a81a6bf3fa81fe765e68c3eda1c" kindref="member">EntityType</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EntityDescription<sp/>&amp;<sp/><ref refid="class_entity_type_1a9b0636c171488c064a39de48c6ae57df" kindref="member">description</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ScriptType<sp/>&amp;<sp/>type<sp/>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>our<sp/>destructor<sp/>should<sp/>be<sp/>too,<sp/>but<sp/>VC++<sp/>doesn&apos;t<sp/>like<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_entity_type_1aee11e4242d000965f06018723bdf0946" kindref="member">~EntityType</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_entity_type_1a8dcd6414a2390bb5758202552c41910f" kindref="member">init</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>standinEntity<sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_entity_type_1a61132c2f66ea136d9534d6a8e1850182" kindref="member">fini</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>EntityDefConstants<sp/><ref refid="class_entity_type_1ac97554fd36dc35fc36f2707e13d6420b" kindref="member">entityDefConstants</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_entity_type" kindref="compound">EntityType</ref><sp/>*<sp/><ref refid="class_entity_type_1a6f1456879e87b31ac472534ac2413b4b" kindref="member">find</ref>(<sp/>uint<sp/>type<sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_entity_type" kindref="compound">EntityType</ref><sp/>*<sp/><ref refid="class_entity_type_1a6f1456879e87b31ac472534ac2413b4b" kindref="member">find</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/><ref refid="class_entity_type_1a3b9ba212743bbac838c561b1f688afed" kindref="member">name</ref><sp/>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>StreamContents<sp/>{<sp/>BASE_PLAYER_DATA,<sp/>CELL_PLAYER_DATA,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAGGED_CELL_PLAYER_DATA,<sp/>TAGGED_CELL_ENTITY_DATA<sp/>};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>PyObject<sp/>*<sp/><ref refid="class_entity_type_1a905dc46bbdab1f90fb54ac425bbdf091" kindref="member">newDictionary</ref>(<sp/>DataSectionPtr<sp/>pSection<sp/>=<sp/>NULL,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isPlayer<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>PyObject<sp/>*<sp/><ref refid="class_entity_type_1a905dc46bbdab1f90fb54ac425bbdf091" kindref="member">newDictionary</ref>(<sp/>BinaryIStream<sp/>&amp;<sp/>stream,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>StreamContents<sp/>contents<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index()</highlight><highlight class="keyword"><sp/>const<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>description_.clientIndex();<sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/><ref refid="class_entity_type_1a3b9ba212743bbac838c561b1f688afed" kindref="member">name</ref>()</highlight><highlight class="keyword"><sp/>const<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>description_.name();<sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EntityDescription<sp/>&amp;<sp/><ref refid="class_entity_type_1a9b0636c171488c064a39de48c6ae57df" kindref="member">description</ref>()</highlight><highlight class="keyword"><sp/>const<sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>description_;<sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>ScriptType<sp/>type()</highlight><highlight class="keyword"><sp/>const<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type_;<sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>BW::vector&lt;<sp/>EntityType<sp/>*<sp/>&gt;<sp/>s_types_;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>EntityDescriptionMap<sp/>entityDescriptionMap_;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EntityDescription<sp/>&amp;<sp/>description_;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>ScriptType<sp/>type_;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ENTITY_TYPE_HPP</highlight></codeline>
+    </programlisting>
+    <location file="tools/bots/entity_type.hpp"/>
+  </compounddef>
+</doxygen>

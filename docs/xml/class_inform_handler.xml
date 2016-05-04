@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_inform_handler" kind="class" language="C++" prot="public">
+    <compoundname>InformHandler</compoundname>
+    <basecompoundref refid="class_shut_down_handler" prot="public" virt="non-virtual">ShutDownHandler</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_inform_handler_1ad20c9307e9bebe756f36ac59a6f9f4a2" prot="private" static="no" mutable="no">
+        <type><ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> &amp;</type>
+        <definition>CellAppMgr&amp; InformHandler::mgr_</definition>
+        <argsstring></argsstring>
+        <name>mgr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/shutdown_handler.cpp" line="116" column="1" bodyfile="cellappmgr/shutdown_handler.cpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_inform_handler_1a3d2e38013eb5ff2d930c69a80a9a25db" prot="private" static="no" mutable="no">
+        <type>GameTime</type>
+        <definition>GameTime InformHandler::shutDownTime_</definition>
+        <argsstring></argsstring>
+        <name>shutDownTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/shutdown_handler.cpp" line="117" column="1" bodyfile="cellappmgr/shutdown_handler.cpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_inform_handler_1acab33603fda37bad417a77cd53f4df15" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool InformHandler::baseAppsAcked_</definition>
+        <argsstring></argsstring>
+        <name>baseAppsAcked_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/shutdown_handler.cpp" line="118" column="1" bodyfile="cellappmgr/shutdown_handler.cpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_inform_handler_1a1a23d69a2b874b7c9c9c20b85e4289c7" prot="private" static="no" mutable="no">
+        <type>BW::set&lt; <ref refid="class_cell_app" kindref="compound">CellApp</ref> * &gt;</type>
+        <definition>BW::set&lt; CellApp * &gt; InformHandler::ackedCellApps_</definition>
+        <argsstring></argsstring>
+        <name>ackedCellApps_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/shutdown_handler.cpp" line="119" column="1" bodyfile="cellappmgr/shutdown_handler.cpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_inform_handler_1a1df18f00e172edcc4b09b1620aa71161" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>InformHandler::InformHandler</definition>
+        <argsstring>(CellAppMgr &amp;mgr, GameTime shutDownTime)</argsstring>
+        <name>InformHandler</name>
+        <param>
+          <type><ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> &amp;</type>
+          <declname>mgr</declname>
+        </param>
+        <param>
+          <type>GameTime</type>
+          <declname>shutDownTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/shutdown_handler.cpp" line="106" column="1" bodyfile="cellappmgr/shutdown_handler.cpp" bodystart="122" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inform_handler_1a151117c7fca119d1f55944e35bce7ced" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual InformHandler::~InformHandler</definition>
+        <argsstring>()</argsstring>
+        <name>~InformHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/shutdown_handler.cpp" line="107" column="1" bodyfile="cellappmgr/shutdown_handler.cpp" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inform_handler_1adbf02a565404f4be6427c6a075c5cfb4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool InformHandler::isPaused</definition>
+        <argsstring>() const </argsstring>
+        <name>isPaused</name>
+        <reimplements refid="class_shut_down_handler_1a7c3476ff01cda13b4e5193916a76897c">isPaused</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/shutdown_handler.cpp" line="109" column="1" bodyfile="cellappmgr/shutdown_handler.cpp" bodystart="143" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inform_handler_1ab4b947180529ee8169eec748c4825417" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void InformHandler::checkStatus</definition>
+        <argsstring>()</argsstring>
+        <name>checkStatus</name>
+        <reimplements refid="class_shut_down_handler_1a707f0d7241ed4e0e415db7bfc7c04de6">checkStatus</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/shutdown_handler.cpp" line="110" column="1" bodyfile="cellappmgr/shutdown_handler.cpp" bodystart="148" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inform_handler_1a45ec0c96de09a79d8286d0801ff4088c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void InformHandler::ackBaseApps</definition>
+        <argsstring>(ShutDownStage stage)</argsstring>
+        <name>ackBaseApps</name>
+        <reimplements refid="class_shut_down_handler_1a07294dc5104160e3c4806bb8a15b75fb">ackBaseApps</reimplements>
+        <param>
+          <type>ShutDownStage</type>
+          <declname>stage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/shutdown_handler.cpp" line="112" column="1" bodyfile="cellappmgr/shutdown_handler.cpp" bodystart="167" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inform_handler_1a97f0357218119da69815c84cd295b7a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void InformHandler::ackCellApp</definition>
+        <argsstring>(ShutDownStage stage, CellApp &amp;app)</argsstring>
+        <name>ackCellApp</name>
+        <reimplements refid="class_shut_down_handler_1a71e9a21f0ebb9b95191fc2611925d86f">ackCellApp</reimplements>
+        <param>
+          <type>ShutDownStage</type>
+          <declname>stage</declname>
+        </param>
+        <param>
+          <type><ref refid="class_cell_app" kindref="compound">CellApp</ref> &amp;</type>
+          <declname>app</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/shutdown_handler.cpp" line="113" column="1" bodyfile="cellappmgr/shutdown_handler.cpp" bodystart="179" bodyend="190"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class handles the stage of shutting down where all components are told when to shut down. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1513">
+        <label>InformHandler</label>
+        <link refid="class_inform_handler"/>
+        <childnode refid="1514" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1514">
+        <label>ShutDownHandler</label>
+        <link refid="class_shut_down_handler"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1515">
+        <label>InformHandler</label>
+        <link refid="class_inform_handler"/>
+        <childnode refid="1516" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1516">
+        <label>ShutDownHandler</label>
+        <link refid="class_shut_down_handler"/>
+      </node>
+    </collaborationgraph>
+    <location file="cellappmgr/shutdown_handler.cpp" line="104" column="1" bodyfile="cellappmgr/shutdown_handler.cpp" bodystart="103" bodyend="120"/>
+    <listofallmembers>
+      <member refid="class_inform_handler_1a45ec0c96de09a79d8286d0801ff4088c" prot="public" virt="virtual"><scope>InformHandler</scope><name>ackBaseApps</name></member>
+      <member refid="class_inform_handler_1a97f0357218119da69815c84cd295b7a2" prot="public" virt="virtual"><scope>InformHandler</scope><name>ackCellApp</name></member>
+      <member refid="class_inform_handler_1a1a23d69a2b874b7c9c9c20b85e4289c7" prot="private" virt="non-virtual"><scope>InformHandler</scope><name>ackedCellApps_</name></member>
+      <member refid="class_inform_handler_1acab33603fda37bad417a77cd53f4df15" prot="private" virt="non-virtual"><scope>InformHandler</scope><name>baseAppsAcked_</name></member>
+      <member refid="class_inform_handler_1ab4b947180529ee8169eec748c4825417" prot="public" virt="virtual"><scope>InformHandler</scope><name>checkStatus</name></member>
+      <member refid="class_inform_handler_1a1df18f00e172edcc4b09b1620aa71161" prot="public" virt="non-virtual"><scope>InformHandler</scope><name>InformHandler</name></member>
+      <member refid="class_inform_handler_1adbf02a565404f4be6427c6a075c5cfb4" prot="public" virt="virtual"><scope>InformHandler</scope><name>isPaused</name></member>
+      <member refid="class_inform_handler_1ad20c9307e9bebe756f36ac59a6f9f4a2" prot="private" virt="non-virtual"><scope>InformHandler</scope><name>mgr_</name></member>
+      <member refid="class_inform_handler_1a3d2e38013eb5ff2d930c69a80a9a25db" prot="private" virt="non-virtual"><scope>InformHandler</scope><name>shutDownTime_</name></member>
+      <member refid="class_shut_down_handler_1a40d203908b9b2c1c5c6d4538b610db23" prot="public" virt="non-virtual"><scope>InformHandler</scope><name>start</name></member>
+      <member refid="class_inform_handler_1a151117c7fca119d1f55944e35bce7ced" prot="public" virt="virtual"><scope>InformHandler</scope><name>~InformHandler</name></member>
+      <member refid="class_shut_down_handler_1a1afdd09c38e9714d007673f0819eef0e" prot="public" virt="virtual"><scope>InformHandler</scope><name>~ShutDownHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

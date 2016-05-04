@@ -1,0 +1,1020 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespace_mongo_d_b" kind="namespace" language="C++">
+    <compoundname>MongoDB</compoundname>
+    <innerclass refid="class_mongo_d_b_1_1_add_server_start_task" prot="public">MongoDB::AddServerStartTask</innerclass>
+    <innerclass refid="class_mongo_d_b_1_1_connection_info" prot="public">MongoDB::ConnectionInfo</innerclass>
+    <innerclass refid="class_mongo_d_b_1_1_connection_thread_data" prot="public">MongoDB::ConnectionThreadData</innerclass>
+    <innerclass refid="class_mongo_d_b_1_1_flush_task" prot="public">MongoDB::FlushTask</innerclass>
+    <innerclass refid="class_mongo_d_b_1_1_mongo_d_b_background_task" prot="public">MongoDB::MongoDBBackgroundTask</innerclass>
+    <innerclass refid="class_mongo_d_b_1_1_reconnect_task" prot="public">MongoDB::ReconnectTask</innerclass>
+    <innerclass refid="class_mongo_d_b_1_1_roll_task" prot="public">MongoDB::RollTask</innerclass>
+    <innerclass refid="class_mongo_d_b_1_1_update_app_i_d_task" prot="public">MongoDB::UpdateAppIDTask</innerclass>
+    <innerclass refid="class_mongo_d_b_1_1_update_i_d_string_pair_task" prot="public">MongoDB::UpdateIDStringPairTask</innerclass>
+    <innerclass refid="class_mongo_d_b_1_1_user_log_buffer" prot="public">MongoDB::UserLogBuffer</innerclass>
+    <innerclass refid="class_mongo_d_b_1_1_user_log_writer" prot="public">MongoDB::UserLogWriter</innerclass>
+    <innerclass refid="class_mongo_d_b_1_1_write_app_i_d_task" prot="public">MongoDB::WriteAppIDTask</innerclass>
+    <innerclass refid="class_mongo_d_b_1_1_write_i_d_string_pair_task" prot="public">MongoDB::WriteIDStringPairTask</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="connection__thread__data_8hpp_1a6ea6ca761e580757d615b6ffd4181df4" prot="public" static="no">
+        <name>DBTaskStatus</name>
+        <enumvalue id="connection__thread__data_8hpp_1a6ea6ca761e580757d615b6ffd4181df4a22708969cb489294c6fec892e6e9ba8b" prot="public">
+          <name>DB_TASK_SUCCESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="connection__thread__data_8hpp_1a6ea6ca761e580757d615b6ffd4181df4ae9b8ff0d1c812063df929a3a06c83943" prot="public">
+          <name>DB_TASK_CONNECTION_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="connection__thread__data_8hpp_1a6ea6ca761e580757d615b6ffd4181df4a090b764c2fccc8d91634cb0eedc4ccad" prot="public">
+          <name>DB_TASK_GENERAL_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="23" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="22" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="connection__thread__data_8hpp_1a5c36fe6eb5e7034829bc9e693e3fe128" prot="public" static="no">
+        <type><ref refid="class_smart_pointer" kindref="compound">SmartPointer</ref>&lt; <ref refid="class_mongo_d_b_1_1_user_log_writer" kindref="compound">UserLogWriter</ref> &gt;</type>
+        <definition>typedef SmartPointer&lt; UserLogWriter &gt; MongoDB::UserLogWriterPtr</definition>
+        <argsstring></argsstring>
+        <name>UserLogWriterPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="31" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="connection__thread__data_8hpp_1a8a21dd0f0e20d12e52e6de513f17b8aa" prot="public" static="no">
+        <type><ref refid="class_smart_pointer" kindref="compound">SmartPointer</ref>&lt; <ref refid="class_mongo_d_b_1_1_connection_thread_data" kindref="compound">ConnectionThreadData</ref> &gt;</type>
+        <definition>typedef SmartPointer&lt; ConnectionThreadData &gt; MongoDB::ConnectionThreadDataPtr</definition>
+        <argsstring></argsstring>
+        <name>ConnectionThreadDataPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="34" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="mongodb_2log__storage_8hpp_1a2f9967a732d349429dbd81491c7b24d1" prot="public" static="no">
+        <type>BW::map&lt; MessageLogger::UID, <ref refid="class_smart_pointer" kindref="compound">UserLogBufferPtr</ref> &gt;</type>
+        <definition>typedef BW::map&lt; MessageLogger::UID, UserLogBufferPtr &gt; MongoDB::UserLogs</definition>
+        <argsstring></argsstring>
+        <name>UserLogs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/log_storage.hpp" line="34" column="1" bodyfile="tools/message_logger/mongodb/log_storage.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="tools_2message__logger_2mongodb_2types_8hpp_1a918e646dc5db4a9756b4331ac01d7dd1" prot="public" static="no">
+        <type>BW::list&lt; BW::string &gt;</type>
+        <definition>typedef BW::list&lt; BW::string &gt; MongoDB::CollList</definition>
+        <argsstring></argsstring>
+        <name>CollList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This type represents the MongoDB collection name list </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/types.hpp" line="22" column="1" bodyfile="tools/message_logger/mongodb/types.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="tools_2message__logger_2mongodb_2types_8hpp_1a17f1059075b592003d512c8b67d53f61" prot="public" static="no">
+        <type>std::string</type>
+        <definition>typedef std::string MongoDB::string</definition>
+        <argsstring></argsstring>
+        <name>string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This type represents the string type used by MongoDB </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/types.hpp" line="28" column="1" bodyfile="tools/message_logger/mongodb/types.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="tools_2message__logger_2mongodb_2types_8hpp_1a6bd77b88aa38cd17d9d509ebf5879ce9" prot="public" static="no">
+        <type>std::vector&lt; mongo::BSONObj &gt;</type>
+        <definition>typedef std::vector&lt; mongo::BSONObj &gt; MongoDB::BSONObjBuffer</definition>
+        <argsstring></argsstring>
+        <name>BSONObjBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This type represents a batch of BSON Objects which can be written straight to the database. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/types.hpp" line="35" column="1" bodyfile="tools/message_logger/mongodb/types.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="user__log__buffer_8hpp_1a8d63ca091d2a17d9d934a65c452c51c3" prot="public" static="no">
+        <type><ref refid="class_smart_pointer" kindref="compound">SmartPointer</ref>&lt; <ref refid="class_mongo_d_b_1_1_user_log_buffer" kindref="compound">MongoDB::UserLogBuffer</ref> &gt;</type>
+        <definition>typedef SmartPointer&lt; MongoDB::UserLogBuffer &gt; MongoDB::UserLogBufferPtr</definition>
+        <argsstring></argsstring>
+        <name>UserLogBufferPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_buffer.hpp" line="53" column="1" bodyfile="tools/message_logger/mongodb/user_log_buffer.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1aad68202cf77d88ec7ac70a8ac2d26116" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::ADMIN_DB_NAME[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ADMIN_DB_NAME</name>
+        <initializer>= &quot;admin&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="13" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a5563074aad30d8bae18719462dd174ae" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::BW_COMMON_DB_NAME[]</definition>
+        <argsstring>[]</argsstring>
+        <name>BW_COMMON_DB_NAME</name>
+        <initializer>= &quot;bw_ml_common&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="14" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1aec0467efc6b6b0e8e5d33a09da1244ad" prot="public" static="yes" mutable="no">
+        <type>const BW::string</type>
+        <definition>const BW::string MongoDB::USER_DB_PREFIX</definition>
+        <argsstring></argsstring>
+        <name>USER_DB_PREFIX</name>
+        <initializer>= &quot;bw_ml_user_&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="17" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a02e3236d2f9dcbbe24c1c9629e8b2b19" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::USER_COLL_ENTRIES_PREFIX[]</definition>
+        <argsstring>[]</argsstring>
+        <name>USER_COLL_ENTRIES_PREFIX</name>
+        <initializer>= &quot;entries_&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="18" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a6178bd9af04aa2f9f332894e2911b595" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::ENTRIES_KEY_TIMESTAMP[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ENTRIES_KEY_TIMESTAMP</name>
+        <initializer>= &quot;ts&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="20" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1ae14349e025ee8d792c359e2955181da0" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::ENTRIES_KEY_COUNTER[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ENTRIES_KEY_COUNTER</name>
+        <initializer>= &quot;cnt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="21" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1acd1089daa5164e51c8a85a715e0c1d72" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::ENTRIES_KEY_COMPONENT[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ENTRIES_KEY_COMPONENT</name>
+        <initializer>= &quot;cpt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="22" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1ad3584da957c77fb580a2adc76c222af3" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::ENTRIES_KEY_APP_ID[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ENTRIES_KEY_APP_ID</name>
+        <initializer>= &quot;aid&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="23" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a78b20db8ef13bab88ffc8ab2ef781fa0" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::ENTRIES_KEY_PID[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ENTRIES_KEY_PID</name>
+        <initializer>= &quot;pid&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="24" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a503f1335890c10ca1431e18d4a95dc4b" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::ENTRIES_KEY_CATEGORY[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ENTRIES_KEY_CATEGORY</name>
+        <initializer>= &quot;ctg&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="25" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a910122f66a4914a2b6ab8d55c7b13cef" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::ENTRIES_KEY_SOURCE[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ENTRIES_KEY_SOURCE</name>
+        <initializer>= &quot;src&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="26" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1abc1741f397494578cb5248127be46890" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::ENTRIES_KEY_SEVERITY[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ENTRIES_KEY_SEVERITY</name>
+        <initializer>= &quot;svt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="27" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1af92cb5a8b4d5d34616d0948dba2256f1" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::ENTRIES_KEY_HOST[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ENTRIES_KEY_HOST</name>
+        <initializer>= &quot;host&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="28" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1ac3913815a931fdc9fec3e5e78cb0dc55" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::ENTRIES_KEY_FMT_STR[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ENTRIES_KEY_FMT_STR</name>
+        <initializer>= &quot;fmt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="29" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1add93a4f9fdfceb8758e67f7bccbc7832" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::ENTRIES_KEY_MESSAGE[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ENTRIES_KEY_MESSAGE</name>
+        <initializer>= &quot;msg&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="30" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1ab4bd0e253dcb0b386d2a908a63bff53a" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::ENTRIES_KEY_META_DATA[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ENTRIES_KEY_META_DATA</name>
+        <initializer>= &quot;md&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="31" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a8333048c113ec4b3874f5e16e1778575" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::ENTRIES_KEY_SHARD_KEY[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ENTRIES_KEY_SHARD_KEY</name>
+        <initializer>= &quot;sk&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="32" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a09a86dedac107bf71a0d6a03fbb323eb" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::USER_COLL_UID[]</definition>
+        <argsstring>[]</argsstring>
+        <name>USER_COLL_UID</name>
+        <initializer>= &quot;uid&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="35" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1aed12f53921e20cbdc30790ed091e422e" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::USER_UID_KEY[]</definition>
+        <argsstring>[]</argsstring>
+        <name>USER_UID_KEY</name>
+        <initializer>= &quot;uid&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="36" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1abb46cdbf814122aed59fa7c42b663e60" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::SERVER_STARTS_COLL_NAME[]</definition>
+        <argsstring>[]</argsstring>
+        <name>SERVER_STARTS_COLL_NAME</name>
+        <initializer>= &quot;server_start_ups&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="39" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1ad5484593357a196b7cc91fde34b68113" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::SERVER_STARTS_KEY_TIME[]</definition>
+        <argsstring>[]</argsstring>
+        <name>SERVER_STARTS_KEY_TIME</name>
+        <initializer>= &quot;time&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="40" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1aec637f4cc5e8953781faae1bb338e2be" prot="public" static="yes" mutable="no">
+        <type>const uint32</type>
+        <definition>const uint32 MongoDB::SERVER_STARTS_COUNT_LIMIT</definition>
+        <argsstring></argsstring>
+        <name>SERVER_STARTS_COUNT_LIMIT</name>
+        <initializer>= 50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="41" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1af20b9034fcfc262cd7b0f57639c945cd" prot="public" static="yes" mutable="no">
+        <type>const uint32</type>
+        <definition>const uint32 MongoDB::SERVER_STARTS_SIZE_LIMIT</definition>
+        <argsstring></argsstring>
+        <name>SERVER_STARTS_SIZE_LIMIT</name>
+        <initializer>= 5000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="42" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1ab192f97690bb92e3dac7578e0bc40dd3" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::COMPONENTS_COLL_NAME[]</definition>
+        <argsstring>[]</argsstring>
+        <name>COMPONENTS_COLL_NAME</name>
+        <initializer>= &quot;components&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="45" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a9376adab4958089a28569a1da0673135" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::COMPONENTS_KEY_HOST[]</definition>
+        <argsstring>[]</argsstring>
+        <name>COMPONENTS_KEY_HOST</name>
+        <initializer>= &quot;host&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="46" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a88adda5672632e2d3fdf370cc30f4108" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::COMPONENTS_KEY_APPID[]</definition>
+        <argsstring>[]</argsstring>
+        <name>COMPONENTS_KEY_APPID</name>
+        <initializer>= &quot;aid&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="47" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a6ac7e4d5978b30f94a874d08cf202097" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::COMPONENTS_KEY_PID[]</definition>
+        <argsstring>[]</argsstring>
+        <name>COMPONENTS_KEY_PID</name>
+        <initializer>= &quot;pid&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="48" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1ab3cdb19ef62e2eb040c24425fe1834cc" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::COMPONENTS_KEY_COMPONENT[]</definition>
+        <argsstring>[]</argsstring>
+        <name>COMPONENTS_KEY_COMPONENT</name>
+        <initializer>= &quot;cpt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="49" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a13c6834c9006d88b8a91c1492ed3344d" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::COMPONENTS_UID[]</definition>
+        <argsstring>[]</argsstring>
+        <name>COMPONENTS_UID</name>
+        <initializer>= &quot;uid&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="50" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a5e752f2d58d7a2cfc470f2f80ba10a5c" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::COMPONENTS_USERNAME[]</definition>
+        <argsstring>[]</argsstring>
+        <name>COMPONENTS_USERNAME</name>
+        <initializer>= &quot;username&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="51" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1ab927e86ee29428a6bd8d5f75f5c27229" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::HOST_NAMES_COLL[]</definition>
+        <argsstring>[]</argsstring>
+        <name>HOST_NAMES_COLL</name>
+        <initializer>= &quot;hosts&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="56" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a8f795b1ceddf6ecdeb5dd577ea8cf92a" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::HOST_NAMES_KEY_IP[]</definition>
+        <argsstring>[]</argsstring>
+        <name>HOST_NAMES_KEY_IP</name>
+        <initializer>= &quot;ip&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="57" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a44a64dc3fb1024585548fdc053da7f96" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::HOST_NAMES_KEY_HOSTNAME[]</definition>
+        <argsstring>[]</argsstring>
+        <name>HOST_NAMES_KEY_HOSTNAME</name>
+        <initializer>= &quot;hostname&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="58" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a875cb3e3407ac951b6a0adefd650f27c" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::FMT_STRS_COLL[]</definition>
+        <argsstring>[]</argsstring>
+        <name>FMT_STRS_COLL</name>
+        <initializer>= &quot;format_strings&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="61" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a6de4d3a1beb66f6aeeb980db0877e93a" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::FMT_STRS_KEY_ID[]</definition>
+        <argsstring>[]</argsstring>
+        <name>FMT_STRS_KEY_ID</name>
+        <initializer>= &quot;id&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="62" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a071d909642614da68d9d2dd8927b4bbb" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::FMT_STRS_KEY_FMT_STR[]</definition>
+        <argsstring>[]</argsstring>
+        <name>FMT_STRS_KEY_FMT_STR</name>
+        <initializer>= &quot;fmt_str&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="63" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a93bc44258a51fda1148aa1c3bfd314af" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::CATEGORIES_COLL[]</definition>
+        <argsstring>[]</argsstring>
+        <name>CATEGORIES_COLL</name>
+        <initializer>= &quot;categories&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="66" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a62d33c20b5abdc450398d61f004ffa38" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::CATEGORIES_KEY_ID[]</definition>
+        <argsstring>[]</argsstring>
+        <name>CATEGORIES_KEY_ID</name>
+        <initializer>= &quot;id&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="67" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1ad344c5c465a67d0244a0190749317350" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::CATEGORIES_KEY_NAME[]</definition>
+        <argsstring>[]</argsstring>
+        <name>CATEGORIES_KEY_NAME</name>
+        <initializer>= &quot;name&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="68" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a67bfb57befc068ec817e58ef6978089a" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::COMPONENTS_COLL[]</definition>
+        <argsstring>[]</argsstring>
+        <name>COMPONENTS_COLL</name>
+        <initializer>= &quot;components&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="71" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a60a67b100b3c482743a4171b108d6832" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::COMPONENTS_KEY_ID[]</definition>
+        <argsstring>[]</argsstring>
+        <name>COMPONENTS_KEY_ID</name>
+        <initializer>= &quot;id&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="72" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1ac753ae13a0a90cbd61900dd07b8c4d19" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::COMPONENTS_KEY_NAME[]</definition>
+        <argsstring>[]</argsstring>
+        <name>COMPONENTS_KEY_NAME</name>
+        <initializer>= &quot;name&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="73" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a1e9bc13f140ce497e596c6936070d95c" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::SOURCES_COLL[]</definition>
+        <argsstring>[]</argsstring>
+        <name>SOURCES_COLL</name>
+        <initializer>= &quot;sources&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="76" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a6c4653f383b02cf15c8e19a0017fa276" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::SOURCES_KEY_ID[]</definition>
+        <argsstring>[]</argsstring>
+        <name>SOURCES_KEY_ID</name>
+        <initializer>= &quot;id&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="77" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1ab7a38dadfe9e940db25664a13f59425c" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::SOURCES_KEY_NAME[]</definition>
+        <argsstring>[]</argsstring>
+        <name>SOURCES_KEY_NAME</name>
+        <initializer>= &quot;name&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="78" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1ad68e02a76f4813af5c4fc67d5b772d0b" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::SEVERITIES_COLL[]</definition>
+        <argsstring>[]</argsstring>
+        <name>SEVERITIES_COLL</name>
+        <initializer>= &quot;severities&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="81" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1aaf12824c3323210048b0b46bbb0546ac" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::SEVERITIES_KEY_LEVEL[]</definition>
+        <argsstring>[]</argsstring>
+        <name>SEVERITIES_KEY_LEVEL</name>
+        <initializer>= &quot;level&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="82" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a7db2a59d90382721c9350d2f7a7f7698" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::SEVERITIES_KEY_NAME[]</definition>
+        <argsstring>[]</argsstring>
+        <name>SEVERITIES_KEY_NAME</name>
+        <initializer>= &quot;name&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="83" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1aa035941583be02ee540eb7f6bf9f5e67" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::VERSION_COLL[]</definition>
+        <argsstring>[]</argsstring>
+        <name>VERSION_COLL</name>
+        <initializer>= &quot;schema_version&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="86" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a199acd2f058eb884d0ebbc71182545f6" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::VERSION_KEY_VERSION[]</definition>
+        <argsstring>[]</argsstring>
+        <name>VERSION_KEY_VERSION</name>
+        <initializer>= &quot;version&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="87" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a180994e7aa1dd1eeafff3214999ebe10" prot="public" static="yes" mutable="no">
+        <type>const uint32</type>
+        <definition>const uint32 MongoDB::SCHEMA_VERSION</definition>
+        <argsstring></argsstring>
+        <name>SCHEMA_VERSION</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="92" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1abae24331cd170f5676b778dbc1689bbe" prot="public" static="yes" mutable="no">
+        <type>const uint32</type>
+        <definition>const uint32 MongoDB::TCP_TIME_OUT</definition>
+        <argsstring></argsstring>
+        <name>TCP_TIME_OUT</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="98" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1ae36c8e9c31acf5717935b2ffa55ccc55" prot="public" static="yes" mutable="no">
+        <type>const uint16</type>
+        <definition>const uint16 MongoDB::WAIT_BETWEEN_RECONNECTS</definition>
+        <argsstring></argsstring>
+        <name>WAIT_BETWEEN_RECONNECTS</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="102" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1adcbdfed4199675593987338b4d428221" prot="public" static="yes" mutable="no">
+        <type>const uint32</type>
+        <definition>const uint32 MongoDB::MAX_LOG_BUFFER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>MAX_LOG_BUFFER_SIZE</name>
+        <initializer>= 1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="108" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a8af6722c0b8693ffffc4ab0bc8c59c23" prot="public" static="yes" mutable="no">
+        <type>const uint32</type>
+        <definition>const uint32 MongoDB::RESERVE_LOG_BUFFER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>RESERVE_LOG_BUFFER_SIZE</name>
+        <initializer>= 128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="114" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a32feb4dc2372f980202e06a90f2cd8cc" prot="public" static="yes" mutable="no">
+        <type>const uint32</type>
+        <definition>const uint32 MongoDB::LOG_FLUSH_INTERVAL</definition>
+        <argsstring></argsstring>
+        <name>LOG_FLUSH_INTERVAL</name>
+        <initializer>= 500</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="117" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a46fae5102b6682e4f71073c3d1b82e9b" prot="public" static="yes" mutable="no">
+        <type>const uint32</type>
+        <definition>const uint32 MongoDB::EXPIRE_LOGS_DAYS</definition>
+        <argsstring></argsstring>
+        <name>EXPIRE_LOGS_DAYS</name>
+        <initializer>= 7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="120" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a951e0e9f3c48848dc3e2b96178e2834c" prot="public" static="yes" mutable="no">
+        <type>const uint32</type>
+        <definition>const uint32 MongoDB::CACHE_THRESHOLD</definition>
+        <argsstring></argsstring>
+        <name>CACHE_THRESHOLD</name>
+        <initializer>= 10 * 1000 * 1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="125" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a3d3b4945ef0eff432b4a8bb5b73b87e8" prot="public" static="yes" mutable="no">
+        <type>const BW::string</type>
+        <definition>const BW::string MongoDB::LOGGER_ID_SEPARATOR</definition>
+        <argsstring></argsstring>
+        <name>LOGGER_ID_SEPARATOR</name>
+        <initializer>= &quot;#&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="134" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1aaba8bf8f944f6ec90ad7ef59377993c6" prot="public" static="yes" mutable="no">
+        <type>const BW::string</type>
+        <definition>const BW::string MongoDB::LOGGER_ID_NA</definition>
+        <argsstring></argsstring>
+        <name>LOGGER_ID_NA</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="137" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2constants_8hpp_1a85b2560d4738c9916760c6f2ddec7b53" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char MongoDB::CONFIG_NAME_MONGO[]</definition>
+        <argsstring>[]</argsstring>
+        <name>CONFIG_NAME_MONGO</name>
+        <initializer>= &quot;mongodb&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/constants.hpp" line="140" column="1" bodyfile="tools/message_logger/mongodb/constants.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="mongodb_2user__log__writer_8cpp_1a47830b381571deef1f369bec1505157a" prot="public" static="no" mutable="no">
+        <type>const uint32</type>
+        <definition>const uint32 MongoDB::COLL_SUFFIX_LENGTH</definition>
+        <argsstring></argsstring>
+        <name>COLL_SUFFIX_LENGTH</name>
+        <initializer>= 14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.cpp" line="20" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tools/message_logger/mongodb/connection_info.hpp" line="10" column="1"/>
+  </compounddef>
+</doxygen>

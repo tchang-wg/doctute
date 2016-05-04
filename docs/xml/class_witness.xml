@@ -1,0 +1,2641 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_witness" kind="class" language="C++" prot="public">
+    <compoundname>Witness</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Updatable</basecompoundref>
+    <includes refid="witness_8hpp" local="no">witness.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_witness_1a4770102b26e427e5d5db70fca9108d8a" prot="private" static="no">
+        <type>BW::vector&lt; <ref refid="class_entity_cache" kindref="compound">EntityCache</ref> * &gt;</type>
+        <definition>typedef BW::vector&lt; EntityCache * &gt; Witness::KnownEntityQueue</definition>
+        <argsstring></argsstring>
+        <name>KnownEntityQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="216" column="1" bodyfile="cellapp/witness.hpp" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_witness_1a51f38027f47ea83674d84216fc741f0e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>PyObject * Witness::isWithheldFromClient</definition>
+        <argsstring></argsstring>
+        <name>isWithheldFromClient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns whether an entity in the current AoI is being withheld from the client. This is modified with Witness::withholdFromClient. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="159" column="1" bodyfile="cellapp/witness.hpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a10d1999377255608470765c11b4076d6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>bool Witness::setPositionDetailed</definition>
+        <argsstring></argsstring>
+        <name>setPositionDetailed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method modifies whether an entity is being sent to a client with detailed volatile position updates.</para><para><simplesect kind="return"><para>On failure, the Python exception state is set and false is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="162" column="1" bodyfile="cellapp/witness.hpp" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a12e8e02d771aca4180a2ed3b12a74fba" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>PyObject * Witness::isPositionDetailed</definition>
+        <argsstring></argsstring>
+        <name>isPositionDetailed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns whether an entity in the current AoI is being sent to the client with detailed position. This is modified with Witness::setDetailedPosition. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="164" column="1" bodyfile="cellapp/witness.hpp" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a7737ad6696c7cda809f385caaa4a495f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>bool Witness::setAoIUpdateScheme</definition>
+        <argsstring></argsstring>
+        <name>setAoIUpdateScheme</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the AoI update scheme for a specific entity in our AoI. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="171" column="1" bodyfile="cellapp/witness.hpp" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a4c42ec0ec669e8774368f27f6dd6034d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>PyObject * Witness::getAoIUpdateScheme</definition>
+        <argsstring></argsstring>
+        <name>getAoIUpdateScheme</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method gets the AoI update scheme for a specific entity in our AoI. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="174" column="1" bodyfile="cellapp/witness.hpp" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1afd18a0e5b3c6f39ad5384fb496613acd" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Witness::hyst</definition>
+        <argsstring></argsstring>
+        <name>hyst</name>
+        <initializer>= 5.f )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="177" column="1" bodyfile="cellapp/witness.hpp" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1aa9f029f01dfb7efd9093047c142be3fa" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Witness::ignoreNonManualAoIEntities</definition>
+        <argsstring></argsstring>
+        <name>ignoreNonManualAoIEntities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="182" column="1" bodyfile="cellapp/witness.hpp" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1ae6d1f7e4536017a7c8a7dbddccfc0ad4" prot="public" static="no" mutable="no">
+        <type>bool uint</type>
+        <definition>uint Witness::aoiSubsystem</definition>
+        <argsstring></argsstring>
+        <name>aoiSubsystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="182" column="1" bodyfile="cellapp/witness.hpp" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1ae6d1f7e4536017a7c8a7dbddccfc0ad4" prot="public" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint Witness::aoiSubsystem</definition>
+        <argsstring></argsstring>
+        <name>aoiSubsystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="187" column="1" bodyfile="cellapp/witness.hpp" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_witness_1a5e71108a2afd43db49df0c37ded958e9" prot="private" static="no" mutable="no">
+        <type><ref refid="class_real_entity" kindref="compound">RealEntity</ref> &amp;</type>
+        <definition>RealEntity&amp; Witness::real_</definition>
+        <argsstring></argsstring>
+        <name>real_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="292" column="1" bodyfile="cellapp/witness.hpp" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1adf9ca271fe28360f006ea8b22d9e7ef8" prot="private" static="no" mutable="no">
+        <type><ref refid="class_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity&amp; Witness::entity_</definition>
+        <argsstring></argsstring>
+        <name>entity_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="293" column="1" bodyfile="cellapp/witness.hpp" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1af676dfbea024a3d58ac72279e016bf4b" prot="private" static="no" mutable="no">
+        <type>GameTime</type>
+        <definition>GameTime Witness::noiseCheckTime_</definition>
+        <argsstring></argsstring>
+        <name>noiseCheckTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="295" column="1" bodyfile="cellapp/witness.hpp" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1ac806c973e5d68ba474a8f30b30480d3b" prot="private" static="no" mutable="no">
+        <type>GameTime</type>
+        <definition>GameTime Witness::noisePropagatedTime_</definition>
+        <argsstring></argsstring>
+        <name>noisePropagatedTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="296" column="1" bodyfile="cellapp/witness.hpp" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a5cc87dc4b3c304974b3142ae0e84c92c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Witness::noiseMade_</definition>
+        <argsstring></argsstring>
+        <name>noiseMade_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="297" column="1" bodyfile="cellapp/witness.hpp" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a5beb48469a045009243208c213a84cb7" prot="private" static="no" mutable="no">
+        <type>int32</type>
+        <definition>int32 Witness::maxPacketSize_</definition>
+        <argsstring></argsstring>
+        <name>maxPacketSize_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="299" column="1" bodyfile="cellapp/witness.hpp" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a7716900e16014a9cf7045670cb14b84b" prot="private" static="no" mutable="no">
+        <type>KnownEntityQueue</type>
+        <definition>KnownEntityQueue Witness::entityQueue_</definition>
+        <argsstring></argsstring>
+        <name>entityQueue_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="301" column="1" bodyfile="cellapp/witness.hpp" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1adec7e8fa1af5d2518d2499f36f158e48" prot="private" static="no" mutable="no">
+        <type><ref refid="class_entity_cache_map" kindref="compound">EntityCacheMap</ref></type>
+        <definition>EntityCacheMap Witness::aoiMap_</definition>
+        <argsstring></argsstring>
+        <name>aoiMap_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="302" column="1" bodyfile="cellapp/witness.hpp" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a192b95c57800c2387117d2c36df6a178" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Witness::shouldAddReplayAoIUpdates_</definition>
+        <argsstring></argsstring>
+        <name>shouldAddReplayAoIUpdates_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="303" column="1" bodyfile="cellapp/witness.hpp" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a84b7ec3aa0df794e0e54580187ae7256" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Witness::stealthFactor_</definition>
+        <argsstring></argsstring>
+        <name>stealthFactor_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="305" column="1" bodyfile="cellapp/witness.hpp" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a0ac75834852a3b2f1d51d3da751d3e3f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Witness::aoiHyst_</definition>
+        <argsstring></argsstring>
+        <name>aoiHyst_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="307" column="1" bodyfile="cellapp/witness.hpp" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1ac6f3de994ed6918851e89d4836b39dcd" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Witness::aoiRadius_</definition>
+        <argsstring></argsstring>
+        <name>aoiRadius_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="308" column="1" bodyfile="cellapp/witness.hpp" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a2805969f03b97c7f31d797f73a70e4fe" prot="private" static="no" mutable="no">
+        <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+        <definition>RangeListNode* Witness::pAoIRoot_</definition>
+        <argsstring></argsstring>
+        <name>pAoIRoot_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="309" column="1" bodyfile="cellapp/witness.hpp" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a9e42f64a670a2ab76958cba7fe494632" prot="private" static="no" mutable="no">
+        <type>int32</type>
+        <definition>int32 Witness::bandwidthDeficit_</definition>
+        <argsstring></argsstring>
+        <name>bandwidthDeficit_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="311" column="1" bodyfile="cellapp/witness.hpp" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a891008cea11929449c5ced5b9cd35a22" prot="private" static="no" mutable="no">
+        <type>IDAlias</type>
+        <definition>IDAlias Witness::freeAliases_[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>freeAliases_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="313" column="1" bodyfile="cellapp/witness.hpp" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1aac8cba79dbab72fc8a0194b500085754" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Witness::numFreeAliases_</definition>
+        <argsstring></argsstring>
+        <name>numFreeAliases_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="314" column="1" bodyfile="cellapp/witness.hpp" bodystart="314" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1aa4992b6562c1a9630dbc9b51babbbb7d" prot="private" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 Witness::referencePosition_</definition>
+        <argsstring></argsstring>
+        <name>referencePosition_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="320" column="1" bodyfile="cellapp/witness.hpp" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1af501bc781e5b3a4c212060105cee59f7" prot="private" static="no" mutable="no">
+        <type>uint8</type>
+        <definition>uint8 Witness::referenceSeqNum_</definition>
+        <argsstring></argsstring>
+        <name>referenceSeqNum_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="323" column="1" bodyfile="cellapp/witness.hpp" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a11caf26b658ce67f6d058611438515d2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Witness::hasReferencePosition_</definition>
+        <argsstring></argsstring>
+        <name>hasReferencePosition_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="324" column="1" bodyfile="cellapp/witness.hpp" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1ab218c6ad102b1dba006c07a19f2133cf" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Witness::aoiRootIsReferencePosition_</definition>
+        <argsstring></argsstring>
+        <name>aoiRootIsReferencePosition_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="325" column="1" bodyfile="cellapp/witness.hpp" bodystart="325" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a26f7084bdf4af0db1428cced6af1bbcf" prot="private" static="no" mutable="no">
+        <type><ref refid="class_ao_i_trigger" kindref="compound">AoITrigger</ref> *</type>
+        <definition>AoITrigger* Witness::pAoITrigger_</definition>
+        <argsstring></argsstring>
+        <name>pAoITrigger_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="328" column="1" bodyfile="cellapp/witness.hpp" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a2db6dde568605a49df9e8d502439a0b0" prot="private" static="no" mutable="no">
+        <type>GameTime</type>
+        <definition>GameTime Witness::lastSentReliableGameTime_</definition>
+        <argsstring></argsstring>
+        <name>lastSentReliableGameTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="332" column="1" bodyfile="cellapp/witness.hpp" bodystart="332" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a068dc50afddd7e729d250c6d1bea5464" prot="private" static="no" mutable="no">
+        <type>Position3D</type>
+        <definition>Position3D Witness::lastSentReliablePosition_</definition>
+        <argsstring></argsstring>
+        <name>lastSentReliablePosition_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="333" column="1" bodyfile="cellapp/witness.hpp" bodystart="333" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a8df2d364a50337583b09f98734fae953" prot="private" static="no" mutable="no">
+        <type>Direction3D</type>
+        <definition>Direction3D Witness::lastSentReliableDirection_</definition>
+        <argsstring></argsstring>
+        <name>lastSentReliableDirection_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="334" column="1" bodyfile="cellapp/witness.hpp" bodystart="334" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1a4f05e474aaec7b3147ae651449958ab1" prot="private" static="no" mutable="no">
+        <type>EventNumber</type>
+        <definition>EventNumber Witness::lastSpacePropertyEventNumber_</definition>
+        <argsstring></argsstring>
+        <name>lastSpacePropertyEventNumber_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="341" column="1" bodyfile="cellapp/witness.hpp" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_witness_1afa151116463e27e6de9c26e11fa58a4e" prot="private" static="no" mutable="no">
+        <type>EventNumber</type>
+        <definition>EventNumber Witness::lastSpaceGeometryMappingsEventNumber_</definition>
+        <argsstring></argsstring>
+        <name>lastSpaceGeometryMappingsEventNumber_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="343" column="1" bodyfile="cellapp/witness.hpp" bodystart="343" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_witness_1a244a9d489a6ff4f69fda4fc8b3a5ef35" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_witness" kindref="compound">Witness</ref> *</type>
+        <definition>static Witness* Witness::getSelf</definition>
+        <argsstring>(PyObject *self)</argsstring>
+        <name>getSelf</name>
+        <param>
+          <type>PyObject *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="29" column="1" bodyfile="cellapp/witness.hpp" bodystart="29" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1ad5ff08c5293f86422030829eb1d6991f" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_entity" kindref="compound">Entity</ref> *</type>
+        <definition>Entity * Witness::findEntityFromPyArg</definition>
+        <argsstring>(PyObject *pEntityOrID)</argsstring>
+        <name>findEntityFromPyArg</name>
+        <param>
+          <type>PyObject *</type>
+          <declname>pEntityOrID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This static helper function will find an entity from the input Python object. This object may be the entity or the entity&apos;s id.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pEntityOrID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An entity or an entity id.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If the entity could not be found, NULL is returned and the Python exception state set. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="277" column="1" bodyfile="cellapp/witness.cpp" bodystart="2995" bodyend="3020"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_witness_1a9406ebe12899ebb8f28f05d0ae0079c7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::readOffloadData</definition>
+        <argsstring>(BinaryIStream &amp;data, CreateRealInfo createRealInfo, bool hasChangedSpace)</argsstring>
+        <name>readOffloadData</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>CreateRealInfo</type>
+          <declname>createRealInfo</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>hasChangedSpace</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method reads the relevant data from the stream to restore a <ref refid="class_witness" kindref="compound">Witness</ref> on a new cell.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input stream to restore from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>createRealInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Enumeration to indicate how the reference position should be initialised. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hasChangedSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean indicating whether the space changed during the offload process. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="69" column="1" bodyfile="cellapp/witness.cpp" bodystart="648" bodyend="679"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1ac52d3992b5d9174ca44432bccd06f020" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::writeSpacePropertyCache</definition>
+        <argsstring>(BinaryOStream &amp;data) const </argsstring>
+        <name>writeSpacePropertyCache</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method write the def space data information to a stream for offloading.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The stream to write the space data to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="72" column="1" bodyfile="cellapp/witness.cpp" bodystart="246" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a6cf34647ff49eb45bf0bf461b84c641d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::readSpacePropertyCache</definition>
+        <argsstring>(BinaryIStream &amp;data, bool hasChangedSpace)</argsstring>
+        <name>readSpacePropertyCache</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>hasChangedSpace</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method reads the def space data when being onloaded to a new <ref refid="class_cell" kindref="compound">Cell</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input stream to read the space data from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hasChangedSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean indicating whether the witness has changed space since being offloaded. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="73" column="1" bodyfile="cellapp/witness.cpp" bodystart="259" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1abdbbd959949b29133e94ed93c33e08f1" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::writeSpaceGeometryMappings</definition>
+        <argsstring>(BinaryOStream &amp;data) const </argsstring>
+        <name>writeSpaceGeometryMappings</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method write the def space data information to a stream for offloading.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The stream to write the space data to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="75" column="1" bodyfile="cellapp/witness.cpp" bodystart="277" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1aaf57278b8a8eaa774ee1801ee92481e6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::readSpaceGeometryMappings</definition>
+        <argsstring>(BinaryIStream &amp;data, bool hasChangedSpace)</argsstring>
+        <name>readSpaceGeometryMappings</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>hasChangedSpace</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method reads the def space data when being onloaded to a new <ref refid="class_cell" kindref="compound">Cell</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input stream to read the space data from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hasChangedSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean indicating whether the witness has changed space since being offloaded. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="76" column="1" bodyfile="cellapp/witness.cpp" bodystart="290" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1ac018226507eda57de8d7eaf151834ac1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::readAoI</definition>
+        <argsstring>(BinaryIStream &amp;data)</argsstring>
+        <name>readAoI</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method reads the AoI from the stream to initialise the <ref refid="class_witness" kindref="compound">Witness</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input stream containing the AoI initialise from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="79" column="1" bodyfile="cellapp/witness.cpp" bodystart="337" bodyend="483"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1ae78007fb01a7c29791b98bdfb058c4ed" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::writeAoI</definition>
+        <argsstring>(BinaryOStream &amp;data) const </argsstring>
+        <name>writeAoI</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method writes the AoI from the <ref refid="class_witness" kindref="compound">Witness</ref> to a stream to be used in onloading.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream to write the witness&apos; AoI to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="80" column="1" bodyfile="cellapp/witness.cpp" bodystart="307" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a443e0c860c86c055a25a7bfb3c3e27ba" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method initialises this object some more. It is only separate from the constructor for historical reasons. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="82" column="1" bodyfile="cellapp/witness.cpp" bodystart="490" bodyend="565"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1afa42c1a86b25bd68c78f1acde52c8ee0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Witness::withholdFromClient</definition>
+        <argsstring>(PyObjectPtr pEntityOrID, bool isVisible)</argsstring>
+        <name>withholdFromClient</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+          <declname>pEntityOrID</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isVisible</declname>
+          <defname>isWithheld</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method modifies whether an entity is withheld from being sent to a client.</para><para><simplesect kind="return"><para>On failure, the Python exception state is set and false is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="218" column="1" bodyfile="cellapp/witness.cpp" bodystart="3057" bodyend="3082"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a3eff5bb4d1a520d35216c2861733dac3" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject* Witness::isWithheldFromClient</definition>
+        <argsstring>(PyObjectPtr pEntityOrID) const </argsstring>
+        <name>isWithheldFromClient</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+          <declname>pEntityOrID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="219" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a000b4329559b3cf970964b1a8f0e5072" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Witness::setPositionDetailed</definition>
+        <argsstring>(PyObjectPtr pEntityOrID, bool isPositionDetailed)</argsstring>
+        <name>setPositionDetailed</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+          <declname>pEntityOrID</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isPositionDetailed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="221" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1aaee70a17715798ed98b58c1ee8ee007b" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject* Witness::isPositionDetailed</definition>
+        <argsstring>(PyObjectPtr pEntityOrID) const </argsstring>
+        <name>isPositionDetailed</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+          <declname>pEntityOrID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="222" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a45f26a9be4520d3094865355272b171a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Witness::isInAoI</definition>
+        <argsstring>(PyObjectPtr pEntityOrID) const </argsstring>
+        <name>isInAoI</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+          <declname>pEntityOrID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method implements the Entity.isInAoI script method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="224" column="1" bodyfile="cellapp/witness.cpp" bodystart="3594" bodyend="3605"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a6162cdd66042b04e9a86589894689d34" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Witness::setAoIUpdateScheme</definition>
+        <argsstring>(PyObjectPtr pEntityOrID, BW::string schemeName)</argsstring>
+        <name>setAoIUpdateScheme</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+          <declname>pEntityOrID</declname>
+        </param>
+        <param>
+          <type>BW::string</type>
+          <declname>schemeName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="226" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1abf7fa819cd49431b45d915f5db010ba2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject* Witness::getAoIUpdateScheme</definition>
+        <argsstring>(PyObjectPtr pEntityOrID)</argsstring>
+        <name>getAoIUpdateScheme</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+          <declname>pEntityOrID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="227" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1aba631350a61e96ce29ffaf1d43d6082e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+        <definition>RangeListNode * Witness::replaceAoITrigger</definition>
+        <argsstring>(RangeListNode *pNewAoIRoot)</argsstring>
+        <name>replaceAoITrigger</name>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+          <declname>pNewAoIRoot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method replaces our <ref refid="class_ao_i_trigger" kindref="compound">AoITrigger</ref> instance with one centred around the given <ref refid="class_range_list_node" kindref="compound">RangeListNode</ref>, and returns the centre of the previous <ref refid="class_ao_i_trigger" kindref="compound">AoITrigger</ref>. It attempts to ensure that the onEnteredAoI and onLeftAoI callbacks only trigger where necessary.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pNewAoIRoot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the <ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> to centre our <ref refid="class_ao_i_trigger" kindref="compound">AoITrigger</ref> on</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the <ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> the old <ref refid="class_ao_i_trigger" kindref="compound">AoITrigger</ref> was centred on </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="230" column="1" bodyfile="cellapp/witness.cpp" bodystart="1792" bodyend="1850"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a4b1ee9a1ff103e40bf3b50dcb975df00" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::deleteFromEntityQueue</definition>
+        <argsstring>(KnownEntityQueue::iterator &amp;iter)</argsstring>
+        <name>deleteFromEntityQueue</name>
+        <param>
+          <type>KnownEntityQueue::iterator &amp;</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="232" column="1" bodyfile="cellapp/witness.cpp" bodystart="1852" bodyend="1864"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a6dd4af47e87a31716ac0fcf616743542" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::addToSeen</definition>
+        <argsstring>(EntityCache *pCache)</argsstring>
+        <name>addToSeen</name>
+        <param>
+          <type><ref refid="class_entity_cache" kindref="compound">EntityCache</ref> *</type>
+          <declname>pCache</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds the input entity to the collection of seen entities. It is called by addToAoI, or later in requestEntityUpdate. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="234" column="1" bodyfile="cellapp/witness.cpp" bodystart="1870" bodyend="1896"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a9392b745571c3b3d80e79d5646f739be" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::deleteFromSeen</definition>
+        <argsstring>(Mercury::Bundle &amp;bundle, KnownEntityQueue::iterator &amp;iter)</argsstring>
+        <name>deleteFromSeen</name>
+        <param>
+          <type>Mercury::Bundle &amp;</type>
+          <declname>bundle</declname>
+        </param>
+        <param>
+          <type>KnownEntityQueue::iterator &amp;</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method removes the entity pointed to by the input iterator from this object&apos;s seen collection. It calls onLeaveAoI.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bundle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bundle to put the leaveAoI message on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An iterator pointing to the entity cache of the entity being removed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is the id of the entity. This should only be passed in if the entity in the cache is NULL. This can occur when an entity is offloaded and a referenced entity is not on the new cell. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="235" column="1" bodyfile="cellapp/witness.cpp" bodystart="1931" bodyend="1938"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a627b58d61917057bb59be3d96e32d599" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::deleteFromClient</definition>
+        <argsstring>(Mercury::Bundle &amp;bundle, EntityCache *pCache)</argsstring>
+        <name>deleteFromClient</name>
+        <param>
+          <type>Mercury::Bundle &amp;</type>
+          <declname>bundle</declname>
+        </param>
+        <param>
+          <type><ref refid="class_entity_cache" kindref="compound">EntityCache</ref> *</type>
+          <declname>pCache</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method informs the client that an entity has left its AoI. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="238" column="1" bodyfile="cellapp/witness.cpp" bodystart="1944" bodyend="1960"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1ad4af9fc2348411044cbdbcfcfa879fe4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::deleteFromAoI</definition>
+        <argsstring>(KnownEntityQueue::iterator &amp;iter)</argsstring>
+        <name>deleteFromAoI</name>
+        <param>
+          <type>KnownEntityQueue::iterator &amp;</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method removes and deletes an <ref refid="class_entity_cache" kindref="compound">EntityCache</ref> from the AoI. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="240" column="1" bodyfile="cellapp/witness.cpp" bodystart="1966" bodyend="1976"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a19093e2987be09be7c3711439b932f88" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::handleEnterPending</definition>
+        <argsstring>(Mercury::Bundle &amp;bundle, KnownEntityQueue::iterator &amp;iter)</argsstring>
+        <name>handleEnterPending</name>
+        <param>
+          <type>Mercury::Bundle &amp;</type>
+          <declname>bundle</declname>
+        </param>
+        <param>
+          <type>KnownEntityQueue::iterator &amp;</type>
+          <declname>iter</declname>
+          <defname>iEntityCache</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This handles the sending of an ENTER_PENDING <ref refid="class_entity_cache" kindref="compound">EntityCache</ref>, and its removal from the entity queue. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="242" column="1" bodyfile="cellapp/witness.cpp" bodystart="1584" bodyend="1589"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a56fee1bf6f200408b6575d313e593a32" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::sendEnter</definition>
+        <argsstring>(Mercury::Bundle &amp;bundle, EntityCache *pCache)</argsstring>
+        <name>sendEnter</name>
+        <param>
+          <type>Mercury::Bundle &amp;</type>
+          <declname>bundle</declname>
+        </param>
+        <param>
+          <type><ref refid="class_entity_cache" kindref="compound">EntityCache</ref> *</type>
+          <declname>pCache</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends the enterAoI message to the client. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="245" column="1" bodyfile="cellapp/witness.cpp" bodystart="1595" bodyend="1631"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a08f7870e15ef5ca0951664381fbbcf85" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::sendCreate</definition>
+        <argsstring>(Mercury::Bundle &amp;bundle, EntityCache *pCache)</argsstring>
+        <name>sendCreate</name>
+        <param>
+          <type>Mercury::Bundle &amp;</type>
+          <declname>bundle</declname>
+        </param>
+        <param>
+          <type><ref refid="class_entity_cache" kindref="compound">EntityCache</ref> *</type>
+          <declname>pCache</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends the createEntity message to the client. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="246" column="1" bodyfile="cellapp/witness.cpp" bodystart="1637" bodyend="1690"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a1478792d1f105ae3f9aadef656d7079b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::sendGameTime</definition>
+        <argsstring>()</argsstring>
+        <name>sendGameTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="248" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a0f66fec0079f1251afc79d66ad348ed4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::onLeaveAoI</definition>
+        <argsstring>(EntityCache *pCache, EntityID id)</argsstring>
+        <name>onLeaveAoI</name>
+        <param>
+          <type><ref refid="class_entity_cache" kindref="compound">EntityCache</ref> *</type>
+          <declname>pCache</declname>
+        </param>
+        <param>
+          <type>EntityID</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method does the work that needs to be done when an entity leaves this entity&apos;s Area of Interest. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="250" column="1" bodyfile="cellapp/witness.cpp" bodystart="2127" bodyend="2134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1aff89031471f21fadb3a0490b0cdb8109" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Witness::isAoIRooted</definition>
+        <argsstring>() const </argsstring>
+        <name>isAoIRooted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns true if we have rooted our <ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> somewhere. If true, pAoIRoot() is an <ref refid="class_entity_range_list_node" kindref="compound">EntityRangeListNode</ref>. If false, pAoIRoot() is a <ref refid="class_mobile_range_list_node" kindref="compound">MobileRangeListNode</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="252" column="1" bodyfile="cellapp/witness.cpp" bodystart="1409" bodyend="1412"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1aaa29115f98f06cfb8c5b810143dd84e0" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+        <definition>const RangeListNode* Witness::pAoIRoot</definition>
+        <argsstring>() const </argsstring>
+        <name>pAoIRoot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="253" column="1" bodyfile="cellapp/witness.hpp" bodystart="253" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a4b7c1b9e1845d7ac2ab4c187eeaf70cc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Mercury::Bundle &amp;</type>
+        <definition>Mercury::Bundle &amp; Witness::bundle</definition>
+        <argsstring>()</argsstring>
+        <name>bundle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns a reference to the next outgoing bundle destined for the proxy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="255" column="1" bodyfile="cellapp/witness.cpp" bodystart="1574" bodyend="1577"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a498a382050f2f360cda78d16b4b29e5d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IDAlias</type>
+        <definition>IDAlias Witness::allocateIDAlias</definition>
+        <argsstring>(const Entity &amp;entity)</argsstring>
+        <name>allocateIDAlias</name>
+        <param>
+          <type>const <ref refid="class_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method allocates a new id alias for the input entity. It may allocate NO_ID_ALIAS. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="257" column="1" bodyfile="cellapp/witness.cpp" bodystart="1903" bodyend="1916"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a3442eb8b46eda102d0c23d7f2e85108e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::addSpaceDataChanges</definition>
+        <argsstring>(Mercury::Bundle &amp;bundle)</argsstring>
+        <name>addSpaceDataChanges</name>
+        <param>
+          <type>Mercury::Bundle &amp;</type>
+          <declname>bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="259" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a5d341f594e3deb780e63e94080de57ee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::addSpacePropertyChanges</definition>
+        <argsstring>(Mercury::Bundle &amp;bundle)</argsstring>
+        <name>addSpacePropertyChanges</name>
+        <param>
+          <type>Mercury::Bundle &amp;</type>
+          <declname>bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds any appropriate changes to space property to a bundle. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="260" column="1" bodyfile="cellapp/witness.cpp" bodystart="727" bodyend="736"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a0f720fe9c2583d3ee76bfcd6ca9da9f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::addSpaceGeometryMappingsChanges</definition>
+        <argsstring>(Mercury::Bundle &amp;bundle)</argsstring>
+        <name>addSpaceGeometryMappingsChanges</name>
+        <param>
+          <type>Mercury::Bundle &amp;</type>
+          <declname>bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds space geometry mappings to a bundle. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="261" column="1" bodyfile="cellapp/witness.cpp" bodystart="742" bodyend="747"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a92cc08d60f6c4b6bb13e9aa80285883e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool *</type>
+        <definition>bool * Witness::addReferencePosition</definition>
+        <argsstring>(Mercury::Bundle &amp;bundle)</argsstring>
+        <name>addReferencePosition</name>
+        <param>
+          <type>Mercury::Bundle &amp;</type>
+          <declname>bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds the appropriate reference position message to the input bundle.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bundle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bundle to put the information on. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the boolean making the reference position message reliable, or NULL if no such message was added. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="264" column="1" bodyfile="cellapp/witness.cpp" bodystart="759" bodyend="817"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a435771a4abad76f46745af67e519efca" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::calculateReferencePosition</definition>
+        <argsstring>()</argsstring>
+        <name>calculateReferencePosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method converts the entity&apos;s position into a reference position. This just adjusts the position to be aligned to a larger grid so that calculated positions do not move around as the reference position changes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="265" column="1" bodyfile="cellapp/witness.cpp" bodystart="2443" bodyend="2458"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a32f366f0768c8285351cb218d2afccf0" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool *</type>
+        <definition>bool * Witness::addDetailedPlayerPosition</definition>
+        <argsstring>(Mercury::Bundle &amp;bundle, bool isReferencePosition) const </argsstring>
+        <name>addDetailedPlayerPosition</name>
+        <param>
+          <type>Mercury::Bundle &amp;</type>
+          <declname>bundle</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isReferencePosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a detailed volatile position message for the entity of this witness.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bundle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bundle to put the information on. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the boolean making the detailed volatile position message reliable, or NULL if no such message was added. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="268" column="1" bodyfile="cellapp/witness.cpp" bodystart="830" bodyend="890"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1ac98c06948e676a637fdc3e152cb5a64f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::handleStateChange</definition>
+        <argsstring>(EntityCache **ppCache, KnownEntityQueue::iterator &amp;queueEnd)</argsstring>
+        <name>handleStateChange</name>
+        <param>
+          <type><ref refid="class_entity_cache" kindref="compound">EntityCache</ref> **</type>
+          <declname>ppCache</declname>
+        </param>
+        <param>
+          <type>KnownEntityQueue::iterator &amp;</type>
+          <declname>queueEnd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method processes an entity cache state change</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ppCache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current entity cache. Can be NULL after the call if it was invalidated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>queueEnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the last entry in the heap </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="271" column="1" bodyfile="cellapp/witness.cpp" bodystart="934" bodyend="982"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1ae937825700f60905ec2518e4e3e2e714" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Witness::sendQueueElement</definition>
+        <argsstring>(EntityCache *pCache)</argsstring>
+        <name>sendQueueElement</name>
+        <param>
+          <type><ref refid="class_entity_cache" kindref="compound">EntityCache</ref> *</type>
+          <declname>pCache</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method writes client update data to bundle</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current entity cache </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if a reliable position update message was included in the bundle, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="273" column="1" bodyfile="cellapp/witness.cpp" bodystart="991" bodyend="1030"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1ad8108f848be0078ed60a0a3afac28d83" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Witness::selectEntity</definition>
+        <argsstring>(Mercury::Bundle &amp;bundle, EntityID targetID) const </argsstring>
+        <name>selectEntity</name>
+        <param>
+          <type>Mercury::Bundle &amp;</type>
+          <declname>bundle</declname>
+        </param>
+        <param>
+          <type>EntityID</type>
+          <declname>targetID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method writes a message to the given bundle indicating which entity the following history events are destined for.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bundle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bundle to put the information on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_entity_cache" kindref="compound">EntityCache</ref> for the <ref refid="class_entity" kindref="compound">Entity</ref> to select</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True unless the <ref refid="class_entity" kindref="compound">Entity</ref> was not in AoI or could not receive history events. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="275" column="1" bodyfile="cellapp/witness.cpp" bodystart="904" bodyend="926"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a78d331f8389770098b138c52a6a4fa5a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_entity_cache" kindref="compound">EntityCache</ref> *</type>
+        <definition>EntityCache * Witness::findEntityCacheFromPyArg</definition>
+        <argsstring>(PyObject *pEntityOrID) const </argsstring>
+        <name>findEntityCacheFromPyArg</name>
+        <param>
+          <type>PyObject *</type>
+          <declname>pEntityOrID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This helper method returns the <ref refid="class_entity_cache" kindref="compound">EntityCache</ref> associated with the given Python object. This may be an entity or an entity id.</para><para><simplesect kind="return"><para>On failure, the Python exception state is set and NULL returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="278" column="1" bodyfile="cellapp/witness.cpp" bodystart="3029" bodyend="3048"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1ac256faff54195308826e71e376951254" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename PRED</type>
+          </param>
+        </templateparamlist>
+        <type>ScriptList</type>
+        <definition>ScriptList Witness::entitiesInAoI</definition>
+        <argsstring>(PRED predicate) const </argsstring>
+        <name>entitiesInAoI</name>
+        <param>
+          <type>PRED</type>
+          <declname>predicate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method constructs a Python list of entities within AoI that satisfy the predicate. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>predicate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A functor to test which entities should be added to the list (</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>AoICollector). </para></simplesect>
+<simplesect kind="return"><para>Python list of entities. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="280" column="1" bodyfile="cellapp/witness.cpp" bodystart="3564" bodyend="3569"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1ae731c050692f9f982849f1a87b9c169a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject * Witness::entitiesInAoI</definition>
+        <argsstring>(bool includeAll, bool onlyWithheld) const </argsstring>
+        <name>entitiesInAoI</name>
+        <param>
+          <type>bool</type>
+          <declname>includeAll</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>onlyWithheld</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns a Python list containing entities from this <ref refid="class_witness" kindref="compound">Witness</ref>&apos; AoI. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="281" column="1" bodyfile="cellapp/witness.cpp" bodystart="3576" bodyend="3588"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1ad2b84a2b9466952bc40be6e3ee19f800" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Witness::shouldAddReplayAoIUpdates</definition>
+        <argsstring>() const </argsstring>
+        <name>shouldAddReplayAoIUpdates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method determines whether we should be adding AoI updates for replay. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="283" column="1" bodyfile="cellapp/witness.cpp" bodystart="3718" bodyend="3724"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a08d6dd7b92e5dbc41a35205d229d4c6d" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 Witness::getUpdatePriorityOrigin</definition>
+        <argsstring>() const </argsstring>
+        <name>getUpdatePriorityOrigin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns aoiRoot if available or entity_.position() otherwise as updatePriority origin for X and Z. The Update Priority calculation ignores the Y value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="285" column="1" bodyfile="cellapp/witness.cpp" bodystart="3732" bodyend="3748"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a79e67127ecfa0166e78ee4dff226bc2f" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Witness::validateAoISubsystemIndex</definition>
+        <argsstring>(uint aoiSubsystem, const char *errMsg) const </argsstring>
+        <name>validateAoISubsystemIndex</name>
+        <param>
+          <type>uint</type>
+          <declname>aoiSubsystem</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>errMsg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks if aoiSubsystem is a valid AoI subsystem index. A Python exception is raised if the index is out range. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aoiSubsystem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>AoI subsystem index. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An error message describing the requested operation. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true is valid. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="287" column="1" bodyfile="cellapp/witness.cpp" bodystart="3758" bodyend="3769"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_witness_1adb2e8c9528de5fb5379726202c29c4b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_real_entity" kindref="compound">RealEntity</ref> &amp;</type>
+        <definition>RealEntity&amp; Witness::real</definition>
+        <argsstring>()</argsstring>
+        <name>real</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="85" column="1" bodyfile="cellapp/witness.hpp" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a2fd8445020d508bbbe5d088071e25043" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_real_entity" kindref="compound">RealEntity</ref> &amp;</type>
+        <definition>const RealEntity&amp; Witness::real</definition>
+        <argsstring>() const </argsstring>
+        <name>real</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="86" column="1" bodyfile="cellapp/witness.hpp" bodystart="86" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a867a4f899106008df2d1cb556e13839c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity&amp; Witness::entity</definition>
+        <argsstring>()</argsstring>
+        <name>entity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="88" column="1" bodyfile="cellapp/witness.hpp" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a996aaf6be8c42770d79442eba518e6cf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>const Entity&amp; Witness::entity</definition>
+        <argsstring>() const </argsstring>
+        <name>entity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="89" column="1" bodyfile="cellapp/witness.hpp" bodystart="89" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a0af789bc54c2c40af7b39c517d5f2111" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::writeOffloadData</definition>
+        <argsstring>(BinaryOStream &amp;data) const </argsstring>
+        <name>writeOffloadData</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method should put the relevant data into the input BinaryOStream so that this entity can be onloaded to another cell.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The stream to place the data on. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="93" column="1" bodyfile="cellapp/witness.cpp" bodystart="620" bodyend="635"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1af5b24579bf00c6b713db985a5db62c5b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::writeBackupData</definition>
+        <argsstring>(BinaryOStream &amp;data) const </argsstring>
+        <name>writeBackupData</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds the backup data associated with this real entity to the input stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="94" column="1" bodyfile="cellapp/witness.cpp" bodystart="687" bodyend="699"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a755d284953fd9ed726975ef03cbc204f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Witness::sendToClient</definition>
+        <argsstring>(EntityID entityID, Mercury::MessageID msgID, MemoryOStream &amp;stream, int msgSize)</argsstring>
+        <name>sendToClient</name>
+        <param>
+          <type>EntityID</type>
+          <declname>entityID</declname>
+        </param>
+        <param>
+          <type>Mercury::MessageID</type>
+          <declname>msgID</declname>
+        </param>
+        <param>
+          <type>MemoryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>msgSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This helper method is used to send data to the client associated with this object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="96" column="1" bodyfile="cellapp/witness.cpp" bodystart="1983" bodyend="2006"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1aaaea0ac52809f9823a22cf4000cc8cd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::sendToProxy</definition>
+        <argsstring>(Mercury::MessageID msgID, MemoryOStream &amp;stream)</argsstring>
+        <name>sendToProxy</name>
+        <param>
+          <type>Mercury::MessageID</type>
+          <declname>msgID</declname>
+        </param>
+        <param>
+          <type>MemoryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This helper method is used to send data to the proxy associated with this object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="98" column="1" bodyfile="cellapp/witness.cpp" bodystart="2013" bodyend="2020"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a3eb0beefb254554856eb21cc52caf105" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::flushToClient</definition>
+        <argsstring>()</argsstring>
+        <name>flushToClient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends the bundle to the client associated with this entity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="100" column="1" bodyfile="cellapp/witness.cpp" bodystart="1696" bodyend="1707"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1af51969abaaa8769b679bc2b2a9fe9b9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::setWitnessCapacity</definition>
+        <argsstring>(EntityID id, int bps)</argsstring>
+        <name>setWitnessCapacity</name>
+        <param>
+          <type>EntityID</type>
+          <declname>id</declname>
+          <defname>witnessID</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This virtual method is used to adjust the amount of data that is sent to a particular witness. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="102" column="1" bodyfile="cellapp/witness.cpp" bodystart="2027" bodyend="2039"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a94d28363a0b3dc4af4f9b7c612bdafd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::requestEntityUpdate</definition>
+        <argsstring>(EntityID id, EventNumber *pEventNumbers, int size)</argsstring>
+        <name>requestEntityUpdate</name>
+        <param>
+          <type>EntityID</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>EventNumber *</type>
+          <declname>pEventNumbers</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This virtual method is used to handle a request from the client to update the information associated with a particular entity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="104" column="1" bodyfile="cellapp/witness.cpp" bodystart="2046" bodyend="2120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1aeb764496b98cb46a1706de4e4d9523e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::addToAoI</definition>
+        <argsstring>(Entity *pEntity, uint aoiSubsystem)</argsstring>
+        <name>addToAoI</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> *</type>
+          <declname>pEntity</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>aoiSubsystem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds the input entity to this entity&apos;s Area of Interest. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pEntity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_entity" kindref="compound">Entity</ref> to be added. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aoiSubsystem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the AoI subsystem to add the entity to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="107" column="1" bodyfile="cellapp/witness.cpp" bodystart="2235" bodyend="2322"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1aaada306c9ab37f90a97f8f0f40668650" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::removeFromAoI</definition>
+        <argsstring>(Entity *pEntity, uint aoiSubsystem)</argsstring>
+        <name>removeFromAoI</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> *</type>
+          <declname>pEntity</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>aoiSubsystem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method removes the input entity from this entity&apos;s Area of Interest.</para><para>It is not actually removed immediately. This method is called when an AoI trigger is untriggered. It adds this to a leftAoI set and the normal priority queue updating is used to actually remove it from the list.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pEntity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_entity" kindref="compound">Entity</ref> to be removed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aoiSubsystem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the AoI subsystem to remove the entity from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="108" column="1" bodyfile="cellapp/witness.cpp" bodystart="2335" bodyend="2393"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1ac0a166f99d3b52ab1b137d2f7942a2bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::newPosition</definition>
+        <argsstring>(const Vector3 &amp;position)</argsstring>
+        <name>newPosition</name>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method informs us that our entity is now at a new position. We may use this opportunity to update our velocity record. and check if we&apos;re making too much noise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="110" column="1" bodyfile="cellapp/witness.cpp" bodystart="2401" bodyend="2434"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a882b97f0ee33432a3d0f6c4b554c8355" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::updateReferencePosition</definition>
+        <argsstring>(uint8 seqNum)</argsstring>
+        <name>updateReferencePosition</name>
+        <param>
+          <type>uint8</type>
+          <declname>seqNum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method updates the position reference based on a client update. When sending volatile entity positions to the client, the positions are sent as 12-bits floats (in x and z) and are relative to this position reference point.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seqNum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sequence number associated with this reference position. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="113" column="1" bodyfile="cellapp/witness.cpp" bodystart="2469" bodyend="2474"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1aa1b8a1fa71fb3b88a93c1fa5c1f4a4b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::cancelReferencePosition</definition>
+        <argsstring>()</argsstring>
+        <name>cancelReferencePosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method cancels the position reference. When sending volatile entity positions to the client, the positions are sent as 3 bytes (one uint8 for each of x, y and z), and are relative to this position reference point. The position space thus is described as a 256m3 cube. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="114" column="1" bodyfile="cellapp/witness.cpp" bodystart="2484" bodyend="2489"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1ae905f328cc7ee7cddc47f1bdb469c736" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::dumpAoI</definition>
+        <argsstring>()</argsstring>
+        <name>dumpAoI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method dumps this entity&apos;s AoI. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="116" column="1" bodyfile="cellapp/witness.cpp" bodystart="2184" bodyend="2227"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1abeb99239d4a3020c11231b9248aa7968" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::debugDump</definition>
+        <argsstring>()</argsstring>
+        <name>debugDump</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is used to dump debug information. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="117" column="1" bodyfile="cellapp/witness.cpp" bodystart="2496" bodyend="2499"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1afd70f1163d740e9175911e0e10db0d78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called regularly to send data to the witnesses associated with this entity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="120" column="1" bodyfile="cellapp/witness.cpp" bodystart="1036" bodyend="1388"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a2d9608594e2ef1d037f6e7201cc475ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::onSendReliablePosition</definition>
+        <argsstring>(Position3D position, Direction3D direction)</argsstring>
+        <name>onSendReliablePosition</name>
+        <param>
+          <type>Position3D</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>Direction3D</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called when our client has just been sent a reliable detailed position for our entity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="121" column="1" bodyfile="cellapp/witness.cpp" bodystart="1395" bodyend="1401"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1ab75ee768d57dc3fac1a246e1d2cddae5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::setAoIRoot</definition>
+        <argsstring>(float x, float z)</argsstring>
+        <name>setAoIRoot</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets our AoI root to the given X,Z position in the world. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="123" column="1" bodyfile="cellapp/witness.cpp" bodystart="1418" bodyend="1451"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1aa05248abdd4d77cd5b54d51497aa9ad0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::clearAoIRoot</definition>
+        <argsstring>()</argsstring>
+        <name>clearAoIRoot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets our AoI root to be our entity </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="124" column="1" bodyfile="cellapp/witness.cpp" bodystart="1457" bodyend="1478"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a5df1a23b9c3692d9c889419adb71bcfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject * Witness::pyGet_aoiRoot</definition>
+        <argsstring>()</argsstring>
+        <name>pyGet_aoiRoot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns our current AoIRoot as a PyObject * </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="125" column="1" bodyfile="cellapp/witness.cpp" bodystart="1484" bodyend="1501"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1af52b12c79aec53fedabf7dce751bedce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Witness::pySet_aoiRoot</definition>
+        <argsstring>(PyObject *pArgs)</argsstring>
+        <name>pySet_aoiRoot</name>
+        <param>
+          <type>PyObject *</type>
+          <declname>pArgs</declname>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets our current AoIRoot from a PyObject * Acceptable inputs are this entity, a 2-tuple of X,Z or a 3-tuple of X,Y,Z where Y is ignored. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="126" column="1" bodyfile="cellapp/witness.cpp" bodystart="1509" bodyend="1556"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a70e4a436ca25b4745121646919f8fe0f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Witness::aoiRootIsReferencePosition</definition>
+        <argsstring>() const </argsstring>
+        <name>aoiRootIsReferencePosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="129" column="1" bodyfile="cellapp/witness.hpp" bodystart="129" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1abfc34d4c819580ef6094eab779852bfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::aoiRootIsReferencePosition</definition>
+        <argsstring>(bool aoiRootIsReferencePosition)</argsstring>
+        <name>aoiRootIsReferencePosition</name>
+        <param>
+          <type>bool</type>
+          <declname>aoiRootIsReferencePosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the aoiRootIsReferencePosition flag. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="134" column="1" bodyfile="cellapp/witness.cpp" bodystart="1563" bodyend="1566"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a250c6b794f91798d9186e153edb13850" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Witness::PY_RW_ACCESSOR_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(bool, aoiRootIsReferencePosition, aoiRootIsReferencePosition)</argsstring>
+        <name>PY_RW_ACCESSOR_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>bool</type>
+        </param>
+        <param>
+          <type>aoiRootIsReferencePosition</type>
+        </param>
+        <param>
+          <type>aoiRootIsReferencePosition</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="135" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1abad4d2ae9f89eaa18a53d335dc7a30ad" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::pyAdditionalMembers</definition>
+        <argsstring>(const ScriptList &amp;pList) const </argsstring>
+        <name>pyAdditionalMembers</name>
+        <param>
+          <type>const ScriptList &amp;</type>
+          <declname>pList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="140" column="1" bodyfile="cellapp/witness.hpp" bodystart="140" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1ab8076ede1119332cc00320ed04a559e8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::pyAdditionalMethods</definition>
+        <argsstring>(const ScriptList &amp;pList) const </argsstring>
+        <name>pyAdditionalMethods</name>
+        <param>
+          <type>const ScriptList &amp;</type>
+          <declname>pList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="142" column="1" bodyfile="cellapp/witness.hpp" bodystart="142" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a06c6260ba4f6d477dc0697e8cf061b7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Witness::PY_RW_ATTRIBUTE_DECLARE</definition>
+        <argsstring>(maxPacketSize_, bandwidthPerUpdate)</argsstring>
+        <name>PY_RW_ATTRIBUTE_DECLARE</name>
+        <param>
+          <type>maxPacketSize_</type>
+        </param>
+        <param>
+          <type>bandwidthPerUpdate</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="144" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a309cc3052c97c43339544b13d2253316" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Witness::bpsToClient</definition>
+        <argsstring>()</argsstring>
+        <name>bpsToClient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Python getter for Entity.bpsToClient </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="146" column="1" bodyfile="cellapp/witness.cpp" bodystart="2908" bodyend="2912"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1aa4f2a24525d6d7f31228ed0ff4ac440f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Witness::PY_READABLE_ATTRIBUTE_GET</definition>
+        <argsstring>(this-&gt;bpsToClient(), bpsToClient)</argsstring>
+        <name>PY_READABLE_ATTRIBUTE_GET</name>
+        <param>
+          <type>this-&gt;</type>
+          <declname>bpsToClient</declname>
+          <array>()</array>
+        </param>
+        <param>
+          <type><ref refid="class_witness_1a309cc3052c97c43339544b13d2253316" kindref="member">bpsToClient</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="147" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a3b7f1e368b1adc21e43d4759f2558490" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Witness::pySet_bpsToClient</definition>
+        <argsstring>(PyObject *value)</argsstring>
+        <name>pySet_bpsToClient</name>
+        <param>
+          <type>PyObject *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Python setter for Entity.bpsToClient </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="148" column="1" bodyfile="cellapp/witness.cpp" bodystart="2918" bodyend="2942"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a996e026a9be809876e17bef5b7ce76d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::unitTest</definition>
+        <argsstring>()</argsstring>
+        <name>unitTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="152" column="1" bodyfile="cellapp/witness.cpp" bodystart="2949" bodyend="2965"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a8f66b06c36b06c01afab0403309f7040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Witness::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETOK, withholdFromClient, ARG(PyObjectPtr, OPTARG(bool, true, END))) PY_AUTO_METHOD_DECLARE(RETOWN</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETOK</type>
+        </param>
+        <param>
+          <type>withholdFromClient</type>
+        </param>
+        <param>
+          <type>ARG(<ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref>, OPTARG(bool, true, END))</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="157" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1afc85d81d0a5e9d6e304ab2c2d32a7e95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Witness::ARG</definition>
+        <argsstring>(PyObjectPtr, END)) PY_AUTO_METHOD_DECLARE(RETOK</argsstring>
+        <name>ARG</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+        </param>
+        <param>
+          <type>END</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="160" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1af4db6435597b877c63269d08349c418f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Witness::ARG</definition>
+        <argsstring>(PyObjectPtr, OPTARG(bool, true, END))) PY_AUTO_METHOD_DECLARE(RETOWN</argsstring>
+        <name>ARG</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+        </param>
+        <param>
+          <type>OPTARG(bool, true, END)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="163" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1afc85d81d0a5e9d6e304ab2c2d32a7e95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Witness::ARG</definition>
+        <argsstring>(PyObjectPtr, END)) PY_AUTO_METHOD_DECLARE(RETOK</argsstring>
+        <name>ARG</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+        </param>
+        <param>
+          <type>END</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="165" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a760096f66d42a5ea3a1d8534ddb4f425" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Witness::ARG</definition>
+        <argsstring>(PyObjectPtr, ARG(BW::string, END))) PY_AUTO_METHOD_DECLARE(RETOWN</argsstring>
+        <name>ARG</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+        </param>
+        <param>
+          <type>ARG(BW::string, END)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="172" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1ab17f62f716301c6822e0d0b5de21f3a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Witness::ARG</definition>
+        <argsstring>(PyObjectPtr, END)) void setAoIRadius(float radius</argsstring>
+        <name>ARG</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+        </param>
+        <param>
+          <type>END</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="175" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a460859086d4f1a97070997d16d86c211" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Witness::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETVOID, setAoIRadius, ARG(float, OPTARG(float, 5.f, END))) bool updateManualAoI(ScriptSequence list</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETVOID</type>
+        </param>
+        <param>
+          <type>setAoIRadius</type>
+        </param>
+        <param>
+          <type>ARG(float, OPTARG(float, 5.f, END))</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="178" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a3a085b2591c18132a1e88b22b9f00ba9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Witness::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETOK, updateManualAoI, ARG(ScriptSequence, OPTARG(bool, false, OPTARG(uint, EntityCache::AOI_DEFAULT, END)))) bool addToManualAoI(PyObjectPtr pEntityOrID</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETOK</type>
+        </param>
+        <param>
+          <type>updateManualAoI</type>
+        </param>
+        <param>
+          <type>ARG(ScriptSequence, OPTARG(bool, false, OPTARG(uint, <ref refid="class_entity_cache_1ad1b1e1b2283245f1b43b0d147a54d01badaa77921a9e538ce851cdf1f9cb04942" kindref="member">EntityCache::AOI_DEFAULT</ref>, END)))</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="183" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a899b76c67c098e8ffabe917498195d2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Witness::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETOK, addToManualAoI, ARG(PyObjectPtr, OPTARG(uint, EntityCache::AOI_DEFAULT, END))) bool removeFromManualAoI(PyObjectPtr pEntityOrID</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETOK</type>
+        </param>
+        <param>
+          <type>addToManualAoI</type>
+        </param>
+        <param>
+          <type>ARG(<ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref>, OPTARG(uint, <ref refid="class_entity_cache_1ad1b1e1b2283245f1b43b0d147a54d01badaa77921a9e538ce851cdf1f9cb04942" kindref="member">EntityCache::AOI_DEFAULT</ref>, END))</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="188" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1ab5efe3471ba8c1d5c1698f7fb3443ca8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Witness::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETOK, removeFromManualAoI, ARG(PyObjectPtr, OPTARG(uint, EntityCache::AOI_DEFAULT, END))) PyObject *entitiesInManualAoI(const ScriptObject &amp;optAoISubsystem) const </argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETOK</type>
+        </param>
+        <param>
+          <type>removeFromManualAoI</type>
+        </param>
+        <param>
+          <type>ARG(<ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref>, OPTARG(uint, <ref refid="class_entity_cache_1ad1b1e1b2283245f1b43b0d147a54d01badaa77921a9e538ce851cdf1f9cb04942" kindref="member">EntityCache::AOI_DEFAULT</ref>, END))</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="192" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a94aa4b3bdc8f17c6ad47fc08b8ecbf1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Witness::PY_AUTO_METHOD_DECLARE</definition>
+        <argsstring>(RETOWN, entitiesInManualAoI, OPTARG(ScriptObject, ScriptObject(), END)) static void addWatchers()</argsstring>
+        <name>PY_AUTO_METHOD_DECLARE</name>
+        <param>
+          <type>RETOWN</type>
+        </param>
+        <param>
+          <type>entitiesInManualAoI</type>
+        </param>
+        <param>
+          <type>OPTARG(ScriptObject, ScriptObject(), END)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="196" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1acb7d58fcae7ca62024afe6a0468b796c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::vehicleChanged</definition>
+        <argsstring>()</argsstring>
+        <name>vehicleChanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method lets the client know the server&apos;s view of which vehicle it is on. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="201" column="1" bodyfile="cellapp/witness.cpp" bodystart="706" bodyend="721"/>
+      </memberdef>
+      <memberdef kind="function" id="class_witness_1a187ba8b78fa229f06832fa5cadb6feb7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Witness::visitAoI</definition>
+        <argsstring>(EntityCacheVisitor &amp;visitor) const </argsstring>
+        <name>visitAoI</name>
+        <param>
+          <type><ref refid="class_entity_cache_visitor" kindref="compound">EntityCacheVisitor</ref> &amp;</type>
+          <declname>visitor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is used to visit entities in the AoI.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>visitor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The visitor. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="209" column="1" bodyfile="cellapp/witness.hpp" bodystart="209" bodyend="212"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_witness_1ac30cc909273f226c7fcfbadfbab12067" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend BinaryIStream &amp;</type>
+        <definition>BinaryIStream&amp; operator&gt;&gt;</definition>
+        <argsstring>(BinaryIStream &amp;stream, EntityCache &amp;entityCache)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type><ref refid="class_entity_cache" kindref="compound">EntityCache</ref> &amp;</type>
+          <declname>entityCache</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Streaming operator for <ref refid="class_entity_cache" kindref="compound">EntityCache</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="336" column="1" bodyfile="cellapp/entity_cache.cpp" bodystart="431" bodyend="456"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_witness_1a9f2a7482568bb7ecd289203bb82686cc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend BinaryOStream &amp;</type>
+        <definition>BinaryOStream&amp; operator&lt;&lt;</definition>
+        <argsstring>(BinaryOStream &amp;stream, const EntityCache &amp;entityCache)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_entity_cache" kindref="compound">EntityCache</ref> &amp;</type>
+          <declname>entityCache</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Streaming operator for <ref refid="class_entity_cache" kindref="compound">EntityCache</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.hpp" line="338" column="1" bodyfile="cellapp/entity_cache.cpp" bodystart="462" bodyend="515"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is a witness to the movements and perceptions of a <ref refid="class_real_entity" kindref="compound">RealEntity</ref>. It is created when a client is attached to this entity. Its main activity centres around the management of an Area of Interest list. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="3167">
+        <label>Updatable</label>
+      </node>
+      <node id="3166">
+        <label>Witness</label>
+        <link refid="class_witness"/>
+        <childnode refid="3167" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3169">
+        <label>Updatable</label>
+      </node>
+      <node id="3168">
+        <label>Witness</label>
+        <link refid="class_witness"/>
+        <childnode refid="3169" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/witness.hpp" line="28" column="1" bodyfile="cellapp/witness.hpp" bodystart="27" bodyend="344"/>
+    <listofallmembers>
+      <member refid="class_witness_1a32f366f0768c8285351cb218d2afccf0" prot="private" virt="non-virtual"><scope>Witness</scope><name>addDetailedPlayerPosition</name></member>
+      <member refid="class_witness_1a92cc08d60f6c4b6bb13e9aa80285883e" prot="private" virt="non-virtual"><scope>Witness</scope><name>addReferencePosition</name></member>
+      <member refid="class_witness_1a3442eb8b46eda102d0c23d7f2e85108e" prot="private" virt="non-virtual"><scope>Witness</scope><name>addSpaceDataChanges</name></member>
+      <member refid="class_witness_1a0f720fe9c2583d3ee76bfcd6ca9da9f0" prot="private" virt="non-virtual"><scope>Witness</scope><name>addSpaceGeometryMappingsChanges</name></member>
+      <member refid="class_witness_1a5d341f594e3deb780e63e94080de57ee" prot="private" virt="non-virtual"><scope>Witness</scope><name>addSpacePropertyChanges</name></member>
+      <member refid="class_witness_1aeb764496b98cb46a1706de4e4d9523e7" prot="public" virt="non-virtual"><scope>Witness</scope><name>addToAoI</name></member>
+      <member refid="class_witness_1a6dd4af47e87a31716ac0fcf616743542" prot="private" virt="non-virtual"><scope>Witness</scope><name>addToSeen</name></member>
+      <member refid="class_witness_1a498a382050f2f360cda78d16b4b29e5d" prot="private" virt="non-virtual"><scope>Witness</scope><name>allocateIDAlias</name></member>
+      <member refid="class_witness_1a0ac75834852a3b2f1d51d3da751d3e3f" prot="private" virt="non-virtual"><scope>Witness</scope><name>aoiHyst_</name></member>
+      <member refid="class_witness_1adec7e8fa1af5d2518d2499f36f158e48" prot="private" virt="non-virtual"><scope>Witness</scope><name>aoiMap_</name></member>
+      <member refid="class_witness_1ac6f3de994ed6918851e89d4836b39dcd" prot="private" virt="non-virtual"><scope>Witness</scope><name>aoiRadius_</name></member>
+      <member refid="class_witness_1a70e4a436ca25b4745121646919f8fe0f" prot="public" virt="non-virtual"><scope>Witness</scope><name>aoiRootIsReferencePosition</name></member>
+      <member refid="class_witness_1abfc34d4c819580ef6094eab779852bfe" prot="public" virt="non-virtual"><scope>Witness</scope><name>aoiRootIsReferencePosition</name></member>
+      <member refid="class_witness_1ab218c6ad102b1dba006c07a19f2133cf" prot="private" virt="non-virtual"><scope>Witness</scope><name>aoiRootIsReferencePosition_</name></member>
+      <member refid="class_witness_1ae6d1f7e4536017a7c8a7dbddccfc0ad4" prot="public" virt="non-virtual"><scope>Witness</scope><name>aoiSubsystem</name></member>
+      <member refid="class_witness_1ae6d1f7e4536017a7c8a7dbddccfc0ad4" prot="public" virt="non-virtual"><scope>Witness</scope><name>aoiSubsystem</name></member>
+      <member refid="class_witness_1afc85d81d0a5e9d6e304ab2c2d32a7e95" prot="public" virt="non-virtual"><scope>Witness</scope><name>ARG</name></member>
+      <member refid="class_witness_1af4db6435597b877c63269d08349c418f" prot="public" virt="non-virtual"><scope>Witness</scope><name>ARG</name></member>
+      <member refid="class_witness_1afc85d81d0a5e9d6e304ab2c2d32a7e95" prot="public" virt="non-virtual"><scope>Witness</scope><name>ARG</name></member>
+      <member refid="class_witness_1a760096f66d42a5ea3a1d8534ddb4f425" prot="public" virt="non-virtual"><scope>Witness</scope><name>ARG</name></member>
+      <member refid="class_witness_1ab17f62f716301c6822e0d0b5de21f3a2" prot="public" virt="non-virtual"><scope>Witness</scope><name>ARG</name></member>
+      <member refid="class_witness_1a9e42f64a670a2ab76958cba7fe494632" prot="private" virt="non-virtual"><scope>Witness</scope><name>bandwidthDeficit_</name></member>
+      <member refid="class_witness_1a309cc3052c97c43339544b13d2253316" prot="public" virt="non-virtual"><scope>Witness</scope><name>bpsToClient</name></member>
+      <member refid="class_witness_1a4b7c1b9e1845d7ac2ab4c187eeaf70cc" prot="private" virt="non-virtual"><scope>Witness</scope><name>bundle</name></member>
+      <member refid="class_witness_1a435771a4abad76f46745af67e519efca" prot="private" virt="non-virtual"><scope>Witness</scope><name>calculateReferencePosition</name></member>
+      <member refid="class_witness_1aa1b8a1fa71fb3b88a93c1fa5c1f4a4b1" prot="public" virt="non-virtual"><scope>Witness</scope><name>cancelReferencePosition</name></member>
+      <member refid="class_witness_1aa05248abdd4d77cd5b54d51497aa9ad0" prot="public" virt="non-virtual"><scope>Witness</scope><name>clearAoIRoot</name></member>
+      <member refid="class_witness_1abeb99239d4a3020c11231b9248aa7968" prot="public" virt="non-virtual"><scope>Witness</scope><name>debugDump</name></member>
+      <member refid="class_witness_1ad4af9fc2348411044cbdbcfcfa879fe4" prot="private" virt="non-virtual"><scope>Witness</scope><name>deleteFromAoI</name></member>
+      <member refid="class_witness_1a627b58d61917057bb59be3d96e32d599" prot="private" virt="non-virtual"><scope>Witness</scope><name>deleteFromClient</name></member>
+      <member refid="class_witness_1a4b1ee9a1ff103e40bf3b50dcb975df00" prot="private" virt="non-virtual"><scope>Witness</scope><name>deleteFromEntityQueue</name></member>
+      <member refid="class_witness_1a9392b745571c3b3d80e79d5646f739be" prot="private" virt="non-virtual"><scope>Witness</scope><name>deleteFromSeen</name></member>
+      <member refid="class_witness_1ae905f328cc7ee7cddc47f1bdb469c736" prot="public" virt="non-virtual"><scope>Witness</scope><name>dumpAoI</name></member>
+      <member refid="class_witness_1ac256faff54195308826e71e376951254" prot="private" virt="non-virtual"><scope>Witness</scope><name>entitiesInAoI</name></member>
+      <member refid="class_witness_1ae731c050692f9f982849f1a87b9c169a" prot="private" virt="non-virtual"><scope>Witness</scope><name>entitiesInAoI</name></member>
+      <member refid="class_witness_1a867a4f899106008df2d1cb556e13839c" prot="public" virt="non-virtual"><scope>Witness</scope><name>entity</name></member>
+      <member refid="class_witness_1a996aaf6be8c42770d79442eba518e6cf" prot="public" virt="non-virtual"><scope>Witness</scope><name>entity</name></member>
+      <member refid="class_witness_1adf9ca271fe28360f006ea8b22d9e7ef8" prot="private" virt="non-virtual"><scope>Witness</scope><name>entity_</name></member>
+      <member refid="class_witness_1a7716900e16014a9cf7045670cb14b84b" prot="private" virt="non-virtual"><scope>Witness</scope><name>entityQueue_</name></member>
+      <member refid="class_witness_1a78d331f8389770098b138c52a6a4fa5a" prot="private" virt="non-virtual"><scope>Witness</scope><name>findEntityCacheFromPyArg</name></member>
+      <member refid="class_witness_1ad5ff08c5293f86422030829eb1d6991f" prot="private" virt="non-virtual"><scope>Witness</scope><name>findEntityFromPyArg</name></member>
+      <member refid="class_witness_1a3eb0beefb254554856eb21cc52caf105" prot="public" virt="non-virtual"><scope>Witness</scope><name>flushToClient</name></member>
+      <member refid="class_witness_1a891008cea11929449c5ced5b9cd35a22" prot="private" virt="non-virtual"><scope>Witness</scope><name>freeAliases_</name></member>
+      <member refid="class_witness_1a4c42ec0ec669e8774368f27f6dd6034d" prot="public" virt="non-virtual"><scope>Witness</scope><name>getAoIUpdateScheme</name></member>
+      <member refid="class_witness_1abf7fa819cd49431b45d915f5db010ba2" prot="private" virt="non-virtual"><scope>Witness</scope><name>getAoIUpdateScheme</name></member>
+      <member refid="class_witness_1a244a9d489a6ff4f69fda4fc8b3a5ef35" prot="private" virt="non-virtual"><scope>Witness</scope><name>getSelf</name></member>
+      <member refid="class_witness_1a08d6dd7b92e5dbc41a35205d229d4c6d" prot="private" virt="non-virtual"><scope>Witness</scope><name>getUpdatePriorityOrigin</name></member>
+      <member refid="class_witness_1a19093e2987be09be7c3711439b932f88" prot="private" virt="non-virtual"><scope>Witness</scope><name>handleEnterPending</name></member>
+      <member refid="class_witness_1ac98c06948e676a637fdc3e152cb5a64f" prot="private" virt="non-virtual"><scope>Witness</scope><name>handleStateChange</name></member>
+      <member refid="class_witness_1a11caf26b658ce67f6d058611438515d2" prot="private" virt="non-virtual"><scope>Witness</scope><name>hasReferencePosition_</name></member>
+      <member refid="class_witness_1afd18a0e5b3c6f39ad5384fb496613acd" prot="public" virt="non-virtual"><scope>Witness</scope><name>hyst</name></member>
+      <member refid="class_witness_1aa9f029f01dfb7efd9093047c142be3fa" prot="public" virt="non-virtual"><scope>Witness</scope><name>ignoreNonManualAoIEntities</name></member>
+      <member refid="class_witness_1a443e0c860c86c055a25a7bfb3c3e27ba" prot="private" virt="non-virtual"><scope>Witness</scope><name>init</name></member>
+      <member refid="class_witness_1aff89031471f21fadb3a0490b0cdb8109" prot="private" virt="non-virtual"><scope>Witness</scope><name>isAoIRooted</name></member>
+      <member refid="class_witness_1a45f26a9be4520d3094865355272b171a" prot="private" virt="non-virtual"><scope>Witness</scope><name>isInAoI</name></member>
+      <member refid="class_witness_1a12e8e02d771aca4180a2ed3b12a74fba" prot="public" virt="non-virtual"><scope>Witness</scope><name>isPositionDetailed</name></member>
+      <member refid="class_witness_1aaee70a17715798ed98b58c1ee8ee007b" prot="private" virt="non-virtual"><scope>Witness</scope><name>isPositionDetailed</name></member>
+      <member refid="class_witness_1a51f38027f47ea83674d84216fc741f0e" prot="public" virt="non-virtual"><scope>Witness</scope><name>isWithheldFromClient</name></member>
+      <member refid="class_witness_1a3eff5bb4d1a520d35216c2861733dac3" prot="private" virt="non-virtual"><scope>Witness</scope><name>isWithheldFromClient</name></member>
+      <member refid="class_witness_1a4770102b26e427e5d5db70fca9108d8a" prot="private" virt="non-virtual"><scope>Witness</scope><name>KnownEntityQueue</name></member>
+      <member refid="class_witness_1a8df2d364a50337583b09f98734fae953" prot="private" virt="non-virtual"><scope>Witness</scope><name>lastSentReliableDirection_</name></member>
+      <member refid="class_witness_1a2db6dde568605a49df9e8d502439a0b0" prot="private" virt="non-virtual"><scope>Witness</scope><name>lastSentReliableGameTime_</name></member>
+      <member refid="class_witness_1a068dc50afddd7e729d250c6d1bea5464" prot="private" virt="non-virtual"><scope>Witness</scope><name>lastSentReliablePosition_</name></member>
+      <member refid="class_witness_1afa151116463e27e6de9c26e11fa58a4e" prot="private" virt="non-virtual"><scope>Witness</scope><name>lastSpaceGeometryMappingsEventNumber_</name></member>
+      <member refid="class_witness_1a4f05e474aaec7b3147ae651449958ab1" prot="private" virt="non-virtual"><scope>Witness</scope><name>lastSpacePropertyEventNumber_</name></member>
+      <member refid="class_witness_1a5beb48469a045009243208c213a84cb7" prot="private" virt="non-virtual"><scope>Witness</scope><name>maxPacketSize_</name></member>
+      <member refid="class_witness_1ac0a166f99d3b52ab1b137d2f7942a2bf" prot="public" virt="non-virtual"><scope>Witness</scope><name>newPosition</name></member>
+      <member refid="class_witness_1af676dfbea024a3d58ac72279e016bf4b" prot="private" virt="non-virtual"><scope>Witness</scope><name>noiseCheckTime_</name></member>
+      <member refid="class_witness_1a5cc87dc4b3c304974b3142ae0e84c92c" prot="private" virt="non-virtual"><scope>Witness</scope><name>noiseMade_</name></member>
+      <member refid="class_witness_1ac806c973e5d68ba474a8f30b30480d3b" prot="private" virt="non-virtual"><scope>Witness</scope><name>noisePropagatedTime_</name></member>
+      <member refid="class_witness_1aac8cba79dbab72fc8a0194b500085754" prot="private" virt="non-virtual"><scope>Witness</scope><name>numFreeAliases_</name></member>
+      <member refid="class_witness_1a0f66fec0079f1251afc79d66ad348ed4" prot="private" virt="non-virtual"><scope>Witness</scope><name>onLeaveAoI</name></member>
+      <member refid="class_witness_1a2d9608594e2ef1d037f6e7201cc475ed" prot="public" virt="non-virtual"><scope>Witness</scope><name>onSendReliablePosition</name></member>
+      <member refid="class_witness_1a9f2a7482568bb7ecd289203bb82686cc" prot="private" virt="non-virtual"><scope>Witness</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_witness_1ac30cc909273f226c7fcfbadfbab12067" prot="private" virt="non-virtual"><scope>Witness</scope><name>operator&gt;&gt;</name></member>
+      <member refid="class_witness_1aaa29115f98f06cfb8c5b810143dd84e0" prot="private" virt="non-virtual"><scope>Witness</scope><name>pAoIRoot</name></member>
+      <member refid="class_witness_1a2805969f03b97c7f31d797f73a70e4fe" prot="private" virt="non-virtual"><scope>Witness</scope><name>pAoIRoot_</name></member>
+      <member refid="class_witness_1a26f7084bdf4af0db1428cced6af1bbcf" prot="private" virt="non-virtual"><scope>Witness</scope><name>pAoITrigger_</name></member>
+      <member refid="class_witness_1a8f66b06c36b06c01afab0403309f7040" prot="public" virt="non-virtual"><scope>Witness</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_witness_1a460859086d4f1a97070997d16d86c211" prot="public" virt="non-virtual"><scope>Witness</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_witness_1a3a085b2591c18132a1e88b22b9f00ba9" prot="public" virt="non-virtual"><scope>Witness</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_witness_1a899b76c67c098e8ffabe917498195d2c" prot="public" virt="non-virtual"><scope>Witness</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_witness_1ab5efe3471ba8c1d5c1698f7fb3443ca8" prot="public" virt="non-virtual"><scope>Witness</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_witness_1a94aa4b3bdc8f17c6ad47fc08b8ecbf1a" prot="public" virt="non-virtual"><scope>Witness</scope><name>PY_AUTO_METHOD_DECLARE</name></member>
+      <member refid="class_witness_1aa4f2a24525d6d7f31228ed0ff4ac440f" prot="public" virt="non-virtual"><scope>Witness</scope><name>PY_READABLE_ATTRIBUTE_GET</name></member>
+      <member refid="class_witness_1a250c6b794f91798d9186e153edb13850" prot="public" virt="non-virtual"><scope>Witness</scope><name>PY_RW_ACCESSOR_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_witness_1a06c6260ba4f6d477dc0697e8cf061b7f" prot="public" virt="non-virtual"><scope>Witness</scope><name>PY_RW_ATTRIBUTE_DECLARE</name></member>
+      <member refid="class_witness_1abad4d2ae9f89eaa18a53d335dc7a30ad" prot="public" virt="non-virtual"><scope>Witness</scope><name>pyAdditionalMembers</name></member>
+      <member refid="class_witness_1ab8076ede1119332cc00320ed04a559e8" prot="public" virt="non-virtual"><scope>Witness</scope><name>pyAdditionalMethods</name></member>
+      <member refid="class_witness_1a5df1a23b9c3692d9c889419adb71bcfa" prot="public" virt="non-virtual"><scope>Witness</scope><name>pyGet_aoiRoot</name></member>
+      <member refid="class_witness_1af52b12c79aec53fedabf7dce751bedce" prot="public" virt="non-virtual"><scope>Witness</scope><name>pySet_aoiRoot</name></member>
+      <member refid="class_witness_1a3b7f1e368b1adc21e43d4759f2558490" prot="public" virt="non-virtual"><scope>Witness</scope><name>pySet_bpsToClient</name></member>
+      <member refid="class_witness_1ac018226507eda57de8d7eaf151834ac1" prot="private" virt="non-virtual"><scope>Witness</scope><name>readAoI</name></member>
+      <member refid="class_witness_1a9406ebe12899ebb8f28f05d0ae0079c7" prot="private" virt="non-virtual"><scope>Witness</scope><name>readOffloadData</name></member>
+      <member refid="class_witness_1aaf57278b8a8eaa774ee1801ee92481e6" prot="private" virt="non-virtual"><scope>Witness</scope><name>readSpaceGeometryMappings</name></member>
+      <member refid="class_witness_1a6cf34647ff49eb45bf0bf461b84c641d" prot="private" virt="non-virtual"><scope>Witness</scope><name>readSpacePropertyCache</name></member>
+      <member refid="class_witness_1adb2e8c9528de5fb5379726202c29c4b1" prot="public" virt="non-virtual"><scope>Witness</scope><name>real</name></member>
+      <member refid="class_witness_1a2fd8445020d508bbbe5d088071e25043" prot="public" virt="non-virtual"><scope>Witness</scope><name>real</name></member>
+      <member refid="class_witness_1a5e71108a2afd43db49df0c37ded958e9" prot="private" virt="non-virtual"><scope>Witness</scope><name>real_</name></member>
+      <member refid="class_witness_1aa4992b6562c1a9630dbc9b51babbbb7d" prot="private" virt="non-virtual"><scope>Witness</scope><name>referencePosition_</name></member>
+      <member refid="class_witness_1af501bc781e5b3a4c212060105cee59f7" prot="private" virt="non-virtual"><scope>Witness</scope><name>referenceSeqNum_</name></member>
+      <member refid="class_witness_1aaada306c9ab37f90a97f8f0f40668650" prot="public" virt="non-virtual"><scope>Witness</scope><name>removeFromAoI</name></member>
+      <member refid="class_witness_1aba631350a61e96ce29ffaf1d43d6082e" prot="private" virt="non-virtual"><scope>Witness</scope><name>replaceAoITrigger</name></member>
+      <member refid="class_witness_1a94d28363a0b3dc4af4f9b7c612bdafd5" prot="public" virt="non-virtual"><scope>Witness</scope><name>requestEntityUpdate</name></member>
+      <member refid="class_witness_1ad8108f848be0078ed60a0a3afac28d83" prot="private" virt="non-virtual"><scope>Witness</scope><name>selectEntity</name></member>
+      <member refid="class_witness_1a08f7870e15ef5ca0951664381fbbcf85" prot="private" virt="non-virtual"><scope>Witness</scope><name>sendCreate</name></member>
+      <member refid="class_witness_1a56fee1bf6f200408b6575d313e593a32" prot="private" virt="non-virtual"><scope>Witness</scope><name>sendEnter</name></member>
+      <member refid="class_witness_1a1478792d1f105ae3f9aadef656d7079b" prot="private" virt="non-virtual"><scope>Witness</scope><name>sendGameTime</name></member>
+      <member refid="class_witness_1ae937825700f60905ec2518e4e3e2e714" prot="private" virt="non-virtual"><scope>Witness</scope><name>sendQueueElement</name></member>
+      <member refid="class_witness_1a755d284953fd9ed726975ef03cbc204f" prot="public" virt="non-virtual"><scope>Witness</scope><name>sendToClient</name></member>
+      <member refid="class_witness_1aaaea0ac52809f9823a22cf4000cc8cd0" prot="public" virt="non-virtual"><scope>Witness</scope><name>sendToProxy</name></member>
+      <member refid="class_witness_1ab75ee768d57dc3fac1a246e1d2cddae5" prot="public" virt="non-virtual"><scope>Witness</scope><name>setAoIRoot</name></member>
+      <member refid="class_witness_1a7737ad6696c7cda809f385caaa4a495f" prot="public" virt="non-virtual"><scope>Witness</scope><name>setAoIUpdateScheme</name></member>
+      <member refid="class_witness_1a6162cdd66042b04e9a86589894689d34" prot="private" virt="non-virtual"><scope>Witness</scope><name>setAoIUpdateScheme</name></member>
+      <member refid="class_witness_1a10d1999377255608470765c11b4076d6" prot="public" virt="non-virtual"><scope>Witness</scope><name>setPositionDetailed</name></member>
+      <member refid="class_witness_1a000b4329559b3cf970964b1a8f0e5072" prot="private" virt="non-virtual"><scope>Witness</scope><name>setPositionDetailed</name></member>
+      <member refid="class_witness_1af51969abaaa8769b679bc2b2a9fe9b9a" prot="public" virt="non-virtual"><scope>Witness</scope><name>setWitnessCapacity</name></member>
+      <member refid="class_witness_1ad2b84a2b9466952bc40be6e3ee19f800" prot="private" virt="non-virtual"><scope>Witness</scope><name>shouldAddReplayAoIUpdates</name></member>
+      <member refid="class_witness_1a192b95c57800c2387117d2c36df6a178" prot="private" virt="non-virtual"><scope>Witness</scope><name>shouldAddReplayAoIUpdates_</name></member>
+      <member refid="class_witness_1a84b7ec3aa0df794e0e54580187ae7256" prot="private" virt="non-virtual"><scope>Witness</scope><name>stealthFactor_</name></member>
+      <member refid="class_witness_1a996e026a9be809876e17bef5b7ce76d9" prot="public" virt="non-virtual"><scope>Witness</scope><name>unitTest</name></member>
+      <member refid="class_witness_1afd70f1163d740e9175911e0e10db0d78" prot="public" virt="non-virtual"><scope>Witness</scope><name>update</name></member>
+      <member refid="class_witness_1a882b97f0ee33432a3d0f6c4b554c8355" prot="public" virt="non-virtual"><scope>Witness</scope><name>updateReferencePosition</name></member>
+      <member refid="class_witness_1a79e67127ecfa0166e78ee4dff226bc2f" prot="private" virt="non-virtual"><scope>Witness</scope><name>validateAoISubsystemIndex</name></member>
+      <member refid="class_witness_1acb7d58fcae7ca62024afe6a0468b796c" prot="public" virt="non-virtual"><scope>Witness</scope><name>vehicleChanged</name></member>
+      <member refid="class_witness_1a187ba8b78fa229f06832fa5cadb6feb7" prot="public" virt="non-virtual"><scope>Witness</scope><name>visitAoI</name></member>
+      <member refid="class_witness_1afa42c1a86b25bd68c78f1acde52c8ee0" prot="private" virt="non-virtual"><scope>Witness</scope><name>withholdFromClient</name></member>
+      <member refid="class_witness_1ae78007fb01a7c29791b98bdfb058c4ed" prot="private" virt="non-virtual"><scope>Witness</scope><name>writeAoI</name></member>
+      <member refid="class_witness_1af5b24579bf00c6b713db985a5db62c5b" prot="public" virt="non-virtual"><scope>Witness</scope><name>writeBackupData</name></member>
+      <member refid="class_witness_1a0af789bc54c2c40af7b39c517d5f2111" prot="public" virt="non-virtual"><scope>Witness</scope><name>writeOffloadData</name></member>
+      <member refid="class_witness_1abdbbd959949b29133e94ed93c33e08f1" prot="private" virt="non-virtual"><scope>Witness</scope><name>writeSpaceGeometryMappings</name></member>
+      <member refid="class_witness_1ac52d3992b5d9174ca44432bccd06f020" prot="private" virt="non-virtual"><scope>Witness</scope><name>writeSpacePropertyCache</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

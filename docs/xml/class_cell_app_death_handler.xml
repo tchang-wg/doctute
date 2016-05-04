@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_cell_app_death_handler" kind="class" language="C++" prot="public">
+    <compoundname>CellAppDeathHandler</compoundname>
+    <includes refid="cell__app__death__handler_8hpp" local="no">cell_app_death_handler.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_cell_app_death_handler_1ae036f6357e0c7a4bf257dc5601832899" prot="private" static="no">
+        <type>BW::set&lt; Mercury::Address &gt;</type>
+        <definition>typedef BW::set&lt; Mercury::Address &gt; CellAppDeathHandler::WaitingForSet</definition>
+        <argsstring></argsstring>
+        <name>WaitingForSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_death_handler.hpp" line="37" column="1" bodyfile="cellappmgr/cell_app_death_handler.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_cell_app_death_handler_1a30bb71f8a7dfd0c55e6dafe4d3036889" prot="private" static="no" mutable="no">
+        <type>const Mercury::Address</type>
+        <definition>const Mercury::Address CellAppDeathHandler::deadAddr_</definition>
+        <argsstring></argsstring>
+        <name>deadAddr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_death_handler.hpp" line="35" column="1" bodyfile="cellappmgr/cell_app_death_handler.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_death_handler_1a256a64b6ef7855818a2636774ad57bc5" prot="private" static="no" mutable="no">
+        <type>MemoryOStream</type>
+        <definition>MemoryOStream CellAppDeathHandler::stream_</definition>
+        <argsstring></argsstring>
+        <name>stream_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_death_handler.hpp" line="36" column="1" bodyfile="cellappmgr/cell_app_death_handler.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_death_handler_1a5b56a2b212b43043fa2ed9867ebf4672" prot="private" static="no" mutable="no">
+        <type>WaitingForSet</type>
+        <definition>WaitingForSet CellAppDeathHandler::waitingFor_</definition>
+        <argsstring></argsstring>
+        <name>waitingFor_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_death_handler.hpp" line="38" column="1" bodyfile="cellappmgr/cell_app_death_handler.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_death_handler_1ab792c3381d9178bc0583cd39364a3f90" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CellAppDeathHandler::ticksToWait_</definition>
+        <argsstring></argsstring>
+        <name>ticksToWait_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_death_handler.hpp" line="40" column="1" bodyfile="cellappmgr/cell_app_death_handler.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cell_app_death_handler_1a9399f775b05ca1dfabbeb770e0ba0f7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE CellAppDeathHandler::CellAppDeathHandler</definition>
+        <argsstring>(const Mercury::Address &amp;deadAddr, int ticksToWait)</argsstring>
+        <name>CellAppDeathHandler</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>deadAddr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ticksToWait</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_death_handler.hpp" line="20" column="1" bodyfile="cellappmgr/cell_app_death_handler.cpp" bodystart="14" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_death_handler_1a665ea8bb67b29b5686ab981f85ccc640" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppDeathHandler::addWaiting</definition>
+        <argsstring>(const Mercury::Address &amp;addr)</argsstring>
+        <name>addWaiting</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method informs this handler to wait for a response from the given address. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_death_handler.hpp" line="23" column="1" bodyfile="cellappmgr/cell_app_death_handler.cpp" bodystart="26" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_death_handler_1a393028e33cffaec302bc1567d01986a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppDeathHandler::clearWaiting</definition>
+        <argsstring>(const Mercury::Address &amp;waitingAddr, const Mercury::Address &amp;deadAddr)</argsstring>
+        <name>clearWaiting</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>waitingAddr</declname>
+        </param>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>deadAddr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_death_handler.hpp" line="24" column="1" bodyfile="cellappmgr/cell_app_death_handler.cpp" bodystart="39" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_death_handler_1af3229e8f296292bee1fb510b1dfc6567" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppDeathHandler::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_death_handler.hpp" line="27" column="1" bodyfile="cellappmgr/cell_app_death_handler.cpp" bodystart="69" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_death_handler_1a12a00aef366c3b048d2db16dc0def891" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppDeathHandler::finish</definition>
+        <argsstring>()</argsstring>
+        <name>finish</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_death_handler.hpp" line="29" column="1" bodyfile="cellappmgr/cell_app_death_handler.cpp" bodystart="92" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_death_handler_1ab3fe3c336902c026eaea8f1fc42c3f7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>MemoryOStream &amp;</type>
+        <definition>MemoryOStream&amp; CellAppDeathHandler::stream</definition>
+        <argsstring>()</argsstring>
+        <name>stream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_death_handler.hpp" line="31" column="1" bodyfile="cellappmgr/cell_app_death_handler.hpp" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_death_handler_1a2133d0d2bf3459e159ff7ecd4ef22e38" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Mercury::Address &amp;</type>
+        <definition>const Mercury::Address&amp; CellAppDeathHandler::deadAddr</definition>
+        <argsstring>() const </argsstring>
+        <name>deadAddr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_death_handler.hpp" line="32" column="1" bodyfile="cellappmgr/cell_app_death_handler.hpp" bodystart="32" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used while handling a dead cell app. We want to wait until all <ref refid="class_cell_app" kindref="compound">CellApp</ref> have handled the message before we send it to any BaseApps. This class handles this. </para>    </detaileddescription>
+    <location file="cellappmgr/cell_app_death_handler.hpp" line="18" column="1" bodyfile="cellappmgr/cell_app_death_handler.hpp" bodystart="17" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_cell_app_death_handler_1a665ea8bb67b29b5686ab981f85ccc640" prot="public" virt="non-virtual"><scope>CellAppDeathHandler</scope><name>addWaiting</name></member>
+      <member refid="class_cell_app_death_handler_1a9399f775b05ca1dfabbeb770e0ba0f7f" prot="public" virt="non-virtual"><scope>CellAppDeathHandler</scope><name>CellAppDeathHandler</name></member>
+      <member refid="class_cell_app_death_handler_1a393028e33cffaec302bc1567d01986a9" prot="public" virt="non-virtual"><scope>CellAppDeathHandler</scope><name>clearWaiting</name></member>
+      <member refid="class_cell_app_death_handler_1a2133d0d2bf3459e159ff7ecd4ef22e38" prot="public" virt="non-virtual"><scope>CellAppDeathHandler</scope><name>deadAddr</name></member>
+      <member refid="class_cell_app_death_handler_1a30bb71f8a7dfd0c55e6dafe4d3036889" prot="private" virt="non-virtual"><scope>CellAppDeathHandler</scope><name>deadAddr_</name></member>
+      <member refid="class_cell_app_death_handler_1a12a00aef366c3b048d2db16dc0def891" prot="public" virt="non-virtual"><scope>CellAppDeathHandler</scope><name>finish</name></member>
+      <member refid="class_cell_app_death_handler_1ab3fe3c336902c026eaea8f1fc42c3f7b" prot="public" virt="non-virtual"><scope>CellAppDeathHandler</scope><name>stream</name></member>
+      <member refid="class_cell_app_death_handler_1a256a64b6ef7855818a2636774ad57bc5" prot="private" virt="non-virtual"><scope>CellAppDeathHandler</scope><name>stream_</name></member>
+      <member refid="class_cell_app_death_handler_1af3229e8f296292bee1fb510b1dfc6567" prot="public" virt="non-virtual"><scope>CellAppDeathHandler</scope><name>tick</name></member>
+      <member refid="class_cell_app_death_handler_1ab792c3381d9178bc0583cd39364a3f90" prot="private" virt="non-virtual"><scope>CellAppDeathHandler</scope><name>ticksToWait_</name></member>
+      <member refid="class_cell_app_death_handler_1a5b56a2b212b43043fa2ed9867ebf4672" prot="private" virt="non-virtual"><scope>CellAppDeathHandler</scope><name>waitingFor_</name></member>
+      <member refid="class_cell_app_death_handler_1ae036f6357e0c7a4bf257dc5601832899" prot="private" virt="non-virtual"><scope>CellAppDeathHandler</scope><name>WaitingForSet</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

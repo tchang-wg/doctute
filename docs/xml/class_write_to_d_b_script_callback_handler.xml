@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_write_to_d_b_script_callback_handler" kind="class" language="C++" prot="public">
+    <compoundname>WriteToDBScriptCallbackHandler</compoundname>
+    <basecompoundref refid="class_write_to_d_b_request_1_1_i_handler" prot="private" virt="non-virtual">WriteToDBRequest::IHandler</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_write_to_d_b_script_callback_handler_1a07b05d03b1b677b6d42fa7a5c22505c7" prot="private" static="no" mutable="no">
+        <type><ref refid="class_smart_pointer" kindref="compound">BasePtr</ref></type>
+        <definition>BasePtr WriteToDBScriptCallbackHandler::pBase_</definition>
+        <argsstring></argsstring>
+        <name>pBase_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/base.cpp" line="3766" column="1" bodyfile="baseapp/base.cpp" bodystart="3766" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_write_to_d_b_script_callback_handler_1aff0003fb8d55f536d8d7a8ed8b45aedc" prot="private" static="no" mutable="no">
+        <type>ScriptObject</type>
+        <definition>ScriptObject WriteToDBScriptCallbackHandler::handler_</definition>
+        <argsstring></argsstring>
+        <name>handler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/base.cpp" line="3767" column="1" bodyfile="baseapp/base.cpp" bodystart="3767" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_write_to_d_b_script_callback_handler_1abccefb5c6e082cd5c1eaebbf616f2ba6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_write_to_d_b_request_1_1_i_handler" kindref="compound">WriteToDBRequest::IHandler</ref> *</type>
+        <definition>static WriteToDBRequest::IHandler* WriteToDBScriptCallbackHandler::create</definition>
+        <argsstring>(Base &amp;base, ScriptObject handler)</argsstring>
+        <name>create</name>
+        <param>
+          <type><ref refid="class_base" kindref="compound">Base</ref> &amp;</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>ScriptObject</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method creates a new handler that adapts the callback from the <ref refid="class_write_to_d_b_request" kindref="compound">WriteToDBRequest</ref> to a script object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base entity. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The script callback handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/base.cpp" line="3731" column="1" bodyfile="baseapp/base.cpp" bodystart="3731" bodyend="3736"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_write_to_d_b_script_callback_handler_1a9de560be0b818be76932dfdfe675302d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>WriteToDBScriptCallbackHandler::WriteToDBScriptCallbackHandler</definition>
+        <argsstring>(Base &amp;base, ScriptObject handler)</argsstring>
+        <name>WriteToDBScriptCallbackHandler</name>
+        <param>
+          <type><ref refid="class_base" kindref="compound">Base</ref> &amp;</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>ScriptObject</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base entity. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The script callback handler. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/base.cpp" line="3745" column="1" bodyfile="baseapp/base.cpp" bodystart="3745" bodyend="3748"/>
+      </memberdef>
+      <memberdef kind="function" id="class_write_to_d_b_script_callback_handler_1acf81a88eb2c41173f11ff4332ba085e0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void WriteToDBScriptCallbackHandler::onWriteToDBComplete</definition>
+        <argsstring>(WriteToDBRequest::IHandler::CompletionStatus status)</argsstring>
+        <name>onWriteToDBComplete</name>
+        <reimplements refid="class_write_to_d_b_request_1_1_i_handler_1a4eb6fe869cf90c28f097b2dd850bba14">onWriteToDBComplete</reimplements>
+        <param>
+          <type>WriteToDBRequest::IHandler::CompletionStatus</type>
+          <declname>completionStatus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called when a <ref refid="class_write_to_d_b_request" kindref="compound">WriteToDBRequest</ref> instance has completed its operation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>completionStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of the CompletionStatus values, indicating the success of the operation, or otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/base.cpp" line="3753" column="1" bodyfile="baseapp/base.cpp" bodystart="3753" bodyend="3763"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class handles a reply from a writeToDB request via Python script. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="3206">
+        <label>WriteToDBScriptCallbackHandler</label>
+        <link refid="class_write_to_d_b_script_callback_handler"/>
+        <childnode refid="3207" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="3207">
+        <label>WriteToDBRequest::IHandler</label>
+        <link refid="class_write_to_d_b_request_1_1_i_handler"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3208">
+        <label>WriteToDBScriptCallbackHandler</label>
+        <link refid="class_write_to_d_b_script_callback_handler"/>
+        <childnode refid="3209" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="3209">
+        <label>WriteToDBRequest::IHandler</label>
+        <link refid="class_write_to_d_b_request_1_1_i_handler"/>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/base.cpp" line="3722" column="1" bodyfile="baseapp/base.cpp" bodystart="3721" bodyend="3768"/>
+    <listofallmembers>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28aaf37607473e6e6b0c9b7c4b2aafc2aa1e" prot="private" virt="non-virtual"><scope>WriteToDBScriptCallbackHandler</scope><name>COMPLETED_FAILED</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28aad619cc9e084ce160f1ff7568acd158d9" prot="private" virt="non-virtual"><scope>WriteToDBScriptCallbackHandler</scope><name>COMPLETED_SUCCESS</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28a" prot="private" virt="non-virtual"><scope>WriteToDBScriptCallbackHandler</scope><name>CompletionStatus</name></member>
+      <member refid="class_write_to_d_b_script_callback_handler_1abccefb5c6e082cd5c1eaebbf616f2ba6" prot="public" virt="non-virtual"><scope>WriteToDBScriptCallbackHandler</scope><name>create</name></member>
+      <member refid="class_write_to_d_b_script_callback_handler_1aff0003fb8d55f536d8d7a8ed8b45aedc" prot="private" virt="non-virtual"><scope>WriteToDBScriptCallbackHandler</scope><name>handler_</name></member>
+      <member refid="class_write_to_d_b_script_callback_handler_1acf81a88eb2c41173f11ff4332ba085e0" prot="private" virt="virtual"><scope>WriteToDBScriptCallbackHandler</scope><name>onWriteToDBComplete</name></member>
+      <member refid="class_write_to_d_b_script_callback_handler_1a07b05d03b1b677b6d42fa7a5c22505c7" prot="private" virt="non-virtual"><scope>WriteToDBScriptCallbackHandler</scope><name>pBase_</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1aac3ffeedf48f5d68dcb315a84879c28aab1fa5026495737e5415a45c1cd9fea0b" prot="private" virt="non-virtual"><scope>WriteToDBScriptCallbackHandler</scope><name>SHUTTING_DOWN</name></member>
+      <member refid="class_write_to_d_b_script_callback_handler_1a9de560be0b818be76932dfdfe675302d" prot="private" virt="non-virtual"><scope>WriteToDBScriptCallbackHandler</scope><name>WriteToDBScriptCallbackHandler</name></member>
+      <member refid="class_write_to_d_b_request_1_1_i_handler_1a8734d12827e0ed82bc842d7a64c2a7ba" prot="private" virt="virtual"><scope>WriteToDBScriptCallbackHandler</scope><name>~IHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

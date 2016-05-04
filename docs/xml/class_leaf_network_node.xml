@@ -1,0 +1,819 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_leaf_network_node" kind="class" language="C++" prot="public">
+    <compoundname>LeafNetworkNode</compoundname>
+    <basecompoundref refid="class_network_node" prot="public" virt="non-virtual">NetworkNode</basecompoundref>
+    <includes refid="leaf__network__node_8hpp" local="no">leaf_network_node.hpp</includes>
+    <innerclass refid="class_leaf_network_node_1_1_connection_checker_handler" prot="private">LeafNetworkNode::ConnectionCheckerHandler</innerclass>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_leaf_network_node_1adf129809f69b2a30252c1d23faf79a7f" prot="private" static="yes" mutable="no">
+        <type>const TimeQueue64::TimeStamp</type>
+        <definition>const TimeQueue64::TimeStamp LeafNetworkNode::CONNECTION_CHECKER_INTERVAL_MS</definition>
+        <argsstring></argsstring>
+        <name>CONNECTION_CHECKER_INTERVAL_MS</name>
+        <initializer>= 1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="62" column="1" bodyfile="tools/bwmachined/leaf_network_node.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leaf_network_node_1a1d8d7e33f050b1d5039ff24a267ef412" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int LeafNetworkNode::MAX_CONNECT_ATTEMPTS</definition>
+        <argsstring></argsstring>
+        <name>MAX_CONNECT_ATTEMPTS</name>
+        <initializer>= 60</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="66" column="1" bodyfile="tools/bwmachined/leaf_network_node.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_leaf_network_node_1aa2741105fb68d6667fd06aefb82e6598" prot="private" static="no" mutable="no">
+        <type>Mercury::EventDispatcher &amp;</type>
+        <definition>Mercury::EventDispatcher&amp; LeafNetworkNode::dispatcher_</definition>
+        <argsstring></argsstring>
+        <name>dispatcher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="68" column="1" bodyfile="tools/bwmachined/leaf_network_node.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leaf_network_node_1aff6d89e28c34654a37b9d91d858648e8" prot="private" static="no" mutable="no">
+        <type>Endpoint</type>
+        <definition>Endpoint LeafNetworkNode::epNetworkUDP_</definition>
+        <argsstring></argsstring>
+        <name>epNetworkUDP_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="71" column="1" bodyfile="tools/bwmachined/leaf_network_node.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leaf_network_node_1a6182fe103a705ca8cc4444806bf40257" prot="private" static="no" mutable="no">
+        <type>Endpoint</type>
+        <definition>Endpoint LeafNetworkNode::epNetworkTCP_</definition>
+        <argsstring></argsstring>
+        <name>epNetworkTCP_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="74" column="1" bodyfile="tools/bwmachined/leaf_network_node.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leaf_network_node_1adc12f470b2038ad6a1e4db944e3e7e19" prot="private" static="no" mutable="no">
+        <type>Endpoint</type>
+        <definition>Endpoint LeafNetworkNode::epTopLevelTCP_</definition>
+        <argsstring></argsstring>
+        <name>epTopLevelTCP_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="77" column="1" bodyfile="tools/bwmachined/leaf_network_node.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leaf_network_node_1a66e504a49fdf09857f60ae44d116695b" prot="private" static="no" mutable="no">
+        <type>u_int32_t</type>
+        <definition>u_int32_t LeafNetworkNode::topLevelNodeAddr_</definition>
+        <argsstring></argsstring>
+        <name>topLevelNodeAddr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="80" column="1" bodyfile="tools/bwmachined/leaf_network_node.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leaf_network_node_1a1cdaf7e307b53c83fff9b290e0f22ede" prot="private" static="no" mutable="no">
+        <type><ref refid="class_smart_pointer" kindref="compound">TCPConnectionWrapperPtr</ref></type>
+        <definition>TCPConnectionWrapperPtr LeafNetworkNode::pTLNodeConnection_</definition>
+        <argsstring></argsstring>
+        <name>pTLNodeConnection_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="84" column="1" bodyfile="tools/bwmachined/leaf_network_node.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leaf_network_node_1a5629a09a57249752c4a036cca5aae550" prot="private" static="no" mutable="no">
+        <type><ref refid="class_connection_wrapper_1_1_read_handler" kindref="compound">ConnectionWrapper::ReadHandler</ref> *</type>
+        <definition>ConnectionWrapper::ReadHandler* LeafNetworkNode::pConnectionReadHandler_</definition>
+        <argsstring></argsstring>
+        <name>pConnectionReadHandler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="87" column="1" bodyfile="tools/bwmachined/leaf_network_node.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leaf_network_node_1aba1ea832a6d808df9facb77363fc6a53" prot="private" static="no" mutable="no">
+        <type>ConnectionCheckerHandler</type>
+        <definition>ConnectionCheckerHandler LeafNetworkNode::connectionCheckerHandler_</definition>
+        <argsstring></argsstring>
+        <name>connectionCheckerHandler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="104" column="1" bodyfile="tools/bwmachined/leaf_network_node.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leaf_network_node_1a2bbed4b89dbb321c68449ca315498487" prot="private" static="no" mutable="no">
+        <type>TimerHandle</type>
+        <definition>TimerHandle LeafNetworkNode::connectionCheckerTimerHandle_</definition>
+        <argsstring></argsstring>
+        <name>connectionCheckerTimerHandle_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="105" column="1" bodyfile="tools/bwmachined/leaf_network_node.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_leaf_network_node_1a7715b7d45128bb237e2175f2fbe3202a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE LeafNetworkNode::LeafNetworkNode</definition>
+        <argsstring>(Mercury::EventDispatcher &amp;dispatcher, ConnectionWrapper::ReadHandler *pConnectionReadHandler, uint16 port, u_int32_t topLevelNodeAddr)</argsstring>
+        <name>LeafNetworkNode</name>
+        <param>
+          <type>Mercury::EventDispatcher &amp;</type>
+          <declname>dispatcher</declname>
+        </param>
+        <param>
+          <type><ref refid="class_connection_wrapper_1_1_read_handler" kindref="compound">ConnectionWrapper::ReadHandler</ref> *</type>
+          <declname>pConnectionReadHandler</declname>
+        </param>
+        <param>
+          <type>uint16</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>u_int32_t</type>
+          <declname>topLevelNodeAddr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dispatcher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Event Dispatcher object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pConnectionReadHandler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A handler for packet data that has been read from connections </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The port on which the <ref refid="class_b_w_machined" kindref="compound">BWMachined</ref> Network is communicating. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="39" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="23" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1aabac1f91ceb00dc447c53d5eeaa6b041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LeafNetworkNode::~LeafNetworkNode</definition>
+        <argsstring>()</argsstring>
+        <name>~LeafNetworkNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="43" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="42" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1a57f613b8b586fe8fdeca7250b4e4f7f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LeafNetworkNode::sendBroadcast</definition>
+        <argsstring>(MachineGuardMessage *pMGM)</argsstring>
+        <name>sendBroadcast</name>
+        <reimplements refid="class_network_node_1a86cc9b4937b3eaafd2bc9bf25f734277">sendBroadcast</reimplements>
+        <param>
+          <type>MachineGuardMessage *</type>
+          <declname>pMGM</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Broadcasts the provided mgm to the cluster.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pMGM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MGM to broadcast</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, otherwise false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="45" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="255" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1adf733d69cb883306845981c51b9f350d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LeafNetworkNode::sendBroadcast</definition>
+        <argsstring>(MGMPacket *pPacket)</argsstring>
+        <name>sendBroadcast</name>
+        <reimplements refid="class_network_node_1a1be580af296fb1893b14237762170ea5">sendBroadcast</reimplements>
+        <param>
+          <type>MGMPacket *</type>
+          <declname>pPacket</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Broadcasts the provided packet to the cluster.</para><para>This method differs from sendWrappedBroadcastPacket in that responses will be handled by this <ref refid="class_b_w_machined" kindref="compound">BWMachined</ref> as a normal MGM response.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pPacket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The packet to broadcast</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, otherwise false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="46" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="268" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1a75b3a73cdda80a6ef103715104c96b30" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LeafNetworkNode::sendWrappedBroadcastPacket</definition>
+        <argsstring>(MGMPacket *pPacket)</argsstring>
+        <name>sendWrappedBroadcastPacket</name>
+        <reimplements refid="class_network_node_1a36002a456a2583950e986e6a6f02b180">sendWrappedBroadcastPacket</reimplements>
+        <param>
+          <type>MGMPacket *</type>
+          <declname>pPacket</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Broadcasts the provided wrapped packet to the cluster.</para><para>This method differs to sendBroadcast in that it is for sending packets that were wrapped within a BroadcastWrapperMessage, and therefore responses will be treated as a response to a wrapped broadcast.</para><para>These responses are intended to be gathered together as a ResponseWrapperMessage and forwarded on to the original sender via a <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pPacket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The wrapped packet to broadcast.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, otherwise false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="47" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="278" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1a0c43923534ad603dca87156009f8115a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LeafNetworkNode::isBroadcastResponse</definition>
+        <argsstring>(const ConnectionWrapperPtr pConnection, MGMPacket &amp;packet) const </argsstring>
+        <name>isBroadcastResponse</name>
+        <reimplements refid="class_network_node_1aa1319f908f02d0ec2d978671d4ae290d">isBroadcastResponse</reimplements>
+        <param>
+          <type>const <ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref></type>
+          <declname>pConnection</declname>
+        </param>
+        <param>
+          <type>MGMPacket &amp;</type>
+          <declname>packet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether the provided parameters indicate that this is a broadcast response message.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>endpoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The endpoint on which the MGM arrived </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>packet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received packet</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the provided mgm was a broadcast response, otherwise false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="48" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="320" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1a68b71379405716f49d19ecee197f6f11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>Endpoint &amp;</type>
+        <definition>virtual Endpoint&amp; LeafNetworkNode::outgoingUDPEndpoint</definition>
+        <argsstring>()</argsstring>
+        <name>outgoingUDPEndpoint</name>
+        <reimplements refid="class_network_node_1acba74dd33fa9e64e0096c521f132a982">outgoingUDPEndpoint</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the UDP endpoint which is to be used for sending directed messages to a destination. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="51" column="1" bodyfile="tools/bwmachined/leaf_network_node.hpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1a8295b3a5a36b3095dec03fe4fcc06700" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref> *</type>
+        <definition>BroadcastManager * LeafNetworkNode::createBroadcastManager</definition>
+        <argsstring>(BroadcastWrapperMessage &amp;bwm, ConnectionWrapperPtr pReplyConnection, ManagerLookup &amp;lookup)</argsstring>
+        <name>createBroadcastManager</name>
+        <reimplements refid="class_network_node_1a5d49ce01329d82f326d534e378ec16a5">createBroadcastManager</reimplements>
+        <param>
+          <type>BroadcastWrapperMessage &amp;</type>
+          <declname>bwm</declname>
+        </param>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref></type>
+          <declname>pReplyConnection</declname>
+        </param>
+        <param>
+          <type>ManagerLookup &amp;</type>
+          <declname>lookup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A generator method which creates a <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref> that handles broadcasts sent by this network node.</para><para>The <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref>&apos;s subclass will be specific to this type of <ref refid="class_network_node" kindref="compound">NetworkNode</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bwm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The BroadcastWrapperMessage that the new <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref> sends and handles responses for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pReplyConnection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The connection wrapper to handle sending responses </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lookup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The table to update with sequence number references to the new <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to a <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref> object. This memory must be managed by the caller. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="56" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="330" bodyend="336"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_leaf_network_node_1ab971382104c9988866ec97b92cb4058e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LeafNetworkNode::connectToTopLevelNode</definition>
+        <argsstring>()</argsstring>
+        <name>connectToTopLevelNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Connections to the address and port of the top level node and creates a connection wrapper. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="107" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="151" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1a7e414f85cbe5acdbd4ac9a5b5e4bee07" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeafNetworkNode::handleTimeout</definition>
+        <argsstring>()</argsstring>
+        <name>handleTimeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="108" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1a6b64ca2146fce80c5a67650ca22618e9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LeafNetworkNode::checkConnection</definition>
+        <argsstring>()</argsstring>
+        <name>checkConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="109" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="238" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1ab029285eeda4514ff26d2f93feb1458d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LeafNetworkNode::sendToTopLevelNode</definition>
+        <argsstring>(MGMPacket *pPacket)</argsstring>
+        <name>sendToTopLevelNode</name>
+        <param>
+          <type>MGMPacket *</type>
+          <declname>pPacket</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sends the provided MGMPacket to all leaf nodes, and responds to its own broadcast as well.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pPacket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MGMPacket to broadcast.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false on packet data error, otherwise true </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="110" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="292" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1a4dd84148789507d180bbdd0dda79f8e0" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LeafNetworkNode::initExternalNetworkInterfaces</definition>
+        <argsstring>()</argsstring>
+        <name>initExternalNetworkInterfaces</name>
+        <reimplements refid="class_network_node_1afbbdbf252700a4f76d011912fdb943f0">initExternalNetworkInterfaces</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialises external endpoints.</para><para><simplesect kind="return"><para>true on success, otherwise false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="112" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="65" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1a47381a0ce28e488928c45e22d389ef96" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LeafNetworkNode::startHeartbeat</definition>
+        <argsstring>()</argsstring>
+        <name>startHeartbeat</name>
+        <reimplements refid="class_network_node_1a69e0f788ad274f7268455975c428466f">startHeartbeat</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts the inter-machined announcement/heartbeat/keepalive system. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="113" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="113" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1a4bb1f2041144a6224b0f6d88e9dd7ee1" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LeafNetworkNode::listenOnExternalEndpoints</definition>
+        <argsstring>()</argsstring>
+        <name>listenOnExternalEndpoints</name>
+        <reimplements refid="class_network_node_1aaebcbb0bd4bb1b687d03eb4a813e65f6">listenOnExternalEndpoints</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Registers external endpoints for dispatching and socket handling. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="114" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="138" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1ae140541a918e97950f280150e2fd44c5" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LeafNetworkNode::closeExternalEndpoints</definition>
+        <argsstring>()</argsstring>
+        <name>closeExternalEndpoints</name>
+        <reimplements refid="class_network_node_1a848358d82476d2c5bbf0bb8feb5631d6">closeExternalEndpoints</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Closes external endpoints. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="115" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="54" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1aa6e04c5362b841c08cbce6f6a5cf36cb" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LeafNetworkNode::handleWholeMachineMessageReply</definition>
+        <argsstring>(WholeMachineMessage &amp;wmm, sockaddr_in &amp;sin)</argsstring>
+        <name>handleWholeMachineMessageReply</name>
+        <reimplements refid="class_network_node_1a2f6da3a9dc5d366ab8a5d155f5e64e3f">handleWholeMachineMessageReply</reimplements>
+        <param>
+          <type>WholeMachineMessage &amp;</type>
+          <declname>wmm</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles WholeMachineMessages sent by another <ref refid="class_b_w_machined" kindref="compound">BWMachined</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wmm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received WholeMachineMessage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket address that received the message.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if handled, otherwise false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="117" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="342" bodyend="362"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1a47b2367c810a81f3040662d91c2e6061" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool LeafNetworkNode::handleHighPrecisionMachineMessageReply</definition>
+        <argsstring>(HighPrecisionMachineMessage &amp;hpmm, sockaddr_in &amp;sin)</argsstring>
+        <name>handleHighPrecisionMachineMessageReply</name>
+        <reimplements refid="class_network_node_1a2e52e8a4ae330c682b4b1f6c0bce10f3">handleHighPrecisionMachineMessageReply</reimplements>
+        <param>
+          <type>HighPrecisionMachineMessage &amp;</type>
+          <declname>hpmm</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles HighPrecisionMachineMessages sent by another <ref refid="class_b_w_machined" kindref="compound">BWMachined</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hpmm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received HighPrecisionMachineMessage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket address that received the message.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if handled, otherwise false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="119" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="368" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1a4b87845366479659d05f2914f084a9e9" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LeafNetworkNode::handleMachinedAnnounceBirth</definition>
+        <argsstring>(MachinedAnnounceMessage &amp;mam, sockaddr_in &amp;sin, MGMPacket &amp;replies)</argsstring>
+        <name>handleMachinedAnnounceBirth</name>
+        <reimplements refid="class_network_node_1a8a6e43d2bd94491fac81db96160874a9">handleMachinedAnnounceBirth</reimplements>
+        <param>
+          <type>MachinedAnnounceMessage &amp;</type>
+          <declname>mam</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <param>
+          <type>MGMPacket &amp;</type>
+          <declname>replies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles MachinedAnnounceMessage type ANNOUNCE_BIRTH.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received MachinedAnnounceMessage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket address that received the message. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>replies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The package to append birth replies to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="122" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="396" bodyend="401"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1a5516eed09e8de5c0edc3534a1e39bd31" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LeafNetworkNode::handleMachinedAnnounceDeath</definition>
+        <argsstring>(MachinedAnnounceMessage &amp;mam, sockaddr_in &amp;sin)</argsstring>
+        <name>handleMachinedAnnounceDeath</name>
+        <reimplements refid="class_network_node_1a1776c9aab09009a1d6f5c07102adface">handleMachinedAnnounceDeath</reimplements>
+        <param>
+          <type>MachinedAnnounceMessage &amp;</type>
+          <declname>mam</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles MachinedAnnounceMessage type ANNOUNCE_DEATH.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received MachinedAnnounceMessage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket address that received the message. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="124" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="407" bodyend="414"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1a45cbee37d4f5cae6d48896359fc2806b" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LeafNetworkNode::handleMachinedAnnounceExists</definition>
+        <argsstring>(MachinedAnnounceMessage &amp;mam, sockaddr_in &amp;sin)</argsstring>
+        <name>handleMachinedAnnounceExists</name>
+        <reimplements refid="class_network_node_1a49e8e8ef3d832d28ffaba2371a5e74a1">handleMachinedAnnounceExists</reimplements>
+        <param>
+          <type>MachinedAnnounceMessage &amp;</type>
+          <declname>mam</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles MachinedAnnounceMessage type ANNOUNCE_EXISTS.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received MachinedAnnounceMessage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket address that received the message. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="126" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="420" bodyend="427"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is a Leaf Node implementation of <ref refid="class_network_node" kindref="compound">NetworkNode</ref>.</para><para>As well as inheriting the localhost endpoints of <ref refid="class_network_node" kindref="compound">NetworkNode</ref>, it has two external endpoints for receiving directed messages as well as a direct connection to the Top Level node for broadcast message forwarding:</para><para><itemizedlist>
+<listitem><para>epNetworkUDP_ for receiving directed MGMs over UDP</para></listitem><listitem><para>epNetworkTCP_ to listen and accept TCP connections. Connections to this endpoint are disconnected when the message transaction has completed (eg. a response is sent or no response is required) or has experienced an error.</para></listitem><listitem><para>epTopLevelTCP_ for ongoing communication with the top level node, for example for distributing broadcast requests and receiving broadcast responses.</para></listitem></itemizedlist>
+</para><para>In conjunction with <ref refid="class_leaf_node_broadcast_manager" kindref="compound">LeafNodeBroadcastManager</ref>, broadcast packets are rewrapped and forwarded on to the top level node for distribution amongst the leaf nodes. The top level node should send a ResponseWrapperMessage which can be simply forwarded on to the original connection that sent the query. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1583">
+        <label>LeafNetworkNode</label>
+        <link refid="class_leaf_network_node"/>
+        <childnode refid="1584" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1584">
+        <label>NetworkNode</label>
+        <link refid="class_network_node"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1587">
+        <label>ConnectionWrapperMgr</label>
+        <link refid="class_connection_wrapper_mgr"/>
+      </node>
+      <node id="1585">
+        <label>LeafNetworkNode</label>
+        <link refid="class_leaf_network_node"/>
+        <childnode refid="1586" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1586">
+        <label>NetworkNode</label>
+        <link refid="class_network_node"/>
+        <childnode refid="1587" relation="usage">
+          <edgelabel>connectionWrapperMgr_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/bwmachined/leaf_network_node.hpp" line="37" column="1" bodyfile="tools/bwmachined/leaf_network_node.hpp" bodystart="36" bodyend="128"/>
+    <listofallmembers>
+      <member refid="class_leaf_network_node_1a6b64ca2146fce80c5a67650ca22618e9" prot="private" virt="non-virtual"><scope>LeafNetworkNode</scope><name>checkConnection</name></member>
+      <member refid="class_network_node_1ae46a963d5928e991d1be31524c8ddf62" prot="public" virt="non-virtual"><scope>LeafNetworkNode</scope><name>cleanupConnectionHandlers</name></member>
+      <member refid="class_network_node_1a5d7ead3a7f13ef8209e654c3122f970e" prot="public" virt="non-virtual"><scope>LeafNetworkNode</scope><name>closeEndpoints</name></member>
+      <member refid="class_leaf_network_node_1ae140541a918e97950f280150e2fd44c5" prot="private" virt="virtual"><scope>LeafNetworkNode</scope><name>closeExternalEndpoints</name></member>
+      <member refid="class_leaf_network_node_1adf129809f69b2a30252c1d23faf79a7f" prot="private" virt="non-virtual"><scope>LeafNetworkNode</scope><name>CONNECTION_CHECKER_INTERVAL_MS</name></member>
+      <member refid="class_leaf_network_node_1aba1ea832a6d808df9facb77363fc6a53" prot="private" virt="non-virtual"><scope>LeafNetworkNode</scope><name>connectionCheckerHandler_</name></member>
+      <member refid="class_leaf_network_node_1a2bbed4b89dbb321c68449ca315498487" prot="private" virt="non-virtual"><scope>LeafNetworkNode</scope><name>connectionCheckerTimerHandle_</name></member>
+      <member refid="class_network_node_1a95fa25b039d62d0ef9f9ac796cef20e1" prot="protected" virt="non-virtual"><scope>LeafNetworkNode</scope><name>connectionWrapperMgr_</name></member>
+      <member refid="class_leaf_network_node_1ab971382104c9988866ec97b92cb4058e" prot="private" virt="non-virtual"><scope>LeafNetworkNode</scope><name>connectToTopLevelNode</name></member>
+      <member refid="class_leaf_network_node_1a8295b3a5a36b3095dec03fe4fcc06700" prot="public" virt="virtual"><scope>LeafNetworkNode</scope><name>createBroadcastManager</name></member>
+      <member refid="class_network_node_1abacbf8daab390687c7fee13d21cec12e" prot="protected" virt="non-virtual"><scope>LeafNetworkNode</scope><name>discoveryPort</name></member>
+      <member refid="class_leaf_network_node_1aa2741105fb68d6667fd06aefb82e6598" prot="private" virt="non-virtual"><scope>LeafNetworkNode</scope><name>dispatcher_</name></member>
+      <member refid="class_leaf_network_node_1a6182fe103a705ca8cc4444806bf40257" prot="private" virt="non-virtual"><scope>LeafNetworkNode</scope><name>epNetworkTCP_</name></member>
+      <member refid="class_leaf_network_node_1aff6d89e28c34654a37b9d91d858648e8" prot="private" virt="non-virtual"><scope>LeafNetworkNode</scope><name>epNetworkUDP_</name></member>
+      <member refid="class_leaf_network_node_1adc12f470b2038ad6a1e4db944e3e7e19" prot="private" virt="non-virtual"><scope>LeafNetworkNode</scope><name>epTopLevelTCP_</name></member>
+      <member refid="class_leaf_network_node_1a47b2367c810a81f3040662d91c2e6061" prot="private" virt="virtual"><scope>LeafNetworkNode</scope><name>handleHighPrecisionMachineMessageReply</name></member>
+      <member refid="class_leaf_network_node_1a4b87845366479659d05f2914f084a9e9" prot="private" virt="virtual"><scope>LeafNetworkNode</scope><name>handleMachinedAnnounceBirth</name></member>
+      <member refid="class_leaf_network_node_1a5516eed09e8de5c0edc3534a1e39bd31" prot="private" virt="virtual"><scope>LeafNetworkNode</scope><name>handleMachinedAnnounceDeath</name></member>
+      <member refid="class_leaf_network_node_1a45cbee37d4f5cae6d48896359fc2806b" prot="private" virt="virtual"><scope>LeafNetworkNode</scope><name>handleMachinedAnnounceExists</name></member>
+      <member refid="class_leaf_network_node_1a7e414f85cbe5acdbd4ac9a5b5e4bee07" prot="private" virt="non-virtual"><scope>LeafNetworkNode</scope><name>handleTimeout</name></member>
+      <member refid="class_leaf_network_node_1aa6e04c5362b841c08cbce6f6a5cf36cb" prot="private" virt="virtual"><scope>LeafNetworkNode</scope><name>handleWholeMachineMessageReply</name></member>
+      <member refid="class_leaf_network_node_1a4dd84148789507d180bbdd0dda79f8e0" prot="private" virt="virtual"><scope>LeafNetworkNode</scope><name>initExternalNetworkInterfaces</name></member>
+      <member refid="class_network_node_1a2b0a5947366d4e22c7a6c7396556a761" prot="public" virt="non-virtual"><scope>LeafNetworkNode</scope><name>initNetworkInterfaces</name></member>
+      <member refid="class_leaf_network_node_1a0c43923534ad603dca87156009f8115a" prot="public" virt="virtual"><scope>LeafNetworkNode</scope><name>isBroadcastResponse</name></member>
+      <member refid="class_network_node_1ad4449bcbf4ce02e3ca57552ce4fb71d5" prot="public" virt="non-virtual"><scope>LeafNetworkNode</scope><name>isDefaultPort</name></member>
+      <member refid="class_leaf_network_node_1a7715b7d45128bb237e2175f2fbe3202a" prot="public" virt="non-virtual"><scope>LeafNetworkNode</scope><name>LeafNetworkNode</name></member>
+      <member refid="class_network_node_1a0162469d287b9bde677fd2d8fda5bf9e" prot="public" virt="non-virtual"><scope>LeafNetworkNode</scope><name>listenOnEndpoints</name></member>
+      <member refid="class_leaf_network_node_1a4bb1f2041144a6224b0f6d88e9dd7ee1" prot="private" virt="virtual"><scope>LeafNetworkNode</scope><name>listenOnExternalEndpoints</name></member>
+      <member refid="class_leaf_network_node_1a1d8d7e33f050b1d5039ff24a267ef412" prot="private" virt="non-virtual"><scope>LeafNetworkNode</scope><name>MAX_CONNECT_ATTEMPTS</name></member>
+      <member refid="class_network_node_1aa52b6fb625756b157e33f0f10e2cd98b" prot="public" virt="non-virtual"><scope>LeafNetworkNode</scope><name>networkAddr</name></member>
+      <member refid="class_network_node_1a8ea43d56e13f46b2a1819e5b96ad3478" prot="public" virt="non-virtual"><scope>LeafNetworkNode</scope><name>NetworkNode</name></member>
+      <member refid="class_network_node_1a7581ca5d2410231b999f367487e4a84ca1cdc9fcaead5ce7048dd19951c818ccd" prot="public" virt="non-virtual"><scope>LeafNetworkNode</scope><name>NODE_LEAF</name></member>
+      <member refid="class_network_node_1a7581ca5d2410231b999f367487e4a84cadd46432278229d8ac679fbfeb21e2cc9" prot="public" virt="non-virtual"><scope>LeafNetworkNode</scope><name>NODE_RING_NETWORK</name></member>
+      <member refid="class_network_node_1a7581ca5d2410231b999f367487e4a84cad003b2e47c1e88e14ada5c4a8e75eb32" prot="public" virt="non-virtual"><scope>LeafNetworkNode</scope><name>NODE_TOP_LEVEL</name></member>
+      <member refid="class_network_node_1a7581ca5d2410231b999f367487e4a84ca5d429b377cb75808342dec855e5d09e0" prot="public" virt="non-virtual"><scope>LeafNetworkNode</scope><name>NODE_UNKNOWN_NETWORK</name></member>
+      <member refid="class_network_node_1a7581ca5d2410231b999f367487e4a84c" prot="public" virt="non-virtual"><scope>LeafNetworkNode</scope><name>NodeType</name></member>
+      <member refid="class_leaf_network_node_1a68b71379405716f49d19ecee197f6f11" prot="public" virt="virtual"><scope>LeafNetworkNode</scope><name>outgoingUDPEndpoint</name></member>
+      <member refid="class_leaf_network_node_1a5629a09a57249752c4a036cca5aae550" prot="private" virt="non-virtual"><scope>LeafNetworkNode</scope><name>pConnectionReadHandler_</name></member>
+      <member refid="class_network_node_1a214eacbc97325fc7290634954d43fdc5" prot="public" virt="non-virtual"><scope>LeafNetworkNode</scope><name>port</name></member>
+      <member refid="class_leaf_network_node_1a1cdaf7e307b53c83fff9b290e0f22ede" prot="private" virt="non-virtual"><scope>LeafNetworkNode</scope><name>pTLNodeConnection_</name></member>
+      <member refid="class_leaf_network_node_1a57f613b8b586fe8fdeca7250b4e4f7f3" prot="public" virt="virtual"><scope>LeafNetworkNode</scope><name>sendBroadcast</name></member>
+      <member refid="class_leaf_network_node_1adf733d69cb883306845981c51b9f350d" prot="public" virt="virtual"><scope>LeafNetworkNode</scope><name>sendBroadcast</name></member>
+      <member refid="class_leaf_network_node_1ab029285eeda4514ff26d2f93feb1458d" prot="private" virt="non-virtual"><scope>LeafNetworkNode</scope><name>sendToTopLevelNode</name></member>
+      <member refid="class_leaf_network_node_1a75b3a73cdda80a6ef103715104c96b30" prot="public" virt="virtual"><scope>LeafNetworkNode</scope><name>sendWrappedBroadcastPacket</name></member>
+      <member refid="class_network_node_1ad8c42da72e920b4b2470d24c588019b3" prot="public" virt="non-virtual"><scope>LeafNetworkNode</scope><name>setInternalInterface</name></member>
+      <member refid="class_leaf_network_node_1a47381a0ce28e488928c45e22d389ef96" prot="private" virt="virtual"><scope>LeafNetworkNode</scope><name>startHeartbeat</name></member>
+      <member refid="class_network_node_1ac17508bae117c8a432a361c02c224e13" prot="public" virt="non-virtual"><scope>LeafNetworkNode</scope><name>strToNodeType</name></member>
+      <member refid="class_network_node_1a37bc8d64c323d46841bdbac935a43dbb" prot="public" virt="non-virtual"><scope>LeafNetworkNode</scope><name>strToNodeType</name></member>
+      <member refid="class_leaf_network_node_1a66e504a49fdf09857f60ae44d116695b" prot="private" virt="non-virtual"><scope>LeafNetworkNode</scope><name>topLevelNodeAddr_</name></member>
+      <member refid="class_leaf_network_node_1aabac1f91ceb00dc447c53d5eeaa6b041" prot="public" virt="non-virtual"><scope>LeafNetworkNode</scope><name>~LeafNetworkNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

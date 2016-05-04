@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_proxy_pusher_t" kind="class" language="C++" prot="public">
+    <compoundname>ProxyPusherT</compoundname>
+    <basecompoundref refid="class_proxy_pusher" prot="public" virt="non-virtual">ProxyPusher</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename MSG</type>
+      </param>
+      <param>
+        <type>typename FUTYPE</type>
+      </param>
+      <param>
+        <type>typename FTYPE</type>
+      </param>
+      <param>
+        <type>FTYPE MSG::*</type>
+        <declname>FNAME</declname>
+        <defname>FNAME</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_proxy_pusher_t_1a86c6b6555f7d9c39ce52ad5aae939a4c" prot="private" static="no" mutable="no">
+        <type>MSG *</type>
+        <definition>MSG* ProxyPusherT&lt; MSG, FUTYPE, FTYPE, FNAME &gt;::pTickSyncMsg_</definition>
+        <argsstring></argsstring>
+        <name>pTickSyncMsg_</name>
+        <briefdescription>
+<para>Pointer to the last appended tick synchronisation message. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/proxy.cpp" line="624" column="1" bodyfile="baseapp/proxy.cpp" bodystart="624" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_proxy_pusher_t_1a2e503d8ac2fa55f0a6b6ccb7001c589f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ProxyPusherT&lt; MSG, FUTYPE, FTYPE, FNAME &gt;::ProxyPusherT</definition>
+        <argsstring>(Proxy *pProxy, TimeQueue::TimeStamp interval)</argsstring>
+        <name>ProxyPusherT</name>
+        <param>
+          <type><ref refid="class_proxy" kindref="compound">Proxy</ref> *</type>
+          <declname>pProxy</declname>
+        </param>
+        <param>
+          <type>TimeQueue::TimeStamp</type>
+          <declname>interval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/proxy.cpp" line="589" column="1" bodyfile="baseapp/proxy.cpp" bodystart="589" bodyend="592"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_proxy_pusher_t_1ad0162205a9d4e22cb741ee7742ec4d1f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ProxyPusherT&lt; MSG, FUTYPE, FTYPE, FNAME &gt;::appendTickSyncMsg</definition>
+        <argsstring>(Mercury::Bundle &amp;bundle, GameTime time)</argsstring>
+        <name>appendTickSyncMsg</name>
+        <reimplements refid="class_proxy_pusher_1ac39fb8e47cfa093796b590046fb6bfff">appendTickSyncMsg</reimplements>
+        <param>
+          <type>Mercury::Bundle &amp;</type>
+          <declname>bundle</declname>
+        </param>
+        <param>
+          <type>GameTime</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method appends and initialises a tick synchronisation message (MSG). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bundle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bundle to append the message to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Game time used to calculate the tick synchronisation value. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/proxy.cpp" line="602" column="1" bodyfile="baseapp/proxy.cpp" bodystart="602" bodyend="607"/>
+      </memberdef>
+      <memberdef kind="function" id="class_proxy_pusher_t_1a4c96a6a76a1f8c5bff0b1d3df21f01ee" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ProxyPusherT&lt; MSG, FUTYPE, FTYPE, FNAME &gt;::setTickSyncTime</definition>
+        <argsstring>(Mercury::Bundle &amp;bundle, GameTime time)</argsstring>
+        <name>setTickSyncTime</name>
+        <reimplements refid="class_proxy_pusher_1a057ae492105322c8905446b63ac525f6">setTickSyncTime</reimplements>
+        <param>
+          <type>Mercury::Bundle &amp;</type>
+          <declname>bundle</declname>
+        </param>
+        <param>
+          <type>GameTime</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method updates tick synchronisation message added by appendTickSyncMsg within the bundle. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bundle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Containing bundle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New game time. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/proxy.cpp" line="615" column="1" bodyfile="baseapp/proxy.cpp" bodystart="615" bodyend="621"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements <ref refid="class_proxy_pusher" kindref="compound">ProxyPusher</ref> interface for creating tick sync messages. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>MSG</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tick sync message type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FUTYPE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Underlying type for the field in the message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FTYPE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Network type of the field where the ticks are stored </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FNAME</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The field within MSG where the ticks are stored </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2197">
+        <label>TimerHandler</label>
+      </node>
+      <node id="2195">
+        <label>ProxyPusherT&lt; MSG, FUTYPE, FTYPE, FNAME &gt;</label>
+        <link refid="class_proxy_pusher_t"/>
+        <childnode refid="2196" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2196">
+        <label>ProxyPusher</label>
+        <link refid="class_proxy_pusher"/>
+        <childnode refid="2197" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2200">
+        <label>TimerHandler</label>
+      </node>
+      <node id="2198">
+        <label>ProxyPusherT&lt; MSG, FUTYPE, FTYPE, FNAME &gt;</label>
+        <link refid="class_proxy_pusher_t"/>
+        <childnode refid="2199" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2199">
+        <label>ProxyPusher</label>
+        <link refid="class_proxy_pusher"/>
+        <childnode refid="2200" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/proxy.cpp" line="587" column="1" bodyfile="baseapp/proxy.cpp" bodystart="586" bodyend="625"/>
+    <listofallmembers>
+      <member refid="class_proxy_pusher_t_1ad0162205a9d4e22cb741ee7742ec4d1f" prot="private" virt="virtual"><scope>ProxyPusherT</scope><name>appendTickSyncMsg</name></member>
+      <member refid="class_proxy_pusher_1aa4d1e542f0f85d1c53c80d9d9642263f" prot="public" virt="non-virtual" ambiguityscope="ProxyPusher::"><scope>ProxyPusherT</scope><name>appendTickSyncMsg</name></member>
+      <member refid="class_proxy_pusher_1a366a99689c4c7c33c52d52f9f6b1f9d1" prot="protected" virt="non-virtual"><scope>ProxyPusherT</scope><name>ProxyPusher</name></member>
+      <member refid="class_proxy_pusher_t_1a2e503d8ac2fa55f0a6b6ccb7001c589f" prot="public" virt="non-virtual"><scope>ProxyPusherT</scope><name>ProxyPusherT</name></member>
+      <member refid="class_proxy_pusher_t_1a86c6b6555f7d9c39ce52ad5aae939a4c" prot="private" virt="non-virtual"><scope>ProxyPusherT</scope><name>pTickSyncMsg_</name></member>
+      <member refid="class_proxy_pusher_t_1a4c96a6a76a1f8c5bff0b1d3df21f01ee" prot="private" virt="virtual"><scope>ProxyPusherT</scope><name>setTickSyncTime</name></member>
+      <member refid="class_proxy_pusher_1a4d3cea5703161821baa8971051d52f94" prot="public" virt="virtual"><scope>ProxyPusherT</scope><name>~ProxyPusher</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

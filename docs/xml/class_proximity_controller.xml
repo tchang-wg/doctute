@@ -1,0 +1,323 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_proximity_controller" kind="class" language="C++" prot="public">
+    <compoundname>ProximityController</compoundname>
+    <basecompoundref refid="class_controller" prot="public" virt="non-virtual">Controller</basecompoundref>
+    <includes refid="proximity__controller_8hpp" local="no">proximity_controller.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_proximity_controller_1a65afa21507ad26c1e9f7569c593ff9a0" prot="public" static="no" mutable="no">
+        <type>PY_AUTO_CONTROLLER_FACTORY_DECLARE(<ref refid="class_proximity_controller" kindref="compound">ProximityController</ref>, ARG(float, OPTARG(int, 0, END))) private <ref refid="class_proximity_range_trigger" kindref="compound">ProximityRangeTrigger</ref> *</type>
+        <definition>PY_AUTO_CONTROLLER_FACTORY_DECLARE ( ProximityController, ARG( float, OPTARG( int, 0, END ) ) ) private ProximityRangeTrigger* ProximityController::pProximityTrigger_</definition>
+        <argsstring></argsstring>
+        <name>pProximityTrigger_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/proximity_controller.hpp" line="44" column="1" bodyfile="cellapp/proximity_controller.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_proximity_controller_1a683d01b5617cfa6a570f886f5ac75743" prot="public" static="no" mutable="no">
+        <type>BW::vector&lt; EntityID &gt; *</type>
+        <definition>BW::vector&lt; EntityID &gt;* ProximityController::pOnloadedSet_</definition>
+        <argsstring></argsstring>
+        <name>pOnloadedSet_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/proximity_controller.hpp" line="46" column="1" bodyfile="cellapp/proximity_controller.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_proximity_controller_1a859ceb4c5cfd79a6d717f622e4b1b1ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ProximityController::ProximityController</definition>
+        <argsstring>(float range=20.f)</argsstring>
+        <name>ProximityController</name>
+        <param>
+          <type>float</type>
+          <declname>range</declname>
+          <defval>20.f</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_proximity_controller" kindref="compound">ProximityController</ref> constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is the range of the proximity check </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/proximity_controller.hpp" line="25" column="1" bodyfile="cellapp/proximity_controller.cpp" bodystart="155" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_proximity_controller_1af942a5f6d83b0acd3be1a31a81f1e7fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>ProximityController::~ProximityController</definition>
+        <argsstring>()</argsstring>
+        <name>~ProximityController</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/proximity_controller.hpp" line="26" column="1" bodyfile="cellapp/proximity_controller.cpp" bodystart="166" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_proximity_controller_1add19c0b64769fcf4156e86c1ace01215" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ProximityController::startReal</definition>
+        <argsstring>(bool isInitialStart)</argsstring>
+        <name>startReal</name>
+        <reimplements refid="class_controller_1a18d601aacf49c6f9f5234ba83921285d">startReal</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>isInitialStart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method overrides the <ref refid="class_controller" kindref="compound">Controller</ref> method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/proximity_controller.hpp" line="28" column="1" bodyfile="cellapp/proximity_controller.cpp" bodystart="234" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="class_proximity_controller_1a1fda57f5857c0d07fcb339d8ccbffdd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ProximityController::stopReal</definition>
+        <argsstring>(bool isFinalStop)</argsstring>
+        <name>stopReal</name>
+        <reimplements refid="class_controller_1a806642c29ced79e6da8bd62c159c8294">stopReal</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>isFinalStop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method overrides the <ref refid="class_controller" kindref="compound">Controller</ref> method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/proximity_controller.hpp" line="29" column="1" bodyfile="cellapp/proximity_controller.cpp" bodystart="281" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="class_proximity_controller_1a3b18efea4feb6a09f8efdfc21c34a9c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProximityController::writeRealToStream</definition>
+        <argsstring>(BinaryOStream &amp;stream)</argsstring>
+        <name>writeRealToStream</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method write our state to a stream.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stream to which we should write </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/proximity_controller.hpp" line="31" column="1" bodyfile="cellapp/proximity_controller.cpp" bodystart="302" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="class_proximity_controller_1a85cddded684bc89869e3e7eb09b7f958" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ProximityController::readRealFromStream</definition>
+        <argsstring>(BinaryIStream &amp;stream)</argsstring>
+        <name>readRealFromStream</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method reads our state from a stream.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stream from which to read </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successful, false otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/proximity_controller.hpp" line="32" column="1" bodyfile="cellapp/proximity_controller.cpp" bodystart="357" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="class_proximity_controller_1a1ff3528c9c41b741c83170ceea7b9cfa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float ProximityController::range</definition>
+        <argsstring>()</argsstring>
+        <name>range</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/proximity_controller.hpp" line="34" column="1" bodyfile="cellapp/proximity_controller.hpp" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_proximity_controller_1aa3e1a353e6af5a9b43ac52c160a92305" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProximityController::setRange</definition>
+        <argsstring>(float range)</argsstring>
+        <name>setRange</name>
+        <param>
+          <type>float</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the range of proximity. Note: We may be cancelled or deleted when this function returns. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/proximity_controller.hpp" line="36" column="1" bodyfile="cellapp/proximity_controller.cpp" bodystart="384" bodyend="412"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_proximity_controller_1a5b6ca6159e0eacc2952ba8110de067cc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_controller_1_1_factory_fn_ret" kindref="compound">FactoryFnRet</ref></type>
+        <definition>Controller::FactoryFnRet ProximityController::New</definition>
+        <argsstring>(float range, int userArg=0)</argsstring>
+        <name>New</name>
+        <param>
+          <type>float</type>
+          <declname>range</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>userArg</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/proximity_controller.hpp" line="38" column="1" bodyfile="cellapp/proximity_controller.cpp" bodystart="136" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is the controller for placing proximity based triggers. or traps. When an entity crosses within a range of the source entity it will call the python script method onEnterTrap() and when an entity leaves the range, it will call the method onLeaveTrap() </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2152">
+        <label>ProximityController</label>
+        <link refid="class_proximity_controller"/>
+        <childnode refid="2153" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2154">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="2153">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="2154" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2155">
+        <label>ProximityController</label>
+        <link refid="class_proximity_controller"/>
+        <childnode refid="2156" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2155" relation="usage">
+          <edgelabel>pProximityTrigger_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2157">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="2160">
+        <label>PyObjectPlus</label>
+      </node>
+      <node id="2158">
+        <label>Entity</label>
+        <link refid="class_entity"/>
+        <childnode refid="2159" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2160" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2159">
+        <label>BWEntity</label>
+      </node>
+      <node id="2156">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="2157" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2158" relation="usage">
+          <edgelabel>s_factoryFnEntity_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/proximity_controller.hpp" line="21" column="1" bodyfile="cellapp/proximity_controller.hpp" bodystart="20" bodyend="47"/>
+    <listofallmembers>
+      <member refid="class_controller_1a5c08d1a7974edb523c97f03c843b7a2a" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>addControllerDigest</name></member>
+      <member refid="class_controller_1a3332cc6b7c51b257f6b5bf8cccf6b296" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a797d7bd68f93f36fbd4edc92c9de300e" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a31d2c2c443222d9134e511eb734493fd" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a6ef0365a5bc295f4a92430ef0e809367" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a8972473450e1ea11239ac96c370fddd0" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a0dab5e21880d0c861495fa1909f95cbe" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a9e5ce4bd55f4d6cac2380bf3dfe95d5e" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1aef85b8faeee04f32c6c8fc384537be0d" prot="protected" virt="non-virtual"><scope>ProximityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a2a148ee762b8dae72593a0fb38a029bb" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a130a7805734c754c3ff8ab59ee01dea2" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1ade939a909a83784f4e733140c5f6be0f" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>create</name></member>
+      <member refid="class_controller_1a7c32bc59c340ade9d98e20d72ae40e7a" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>createIfNecessary</name></member>
+      <member refid="class_controller_1a3a96f5d838427d0b251f1cf5792350db" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>CreatorFn</name></member>
+      <member refid="class_controller_1aa251a2d5e3be8104a67eb22cc7b33781" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>ct</name></member>
+      <member refid="class_controller_1ad0a29b9b91700a808c328fb828ea5433" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>disowned</name></member>
+      <member refid="class_controller_1a18e942dbb34d82bc4cfcc9718b1c970f" prot="public" virt="pure-virtual"><scope>ProximityController</scope><name>domain</name></member>
+      <member refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>entity</name></member>
+      <member refid="class_controller_1a30b2745a2b74633dac7bba027bfe5eda" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>EXCLUSIVE_CONTROLLER_ID_MASK</name></member>
+      <member refid="class_controller_1ad5aa8f4242778920938f18a19ca039ab" prot="public" virt="pure-virtual"><scope>ProximityController</scope><name>exclusiveID</name></member>
+      <member refid="class_controller_1a4399843065da63b4d68e76bcba1c9b33" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>factories</name></member>
+      <member refid="class_controller_1a59b8e5ee7602267120c203e2d73a4aad" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>factory</name></member>
+      <member refid="class_controller_1a8c83b29edd91cff97310b85fd2dd62a9" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>FactoryFn</name></member>
+      <member refid="class_controller_1a01630a3d95bde81822c3ac80cc68bd72" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>ffn</name></member>
+      <member refid="class_controller_1a912cc50ab630c16d340e6750571c7d36" prot="protected" virt="non-virtual"><scope>ProximityController</scope><name>ghost</name></member>
+      <member refid="class_controller_1a8c2f39fc63cd53d3a098b14310cdbc6c" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>id</name></member>
+      <member refid="class_controller_1a97d6e40743b8130b496b1aa604670c83" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>init</name></member>
+      <member refid="class_controller_1a31bb10031669992bd8611769195460a0" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>isAttached</name></member>
+      <member refid="class_proximity_controller_1a5b6ca6159e0eacc2952ba8110de067cc" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>New</name></member>
+      <member refid="class_proximity_controller_1a683d01b5617cfa6a570f886f5ac75743" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>pOnloadedSet_</name></member>
+      <member refid="class_proximity_controller_1a65afa21507ad26c1e9f7569c593ff9a0" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>pProximityTrigger_</name></member>
+      <member refid="class_proximity_controller_1a859ceb4c5cfd79a6d717f622e4b1b1ee" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>ProximityController</name></member>
+      <member refid="class_proximity_controller_1a1ff3528c9c41b741c83170ceea7b9cfa" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>range</name></member>
+      <member refid="class_proximity_controller_1a85cddded684bc89869e3e7eb09b7f958" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>readRealFromStream</name></member>
+      <member refid="class_controller_1a27d88cafe564f8c3e97477f82b392b74" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>s_factoryFnEntity_</name></member>
+      <member refid="class_proximity_controller_1aa3e1a353e6af5a9b43ac52c160a92305" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>setRange</name></member>
+      <member refid="class_controller_1a28fbc433135ec5668b0de6286b0fb1fe" prot="protected" virt="non-virtual"><scope>ProximityController</scope><name>standardCallback</name></member>
+      <member refid="class_proximity_controller_1add19c0b64769fcf4156e86c1ace01215" prot="public" virt="virtual"><scope>ProximityController</scope><name>startReal</name></member>
+      <member refid="class_proximity_controller_1a1fda57f5857c0d07fcb339d8ccbffdd3" prot="public" virt="virtual"><scope>ProximityController</scope><name>stopReal</name></member>
+      <member refid="class_controller_1aae5de9edfa47a204f2094fdeb8091dbd" prot="public" virt="pure-virtual"><scope>ProximityController</scope><name>type</name></member>
+      <member refid="class_controller_1ac066a12fbae3979fbe86f4ee20c02904" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>typeName</name></member>
+      <member refid="class_controller_1aad8a489249dcc3b5edde468d05cb5c7f" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>userArg</name></member>
+      <member refid="class_proximity_controller_1a3b18efea4feb6a09f8efdfc21c34a9c9" prot="public" virt="non-virtual"><scope>ProximityController</scope><name>writeRealToStream</name></member>
+      <member refid="class_proximity_controller_1af942a5f6d83b0acd3be1a31a81f1e7fd" prot="public" virt="virtual"><scope>ProximityController</scope><name>~ProximityController</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

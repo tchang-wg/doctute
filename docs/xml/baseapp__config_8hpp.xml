@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="baseapp__config_8hpp" kind="file" language="C++">
+    <compoundname>baseapp_config.hpp</compoundname>
+    <includes local="yes">server/entity_app_config.hpp</includes>
+    <includes local="yes">server/external_app_config.hpp</includes>
+    <includedby refid="base_8hpp" local="yes">baseapp/base.hpp</includedby>
+    <includedby refid="archiver_8cpp" local="yes">baseapp/archiver.cpp</includedby>
+    <includedby refid="backup__sender_8cpp" local="yes">baseapp/backup_sender.cpp</includedby>
+    <includedby refid="base_8cpp" local="yes">baseapp/base.cpp</includedby>
+    <includedby refid="baseapp_8cpp" local="yes">baseapp/baseapp.cpp</includedby>
+    <includedby refid="baseapp__config_8cpp" local="yes">baseapp/baseapp_config.cpp</includedby>
+    <includedby refid="download__streamer__config_8cpp" local="yes">baseapp/download_streamer_config.cpp</includedby>
+    <includedby refid="baseapp_2entity__creator_8cpp" local="yes">baseapp/entity_creator.cpp</includedby>
+    <includedby refid="global__bases_8cpp" local="yes">baseapp/global_bases.cpp</includedby>
+    <includedby refid="loading__thread_8cpp" local="yes">baseapp/loading_thread.cpp</includedby>
+    <includedby refid="baseapp_2mailbox_8cpp" local="yes">baseapp/mailbox.cpp</includedby>
+    <includedby refid="baseapp_2main_8cpp" local="yes">baseapp/main.cpp</includedby>
+    <includedby refid="pending__logins_8cpp" local="yes">baseapp/pending_logins.cpp</includedby>
+    <includedby refid="proxy_8cpp" local="yes">baseapp/proxy.cpp</includedby>
+    <includedby refid="rate__limit__config_8cpp" local="yes">baseapp/rate_limit_config.cpp</includedby>
+    <includedby refid="script__bigworld_8cpp" local="yes">baseapp/script_bigworld.cpp</includedby>
+    <includedby refid="service__starter_8cpp" local="yes">baseapp/service_starter.cpp</includedby>
+    <incdepgraph>
+      <node id="967">
+        <label>server/entity_app_config.hpp</label>
+      </node>
+      <node id="966">
+        <label>baseapp/baseapp_config.hpp</label>
+        <link refid="baseapp_config.hpp"/>
+        <childnode refid="967" relation="include">
+        </childnode>
+        <childnode refid="968" relation="include">
+        </childnode>
+      </node>
+      <node id="968">
+        <label>server/external_app_config.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="970">
+        <label>baseapp/base.hpp</label>
+        <link refid="base_8hpp_source"/>
+        <childnode refid="971" relation="include">
+        </childnode>
+        <childnode refid="976" relation="include">
+        </childnode>
+      </node>
+      <node id="973">
+        <label>baseapp/add_to_baseappmgr_helper.hpp</label>
+        <link refid="add__to__baseappmgr__helper_8hpp_source"/>
+      </node>
+      <node id="971">
+        <label>baseapp/proxy.hpp</label>
+        <link refid="proxy_8hpp_source"/>
+        <childnode refid="972" relation="include">
+        </childnode>
+        <childnode refid="975" relation="include">
+        </childnode>
+      </node>
+      <node id="974">
+        <label>baseapp/service_app.hpp</label>
+        <link refid="service__app_8hpp_source"/>
+      </node>
+      <node id="975">
+        <label>baseapp/rate_limit_message_filter.hpp</label>
+        <link refid="rate__limit__message__filter_8hpp_source"/>
+        <childnode refid="972" relation="include">
+        </childnode>
+      </node>
+      <node id="976">
+        <label>baseapp/service.hpp</label>
+        <link refid="service_8hpp_source"/>
+      </node>
+      <node id="972">
+        <label>baseapp/baseapp.hpp</label>
+        <link refid="baseapp_8hpp_source"/>
+        <childnode refid="973" relation="include">
+        </childnode>
+        <childnode refid="974" relation="include">
+        </childnode>
+      </node>
+      <node id="969">
+        <label>baseapp/baseapp_config.hpp</label>
+        <link refid="baseapp_config.hpp"/>
+        <childnode refid="970" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_base_app_config" prot="public">BaseAppConfig</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BASE_APP_CONFIG_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BASE_APP_CONFIG_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;server/entity_app_config.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;server/external_app_config.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_base_app_config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_base_app_config" kindref="compound">BaseAppConfig</ref><sp/>:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>EntityAppConfig,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>ExternalAppConfig</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>createBaseElsewhereThreshold;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>backupPeriod;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>int<sp/>&gt;<sp/>backupPeriodInTicks;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>int<sp/>&gt;<sp/>backupSizeWarningLevel;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>shouldLogBackups;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>shouldBackupWhenCreated;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>archivePeriod;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>int<sp/>&gt;<sp/>archivePeriodInTicks;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>archiveEmergencyThreshold;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>sendAuthToClient;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>shouldShutDownIfPortUsed;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>inactivityTimeout;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>int<sp/>&gt;<sp/>clientOverflowLimit;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>int<sp/>&gt;<sp/>bitsPerSecondToClient;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>int<sp/>&gt;<sp/>bytesPerPacketToClient;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>backUpUndefinedProperties;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>shouldResolveMailBoxes;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>warnOnNoDef;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>loadSmoothingBias;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>verboseExternalInterface;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>maxExternalSocketProcessingTime;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>sendWindowCallbackThreshold;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>shouldDelayLookUpSend;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>int<sp/>&gt;<sp/>tcpClientSyncPeriodInTicks;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>double<sp/>&gt;<sp/>reservedTickFraction;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_base_app_config_1aab99b69214258d7d56e0dc1ede01d677" kindref="member">postInit</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>BASE_APP_CONFIG_HPP</highlight></codeline>
+    </programlisting>
+    <location file="baseapp/baseapp_config.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_offload_checker" kind="class" language="C++" prot="public">
+    <compoundname>OffloadChecker</compoundname>
+    <includes refid="offload__checker_8hpp" local="no">offload_checker.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_offload_checker_1a76ca42864b10137222c7290af815b404" prot="private" static="no">
+        <type>std::pair&lt; <ref refid="class_smart_pointer" kindref="compound">EntityPtr</ref>, <ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref> * &gt;</type>
+        <definition>typedef std::pair&lt; EntityPtr, CellAppChannel * &gt; OffloadChecker::OffloadEntry</definition>
+        <argsstring></argsstring>
+        <name>OffloadEntry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/offload_checker.hpp" line="47" column="1" bodyfile="cellapp/offload_checker.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_offload_checker_1a38f7314407d7d042d50d03d45fbdabb7" prot="private" static="no">
+        <type>BW::vector&lt; OffloadEntry &gt;</type>
+        <definition>typedef BW::vector&lt; OffloadEntry &gt; OffloadChecker::OffloadList</definition>
+        <argsstring></argsstring>
+        <name>OffloadList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/offload_checker.hpp" line="48" column="1" bodyfile="cellapp/offload_checker.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_offload_checker_1a6592bdf853af7a6e3a8d1fb4240756bd" prot="private" static="no" mutable="no">
+        <type><ref refid="class_cell" kindref="compound">Cell</ref> &amp;</type>
+        <definition>Cell&amp; OffloadChecker::cell_</definition>
+        <argsstring></argsstring>
+        <name>cell_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/offload_checker.hpp" line="55" column="1" bodyfile="cellapp/offload_checker.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_offload_checker_1ad0497363e99f401511d6b8ee27ae89de" prot="private" static="no" mutable="no">
+        <type>OffloadList</type>
+        <definition>OffloadList OffloadChecker::offloadList_</definition>
+        <argsstring></argsstring>
+        <name>offloadList_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/offload_checker.hpp" line="56" column="1" bodyfile="cellapp/offload_checker.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_offload_checker_1ac664f81d0eeddd9505db3f42d6c38418" prot="private" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint OffloadChecker::numGhostsDeleted_</definition>
+        <argsstring></argsstring>
+        <name>numGhostsDeleted_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/offload_checker.hpp" line="57" column="1" bodyfile="cellapp/offload_checker.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_offload_checker_1a51aa7329cf61114322dc87966a8872f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE OffloadChecker::OffloadChecker</definition>
+        <argsstring>(Cell &amp;cell)</argsstring>
+        <name>OffloadChecker</name>
+        <param>
+          <type><ref refid="class_cell" kindref="compound">Cell</ref> &amp;</type>
+          <declname>cell</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cell</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cell to check offloads and ghosts for. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/offload_checker.hpp" line="30" column="1" bodyfile="cellapp/offload_checker.cpp" bodystart="24" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_offload_checker_1af6e3a26a58a8f487b01b9b8196bbf773" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OffloadChecker::~OffloadChecker</definition>
+        <argsstring>()</argsstring>
+        <name>~OffloadChecker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/offload_checker.hpp" line="31" column="1" bodyfile="cellapp/offload_checker.cpp" bodystart="36" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_offload_checker_1aa03187211dc6421905c45a76b0357b2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OffloadChecker::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method performs the offloads and ghosts check. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/offload_checker.hpp" line="33" column="1" bodyfile="cellapp/offload_checker.cpp" bodystart="43" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_offload_checker_1ac92baf94c09e8f937ec09077fd343e38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OffloadChecker::addToOffloads</definition>
+        <argsstring>(EntityPtr pEntity, CellAppChannel *pOffloadDestination)</argsstring>
+        <name>addToOffloads</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">EntityPtr</ref></type>
+          <declname>pEntity</declname>
+        </param>
+        <param>
+          <type><ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref> *</type>
+          <declname>pOffloadDestination</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds an entity to the offload list.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pEntity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity to add. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pOffloadDestination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination channel. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/offload_checker.hpp" line="35" column="1" bodyfile="cellapp/offload_checker.cpp" bodystart="79" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_offload_checker_1a8e74afcf0edac8a6e9d6265855e1b78a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool OffloadChecker::canDeleteMoreGhosts</definition>
+        <argsstring>() const </argsstring>
+        <name>canDeleteMoreGhosts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns whether more ghost deletions are allowed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/offload_checker.hpp" line="38" column="1" bodyfile="cellapp/offload_checker.cpp" bodystart="123" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_offload_checker_1a266bd3777367f18fe051959295247b30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OffloadChecker::addDeletedGhost</definition>
+        <argsstring>()</argsstring>
+        <name>addDeletedGhost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method increments the count for deleted ghosts. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/offload_checker.hpp" line="43" column="1" bodyfile="cellapp/offload_checker.hpp" bodystart="43" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_offload_checker_1a193d95cd92382ad1fdd01a525f872c0f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OffloadChecker::sendOffloads</definition>
+        <argsstring>()</argsstring>
+        <name>sendOffloads</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends all the pending offloads. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/offload_checker.hpp" line="50" column="1" bodyfile="cellapp/offload_checker.cpp" bodystart="89" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_offload_checker_1a156b23eedb8635c1785dd5e66072f8d9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OffloadChecker::sendOffload</definition>
+        <argsstring>(OffloadList::const_iterator iOffload)</argsstring>
+        <name>sendOffload</name>
+        <param>
+          <type>OffloadList::const_iterator</type>
+          <declname>iOffload</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends an individual offload, subject to sufficient ghosting capacity being present on the channels and the channels being in a good state.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>iOffload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The iterator pointing to the entry in the offload list to process. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/offload_checker.hpp" line="52" column="1" bodyfile="cellapp/offload_checker.cpp" bodystart="110" bodyend="117"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is responsible for offloading entities in a cell to their most appropriate remote cell, and checking each of the cell&apos;s real entities&apos; ghosts to make sure that nearby cells that need knowledge of that entity have ghosts created, as well as removing them if they are no longer needed. </para>    </detaileddescription>
+    <location file="cellapp/offload_checker.hpp" line="28" column="1" bodyfile="cellapp/offload_checker.hpp" bodystart="27" bodyend="58"/>
+    <listofallmembers>
+      <member refid="class_offload_checker_1a266bd3777367f18fe051959295247b30" prot="public" virt="non-virtual"><scope>OffloadChecker</scope><name>addDeletedGhost</name></member>
+      <member refid="class_offload_checker_1ac92baf94c09e8f937ec09077fd343e38" prot="public" virt="non-virtual"><scope>OffloadChecker</scope><name>addToOffloads</name></member>
+      <member refid="class_offload_checker_1a8e74afcf0edac8a6e9d6265855e1b78a" prot="public" virt="non-virtual"><scope>OffloadChecker</scope><name>canDeleteMoreGhosts</name></member>
+      <member refid="class_offload_checker_1a6592bdf853af7a6e3a8d1fb4240756bd" prot="private" virt="non-virtual"><scope>OffloadChecker</scope><name>cell_</name></member>
+      <member refid="class_offload_checker_1ac664f81d0eeddd9505db3f42d6c38418" prot="private" virt="non-virtual"><scope>OffloadChecker</scope><name>numGhostsDeleted_</name></member>
+      <member refid="class_offload_checker_1a51aa7329cf61114322dc87966a8872f6" prot="public" virt="non-virtual"><scope>OffloadChecker</scope><name>OffloadChecker</name></member>
+      <member refid="class_offload_checker_1a76ca42864b10137222c7290af815b404" prot="private" virt="non-virtual"><scope>OffloadChecker</scope><name>OffloadEntry</name></member>
+      <member refid="class_offload_checker_1a38f7314407d7d042d50d03d45fbdabb7" prot="private" virt="non-virtual"><scope>OffloadChecker</scope><name>OffloadList</name></member>
+      <member refid="class_offload_checker_1ad0497363e99f401511d6b8ee27ae89de" prot="private" virt="non-virtual"><scope>OffloadChecker</scope><name>offloadList_</name></member>
+      <member refid="class_offload_checker_1aa03187211dc6421905c45a76b0357b2d" prot="public" virt="non-virtual"><scope>OffloadChecker</scope><name>run</name></member>
+      <member refid="class_offload_checker_1a156b23eedb8635c1785dd5e66072f8d9" prot="private" virt="non-virtual"><scope>OffloadChecker</scope><name>sendOffload</name></member>
+      <member refid="class_offload_checker_1a193d95cd92382ad1fdd01a525f872c0f" prot="private" virt="non-virtual"><scope>OffloadChecker</scope><name>sendOffloads</name></member>
+      <member refid="class_offload_checker_1af6e3a26a58a8f487b01b9b8196bbf773" prot="public" virt="non-virtual"><scope>OffloadChecker</scope><name>~OffloadChecker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

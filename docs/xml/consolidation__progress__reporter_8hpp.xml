@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="consolidation__progress__reporter_8hpp" kind="file" language="C++">
+    <compoundname>consolidation_progress_reporter.hpp</compoundname>
+    <includes refid="sluggish__progress__reporter_8hpp" local="yes">sluggish_progress_reporter.hpp</includes>
+    <includes local="yes">cstdmf/bw_string.hpp</includes>
+    <includedby refid="consolidate__dbs__app_8cpp" local="yes">tools/consolidate_dbs/consolidate_dbs_app.cpp</includedby>
+    <includedby refid="consolidation__progress__reporter_8cpp" local="yes">tools/consolidate_dbs/consolidation_progress_reporter.cpp</includedby>
+    <includedby refid="secondary__database__table_8cpp" local="yes">tools/consolidate_dbs/secondary_database_table.cpp</includedby>
+    <incdepgraph>
+      <node id="18663">
+        <label>cstdmf/bw_string.hpp</label>
+      </node>
+      <node id="18661">
+        <label>dbapp_status_reporter.hpp</label>
+        <link refid="dbapp__status__reporter_8hpp_source"/>
+        <childnode refid="18662" relation="include">
+        </childnode>
+        <childnode refid="18663" relation="include">
+        </childnode>
+      </node>
+      <node id="18659">
+        <label>tools/consolidate_dbs/consolidation_progress_reporter.hpp</label>
+        <link refid="consolidation_progress_reporter.hpp"/>
+        <childnode refid="18660" relation="include">
+        </childnode>
+        <childnode refid="18663" relation="include">
+        </childnode>
+      </node>
+      <node id="18664">
+        <label>cstdmf/timestamp.hpp</label>
+      </node>
+      <node id="18660">
+        <label>sluggish_progress_reporter.hpp</label>
+        <link refid="sluggish__progress__reporter_8hpp_source"/>
+        <childnode refid="18661" relation="include">
+        </childnode>
+        <childnode refid="18664" relation="include">
+        </childnode>
+      </node>
+      <node id="18662">
+        <label>cstdmf/bw_namespace.hpp</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_consolidation_progress_reporter" prot="public">ConsolidationProgressReporter</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CONSOLIDATE_DBS__CONSOLIDATION_PROGRESS_REPORTER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONSOLIDATE_DBS__CONSOLIDATION_PROGRESS_REPORTER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sluggish_progress_reporter.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_string.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_consolidation_progress_reporter" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_consolidation_progress_reporter" kindref="compound">ConsolidationProgressReporter</ref><sp/>:<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="class_sluggish_progress_reporter" kindref="compound">SluggishProgressReporter</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_consolidation_progress_reporter_1a389ca7350789e1caf147cf3715e52648" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_consolidation_progress_reporter_1a389ca7350789e1caf147cf3715e52648" kindref="member">ConsolidationProgressReporter</ref>(<sp/><ref refid="class_d_b_app_status_reporter" kindref="compound">DBAppStatusReporter</ref><sp/>&amp;<sp/>reporter,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numDBs<sp/>)<sp/>:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sluggish_progress_reporter" kindref="compound">SluggishProgressReporter</ref>(<sp/>reporter<sp/>),</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numDBs_(<sp/>numDBs<sp/>),</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>doneDBs_(<sp/>0<sp/>),</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numEntitiesInCurDB_(<sp/>0<sp/>),</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>doneEntitiesInCurDB_(<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>onStartConsolidateDB(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>dbName,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numEntities<sp/>)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++doneDBs_;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>curDBName_<sp/>=<sp/>dbName;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numEntitiesInCurDB_<sp/>=<sp/>numEntities;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>doneEntitiesInCurDB_<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;reportProgressNow();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>onConsolidatedRow()</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++doneEntitiesInCurDB_;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;reportProgress();<sp/></highlight><highlight class="comment">//<sp/>SluggishProgressReporter<sp/>method</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reportProgressNow();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numDBs_;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>doneDBs_;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Actualy<sp/>counts<sp/>the<sp/>one<sp/>currently<sp/>being<sp/>done</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>BW::string<sp/>curDBName_;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numEntitiesInCurDB_;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>doneEntitiesInCurDB_;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>CONSOLIDATE_DBS__CONSOLIDATION_PROGRESS_REPORTER_HPP</highlight></codeline>
+    </programlisting>
+    <location file="tools/consolidate_dbs/consolidation_progress_reporter.hpp"/>
+  </compounddef>
+</doxygen>

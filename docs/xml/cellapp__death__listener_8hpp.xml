@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cellapp__death__listener_8hpp" kind="file" language="C++">
+    <compoundname>cellapp_death_listener.hpp</compoundname>
+    <includes local="yes">network/basictypes.hpp</includes>
+    <includes local="yes">cstdmf/bw_list.hpp</includes>
+    <includes local="yes">cstdmf/safe_static.hpp</includes>
+    <includedby refid="cellapp_8hpp" local="yes">cellapp/cellapp.hpp</includedby>
+    <includedby refid="entity__population_8hpp" local="yes">cellapp/entity_population.hpp</includedby>
+    <includedby refid="cellapp__death__listener_8cpp" local="yes">cellapp/cellapp_death_listener.cpp</includedby>
+    <incdepgraph>
+      <node id="7742">
+        <label>cstdmf/safe_static.hpp</label>
+      </node>
+      <node id="7741">
+        <label>cstdmf/bw_list.hpp</label>
+      </node>
+      <node id="7739">
+        <label>cellapp/cellapp_death_listener.hpp</label>
+        <link refid="cellapp_death_listener.hpp"/>
+        <childnode refid="7740" relation="include">
+        </childnode>
+        <childnode refid="7741" relation="include">
+        </childnode>
+        <childnode refid="7742" relation="include">
+        </childnode>
+      </node>
+      <node id="7740">
+        <label>network/basictypes.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7746">
+        <label>cellapp/passenger_controller.hpp</label>
+        <link refid="passenger__controller_8hpp_source"/>
+      </node>
+      <node id="7744">
+        <label>cellapp/cellapp.hpp</label>
+        <link refid="cellapp_8hpp_source"/>
+      </node>
+      <node id="7743">
+        <label>cellapp/cellapp_death_listener.hpp</label>
+        <link refid="cellapp_death_listener.hpp"/>
+        <childnode refid="7744" relation="include">
+        </childnode>
+        <childnode refid="7745" relation="include">
+        </childnode>
+      </node>
+      <node id="7745">
+        <label>cellapp/entity_population.hpp</label>
+        <link refid="entity__population_8hpp_source"/>
+        <childnode refid="7746" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_cell_app_death_listeners" prot="public">CellAppDeathListeners</innerclass>
+    <innerclass refid="class_cell_app_death_listener" prot="public">CellAppDeathListener</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CELL_APP_DEATH_LISTENER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CELL_APP_DEATH_LISTENER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/basictypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_list.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/safe_static.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_cell_app_death_listener" kindref="compound">CellAppDeathListener</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_cell_app_death_listeners" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_cell_app_death_listeners" kindref="compound">CellAppDeathListeners</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BW::list&lt;<sp/>CellAppDeathListener*<sp/>&gt;<sp/><ref refid="class_listeners" kindref="compound">Listeners</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>Listeners::iterator<sp/>iterator;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_cell_app_death_listeners" kindref="compound">CellAppDeathListeners</ref><sp/>&amp;<sp/><ref refid="class_cell_app_death_listeners_1abe8288386afb74fd0746b737cfe67c63" kindref="member">instance</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cell_app_death_listeners_1af54abaa473805da824af53182b4f13df" kindref="member">handleCellAppDeath</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>addr<sp/>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>iterator<sp/><ref refid="class_cell_app_death_listeners_1a1aae406c325b9d22021c0c2a3239ce60" kindref="member">addListener</ref>(<sp/><ref refid="class_cell_app_death_listener" kindref="compound">CellAppDeathListener</ref><sp/>*<sp/>pListener<sp/>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cell_app_death_listeners_1ad5ebeb37030a9d16682ff1e0257c5841" kindref="member">delListener</ref>(<sp/>iterator<sp/>&amp;<sp/>iter<sp/>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>Listeners<sp/>listeners_;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">SafeLazyStatic&lt;CellAppDeathListeners&gt;<sp/>s_pCellAppDeathListeners;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_cell_app_death_listener" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_cell_app_death_listener" kindref="compound">CellAppDeathListener</ref></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_app_death_listener" kindref="compound">CellAppDeathListener</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="class_cell_app_death_listener" kindref="compound">CellAppDeathListener</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cell_app_death_listeners_1af54abaa473805da824af53182b4f13df" kindref="member">handleCellAppDeath</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>addr<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>CellAppDeathListeners::iterator<sp/>iter_;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>CELL_APP_DEATH_LISTENER_HPP</highlight></codeline>
+    </programlisting>
+    <location file="cellapp/cellapp_death_listener.hpp"/>
+  </compounddef>
+</doxygen>

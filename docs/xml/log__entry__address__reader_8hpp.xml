@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="log__entry__address__reader_8hpp" kind="file" language="C++">
+    <compoundname>log_entry_address_reader.hpp</compoundname>
+    <includes refid="log__entry__address_8hpp" local="yes">log_entry_address.hpp</includes>
+    <includes local="yes">Python.h</includes>
+    <includedby refid="query__range_8hpp" local="yes">tools/message_logger/query_range.hpp</includedby>
+    <includedby refid="query__params_8hpp" local="yes">tools/message_logger/query_params.hpp</includedby>
+    <includedby refid="log__entry__address__reader_8cpp" local="yes">tools/message_logger/log_entry_address_reader.cpp</includedby>
+    <incdepgraph>
+      <node id="19939">
+        <label>cstdmf/stdmf.hpp</label>
+      </node>
+      <node id="19937">
+        <label>tools/message_logger/log_entry_address_reader.hpp</label>
+        <link refid="log_entry_address_reader.hpp"/>
+        <childnode refid="19938" relation="include">
+        </childnode>
+        <childnode refid="19941" relation="include">
+        </childnode>
+      </node>
+      <node id="19940">
+        <label>cstdmf/bw_string.hpp</label>
+      </node>
+      <node id="19941">
+        <label>Python.h</label>
+      </node>
+      <node id="19938">
+        <label>log_entry_address.hpp</label>
+        <link refid="log__entry__address_8hpp_source"/>
+        <childnode refid="19939" relation="include">
+        </childnode>
+        <childnode refid="19940" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="19947">
+        <label>tools/message_logger/py_query_result.hpp</label>
+        <link refid="py__query__result_8hpp_source"/>
+        <childnode refid="19948" relation="include">
+        </childnode>
+      </node>
+      <node id="19949">
+        <label>tools/message_logger/query_params.hpp</label>
+        <link refid="query__params_8hpp_source"/>
+        <childnode refid="19943" relation="include">
+        </childnode>
+      </node>
+      <node id="19944">
+        <label>tools/message_logger/user_log_reader.hpp</label>
+        <link refid="user__log__reader_8hpp_source"/>
+        <childnode refid="19945" relation="include">
+        </childnode>
+        <childnode refid="19949" relation="include">
+        </childnode>
+        <childnode refid="19950" relation="include">
+        </childnode>
+        <childnode refid="19943" relation="include">
+        </childnode>
+        <childnode refid="19948" relation="include">
+        </childnode>
+      </node>
+      <node id="19942">
+        <label>tools/message_logger/log_entry_address_reader.hpp</label>
+        <link refid="log_entry_address_reader.hpp"/>
+        <childnode refid="19943" relation="include">
+        </childnode>
+        <childnode refid="19949" relation="include">
+        </childnode>
+      </node>
+      <node id="19948">
+        <label>tools/message_logger/py_query.hpp</label>
+        <link refid="py__query_8hpp_source"/>
+      </node>
+      <node id="19943">
+        <label>tools/message_logger/query_range.hpp</label>
+        <link refid="query__range_8hpp_source"/>
+        <childnode refid="19944" relation="include">
+        </childnode>
+        <childnode refid="19948" relation="include">
+        </childnode>
+      </node>
+      <node id="19945">
+        <label>tools/message_logger/py_user_log.hpp</label>
+        <link refid="py__user__log_8hpp_source"/>
+        <childnode refid="19946" relation="include">
+        </childnode>
+      </node>
+      <node id="19950">
+        <label>tools/message_logger/mldb/log_reader.hpp</label>
+        <link refid="log__reader_8hpp_source"/>
+        <childnode refid="19949" relation="include">
+        </childnode>
+        <childnode refid="19946" relation="include">
+        </childnode>
+      </node>
+      <node id="19946">
+        <label>tools/message_logger/py_bwlog.hpp</label>
+        <link refid="py__bwlog_8hpp_source"/>
+        <childnode refid="19945" relation="include">
+        </childnode>
+        <childnode refid="19947" relation="include">
+        </childnode>
+        <childnode refid="19948" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_log_entry_address_reader" prot="public">LogEntryAddressReader</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>LOG_ENTRY_ADDRESS_READER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_ENTRY_ADDRESS_READER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;log_entry_address.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Python.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">BinaryIStream;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>pack(<sp/>push,<sp/>1<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_log_entry_address_reader" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_log_entry_address_reader" kindref="compound">LogEntryAddressReader</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_log_entry_address" kindref="compound">LogEntryAddress</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isValid()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fromPyTuple(<sp/>PyObject<sp/>*tuple<sp/>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>pack(<sp/>pop<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>LOG_ENTRY_ADDRESS_READER_HPP</highlight></codeline>
+    </programlisting>
+    <location file="tools/message_logger/log_entry_address_reader.hpp"/>
+  </compounddef>
+</doxygen>

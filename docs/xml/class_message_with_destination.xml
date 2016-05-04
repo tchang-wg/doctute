@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_message_with_destination" kind="class" language="C++" prot="public">
+    <compoundname>MessageWithDestination</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MGM</basecompoundref>
+    <includes refid="message__with__destination_8hpp" local="no">message_with_destination.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class MGM</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_message_with_destination_1ac02f4d374775f7a5ff909b9c6a16aec9" prot="private" static="no" mutable="no">
+        <type><ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref></type>
+        <definition>ConnectionWrapperPtr MessageWithDestination&lt; MGM &gt;::pConnection_</definition>
+        <argsstring></argsstring>
+        <name>pConnection_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/message_with_destination.hpp" line="84" column="1" bodyfile="tools/bwmachined/message_with_destination.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_message_with_destination_1ae3af03bbb15354ba6f7af0ba0122814e" prot="private" static="no" mutable="no">
+        <type>uint8</type>
+        <definition>uint8 MessageWithDestination&lt; MGM &gt;::packFlags_</definition>
+        <argsstring></argsstring>
+        <name>packFlags_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/message_with_destination.hpp" line="85" column="1" bodyfile="tools/bwmachined/message_with_destination.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_message_with_destination_1aeb12414111c1e19b655c02517e182f8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MessageWithDestination&lt; MGM &gt;::MessageWithDestination</definition>
+        <argsstring>()</argsstring>
+        <name>MessageWithDestination</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/message_with_destination.hpp" line="26" column="1" bodyfile="tools/bwmachined/message_with_destination.hpp" bodystart="26" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_message_with_destination_1a10b6284f6572be335d9d47e97a122190" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual MessageWithDestination&lt; MGM &gt;::~MessageWithDestination</definition>
+        <argsstring>()</argsstring>
+        <name>~MessageWithDestination</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/message_with_destination.hpp" line="37" column="1" bodyfile="tools/bwmachined/message_with_destination.hpp" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_message_with_destination_1a93968114f2d843e5a8df063e9447c31d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MessageWithDestination&lt; MGM &gt;::target</definition>
+        <argsstring>(ConnectionWrapperPtr pConnection, const uint8 packFlags=0)</argsstring>
+        <name>target</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref></type>
+          <declname>pConnection</declname>
+        </param>
+        <param>
+          <type>const uint8</type>
+          <declname>packFlags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the values to feed into <ref refid="class_message_with_destination_1abc1fbcec0d915023004ab03025d8e14f" kindref="member">sendToTarget()</ref> later.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pConnection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The connection to send the message, containing the endpoint and destination address </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>packFlags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The flags to set in the outgoing packet </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/message_with_destination.hpp" line="49" column="1" bodyfile="tools/bwmachined/message_with_destination.hpp" bodystart="49" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_message_with_destination_1abc1fbcec0d915023004ab03025d8e14f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MessageWithDestination&lt; MGM &gt;::sendToTarget</definition>
+        <argsstring>()</argsstring>
+        <name>sendToTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Start sending this message on the stored connection wrapper.</para><para><simplesect kind="return"><para>true on success, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/message_with_destination.hpp" line="61" column="1" bodyfile="tools/bwmachined/message_with_destination.hpp" bodystart="61" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_message_with_destination_1aff5e9a19f5f326bc661574c286981fc8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref></type>
+        <definition>ConnectionWrapperPtr MessageWithDestination&lt; MGM &gt;::connection</definition>
+        <argsstring>()</argsstring>
+        <name>connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/message_with_destination.hpp" line="81" column="1" bodyfile="tools/bwmachined/message_with_destination.hpp" bodystart="81" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class provides a &quot;mix-in&quot; for MachineGuardMessage sub-classes to allow them to be held and sent later in time, when the intended destination can no longer be identified. The resulting class can be otherwise treated as the parent class for all intents and purposes, and will behave no differently. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1894">
+        <label>MGM</label>
+      </node>
+      <node id="1893">
+        <label>MessageWithDestination&lt; MGM &gt;</label>
+        <link refid="class_message_with_destination"/>
+        <childnode refid="1894" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1896">
+        <label>MGM</label>
+      </node>
+      <node id="1895">
+        <label>MessageWithDestination&lt; MGM &gt;</label>
+        <link refid="class_message_with_destination"/>
+        <childnode refid="1896" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/bwmachined/message_with_destination.hpp" line="21" column="1" bodyfile="tools/bwmachined/message_with_destination.hpp" bodystart="20" bodyend="86"/>
+    <listofallmembers>
+      <member refid="class_message_with_destination_1aff5e9a19f5f326bc661574c286981fc8" prot="public" virt="non-virtual"><scope>MessageWithDestination</scope><name>connection</name></member>
+      <member refid="class_message_with_destination_1aeb12414111c1e19b655c02517e182f8e" prot="public" virt="non-virtual"><scope>MessageWithDestination</scope><name>MessageWithDestination</name></member>
+      <member refid="class_message_with_destination_1ae3af03bbb15354ba6f7af0ba0122814e" prot="private" virt="non-virtual"><scope>MessageWithDestination</scope><name>packFlags_</name></member>
+      <member refid="class_message_with_destination_1ac02f4d374775f7a5ff909b9c6a16aec9" prot="private" virt="non-virtual"><scope>MessageWithDestination</scope><name>pConnection_</name></member>
+      <member refid="class_message_with_destination_1abc1fbcec0d915023004ab03025d8e14f" prot="public" virt="non-virtual"><scope>MessageWithDestination</scope><name>sendToTarget</name></member>
+      <member refid="class_message_with_destination_1a93968114f2d843e5a8df063e9447c31d" prot="public" virt="non-virtual"><scope>MessageWithDestination</scope><name>target</name></member>
+      <member refid="class_message_with_destination_1a10b6284f6572be335d9d47e97a122190" prot="public" virt="virtual"><scope>MessageWithDestination</scope><name>~MessageWithDestination</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

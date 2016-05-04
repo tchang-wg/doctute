@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_user_map" kind="class" language="C++" prot="public">
+    <compoundname>UserMap</compoundname>
+      <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="class_user_map_1a832f3d88853f6fe91677c25f5886fe98" prot="protected" static="no">
+        <type>BW::map&lt; uint16, UserMessage &gt;</type>
+        <definition>typedef BW::map&lt; uint16, UserMessage &gt; UserMap::Map</definition>
+        <argsstring></argsstring>
+        <name>Map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/usermap.hpp" line="30" column="1" bodyfile="tools/bwmachined/usermap.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_user_map_1aa1d6637a7ef884a213ce5df5d9af4c9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class BWMachined</definition>
+        <argsstring></argsstring>
+        <name>BWMachined</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/usermap.hpp" line="27" column="1" bodyfile="tools/bwmachined/usermap.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_user_map_1a593a9af308f1ca09ac49efca9ccbc5a8" prot="protected" static="no" mutable="no">
+        <type>Map</type>
+        <definition>Map UserMap::map_</definition>
+        <argsstring></argsstring>
+        <name>map_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/usermap.hpp" line="31" column="1" bodyfile="tools/bwmachined/usermap.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_user_map_1a05eef6c0a18cd70fab5b8095b2558a02" prot="protected" static="no" mutable="no">
+        <type>UserMessage</type>
+        <definition>UserMessage UserMap::notfound_</definition>
+        <argsstring></argsstring>
+        <name>notfound_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/usermap.hpp" line="32" column="1" bodyfile="tools/bwmachined/usermap.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_user_map_1a6712bbe3c40c0b0a43c1f57d4e7e4b85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE UserMap::UserMap</definition>
+        <argsstring>()</argsstring>
+        <name>UserMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/usermap.hpp" line="12" column="1" bodyfile="tools/bwmachined/usermap.cpp" bodystart="9" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_map_1a5f82ab8366194d8dfa93499017da3340" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UserMap::add</definition>
+        <argsstring>(const UserMessage &amp;um)</argsstring>
+        <name>add</name>
+        <param>
+          <type>const UserMessage &amp;</type>
+          <declname>um</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds the user message to the cache of users. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/usermap.hpp" line="14" column="1" bodyfile="tools/bwmachined/usermap.cpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_map_1a12bbbe2ccb05c57a29d9172d080ec59c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UserMessage *</type>
+        <definition>UserMessage * UserMap::add</definition>
+        <argsstring>(struct passwd *ent)</argsstring>
+        <name>add</name>
+        <param>
+          <type>struct passwd *</type>
+          <declname>ent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a new user to the known users from a password file entry. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/usermap.hpp" line="19" column="1" bodyfile="tools/bwmachined/usermap.cpp" bodystart="65" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_map_1a56b5cf168ea96fddee04ec271c053e22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserMap::getEnv</definition>
+        <argsstring>(UserMessage &amp;um, bool userAlreadyKnown=false)</argsstring>
+        <name>getEnv</name>
+        <param>
+          <type>UserMessage &amp;</type>
+          <declname>um</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>userAlreadyKnown</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method attempts to find the specified user&apos;s server environment configuration as defined in .bwmachined.conf. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/usermap.hpp" line="22" column="1" bodyfile="tools/bwmachined/usermap.cpp" bodystart="125" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_map_1ac1ba663949cbea2047d220eb4c1e5edc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UserMessage *</type>
+        <definition>UserMessage * UserMap::fetch</definition>
+        <argsstring>(uint16 uid)</argsstring>
+        <name>fetch</name>
+        <param>
+          <type>uint16</type>
+          <declname>uid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method retrieves UserMessage for the specified user id. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/usermap.hpp" line="23" column="1" bodyfile="tools/bwmachined/usermap.cpp" bodystart="90" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_map_1a9022f9b41fae108c73a947bced5d8d1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserMap::setEnv</definition>
+        <argsstring>(const UserMessage &amp;um)</argsstring>
+        <name>setEnv</name>
+        <param>
+          <type>const UserMessage &amp;</type>
+          <declname>um</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/usermap.hpp" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_map_1aae0d40663ca1865c6104dc63e23c6d5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UserMap::flush</definition>
+        <argsstring>()</argsstring>
+        <name>flush</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method updates all user configurations. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/usermap.hpp" line="25" column="1" bodyfile="tools/bwmachined/usermap.cpp" bodystart="190" bodyend="196"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_user_map_1aaced75ecbcef8cb9ca86132d1e4d06be" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UserMap::queryUserConfs</definition>
+        <argsstring>()</argsstring>
+        <name>queryUserConfs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method finds user configurations for all known users on the current host. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/usermap.hpp" line="34" column="1" bodyfile="tools/bwmachined/usermap.cpp" bodystart="21" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tools/bwmachined/usermap.hpp" line="10" column="1" bodyfile="tools/bwmachined/usermap.hpp" bodystart="9" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_user_map_1a5f82ab8366194d8dfa93499017da3340" prot="public" virt="non-virtual"><scope>UserMap</scope><name>add</name></member>
+      <member refid="class_user_map_1a12bbbe2ccb05c57a29d9172d080ec59c" prot="public" virt="non-virtual"><scope>UserMap</scope><name>add</name></member>
+      <member refid="class_user_map_1aa1d6637a7ef884a213ce5df5d9af4c9c" prot="public" virt="non-virtual"><scope>UserMap</scope><name>BWMachined</name></member>
+      <member refid="class_user_map_1ac1ba663949cbea2047d220eb4c1e5edc" prot="public" virt="non-virtual"><scope>UserMap</scope><name>fetch</name></member>
+      <member refid="class_user_map_1aae0d40663ca1865c6104dc63e23c6d5d" prot="public" virt="non-virtual"><scope>UserMap</scope><name>flush</name></member>
+      <member refid="class_user_map_1a56b5cf168ea96fddee04ec271c053e22" prot="public" virt="non-virtual"><scope>UserMap</scope><name>getEnv</name></member>
+      <member refid="class_user_map_1a832f3d88853f6fe91677c25f5886fe98" prot="protected" virt="non-virtual"><scope>UserMap</scope><name>Map</name></member>
+      <member refid="class_user_map_1a593a9af308f1ca09ac49efca9ccbc5a8" prot="protected" virt="non-virtual"><scope>UserMap</scope><name>map_</name></member>
+      <member refid="class_user_map_1a05eef6c0a18cd70fab5b8095b2558a02" prot="protected" virt="non-virtual"><scope>UserMap</scope><name>notfound_</name></member>
+      <member refid="class_user_map_1aaced75ecbcef8cb9ca86132d1e4d06be" prot="protected" virt="non-virtual"><scope>UserMap</scope><name>queryUserConfs</name></member>
+      <member refid="class_user_map_1a9022f9b41fae108c73a947bced5d8d1b" prot="public" virt="non-virtual"><scope>UserMap</scope><name>setEnv</name></member>
+      <member refid="class_user_map_1a6712bbe3c40c0b0a43c1f57d4e7e4b85" prot="public" virt="non-virtual"><scope>UserMap</scope><name>UserMap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

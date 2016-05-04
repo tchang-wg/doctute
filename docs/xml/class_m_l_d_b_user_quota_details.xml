@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_m_l_d_b_user_quota_details" kind="class" language="C++" prot="public">
+    <compoundname>MLDBUserQuotaDetails</compoundname>
+    <basecompoundref refid="class_user_quota_details" prot="public" virt="non-virtual">UserQuotaDetails</basecompoundref>
+    <includes refid="mldb_2user__quota__details_8hpp" local="no">user_quota_details.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_l_d_b_user_quota_details_1abf0352e2b72ff0e436feb95a3f4dbb6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MLDBUserQuotaDetails::MLDBUserQuotaDetails</definition>
+        <argsstring>(uint16 uid)</argsstring>
+        <name>MLDBUserQuotaDetails</name>
+        <param>
+          <type>uint16</type>
+          <declname>uid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/user_quota_details.hpp" line="16" column="1" bodyfile="tools/message_logger/mldb/user_quota_details.hpp" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_l_d_b_user_quota_details_1ad5ccf717827d29c490da1710caa77676" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint32</type>
+        <definition>BW_BEGIN_NAMESPACE uint32 MLDBUserQuotaDetails::addUsage</definition>
+        <argsstring>(uint32 bytes)</argsstring>
+        <name>addUsage</name>
+        <reimplements refid="class_user_quota_details_1aeb9946e0c7a34d853115922f59b15921">addUsage</reimplements>
+        <param>
+          <type>uint32</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add the given number of bytes to the current user&apos;s usage. Does nothing if the policy doesn&apos;t actually track usage.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes that the last record added, including entry, arguments and metadata </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The updated usage in bytes </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/user_quota_details.hpp" line="20" column="1" bodyfile="tools/message_logger/mldb/user_quota_details.cpp" bodystart="16" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_l_d_b_user_quota_details_1a9de3674a8d162b6b6bbdf250a3eb2e50" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint32</type>
+        <definition>uint32 MLDBUserQuotaDetails::removeUsage</definition>
+        <argsstring>(uint32 bytes)</argsstring>
+        <name>removeUsage</name>
+        <reimplements refid="class_user_quota_details_1a735562a8492e8c721eea9481ed05c517">removeUsage</reimplements>
+        <param>
+          <type>uint32</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the given number of bytes from the current user&apos;s usage.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to remove, including entries, arguments and metadata </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The updated usage in bytes </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/user_quota_details.hpp" line="22" column="1" bodyfile="tools/message_logger/mldb/user_quota_details.cpp" bodystart="33" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>MLDB-specific implementation of the user quota system </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1911">
+        <label>MLDBUserQuotaDetails</label>
+        <link refid="class_m_l_d_b_user_quota_details"/>
+        <childnode refid="1912" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1912">
+        <label>UserQuotaDetails</label>
+        <link refid="class_user_quota_details"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1913">
+        <label>MLDBUserQuotaDetails</label>
+        <link refid="class_m_l_d_b_user_quota_details"/>
+        <childnode refid="1914" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1914">
+        <label>UserQuotaDetails</label>
+        <link refid="class_user_quota_details"/>
+      </node>
+    </collaborationgraph>
+    <location file="tools/message_logger/mldb/user_quota_details.hpp" line="14" column="1" bodyfile="tools/message_logger/mldb/user_quota_details.hpp" bodystart="13" bodyend="24"/>
+    <listofallmembers>
+      <member refid="class_m_l_d_b_user_quota_details_1ad5ccf717827d29c490da1710caa77676" prot="public" virt="virtual"><scope>MLDBUserQuotaDetails</scope><name>addUsage</name></member>
+      <member refid="class_user_quota_details_1a198f1896552da11490fce510cdacff6e" prot="public" virt="non-virtual"><scope>MLDBUserQuotaDetails</scope><name>canAddEntries</name></member>
+      <member refid="class_user_quota_details_1a4a0167c83cf3965f9208d0144315d8c6" prot="protected" virt="non-virtual"><scope>MLDBUserQuotaDetails</scope><name>configured_</name></member>
+      <member refid="class_user_quota_details_1a6c48e02205284b95b059813de587df38" prot="protected" virt="non-virtual"><scope>MLDBUserQuotaDetails</scope><name>currentUsageBytes_</name></member>
+      <member refid="class_user_quota_details_1a16d7d20f01dfd01c54b796e91c6210ee" prot="public" virt="non-virtual"><scope>MLDBUserQuotaDetails</scope><name>getPolicyType</name></member>
+      <member refid="class_user_quota_details_1a6f348b6b0a130cd1185ead5d3137e5da" prot="public" virt="non-virtual"><scope>MLDBUserQuotaDetails</scope><name>getUsage</name></member>
+      <member refid="class_user_quota_details_1a4cf4b20a210827b1794b4ad739299c45" prot="public" virt="virtual"><scope>MLDBUserQuotaDetails</scope><name>init</name></member>
+      <member refid="class_m_l_d_b_user_quota_details_1abf0352e2b72ff0e436feb95a3f4dbb6f" prot="public" virt="non-virtual"><scope>MLDBUserQuotaDetails</scope><name>MLDBUserQuotaDetails</name></member>
+      <member refid="class_user_quota_details_1a380fb37967410b205e337b94a819c996" prot="protected" virt="non-virtual"><scope>MLDBUserQuotaDetails</scope><name>pPolicy_</name></member>
+      <member refid="class_m_l_d_b_user_quota_details_1a9de3674a8d162b6b6bbdf250a3eb2e50" prot="public" virt="virtual"><scope>MLDBUserQuotaDetails</scope><name>removeUsage</name></member>
+      <member refid="class_user_quota_details_1a62c79d10506419e5cff628bc91baf602" prot="public" virt="non-virtual"><scope>MLDBUserQuotaDetails</scope><name>shouldDeleteOldData</name></member>
+      <member refid="class_user_quota_details_1ab45a9c86e6d154e1bedc0d0448e211d4" prot="protected" virt="non-virtual"><scope>MLDBUserQuotaDetails</scope><name>uid_</name></member>
+      <member refid="class_user_quota_details_1a0765828816e2440099eae07574bf2746" prot="public" virt="non-virtual"><scope>MLDBUserQuotaDetails</scope><name>UserQuotaDetails</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_script_callback_adaptor" kind="class" language="C++" prot="public">
+    <compoundname>ScriptCallbackAdaptor</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDatabaseReplyWaiter&lt; STREAM_HELPER &gt;</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename STREAM_HELPER</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_script_callback_adaptor_1a3c01646c8d743b9ec0b6801b5fc72887" prot="public" static="no">
+        <type>STREAM_HELPER</type>
+        <definition>typedef STREAM_HELPER ScriptCallbackAdaptor&lt; STREAM_HELPER &gt;::StreamHelper</definition>
+        <argsstring></argsstring>
+        <name>StreamHelper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/script_bigworld.cpp" line="89" column="1" bodyfile="baseapp/script_bigworld.cpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_script_callback_adaptor_1a18c883af3173ca20752813264f1459d5" prot="public" static="no">
+        <type>IDatabaseReplyWaiter&lt; StreamHelper &gt;</type>
+        <definition>typedef IDatabaseReplyWaiter&lt; StreamHelper &gt; ScriptCallbackAdaptor&lt; STREAM_HELPER &gt;::ReplyWaiter</definition>
+        <argsstring></argsstring>
+        <name>ReplyWaiter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/script_bigworld.cpp" line="90" column="1" bodyfile="baseapp/script_bigworld.cpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_script_callback_adaptor_1aef4f2c75435e2a65fba0f15347c22145" prot="public" static="no">
+        <type><ref refid="struct_script_callback_adaptor_helper" kindref="compound">ScriptCallbackAdaptorHelper</ref>&lt; StreamHelper &gt;</type>
+        <definition>typedef ScriptCallbackAdaptorHelper&lt; StreamHelper &gt; ScriptCallbackAdaptor&lt; STREAM_HELPER &gt;::AdaptorHelper</definition>
+        <argsstring></argsstring>
+        <name>AdaptorHelper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/script_bigworld.cpp" line="91" column="1" bodyfile="baseapp/script_bigworld.cpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_script_callback_adaptor_1a8369b21785cc8ad39d4366e015d60152" prot="private" static="no">
+        <type>StreamHelper::Request</type>
+        <definition>typedef StreamHelper::Request ScriptCallbackAdaptor&lt; STREAM_HELPER &gt;::Request</definition>
+        <argsstring></argsstring>
+        <name>Request</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/script_bigworld.cpp" line="106" column="1" bodyfile="baseapp/script_bigworld.cpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_script_callback_adaptor_1aed4eb17ae72f37b48e4dd868ebcaa0d3" prot="private" static="no">
+        <type>StreamHelper::Reply</type>
+        <definition>typedef StreamHelper::Reply ScriptCallbackAdaptor&lt; STREAM_HELPER &gt;::Reply</definition>
+        <argsstring></argsstring>
+        <name>Reply</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/script_bigworld.cpp" line="107" column="1" bodyfile="baseapp/script_bigworld.cpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_script_callback_adaptor_1af0461799267624e5233b95153618c68f" prot="private" static="no" mutable="no">
+        <type>ScriptObject</type>
+        <definition>ScriptObject ScriptCallbackAdaptor&lt; STREAM_HELPER &gt;::callback_</definition>
+        <argsstring></argsstring>
+        <name>callback_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/script_bigworld.cpp" line="150" column="1" bodyfile="baseapp/script_bigworld.cpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_script_callback_adaptor_1aade9d09c71ea0586dae4641cf189c6f6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ReplyWaiter &amp;</type>
+        <definition>static ReplyWaiter&amp; ScriptCallbackAdaptor&lt; STREAM_HELPER &gt;::wrap</definition>
+        <argsstring>(const ScriptObject &amp;callback)</argsstring>
+        <name>wrap</name>
+        <param>
+          <type>const ScriptObject &amp;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method wraps the given script callable into a reply waiter object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The script callback. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/script_bigworld.cpp" line="98" column="1" bodyfile="baseapp/script_bigworld.cpp" bodystart="98" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_script_callback_adaptor_1af0fe64a81b789c18b977da6b18005dfb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScriptCallbackAdaptor&lt; STREAM_HELPER &gt;::ScriptCallbackAdaptor</definition>
+        <argsstring>(const ScriptObject &amp;callback)</argsstring>
+        <name>ScriptCallbackAdaptor</name>
+        <param>
+          <type>const ScriptObject &amp;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The script callback. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/script_bigworld.cpp" line="114" column="1" bodyfile="baseapp/script_bigworld.cpp" bodystart="114" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_script_callback_adaptor_1a8c01a71e3191aa0c393cad3d7d196c23" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScriptCallbackAdaptor&lt; STREAM_HELPER &gt;::onReply</definition>
+        <argsstring>(const Request &amp;request, const Reply &amp;reply)</argsstring>
+        <name>onReply</name>
+        <param>
+          <type>const Request &amp;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>const Reply &amp;</type>
+          <declname>reply</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/script_bigworld.cpp" line="120" column="1" bodyfile="baseapp/script_bigworld.cpp" bodystart="120" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="class_script_callback_adaptor_1ab436d1ae26a8c31b26dbc1abcb789748" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScriptCallbackAdaptor&lt; STREAM_HELPER &gt;::onShutDown</definition>
+        <argsstring>(const Request &amp;request)</argsstring>
+        <name>onShutDown</name>
+        <param>
+          <type>const Request &amp;</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/script_bigworld.cpp" line="133" column="1" bodyfile="baseapp/script_bigworld.cpp" bodystart="133" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_script_callback_adaptor_1a01cf873b74577599bfedd5879d2113c2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScriptCallbackAdaptor&lt; STREAM_HELPER &gt;::onNetworkFailure</definition>
+        <argsstring>(const Request &amp;request)</argsstring>
+        <name>onNetworkFailure</name>
+        <param>
+          <type>const Request &amp;</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/script_bigworld.cpp" line="142" column="1" bodyfile="baseapp/script_bigworld.cpp" bodystart="142" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to wrap a script callback to look like a IDatabaseReplyWaiter used with DatabaseGateway. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2555">
+        <label>ScriptCallbackAdaptor&lt; STREAM_HELPER &gt;</label>
+        <link refid="class_script_callback_adaptor"/>
+        <childnode refid="2556" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2556">
+        <label>IDatabaseReplyWaiter&lt; STREAM_HELPER &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2557">
+        <label>ScriptCallbackAdaptor&lt; STREAM_HELPER &gt;</label>
+        <link refid="class_script_callback_adaptor"/>
+        <childnode refid="2558" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2558">
+        <label>IDatabaseReplyWaiter&lt; STREAM_HELPER &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/script_bigworld.cpp" line="87" column="1" bodyfile="baseapp/script_bigworld.cpp" bodystart="85" bodyend="151"/>
+    <listofallmembers>
+      <member refid="class_script_callback_adaptor_1aef4f2c75435e2a65fba0f15347c22145" prot="public" virt="non-virtual"><scope>ScriptCallbackAdaptor</scope><name>AdaptorHelper</name></member>
+      <member refid="class_script_callback_adaptor_1af0461799267624e5233b95153618c68f" prot="private" virt="non-virtual"><scope>ScriptCallbackAdaptor</scope><name>callback_</name></member>
+      <member refid="class_script_callback_adaptor_1a01cf873b74577599bfedd5879d2113c2" prot="private" virt="non-virtual"><scope>ScriptCallbackAdaptor</scope><name>onNetworkFailure</name></member>
+      <member refid="class_script_callback_adaptor_1a8c01a71e3191aa0c393cad3d7d196c23" prot="private" virt="non-virtual"><scope>ScriptCallbackAdaptor</scope><name>onReply</name></member>
+      <member refid="class_script_callback_adaptor_1ab436d1ae26a8c31b26dbc1abcb789748" prot="private" virt="non-virtual"><scope>ScriptCallbackAdaptor</scope><name>onShutDown</name></member>
+      <member refid="class_script_callback_adaptor_1aed4eb17ae72f37b48e4dd868ebcaa0d3" prot="private" virt="non-virtual"><scope>ScriptCallbackAdaptor</scope><name>Reply</name></member>
+      <member refid="class_script_callback_adaptor_1a18c883af3173ca20752813264f1459d5" prot="public" virt="non-virtual"><scope>ScriptCallbackAdaptor</scope><name>ReplyWaiter</name></member>
+      <member refid="class_script_callback_adaptor_1a8369b21785cc8ad39d4366e015d60152" prot="private" virt="non-virtual"><scope>ScriptCallbackAdaptor</scope><name>Request</name></member>
+      <member refid="class_script_callback_adaptor_1af0fe64a81b789c18b977da6b18005dfb" prot="private" virt="non-virtual"><scope>ScriptCallbackAdaptor</scope><name>ScriptCallbackAdaptor</name></member>
+      <member refid="class_script_callback_adaptor_1a3c01646c8d743b9ec0b6801b5fc72887" prot="public" virt="non-virtual"><scope>ScriptCallbackAdaptor</scope><name>StreamHelper</name></member>
+      <member refid="class_script_callback_adaptor_1aade9d09c71ea0586dae4641cf189c6f6" prot="public" virt="non-virtual"><scope>ScriptCallbackAdaptor</scope><name>wrap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

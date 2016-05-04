@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_async_controlled_shut_down_handler" kind="class" language="C++" prot="public">
+    <compoundname>AsyncControlledShutDownHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ShutdownSafeReplyMessageHandler</basecompoundref>
+    <includes refid="reply__handlers_8hpp" local="no">reply_handlers.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_async_controlled_shut_down_handler_1ad87412cfd7decc39ebfca2673f042b58" prot="private" static="no" mutable="no">
+        <type>ShutDownStage</type>
+        <definition>ShutDownStage AsyncControlledShutDownHandler::stage_</definition>
+        <argsstring></argsstring>
+        <name>stage_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="115" column="1" bodyfile="baseappmgr/reply_handlers.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_async_controlled_shut_down_handler_1adaede6127f9bdf4679bdcfbea64b03e3" prot="private" static="no" mutable="no">
+        <type>BW::vector&lt; Mercury::Address &gt;</type>
+        <definition>BW::vector&lt; Mercury::Address &gt; AsyncControlledShutDownHandler::addrs_</definition>
+        <argsstring></argsstring>
+        <name>addrs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="116" column="1" bodyfile="baseappmgr/reply_handlers.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_async_controlled_shut_down_handler_1aeac7b50ebd598e0752455eff45e74bed" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AsyncControlledShutDownHandler::numToSend_</definition>
+        <argsstring></argsstring>
+        <name>numToSend_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="117" column="1" bodyfile="baseappmgr/reply_handlers.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_async_controlled_shut_down_handler_1a0a94f0189d012aff803461f9cb51859e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AsyncControlledShutDownHandler::AsyncControlledShutDownHandler</definition>
+        <argsstring>(ShutDownStage stage, BW::vector&lt; Mercury::Address &gt; &amp;addrs)</argsstring>
+        <name>AsyncControlledShutDownHandler</name>
+        <param>
+          <type>ShutDownStage</type>
+          <declname>stage</declname>
+        </param>
+        <param>
+          <type>BW::vector&lt; Mercury::Address &gt; &amp;</type>
+          <declname>addrs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="102" column="1" bodyfile="baseappmgr/reply_handlers.cpp" bodystart="254" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="class_async_controlled_shut_down_handler_1a1021ddd7338d0d07f943407d81377d7a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual AsyncControlledShutDownHandler::~AsyncControlledShutDownHandler</definition>
+        <argsstring>()</argsstring>
+        <name>~AsyncControlledShutDownHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="104" column="1" bodyfile="baseappmgr/reply_handlers.hpp" bodystart="104" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_async_controlled_shut_down_handler_1a817dad5c245565828e679c50557758ba" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AsyncControlledShutDownHandler::handleMessage</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data, void *)</argsstring>
+        <name>handleMessage</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles the reply message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="107" column="1" bodyfile="baseappmgr/reply_handlers.cpp" bodystart="267" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="class_async_controlled_shut_down_handler_1a8a5f0bd813211c6312524e543cfa63dd" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AsyncControlledShutDownHandler::handleException</definition>
+        <argsstring>(const Mercury::NubException &amp;ne, void *)</argsstring>
+        <name>handleException</name>
+        <param>
+          <type>const Mercury::NubException &amp;</type>
+          <declname>ne</declname>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles an exception to the request. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="111" column="1" bodyfile="baseappmgr/reply_handlers.cpp" bodystart="289" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="class_async_controlled_shut_down_handler_1a05d64df74d12543889ea0f525f02ea08" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AsyncControlledShutDownHandler::sendNext</definition>
+        <argsstring>()</argsstring>
+        <name>sendNext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends the next shutdown request. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="113" column="1" bodyfile="baseappmgr/reply_handlers.cpp" bodystart="301" bodyend="363"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to handle the controlled shutdown stage that is sent to all BaseApps sequentially. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="117">
+        <label>ShutdownSafeReplyMessageHandler</label>
+      </node>
+      <node id="116">
+        <label>AsyncControlledShutDownHandler</label>
+        <link refid="class_async_controlled_shut_down_handler"/>
+        <childnode refid="117" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="119">
+        <label>ShutdownSafeReplyMessageHandler</label>
+      </node>
+      <node id="118">
+        <label>AsyncControlledShutDownHandler</label>
+        <link refid="class_async_controlled_shut_down_handler"/>
+        <childnode refid="119" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="baseappmgr/reply_handlers.hpp" line="100" column="1" bodyfile="baseappmgr/reply_handlers.hpp" bodystart="98" bodyend="118"/>
+    <listofallmembers>
+      <member refid="class_async_controlled_shut_down_handler_1adaede6127f9bdf4679bdcfbea64b03e3" prot="private" virt="non-virtual"><scope>AsyncControlledShutDownHandler</scope><name>addrs_</name></member>
+      <member refid="class_async_controlled_shut_down_handler_1a0a94f0189d012aff803461f9cb51859e" prot="public" virt="non-virtual"><scope>AsyncControlledShutDownHandler</scope><name>AsyncControlledShutDownHandler</name></member>
+      <member refid="class_async_controlled_shut_down_handler_1a8a5f0bd813211c6312524e543cfa63dd" prot="private" virt="virtual"><scope>AsyncControlledShutDownHandler</scope><name>handleException</name></member>
+      <member refid="class_async_controlled_shut_down_handler_1a817dad5c245565828e679c50557758ba" prot="private" virt="virtual"><scope>AsyncControlledShutDownHandler</scope><name>handleMessage</name></member>
+      <member refid="class_async_controlled_shut_down_handler_1aeac7b50ebd598e0752455eff45e74bed" prot="private" virt="non-virtual"><scope>AsyncControlledShutDownHandler</scope><name>numToSend_</name></member>
+      <member refid="class_async_controlled_shut_down_handler_1a05d64df74d12543889ea0f525f02ea08" prot="private" virt="non-virtual"><scope>AsyncControlledShutDownHandler</scope><name>sendNext</name></member>
+      <member refid="class_async_controlled_shut_down_handler_1ad87412cfd7decc39ebfca2673f042b58" prot="private" virt="non-virtual"><scope>AsyncControlledShutDownHandler</scope><name>stage_</name></member>
+      <member refid="class_async_controlled_shut_down_handler_1a1021ddd7338d0d07f943407d81377d7a" prot="public" virt="virtual"><scope>AsyncControlledShutDownHandler</scope><name>~AsyncControlledShutDownHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

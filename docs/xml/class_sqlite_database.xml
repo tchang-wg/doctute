@@ -1,0 +1,526 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_sqlite_database" kind="class" language="C++" prot="public">
+    <compoundname>SqliteDatabase</compoundname>
+    <includes refid="sqlite__database_8hpp" local="no">sqlite_database.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sqlite_database_1a6b6fd57e8d69c65c5e4797c62ceac00a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SqliteDatabase::isRegistered_</definition>
+        <argsstring></argsstring>
+        <name>isRegistered_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="133" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sqlite_database_1a6bf123c6eefa915e921d62e376bd43a3" prot="private" static="no" mutable="no">
+        <type>sqlite3 *</type>
+        <definition>sqlite3* SqliteDatabase::pCon_</definition>
+        <argsstring></argsstring>
+        <name>pCon_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="135" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sqlite_database_1ac9822c38980fda3e47414308447e0390" prot="private" static="no" mutable="no">
+        <type>const BW::string</type>
+        <definition>const BW::string SqliteDatabase::path_</definition>
+        <argsstring></argsstring>
+        <name>path_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="137" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sqlite_database_1a6d01b62e985539d674e53e50678f852a" prot="private" static="no" mutable="no">
+        <type>const BW::string *</type>
+        <definition>const BW::string* SqliteDatabase::pCurrTable_</definition>
+        <argsstring></argsstring>
+        <name>pCurrTable_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="139" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sqlite_database_1ad4642efe8bbf471dde6bc3a24b0a43df" prot="private" static="no" mutable="no">
+        <type><ref refid="class_transaction_pool" kindref="compound">TransactionPool</ref></type>
+        <definition>TransactionPool SqliteDatabase::transPool_</definition>
+        <argsstring></argsstring>
+        <name>transPool_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="141" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sqlite_database_1a83e0bb2c010678eecd54d0fa32fa7cb0" prot="private" static="no" mutable="no">
+        <type><ref refid="class_transaction" kindref="compound">Transaction</ref> *</type>
+        <definition>Transaction* SqliteDatabase::pTrans_</definition>
+        <argsstring></argsstring>
+        <name>pTrans_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="142" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sqlite_database_1a014bd2670a52f5787fc0b60de1242709" prot="private" static="no" mutable="no">
+        <type>TaskManager</type>
+        <definition>TaskManager SqliteDatabase::taskMgr_</definition>
+        <argsstring></argsstring>
+        <name>taskMgr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="144" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sqlite_database_1a680741e1399447380d44b0425cca2db6" prot="private" static="no" mutable="no">
+        <type>const BW::string</type>
+        <definition>const BW::string SqliteDatabase::flipTable_</definition>
+        <argsstring></argsstring>
+        <name>flipTable_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="146" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sqlite_database_1a7b90ac018a30249fb109e5a97654e96f" prot="private" static="no" mutable="no">
+        <type>const BW::string</type>
+        <definition>const BW::string SqliteDatabase::flopTable_</definition>
+        <argsstring></argsstring>
+        <name>flopTable_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="147" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sqlite_database_1a5bd9481eea0bad30dc48939d10ba9f45" prot="private" static="no" mutable="no">
+        <type>const BW::string</type>
+        <definition>const BW::string SqliteDatabase::dbIDColumn_</definition>
+        <argsstring></argsstring>
+        <name>dbIDColumn_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="148" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sqlite_database_1ac9ab8c90938191d1139b692a4fcd56b5" prot="private" static="no" mutable="no">
+        <type>const BW::string</type>
+        <definition>const BW::string SqliteDatabase::typeIDColumn_</definition>
+        <argsstring></argsstring>
+        <name>typeIDColumn_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="149" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sqlite_database_1a86a962fff5b3b4284d61bd38614b5e67" prot="private" static="no" mutable="no">
+        <type>const BW::string</type>
+        <definition>const BW::string SqliteDatabase::timeColumn_</definition>
+        <argsstring></argsstring>
+        <name>timeColumn_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="150" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sqlite_database_1a2b074b15b80b0fe7c73764eb0a9db6a4" prot="private" static="no" mutable="no">
+        <type>const BW::string</type>
+        <definition>const BW::string SqliteDatabase::blobColumn_</definition>
+        <argsstring></argsstring>
+        <name>blobColumn_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="151" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sqlite_database_1a8a79c5f03f15a1f6ec9e9134099de40d" prot="private" static="no" mutable="no">
+        <type>const BW::string</type>
+        <definition>const BW::string SqliteDatabase::checksumTable_</definition>
+        <argsstring></argsstring>
+        <name>checksumTable_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="152" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sqlite_database_1a0370556c30c9f1a5b2bc109d538d01c0" prot="private" static="no" mutable="no">
+        <type>const BW::string</type>
+        <definition>const BW::string SqliteDatabase::checksumColumn_</definition>
+        <argsstring></argsstring>
+        <name>checksumColumn_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="153" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sqlite_database_1a194d94f4503329938a1fa83eea263e65" prot="private" static="no" mutable="no">
+        <type>const BW::string</type>
+        <definition>const BW::string SqliteDatabase::cpCmd_</definition>
+        <argsstring></argsstring>
+        <name>cpCmd_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="155" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sqlite_database_1a781b1cc40a6d54ed6a4fd51998904564" prot="private" static="no" mutable="no">
+        <type>const BW::string</type>
+        <definition>const BW::string SqliteDatabase::rmCmd_</definition>
+        <argsstring></argsstring>
+        <name>rmCmd_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="156" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sqlite_database_1ad06fa2b3ec6e4c6beccd56c924e8aece" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SqliteDatabase::SqliteDatabase</definition>
+        <argsstring>(const BW::string &amp;filename, const BW::string &amp;dir)</argsstring>
+        <name>SqliteDatabase</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="105" column="1" bodyfile="baseapp/sqlite_database.cpp" bodystart="322" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sqlite_database_1a3226ec058994b2b134ac5448bd534f1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SqliteDatabase::~SqliteDatabase</definition>
+        <argsstring>()</argsstring>
+        <name>~SqliteDatabase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="106" column="1" bodyfile="baseapp/sqlite_database.cpp" bodystart="426" bodyend="452"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sqlite_database_1a8d302c75df1c0302293bf1051bc9c95c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SqliteDatabase::init</definition>
+        <argsstring>(const BW::string &amp;checksum)</argsstring>
+        <name>init</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>checksum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method initialises this object.</para><para><simplesect kind="return"><para>True on success, otherwise false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="108" column="1" bodyfile="baseapp/sqlite_database.cpp" bodystart="346" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sqlite_database_1aed1364d6f5f0434bb8b4f749a343a6a1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const BW::string &amp;</type>
+        <definition>const BW::string&amp; SqliteDatabase::dbFilePath</definition>
+        <argsstring>() const </argsstring>
+        <name>dbFilePath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="110" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sqlite_database_1a4a0c07abae78ec4d58bc417741415481" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SqliteDatabase::writeToDB</definition>
+        <argsstring>(DatabaseID dbID, EntityTypeID typeID, GameTime time, MemoryOStream &amp;stream, ISqliteDatabaseWriteCallback &amp;callback) const </argsstring>
+        <name>writeToDB</name>
+        <param>
+          <type>DatabaseID</type>
+          <declname>dbID</declname>
+        </param>
+        <param>
+          <type>EntityTypeID</type>
+          <declname>typeID</declname>
+        </param>
+        <param>
+          <type>GameTime</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>MemoryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type><ref refid="class_i_sqlite_database_write_callback" kindref="compound">ISqliteDatabaseWriteCallback</ref> &amp;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds an entity as a row to the current transaction. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="112" column="1" bodyfile="baseapp/sqlite_database.cpp" bodystart="458" bodyend="464"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sqlite_database_1a4962d6fb9ff0ada1ff5794414cc00b3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SqliteDatabase::commit</definition>
+        <argsstring>(bool shouldFlip=false)</argsstring>
+        <name>commit</name>
+        <param>
+          <type>bool</type>
+          <declname>shouldFlip</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method starts the commit sequence. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="115" column="1" bodyfile="baseapp/sqlite_database.cpp" bodystart="470" bodyend="482"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sqlite_database_1a0b18943dd12ba449fc2cadc70ad639a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SqliteDatabase::commitBgTask</definition>
+        <argsstring>(Transaction *pTrans, bool shouldFlip)</argsstring>
+        <name>commitBgTask</name>
+        <param>
+          <type><ref refid="class_transaction" kindref="compound">Transaction</ref> *</type>
+          <declname>pTrans</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>shouldFlip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method commits a transaction. This should be called from a background task. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="116" column="1" bodyfile="baseapp/sqlite_database.cpp" bodystart="489" bodyend="500"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sqlite_database_1a07a833edae0f7b47c31cc1053868df8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SqliteDatabase::commitFgTask</definition>
+        <argsstring>(Transaction *pTrans)</argsstring>
+        <name>commitFgTask</name>
+        <param>
+          <type><ref refid="class_transaction" kindref="compound">Transaction</ref> *</type>
+          <declname>pTrans</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method ends the commit sequence by replying to the <ref refid="class_sqlite_database_1a4a0c07abae78ec4d58bc417741415481" kindref="member">writeToDB()</ref> calls. This should be called from a foreground task. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="117" column="1" bodyfile="baseapp/sqlite_database.cpp" bodystart="507" bodyend="512"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sqlite_database_1a4481a64e7542ed37fa87d7ae455b87b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SqliteDatabase::isRegistered</definition>
+        <argsstring>(bool flag)</argsstring>
+        <name>isRegistered</name>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="119" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="119" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sqlite_database_1a12698a15c74fdc26fd04533c19c16d96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SqliteDatabase::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method relays the tick to TaskMgr. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="121" column="1" bodyfile="baseapp/sqlite_database.cpp" bodystart="518" bodyend="521"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sqlite_database_1a70dd78c31e7a491241f0d4b452501182" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SqliteDatabase::open</definition>
+        <argsstring>()</argsstring>
+        <name>open</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method opens a database file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="124" column="1" bodyfile="baseapp/sqlite_database.cpp" bodystart="527" bodyend="542"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sqlite_database_1aec0426b37177330c85d66bae3c19d249" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SqliteDatabase::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method closes the database file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="125" column="1" bodyfile="baseapp/sqlite_database.cpp" bodystart="548" bodyend="557"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sqlite_database_1a80197c3931644e14110f22d80d823441" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SqliteDatabase::writeChecksumTable</definition>
+        <argsstring>(const BW::string &amp;checksum) const </argsstring>
+        <name>writeChecksumTable</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>checksum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method writes the checksum table. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="127" column="1" bodyfile="baseapp/sqlite_database.cpp" bodystart="563" bodyend="587"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sqlite_database_1a3df13f506bdd07bd91fd3390ed4f5ea0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SqliteDatabase::flipTable</definition>
+        <argsstring>()</argsstring>
+        <name>flipTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method flip flops across the two tables. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="129" column="1" bodyfile="baseapp/sqlite_database.cpp" bodystart="593" bodyend="608"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sqlite_database_1affaa6f5b6199c40a0a9ad048fa8ce62e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SqliteDatabase::checkFileSystemDevice</definition>
+        <argsstring>()</argsstring>
+        <name>checkFileSystemDevice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns true if the database is located on a filesystem that is supported, false otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="131" column="1" bodyfile="baseapp/sqlite_database.cpp" bodystart="390" bodyend="420"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is an interface to a SQLite databases. </para>    </detaileddescription>
+    <location file="baseapp/sqlite_database.hpp" line="103" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="102" bodyend="157"/>
+    <listofallmembers>
+      <member refid="class_sqlite_database_1a2b074b15b80b0fe7c73764eb0a9db6a4" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>blobColumn_</name></member>
+      <member refid="class_sqlite_database_1affaa6f5b6199c40a0a9ad048fa8ce62e" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>checkFileSystemDevice</name></member>
+      <member refid="class_sqlite_database_1a0370556c30c9f1a5b2bc109d538d01c0" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>checksumColumn_</name></member>
+      <member refid="class_sqlite_database_1a8a79c5f03f15a1f6ec9e9134099de40d" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>checksumTable_</name></member>
+      <member refid="class_sqlite_database_1aec0426b37177330c85d66bae3c19d249" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>close</name></member>
+      <member refid="class_sqlite_database_1a4962d6fb9ff0ada1ff5794414cc00b3e" prot="public" virt="non-virtual"><scope>SqliteDatabase</scope><name>commit</name></member>
+      <member refid="class_sqlite_database_1a0b18943dd12ba449fc2cadc70ad639a2" prot="public" virt="non-virtual"><scope>SqliteDatabase</scope><name>commitBgTask</name></member>
+      <member refid="class_sqlite_database_1a07a833edae0f7b47c31cc1053868df8f" prot="public" virt="non-virtual"><scope>SqliteDatabase</scope><name>commitFgTask</name></member>
+      <member refid="class_sqlite_database_1a194d94f4503329938a1fa83eea263e65" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>cpCmd_</name></member>
+      <member refid="class_sqlite_database_1aed1364d6f5f0434bb8b4f749a343a6a1" prot="public" virt="non-virtual"><scope>SqliteDatabase</scope><name>dbFilePath</name></member>
+      <member refid="class_sqlite_database_1a5bd9481eea0bad30dc48939d10ba9f45" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>dbIDColumn_</name></member>
+      <member refid="class_sqlite_database_1a3df13f506bdd07bd91fd3390ed4f5ea0" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>flipTable</name></member>
+      <member refid="class_sqlite_database_1a680741e1399447380d44b0425cca2db6" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>flipTable_</name></member>
+      <member refid="class_sqlite_database_1a7b90ac018a30249fb109e5a97654e96f" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>flopTable_</name></member>
+      <member refid="class_sqlite_database_1a8d302c75df1c0302293bf1051bc9c95c" prot="public" virt="non-virtual"><scope>SqliteDatabase</scope><name>init</name></member>
+      <member refid="class_sqlite_database_1a4481a64e7542ed37fa87d7ae455b87b8" prot="public" virt="non-virtual"><scope>SqliteDatabase</scope><name>isRegistered</name></member>
+      <member refid="class_sqlite_database_1a6b6fd57e8d69c65c5e4797c62ceac00a" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>isRegistered_</name></member>
+      <member refid="class_sqlite_database_1a70dd78c31e7a491241f0d4b452501182" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>open</name></member>
+      <member refid="class_sqlite_database_1ac9822c38980fda3e47414308447e0390" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>path_</name></member>
+      <member refid="class_sqlite_database_1a6bf123c6eefa915e921d62e376bd43a3" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>pCon_</name></member>
+      <member refid="class_sqlite_database_1a6d01b62e985539d674e53e50678f852a" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>pCurrTable_</name></member>
+      <member refid="class_sqlite_database_1a83e0bb2c010678eecd54d0fa32fa7cb0" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>pTrans_</name></member>
+      <member refid="class_sqlite_database_1a781b1cc40a6d54ed6a4fd51998904564" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>rmCmd_</name></member>
+      <member refid="class_sqlite_database_1ad06fa2b3ec6e4c6beccd56c924e8aece" prot="public" virt="non-virtual"><scope>SqliteDatabase</scope><name>SqliteDatabase</name></member>
+      <member refid="class_sqlite_database_1a014bd2670a52f5787fc0b60de1242709" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>taskMgr_</name></member>
+      <member refid="class_sqlite_database_1a12698a15c74fdc26fd04533c19c16d96" prot="public" virt="non-virtual"><scope>SqliteDatabase</scope><name>tick</name></member>
+      <member refid="class_sqlite_database_1a86a962fff5b3b4284d61bd38614b5e67" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>timeColumn_</name></member>
+      <member refid="class_sqlite_database_1ad4642efe8bbf471dde6bc3a24b0a43df" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>transPool_</name></member>
+      <member refid="class_sqlite_database_1ac9ab8c90938191d1139b692a4fcd56b5" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>typeIDColumn_</name></member>
+      <member refid="class_sqlite_database_1a80197c3931644e14110f22d80d823441" prot="private" virt="non-virtual"><scope>SqliteDatabase</scope><name>writeChecksumTable</name></member>
+      <member refid="class_sqlite_database_1a4a0c07abae78ec4d58bc417741415481" prot="public" virt="non-virtual"><scope>SqliteDatabase</scope><name>writeToDB</name></member>
+      <member refid="class_sqlite_database_1a3226ec058994b2b134ac5448bd534f1d" prot="public" virt="non-virtual"><scope>SqliteDatabase</scope><name>~SqliteDatabase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

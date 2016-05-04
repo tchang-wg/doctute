@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_hostnames_validator_m_l_d_b" kind="class" language="C++" prot="public">
+    <compoundname>HostnamesValidatorMLDB</compoundname>
+    <basecompoundref refid="class_text_file_handler" prot="public" virt="non-virtual">TextFileHandler</basecompoundref>
+    <basecompoundref refid="class_hostnames_validator" prot="public" virt="non-virtual">HostnamesValidator</basecompoundref>
+    <includes refid="mldb_2hostnames__validator_8hpp" local="no">hostnames_validator.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_hostnames_validator_m_l_d_b_1a6801af43c530c841416d73f4b31e6320" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string HostnamesValidatorMLDB::tempDirPath_</definition>
+        <argsstring></argsstring>
+        <name>tempDirPath_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/hostnames_validator.hpp" line="41" column="1" bodyfile="tools/message_logger/mldb/hostnames_validator.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_hostnames_validator_m_l_d_b_1a357bb69ffe803ef8c00d814665e1e02f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE HostnamesValidatorMLDB::HostnamesValidatorMLDB</definition>
+        <argsstring>()</argsstring>
+        <name>HostnamesValidatorMLDB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/hostnames_validator.hpp" line="22" column="1" bodyfile="tools/message_logger/mldb/hostnames_validator.cpp" bodystart="23" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hostnames_validator_m_l_d_b_1a9ca588ac17b7e5cc2500d5438e89c29d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HostnamesValidatorMLDB::~HostnamesValidatorMLDB</definition>
+        <argsstring>()</argsstring>
+        <name>~HostnamesValidatorMLDB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/hostnames_validator.hpp" line="24" column="1" bodyfile="tools/message_logger/mldb/hostnames_validator.cpp" bodystart="31" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hostnames_validator_m_l_d_b_1aea9707810ab1edbd422e29cf958e1643" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HostnamesValidatorMLDB::init</definition>
+        <argsstring>(const char *logLocation)</argsstring>
+        <name>init</name>
+        <param>
+          <type>const char *</type>
+          <declname>logLocation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method generates a hostnames filename within a temporary path.</para><para><simplesect kind="return"><para>true on success, false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/hostnames_validator.hpp" line="26" column="1" bodyfile="tools/message_logger/mldb/hostnames_validator.cpp" bodystart="73" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hostnames_validator_m_l_d_b_1af8852348079b7412c5ea5a967e6c2477" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool HostnamesValidatorMLDB::handleLine</definition>
+        <argsstring>(const char *line)</argsstring>
+        <name>handleLine</name>
+        <reimplements refid="class_text_file_handler_1a7825ed5fab29814dcb91210c8e3e1d66">handleLine</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is not required or implemented for this class, as the class is not designed to read temporary files, only to write to them. It is simply here as a stubbed implementation of the pure virtual function in <ref refid="class_text_file_handler" kindref="compound">TextFileHandler</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/hostnames_validator.hpp" line="28" column="1" bodyfile="tools/message_logger/mldb/hostnames_validator.cpp" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hostnames_validator_m_l_d_b_1a26192fa889fa9562c75d4a3703c33461" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void HostnamesValidatorMLDB::flush</definition>
+        <argsstring>()</argsstring>
+        <name>flush</name>
+        <reimplements refid="class_file_handler_1aaa5e02b440b04dd78fe9ac2c8f19c69e">flush</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/hostnames_validator.hpp" line="30" column="1" bodyfile="tools/message_logger/mldb/hostnames_validator.cpp" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hostnames_validator_m_l_d_b_1aa2dc787aae0ff124c00d1251fcd27a0a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HostnamesValidatorMLDB::writeHostnamesToDB</definition>
+        <argsstring>() const </argsstring>
+        <name>writeHostnamesToDB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is used to write the entire validationList_ out to db.</para><para><simplesect kind="return"><para>true on success, false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/hostnames_validator.hpp" line="32" column="1" bodyfile="tools/message_logger/mldb/hostnames_validator.cpp" bodystart="119" bodyend="134"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_hostnames_validator_m_l_d_b_1ae345354205927fb1b32d738cca5d3acc" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HostnamesValidatorMLDB::writeHostEntryToDB</definition>
+        <argsstring>(MessageLogger::IPAddress addr, const char *pHostname) const </argsstring>
+        <name>writeHostEntryToDB</name>
+        <param>
+          <type>MessageLogger::IPAddress</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pHostname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method writes an address/hostname map combination to file.</para><para><simplesect kind="return"><para>true on success, false on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/hostnames_validator.hpp" line="35" column="1" bodyfile="tools/message_logger/mldb/hostnames_validator.cpp" bodystart="142" bodyend="158"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_hostnames_validator_m_l_d_b_1ae1f419e168c8e0b7b602e9accf9712c6" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>BW::string</type>
+        <definition>BW::string HostnamesValidatorMLDB::getTempPath</definition>
+        <argsstring>(const char *rootLogPath) const </argsstring>
+        <name>getTempPath</name>
+        <param>
+          <type>const char *</type>
+          <declname>rootLogPath</declname>
+          <defname>pBasePath</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This static method gets a temporary hostnames file path.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pBasePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base path within which to create the temporary directory.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new hostnames filename in a uniquely-named temporary path, or an empty string on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/hostnames_validator.hpp" line="39" column="1" bodyfile="tools/message_logger/mldb/hostnames_validator.cpp" bodystart="170" bodyend="199"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class handles the mapping between IP addresses and hostnames </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1462">
+        <label>FileHandler</label>
+        <link refid="class_file_handler"/>
+      </node>
+      <node id="1463">
+        <label>HostnamesValidator</label>
+        <link refid="class_hostnames_validator"/>
+      </node>
+      <node id="1461">
+        <label>TextFileHandler</label>
+        <link refid="class_text_file_handler"/>
+        <childnode refid="1462" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1460">
+        <label>HostnamesValidatorMLDB</label>
+        <link refid="class_hostnames_validator_m_l_d_b"/>
+        <childnode refid="1461" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1463" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1466">
+        <label>FileHandler</label>
+        <link refid="class_file_handler"/>
+      </node>
+      <node id="1467">
+        <label>HostnamesValidator</label>
+        <link refid="class_hostnames_validator"/>
+      </node>
+      <node id="1465">
+        <label>TextFileHandler</label>
+        <link refid="class_text_file_handler"/>
+        <childnode refid="1466" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1464">
+        <label>HostnamesValidatorMLDB</label>
+        <link refid="class_hostnames_validator_m_l_d_b"/>
+        <childnode refid="1465" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1467" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/message_logger/mldb/hostnames_validator.hpp" line="20" column="1" bodyfile="tools/message_logger/mldb/hostnames_validator.hpp" bodystart="19" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_hostnames_validator_1a873cff6c72e31bb60f3b1ef3e34b3405" prot="public" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>addValidateHostname</name></member>
+      <member refid="class_hostnames_validator_1aa422b195177a8610e4bd50c24c4f2ce5" prot="protected" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>clear</name></member>
+      <member refid="class_text_file_handler_1ad4ea6ba63dadcfda2cdb1d1b491f1059" prot="public" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>close</name></member>
+      <member refid="class_file_handler_1a21db311b76430aff514bf39a238b015d" prot="public" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>filename</name></member>
+      <member refid="class_file_handler_1a48f6ab15fbc95172ce6db0878cd4d5e7" prot="protected" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>filename_</name></member>
+      <member refid="class_hostnames_validator_m_l_d_b_1a26192fa889fa9562c75d4a3703c33461" prot="public" virt="virtual"><scope>HostnamesValidatorMLDB</scope><name>flush</name></member>
+      <member refid="class_text_file_handler_1a7c9dc371685252d2da9ebf2e19fbe377" prot="protected" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>fp_</name></member>
+      <member refid="class_hostnames_validator_m_l_d_b_1ae1f419e168c8e0b7b602e9accf9712c6" prot="private" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>getTempPath</name></member>
+      <member refid="class_hostnames_validator_m_l_d_b_1af8852348079b7412c5ea5a967e6c2477" prot="public" virt="virtual"><scope>HostnamesValidatorMLDB</scope><name>handleLine</name></member>
+      <member refid="class_hostnames_validator_1aaeb54c612243f55797d879ff4778bfe7" prot="public" virt="virtual"><scope>HostnamesValidatorMLDB</scope><name>hostnameChanged</name></member>
+      <member refid="class_hostnames_validator_1a1a289fcd188cfd6d18dd5519c1d1b0f6" prot="public" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>HostnamesValidator</name></member>
+      <member refid="class_hostnames_validator_m_l_d_b_1a357bb69ffe803ef8c00d814665e1e02f" prot="public" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>HostnamesValidatorMLDB</name></member>
+      <member refid="class_hostnames_validator_m_l_d_b_1aea9707810ab1edbd422e29cf958e1643" prot="public" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>init</name></member>
+      <member refid="class_text_file_handler_1a48bce068c4a745ee90888594668d4c00" prot="public" virt="non-virtual" ambiguityscope="TextFileHandler::"><scope>HostnamesValidatorMLDB</scope><name>init</name></member>
+      <member refid="class_hostnames_validator_1aef40085ce4c61ed95899a972c18638e3" prot="protected" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>inProgress</name></member>
+      <member refid="class_file_handler_1a83d056536289a502e280ad909c998e29" prot="public" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>isDirty</name></member>
+      <member refid="class_text_file_handler_1ae8586110bb5b1dfd16681ba2d282ee17" prot="public" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>isOpened</name></member>
+      <member refid="class_file_handler_1aeca3703f7450120817ff241f9ab5cebc" prot="public" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>join</name></member>
+      <member refid="class_text_file_handler_1a862ec561f457c469e70b1c8a6489df04" prot="public" virt="virtual"><scope>HostnamesValidatorMLDB</scope><name>length</name></member>
+      <member refid="class_file_handler_1aa513ca77c5578ff7f931578c4e2f767c" prot="protected" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>length_</name></member>
+      <member refid="class_file_handler_1af160a3724165ff7d40488471ad2cfeba" prot="public" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>mode</name></member>
+      <member refid="class_file_handler_1a3d60ec446935def914042db894c1bd3a" prot="protected" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>mode_</name></member>
+      <member refid="class_text_file_handler_1a2f455865be705691ce2795bbd1a48a30" prot="public" virt="virtual"><scope>HostnamesValidatorMLDB</scope><name>read</name></member>
+      <member refid="class_file_handler_1aa529a9fd4b544fd8b85e8aba4da1b32b" prot="public" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>refresh</name></member>
+      <member refid="class_text_file_handler_1a392e4edf92f7725a3a37212da319d7e3" prot="public" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>reopenIfChanged</name></member>
+      <member refid="class_file_handler_1a6beda2ae2fd3b91e1928615ebde690af" prot="protected" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>s_pathBuf_</name></member>
+      <member refid="class_hostnames_validator_m_l_d_b_1a6801af43c530c841416d73f4b31e6320" prot="private" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>tempDirPath_</name></member>
+      <member refid="class_text_file_handler_1a30b61494814350e0f7cbf45b1772398d" prot="public" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>TextFileHandler</name></member>
+      <member refid="class_hostnames_validator_1a85bc0355a1e7c3c57a2c1db9bb53d1d1" prot="public" virt="virtual"><scope>HostnamesValidatorMLDB</scope><name>validateNextHostname</name></member>
+      <member refid="class_hostnames_validator_1afa5f9993fb5104933ec9498cac0938db" prot="public" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>validateOneHostname</name></member>
+      <member refid="class_hostnames_validator_1adfadd3070df362a95184413e7e42bd0c" prot="protected" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>validationList_</name></member>
+      <member refid="class_hostnames_validator_m_l_d_b_1ae345354205927fb1b32d738cca5d3acc" prot="protected" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>writeHostEntryToDB</name></member>
+      <member refid="class_hostnames_validator_m_l_d_b_1aa2dc787aae0ff124c00d1251fcd27a0a" prot="public" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>writeHostnamesToDB</name></member>
+      <member refid="class_text_file_handler_1a0cd996475e7d25910d6d081553c4a81d" prot="public" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>writeLine</name></member>
+      <member refid="class_hostnames_validator_1aba19516e55fcbae470e21c9bd16248e0" prot="public" virt="virtual"><scope>HostnamesValidatorMLDB</scope><name>~HostnamesValidator</name></member>
+      <member refid="class_hostnames_validator_m_l_d_b_1a9ca588ac17b7e5cc2500d5438e89c29d" prot="public" virt="non-virtual"><scope>HostnamesValidatorMLDB</scope><name>~HostnamesValidatorMLDB</name></member>
+      <member refid="class_text_file_handler_1aeb62378466353be7c60431a83aea7027" prot="public" virt="virtual"><scope>HostnamesValidatorMLDB</scope><name>~TextFileHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

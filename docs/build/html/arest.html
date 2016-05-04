@@ -1,0 +1,1724 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; Asset Pipeline  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Asset Pipeline  documentation" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Asset Pipeline
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="asset.html">Asset Pipeline</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Asset Pipeline</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>&lt;no title&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/arest.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="WordSection1"><p class="rubric" id="asset-pipeline">Asset Pipeline</p>
+<div><ul class="simple">
+<li><a class="reference external" href="#AssetPipeline-Introduction">Introduction</a></li>
+<li><a class="reference external" href="#AssetPipeline-BatchCompiler">Batch Compiler</a></li>
+<li><a class="reference external" href="#AssetPipeline-TestCompiler">TestCompiler</a></li>
+<li><a class="reference external" href="#AssetPipeline-JITCompiler">JIT Compiler</a></li>
+<li><a class="reference external" href="#AssetPipeline-UtilityClasses">Utility Classes</a></li>
+<li><a class="reference external" href="#AssetPipeline-ExtendingtheAssetPipeline">Extending the Asset
+Pipeline</a></li>
+<li><a class="reference external" href="#AssetPipeline-AssetRules">Asset Rules</a></li>
+</ul>
+</div><p class="rubric" id="assetpipeline-introduction">Introduction</p>
+<p class="rubric" id="assetpipeline-overviewoftheassetpipeline">Overview of the Asset Pipeline</p>
+<p>The asset pipeline is a framework for discovering and converting source
+assets to game-ready compiled assets. When fully implemented it will
+unify and replace multiple resource management solutions in the current
+BigWorld Technology code base, such as the res_packer,
+offline_processor, asset_processor, and in-game conversion, with a
+single solution. This solution will make it possible to reuse any asset
+conversion code you write. For example, conversion code written for
+batch compilation could also be reused for JIT (Just-In-Time)
+compilation.</p>
+<p>There are currently three supported compilers: the Batch Compiler, JIT
+Compiler, and Test Compiler. You can also write your own compilers—see
+<a class="reference external" href="#AssetPipeline-WritingCompilers">Writing Compilers</a>&nbsp;for more
+information.</p>
+<p>The current version of the asset pipeline batch compiler converts assets
+faster than res_packer, but only supports the conversion of <code class="docutils literal"><span class="pre">.bmp</span></code>,
+<code class="docutils literal"><span class="pre">.tga</span></code>, <code class="docutils literal"><span class="pre">.jpg</span></code>, <code class="docutils literal"><span class="pre">.png</span></code>, <code class="docutils literal"><span class="pre">.texformat</span></code> and <code class="docutils literal"><span class="pre">.dds</span></code> files. It
+compiles <code class="docutils literal"><span class="pre">fx</span></code> and <code class="docutils literal"><span class="pre">fxh</span></code> files into <code class="docutils literal"><span class="pre">fxo</span></code> files. It does not
+support <code class="docutils literal"><span class="pre">model</span></code>, <code class="docutils literal"><span class="pre">cdata</span></code>, or <code class="docutils literal"><span class="pre">chunk</span></code> yet.</p>
+<p>The back end of the asset pipeline is managed by a DLL plugin system
+that defines what converters and conversion rules are loaded by the
+framework to handle the asset processing.</p>
+<p class="rubric" id="assetpipeline-sourceassets">Source Assets</p>
+<p>The asset pipeline takes source asset files as inputs and produces
+game-ready compiled assets as outputs. The files it treats as source
+assets are defined by the converter plugins, and are unknown to the
+compiler front ends. Typical source assets include non dds texture files
+(for example, <code class="docutils literal"><span class="pre">bmp</span></code>, <code class="docutils literal"><span class="pre">tga</span></code> and <code class="docutils literal"><span class="pre">png</span></code> files), and uncompiled shader
+programs (<code class="docutils literal"><span class="pre">fx</span></code> and <code class="docutils literal"><span class="pre">fxh</span></code>). The output files are also determined by
+the converter plugins and are unknown to the compiler front ends with
+examples such as dds texture files (<code class="docutils literal"><span class="pre">dds</span></code>), and compiled shader
+programs (<code class="docutils literal"><span class="pre">fxo</span></code>).</p>
+<p class="rubric" id="assetpipeline-converters">Converters</p>
+<p>Converters contain the logic to convert source asset files into compiled
+assets. Texture and effects converters are supplied with the Asset
+Pipeline package. You can also write your own converters. See <a class="reference external" href="#AssetPipeline-ExtendingtheAssetPipeline">Extending
+the Asset Pipeline</a> for
+more information.</p>
+<p>For a converter to be loaded by the asset pipeline, its DLL executable
+needs to be placed in an appropriate location (usually in the same
+directory as the compiler) and it needs to be added to the plugins list
+file for that compiler (for example, <code class="docutils literal"><span class="pre">batch_compiler_plugins.txt</span></code> for
+<code class="docutils literal"><span class="pre">batch_compiler.exe</span></code>). You only need to specify the relative path (if
+any) and the base name of the plugin DLL, as the compiler will determine
+and load the appropriate DLL. For example, specify &#8220;spaceconverter&#8221; for
+the compiler to load the <code class="docutils literal"><span class="pre">spaceconverter.dll</span></code> plugin (or
+<code class="docutils literal"><span class="pre">spaceconverter_d.dll</span></code> plugin in debug mode).</p>
+<p class="rubric" id="assetpipeline-intermediatefiles">Intermediate files</p>
+<p>As well as producing compiled assets, the asset pipeline outputs a
+number of intermediate files. The most important of these intermediate
+files are the dependency files (deps). The asset pipeline will generate
+one of these files for every source asset it discovers. It stores
+important information such as the hash of the source asset at the time
+of conversion, the converter that was used to convert the source asset,
+and the hash of any files that were required for the conversion process.
+These dependency files need to persist between runs of the asset
+pipeline, as they are used to determine whether a source asset needs to
+be reconverted. If a dependency file for a source asset is missing, a
+source asset is assumed to be out of date and in need of conversion.</p>
+<p>Converters can also output intermediate files during the conversion
+process. These intermediate files are functionally the same as ordinary
+output files. However, while output files are used by the game engine,
+intermediate files are not. By default, the intermediate files are saved
+in the location specified by &#8220;-intermediatePath&#8221; in
+<a href="#id1"><span class="problematic" id="id2">``</span></a>game/res/bigworld/resources.xml.``&nbsp;If a location is not specified,
+they will be saved in the same location as their corresponding source
+input file.</p>
+<p class="rubric" id="assetpipeline-outputlocation">Output Location</p>
+<p>By default, the asset pipeline outputs intermediate and output files to
+the locations specified by &#8220;-intermediatePath&#8221; and &#8220;-outputPath&#8221; in
+<code class="docutils literal"><span class="pre">game/res/bigworld/resources.xml</span></code>. This makes it easier to compress
+and package output files for distribution with the final game. It also
+allows you to keep your source directory clean from intermediate and
+output files, which is desirable when working with file versioning
+software. If &#8220;-outputPath&#8221; is not specified, then the output files will
+be saved in the same location as their corresponding source input file.</p>
+<p class="rubric" id="assetpipeline-performance">Performance</p>
+<p>When running the asset pipeline over the same source assets multiple
+times, second iterations of the asset pipeline only reconvert source
+assets that have been changed. This is to ensure that the asset pipeline
+can be run repeatedly over large sets of data with minimal overhead per
+iteration.</p>
+<p>To further improve performance for multiple users running the asset
+pipeline on different machines, a file cache can be specified (see
+<a class="reference external" href="#AssetPipeline-Command-LineOptions">Command-Line Options</a>). When a
+file cache is used, all intermediate and output files produced by the
+asset pipeline are copied to an external shared location that can be
+queried on subsequent runs of the pipeline.</p>
+<p class="rubric" id="assetpipeline-batchcompiler">Batch Compiler</p>
+<p>The Batch Compiler is a command-line front end for converting asset
+source files into game-ready compiled assets. It can convert a single
+source file or a folder of source files.</p>
+<p class="rubric" id="assetpipeline-configuration">Configuration</p>
+<p class="rubric" id="assetpipeline-settingupconverters">Setting Up Converters</p>
+<p>Before running the Batch Compiler, ensure that all of the converter
+plugins you wish to use exist in a reachable folder (preferably in the
+same folder as the Batch Compiler executable), and that they are listed
+in the <code class="docutils literal"><span class="pre">batch_compiler_plugins.txt</span></code> file. If you are running the debug
+version of the Batch Compiler (<code class="docutils literal"><span class="pre">batch_compiler_d.exe</span></code>), ensure that
+you have the debug versions of the plugins you wish to load. It is safe
+for both the debug and non-debug version of a converter plugin to exist
+in the executable folder—only the appropriate version of the plugin will
+be loaded.</p>
+<p class="rubric" id="assetpipeline-settingupassetrules">Setting Up Asset Rules</p>
+<p>Batch Compiler uses asset rules to determine what files on disk are
+assets, and how to convert them. For information on setting up asset
+rules, see <a class="reference external" href="#AssetPipeline-AssetRules">Asset Rules</a>.</p>
+<p class="rubric" id="assetpipeline-runningthebatchcompiler">Running the Batch Compiler</p>
+<p>To run the Batch Compiler from the command line use the command:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>batch_compiler.exe target
+</pre></div>
+</div>
+</div></div><p>To run the debug version of the Batch Compiler use:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>batch_compiler_d.exe target
+</pre></div>
+</div>
+</div></div><p>For both commands, <code class="docutils literal"><span class="pre">target</span></code> is the source file or directory to
+process. If the target specified is an asset file, the batch compiler
+will process only that asset. If the target specified is a directory the
+batch compiler will recursively search for and convert all assets under
+that directory. The Batch Compiler supports both absolute and relative
+paths. It currently does not support BigWorld Technology resource paths.</p>
+<p class="rubric" id="assetpipeline-command-lineoptions">Command-Line Options</p>
+<p>The Batch Compiler can be run with a number of command-line options:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">-intermediatePath</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">path</span></code>
+where path specifies where to save intermediate files. By default,
+intermediate files are saved to the same location as their source
+files.</li>
+<li><a href="#id3"><span class="problematic" id="id4">``</span></a>-outputPath path ``
+where path specifies where to save output files. By default, output
+files are saved to the same location as their source files.</li>
+<li><a href="#id5"><span class="problematic" id="id6">``</span></a>-cachePath path ``
+where path specifies the directory location of the external shared
+file cache. By default no file cache is used.</li>
+<li><a href="#id7"><span class="problematic" id="id8">``</span></a>-j numThreads ``
+where numThreads specifies the number of threads to run the asset
+pipeline with. The more threads the asset pipeline is allowed to use
+the better it can utilize CPU cores, resulting in a faster execution
+time. By default, one thread is used.</li>
+<li><a href="#id9"><span class="problematic" id="id10">``</span></a>-report reportFile      ``
+where reportFile is the file location where the Batch Compiler will
+save a report at the end of the conversion process. This file should
+have an html filename extension. If this option is omitted, the Batch
+Compiler will not generate a report.</li>
+<li><code class="docutils literal"><span class="pre">-pluginConfig</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">pluginsFile</span> <span class="pre">``</span>
+<span class="pre">where</span> <span class="pre">pluginsFile</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">file</span> <span class="pre">containing</span> <span class="pre">the</span> <span class="pre">list</span> <span class="pre">of</span> <span class="pre">plugins</span> <span class="pre">to</span> <span class="pre">use</span> <span class="pre">in</span>
+<span class="pre">conversion.</span> <span class="pre">By</span> <span class="pre">default,</span> <span class="pre">a</span> <span class="pre">file</span> <span class="pre">called</span> <span class="pre">``batch_compiler_plugins.txt</span></code>
+is used.</li>
+</ul>
+<p>Examples:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>batch_compiler_d.exe D:\2_current\res\bigworld\
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>-report D:\2_current\bigworld_report.html -j 4
+</pre></div>
+</div>
+</div></div><p>Runs the debug version of the Batch Compiler over the
+<a href="#id11"><span class="problematic" id="id12">``</span></a>resbigworld``&nbsp;directory with 4 threads. Intermediate and output files
+are saved in the same location as their source files, no file cache is
+used, and a report is saved upon completion.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>batch_compiler.exe ..\..\..\res\fantasydemo\
+                   -intermediatePath ..\..\..\intermediate\fantasydemo\
+                   -outputPath ..\..\..\packed\fantasydemo\
+                   -cachePath \\ASSETCACHE\assetcache
+                   -report ..\..\..\fantasydemo_report.html -j 8
+</pre></div>
+</div>
+<p>Runs the release version of the Batch Compiler over the
+<cite>resfantasydemo</cite>&nbsp;directory with 8 threads. Intermediate and output
+files are saved to custom locations, an external file cache is used, and
+a report is saved on completion.</p>
+<p class="rubric" id="assetpipeline-output">Output</p>
+<p>When the Batch Compiler is run, real-time progress is reported to the
+console during the conversion process. The asset pipeline operates in
+two stages—discovery and conversion.</p>
+<p>During the discovery stage, the asset pipeline traverses directories and
+files, searching for source assets to convert.&nbsp;The Batch Compiler
+reports each directory it iterates through and the file name of every
+source asset it encounters. At the end of this stage, the Batch Compiler
+reports the number of source assets found as &#8216;tasks&#8217; and the number of
+directories and files it traversed.</p>
+<p>In the conversion stage, the Batch Compiler reports the progress of each
+conversion task in real time. As the asset pipeline can be run on
+multiple threads, multiple tasks can be executed simultaneously, with
+each task reporting its progress to the console. This can result in the
+output of each task getting jumbled with the output of other tasks
+running simultaneously. To counter this, each task is given an id which
+is displayed at the start of each line of output associated with that
+task.</p>
+<p>As a task is being processed, if an error or warning is encountered
+(triggered by the BWT warning macros), the error or warning will be
+displayed to the console output with the id of the task in which the
+error or warning was encountered. Similarly if an assert is triggered
+during the processing of a task, the assert message and line number will
+be displayed to the console output with the appropriate task id. Asserts
+triggered during task processing are swallowed by the asset pipeline and
+do not cause the front-end compiler to crash or bring up a critical
+dialog.</p>
+<p>At the end of processing each task, Batch Compiler displays the success
+status for the conversion of that task. After processing the last task
+it displays a summary of all the tasks. The summary shows the number of
+tasks that succeeded and the number of tasks that failed. Of the tasks
+that succeeded, it shows the number of those that were actually
+converted, those whose dependencies were checked but were not in need of
+conversion (up to date) and those that were skipped completely due to no
+change to the source asset being detected since the last run of the
+asset pipeline (skipped).</p>
+<p class="rubric" id="assetpipeline-report">Report</p>
+<p>The Batch Compiler can be run with the -report option to produce an HTML
+report on completion. The report is essentially a summary of the Batch
+Compiler real time output, but structured in a way that is easier to
+navigate.</p>
+<p>The report contains lists of the tasks that were converted, specifying
+which ones failed, had warnings, were converted, were up to date, or
+were skipped completely. Each of these lists contains links to the
+summaries of the individual tasks themselves. These summaries contain
+the success status of the task, a log of any warnings, errors or asserts
+that were encountered and a list of any output files that were generated
+by the task.</p>
+<p>The report also contains some information not available in the real-time
+output of the Batch Compiler, including the duration of the entire
+conversion process and the time taken to convert each task. Each task
+summary will contain links to the subtasks that task was dependent on,
+allowing you to track task errors or warnings through to subtasks.</p>
+<p class="rubric" id="assetpipeline-testcompiler">TestCompiler</p>
+<p>The TestCompiler is a specialised front end to the asset pipeline
+designed to facilitate the development of unit tests for new converters
+and conversion rules. The intended users of the TestCompiler are
+developers who wish to create converter plugins for the asset pipeline.
+For information on using the TestCompiler, see <a class="reference external" href="#AssetPipeline-WritingUnitTests">Writing Unit
+Tests</a>.</p>
+<p class="rubric" id="assetpipeline-jitcompiler">JIT Compiler</p>
+<p class="rubric" id="assetpipeline-overview">Overview</p>
+<p>The JIT Compiler (Just-In-Time Compiler) is an asset server that can be
+connected to multiple asset clients. It converts assets to game-ready
+compiled assets as soon as they are edited and saved to disk.</p>
+<p>BWClient, World Editor, Model Editor, NavGen, and Particle Editor are
+all asset clients. You can also create your own.</p>
+<p>The JIT Compiler is designed to run in the background on a developer’s
+machine. On startup, it scans all resource directories looking for
+assets to convert and queues them for conversion. After scanning, it
+monitors those directories for file changes, and queues any asset that
+has changed for reconversion.</p>
+<p>To ensure that multiple compilers aren’t attempting to operate on the
+same assets, only one asset server can be run per resource path.</p>
+<p class="rubric" id="assetpipeline-configuration-1">Configuration</p>
+<p class="rubric" id="assetpipeline-settingthedefaultassetserver">Setting the Default Asset Server</p>
+<p>When an asset client starts it will attempt to connect to an executing
+asset server. If there aren’t any asset servers running, the client will
+launch the default asset server defined in
+<code class="docutils literal"><span class="pre">game/res/bigworld/resources.xml</span></code>. To specify the default asset
+server, set the <code class="docutils literal"><span class="pre">assetServer</span></code> tag in <code class="docutils literal"><span class="pre">resources.xml</span></code>.</p>
+<p class="rubric" id="assetpipeline-settingupconverters-1">Setting Up Converters</p>
+<p>Before running the JIT Compiler, ensure that all of the converter
+plugins you wish to use exist in a reachable folder (preferably in the
+same folder as the JIT Compiler executable), and that they are listed in
+the <code class="docutils literal"><span class="pre">jit_compiler_plugins.txt</span></code> file.</p>
+<p class="rubric" id="assetpipeline-settingupassetrules-1">Setting Up Asset Rules</p>
+<p>The JIT Compiler uses asset rules to determine what files on disk are
+assets, and how to convert them. For information on setting up asset
+rules, see <a class="reference external" href="#AssetPipeline-AssetRules">Asset Rules</a>.</p>
+<p class="rubric" id="assetpipeline-assetclientmode">Asset Client Mode</p>
+<p>Asset clients can only communicate with asset servers when running in
+debug or hybrid mode. In consumer release it is assumed that all assets
+are already converted and ready for use. You can disable asset client
+communication in debug and hybrid mode by running the asset client (for
+example, bw_client, world_editor or model_editor) with the command
+line argument “-noConversion”.</p>
+<p class="rubric" id="assetpipeline-jitcompileroptionsdialog">JIT Compiler Options Dialog</p>
+<p>To open the JIT Compiler Options dialog:</p>
+<ol class="arabic simple">
+<li>Open the JIT Compiler dialog (click the JIT Compiler icon in the
+Windows notification area).</li>
+<li>Select <strong>File</strong> &gt; <strong>Options</strong>.</li>
+</ol>
+<p>The following options are available:</p>
+<ul class="simple">
+<li><strong>Balloon Notifications of warnings and errors</strong>
+Enables or disables the appearance of the balloon notifications that
+occur when a task completes with a warning or error.</li>
+<li><strong>Threads</strong>
+Sets the number of threads used to process assets. For optimal
+performance we recommend matching the number of threads to the number
+of cores on your local machine.</li>
+<li><strong>Output Path</strong>
+Specifies where to save converted resources. By default, the param
+&#8220;-outputPath&#8221; specified in <code class="docutils literal"><span class="pre">game/res/bigworld/resources.xml</span></code> is
+used. If no output path is specified, the converted resources will be
+saved in the same location as their corresponding source input files.</li>
+<li><strong>Intermediate Path</strong>
+Specifies where to save asset pipeline intermediate files. By
+default, the param &#8220;-intermediatePath&#8221; specified in
+<code class="docutils literal"><span class="pre">game/res/bigworld/resources.xml</span></code> is used, if not specified, then
+the intermediate files will be saved in the same location as their
+corresponding source input file.</li>
+<li><strong>Cache Path</strong>
+The path to the asset cache. Typically, this cache is on a network
+machine and is shared by all users. If no path is specified, the JIT
+compiler will not use a cache (even if you select the &#8220;Enable reading
+from the cache&#8221; and &#8220;Enable writing to the cache&#8221; options).</li>
+<li><strong>Enable reading from the cache</strong>
+If this option is selected and a required asset cannot be found on
+your local machine, the JIT compiler will attempt to copy it from the
+cache instead of building it.</li>
+<li><strong>Enable writing to the cache</strong>
+Enables writing converted files to the cache.</li>
+<li><strong>Force Rebuild of Assets</strong>
+Forces every asset to be rebuilt even if it is found on your local
+machine or in the cache.</li>
+</ul>
+<p><strong>Note:</strong> If you modify the Output Path or Intermediate Path, you will
+need to restart the JIT compiler in order for your changes to be
+applied.</p>
+<p class="rubric" id="assetpipeline-viewingthecurrentconfiguration">Viewing the Current Configuration</p>
+<p>To view information about the current configuration, select <strong>Help</strong> &gt;
+<strong>Current Config</strong>.</p>
+<p>The following configuration information is displayed:</p>
+<ul class="simple">
+<li>Directories used by the JIT Compiler (for example, the cache path)</li>
+<li>The options specified in the Options dialog</li>
+<li>The plugins that are loaded</li>
+</ul>
+<p>This information can be copied and pasted into a bug report if needed.</p>
+<p class="rubric" id="assetpipeline-usingthejitcompiler">Using the JIT Compiler</p>
+<p class="rubric" id="assetpipeline-startingthecompiler">Starting the Compiler</p>
+<p>The JIT Compiler automatically starts running in the background when an
+asset client needs to convert assets. You can also start it manually by
+running the JIT Compiler executable
+(<code class="docutils literal"><span class="pre">game\bin\tools\\asset_pipeline\\jit_compiler.exe</span></code>).</p>
+<p class="rubric" id="assetpipeline-thejitcompilerdialog">The JIT Compiler dialog</p>
+<p>To open the JIT Compiler dialog, click the JIT Compiler icon in the
+Windows notification area.</p>
+<p>The main dialog of the JIT Compiler has the followings sections.</p>
+<p><strong>Requested Assets</strong>
+Shows tasks that have been requested by a client.
+<strong>Current Assets</strong>
+Shows tasks that are currently being processed.
+<strong>Completed Assets</strong>
+Shows completed tasks.
+<strong>*Sorting Modes*</strong>
+You can select one of the following <strong>Sort</strong> modes to sort the list of
+completed tasks.</p>
+<ul class="simple">
+<li>Completed — Sort by order of completion.</li>
+<li>File Name — Sort by filename in alphabetical order.</li>
+<li>Converter — Sort by the converter used to compile the asset.</li>
+<li>Result — Sort by order of importance (tasks with errors first, then
+warnings, and then the rest).</li>
+</ul>
+<p><strong>*Filtering Buttons*</strong>**
+<a href="#id13"><span class="problematic" id="id14">**</span></a>The three coloured buttons above the Completed Tasks list can be
+toggled on or off to filter the list as follows:</p>
+<ul class="simple">
+<li><strong>Blue&nbsp;</strong>— Show successfully completed tasks (tasks with no errors or
+warnings).</li>
+<li><strong>Yellow&nbsp;</strong>— Show tasks with warnings but no errors.</li>
+<li><strong>Red&nbsp;</strong>— Show tasks with errors.</li>
+<li><strong>Blue and Yellow&nbsp;</strong>— Show tasks with no errors.</li>
+<li><strong>Yellow and Red&nbsp;</strong>— Show tasks with warnings and/or errors.</li>
+<li><strong>Blue, Yellow and Red&nbsp;</strong>— Show all tasks.</li>
+</ul>
+<p>By default the yellow (warnings) and red (errors) options are enabled.</p>
+<p class="rubric" id="assetpipeline-todisplaytheconversionlogforanasset"><strong>To display the conversion log for an asset</strong></p>
+<p>Double-click the asset (or right-click it and select <strong>Details</strong>).</p>
+<p class="rubric" id="assetpipeline-toopenanassetinitsdefaulteditingapplication"><strong>To open an asset in its default editing application</strong></p>
+<p>Right-click the asset and select <strong>Open</strong>.</p>
+<p class="rubric" id="assetpipeline-tonavigatetothelocationofanassetinwindows"><strong>To navigate to the location of an asset in Windows</strong></p>
+<p>Right-click it and select <strong>Open Folder</strong>.</p>
+<p class="rubric" id="assetpipeline-jitcompilerstatusicon">JIT Compiler Status Icon</p>
+<p>When the JIT Compiler is running, the JIT Compiler icon appears in the
+Windows notification area. The colour of the icon indicates the status
+of the compiler, as follows:</p>
+<ul class="simple">
+<li><strong>Red&nbsp;</strong>— An asset failed to build.</li>
+<li><strong>Yellow&nbsp;</strong>— All assets built successfully but warnings were
+detected.</li>
+<li><strong>Blue&nbsp;</strong>— No warnings were detected.</li>
+</ul>
+<p class="rubric" id="assetpipeline-exitingthejitcompiler">Exiting the JIT Compiler</p>
+<p>To close the JIT Compiler and leave it running in the background, simply
+close the JIT Compiler dialog.</p>
+<p>To terminate the JIT Compiler, do either of the following:</p>
+<ul class="simple">
+<li>Right-click the JIT Compiler icon and select <strong>Quit</strong>, or</li>
+<li>Select <strong>File</strong> &gt; <strong>Quit</strong>.</li>
+</ul>
+<p><strong>Note:</strong> if an application needs to convert assets it will
+automatically start the JIT Compiler.</p>
+<p class="rubric" id="assetpipeline-utilityclasses">Utility Classes</p>
+<p>The asset_pipeline module provides a number of utility classes for
+creating asset servers and asset clients, and handling connections
+between them.</p>
+<p class="rubric" id="assetpipeline-assetserver">AssetServer</p>
+<p>An asset server is an application that can accept requests to convert
+assets from multiple connections. To implement an asset server, derive
+from the AssetServer class. The base class implementation of the
+AssetServer handles creating a Windows Named Pipe, and listening for
+connections from multiple clients. It also ensures that no two asset
+servers are operating over the same resource paths, system wide.</p>
+<p>When creating an asset server, you must implement functionality to
+handle requests for assets. To do so, override the following function on
+AssetServer:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>virtual void onAssetRequested( const StringRef &amp; asset )
+</pre></div>
+</div>
+</div></div><p>The asset parameter will contain the resource-relative path of an asset
+that has been requested by a connected client.</p>
+<p>Once your asset server has finished processing the request, you will
+need to call the following function on AssetServer:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>void broadcastAsset( const StringRef &amp; asset )
+</pre></div>
+</div>
+</div></div><p>This function communicates to all connected clients that the asset
+server has finished processing the requested asset.</p>
+<p class="rubric" id="assetpipeline-assetclient">AssetClient</p>
+<p>An asset client is an application that can connect to an asset server
+and request assets for conversion. When an asset server receives an
+asset request it will push the required asset to the front of its
+conversion queue.</p>
+<p>To implement an asset client, create an instance of the AssetClient
+class within your application. The AssetClient class automatically
+handles connecting to an asset server. If an executing asset server
+cannot be found, the AssetClient class tries to start the default asset
+server. The default asset server is defined in
+<code class="docutils literal"><span class="pre">game/res/bigworld/resources.xml</span></code> under the tag <code class="docutils literal"><span class="pre">&lt;assetServer&gt;</span></code>.</p>
+<p>To request an asset from an asset client, call the following function on
+AssetClient:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>void requestAsset( const StringRef &amp; asset, bool wait )
+</pre></div>
+</div>
+</div></div><p>The asset parameter specifies the resource-relative path of the asset to
+process. If the wait parameter is set to true, this function will only
+return once the connected asset server has finished processing the
+asset, otherwise the function will return immediately. In both cases,
+the asset client cannot assume that a requested asset has been
+successfully processed. It is possible for an asset server to receive a
+request for an asset that it cannot process, or that contains an error.
+As such, it is the responsibility of the asset client to verify the
+contents of an asset.</p>
+<p class="rubric" id="assetpipeline-assetlock">AssetLock</p>
+<p>The implementation of the asset server provided with BWT is known as the
+JIT Compiler. The JIT Compiler automatically detects and processes
+changes to assets on disk. This can sometimes lead to undesirable
+behaviour where the JIT Compiler starts processing an asset that is
+still being edited. To overcome this issue, use the AssetLock class.</p>
+<p>The AssetLock class can be used to prevent the JIT Compiler from
+processing any assets or responding to file modifications. It does not
+stop the JIT Compiler from scanning the disk, searching for assets that
+have been modified. Assets modified while the JIT Compiler is locked
+will be processed when the lock is released.</p>
+<p>To lock the JIT Compiler, simply create an instance of the AssetLock
+class. The constructor of the AssetLock will only return once the JIT
+Compiler has been successfully locked. AssetLock instances can be
+created across multiple threads and processes. After all instances of
+the AssetLock are destroyed, or all processes with active AssetLocks are
+terminated, the lock on the JIT Compiler will be released.</p>
+<p class="rubric" id="assetpipeline-extendingtheassetpipeline">Extending the Asset Pipeline</p>
+<p class="rubric" id="assetpipeline-overview-1">Overview</p>
+<p>The asset pipeline is designed to be flexible and extendable. To extend
+the asset pipeline, developers can create new converters and conversion
+rules for the back end, or new compilers for the front end.</p>
+<p>Converters and conversion rules are standalone modules of code that can
+be registered with the asset pipeline. Conversion rules define what
+files can be converted through the asset pipeline, whereas converters
+contain the actual conversion logic. Converters are also required to
+inform the asset pipeline of any dependency a source asset may have,
+after which the asset pipeline will ensure that these dependencies are
+up to date and built.</p>
+<p>Compilers are executable modules that provide a front-end interface to
+the asset pipeline. There are three compilers provided with BWT: the
+Batch Compiler, JIT Compiler, and Test Compiler. You can design
+additional compilers to suit your needs (for example, compilers
+providing graphical interfaces or progress feedback).</p>
+<p class="rubric" id="assetpipeline-modules">Modules</p>
+<p>The asset pipeline itself is divided into four library modules—the
+compiler, conversion, dependency, and discovery modules. When writing
+your own extensions for the asset pipeline, you should not need to
+modify these libraries and should treat the entire asset pipeline as a
+black box. The following descriptions are intended purely as a summary
+of how the asset pipeline operates.</p>
+<p class="rubric" id="assetpipeline-compiler">Compiler</p>
+<p>The compiler module contains the front-end compiler interface and the
+default base implementation of the compiler (asset_compiler). All
+user-defined compilers must inherit from the asset_compiler base class
+and not the compiler interface. This has been enforced by making the
+constructor of the compiler interface private, and only available to the
+asset_compiler base class. The asset_compiler provides a number
+callback functions that can be overloaded to monitor the progress of the
+asset pipeline during discovery and conversion phases.</p>
+<p class="rubric" id="assetpipeline-conversion">Conversion</p>
+<p>The conversion module is responsible for processing conversion tasks,
+checking dependency hashes and invoking the appropriate converters. It
+contains the converter interface which all user-defined asset converters
+must derive from, the conversion_task (a data struct that is used to
+track the status of an asset during conversion), the task_processor (a
+class which processes a queue of tasks on multiple threads, resolving
+any interdependencies), and the content_addressable_cache (a static
+class that acts an extension to the task_processor to allow for faster
+task processing).</p>
+<p class="rubric" id="assetpipeline-dependency">Dependency</p>
+<p>The dependency module is a simple data library that contains the
+different dependency structures that the asset pipeline knows how to
+handle. It contains the dependency base, the converter_dependency,
+converter_params_dependency, intermediate_file_dependency,
+output_file_dependency, directory_dependency, and
+source_file_dependency implementations and the dependency_list. As
+simple data structures, the only functionality the dependency classes
+provide are serialising to and from disk and generating dependency
+hashes. The dependency_list class is a slightly more complicated data
+structure that maintains a list of primary and secondary dependencies
+associated with a source asset and a list of output files generated by
+the source asset. The dependency_list structure represents the
+<code class="docutils literal"><span class="pre">.deps</span></code> files that are generated by the asset pipeline during
+conversion.</p>
+<p class="rubric" id="assetpipeline-discovery">Discovery</p>
+<p>The discovery module is responsible for the task collection that occurs
+during the discovery phase of the asset pipeline. It contains the
+task_finder class, which iterates directories and files on disk,
+searching for potential source assets eligible for conversion, and the
+conversion_rule interface, the interface all user-defined conversion
+rules must implement. Conversion rules are used by the task_finder to
+determine which files on disk can be converted.</p>
+<p class="rubric" id="assetpipeline-theconversionprocess">The Conversion Process</p>
+<p>A conversion task is created for every asset that the asset pipeline
+attempts to convert. A conversion task contains:</p>
+<ul class="simple">
+<li>the file name of the asset being converted,</li>
+<li>the id and version of the converter to be used,</li>
+<li>any parameters to be passed to the converter,</li>
+<li>the status of the conversion&#8217;s progress, and</li>
+<li>links to any dependent conversion tasks for the asset.</li>
+</ul>
+<p>To ensure minimal effort is spent processing tasks, the asset pipeline
+first attempts to determine if an asset needs to be converted at all. To
+do this, it attempts to deduce if an asset, any of its dependencies, or
+any of its outputs have changed since the last time the asset was
+processed. To track this, the asset pipeline uses <strong>deps</strong> files.</p>
+<p>When an asset is processed, its deps file is queried from disk. If no
+deps file exists, a primary deps file is created. A primary deps file
+contains all the primary dependencies of a source asset. The primary
+dependencies of an asset are the asset source file itself, and the
+converter id, converter version and converter parameters required to
+convert the asset. If a deps file is found on disk, the stored primary
+dependencies are checked to see if they are up to date. If the primary
+dependencies are up not up to date, any secondary dependencies stored in
+the deps file are considered invalid and need to be regenerated. To
+regenerate the secondary dependencies, the converter for the asset is
+invoked via the converter function <code class="docutils literal"><span class="pre">createDependencies</span></code>.</p>
+<p>Once the secondary dependencies have been generated, the asset pipeline
+must then verify that these dependencies are also up to date. As
+secondary dependencies can include dependencies on compiled assets, the
+asset pipeline may be required to trigger subtasks at this point. The
+asset pipeline has two modes of operation for accomplishing this:
+recursive conversion and non-recursive conversion.</p>
+<p class="rubric" id="assetpipeline-recursiveconversion">Recursive Conversion</p>
+<p>This conversion mode blocks the current thread processing a task, and
+recursively triggers conversion tasks of any sub dependencies. This has
+the benefit of simplicity and can be easily debugged, as the entire
+hierarchy of dependencies that triggered the conversion of a task can be
+viewed in the debug callstack. Complications do still arise with this
+method when multiple tasks being processed on separate threads have
+dependencies on the same subtask. In this case, the first thread to
+request the common subtask will trigger the conversion of the subtask
+while any subsequent threads will be required to block and wait for the
+first thread to finish. The drawback to this method is that when using
+large root tasks which trigger multiple subtasks, all of these subtasks
+must be processed on the same thread as the root parent task. For
+example, if a task to convert a space triggers multiple subtasks for
+models, textures and shaders, all of those subtasks need to be processed
+on the thread used to convert the space. This reduces the benefit of the
+parallel conversion capabilities that the asset pipeline provides.</p>
+<p class="rubric" id="assetpipeline-non-recursiveconversion">Non-Recursive Conversion</p>
+<p>To maximise the parallel-conversion capabilities of the asset pipeline,
+a non-recursive conversion mode is provided. In this mode, whenever a
+parent task is determined to have a subtask that must be converted, the
+parent task is paused and pushed back into the asset pipeline task
+queue. The asset pipeline goes through a task management process to
+ensure that the next time the parent task is processed, all of its
+subtasks, and any further recursive subtasks have been processed to
+completion. The asset pipeline also detects and protects against cyclic
+dependencies between assets. This mode of operation is the more
+efficient of the two modes of operation, but in this mode dependencies
+between assets can be harder to debug.</p>
+<p>After all the secondary dependencies of a task have been processed, the
+hashes of the dependencies are checked against the assets deps file. If
+the dependencies match, the deps file is then checked for the expected
+outputs of the asset. If the expected outputs match those on disk the
+task is considered up to date and conversion is skipped. If the
+secondary dependencies do not match, or the expected outputs of the
+asset do not match, the converter for the asset is invoked to convert
+the asset via the converter function convert.</p>
+<p>This conversion process is repeated for every conversion task discovered
+by the asset pipeline.</p>
+<p class="rubric" id="assetpipeline-writingconvertersandconversionrules">Writing Converters and Conversion Rules</p>
+<p>The asset pipeline operates in two phases: the discovery phase and the
+conversion phase. During the discovery phase, the asset pipeline
+searches for files on disk that it can convert and creates conversion
+tasks for them. During the conversion phase, the asset pipeline does the
+actual asset conversion. Conversion rules are primarily used during the
+discovery phase and converters during the conversion phase. In most
+cases, when designing a new converter, you will need to create a
+converter and a conversion rule; however, there isn&#8217;t a one-to-one link
+between converters and conversion rules and the two are independent of
+each other.</p>
+<p class="rubric" id="assetpipeline-converters-1">Converters</p>
+<p>To create a new converter, you must derive from the Converter interface
+and implement the following:</p>
+<p><strong>*Constructor*</strong></p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>/// Constructor
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>/// \param params command line parameters for initialising the converter
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Converter( const BW::string&amp; params )
+</pre></div>
+</div>
+</div></div><p>The constructor for your converter must take a <code class="docutils literal"><span class="pre">params</span></code> string
+parameter. Your constructor should defer to the base class constructor
+which will store the <code class="docutils literal"><span class="pre">params</span></code> string in a member variable <code class="docutils literal"><span class="pre">params_</span></code>.
+The <code class="docutils literal"><span class="pre">params</span></code> parameter can contain any optional parameters of your
+choosing and is passed to your constructor from the asset pipeline via
+the conversion rules (see <a class="reference external" href="#AssetPipeline-ConversionRules">Conversion
+Rules</a>).</p>
+<p><strong>*createDependencies*</strong></p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>/// builds the dependency list for a source file.
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>/// \param sourcefile the name of the source file on disk.
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>/// \param dependencies the dependency list to generate.
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>/// \return true if the dependency list was successfully generated
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>virtual bool createDependencies( const BW::string&amp; sourcefile,
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>const Compiler &amp; compiler,
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>DependencyList &amp; dependencies )
+</pre></div>
+</div>
+</div></div><p>This function must be overloaded to inform the asset pipeline of the
+dependencies of the source file you wish to convert. The sourcefile
+parameter contains the absolute path of the asset to convert. The
+compiler parameter contains a reference to the front-end compiler that
+has triggered this conversion. The dependencies parameters contains the
+dependency list structure that must be filled out with the source
+asset&#8217;s dependencies.</p>
+<p><strong>*convert*</strong></p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>/// convert a source file.
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>/// \param sourcefile the name of the source file on disk.
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>/// \param convertedFiles a list of filenames that were converted from the source file.
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>/// \return true if the source file was successfully converted.
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>virtual bool convert( const BW::string&amp; sourcefile,
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>const Compiler &amp; compiler,
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>BW::vector&lt; BW::string &gt; &amp; intermediateFiles,
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>BW::vector&lt; BW::string &gt; &amp; outputFiles )
+</pre></div>
+</div>
+</div></div><p>This function must be overloaded to perform the actual conversion of
+your source asset. The sourcefile parameter contains the absolute path
+of the asset to convert. The compiler parameter contains a reference to
+the front-end compiler that has triggered this conversion. The
+intermediateFiles parameter contains a vector of strings to which you
+must append the path of any intermediate file produced by your
+conversion. The outputFiles parameter contains a vector of strings to
+which you must append the path of any output file produced by your
+conversion.</p>
+<p class="rubric" id="assetpipeline-absolutevsrelativepaths">Absolute vs Relative Paths</p>
+<p>Internally the asset pipeline operates on absolute paths to avoid errors
+with files with the same file name existing in multiple resource
+directories. However, when adding files to the dependency list in the
+createDependencies function, file names must first be converted to
+relative paths. This is necessary as these file names get saved to disk
+and shared via a file cache between multiple users, who may have
+different resource path setups. Conversely, when pushing file names back
+into the intermediateFiles and outputFiles outputs of the convert
+function, these file names need to be absolute paths. The reason for
+this is that the asset pipeline is required to hash the contents of
+these files to store in the generated deps file, and by using absolute
+paths we can ensure that the correct file is hashed.</p>
+<p>There is, however, an important consideration that needs to be made when
+converting between relative and absolute paths. The asset pipeline can
+be run with custom intermediate and output directories. When resolving
+an intermediate or output file to an absolute path, this path needs to
+be resolved to the appropriate directory. As the intermediate and output
+directories are unknown to the converters until run time, the compiler
+interface provides a number of convenience functions for converting
+between absolute and relative paths.</p>
+<ul class="simple">
+<li>Converts the path to a relative path.</li>
+<li><code class="docutils literal"><span class="pre">virtual</span> <span class="pre">bool</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">resolveSourcePath(</span> <span class="pre">BW::string</span> <span class="pre">&amp;</span> <span class="pre">path</span> <span class="pre">)</span> <span class="pre">const</span></code>
+Converts the path to an absolute source path.</li>
+<li>Converts the path to an absolute intermediate path.</li>
+<li>Converts the path to an absolute output path.</li>
+</ul>
+<p>In summary, before adding a file to a dependency list, call
+<code class="docutils literal"><span class="pre">resolveRelativePath</span></code>. Before adding a file to the intermediate files
+list, call <code class="docutils literal"><span class="pre">resolveIntermediatePath</span></code>. Before adding a file to the
+output files list, call <code class="docutils literal"><span class="pre">resolveOutputPath</span></code>. Also note, it is the
+responsibility of the converter to save any files it outputs to the
+appropriate directories. It is good practice to work with absolute paths
+during conversion where possible.</p>
+<p class="rubric" id="assetpipeline-dependencylist">Dependency List</p>
+<p>When pushing back dependencies in the createDependencies function, there
+are a number of options. Assets are currently allowed to have the
+following types of dependencies: source file dependencies, intermediate
+file dependencies, output file dependencies, directory dependencies,
+converter dependencies, and converter parameter dependencies.</p>
+<ul class="simple">
+<li><strong>Source file dependencies</strong> are when an asset file depends on
+another raw source asset. This dependency indicates that the file it
+depends on does not need any sort of processing by the asset
+pipeline.</li>
+<li><strong>Intermediate file dependencies</strong> and <strong>output file dependencies</strong>
+occur when an asset file depends on another compiled asset. These
+types of dependencies tell the asset pipeline that a subtask has to
+be initiated to convert a source asset into a compiled format before
+the conversion of the current asset can take place. The only
+difference between intermediate and output file dependencies is the
+location where the compiled asset is expected to reside.</li>
+<li><strong>Directory dependencies</strong> allow an asset to recursively depend on a
+directory of assets. Directory dependencies can use a regex pattern
+to filter all files in a directory into a smaller subset of files.</li>
+<li><strong>Converter dependencies</strong> allow an asset to depend on a certain
+version of a converter, and <strong>converter parameter dependencies</strong>
+allow an asset to depend on the parameter string that is passed to
+the converter&#8217;s constructor. These last two dependency types are only
+used internally by the asset pipeline system.</li>
+</ul>
+<p>All dependencies can be marked as critical or non critical. A critical
+dependency is a dependency that must exist for the parent asset to be
+converted. If an error is encountered in a critical dependency, it will
+automatically fail the parent asset. A converter should ideally be
+designed to have as few critical dependencies as possible.</p>
+<p>The DependencyList class provides the following functions for adding
+dependencies:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">addPrimarySourceFileDependency(</span> <span class="pre">const</span> <span class="pre">BW::string</span> <span class="pre">&amp;</span> <span class="pre">filename</span> <span class="pre">)</span></code>
+Adds a primary source file dependency. The filename parameter
+specifies the name of the file to depend on.</li>
+<li><code class="docutils literal"><span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">addPrimaryConverterDependency(</span> <span class="pre">size_t</span> <span class="pre">converterId,</span> <span class="pre">size_t</span> <span class="pre">converterVersion</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">)</span></code>
+Adds a primary converter dependency. The converterId parameter
+specifies the id of the converter to depend on, converterVersion
+specifies the version of the converter to depend on.</li>
+<li><code class="docutils literal"><span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">addPrimaryConverterParamsDependency(</span> <span class="pre">const</span> <span class="pre">BW::string</span> <span class="pre">&amp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">converterParams</span> <span class="pre">)</span></code>
+Adds a primary converter params dependency. The convertParams
+parameter specifies the parameter string to depend on.</li>
+<li><code class="docutils literal"><span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">addSecondarySourceFileDependency(</span> <span class="pre">const</span> <span class="pre">BW::string</span> <span class="pre">&amp;</span> <span class="pre">filename,</span> <span class="pre">bool</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">critical</span> <span class="pre">)</span></code>
+Adds a secondary source file dependency. The filename parameter
+specifies the name of the file to depend on, and critical specifies
+whether this is a critical dependency.</li>
+<li><code class="docutils literal"><span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">addSecondaryIntermediateFileDependency(</span> <span class="pre">const</span> <span class="pre">BW::string</span> <span class="pre">&amp;</span> <span class="pre">filename,</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">bool</span> <span class="pre">critical</span> <span class="pre">)</span></code>
+Adds a secondary intermediate file dependency. The filename parameter
+specifies the name of the compiled file to depend on, and critical
+specifies whether this is a critical dependency.</li>
+<li><code class="docutils literal"><span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">addSecondaryOutputFileDependency(</span> <span class="pre">const</span> <span class="pre">BW::string</span> <span class="pre">&amp;</span> <span class="pre">filename,</span> <span class="pre">bool</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">critical</span> <span class="pre">)</span></code>
+Adds a secondary output file dependency. The filename parameter
+specifies the name of the compiled file to depend on, and critical
+specifies whether this is a critical dependency.</li>
+<li><code class="docutils literal"><span class="pre">void</span> <span class="pre">addSecondaryDirectoryDependency(</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">const</span> <span class="pre">BW::string</span> <span class="pre">&amp;</span> <span class="pre">directory,</span> <span class="pre">const</span> <span class="pre">BW::string</span> <span class="pre">&amp;</span> <span class="pre">pattern,</span> <span class="pre">bool</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">recursive,</span> <span class="pre">bool</span> <span class="pre">critical</span> <span class="pre">)</span></code>
+Adds a secondary directory dependency. The pattern parameter
+specifies a regex pattern to match files within a directory,
+specified by the directory parameter, to depend on. Recursive
+specifies whether the pattern should be applied recursively to the
+directory and critical specifies whether this is a critical
+dependency.</li>
+</ul>
+<p class="rubric" id="assetpipeline-errorsandexceptions">Errors and Exceptions</p>
+<p>The asset pipeline is designed to be run as an unattended process.
+Because of this we need to prevent asserts from halting the conversion
+process. As such all calls into the converters are wrapped in try/catch
+blocks. When an assert is fired, the asset pipeline swallows the assert
+and throws an exception. The exception is then caught by the task
+processor and the currently processing task is failed. The assert
+information is added to the error log of the task and the asset pipeline
+is able to continue on. Additionally, the asset pipeline handles the
+ERROR_MSG macro. When this macro is triggered within a converter, the
+currently processing task is marked with an error. Processing is allowed
+to continue on the task, but on completion the task is set as failed and
+the message added to the error log of the task.</p>
+<p>Whilst processing a task, if your converter encounters an error and
+wishes to fail the current task without using an assert or an error
+message, simply return false from the createDependencies or convert
+function of your converter. This will set the current task as failed. If
+a task fails during the createDependencies function, the asset pipeline
+will not attempt to call the convert function.</p>
+<p class="rubric" id="assetpipeline-conversionrules">Conversion Rules</p>
+<p>To create a conversion rule you must implement the ConversionRule
+interface.</p>
+<p>A conversion rule takes a single boolean argument in its constructor:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>ConversionRule( bool bRoot )
+</pre></div>
+</div>
+</div></div><p>The bRoot argument indicates whether a conversion rule is a root rule or
+a non-root rule. Root rules are rules used during the discovery phase of
+the asset pipeline to match files on disk to conversion tasks. Non-root
+rules are used to resolve tasks for sub dependencies of other tasks.</p>
+<p>For example, if we had a rule to match source texture files to texture
+conversion tasks and we flagged this rule as a root rule, the discovery
+phase of the asset pipeline would identify tasks for every source
+texture on disk. However, if we were to flag this rule as a non-root
+rule, the discovery phase of the asset pipeline would not find any
+texture conversion tasks. During the conversion phase of the asset
+pipeline, if another task is processed and found to have a dependency on
+a compiled texture, the non-root texture conversion rule is queried to
+create the texture conversion task. In this way, by carefully selecting
+which conversion rules are flagged as root rules, we can ensure that
+only assets referenced by root assets are compiled and packaged to the
+output directory.</p>
+<p>For a conversion rule to match a source asset file name to a conversion
+task, the following function must be overloaded:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>/* returns true and populates a conversion task if the rule can match the input filename. */
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>virtual bool createTask( const BW::StringRef&amp; sourceFile, ConversionTask&amp; task )
+</pre></div>
+</div>
+</div></div><p>This function is invoked by the asset pipeline whenever it tries to
+determine how to build a source asset. If your conversion rule is able
+to handle the asset passed in by the parameter sourceFile, you must
+initialise the task structure and return true. The task structure
+requires that you set the id, version, and parameters of the converter
+that will handle the conversion of this asset.</p>
+<p>If your rule is a non-root rule (it is intended to be invoked when
+processing the dependencies of other assets), you must also overload the
+following function:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>/* returns true if the rule can match the output filename. */
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>virtual bool getSourceFile( const BW::StringRef&amp; file, BW::string&amp; sourcefile ) const
+</pre></div>
+</div>
+</div></div><p>This function is invoked by the asset pipeline whenever it tries to
+determine what source file is used to create a compiled dependency file.
+In this case, the parameter file will contain the file name of the
+compiled file the asset pipeline is trying to compile. If your
+conversion rule knows what source asset file is used to convert into
+this file, it should fill in the sourcefile parameter and return true.</p>
+<p class="rubric" id="assetpipeline-writingcompilers">Writing Compilers</p>
+<p>The asset pipeline supports the creation of custom front-end interfaces.
+These interfaces enable users to interact with the asset conversion
+process. In the asset pipeline framework, these front-end interfaces are
+known as compilers.</p>
+<p class="rubric" id="assetpipeline-assetcompiler">Asset Compiler</p>
+<p>Any custom front-end compiler you write must inherit from the
+AssetCompiler base class. The AssetCompiler class provides a number of
+overloadable callback functions that are called by the asset pipeline
+during different stages of the discovery and conversion phases. In most
+cases where a compiler callback has been overloaded, it is important
+that the base class implementation of the overloaded function is called
+at some point during your own callback handling code. In some cases, not
+doing so can cause the asset pipeline to fail.</p>
+<p>Below are some of the more useful callbacks that you can overload.</p>
+<p class="rubric" id="assetpipeline-discoverycallbacks">Discovery Callbacks</p>
+<p>The following callbacks are invoked during the discovery phase:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">virtual</span> <span class="pre">bool</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">shouldIterateFile(</span> <span class="pre">const</span> <span class="pre">BW::StringRef</span> <span class="pre">&amp;</span> <span class="pre">file</span> <span class="pre">)</span></code></li>
+<li><code class="docutils literal"><span class="pre">virtual</span> <span class="pre">bool</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">shouldIterateDirectory(</span> <span class="pre">const</span> <span class="pre">BW::StringRef</span> <span class="pre">&amp;</span> <span class="pre">directory</span> <span class="pre">)</span></code></li>
+</ul>
+<p>These callbacks are invoked whenever the task finder attempts to iterate
+a file or directory whilst searching for potential source assets. By
+returning false from either of these functions, you can tell the asset
+pipeline to ignore certain files or directories.</p>
+<p class="rubric" id="assetpipeline-taskcallbacks">Task Callbacks</p>
+<p>The following callbacks are invoked during the conversion phase:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">virtual</span> <span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">onTaskStarted(</span> <span class="pre">ConversionTask</span> <span class="pre">&amp;</span> <span class="pre">conversionTask</span> <span class="pre">)</span></code></li>
+<li><code class="docutils literal"><span class="pre">virtual</span> <span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">onTaskResumed(</span> <span class="pre">ConversionTask</span> <span class="pre">&amp;</span> <span class="pre">conversionTask</span> <span class="pre">)</span></code></li>
+<li><code class="docutils literal"><span class="pre">virtual</span> <span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">onTaskSuspended(</span> <span class="pre">ConversionTask</span> <span class="pre">&amp;</span> <span class="pre">conversionTask</span> <span class="pre">)</span></code></li>
+<li><code class="docutils literal"><span class="pre">virtual</span> <span class="pre">void</span> <span class="pre">onTaskCompleted(</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">ConversionTask</span> <span class="pre">&amp;</span> <span class="pre">conversionTask</span> <span class="pre">)</span></code></li>
+</ul>
+<p>These callbacks are invoked by the task processor whilst processing
+conversion tasks. They provide a mechanism for notifying the compiler of
+the tasks that are currently executing. If you overload these callbacks,
+it is extremely important to call the base implementation, as the
+AssetCompiler uses these callbacks to manage the processing of dependent
+tasks and catching cyclic dependencies.</p>
+<p class="rubric" id="assetpipeline-convertercallbacks">Converter Callbacks</p>
+<p>These callbacks are invoked by the task processor prior to and after the
+createDependencies function on a converter is invoked and prior to and
+after the convert function on a converter is invoked. Once again, if you
+overload these callbacks, make sure you call the base implementation.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">virtual</span> <span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">onPreCreateDependencies(</span> <span class="pre">ConversionTask</span> <span class="pre">&amp;</span> <span class="pre">conversionTask</span> <span class="pre">)</span></code></li>
+<li><code class="docutils literal"><span class="pre">virtual</span> <span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">onPostCreateDependencies(</span> <span class="pre">ConversionTask</span> <span class="pre">&amp;</span> <span class="pre">conversionTask</span> <span class="pre">)</span></code></li>
+<li><code class="docutils literal"><span class="pre">virtual</span> <span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">onPreConvert(</span> <span class="pre">ConversionTask</span> <span class="pre">&amp;</span> <span class="pre">conversionTask</span> <span class="pre">)</span></code></li>
+<li><code class="docutils literal"><span class="pre">virtual</span> <span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">onPostConvert(</span> <span class="pre">ConversionTask</span> <span class="pre">&amp;</span> <span class="pre">conversionTask</span> <span class="pre">)</span></code></li>
+</ul>
+<p class="rubric" id="assetpipeline-conversioncallback">Conversion Callback</p>
+<p>This callback is invoked for every intermediate and output file that is
+generated by the asset pipeline. Note, if an output file is not
+generated during a run of the asset pipeline, due to files being up to
+date, this callback will not be invoked.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">virtual</span> <span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">onOutputGenerated(</span> <span class="pre">const</span> <span class="pre">BW::string</span> <span class="pre">&amp;</span> <span class="pre">filename</span> <span class="pre">)</span></code></li>
+</ul>
+<p class="rubric" id="assetpipeline-cachecallbacks">Cache Callbacks</p>
+<p>These callbacks are invoked whenever the asset pipeline attempts to read
+or write from the shared file cache. If a cache read or write is
+successful, the onCacheRead and onCacheWrite callbacks will be invoked.
+If a cache read or write is not successful, due to network or disk
+errors or a file not existing in the cache, the onCacheReadMiss and
+onCacheWriteMiss callbacks are invoked.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">virtual</span> <span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">onCacheRead(</span> <span class="pre">const</span> <span class="pre">BW::string</span> <span class="pre">&amp;</span> <span class="pre">filename</span> <span class="pre">)</span></code></li>
+<li><code class="docutils literal"><span class="pre">virtual</span> <span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">onCacheReadMiss(</span> <span class="pre">const</span> <span class="pre">BW::string</span> <span class="pre">&amp;</span> <span class="pre">filename</span> <span class="pre">)</span></code></li>
+<li><code class="docutils literal"><span class="pre">virtual</span> <span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">onCacheWrite(</span> <span class="pre">const</span> <span class="pre">BW::string</span> <span class="pre">&amp;</span> <span class="pre">filename</span> <span class="pre">)</span></code></li>
+<li><code class="docutils literal"><span class="pre">virtual</span> <span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">onCacheWriteMiss(</span> <span class="pre">const</span> <span class="pre">BW::string</span> <span class="pre">&amp;</span> <span class="pre">filename</span> <span class="pre">)</span></code></li>
+</ul>
+<p class="rubric" id="assetpipeline-messagecallbacks">Message Callbacks</p>
+<p>These callbacks are invoked whenever a BigWorld Technology message macro
+is used. The intention of these callbacks is to enable the compilers to
+filter message spam from BigWorld Technology systems and choose which
+messages to display, and how to display them to the user. These
+callbacks are also integral to the operation of the asset pipeline, so
+if you choose to overload these functions, make sure you call the base
+implementations.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">virtual</span> <span class="pre">bool</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">handleMessage(</span> <span class="pre">DebugMessagePriority</span> <span class="pre">componentPriority,</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">DebugMessagePriority</span> <span class="pre">messagePriority,</span> <span class="pre">const</span> <span class="pre">BW::string</span> <span class="pre">&amp;</span> <span class="pre">category,</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">DebugMessageSource</span> <span class="pre">messageSource,</span> <span class="pre">const</span> <span class="pre">char</span> <span class="pre">*</span> <span class="pre">format,</span> <span class="pre">va_list</span> <span class="pre">argPtr</span> <span class="pre">)</span></code></li>
+<li><code class="docutils literal"><span class="pre">virtual</span> <span class="pre">void</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">handleCritical(</span> <span class="pre">const</span> <span class="pre">char</span> <span class="pre">*</span> <span class="pre">msg</span> <span class="pre">)</span></code></li>
+</ul>
+<p class="rubric" id="assetpipeline-registeringconvertersandconversionrules">Registering Converters and Conversion Rules</p>
+<p>One of the responsibilities of the compiler front end is to manage the
+converters and conversion rules that are used by the asset pipeline
+framework. The AssetCompiler base class provides two functions to this
+end:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>virtual void registerConversionRule( ConversionRule&amp; conversionRule );
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>virtual void registerConverter( ConverterInfo&amp; converterInfo );
+</pre></div>
+</div>
+</div></div><p>Registering conversion rules is a straight forward process. An instance
+of the conversion rule must be created and then passed to the
+registerConversionRule function. Registering converters is a little more
+complicated. To register a converter, an instance of the following
+structure must be passed to the registerConverter function.</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>/// struct containing information about a converter in the asset pipeline.
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>struct ConverterInfo
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>{
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>public:
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>/// the display name of the converter.
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>BW::string          name_;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>/// the id of the converter. Must be unique to each type of converter.
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>size_t              typeId_;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>/// the current version of the converter.
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>size_t              version_;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>/// converter flags
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>enum
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>{
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>THREAD_SAFE         = 1 &lt;&lt; 0, // can the converter be run on multiple threads.
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>CACHE_DEPENDENCIES  = 1 &lt;&lt; 1, // should dependencies be read and written to the cache.
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>CACHE_CONVERSION    = 1 &lt;&lt; 2, // should conversion be read and written to the cache.
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>DEFAULT_FLAGS       = THREAD_SAFE | CACHE_DEPENDENCIES | CACHE_CONVERSION
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>}                   flags_;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>/// function pointer for creating an instance of the converter.
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>ConverterCreator    creator_;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>};
+</pre></div>
+</div>
+</div></div><p>This structure contains all the necessary information for the asset
+pipeline to instantiate converters to process tasks. The reason we do
+not simply register an instance of the converter on the compiler, as we
+do the conversion rules, is because the asset pipeline can process tasks
+on multiple threads, meaning more than one converter of the same type
+may be required at any one time. Allowing the asset pipeline to create
+converters on the fly avoids the need for converters to manage thread
+local storage or thread locks around member variables.</p>
+<p>A standard practice for managing converter info structures is to define
+the following on your converter class definition:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>/// MyConverter.hpp
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>static size_t getTypeId() { return s_TypeId; }
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>static size_t getVersion() { return s_Version; }
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>static const char * getTypeName() { return &quot;MyConverter&quot;; }
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>static Converter * createConverter( const BW::string&amp; params ) { return new MyConverter( params ); }
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>static const size_t s_TypeId;</div></blockquote>
+<div class="highlight-none"><div class="highlight"><pre><span></span>static const size_t s_Version;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>/// MyConverter.cpp</div></blockquote>
+<div class="highlight-none"><div class="highlight"><pre><span></span>const size_t MyConverter::s_TypeId = hash_string( MyConverter::getTypeName(), strlen( MyConverter::getTypeName()));
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>const size_t MyConverter::s_Version = 1;
+</pre></div>
+</div>
+</div></div><p>Defining your converter info then becomes:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>ConverterInfo myConverterInfo;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>myConverterInfo.name_ = MyConverter::getTypeName();
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>myConverterInfo.typeId_ = MyConverter::getTypeId();
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>myConverterInfo.version_ = MyConverter::getVersion();
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>myConverterInfo.flags_ = myConverterFlags;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>myConverterInfo.creator_ = MyConverter::createConverter;
+</pre></div>
+</div>
+</div></div><p>A convenience macro exists to allow you to then replace this with:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>ConverterInfo myConverterInfo;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>INIT_CONVERTER_INFO( myConverterInfo, ConverterInfo , myConverterFlags);
+</pre></div>
+</div>
+</div></div><p class="rubric" id="assetpipeline-initiatingabuild">Initiating a Build</p>
+<p>Once all converters and conversion rules have been registered, a
+compiler can initiate a build. Compilers have access to both the
+discovery phase of the asset pipeline, through the taskFinder_ member,
+and the conversion phase of the asset pipeline, through the
+taskProcessor_ member.</p>
+<p>To initiate a search for all source assets that match any of the
+registered root rules, call the following:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>taskFinder_.findTasks( path );
+</pre></div>
+</div>
+</div></div><p>where path is the directory or file to search.</p>
+<p>To get the specific task for a source asset that matched either a root
+rule or a non-root rule, call the following:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>ConversionTask &amp; task = taskFinder_.getTask( file );
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>if (task.converterId_ != ConversionTask::s_unknownId)
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>{
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>queueTask( task );
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>}
+</pre></div>
+</div>
+</div></div><p>In this case, it is necessary to manually queue the conversion task so
+that it will be processed during the conversion phase.</p>
+<p>To initiate the conversion phase, simply call:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>taskProcessor_.processTasks();
+</pre></div>
+</div>
+</div></div><p class="rubric" id="assetpipeline-writingplugins">Writing Plugins</p>
+<p>The asset pipeline was designed with a DLL plugin architecture in mind.
+Although a compiler can be implemented without using the plugin
+framework, there are a number of benefits to using plugins. By using a
+plugin framework, converter DLLs can be built once and distributed
+between different compiler front ends. Also, developing a new converter
+plugin does not require a rebuild of all the different compiler front
+ends that may exist. This prevents changes to converter plugins,
+introducing bugs into the compiler executable.</p>
+<p class="rubric" id="assetpipeline-pluginloader">Plugin Loader</p>
+<p>To allow a compiler to make use of the asset pipeline plugin system, a
+compiler must inherit from the PluginLoader class.</p>
+<p>The PluginLoader class provides a number of functions for loading and
+unloading converter DLLs.</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>void initPlugins();
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>void finiPlugins();
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>HMODULE loadPlugin( LPCWSTR plugin );</div></blockquote>
+<div class="highlight-none"><div class="highlight"><pre><span></span>bool unloadPlugin( HMODULE plugin );
+</pre></div>
+</div>
+</div></div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">initPlugins</span></code> reads a file named &#8220;&lt;executable&gt;_plugins.txt&#8221; and
+loads the appropriate (debug or hybrid) plugin DLLs specified within.</li>
+<li><code class="docutils literal"><span class="pre">finiPlugins</span></code> unloads all currently loaded DLLs.</li>
+<li><code class="docutils literal"><span class="pre">loadPlugin</span></code> loads the plugin with file name plugin.</li>
+<li><code class="docutils literal"><span class="pre">unloadPlugin</span></code> unloads a specific loaded plugin by its HMODULE.</li>
+</ul>
+<p>When using these functions to load converter plugins, it is the
+responsibility of the converter plugin code to register conversion rules
+and converters with your compiler.</p>
+<p class="rubric" id="assetpipeline-converterplugin">Converter Plugin</p>
+<p>To create a converter plugin there are two functions that your DLL must
+expose. When scanning for potential plugins to load, the plugin loader
+will search for these functions to determine whether your plugin can be
+loaded. These functions are defined differently on debug and hybrid
+builds. This allows debug and hybrid configurations of your DLLs to
+reside side by side in a file directory whilst still ensuring that the
+plugin loader can, and will, only load the appropriate configuration
+version of your DLL. To facilitate exposing the correct dll functions
+based on configuration, use the macros PLUGIN_INIT_FUNC and
+PLUGIN_FINI_FUNC.</p>
+<p>The following is an example of how to write a converter plugin:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>BW_BEGIN_NAMESPACE
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>DECLARE_APP_DATA( &#8220;MyConverter&#8221;, true )</div></blockquote>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>MyConversionRule myConversionRule;</div></blockquote>
+<div class="highlight-none"><div class="highlight"><pre><span></span>ConverterInfo myConverterInfo;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>PLUGIN_INIT_FUNC</div></blockquote>
+<div class="highlight-none"><div class="highlight"><pre><span></span>{
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Compiler * compiler = dynamic_cast&lt; Compiler * &gt;( &amp;pluginLoader );
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>if (compiler == NULL)
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>{
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>return false;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>}
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>// Init any systems required by your converter</div></blockquote>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>INIT_CONVERTER_INFO( myConverterInfo, MyConverter, DEFAULT_FLAGS );</div></blockquote>
+<div class="highlight-none"><div class="highlight"><pre><span></span>compiler-&gt;registerConversionRule( myConversionRule );
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>compiler-&gt;registerConverter( myConverterInfo );
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>return true;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>}
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>PLUGIN_FINI_FUNC</div></blockquote>
+<div class="highlight-none"><div class="highlight"><pre><span></span>{
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>// Fini any systems that were started by your converter
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>return true;</div></blockquote>
+<div class="highlight-none"><div class="highlight"><pre><span></span>}
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>BW_END_NAMESPACE</div></blockquote>
+</div></div><p>The <code class="docutils literal"><span class="pre">DECLARE_APP_DATA</span></code> macro is a convenience macro to set up a number
+of global constant values that allow the core BigWorld Technology
+systems to be run in a plugin. The first parameter of this macro is a
+unique identifier for your plugin, and the second is a boolean to
+indicate that the current module is being compiled as a plugin.</p>
+<p>The <code class="docutils literal"><span class="pre">PLUGIN_INIT_FUNC</span></code> macro automatically generates an exposed
+function that gets called when your plugin is loaded. This function
+takes one argument: pluginLoader. As shown in the example above, you can
+verify the module attempting to load your plugin is actually a compiler
+by dynamically casting the pluginLoader argument to a Compiler object.
+If the cast fails, the function should return false.</p>
+<p>The <code class="docutils literal"><span class="pre">PLUGIN_FINI_FUNC</span></code> macro automatically generates an exposed
+function that gets called when your plugin is unloaded.</p>
+<p class="rubric" id="assetpipeline-writingunittests">Writing Unit Tests</p>
+<p>The final step in writing a converter plugin for the asset pipeline is
+to write unit tests. To make this as easy as possible, a custom
+front-end compiler is provided. The TestCompiler provides a number of
+convenience functions that can be used to easily test conversion rules
+and converters.</p>
+<p>To test a conversion rule, use the following function:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>// Test that a conversion rule can be found for a source file
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>bool testConversionRule( const StringRef &amp; sourceFile,
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>const StringRef &amp; outputFile,
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>const StringRef &amp; converterName,
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>const StringRef &amp; converterParams );
+</pre></div>
+</div>
+</div></div><p>This function takes a source asset file name, the expected output file,
+the expected name of the converter that would convert this asset, and
+the expected conversion parameters for this asset. If a source asset is
+expected to compile to more than one output file, this function should
+be called for each of the individual output file names.</p>
+<p>There are several steps involved to test a converter.</p>
+<p>First, the test needs to be set up. To set up a test we must provide the
+TestCompiler with the source files to convert. Optionally, we can also
+provide copies of the output files we expect to be produced by the
+conversion process. The following functions are provided for setting up
+a converter test:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>// Set the directory where the source files for this test can be found
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>bool setSourceFileDirectory( const StringRef &amp; sourceFileDirectory );
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>// Set the directory where the output files for this test can be found</div></blockquote>
+<div class="highlight-none"><div class="highlight"><pre><span></span>bool setOutputFileDirectory( const StringRef &amp; outputFileDirectory );
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>// Add a file from the source file directory that should be used in this test</div></blockquote>
+<div class="highlight-none"><div class="highlight"><pre><span></span>bool addSourceFile( const StringRef &amp; sourceFile );
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>// Add a file from the output file directory that should be built in this test</div></blockquote>
+<div class="highlight-none"><div class="highlight"><pre><span></span>bool addOutputFile( const StringRef &amp; outputFile );
+</pre></div>
+</div>
+</div></div><p>The <code class="docutils literal"><span class="pre">setSourceFileDirectory</span></code> function tells the TestCompiler where to
+find the source assets to use for the test. The
+<code class="docutils literal"><span class="pre">setOutputFileDirectory</span></code> functiion tells the TestCompiler where to
+find the output files to verify the conversion process against. The
+<code class="docutils literal"><span class="pre">addSourceFile</span></code> and <code class="docutils literal"><span class="pre">addOutputFile</span></code> functions tell the TestCompiler
+which files in the source directory and output directory to use for the
+test.</p>
+<p>After the test has been set up, it can be run with one of the following
+functions:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>// Trigger a test build for a single file
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>bool testBuildFile( const StringRef &amp; file );
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>// Trigger a test build for a directory</div></blockquote>
+<div class="highlight-none"><div class="highlight"><pre><span></span>bool testBuildDirectory( const StringRef &amp; directory );
+</pre></div>
+</div>
+</div></div><p>The testBuildFile function tests building a single file. The
+testBuildDirectory function tests building an entire directory of files.
+The input to these functions should be the source asset or directory to
+build relative to the source file directory. Normally you will want to
+call testBuildDirectory with an empty directory parameter to build every
+source asset in the source file directory.</p>
+<p>When the TestCompiler finishes building your assets it will
+automatically verify that the outputs produced by the asset pipeline
+exactly match the copies of the expected outputs that you provided when
+setting up the test. If you did not provide any expected outputs to the
+test setup then the TestCompiler will assume the conversion process
+completed successfully. The TestCompiler then provides the following
+functions to further verify the results of the conversion process:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>// Get the number of tasks that were processed by this test
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>long getTaskCount() const { return taskCount_; }
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>// Get the number of tasks that were failed by this test</div></blockquote>
+<div class="highlight-none"><div class="highlight"><pre><span></span>long getTaskFailedCount() const { return taskFailedCount_; }
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>// Returns if this test encountered a cyclic error</div></blockquote>
+<div class="highlight-none"><div class="highlight"><pre><span></span>bool hasCyclicError() const { return hasCyclicError_; }
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>// Returns if this test encountered a dependency error</div></blockquote>
+<div class="highlight-none"><div class="highlight"><pre><span></span>bool hasDependencyError() const { return hasDependencyError_; }
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>::
+</pre></div>
+</div>
+<blockquote>
+<div>// Returns if this test encountered a conversion error</div></blockquote>
+<div class="highlight-none"><div class="highlight"><pre><span></span>bool hasConversionError() const { return hasConversionError_; }
+</pre></div>
+</div>
+</div></div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">getTaskCount</span></code> allows you to verify how many tasks were actually
+processed.</li>
+<li><code class="docutils literal"><span class="pre">getTaskFailedCount</span></code> allows you to verify how many of these tasks
+failed, as you may wish to test certain situations in which your
+converter should fail.</li>
+<li><code class="docutils literal"><span class="pre">hasCyclicError</span></code> will tell you if a cyclic dependency error occured
+during conversion.</li>
+<li><code class="docutils literal"><span class="pre">hasDependencyError</span></code> will tell you if any task reported an error
+during the createDependencies function of your converter.</li>
+<li><code class="docutils literal"><span class="pre">hasConversionError</span></code> will tell you if any task reported an error
+during the convert function of your converter.</li>
+</ul>
+<p>After the TestCompiler finishes its testing, it will automatically clean
+up any changes it may have made on disk and return.</p>
+<p class="rubric" id="assetpipeline-assetrules">Asset Rules</p>
+<p>The asset pipeline uses conversion rules to determine which files on
+disk are assets, and how to convert them.</p>
+<p>Conversion rules can be created in C++ and registered through a plugin
+system (for more information, see <a class="reference external" href="#AssetPipeline-RegisteringConvertersandC">Registering Converters and Conversion
+Rules</a>.</p>
+<p>Alternatively, conversion rules can be created through
+<code class="docutils literal"><span class="pre">asset_rules.xml</span></code> configuration files. An <code class="docutils literal"><span class="pre">asset_rules.xml</span></code> file can
+contain any number of source rules and destination rules.</p>
+<p class="rubric" id="assetpipeline-sourcerules">Source Rules</p>
+<p>A source rule contains a regex to match source assets to converters. For
+example:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>&lt;rule pattern=&quot;^texture_details\.xml$&quot;&gt;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;root&gt;true&lt;/root&gt;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;converter&gt;HierarchicalConfigConverter&lt;/converter&gt;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;converterParams&gt;-f texture_details.xml -o system/data/texture_detail_levels.xml&lt;/converterParams&gt;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;/rule&gt;
+</pre></div>
+</div>
+</div></div><p>This rule matches the source asset “texture_details.xml” to the
+HierarchicalConfigConverter with the parameters “-f texture_details.xml
+-o system/data/texture_detail_levels.xml” and specifies that the asset
+is a root asset.</p>
+<p class="rubric" id="assetpipeline-destinationrules">Destination Rules</p>
+<p>A destination rule contains a regex to match built assets to their
+source files, through a regex replace pattern. For example:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>&lt;rule pattern=&quot;.*(\\.fxo)$&quot;&gt;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;sourcePattern&gt;(\\.[0-1]+)?(\\.fxo)$&lt;/sourcePattern&gt;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;sourceFormat&gt;.fx&lt;/sourceFormat&gt;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;/rule&gt;
+</pre></div>
+</div>
+</div></div><p>This rule matches a file such as “myshader.01.fxo” and uses
+regex_replace( “&gt;(\\.[0-1]+)?(\\.fxo)$”, “.fx” ) to determine the
+source file, “myshader.fx”.</p>
+<p class="rubric" id="assetpipeline-locationofasset-rules-xml">Location of asset_rules.xml</p>
+<p>You can place <code class="docutils literal"><span class="pre">asset_rules.xml</span></code> files in any resource folder. The
+folder hierarchy is used to define custom rules or overrides for
+subfolders. For example, consider if the following rule existed in an
+<code class="docutils literal"><span class="pre">asset_rules.xml</span></code> file in the <code class="docutils literal"><span class="pre">bigworld/shaders</span></code> folder.</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>&lt;rule pattern=&quot;.*(\\.fx)$&quot;&gt;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;root&gt;true&lt;/root&gt;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;converter&gt;EffectConverter&lt;/converter&gt;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;/rule&gt;
+</pre></div>
+</div>
+</div></div><p>Any file with the <code class="docutils literal"><span class="pre">.fx</span></code> suffix in any folder under
+<code class="docutils literal"><span class="pre">bigworld/shaders</span></code> would be considered a root asset and would use the
+EffectConverter. Suppose we then created an <code class="docutils literal"><span class="pre">asset_rules.xml</span></code> file
+containing the following rule, in the <code class="docutils literal"><span class="pre">bigworld/shaders/custom</span></code>
+folder:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>&lt;rule pattern=&quot;.*(\\.fx)$&quot;&gt;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;root&gt;false&lt;/root&gt;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;/rule&gt;
+</pre></div>
+</div>
+</div></div><p>Any file with <code class="docutils literal"><span class="pre">.fx</span></code> suffix in any folder under
+<code class="docutils literal"><span class="pre">bigworld/shaders/custom</span></code> would now be considered a non-root asset.
+However, as these assets would still be in a subfolder of
+<code class="docutils literal"><span class="pre">bigworld/shaders</span></code>, they would still be using the EffectConverter as
+defined by the rule in <code class="docutils literal"><span class="pre">bigworld/shaders</span></code>.</p>
+<p class="rubric" id="assetpipeline-excludingfilesfromconversion">Excluding Files from Conversion</p>
+<p>Source rules can also use a “noConversion” tag to indicate that certain
+files should not be converted. For example if the following rule was
+added to the <code class="docutils literal"><span class="pre">asset_rules.xml</span></code> file in the <code class="docutils literal"><span class="pre">bigworld/shaders</span></code>
+folder, any file ending in “do_not_convert.fx” would be ignored by the
+asset pipeline:</p>
+<div><div><div class="highlight-none"><div class="highlight"><pre><span></span>&lt;rule pattern=&quot;.*(do_not_convert\\.fx)$&quot;&gt;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt; noCoversion &gt;false&lt;/noCoversion&gt;
+</pre></div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&lt;/rule&gt;
+</pre></div>
+</div>
+</div></div></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Wargaming Sydney.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

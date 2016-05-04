@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="accelerate__to__entity__controller_8hpp" kind="file" language="C++">
+    <compoundname>accelerate_to_entity_controller.hpp</compoundname>
+    <includes refid="base__acceleration__controller_8hpp" local="yes">base_acceleration_controller.hpp</includes>
+    <includedby refid="accelerate__to__entity__controller_8cpp" local="yes">cellapp/accelerate_to_entity_controller.cpp</includedby>
+    <includedby refid="entity__navigate_8cpp" local="yes">cellapp/entity_navigate.cpp</includedby>
+    <incdepgraph>
+      <node id="6167">
+        <label>build/bwapi.hpp</label>
+      </node>
+      <node id="6165">
+        <label>script/script_object.hpp</label>
+      </node>
+      <node id="6163">
+        <label>cstdmf/binary_stream.hpp</label>
+      </node>
+      <node id="6166">
+        <label>cstdmf/md5.hpp</label>
+      </node>
+      <node id="6164">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="6168">
+        <label>server/updatable.hpp</label>
+      </node>
+      <node id="6159">
+        <label>base_acceleration_controller.hpp</label>
+        <link refid="base__acceleration__controller_8hpp_source"/>
+        <childnode refid="6160" relation="include">
+        </childnode>
+        <childnode refid="6162" relation="include">
+        </childnode>
+        <childnode refid="6168" relation="include">
+        </childnode>
+      </node>
+      <node id="6161">
+        <label>Python.h</label>
+      </node>
+      <node id="6160">
+        <label>controller.hpp</label>
+        <link refid="controller_8hpp_source"/>
+        <childnode refid="6161" relation="include">
+        </childnode>
+        <childnode refid="6162" relation="include">
+        </childnode>
+        <childnode refid="6163" relation="include">
+        </childnode>
+        <childnode refid="6164" relation="include">
+        </childnode>
+        <childnode refid="6165" relation="include">
+        </childnode>
+        <childnode refid="6166" relation="include">
+        </childnode>
+        <childnode refid="6167" relation="include">
+        </childnode>
+      </node>
+      <node id="6162">
+        <label>network/basictypes.hpp</label>
+      </node>
+      <node id="6158">
+        <label>cellapp/accelerate_to_entity_controller.hpp</label>
+        <link refid="accelerate_to_entity_controller.hpp"/>
+        <childnode refid="6159" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_accelerate_to_entity_controller" prot="public">AccelerateToEntityController</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ACCELERATE_TO_ENTITY_CONTROLLER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ACCELERATE_TO_ENTITY_CONTROLLER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;base_acceleration_controller.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_accelerate_to_entity_controller" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_accelerate_to_entity_controller" kindref="compound">AccelerateToEntityController</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_base_acceleration_controller" kindref="compound">BaseAccelerationController</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>DECLARE_CONTROLLER_TYPE(<sp/><ref refid="class_accelerate_to_entity_controller" kindref="compound">AccelerateToEntityController</ref><sp/>)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_accelerate_to_entity_controller" kindref="compound">AccelerateToEntityController</ref>(<sp/><sp/><sp/>EntityID<sp/>destEntityID<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>acceleration<sp/>=<sp/>0.0f,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxSpeed<sp/>=<sp/>0.0f,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>range<sp/>=<sp/>0.0f,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_base_acceleration_controller_1a1eeb15aa12b74f0c68d61922ae93d171" kindref="member">Facing</ref><sp/>facing<sp/>=<sp/><ref refid="class_base_acceleration_controller_1a1eeb15aa12b74f0c68d61922ae93d171a83a38a977ed23f98e010f9c49fb7e9b0" kindref="member">FACING_NONE</ref><sp/>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_accelerate_to_entity_controller_1adfa0cb0d7117d61ecccffe306affa883" kindref="member">stopReal</ref>(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isFinalStop<sp/>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_accelerate_to_entity_controller_1a96d8f1f4850bd6c05805fc669843067f" kindref="member">writeRealToStream</ref>(<sp/>BinaryOStream<sp/>&amp;<sp/>stream<sp/>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_accelerate_to_entity_controller_1a7c4032411c194756d234b059aad84b1a" kindref="member">readRealFromStream</ref>(<sp/>BinaryIStream<sp/>&amp;<sp/>stream<sp/>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_accelerate_to_entity_controller_1ab0209da1fc5edf75819db6b43de6fb57" kindref="member">update</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>recalcOffset();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>EntityID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>destEntityID_;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_smart_pointer" kindref="compound">EntityPtr</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pDestEntity_;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>Position3D<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>destination_;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>Position3D<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offset_;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>range_;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ACCELERATE_TO_ENTITY_CONTROLLER_HPP</highlight></codeline>
+    </programlisting>
+    <location file="cellapp/accelerate_to_entity_controller.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,473 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_py_cell_data" kind="class" language="C++" prot="public">
+    <compoundname>PyCellData</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">PyObjectPlus</basecompoundref>
+    <includes refid="py__cell__data_8hpp" local="no">py_cell_data.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_py_cell_data_1a0dd535344593542dad6869b291120ce3" prot="private" static="no" mutable="no">
+        <type>const Vector3 &amp;</type>
+        <definition>const Vector3&amp; PyCellData::pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="42" column="1" bodyfile="baseapp/py_cell_data.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_py_cell_data_1a0a865e725651d5fa9dcc83eb8eed431e" prot="private" static="no" mutable="no">
+        <type>const Vector3 const Direction3D &amp;</type>
+        <definition>const Vector3 const Direction3D&amp; PyCellData::dir</definition>
+        <argsstring></argsstring>
+        <name>dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="43" column="1" bodyfile="baseapp/py_cell_data.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_py_cell_data_1a54a9c920af6500ac09616b4672e87614" prot="private" static="no" mutable="no">
+        <type>const Vector3 const Direction3D SpaceID</type>
+        <definition>const Vector3 const Direction3D SpaceID PyCellData::spaceID</definition>
+        <argsstring></argsstring>
+        <name>spaceID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="44" column="1" bodyfile="baseapp/py_cell_data.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_py_cell_data_1ad924233aaa6d0d67e5abf14e78bd1f76" prot="private" static="no" mutable="no">
+        <type><ref refid="class_smart_pointer" kindref="compound">EntityTypePtr</ref></type>
+        <definition>EntityTypePtr PyCellData::pEntityType_</definition>
+        <argsstring></argsstring>
+        <name>pEntityType_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="59" column="1" bodyfile="baseapp/py_cell_data.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_py_cell_data_1ab165b8d60431371151e56f5663eba256" prot="private" static="no" mutable="no">
+        <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+        <definition>PyObjectPtr PyCellData::pDict_</definition>
+        <argsstring></argsstring>
+        <name>pDict_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="60" column="1" bodyfile="baseapp/py_cell_data.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_py_cell_data_1a4d93ce43e985cc30c6652880e184cad3" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string PyCellData::data_</definition>
+        <argsstring></argsstring>
+        <name>data_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="61" column="1" bodyfile="baseapp/py_cell_data.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_py_cell_data_1a6ca69ee53aeaff9b1ab07707dccad760" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PyCellData::dataHasPersistentOnly_</definition>
+        <argsstring></argsstring>
+        <name>dataHasPersistentOnly_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="62" column="1" bodyfile="baseapp/py_cell_data.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_py_cell_data_1a55c45ab3d0b1d62e0c265554ce9846d3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PyCellData::migrate</definition>
+        <argsstring>(EntityTypePtr pType)</argsstring>
+        <name>migrate</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">EntityTypePtr</ref></type>
+          <declname>pType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method migrates this cell data to the new given type. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="26" column="1" bodyfile="baseapp/py_cell_data.cpp" bodystart="463" bodyend="470"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_cell_data_1a70f30339d1ae30b638c96de8f2444afd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+        <definition>PyObjectPtr PyCellData::getDict</definition>
+        <argsstring>()</argsstring>
+        <name>getDict</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the cell properties as a dictionary. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="28" column="1" bodyfile="baseapp/py_cell_data.cpp" bodystart="378" bodyend="385"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_cell_data_1a06f7f07585ff26b94e0649cf2116c0ee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+        <definition>PyObjectPtr PyCellData::createPyDictOnDemand</definition>
+        <argsstring>()</argsstring>
+        <name>createPyDictOnDemand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method creates the Python dictionary version of the cell properties (as opposed to the original streamed version) when it is needed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="31" column="1" bodyfile="baseapp/py_cell_data.cpp" bodystart="392" bodyend="412"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_cell_data_1a316192f413934592904fa3b352c9051f" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PyCellData::BWAPI</definition>
+        <argsstring>(BASEAPP_API) static void addSpatialData(const ScriptObject &amp;pCellData</argsstring>
+        <name>BWAPI</name>
+        <param>
+          <type>BASEAPP_API</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="41" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_py_cell_data_1a12d78d15120bab259ef6f97e900706e4" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PyCellData::addToStream</definition>
+        <argsstring>(BinaryOStream &amp;stream, EntityTypePtr pType, PyObject *pCellData, bool addPosAndDir, bool addPersistentOnly)</argsstring>
+        <name>addToStream</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">EntityTypePtr</ref></type>
+          <declname>pType</declname>
+        </param>
+        <param>
+          <type>PyObject *</type>
+          <declname>pCellData</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>addPosAndDir</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>addPersistentOnly</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds this cell data to the input stream. If the dictionary was never created, it only needs to transfer the blob.</para><para>This static method adds a <ref refid="class_py_cell_data" kindref="compound">PyCellData</ref> or dictionary to the input stream.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The stream to add to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the entity type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pCellData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Python object containing the properties. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>addPosAndDir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Indicates whether or not position and direction should be added to the stream. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>addPersistentOnly</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Indicates whether or not non-persistent data should be added to the stream. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="33" column="1" bodyfile="baseapp/py_cell_data.cpp" bodystart="305" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_cell_data_1afd3fecab392dc8585eac0ba7bbf5183e" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 PyCellData::getPos</definition>
+        <argsstring>(const ScriptObject &amp;pCellData)</argsstring>
+        <name>getPos</name>
+        <param>
+          <type>const ScriptObject &amp;</type>
+          <declname>pCellData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the pos property associated with the input cell data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="36" column="1" bodyfile="baseapp/py_cell_data.cpp" bodystart="140" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_cell_data_1a73a338d4d41a93275ef5e30d62884b5b" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Direction3D</type>
+        <definition>Direction3D PyCellData::getDir</definition>
+        <argsstring>(const ScriptObject &amp;pCellData)</argsstring>
+        <name>getDir</name>
+        <param>
+          <type>const ScriptObject &amp;</type>
+          <declname>pCellData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the dir property associated with the input cell data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="37" column="1" bodyfile="baseapp/py_cell_data.cpp" bodystart="155" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_cell_data_1a8c10af18383f179d2120bb12f8277f1d" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SpaceID</type>
+        <definition>SpaceID PyCellData::getSpaceID</definition>
+        <argsstring>(ScriptObject pCellData)</argsstring>
+        <name>getSpaceID</name>
+        <param>
+          <type>ScriptObject</type>
+          <declname>pCellData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the spaceID property associated with the input cell data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="38" column="1" bodyfile="baseapp/py_cell_data.cpp" bodystart="174" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_cell_data_1a62310a0924f12b19dd6523385f7ec17e" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PyCellData::getOnGround</definition>
+        <argsstring>(ScriptObject pCellData)</argsstring>
+        <name>getOnGround</name>
+        <param>
+          <type>ScriptObject</type>
+          <declname>pCellData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="39" column="1" bodyfile="baseapp/py_cell_data.cpp" bodystart="202" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_cell_data_1a9673f136083178e2ab1e80c355be9207" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BW::string</type>
+        <definition>BW::string PyCellData::getTemplateID</definition>
+        <argsstring>(ScriptObject pCellData)</argsstring>
+        <name>getTemplateID</name>
+        <param>
+          <type>ScriptObject</type>
+          <declname>pCellData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="40" column="1" bodyfile="baseapp/py_cell_data.cpp" bodystart="225" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_cell_data_1aacfc2897556054e4b0d9919620d4e478" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PyCellData::addTemplateID</definition>
+        <argsstring>(ScriptObject pCellData, const BW::string &amp;templateID)</argsstring>
+        <name>addTemplateID</name>
+        <param>
+          <type>ScriptObject</type>
+          <declname>pCellData</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>templateID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="45" column="1" bodyfile="baseapp/py_cell_data.cpp" bodystart="252" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_cell_data_1a9307575b0ab6136be36c56fbc6a0bcd6" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PyCellData::hasNonSpatialData</definition>
+        <argsstring>(const ScriptObject &amp;pCellData)</argsstring>
+        <name>hasNonSpatialData</name>
+        <param>
+          <type>const ScriptObject &amp;</type>
+          <declname>pCellData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This static method checks if cell data contains any non-spatial properties.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCellData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Python object containing the properties. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="47" column="1" bodyfile="baseapp/py_cell_data.cpp" bodystart="449" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_cell_data_1a9e8a149bb4857ead67391a4dba6e0d97" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PyCellData::addMapToStream</definition>
+        <argsstring>(BinaryOStream &amp;stream, EntityTypePtr pEntityType, const ScriptMapping &amp;dict, bool addPosAndDir, bool addPersistentOnly)</argsstring>
+        <name>addMapToStream</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">EntityTypePtr</ref></type>
+          <declname>pEntityType</declname>
+        </param>
+        <param>
+          <type>const ScriptMapping &amp;</type>
+          <declname>dict</declname>
+          <defname>map</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>addPosAndDir</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>addPersistentOnly</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This static method adds cell properties as a dictionary into the stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="50" column="1" bodyfile="baseapp/py_cell_data.cpp" bodystart="349" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="class_py_cell_data_1a5314ea2aaa3f5149d42334b286176b2e" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 PyCellData::getPosOrDir</definition>
+        <argsstring>(ScriptObject pCellData, const char *pName, int offset)</argsstring>
+        <name>getPosOrDir</name>
+        <param>
+          <type>ScriptObject</type>
+          <declname>pCellData</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pName</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/py_cell_data.hpp" line="56" column="1" bodyfile="baseapp/py_cell_data.cpp" bodystart="113" bodyend="134"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to wrap cell data. It keeps the information as a blob and only creates a dictionary if necessary. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2229">
+        <label>PyCellData</label>
+        <link refid="class_py_cell_data"/>
+        <childnode refid="2230" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2230">
+        <label>PyObjectPlus</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2231">
+        <label>PyCellData</label>
+        <link refid="class_py_cell_data"/>
+        <childnode refid="2232" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2232">
+        <label>PyObjectPlus</label>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/py_cell_data.hpp" line="16" column="1" bodyfile="baseapp/py_cell_data.hpp" bodystart="15" bodyend="63"/>
+    <listofallmembers>
+      <member refid="class_py_cell_data_1a9e8a149bb4857ead67391a4dba6e0d97" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>addMapToStream</name></member>
+      <member refid="class_py_cell_data_1aacfc2897556054e4b0d9919620d4e478" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>addTemplateID</name></member>
+      <member refid="class_py_cell_data_1a12d78d15120bab259ef6f97e900706e4" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>addToStream</name></member>
+      <member refid="class_py_cell_data_1a316192f413934592904fa3b352c9051f" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>BWAPI</name></member>
+      <member refid="class_py_cell_data_1a06f7f07585ff26b94e0649cf2116c0ee" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>createPyDictOnDemand</name></member>
+      <member refid="class_py_cell_data_1a4d93ce43e985cc30c6652880e184cad3" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>data_</name></member>
+      <member refid="class_py_cell_data_1a6ca69ee53aeaff9b1ab07707dccad760" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>dataHasPersistentOnly_</name></member>
+      <member refid="class_py_cell_data_1a0a865e725651d5fa9dcc83eb8eed431e" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>dir</name></member>
+      <member refid="class_py_cell_data_1a70f30339d1ae30b638c96de8f2444afd" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>getDict</name></member>
+      <member refid="class_py_cell_data_1a73a338d4d41a93275ef5e30d62884b5b" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>getDir</name></member>
+      <member refid="class_py_cell_data_1a62310a0924f12b19dd6523385f7ec17e" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>getOnGround</name></member>
+      <member refid="class_py_cell_data_1afd3fecab392dc8585eac0ba7bbf5183e" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>getPos</name></member>
+      <member refid="class_py_cell_data_1a5314ea2aaa3f5149d42334b286176b2e" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>getPosOrDir</name></member>
+      <member refid="class_py_cell_data_1a8c10af18383f179d2120bb12f8277f1d" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>getSpaceID</name></member>
+      <member refid="class_py_cell_data_1a9673f136083178e2ab1e80c355be9207" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>getTemplateID</name></member>
+      <member refid="class_py_cell_data_1a9307575b0ab6136be36c56fbc6a0bcd6" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>hasNonSpatialData</name></member>
+      <member refid="class_py_cell_data_1a55c45ab3d0b1d62e0c265554ce9846d3" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>migrate</name></member>
+      <member refid="class_py_cell_data_1ab165b8d60431371151e56f5663eba256" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>pDict_</name></member>
+      <member refid="class_py_cell_data_1ad924233aaa6d0d67e5abf14e78bd1f76" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>pEntityType_</name></member>
+      <member refid="class_py_cell_data_1a0dd535344593542dad6869b291120ce3" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>pos</name></member>
+      <member refid="class_py_cell_data_1a54a9c920af6500ac09616b4672e87614" prot="private" virt="non-virtual"><scope>PyCellData</scope><name>spaceID</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

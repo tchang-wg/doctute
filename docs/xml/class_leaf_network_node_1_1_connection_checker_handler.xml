@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_leaf_network_node_1_1_connection_checker_handler" kind="class" language="C++" prot="private">
+    <compoundname>LeafNetworkNode::ConnectionCheckerHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">TimerHandler</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_leaf_network_node_1_1_connection_checker_handler_1a3d1f33f12f3766a3a3689221f71773a1" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_leaf_network_node" kindref="compound">LeafNetworkNode</ref> &amp;</type>
+        <definition>LeafNetworkNode&amp; LeafNetworkNode::ConnectionCheckerHandler::networkNode_</definition>
+        <argsstring></argsstring>
+        <name>networkNode_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="101" column="1" bodyfile="tools/bwmachined/leaf_network_node.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_leaf_network_node_1_1_connection_checker_handler_1ab8830bf95ae038d5034a2fc47b2afa00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>LeafNetworkNode::ConnectionCheckerHandler::ConnectionCheckerHandler</definition>
+        <argsstring>(LeafNetworkNode &amp;networkNode)</argsstring>
+        <name>ConnectionCheckerHandler</name>
+        <param>
+          <type><ref refid="class_leaf_network_node" kindref="compound">LeafNetworkNode</ref> &amp;</type>
+          <declname>networkNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="95" column="1" bodyfile="tools/bwmachined/leaf_network_node.hpp" bodystart="95" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1_1_connection_checker_handler_1af721ad5a113e11549fb8eb612fe63fc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeafNetworkNode::ConnectionCheckerHandler::handleTimeout</definition>
+        <argsstring>(TimerHandle handle, void *pUnused)</argsstring>
+        <name>handleTimeout</name>
+        <param>
+          <type>TimerHandle</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pUnused</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="97" column="1" bodyfile="tools/bwmachined/leaf_network_node.cpp" bodystart="231" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaf_network_node_1_1_connection_checker_handler_1ab94f0345fb4204179f95928de5287b1c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeafNetworkNode::ConnectionCheckerHandler::onRelease</definition>
+        <argsstring>(TimerHandle handle, void *pUnused)</argsstring>
+        <name>onRelease</name>
+        <param>
+          <type>TimerHandle</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pUnused</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/leaf_network_node.hpp" line="98" column="1" bodyfile="tools/bwmachined/leaf_network_node.hpp" bodystart="98" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="806">
+        <label>TimerHandler</label>
+      </node>
+      <node id="805">
+        <label>LeafNetworkNode::ConnectionCheckerHandler</label>
+        <childnode refid="806" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="811">
+        <label>ConnectionWrapperMgr</label>
+        <link refid="class_connection_wrapper_mgr"/>
+      </node>
+      <node id="808">
+        <label>TimerHandler</label>
+      </node>
+      <node id="807">
+        <label>LeafNetworkNode::ConnectionCheckerHandler</label>
+        <childnode refid="808" relation="public-inheritance">
+        </childnode>
+        <childnode refid="809" relation="usage">
+          <edgelabel>networkNode_</edgelabel>
+        </childnode>
+      </node>
+      <node id="809">
+        <label>LeafNetworkNode</label>
+        <link refid="class_leaf_network_node"/>
+        <childnode refid="810" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="810">
+        <label>NetworkNode</label>
+        <link refid="class_network_node"/>
+        <childnode refid="811" relation="usage">
+          <edgelabel>connectionWrapperMgr_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/bwmachined/leaf_network_node.hpp" line="93" column="1" bodyfile="tools/bwmachined/leaf_network_node.hpp" bodystart="92" bodyend="102"/>
+    <listofallmembers>
+      <member refid="class_leaf_network_node_1_1_connection_checker_handler_1ab8830bf95ae038d5034a2fc47b2afa00" prot="public" virt="non-virtual"><scope>LeafNetworkNode::ConnectionCheckerHandler</scope><name>ConnectionCheckerHandler</name></member>
+      <member refid="class_leaf_network_node_1_1_connection_checker_handler_1af721ad5a113e11549fb8eb612fe63fc4" prot="public" virt="non-virtual"><scope>LeafNetworkNode::ConnectionCheckerHandler</scope><name>handleTimeout</name></member>
+      <member refid="class_leaf_network_node_1_1_connection_checker_handler_1a3d1f33f12f3766a3a3689221f71773a1" prot="protected" virt="non-virtual"><scope>LeafNetworkNode::ConnectionCheckerHandler</scope><name>networkNode_</name></member>
+      <member refid="class_leaf_network_node_1_1_connection_checker_handler_1ab94f0345fb4204179f95928de5287b1c" prot="public" virt="non-virtual"><scope>LeafNetworkNode::ConnectionCheckerHandler</scope><name>onRelease</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_dead_cell_app" kind="class" language="C++" prot="public">
+    <compoundname>DeadCellApp</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_dead_cell_app_1a544713ac6036c2574c6d55f4d77d156d" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int DeadCellApp::MAX_AGE</definition>
+        <argsstring></argsstring>
+        <name>MAX_AGE</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>How long we keep these things around for. Basically the purpose of them is to ensure that emergencySetCurrentCell messages that are received after the handleCellAppDeath message cause an immediate restore. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/dead_cell_apps.cpp" line="75" column="1" bodyfile="baseapp/dead_cell_apps.cpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_dead_cell_app_1a01b1ac2fcc5eed73118b21f3d7eebf0b" prot="private" static="no" mutable="no">
+        <type>Mercury::Address</type>
+        <definition>Mercury::Address DeadCellApp::addr_</definition>
+        <argsstring></argsstring>
+        <name>addr_</name>
+        <briefdescription>
+<para>The address of the dead app. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/dead_cell_apps.cpp" line="78" column="1" bodyfile="baseapp/dead_cell_apps.cpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dead_cell_app_1a5ffe26ac142524c45aa21ad63ec736ff" prot="private" static="no" mutable="no">
+        <type>uint64</type>
+        <definition>uint64 DeadCellApp::timestamp_</definition>
+        <argsstring></argsstring>
+        <name>timestamp_</name>
+        <briefdescription>
+<para>The time at which we found out about the app death. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/dead_cell_apps.cpp" line="81" column="1" bodyfile="baseapp/dead_cell_apps.cpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_dead_cell_app_1a06a07220e0485cfb1e25bf292e204e5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DeadCellApp::DeadCellApp</definition>
+        <argsstring>(const Mercury::Address &amp;addr)</argsstring>
+        <name>DeadCellApp</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/dead_cell_apps.cpp" line="57" column="1" bodyfile="baseapp/dead_cell_apps.cpp" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dead_cell_app_1abfe2deabd7a72504a1118c32ffe23ff4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Mercury::Address &amp;</type>
+        <definition>const Mercury::Address&amp; DeadCellApp::addr</definition>
+        <argsstring>() const </argsstring>
+        <name>addr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/dead_cell_apps.cpp" line="62" column="1" bodyfile="baseapp/dead_cell_apps.cpp" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dead_cell_app_1aac60888a0204a4302bee8609432082f3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DeadCellApp::isOlderThan</definition>
+        <argsstring>(uint64 cutoff) const </argsstring>
+        <name>isOlderThan</name>
+        <param>
+          <type>uint64</type>
+          <declname>cutoff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/dead_cell_apps.cpp" line="63" column="1" bodyfile="baseapp/dead_cell_apps.cpp" bodystart="63" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_dead_cell_app_1a9c07ca1f5cb323919dbcc41b4a26a679" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64</type>
+        <definition>static uint64 DeadCellApp::cutoffTime</definition>
+        <argsstring>()</argsstring>
+        <name>cutoffTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/dead_cell_apps.cpp" line="65" column="1" bodyfile="baseapp/dead_cell_apps.cpp" bodystart="65" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A class for keeping track of <ref refid="class_cell_apps" kindref="compound">CellApps</ref> that have died recently. </para>    </detaileddescription>
+    <location file="baseapp/dead_cell_apps.cpp" line="55" column="1" bodyfile="baseapp/dead_cell_apps.cpp" bodystart="54" bodyend="82"/>
+    <listofallmembers>
+      <member refid="class_dead_cell_app_1abfe2deabd7a72504a1118c32ffe23ff4" prot="public" virt="non-virtual"><scope>DeadCellApp</scope><name>addr</name></member>
+      <member refid="class_dead_cell_app_1a01b1ac2fcc5eed73118b21f3d7eebf0b" prot="private" virt="non-virtual"><scope>DeadCellApp</scope><name>addr_</name></member>
+      <member refid="class_dead_cell_app_1a9c07ca1f5cb323919dbcc41b4a26a679" prot="public" virt="non-virtual"><scope>DeadCellApp</scope><name>cutoffTime</name></member>
+      <member refid="class_dead_cell_app_1a06a07220e0485cfb1e25bf292e204e5a" prot="public" virt="non-virtual"><scope>DeadCellApp</scope><name>DeadCellApp</name></member>
+      <member refid="class_dead_cell_app_1aac60888a0204a4302bee8609432082f3" prot="public" virt="non-virtual"><scope>DeadCellApp</scope><name>isOlderThan</name></member>
+      <member refid="class_dead_cell_app_1a544713ac6036c2574c6d55f4d77d156d" prot="private" virt="non-virtual"><scope>DeadCellApp</scope><name>MAX_AGE</name></member>
+      <member refid="class_dead_cell_app_1a5ffe26ac142524c45aa21ad63ec736ff" prot="private" virt="non-virtual"><scope>DeadCellApp</scope><name>timestamp_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

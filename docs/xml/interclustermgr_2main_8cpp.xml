@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="interclustermgr_2main_8cpp" kind="file" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes refid="interclustermgr_8hpp" local="yes">interclustermgr.hpp</includes>
+    <includes refid="interclustermgr__config_8hpp" local="yes">interclustermgr_config.hpp</includes>
+    <includes local="yes">server/bwservice.hpp</includes>
+    <incdepgraph>
+      <node id="3612">
+        <label>cstdmf/singleton.hpp</label>
+      </node>
+      <node id="3615">
+        <label>server/manager_app.hpp</label>
+      </node>
+      <node id="3616">
+        <label>interclustermgr_config.hpp</label>
+        <link refid="interclustermgr__config_8hpp_source"/>
+        <childnode refid="3608" relation="include">
+        </childnode>
+        <childnode refid="3617" relation="include">
+        </childnode>
+      </node>
+      <node id="3614">
+        <label>server/common.hpp</label>
+      </node>
+      <node id="3605">
+        <label>interclustermgr/main.cpp</label>
+        <link refid="interclustermgr/main.cpp"/>
+        <childnode refid="3606" relation="include">
+        </childnode>
+        <childnode refid="3616" relation="include">
+        </childnode>
+        <childnode refid="3618" relation="include">
+        </childnode>
+      </node>
+      <node id="3607">
+        <label>interclustermgr_interface.hpp</label>
+        <link refid="interclustermgr__interface_8hpp_source"/>
+        <childnode refid="3608" relation="include">
+        </childnode>
+        <childnode refid="3609" relation="include">
+        </childnode>
+      </node>
+      <node id="3610">
+        <label>cstdmf/bw_map.hpp</label>
+      </node>
+      <node id="3611">
+        <label>cstdmf/bw_set.hpp</label>
+      </node>
+      <node id="3618">
+        <label>server/bwservice.hpp</label>
+      </node>
+      <node id="3617">
+        <label>server/server_app_config.hpp</label>
+      </node>
+      <node id="3608">
+        <label>network/basictypes.hpp</label>
+      </node>
+      <node id="3606">
+        <label>interclustermgr.hpp</label>
+        <link refid="interclustermgr_8hpp_source"/>
+        <childnode refid="3607" relation="include">
+        </childnode>
+        <childnode refid="3610" relation="include">
+        </childnode>
+        <childnode refid="3611" relation="include">
+        </childnode>
+        <childnode refid="3612" relation="include">
+        </childnode>
+        <childnode refid="3613" relation="include">
+        </childnode>
+        <childnode refid="3614" relation="include">
+        </childnode>
+        <childnode refid="3615" relation="include">
+        </childnode>
+      </node>
+      <node id="3609">
+        <label>network/common_interface_macros.hpp</label>
+      </node>
+      <node id="3613">
+        <label>cstdmf/unique_id.hpp</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="interclustermgr_2main_8cpp_1ab22ed389948ccf45fd6e480f89bb422f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BIGWORLD_MAIN</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>BIGWORLD_MAIN</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interclustermgr/main.cpp" line="8" column="1" bodyfile="interclustermgr/main.cpp" bodystart="8" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;interclustermgr.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;interclustermgr_config.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;server/bwservice.hpp&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_b_w" kindref="compound">BW</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>BIGWORLD_MAIN(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>argv[]<sp/>)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bwMainT&lt;<sp/>InterClusterMgr<sp/>&gt;(<sp/>argc,<sp/>argv,<sp/></highlight><highlight class="comment">/*shouldLog*/</highlight><highlight class="normal"><sp/>true<sp/>);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>main.cpp</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="interclustermgr/main.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,558 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_spa_login_request" kind="class" language="C++" prot="public">
+    <compoundname>SpaLoginRequest</compoundname>
+    <basecompoundref refid="class_spa_request" prot="public" virt="non-virtual">SpaRequest</basecompoundref>
+    <includes refid="spa__login__request_8hpp" local="no">spa_login_request.hpp</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_spa_login_request_1a7bd4443630d37215d0d0ccc78c055b10" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>BW_BEGIN_NAMESPACE const int SpaLoginRequest::CREATED</definition>
+        <argsstring></argsstring>
+        <name>CREATED</name>
+        <initializer>= 201</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="55" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spa_login_request_1a4800a67a4c5332da0ce4548a063e21a8" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int SpaLoginRequest::ACCEPTED</definition>
+        <argsstring></argsstring>
+        <name>ACCEPTED</name>
+        <initializer>= 202</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="55" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spa_login_request_1a683af688f56d65254f5ccf641ae464f4" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int SpaLoginRequest::NOT_FOUND</definition>
+        <argsstring></argsstring>
+        <name>NOT_FOUND</name>
+        <initializer>= 404</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="55" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spa_login_request_1aaf5206a7ddc07f99ce0ac76cbf7cfbaf" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int SpaLoginRequest::CONFLICT</definition>
+        <argsstring></argsstring>
+        <name>CONFLICT</name>
+        <initializer>= 409</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="55" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spa_login_request_1ab5d4d948cd24d4931b96e27f3aa88b33" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int SpaLoginRequest::GAME_ALLOWED</definition>
+        <argsstring></argsstring>
+        <name>GAME_ALLOWED</name>
+        <initializer>= 0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="56" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spa_login_request_1a0397e58380a2b6f73c41d463ee9234c4" prot="private" static="no" mutable="no">
+        <type>EntityTypeID</type>
+        <definition>EntityTypeID SpaLoginRequest::entityTypeID_</definition>
+        <argsstring></argsstring>
+        <name>entityTypeID_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="58" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spa_login_request_1a85b4cc5eb8710131fdb1ea2144b355c3" prot="private" static="no" mutable="no">
+        <type>IGetEntityKeyForAccountHandler &amp;</type>
+        <definition>IGetEntityKeyForAccountHandler&amp; SpaLoginRequest::accountHandler_</definition>
+        <argsstring></argsstring>
+        <name>accountHandler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="59" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spa_login_request_1a2a8c5abca01ba8f51e4bfd1f0f42625b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SpaLoginRequest::retryFlag_</definition>
+        <argsstring></argsstring>
+        <name>retryFlag_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="60" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spa_login_request_1afef23ae62cd9d2a44224074efd3a6c48" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string SpaLoginRequest::attrsPrefix_</definition>
+        <argsstring></argsstring>
+        <name>attrsPrefix_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="61" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spa_login_request_1ad106037e9776474e85a7d087be75fc26" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string SpaLoginRequest::restrictionPrefix_</definition>
+        <argsstring></argsstring>
+        <name>restrictionPrefix_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="62" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spa_login_request_1a07f952d0cef0b38ddf09362aefd8a0e8" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string SpaLoginRequest::loginPriorityPrefix_</definition>
+        <argsstring></argsstring>
+        <name>loginPriorityPrefix_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="63" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spa_login_request_1a66fbcae5f23da9eba5ec396cc60ca61b" prot="private" static="no" mutable="no">
+        <type>BW::wstring</type>
+        <definition>BW::wstring SpaLoginRequest::fieldNameForProjectID_</definition>
+        <argsstring></argsstring>
+        <name>fieldNameForProjectID_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="64" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spa_login_request_1a660eb7c1f77f35cafd0af264bc7ab31d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SpaLoginRequest::startingTimeOfaNewDay_</definition>
+        <argsstring></argsstring>
+        <name>startingTimeOfaNewDay_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="65" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spa_login_request_1a0c2407ba8282f5b4e9ce62a3f8275499" prot="private" static="no" mutable="no">
+        <type>BW::wstring</type>
+        <definition>BW::wstring SpaLoginRequest::gameName_</definition>
+        <argsstring></argsstring>
+        <name>gameName_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="66" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spa_login_request_1a22dcb5d4bead7b512f30b54e7eca02f2" prot="private" static="no" mutable="no">
+        <type><ref refid="class_spa_request_pool" kindref="compound">SpaRequestPool</ref> *</type>
+        <definition>SpaRequestPool* SpaLoginRequest::pool_</definition>
+        <argsstring></argsstring>
+        <name>pool_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="67" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spa_login_request_1a7bb91cac70f4bd67f3de877d36a0a4e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpaLoginRequest::SpaLoginRequest</definition>
+        <argsstring>(const LogonParamsMap &amp;params, bool sendPwd, const BW::string &amp;password, const BW::string &amp;restrictionPrefix, const BW::wstring &amp;fieldNameForProjectID, const int startingTimeOfaNewDay, EntityTypeID entityTypeID, const BW::string &amp;userAgent, const Mercury::Address &amp;clientAddr, SpaRequestPool *pool, const BW::string &amp;gameName, IGetEntityKeyForAccountHandler &amp;accountHandler)</argsstring>
+        <name>SpaLoginRequest</name>
+        <param>
+          <type>const LogonParamsMap &amp;</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>sendPwd</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>password</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>restrictionPrefix</declname>
+        </param>
+        <param>
+          <type>const BW::wstring &amp;</type>
+          <declname>fieldNameForProjectID</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>startingTimeOfaNewDay</declname>
+        </param>
+        <param>
+          <type>EntityTypeID</type>
+          <declname>entityTypeID</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>userAgent</declname>
+        </param>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>clientAddr</declname>
+        </param>
+        <param>
+          <type><ref refid="class_spa_request_pool" kindref="compound">SpaRequestPool</ref> *</type>
+          <declname>pool</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>gameName</declname>
+        </param>
+        <param>
+          <type>IGetEntityKeyForAccountHandler &amp;</type>
+          <declname>accountHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="29" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.cpp" bodystart="43" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spa_login_request_1a1a4e2fe5b20471280c77ea809a69261b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>SpaLoginRequest::~SpaLoginRequest</definition>
+        <argsstring>()</argsstring>
+        <name>~SpaLoginRequest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="42" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.cpp" bodystart="109" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spa_login_request_1a32f6f0d3a8dbaf4558e75abb8f0203d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SpaLoginRequest::onResponseReceived</definition>
+        <argsstring>(int responseCode, NameValueStore &amp;responseHeaders, BW::string responseBody)</argsstring>
+        <name>onResponseReceived</name>
+        <reimplements refid="class_http_request_1afdd397a69cc240fe1e1b3d532405af8b">onResponseReceived</reimplements>
+        <param>
+          <type>int</type>
+          <declname>responseCode</declname>
+        </param>
+        <param>
+          <type>NameValueStore &amp;</type>
+          <declname>responseHeaders</declname>
+        </param>
+        <param>
+          <type>BW::string</type>
+          <declname>responseBody</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This abstract method callback is invoked upon successful processing of a request by a remote HTTP/1.1 server.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>responseCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HTTP response code (e.g., 200 or 404). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>responseHeaders</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A BW::map with HTTP headers. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>responseBody</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HTTP request payload (empty string if not present). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="45" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.cpp" bodystart="125" bodyend="625"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spa_login_request_1a51c68cb27a0ae9cf53fc4d661e8d859e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SpaLoginRequest::onConnectionFailure</definition>
+        <argsstring>()</argsstring>
+        <name>onConnectionFailure</name>
+        <reimplements refid="class_http_request_1a53a243965e9eed4266e5d6953fabe391">onConnectionFailure</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This abstract method callback is invoked upon request processing failure.</para><para>This failure callback is to distinguish from &quot;high-level&quot; failures like 404 or 500 error, which are reported via &quot;onResponseReceived&quot; callback.</para><para>Legitimate uses for this method include network outage, response parsing errors, severe timeouts. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="49" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.cpp" bodystart="631" bodyend="639"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spa_login_request_1aa7916b93660fa2e7a81f3eaf8322c048" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool SpaLoginRequest::shouldRetry</definition>
+        <argsstring>()</argsstring>
+        <name>shouldRetry</name>
+        <reimplements refid="class_http_request_1ad0a2139b5045605563f5e3154078b58e">shouldRetry</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns whether the request should be requeued for a retry on a failure condition.</para><para><simplesect kind="return"><para>This method always returns false by default. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="51" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.cpp" bodystart="645" bodyend="648"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spa_login_request_1ad01eef1418dfb46cba325850cf38087e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpaLoginRequest::onError</definition>
+        <argsstring>(LogOnStatus errorStatus=LogOnStatus::LOGIN_REJECTED_SERVER_NOT_READY, const BW::string &amp;errorMsg=BW::string())</argsstring>
+        <name>onError</name>
+        <param>
+          <type>LogOnStatus</type>
+          <declname>errorStatus</declname>
+          <defval>LogOnStatus::LOGIN_REJECTED_SERVER_NOT_READY</defval>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>errorMsg</declname>
+          <defval>BW::string()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is invoked when an error occurs while attempting to receive or process a SPA login request.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>errorStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The log on status error code to be returned to the client. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="69" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.cpp" bodystart="693" bodyend="698"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spa_login_request_1aa5c26c502c3b414385c932e8027d15c1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpaLoginRequest::onSuccess</definition>
+        <argsstring>(DatabaseID dbID, uint16 loginPriority, bool isBanned, const BW::string &amp;clientJsonMsg, const BW::string &amp;baseJsonMsg)</argsstring>
+        <name>onSuccess</name>
+        <param>
+          <type>DatabaseID</type>
+          <declname>dbID</declname>
+        </param>
+        <param>
+          <type>uint16</type>
+          <declname>loginPriority</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isBanned</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>clientJsonMsg</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>baseJsonMsg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is invoked from onResponseReceived when a successful SPA response was received.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dbID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The DatabaseID of the entity the SPA response is for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>loginPriority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(unused) login priority indicator. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isBanned</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean indicating whether the entity is banned. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientJsonMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String forwarded to the client. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baseJsonMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String forwarded to the base entity. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="73" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.cpp" bodystart="661" bodyend="684"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements a login request to SPA.</para><para>Carries username and password, the reply either notifies of incorrect credentials or supplies the dbapp with Account <ref refid="class_entity" kindref="compound">Entity</ref> DB ID for further checkout and instantiation.</para><para>Is created internally by SpaBillingSystem::getEntityKeyForAccount </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2799">
+        <label>HttpRequest</label>
+        <link refid="class_http_request"/>
+      </node>
+      <node id="2798">
+        <label>SpaRequest</label>
+        <link refid="class_spa_request"/>
+        <childnode refid="2799" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2797">
+        <label>SpaLoginRequest</label>
+        <link refid="class_spa_login_request"/>
+        <childnode refid="2798" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2802">
+        <label>HttpRequest</label>
+        <link refid="class_http_request"/>
+      </node>
+      <node id="2801">
+        <label>SpaRequest</label>
+        <link refid="class_spa_request"/>
+        <childnode refid="2802" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2800">
+        <label>SpaLoginRequest</label>
+        <link refid="class_spa_login_request"/>
+        <childnode refid="2801" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" line="27" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_login_request.hpp" bodystart="26" bodyend="75"/>
+    <listofallmembers>
+      <member refid="class_spa_login_request_1a4800a67a4c5332da0ce4548a063e21a8" prot="private" virt="non-virtual"><scope>SpaLoginRequest</scope><name>ACCEPTED</name></member>
+      <member refid="class_spa_login_request_1a85b4cc5eb8710131fdb1ea2144b355c3" prot="private" virt="non-virtual"><scope>SpaLoginRequest</scope><name>accountHandler_</name></member>
+      <member refid="class_http_request_1ac7a026a9639ee9bd342da1fc25aedf2e" prot="public" virt="non-virtual"><scope>SpaLoginRequest</scope><name>addHeader</name></member>
+      <member refid="class_http_request_1a5e2d99f52ec57c3e63c858517c60f862" prot="public" virt="non-virtual"><scope>SpaLoginRequest</scope><name>addParam</name></member>
+      <member refid="class_spa_login_request_1afef23ae62cd9d2a44224074efd3a6c48" prot="private" virt="non-virtual"><scope>SpaLoginRequest</scope><name>attrsPrefix_</name></member>
+      <member refid="class_spa_login_request_1aaf5206a7ddc07f99ce0ac76cbf7cfbaf" prot="private" virt="non-virtual"><scope>SpaLoginRequest</scope><name>CONFLICT</name></member>
+      <member refid="class_spa_login_request_1a7bd4443630d37215d0d0ccc78c055b10" prot="private" virt="non-virtual"><scope>SpaLoginRequest</scope><name>CREATED</name></member>
+      <member refid="class_spa_request_1aa9e52e08a23bca5a244e1827422da311" prot="protected" virt="non-virtual"><scope>SpaLoginRequest</scope><name>enqueueTime_</name></member>
+      <member refid="class_spa_login_request_1a0397e58380a2b6f73c41d463ee9234c4" prot="private" virt="non-virtual"><scope>SpaLoginRequest</scope><name>entityTypeID_</name></member>
+      <member refid="class_spa_login_request_1a66fbcae5f23da9eba5ec396cc60ca61b" prot="private" virt="non-virtual"><scope>SpaLoginRequest</scope><name>fieldNameForProjectID_</name></member>
+      <member refid="class_spa_login_request_1ab5d4d948cd24d4931b96e27f3aa88b33" prot="private" virt="non-virtual"><scope>SpaLoginRequest</scope><name>GAME_ALLOWED</name></member>
+      <member refid="class_spa_login_request_1a0c2407ba8282f5b4e9ce62a3f8275499" prot="private" virt="non-virtual"><scope>SpaLoginRequest</scope><name>gameName_</name></member>
+      <member refid="class_http_request_1a816b8df1a1e7e638992c582ffe781473a99e44f5e93ff98c3a774cd47599fa175" prot="protected" virt="non-virtual"><scope>SpaLoginRequest</scope><name>GET</name></member>
+      <member refid="class_http_request_1afefc178bb0b32e4fe7ff74610f10f709" prot="public" virt="non-virtual"><scope>SpaLoginRequest</scope><name>hostname</name></member>
+      <member refid="class_http_request_1a574894baf4365302e456c2bfb2083ef5" prot="public" virt="non-virtual"><scope>SpaLoginRequest</scope><name>hostname</name></member>
+      <member refid="class_http_request_1af9bff71cebf4375c68371fe86b8a2ca4" prot="protected" virt="non-virtual"><scope>SpaLoginRequest</scope><name>hostname_</name></member>
+      <member refid="class_http_request_1a7ae5f27da1539c21ec8d54f403e5defd" prot="public" virt="non-virtual"><scope>SpaLoginRequest</scope><name>HttpRequest</name></member>
+      <member refid="class_http_request_1a816b8df1a1e7e638992c582ffe781473" prot="protected" virt="non-virtual"><scope>SpaLoginRequest</scope><name>HttpVerb</name></member>
+      <member refid="class_http_request_1a6fd2879b4ff20e71d3fbbc5167e23d41" prot="public" virt="non-virtual"><scope>SpaLoginRequest</scope><name>isGetRequest</name></member>
+      <member refid="class_spa_login_request_1a07f952d0cef0b38ddf09362aefd8a0e8" prot="private" virt="non-virtual"><scope>SpaLoginRequest</scope><name>loginPriorityPrefix_</name></member>
+      <member refid="class_http_request_1a3880d8f2f310d73d00cf029b5a8871d2" prot="public" virt="non-virtual"><scope>SpaLoginRequest</scope><name>NameValueStore</name></member>
+      <member refid="class_spa_login_request_1a683af688f56d65254f5ccf641ae464f4" prot="private" virt="non-virtual"><scope>SpaLoginRequest</scope><name>NOT_FOUND</name></member>
+      <member refid="class_spa_login_request_1a51c68cb27a0ae9cf53fc4d661e8d859e" prot="public" virt="virtual"><scope>SpaLoginRequest</scope><name>onConnectionFailure</name></member>
+      <member refid="class_spa_login_request_1ad01eef1418dfb46cba325850cf38087e" prot="private" virt="non-virtual"><scope>SpaLoginRequest</scope><name>onError</name></member>
+      <member refid="class_spa_login_request_1a32f6f0d3a8dbaf4558e75abb8f0203d8" prot="public" virt="virtual"><scope>SpaLoginRequest</scope><name>onResponseReceived</name></member>
+      <member refid="class_spa_login_request_1aa5c26c502c3b414385c932e8027d15c1" prot="private" virt="non-virtual"><scope>SpaLoginRequest</scope><name>onSuccess</name></member>
+      <member refid="class_spa_login_request_1a22dcb5d4bead7b512f30b54e7eca02f2" prot="private" virt="non-virtual"><scope>SpaLoginRequest</scope><name>pool_</name></member>
+      <member refid="class_http_request_1a816b8df1a1e7e638992c582ffe781473aaa3e5faf15649b28b1e774c3decde5b7" prot="protected" virt="non-virtual"><scope>SpaLoginRequest</scope><name>POST</name></member>
+      <member refid="class_spa_request_1a30dd7911fb5ceb01176d848475c1f223" prot="protected" virt="non-virtual"><scope>SpaLoginRequest</scope><name>requestTime_</name></member>
+      <member refid="class_spa_request_1ac34e97e28533f6088aef30a66b73afb9" prot="protected" virt="non-virtual"><scope>SpaLoginRequest</scope><name>responseTime_</name></member>
+      <member refid="class_spa_login_request_1ad106037e9776474e85a7d087be75fc26" prot="private" virt="non-virtual"><scope>SpaLoginRequest</scope><name>restrictionPrefix_</name></member>
+      <member refid="class_spa_request_1a6737b91fb0f2f360e1016b11d70b0491" prot="public" virt="non-virtual"><scope>SpaLoginRequest</scope><name>retryCount</name></member>
+      <member refid="class_spa_request_1a76d776b0b636c98aedc10e56a9547896" prot="protected" virt="non-virtual"><scope>SpaLoginRequest</scope><name>retryCount_</name></member>
+      <member refid="class_spa_login_request_1a2a8c5abca01ba8f51e4bfd1f0f42625b" prot="private" virt="non-virtual"><scope>SpaLoginRequest</scope><name>retryFlag_</name></member>
+      <member refid="class_spa_login_request_1aa7916b93660fa2e7a81f3eaf8322c048" prot="public" virt="virtual"><scope>SpaLoginRequest</scope><name>shouldRetry</name></member>
+      <member refid="class_spa_login_request_1a7bb91cac70f4bd67f3de877d36a0a4e5" prot="public" virt="non-virtual"><scope>SpaLoginRequest</scope><name>SpaLoginRequest</name></member>
+      <member refid="class_spa_request_1a2a64dfa3d7b79e99327a48d84fdc2828" prot="public" virt="non-virtual"><scope>SpaLoginRequest</scope><name>SpaRequest</name></member>
+      <member refid="class_spa_login_request_1a660eb7c1f77f35cafd0af264bc7ab31d" prot="private" virt="non-virtual"><scope>SpaLoginRequest</scope><name>startingTimeOfaNewDay_</name></member>
+      <member refid="class_spa_request_1a831af70522ff449fd5aef03ffe360b4f" prot="public" virt="non-virtual"><scope>SpaLoginRequest</scope><name>timeInQueue</name></member>
+      <member refid="class_spa_request_1ad271bc2eea95380a974aa8a1bada521c" prot="public" virt="non-virtual"><scope>SpaLoginRequest</scope><name>timeInSpa</name></member>
+      <member refid="class_spa_request_1a6dccf8bf8a5deec6bd0367eb81da97c2" prot="public" virt="non-virtual"><scope>SpaLoginRequest</scope><name>totalTime</name></member>
+      <member refid="class_http_request_1a9db8ef5dbcbfaec4f96008f518126395" prot="public" virt="non-virtual"><scope>SpaLoginRequest</scope><name>url</name></member>
+      <member refid="class_http_request_1a3adf8828c7b520f151fe0091fac9e34e" prot="protected" virt="non-virtual"><scope>SpaLoginRequest</scope><name>url_</name></member>
+      <member refid="class_http_request_1a11bada1f8ab4fa4a289269ea651aa3e1" prot="protected" virt="non-virtual"><scope>SpaLoginRequest</scope><name>verb_</name></member>
+      <member refid="class_http_request_1ac891acd1e4ff93926ddadbe024908e13" prot="public" virt="non-virtual"><scope>SpaLoginRequest</scope><name>verbAsString</name></member>
+      <member refid="class_http_request_1adfc7ae561e6ba03d21890ee1855df72b" prot="public" virt="virtual"><scope>SpaLoginRequest</scope><name>~HttpRequest</name></member>
+      <member refid="class_spa_login_request_1a1a4e2fe5b20471280c77ea809a69261b" prot="public" virt="virtual"><scope>SpaLoginRequest</scope><name>~SpaLoginRequest</name></member>
+      <member refid="class_spa_request_1ac64082e4ee767a6bddb27a9d3343c75c" prot="public" virt="virtual"><scope>SpaLoginRequest</scope><name>~SpaRequest</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

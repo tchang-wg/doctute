@@ -1,0 +1,570 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_query_range" kind="class" language="C++" prot="public">
+    <compoundname>QueryRange</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">SafeReferenceCount</basecompoundref>
+    <includes refid="query__range_8hpp" local="no">query_range.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_query_range_1af38369b57d71b5ba15bc5934fb74aaca" prot="public" static="no">
+        <type><ref refid="class_query_range_iterator" kindref="compound">QueryRangeIterator</ref></type>
+        <definition>typedef QueryRangeIterator QueryRange::iterator</definition>
+        <argsstring></argsstring>
+        <name>iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="30" column="1" bodyfile="tools/message_logger/query_range.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_query_range_1a2f4ece04127eff24b548377f0904c36e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_smart_pointer" kindref="compound">UserLogReaderPtr</ref></type>
+        <definition>UserLogReaderPtr QueryRange::pUserLog_</definition>
+        <argsstring></argsstring>
+        <name>pUserLog_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="73" column="1" bodyfile="tools/message_logger/query_range.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_query_range_1a9974386d6db33ef748ad9cc296343561" prot="private" static="no" mutable="no">
+        <type><ref refid="class_log_time" kindref="compound">LogTime</ref></type>
+        <definition>LogTime QueryRange::startTime_</definition>
+        <argsstring></argsstring>
+        <name>startTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="75" column="1" bodyfile="tools/message_logger/query_range.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_query_range_1ab8bdf48c63cf1b17072f6d66762d87bf" prot="private" static="no" mutable="no">
+        <type><ref refid="class_log_time" kindref="compound">LogTime</ref></type>
+        <definition>LogTime QueryRange::endTime_</definition>
+        <argsstring></argsstring>
+        <name>endTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="76" column="1" bodyfile="tools/message_logger/query_range.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_query_range_1a6537a4b950be7a13be1afaabf224af72" prot="private" static="no" mutable="no">
+        <type><ref refid="class_log_entry_address_reader" kindref="compound">LogEntryAddressReader</ref></type>
+        <definition>LogEntryAddressReader QueryRange::startAddress_</definition>
+        <argsstring></argsstring>
+        <name>startAddress_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="78" column="1" bodyfile="tools/message_logger/query_range.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_query_range_1a7948c0d812b3f5f3d9b2ae78bad024ce" prot="private" static="no" mutable="no">
+        <type><ref refid="class_log_entry_address_reader" kindref="compound">LogEntryAddressReader</ref></type>
+        <definition>LogEntryAddressReader QueryRange::endAddress_</definition>
+        <argsstring></argsstring>
+        <name>endAddress_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="79" column="1" bodyfile="tools/message_logger/query_range.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_query_range_1a4eafe3c3103196541c24a319b46d38f7" prot="private" static="no" mutable="no">
+        <type>SearchDirection</type>
+        <definition>SearchDirection QueryRange::direction_</definition>
+        <argsstring></argsstring>
+        <name>direction_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="81" column="1" bodyfile="tools/message_logger/query_range.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_query_range_1a6bde2e0d630c46a4c753e7ad03567893" prot="private" static="no" mutable="no">
+        <type><ref refid="class_query_range_iterator" kindref="compound">iterator</ref></type>
+        <definition>iterator QueryRange::begin_</definition>
+        <argsstring></argsstring>
+        <name>begin_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="83" column="1" bodyfile="tools/message_logger/query_range.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_query_range_1aeb7d1146f191f7ee8ac0536a7a384390" prot="private" static="no" mutable="no">
+        <type><ref refid="class_query_range_iterator" kindref="compound">iterator</ref></type>
+        <definition>iterator QueryRange::curr_</definition>
+        <argsstring></argsstring>
+        <name>curr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="84" column="1" bodyfile="tools/message_logger/query_range.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_query_range_1aba54d6725a4243e07e0cb49c4a576e0f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_query_range_iterator" kindref="compound">iterator</ref></type>
+        <definition>iterator QueryRange::end_</definition>
+        <argsstring></argsstring>
+        <name>end_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="85" column="1" bodyfile="tools/message_logger/query_range.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_query_range_1a9063d8782711b6c6dda65cf7d52696fc" prot="private" static="no" mutable="no">
+        <type><ref refid="class_query_range_iterator" kindref="compound">iterator</ref></type>
+        <definition>iterator QueryRange::args_</definition>
+        <argsstring></argsstring>
+        <name>args_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="86" column="1" bodyfile="tools/message_logger/query_range.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_query_range_1aab29b7f2b842fa65be2f4bf3182d1e1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE QueryRange::QueryRange</definition>
+        <argsstring>(QueryParamsPtr pParams, UserLogReaderPtr pUserLog)</argsstring>
+        <name>QueryRange</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">QueryParamsPtr</ref></type>
+          <declname>pParams</declname>
+        </param>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">UserLogReaderPtr</ref></type>
+          <declname>pUserLog</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="33" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="14" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1a90f3d32ed56309d7fd3253dc1d006f00" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const SearchDirection &amp;</type>
+        <definition>const SearchDirection&amp; QueryRange::getDirection</definition>
+        <argsstring>() const </argsstring>
+        <name>getDirection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="35" column="1" bodyfile="tools/message_logger/query_range.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1a6ef9157124ba42c56977b4a7ec21aba6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QueryRange::getNextEntry</definition>
+        <argsstring>(LogEntry &amp;entry)</argsstring>
+        <name>getNextEntry</name>
+        <param>
+          <type><ref refid="class_log_entry" kindref="compound">LogEntry</ref> &amp;</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="37" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="215" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1a6ff884d3ebdb443961ceea6412c8fe51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BinaryIStream *</type>
+        <definition>BinaryIStream * QueryRange::getArgStream</definition>
+        <argsstring>()</argsstring>
+        <name>getArgStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a FileStream positioned at the args blob corresponding to the most recent entry fetched by getNextEntry(). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="39" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="244" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1a7d814895958da3338e6945dc545f6f1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QueryRange::getMetaDataFromEntry</definition>
+        <argsstring>(const LogEntry &amp;entry, BW::string &amp;result)</argsstring>
+        <name>getMetaDataFromEntry</name>
+        <param>
+          <type>const <ref refid="class_log_entry" kindref="compound">LogEntry</ref> &amp;</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>BW::string &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="40" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="267" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1a6cf2144c20e1f73d784b8d7b65bb6769" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QueryRange::resume</definition>
+        <argsstring>()</argsstring>
+        <name>resume</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="42" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="324" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1ad8f2eae9fc01cb1af62a6d03fd700a4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QueryRange::seek</definition>
+        <argsstring>(int segmentNum, int entryNum, int metaOffset, int postIncrement=0)</argsstring>
+        <name>seek</name>
+        <param>
+          <type>int</type>
+          <declname>segmentNum</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>entryNum</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>metaOffset</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>postIncrement</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="43" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="342" bodyend="361"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1aed81d7d89693557cd355e8ad86bc22da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="class_user_segment_reader" kindref="compound">UserSegmentReader</ref> *</type>
+        <definition>const UserSegmentReader * QueryRange::getUserSegmentFromIndex</definition>
+        <argsstring>(int index) const </argsstring>
+        <name>getUserSegmentFromIndex</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="47" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="203" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1af6ea068daa79ab04a4fac330f9305796" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int QueryRange::getUserLogNumSegments</definition>
+        <argsstring>() const </argsstring>
+        <name>getUserLogNumSegments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="48" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="209" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1a163ad43efc309868ed5258da550ab7de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QueryRange::updateArgs</definition>
+        <argsstring>(int segmentNum, int argsOffset)</argsstring>
+        <name>updateArgs</name>
+        <param>
+          <type>int</type>
+          <declname>segmentNum</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>argsOffset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="50" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="276" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1a4c51fed1df5cab9f3881168c3a93f09d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_query_range_iterator" kindref="compound">iterator</ref></type>
+        <definition>QueryRangeIterator QueryRange::iter_curr</definition>
+        <argsstring>() const </argsstring>
+        <name>iter_curr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="52" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="282" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1a0230a727483216d0a07c180e07db832e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_query_range_iterator" kindref="compound">iterator</ref></type>
+        <definition>QueryRangeIterator QueryRange::iter_end</definition>
+        <argsstring>() const </argsstring>
+        <name>iter_end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="53" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="288" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1aa7c58999f1ab366036963c8e9dd7ebec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QueryRange::areBoundsGood</definition>
+        <argsstring>() const </argsstring>
+        <name>areBoundsGood</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="55" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="294" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1a2500e819694bca74293f04b3ad44b03e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int QueryRange::getNumEntriesVisited</definition>
+        <argsstring>() const </argsstring>
+        <name>getNumEntriesVisited</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="57" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="300" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1a1229c397dc601e3403095d990981730f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int QueryRange::getTotalEntries</definition>
+        <argsstring>() const </argsstring>
+        <name>getTotalEntries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="58" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="306" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1a6434752c87b4ef01726880faad305171" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QueryRange::step_back</definition>
+        <argsstring>()</argsstring>
+        <name>step_back</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="61" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="318" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1aa7bab1fe18e0291c4de7eabb1cd44e58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QueryRange::step_forward</definition>
+        <argsstring>()</argsstring>
+        <name>step_forward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="62" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="312" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1a73300324e91b74fd9482c859588d335c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>BW::string</type>
+        <definition>BW::string QueryRange::asString</definition>
+        <argsstring>() const </argsstring>
+        <name>asString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="64" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="364" bodyend="372"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_query_range_1abf2758f9f112533b1238e942983c89af" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_query_range_iterator" kindref="compound">iterator</ref></type>
+        <definition>QueryRange::iterator QueryRange::findSentinel</definition>
+        <argsstring>(int direction)</argsstring>
+        <name>findSentinel</name>
+        <param>
+          <type>int</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to locate the first entry that this range should inspect, either coming from the left (1) or right (-1) direction. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="67" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="186" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1a682d879102510e7a3ba269d702b68772" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_query_range_iterator" kindref="compound">iterator</ref></type>
+        <definition>QueryRange::iterator QueryRange::findLeftSentinel</definition>
+        <argsstring>()</argsstring>
+        <name>findLeftSentinel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="68" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="111" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1ab33419105af5ac7f2972b7e3dc4130aa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_query_range_iterator" kindref="compound">iterator</ref></type>
+        <definition>QueryRange::iterator QueryRange::findRightSentinel</definition>
+        <argsstring>()</argsstring>
+        <name>findRightSentinel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="69" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="147" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_1aa1a8ad750970cfe4519b06922a106413" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int QueryRange::findEntryInSegment</definition>
+        <argsstring>(const UserSegmentReader *userSegment, SearchDirection direction)</argsstring>
+        <name>findEntryInSegment</name>
+        <param>
+          <type>const <ref refid="class_user_segment_reader" kindref="compound">UserSegmentReader</ref> *</type>
+          <declname>userSegment</declname>
+          <defname>pUserSegment</defname>
+        </param>
+        <param>
+          <type>SearchDirection</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Attempts to locate a valid log entry matching the query parameters within the provided <ref refid="class_user_segment" kindref="compound">UserSegment</ref>.</para><para><simplesect kind="return"><para>Entry number within the <ref refid="class_user_segment" kindref="compound">UserSegment</ref> on success, -1 when not found. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range.hpp" line="70" column="1" bodyfile="tools/message_logger/query_range.cpp" bodystart="43" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>An iterator over a specified range of a user&apos;s log. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2319">
+        <label>SafeReferenceCount</label>
+      </node>
+      <node id="2318">
+        <label>QueryRange</label>
+        <link refid="class_query_range"/>
+        <childnode refid="2319" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2321">
+        <label>SafeReferenceCount</label>
+      </node>
+      <node id="2320">
+        <label>QueryRange</label>
+        <link refid="class_query_range"/>
+        <childnode refid="2321" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/message_logger/query_range.hpp" line="28" column="1" bodyfile="tools/message_logger/query_range.hpp" bodystart="27" bodyend="87"/>
+    <listofallmembers>
+      <member refid="class_query_range_1aa7c58999f1ab366036963c8e9dd7ebec" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>areBoundsGood</name></member>
+      <member refid="class_query_range_1a9063d8782711b6c6dda65cf7d52696fc" prot="private" virt="non-virtual"><scope>QueryRange</scope><name>args_</name></member>
+      <member refid="class_query_range_1a73300324e91b74fd9482c859588d335c" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>asString</name></member>
+      <member refid="class_query_range_1a6bde2e0d630c46a4c753e7ad03567893" prot="private" virt="non-virtual"><scope>QueryRange</scope><name>begin_</name></member>
+      <member refid="class_query_range_1aeb7d1146f191f7ee8ac0536a7a384390" prot="private" virt="non-virtual"><scope>QueryRange</scope><name>curr_</name></member>
+      <member refid="class_query_range_1a4eafe3c3103196541c24a319b46d38f7" prot="private" virt="non-virtual"><scope>QueryRange</scope><name>direction_</name></member>
+      <member refid="class_query_range_1aba54d6725a4243e07e0cb49c4a576e0f" prot="private" virt="non-virtual"><scope>QueryRange</scope><name>end_</name></member>
+      <member refid="class_query_range_1a7948c0d812b3f5f3d9b2ae78bad024ce" prot="private" virt="non-virtual"><scope>QueryRange</scope><name>endAddress_</name></member>
+      <member refid="class_query_range_1ab8bdf48c63cf1b17072f6d66762d87bf" prot="private" virt="non-virtual"><scope>QueryRange</scope><name>endTime_</name></member>
+      <member refid="class_query_range_1aa1a8ad750970cfe4519b06922a106413" prot="private" virt="non-virtual"><scope>QueryRange</scope><name>findEntryInSegment</name></member>
+      <member refid="class_query_range_1a682d879102510e7a3ba269d702b68772" prot="private" virt="non-virtual"><scope>QueryRange</scope><name>findLeftSentinel</name></member>
+      <member refid="class_query_range_1ab33419105af5ac7f2972b7e3dc4130aa" prot="private" virt="non-virtual"><scope>QueryRange</scope><name>findRightSentinel</name></member>
+      <member refid="class_query_range_1abf2758f9f112533b1238e942983c89af" prot="private" virt="non-virtual"><scope>QueryRange</scope><name>findSentinel</name></member>
+      <member refid="class_query_range_1a6ff884d3ebdb443961ceea6412c8fe51" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>getArgStream</name></member>
+      <member refid="class_query_range_1a90f3d32ed56309d7fd3253dc1d006f00" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>getDirection</name></member>
+      <member refid="class_query_range_1a7d814895958da3338e6945dc545f6f1a" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>getMetaDataFromEntry</name></member>
+      <member refid="class_query_range_1a6ef9157124ba42c56977b4a7ec21aba6" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>getNextEntry</name></member>
+      <member refid="class_query_range_1a2500e819694bca74293f04b3ad44b03e" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>getNumEntriesVisited</name></member>
+      <member refid="class_query_range_1a1229c397dc601e3403095d990981730f" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>getTotalEntries</name></member>
+      <member refid="class_query_range_1af6ea068daa79ab04a4fac330f9305796" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>getUserLogNumSegments</name></member>
+      <member refid="class_query_range_1aed81d7d89693557cd355e8ad86bc22da" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>getUserSegmentFromIndex</name></member>
+      <member refid="class_query_range_1a4c51fed1df5cab9f3881168c3a93f09d" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>iter_curr</name></member>
+      <member refid="class_query_range_1a0230a727483216d0a07c180e07db832e" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>iter_end</name></member>
+      <member refid="class_query_range_1af38369b57d71b5ba15bc5934fb74aaca" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>iterator</name></member>
+      <member refid="class_query_range_1a2f4ece04127eff24b548377f0904c36e" prot="private" virt="non-virtual"><scope>QueryRange</scope><name>pUserLog_</name></member>
+      <member refid="class_query_range_1aab29b7f2b842fa65be2f4bf3182d1e1b" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>QueryRange</name></member>
+      <member refid="class_query_range_1a6cf2144c20e1f73d784b8d7b65bb6769" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>resume</name></member>
+      <member refid="class_query_range_1ad8f2eae9fc01cb1af62a6d03fd700a4a" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>seek</name></member>
+      <member refid="class_query_range_1a6537a4b950be7a13be1afaabf224af72" prot="private" virt="non-virtual"><scope>QueryRange</scope><name>startAddress_</name></member>
+      <member refid="class_query_range_1a9974386d6db33ef748ad9cc296343561" prot="private" virt="non-virtual"><scope>QueryRange</scope><name>startTime_</name></member>
+      <member refid="class_query_range_1a6434752c87b4ef01726880faad305171" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>step_back</name></member>
+      <member refid="class_query_range_1aa7bab1fe18e0291c4de7eabb1cd44e58" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>step_forward</name></member>
+      <member refid="class_query_range_1a163ad43efc309868ed5258da550ab7de" prot="public" virt="non-virtual"><scope>QueryRange</scope><name>updateArgs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

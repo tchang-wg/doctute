@@ -1,0 +1,513 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_t_c_p_connection_wrapper" kind="class" language="C++" prot="public">
+    <compoundname>TCPConnectionWrapper</compoundname>
+    <basecompoundref refid="class_connection_wrapper" prot="public" virt="non-virtual">ConnectionWrapper</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">InputNotificationHandler</basecompoundref>
+    <includes refid="tcp__connection__wrapper_8hpp" local="no">tcp_connection_wrapper.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_t_c_p_connection_wrapper_1a12e2eee51f31b85a596b62f730b2deb5" prot="private" static="no" mutable="no">
+        <type>Endpoint *</type>
+        <definition>Endpoint* TCPConnectionWrapper::pEndpoint_</definition>
+        <argsstring></argsstring>
+        <name>pEndpoint_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="58" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_t_c_p_connection_wrapper_1a5f44b687752665a3617c8d91e72ad870" prot="private" static="no" mutable="no">
+        <type>Mercury::EventDispatcher &amp;</type>
+        <definition>Mercury::EventDispatcher&amp; TCPConnectionWrapper::dispatcher_</definition>
+        <argsstring></argsstring>
+        <name>dispatcher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="60" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_t_c_p_connection_wrapper_1a4e43361e73b7f529689b34acec33783b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TCPConnectionWrapper::isTemporaryConnection_</definition>
+        <argsstring></argsstring>
+        <name>isTemporaryConnection_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="62" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_t_c_p_connection_wrapper_1aa92e4c21fcc0efa3bcc9343968ec4088" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TCPConnectionWrapper::endpointIsOwned_</definition>
+        <argsstring></argsstring>
+        <name>endpointIsOwned_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="65" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_t_c_p_connection_wrapper_1aec79cf22672d0eb9cc9023102eec6e88" prot="private" static="no" mutable="no">
+        <type>MemoryOStream</type>
+        <definition>MemoryOStream TCPConnectionWrapper::receiveBuffer_</definition>
+        <argsstring></argsstring>
+        <name>receiveBuffer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="67" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_t_c_p_connection_wrapper_1ac6835b7b1e08fff390950fe3feb5f543" prot="private" static="no" mutable="no">
+        <type>uint32</type>
+        <definition>uint32 TCPConnectionWrapper::receiveSizeBytesDone_</definition>
+        <argsstring></argsstring>
+        <name>receiveSizeBytesDone_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="68" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_t_c_p_connection_wrapper_1a5278dff4f7ce6fdb16ca86b92d4dcacf" prot="private" static="no" mutable="no">
+        <type>uint32</type>
+        <definition>uint32 TCPConnectionWrapper::receiveBytesExpected_</definition>
+        <argsstring></argsstring>
+        <name>receiveBytesExpected_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="69" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_t_c_p_connection_wrapper_1affab9e3d3b92ef65d4060f3efb0afdb4" prot="private" static="no" mutable="no">
+        <type>uint32</type>
+        <definition>uint32 TCPConnectionWrapper::receiveBytesDone_</definition>
+        <argsstring></argsstring>
+        <name>receiveBytesDone_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="70" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_t_c_p_connection_wrapper_1a41ff3093fde9c3b658a2aa3d848f2b59" prot="private" static="no" mutable="no">
+        <type>MemoryOStream *</type>
+        <definition>MemoryOStream* TCPConnectionWrapper::pSendBuffer_</definition>
+        <argsstring></argsstring>
+        <name>pSendBuffer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="72" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_t_c_p_connection_wrapper_1aea524f4b8f25f60325a89f8f6f7b26b4" prot="private" static="no" mutable="no">
+        <type>Mercury::InputNotificationHandler *</type>
+        <definition>Mercury::InputNotificationHandler* TCPConnectionWrapper::pSendWaiter_</definition>
+        <argsstring></argsstring>
+        <name>pSendWaiter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="73" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_t_c_p_connection_wrapper_1ad64e13d9300fafaf45a6f30fef42e062" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TCPConnectionWrapper::consecutiveDataFailures_</definition>
+        <argsstring></argsstring>
+        <name>consecutiveDataFailures_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="75" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_t_c_p_connection_wrapper_1a4ce5872fe71971758b700c07cb90a79d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TCPConnectionWrapper::isDestroyed_</definition>
+        <argsstring></argsstring>
+        <name>isDestroyed_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="77" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_t_c_p_connection_wrapper_1a4d53aa43b18684708e72ec99181fef55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TCPConnectionWrapper::TCPConnectionWrapper</definition>
+        <argsstring>(Endpoint *pEndpoint, Mercury::EventDispatcher &amp;dispatcher, bool isTemporaryConnection, bool shouldOwnEndpoint, ReadHandler *pReadHandler)</argsstring>
+        <name>TCPConnectionWrapper</name>
+        <param>
+          <type>Endpoint *</type>
+          <declname>pEndpoint</declname>
+        </param>
+        <param>
+          <type>Mercury::EventDispatcher &amp;</type>
+          <declname>dispatcher</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isTemporaryConnection</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>shouldOwnEndpoint</declname>
+        </param>
+        <param>
+          <type><ref refid="class_connection_wrapper_1_1_read_handler" kindref="compound">ReadHandler</ref> *</type>
+          <declname>pReadHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pEndpoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An endpoint containing a TCP connection, which will be used for sending and receiving data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dispatcher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An event dispatcher for registering reads and writes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isTemporaryConnection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether this connection should disconnect after writing. This is used for temporary TCP connections that receive and respond once only. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pReadHandler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A ReadHandler for processing received packet data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="29" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.cpp" bodystart="68" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_t_c_p_connection_wrapper_1aedbb263ebcb5d3e0ccf0ad977ccf53e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TCPConnectionWrapper::~TCPConnectionWrapper</definition>
+        <argsstring>()</argsstring>
+        <name>~TCPConnectionWrapper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="33" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.cpp" bodystart="101" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_t_c_p_connection_wrapper_1a9aa0f3403654d1d2b2027fc0a2171bfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TCPConnectionWrapper::closeTemporaryEndpoint</definition>
+        <argsstring>()</argsstring>
+        <name>closeTemporaryEndpoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Closes the temporary TCP endpoint owned by this connection wrapper </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="35" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.cpp" bodystart="154" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="class_t_c_p_connection_wrapper_1a7838ecb94e95ce36ac2591689fb68a36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TCPConnectionWrapper::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroy the endpoint and release a reference count to the object so it can auto-destroy.</para><para>The prevention of actual destruction until told to self-destroy is importantly required by the self-buffering mechanism, which allows this object to persist if the endpoint is blocked for writing, but allows it to self-destroy if the endpoint experiences an error). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="36" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.cpp" bodystart="123" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_t_c_p_connection_wrapper_1a18729c8ba8523308817d265967fd05b6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TCPConnectionWrapper::isDestroyed</definition>
+        <argsstring>() const </argsstring>
+        <name>isDestroyed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="37" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.hpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_t_c_p_connection_wrapper_1a9f705774ac83ca2c8c635eeadf7a0280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ConnectionWrapper::SendStatus</type>
+        <definition>ConnectionWrapper::SendStatus TCPConnectionWrapper::sendBufferedData</definition>
+        <argsstring>()</argsstring>
+        <name>sendBufferedData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends as much buffered data as is possible.</para><para><simplesect kind="return"><para>True if the send occurred or is still in progress, or false if sending failed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="38" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.cpp" bodystart="403" bodyend="453"/>
+      </memberdef>
+      <memberdef kind="function" id="class_t_c_p_connection_wrapper_1a1d4b11add7d205b0556164f74147061c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int TCPConnectionWrapper::handleInputNotification</definition>
+        <argsstring>(int fd)</argsstring>
+        <name>handleInputNotification</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="40" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.cpp" bodystart="163" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_t_c_p_connection_wrapper_1acad76e9c23f2c1bb0f35286be8e441ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>ConnectionWrapper::ReceiveStatus</type>
+        <definition>ConnectionWrapper::ReceiveStatus TCPConnectionWrapper::recv</definition>
+        <argsstring>()</argsstring>
+        <name>recv</name>
+        <reimplements refid="class_connection_wrapper_1acc58a5b99dea29164f25ec7d81c190f9">recv</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Perform the actual work of receiving as much data as the connection will allow. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="42" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.cpp" bodystart="199" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="class_t_c_p_connection_wrapper_1a5972acfc9a3c2e1cdf5c7b179a98335a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>ConnectionWrapper::SendStatus</type>
+        <definition>ConnectionWrapper::SendStatus TCPConnectionWrapper::send</definition>
+        <argsstring>(BinaryIStream &amp;input)</argsstring>
+        <name>send</name>
+        <reimplements refid="class_connection_wrapper_1ab1981d0dc34fe0008a06f9367d72d5d2">send</reimplements>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override from <ref refid="class_connection_wrapper" kindref="compound">ConnectionWrapper</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="43" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.cpp" bodystart="313" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="class_t_c_p_connection_wrapper_1a6a8d758167ba6b222733041d696cfb6a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool TCPConnectionWrapper::allowOversizedPackets</definition>
+        <argsstring>() const </argsstring>
+        <name>allowOversizedPackets</name>
+        <reimplements refid="class_connection_wrapper_1ac687550868ca61c0017f24cbbb6dd435">allowOversizedPackets</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override from <ref refid="class_connection_wrapper" kindref="compound">ConnectionWrapper</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="48" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.hpp" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_t_c_p_connection_wrapper_1aacd9c1486e0142de79893edcaaa1da14" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>virtual int TCPConnectionWrapper::sendfd</definition>
+        <argsstring>() const </argsstring>
+        <name>sendfd</name>
+        <reimplements refid="class_connection_wrapper_1af2d8fd83bce3b1099d378be9acca50b9">sendfd</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override from <ref refid="class_connection_wrapper" kindref="compound">ConnectionWrapper</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="53" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.hpp" bodystart="53" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_t_c_p_connection_wrapper_1ad8662c8f6579846bddfd49317ca8b8a7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TCPConnectionWrapper::basicSend</definition>
+        <argsstring>(const void *data, int size)</argsstring>
+        <name>basicSend</name>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles the basic operation of sending data.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to send. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the data in bytes. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>-1 on error, or the number of bytes sent successfully (can be zero or less than the given size if there is insufficient send buffer space is available). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="56" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.cpp" bodystart="465" bodyend="477"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>TCP implementation of the abstraction for network receive and reply operations.</para><para>As a <ref refid="class_t_c_p_connection_wrapper" kindref="compound">TCPConnectionWrapper</ref> can be over a persistent connection and the reply route is identified simply by its endpoint, TCPConnectionWrappers own their endpoint, register receive operations for that endpoint with the dispatcher, and destroy their endpoint on closure. This avoids the need for separate socket handlers. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2887">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="2888">
+        <label>InputNotificationHandler</label>
+      </node>
+      <node id="2886">
+        <label>ConnectionWrapper</label>
+        <link refid="class_connection_wrapper"/>
+        <childnode refid="2887" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2885">
+        <label>TCPConnectionWrapper</label>
+        <link refid="class_t_c_p_connection_wrapper"/>
+        <childnode refid="2886" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2888" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2892">
+        <label>ConnectionWrapper::ReadHandler</label>
+        <link refid="class_connection_wrapper_1_1_read_handler"/>
+      </node>
+      <node id="2891">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="2893">
+        <label>InputNotificationHandler</label>
+      </node>
+      <node id="2890">
+        <label>ConnectionWrapper</label>
+        <link refid="class_connection_wrapper"/>
+        <childnode refid="2891" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2892" relation="usage">
+          <edgelabel>pReadHandler_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2889">
+        <label>TCPConnectionWrapper</label>
+        <link refid="class_t_c_p_connection_wrapper"/>
+        <childnode refid="2890" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2893" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/bwmachined/tcp_connection_wrapper.hpp" line="27" column="1" bodyfile="tools/bwmachined/tcp_connection_wrapper.hpp" bodystart="25" bodyend="78"/>
+    <listofallmembers>
+      <member refid="class_t_c_p_connection_wrapper_1a6a8d758167ba6b222733041d696cfb6a" prot="public" virt="virtual"><scope>TCPConnectionWrapper</scope><name>allowOversizedPackets</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1ad8662c8f6579846bddfd49317ca8b8a7" prot="private" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>basicSend</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1a9aa0f3403654d1d2b2027fc0a2171bfb" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>closeTemporaryEndpoint</name></member>
+      <member refid="class_connection_wrapper_1a148b9a810bad2b953b18a26a460fb5c6" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>ConnectionWrapper</name></member>
+      <member refid="class_connection_wrapper_1ab3834408026d5b58f72b33e60b69dd04" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>ConnectionWrapper</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1ad64e13d9300fafaf45a6f30fef42e062" prot="private" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>consecutiveDataFailures_</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1a7838ecb94e95ce36ac2591689fb68a36" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>destroy</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1a5f44b687752665a3617c8d91e72ad870" prot="private" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>dispatcher_</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1aa92e4c21fcc0efa3bcc9343968ec4088" prot="private" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>endpointIsOwned_</name></member>
+      <member refid="class_connection_wrapper_1ae516e3e8d68202075cb99e2d363da95f" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>getSocketAddress</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1a1d4b11add7d205b0556164f74147061c" prot="public" virt="virtual"><scope>TCPConnectionWrapper</scope><name>handleInputNotification</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1a18729c8ba8523308817d265967fd05b6" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>isDestroyed</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1a4ce5872fe71971758b700c07cb90a79d" prot="private" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>isDestroyed_</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1a4e43361e73b7f529689b34acec33783b" prot="private" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>isTemporaryConnection_</name></member>
+      <member refid="class_connection_wrapper_1a0f18ea193128c62ec31a9776840bf8e9a2ed04db7bb71e673d0be238c2865cb61" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>MAX_BUFFER_SIZE</name></member>
+      <member refid="class_connection_wrapper_1ae0d99af2aa3eb5329c0a24db14e4b035" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>networkAddr</name></member>
+      <member refid="class_connection_wrapper_1a81e87269c2f2d69a48cc9ffc4d771a07" prot="protected" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>networkAddr_</name></member>
+      <member refid="class_connection_wrapper_1a0d25df1d2592cb158de6b0a1ad8653c5" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>networkPort</name></member>
+      <member refid="class_connection_wrapper_1a21bba3bb96b40ccd97e4beee8ca4d9ea" prot="protected" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>networkPort_</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1a12e2eee51f31b85a596b62f730b2deb5" prot="private" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>pEndpoint_</name></member>
+      <member refid="class_connection_wrapper_1aa0aaf803a6acc8cf31aee2ba7f773525" prot="protected" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>pReadHandler_</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1a41ff3093fde9c3b658a2aa3d848f2b59" prot="private" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>pSendBuffer_</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1aea524f4b8f25f60325a89f8f6f7b26b4" prot="private" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>pSendWaiter_</name></member>
+      <member refid="class_connection_wrapper_1ae00ad8699a9af54be4959386dd931502a5c5c0e1eed380ddab0ee5987c2de71ea" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>RECEIVE_DATA_ERROR</name></member>
+      <member refid="class_connection_wrapper_1ae00ad8699a9af54be4959386dd931502a46d6c7a5dca63e4d20531b6ff0c297d9" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>RECEIVE_FAILURE</name></member>
+      <member refid="class_connection_wrapper_1ae00ad8699a9af54be4959386dd931502aaaacb0831ad832ab2a4638585c5b2c0c" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>RECEIVE_IN_PROGRESS</name></member>
+      <member refid="class_connection_wrapper_1ae00ad8699a9af54be4959386dd931502a4b108c3950121b1cc0b5d73c63d235cd" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>RECEIVE_SUCCESS</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1aec79cf22672d0eb9cc9023102eec6e88" prot="private" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>receiveBuffer_</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1affab9e3d3b92ef65d4060f3efb0afdb4" prot="private" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>receiveBytesDone_</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1a5278dff4f7ce6fdb16ca86b92d4dcacf" prot="private" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>receiveBytesExpected_</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1ac6835b7b1e08fff390950fe3feb5f543" prot="private" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>receiveSizeBytesDone_</name></member>
+      <member refid="class_connection_wrapper_1ae00ad8699a9af54be4959386dd931502" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>ReceiveStatus</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1acad76e9c23f2c1bb0f35286be8e441ab" prot="public" virt="virtual"><scope>TCPConnectionWrapper</scope><name>recv</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1a5972acfc9a3c2e1cdf5c7b179a98335a" prot="public" virt="virtual"><scope>TCPConnectionWrapper</scope><name>send</name></member>
+      <member refid="class_connection_wrapper_1a6ae5b42c2f528732378b4e6bd58b8506ae7f522af6f42ac55d54f8f56d86f9d17" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>SEND_FAILURE</name></member>
+      <member refid="class_connection_wrapper_1a6ae5b42c2f528732378b4e6bd58b8506a50a0aca7b72d6d728b9b3244e3c3d8a8" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>SEND_IN_PROGRESS</name></member>
+      <member refid="class_connection_wrapper_1a6ae5b42c2f528732378b4e6bd58b8506a5b98951c666199ac68cae12b7bdc8c1c" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>SEND_SUCCESS</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1a9f705774ac83ca2c8c635eeadf7a0280" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>sendBufferedData</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1aacd9c1486e0142de79893edcaaa1da14" prot="public" virt="virtual"><scope>TCPConnectionWrapper</scope><name>sendfd</name></member>
+      <member refid="class_connection_wrapper_1a6ae5b42c2f528732378b4e6bd58b8506" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>SendStatus</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1a4d53aa43b18684708e72ec99181fef55" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>TCPConnectionWrapper</name></member>
+      <member refid="class_t_c_p_connection_wrapper_1aedbb263ebcb5d3e0ccf0ad977ccf53e9" prot="public" virt="non-virtual"><scope>TCPConnectionWrapper</scope><name>~TCPConnectionWrapper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

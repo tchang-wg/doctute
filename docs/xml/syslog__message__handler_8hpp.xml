@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="syslog__message__handler_8hpp" kind="file" language="C++">
+    <compoundname>syslog_message_handler.hpp</compoundname>
+    <includes local="yes">cstdmf/bw_namespace.hpp</includes>
+    <includes local="yes">cstdmf/debug_message_priority.hpp</includes>
+    <includes local="yes">cstdmf/debug_message_source.hpp</includes>
+    <includes local="yes">cstdmf/log_meta_data.hpp</includes>
+    <includes local="yes">cstdmf/debug_message_callbacks.hpp</includes>
+    <includes local="no">stdarg.h</includes>
+    <includedby refid="bwmachined_8hpp" local="yes">tools/bwmachined/bwmachined.hpp</includedby>
+    <includedby refid="syslog__message__handler_8cpp" local="yes">tools/bwmachined/syslog_message_handler.cpp</includedby>
+    <incdepgraph>
+      <node id="18236">
+        <label>stdarg.h</label>
+      </node>
+      <node id="18234">
+        <label>cstdmf/log_meta_data.hpp</label>
+      </node>
+      <node id="18235">
+        <label>cstdmf/debug_message_callbacks.hpp</label>
+      </node>
+      <node id="18232">
+        <label>cstdmf/debug_message_priority.hpp</label>
+      </node>
+      <node id="18233">
+        <label>cstdmf/debug_message_source.hpp</label>
+      </node>
+      <node id="18230">
+        <label>tools/bwmachined/syslog_message_handler.hpp</label>
+        <link refid="syslog_message_handler.hpp"/>
+        <childnode refid="18231" relation="include">
+        </childnode>
+        <childnode refid="18232" relation="include">
+        </childnode>
+        <childnode refid="18233" relation="include">
+        </childnode>
+        <childnode refid="18234" relation="include">
+        </childnode>
+        <childnode refid="18235" relation="include">
+        </childnode>
+        <childnode refid="18236" relation="include">
+        </childnode>
+      </node>
+      <node id="18231">
+        <label>cstdmf/bw_namespace.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="18237">
+        <label>tools/bwmachined/syslog_message_handler.hpp</label>
+        <link refid="syslog_message_handler.hpp"/>
+        <childnode refid="18238" relation="include">
+        </childnode>
+      </node>
+      <node id="18239">
+        <label>tools/bwmachined/incoming_packet.hpp</label>
+        <link refid="incoming__packet_8hpp_source"/>
+      </node>
+      <node id="18238">
+        <label>tools/bwmachined/bwmachined.hpp</label>
+        <link refid="bwmachined_8hpp_source"/>
+        <childnode refid="18239" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_syslog_message_handler" prot="public">SyslogMessageHandler</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="syslog__message__handler_8hpp_1a6981af0be630292731ae56228a37ea97" prot="public" static="no">
+        <name>BW_PLATFORM_SUPPORTS_SYSLOG</name>
+        <initializer>(!defined( _WIN32 ) &amp;&amp; !defined( PLAYSTATION3 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/syslog_message_handler.hpp" line="5" column="9" bodyfile="tools/bwmachined/syslog_message_handler.hpp" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BW_SYSLOG_MESSAGE_HANDLER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BW_SYSLOG_MESSAGE_HANDLER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>this<sp/>is<sp/>the<sp/>same<sp/>define<sp/>as<sp/>in<sp/>cstdmf/log_msg.hpp.<sp/>perhaps<sp/>unify?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BW_PLATFORM_SUPPORTS_SYSLOG<sp/>(!defined(<sp/>_WIN32<sp/>)<sp/>&amp;&amp;<sp/>!defined(<sp/>PLAYSTATION3<sp/>))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>BW_PLATFORM_SUPPORTS_SYSLOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_namespace.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/debug_message_priority.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/debug_message_source.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/log_meta_data.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/debug_message_callbacks.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdarg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_syslog_message_handler" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_syslog_message_handler" kindref="compound">SyslogMessageHandler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>DebugMessageCallback</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_syslog_message_handler_1a8084cde612bd73c6b92560436768b303" kindref="member">SyslogMessageHandler</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>pLoggerName<sp/>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>handleMessage(</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DebugMessagePriority<sp/>messagePriority,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>pCategory,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DebugMessageSource<sp/></highlight><highlight class="comment">/*messageSource*/</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>LogMetaData<sp/>&amp;<sp/></highlight><highlight class="comment">/*metaData*/</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>pFormat,<sp/>va_list<sp/>argPtr<sp/>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//virtual<sp/>~SyslogMessageHandler()<sp/>{};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>shouldLogTrace_;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Magic<sp/>number<sp/>32768<sp/>was<sp/>taken<sp/>from<sp/>cstdmf/log_msg.cpp<sp/>dmhBufferSize</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>was<sp/>was<sp/>originally<sp/>doing<sp/>the<sp/>same<sp/>syslog<sp/>print<sp/>operation.<sp/>Should</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>review<sp/>and<sp/>make<sp/>smaller.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>logBuffer_[<sp/>32768<sp/>];</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>BW_PLATFORM_SUPPORTS_SYSLOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>BW_SYSLOG_MESSAGE_HANDLER_HPP</highlight></codeline>
+    </programlisting>
+    <location file="tools/bwmachined/syslog_message_handler.hpp"/>
+  </compounddef>
+</doxygen>

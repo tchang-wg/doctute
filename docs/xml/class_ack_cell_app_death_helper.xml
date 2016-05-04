@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_ack_cell_app_death_helper" kind="class" language="C++" prot="public">
+    <compoundname>AckCellAppDeathHelper</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">TimerHandler</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">ShutdownSafeReplyMessageHandler</basecompoundref>
+    <includes refid="ack__cell__app__death__helper_8hpp" local="no">ack_cell_app_death_helper.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_ack_cell_app_death_helper_1afee4ead46b3d3d085b23585228476501" prot="private" static="no">
+        <type>BW::set&lt; <ref refid="class_smart_pointer" kindref="compound">EntityPtr</ref> &gt;</type>
+        <definition>typedef BW::set&lt; EntityPtr &gt; AckCellAppDeathHelper::RecentOnloads</definition>
+        <argsstring></argsstring>
+        <name>RecentOnloads</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A collection of entities whose channels were in a critical state at the time the <ref refid="class_cell_app" kindref="compound">CellApp</ref> death notification arrived. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/ack_cell_app_death_helper.hpp" line="88" column="1" bodyfile="cellapp/ack_cell_app_death_helper.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ack_cell_app_death_helper_1a1279f0a4e54423a14b54547b3eff29b3" prot="private" static="no" mutable="no">
+        <type><ref refid="class_cell_app" kindref="compound">CellApp</ref> &amp;</type>
+        <definition>CellApp&amp; AckCellAppDeathHelper::app_</definition>
+        <argsstring></argsstring>
+        <name>app_</name>
+        <briefdescription>
+<para>Reference to the <ref refid="class_cell_app" kindref="compound">CellApp</ref> instance, for convenience. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/ack_cell_app_death_helper.hpp" line="84" column="1" bodyfile="cellapp/ack_cell_app_death_helper.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ack_cell_app_death_helper_1aa6df1ed862c0ab9c74767a280bc13481" prot="private" static="no" mutable="no">
+        <type>RecentOnloads</type>
+        <definition>RecentOnloads AckCellAppDeathHelper::recentOnloads_</definition>
+        <argsstring></argsstring>
+        <name>recentOnloads_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/ack_cell_app_death_helper.hpp" line="89" column="1" bodyfile="cellapp/ack_cell_app_death_helper.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ack_cell_app_death_helper_1af9bec8b7f701a4d5090ada73951cd859" prot="private" static="no" mutable="no">
+        <type>Mercury::Address</type>
+        <definition>Mercury::Address AckCellAppDeathHelper::deadAddr_</definition>
+        <argsstring></argsstring>
+        <name>deadAddr_</name>
+        <briefdescription>
+<para>The address of the dead app. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/ack_cell_app_death_helper.hpp" line="92" column="1" bodyfile="cellapp/ack_cell_app_death_helper.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ack_cell_app_death_helper_1a02eb331e65217307cb27541174687da0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AckCellAppDeathHelper::checkPeriod_</definition>
+        <argsstring></argsstring>
+        <name>checkPeriod_</name>
+        <briefdescription>
+<para>How fast we check this (in microseconds). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/ack_cell_app_death_helper.hpp" line="95" column="1" bodyfile="cellapp/ack_cell_app_death_helper.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ack_cell_app_death_helper_1af9192e020da66e6051dae7448e1195d4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AckCellAppDeathHelper::numBadGhosts_</definition>
+        <argsstring></argsstring>
+        <name>numBadGhosts_</name>
+        <briefdescription>
+<para>The number of emergencySetCurrentCell messages we sent. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/ack_cell_app_death_helper.hpp" line="98" column="1" bodyfile="cellapp/ack_cell_app_death_helper.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ack_cell_app_death_helper_1a72fabf9b071e054a9f82121bc23db570" prot="private" static="no" mutable="no">
+        <type>TimerHandle</type>
+        <definition>TimerHandle AckCellAppDeathHelper::timerHandle_</definition>
+        <argsstring></argsstring>
+        <name>timerHandle_</name>
+        <briefdescription>
+<para>Our timer ID with the interface. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/ack_cell_app_death_helper.hpp" line="101" column="1" bodyfile="cellapp/ack_cell_app_death_helper.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ack_cell_app_death_helper_1a264bc8771d4bf0d97838396cddefb18f" prot="private" static="no" mutable="no">
+        <type>uint64</type>
+        <definition>uint64 AckCellAppDeathHelper::startTime_</definition>
+        <argsstring></argsstring>
+        <name>startTime_</name>
+        <briefdescription>
+<para>When we started the timer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/ack_cell_app_death_helper.hpp" line="104" column="1" bodyfile="cellapp/ack_cell_app_death_helper.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_ack_cell_app_death_helper_1a46df45514b15c605b2098ec584885f45" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>BW_BEGIN_NAMESPACE int AckCellAppDeathHelper::s_numInstances_</definition>
+        <argsstring></argsstring>
+        <name>s_numInstances_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Static instance counter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/ack_cell_app_death_helper.hpp" line="107" column="1" bodyfile="cellapp/ack_cell_app_death_helper.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ack_cell_app_death_helper_1a4b15a6784433c8f6e6849db620f2e324" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AckCellAppDeathHelper::AckCellAppDeathHelper</definition>
+        <argsstring>(CellApp &amp;app, const Mercury::Address &amp;deadAddr)</argsstring>
+        <name>AckCellAppDeathHelper</name>
+        <param>
+          <type><ref refid="class_cell_app" kindref="compound">CellApp</ref> &amp;</type>
+          <declname>app</declname>
+        </param>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>deadAddr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/ack_cell_app_death_helper.hpp" line="42" column="1" bodyfile="cellapp/ack_cell_app_death_helper.cpp" bodystart="21" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ack_cell_app_death_helper_1ac8705c2aacc8ffdea26eb0cee1937982" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AckCellAppDeathHelper::~AckCellAppDeathHelper</definition>
+        <argsstring>()</argsstring>
+        <name>~AckCellAppDeathHelper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/ack_cell_app_death_helper.hpp" line="44" column="1" bodyfile="cellapp/ack_cell_app_death_helper.hpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ack_cell_app_death_helper_1a0dd86b362e51dbd51c191b873894aa9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AckCellAppDeathHelper::handleTimeout</definition>
+        <argsstring>(TimerHandle handle, void *arg)</argsstring>
+        <name>handleTimeout</name>
+        <param>
+          <type>TimerHandle</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method periodically checks to see if all entity channels on this app have been cleared of &apos;critical&apos; status. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/ack_cell_app_death_helper.hpp" line="49" column="1" bodyfile="cellapp/ack_cell_app_death_helper.cpp" bodystart="38" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ack_cell_app_death_helper_1afb99fd2b404651c33237485f9e596543" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AckCellAppDeathHelper::handleMessage</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data, void *arg)</argsstring>
+        <name>handleMessage</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles replies to emergencySetCurrentCell messages. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/ack_cell_app_death_helper.hpp" line="51" column="1" bodyfile="cellapp/ack_cell_app_death_helper.cpp" bodystart="70" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ack_cell_app_death_helper_1a3a6fbd68f9857aa18a7345ad159e0c2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AckCellAppDeathHelper::handleException</definition>
+        <argsstring>(const Mercury::NubException &amp;exc, void *)</argsstring>
+        <name>handleException</name>
+        <param>
+          <type>const Mercury::NubException &amp;</type>
+          <declname>exc</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <defname>arg</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles failed delivery of emergencySetCurrentCell messages. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/ack_cell_app_death_helper.hpp" line="56" column="1" bodyfile="cellapp/ack_cell_app_death_helper.cpp" bodystart="83" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ack_cell_app_death_helper_1ae73c14412263bd278b155dcd64cd3b13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AckCellAppDeathHelper::addCriticalEntity</definition>
+        <argsstring>(Entity *pEntity)</argsstring>
+        <name>addCriticalEntity</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> *</type>
+          <declname>pEntity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a real in a critical state to the helper&apos;s collection. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/ack_cell_app_death_helper.hpp" line="62" column="1" bodyfile="cellapp/ack_cell_app_death_helper.hpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ack_cell_app_death_helper_1a78acf78354f8e1167837deea98203468" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AckCellAppDeathHelper::addBadGhost</definition>
+        <argsstring>()</argsstring>
+        <name>addBadGhost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a dead real&apos;s ID to the collection. You should call this for every emergencySetCurrentCell message sent. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/ack_cell_app_death_helper.hpp" line="72" column="1" bodyfile="cellapp/ack_cell_app_death_helper.hpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ack_cell_app_death_helper_1a2053f05b3d8c7bcc64c28135f50d52a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AckCellAppDeathHelper::startTimer</definition>
+        <argsstring>()</argsstring>
+        <name>startTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method should be called when we are ready to start checking for when it&apos;s safe to send the ACK back to the <ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/ack_cell_app_death_helper.hpp" line="78" column="1" bodyfile="cellapp/ack_cell_app_death_helper.cpp" bodystart="112" bodyend="136"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_ack_cell_app_death_helper_1a103c77a299eb80b443603f841bc416e1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AckCellAppDeathHelper::checkFinished</definition>
+        <argsstring>()</argsstring>
+        <name>checkFinished</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks to see if we&apos;re done and can ack back to the <ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref>. This method may delete this object so it can only be called right at the end of another method call. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/ack_cell_app_death_helper.hpp" line="81" column="1" bodyfile="cellapp/ack_cell_app_death_helper.cpp" bodystart="144" bodyend="175"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Helper class to decide when it&apos;s OK to ack a <ref refid="class_cell_app" kindref="compound">CellApp</ref> death back to the <ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref>. We can&apos;t do this until:</para><para><itemizedlist>
+<listitem><para>All the reals on this app have informed their bases of their addresses.</para></listitem><listitem><para>All emergencySetCurrentCell messages have been delivered and replied to.</para></listitem></itemizedlist>
+</para><para>We require both of these things so that all lost reals will be restored, and so that reals that weren&apos;t lost won&apos;t be restored.</para><para>This class polls for a finished state instead of using a nice callback-based design because there is no callback mechanism for detecting resolution of &apos;critical&apos; state on a Channel. The reason that mechanism is not provided is that it is too much trouble to implement the streaming of those callbacks when Channels are offloaded.</para><para>TODO: Using requests/replies to check that emergencySetCurrentCell messages have been delivered is overkill. Either use anonymous channels and mark them as critical, or implement a new Mercury mechanism for detecting the successful delivery of a Bundle (i.e. callback when all packets in a Bundle have been acked).</para><para>This object deletes itself. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="48">
+        <label>TimerHandler</label>
+      </node>
+      <node id="47">
+        <label>AckCellAppDeathHelper</label>
+        <link refid="class_ack_cell_app_death_helper"/>
+        <childnode refid="48" relation="public-inheritance">
+        </childnode>
+        <childnode refid="49" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>ShutdownSafeReplyMessageHandler</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="51">
+        <label>TimerHandler</label>
+      </node>
+      <node id="50">
+        <label>AckCellAppDeathHelper</label>
+        <link refid="class_ack_cell_app_death_helper"/>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+        <childnode refid="52" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>ShutdownSafeReplyMessageHandler</label>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/ack_cell_app_death_helper.hpp" line="40" column="1" bodyfile="cellapp/ack_cell_app_death_helper.hpp" bodystart="37" bodyend="108"/>
+    <listofallmembers>
+      <member refid="class_ack_cell_app_death_helper_1a4b15a6784433c8f6e6849db620f2e324" prot="public" virt="non-virtual"><scope>AckCellAppDeathHelper</scope><name>AckCellAppDeathHelper</name></member>
+      <member refid="class_ack_cell_app_death_helper_1a78acf78354f8e1167837deea98203468" prot="public" virt="non-virtual"><scope>AckCellAppDeathHelper</scope><name>addBadGhost</name></member>
+      <member refid="class_ack_cell_app_death_helper_1ae73c14412263bd278b155dcd64cd3b13" prot="public" virt="non-virtual"><scope>AckCellAppDeathHelper</scope><name>addCriticalEntity</name></member>
+      <member refid="class_ack_cell_app_death_helper_1a1279f0a4e54423a14b54547b3eff29b3" prot="private" virt="non-virtual"><scope>AckCellAppDeathHelper</scope><name>app_</name></member>
+      <member refid="class_ack_cell_app_death_helper_1a103c77a299eb80b443603f841bc416e1" prot="private" virt="non-virtual"><scope>AckCellAppDeathHelper</scope><name>checkFinished</name></member>
+      <member refid="class_ack_cell_app_death_helper_1a02eb331e65217307cb27541174687da0" prot="private" virt="non-virtual"><scope>AckCellAppDeathHelper</scope><name>checkPeriod_</name></member>
+      <member refid="class_ack_cell_app_death_helper_1af9bec8b7f701a4d5090ada73951cd859" prot="private" virt="non-virtual"><scope>AckCellAppDeathHelper</scope><name>deadAddr_</name></member>
+      <member refid="class_ack_cell_app_death_helper_1a3a6fbd68f9857aa18a7345ad159e0c2b" prot="public" virt="virtual"><scope>AckCellAppDeathHelper</scope><name>handleException</name></member>
+      <member refid="class_ack_cell_app_death_helper_1afb99fd2b404651c33237485f9e596543" prot="public" virt="virtual"><scope>AckCellAppDeathHelper</scope><name>handleMessage</name></member>
+      <member refid="class_ack_cell_app_death_helper_1a0dd86b362e51dbd51c191b873894aa9f" prot="public" virt="virtual"><scope>AckCellAppDeathHelper</scope><name>handleTimeout</name></member>
+      <member refid="class_ack_cell_app_death_helper_1af9192e020da66e6051dae7448e1195d4" prot="private" virt="non-virtual"><scope>AckCellAppDeathHelper</scope><name>numBadGhosts_</name></member>
+      <member refid="class_ack_cell_app_death_helper_1afee4ead46b3d3d085b23585228476501" prot="private" virt="non-virtual"><scope>AckCellAppDeathHelper</scope><name>RecentOnloads</name></member>
+      <member refid="class_ack_cell_app_death_helper_1aa6df1ed862c0ab9c74767a280bc13481" prot="private" virt="non-virtual"><scope>AckCellAppDeathHelper</scope><name>recentOnloads_</name></member>
+      <member refid="class_ack_cell_app_death_helper_1a46df45514b15c605b2098ec584885f45" prot="private" virt="non-virtual"><scope>AckCellAppDeathHelper</scope><name>s_numInstances_</name></member>
+      <member refid="class_ack_cell_app_death_helper_1a264bc8771d4bf0d97838396cddefb18f" prot="private" virt="non-virtual"><scope>AckCellAppDeathHelper</scope><name>startTime_</name></member>
+      <member refid="class_ack_cell_app_death_helper_1a2053f05b3d8c7bcc64c28135f50d52a9" prot="public" virt="non-virtual"><scope>AckCellAppDeathHelper</scope><name>startTimer</name></member>
+      <member refid="class_ack_cell_app_death_helper_1a72fabf9b071e054a9f82121bc23db570" prot="private" virt="non-virtual"><scope>AckCellAppDeathHelper</scope><name>timerHandle_</name></member>
+      <member refid="class_ack_cell_app_death_helper_1ac8705c2aacc8ffdea26eb0cee1937982" prot="public" virt="non-virtual"><scope>AckCellAppDeathHelper</scope><name>~AckCellAppDeathHelper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

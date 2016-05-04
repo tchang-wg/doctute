@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_spaces" kind="class" language="C++" prot="public">
+    <compoundname>Spaces</compoundname>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_spaces_1a1e1d060f1d849a237d9e0af66a932105" prot="public" static="no">
+        <type>BW::map&lt; SpaceID, <ref refid="class_space" kindref="compound">Space</ref> * &gt;::const_iterator</type>
+        <definition>typedef BW::map&lt; SpaceID, Space * &gt;::const_iterator Spaces::const_iterator</definition>
+        <argsstring></argsstring>
+        <name>const_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/spaces.hpp" line="38" column="1" bodyfile="cellapp/spaces.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_spaces_1a9081f88fe25deb22b947bed719904dfc" prot="private" static="no">
+        <type>BW::map&lt; SpaceID, <ref refid="class_space" kindref="compound">Space</ref> * &gt;</type>
+        <definition>typedef BW::map&lt; SpaceID, Space * &gt; Spaces::Container</definition>
+        <argsstring></argsstring>
+        <name>Container</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/spaces.hpp" line="44" column="1" bodyfile="cellapp/spaces.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spaces_1ad69ffbd01b18fb37f73ba4c36ef0c316" prot="private" static="no" mutable="no">
+        <type>const IContext &amp;</type>
+        <definition>const IContext&amp; Spaces::context_</definition>
+        <argsstring></argsstring>
+        <name>context_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/spaces.hpp" line="43" column="1" bodyfile="cellapp/spaces.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spaces_1a606379074806c2d4f9c2b9aaf9ad8e11" prot="private" static="no" mutable="no">
+        <type>Container</type>
+        <definition>Container Spaces::container_</definition>
+        <argsstring></argsstring>
+        <name>container_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/spaces.hpp" line="45" column="1" bodyfile="cellapp/spaces.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spaces_1a67ea2b11be363ff93376bd7f5b3545e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE Spaces::Spaces</definition>
+        <argsstring>(const IContext &amp;context)</argsstring>
+        <name>Spaces</name>
+        <param>
+          <type>const IContext &amp;</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/spaces.hpp" line="21" column="1" bodyfile="cellapp/spaces.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spaces_1aea5ba3c4cd0f2a27a6cd8e908d126041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Spaces::~Spaces</definition>
+        <argsstring>()</argsstring>
+        <name>~Spaces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/spaces.hpp" line="22" column="1" bodyfile="cellapp/spaces.cpp" bodystart="24" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spaces_1aeaeb29e99da44299e7a3feb241468d7c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_space" kindref="compound">Space</ref> *</type>
+        <definition>Space * Spaces::find</definition>
+        <argsstring>(SpaceID id) const </argsstring>
+        <name>find</name>
+        <param>
+          <type>SpaceID</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/spaces.hpp" line="24" column="1" bodyfile="cellapp/spaces.cpp" bodystart="38" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spaces_1a63de704a2f3d484007f2ee3833f1921c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_space" kindref="compound">Space</ref> *</type>
+        <definition>Space * Spaces::create</definition>
+        <argsstring>(SpaceID id, const BW::StringRef &amp;spaceDataDef)</argsstring>
+        <name>create</name>
+        <param>
+          <type>SpaceID</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const BW::StringRef &amp;</type>
+          <declname>spaceDataDef</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/spaces.hpp" line="25" column="1" bodyfile="cellapp/spaces.cpp" bodystart="47" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spaces_1abb1a5e5fdcc40f5848334fa16f7d4468" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spaces::prepareNewlyLoadedChunksForDelete</definition>
+        <argsstring>()</argsstring>
+        <name>prepareNewlyLoadedChunksForDelete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method prepares all chunks that are in the process of fully loading for deletion. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/spaces.hpp" line="27" column="1" bodyfile="cellapp/spaces.cpp" bodystart="61" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spaces_1ace87f6c412a7f66d5de7b691c20bb427" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spaces::tickChunks</definition>
+        <argsstring>()</argsstring>
+        <name>tickChunks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks whether there are any chunks that need to be loaded or unloaded. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/spaces.hpp" line="28" column="1" bodyfile="cellapp/spaces.cpp" bodystart="78" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spaces_1a0eb7fe7b96a39aacb8f48d977338d627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spaces::deleteOldSpaces</definition>
+        <argsstring>()</argsstring>
+        <name>deleteOldSpaces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method deletes any spaces that have fully unloaded. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/spaces.hpp" line="29" column="1" bodyfile="cellapp/spaces.cpp" bodystart="97" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spaces_1a3737218166b22e85fe334a1e564ef8de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spaces::writeRecoveryData</definition>
+        <argsstring>(BinaryOStream &amp;stream)</argsstring>
+        <name>writeRecoveryData</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/spaces.hpp" line="30" column="1" bodyfile="cellapp/spaces.cpp" bodystart="119" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spaces_1a912e7d1cb1644a19c24c8ec64e367d09" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Spaces::size</definition>
+        <argsstring>() const </argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/spaces.hpp" line="32" column="1" bodyfile="cellapp/spaces.hpp" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spaces_1a0e9137d7fbb1ab78b0d99143229c9141" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_smart_pointer" kindref="compound">WatcherPtr</ref></type>
+        <definition>WatcherPtr Spaces::pWatcher</definition>
+        <argsstring>()</argsstring>
+        <name>pWatcher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/spaces.hpp" line="34" column="1" bodyfile="cellapp/spaces.cpp" bodystart="134" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spaces_1a8591b591d07510a549249dd016fb40d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Spaces::haveOtherCellsIn</definition>
+        <argsstring>(const CellAppChannel &amp;remoteChannel) const </argsstring>
+        <name>haveOtherCellsIn</name>
+        <param>
+          <type>const <ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref> &amp;</type>
+          <declname>remoteChannel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks whether there are other cells in the spaces that we currently have.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>remoteChannel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The remote <ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if other cells existing in our spaces on other <ref refid="class_cell_apps" kindref="compound">CellApps</ref>, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/spaces.hpp" line="36" column="1" bodyfile="cellapp/spaces.cpp" bodystart="152" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spaces_1a9473973483af06e40c7c5b53013a65f4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const_iterator</type>
+        <definition>const_iterator Spaces::begin</definition>
+        <argsstring>() const </argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/spaces.hpp" line="39" column="1" bodyfile="cellapp/spaces.hpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spaces_1a77f90817b7e9d9e2c81bcdd698096b8f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const_iterator</type>
+        <definition>const_iterator Spaces::end</definition>
+        <argsstring>() const </argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/spaces.hpp" line="40" column="1" bodyfile="cellapp/spaces.hpp" bodystart="40" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="cellapp/spaces.hpp" line="19" column="1" bodyfile="cellapp/spaces.hpp" bodystart="18" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_spaces_1a9473973483af06e40c7c5b53013a65f4" prot="public" virt="non-virtual"><scope>Spaces</scope><name>begin</name></member>
+      <member refid="class_spaces_1a1e1d060f1d849a237d9e0af66a932105" prot="public" virt="non-virtual"><scope>Spaces</scope><name>const_iterator</name></member>
+      <member refid="class_spaces_1a9081f88fe25deb22b947bed719904dfc" prot="private" virt="non-virtual"><scope>Spaces</scope><name>Container</name></member>
+      <member refid="class_spaces_1a606379074806c2d4f9c2b9aaf9ad8e11" prot="private" virt="non-virtual"><scope>Spaces</scope><name>container_</name></member>
+      <member refid="class_spaces_1ad69ffbd01b18fb37f73ba4c36ef0c316" prot="private" virt="non-virtual"><scope>Spaces</scope><name>context_</name></member>
+      <member refid="class_spaces_1a63de704a2f3d484007f2ee3833f1921c" prot="public" virt="non-virtual"><scope>Spaces</scope><name>create</name></member>
+      <member refid="class_spaces_1a0eb7fe7b96a39aacb8f48d977338d627" prot="public" virt="non-virtual"><scope>Spaces</scope><name>deleteOldSpaces</name></member>
+      <member refid="class_spaces_1a77f90817b7e9d9e2c81bcdd698096b8f" prot="public" virt="non-virtual"><scope>Spaces</scope><name>end</name></member>
+      <member refid="class_spaces_1aeaeb29e99da44299e7a3feb241468d7c" prot="public" virt="non-virtual"><scope>Spaces</scope><name>find</name></member>
+      <member refid="class_spaces_1a8591b591d07510a549249dd016fb40d7" prot="public" virt="non-virtual"><scope>Spaces</scope><name>haveOtherCellsIn</name></member>
+      <member refid="class_spaces_1abb1a5e5fdcc40f5848334fa16f7d4468" prot="public" virt="non-virtual"><scope>Spaces</scope><name>prepareNewlyLoadedChunksForDelete</name></member>
+      <member refid="class_spaces_1a0e9137d7fbb1ab78b0d99143229c9141" prot="public" virt="non-virtual"><scope>Spaces</scope><name>pWatcher</name></member>
+      <member refid="class_spaces_1a912e7d1cb1644a19c24c8ec64e367d09" prot="public" virt="non-virtual"><scope>Spaces</scope><name>size</name></member>
+      <member refid="class_spaces_1a67ea2b11be363ff93376bd7f5b3545e1" prot="public" virt="non-virtual"><scope>Spaces</scope><name>Spaces</name></member>
+      <member refid="class_spaces_1ace87f6c412a7f66d5de7b691c20bb427" prot="public" virt="non-virtual"><scope>Spaces</scope><name>tickChunks</name></member>
+      <member refid="class_spaces_1a3737218166b22e85fe334a1e564ef8de" prot="public" virt="non-virtual"><scope>Spaces</scope><name>writeRecoveryData</name></member>
+      <member refid="class_spaces_1aea5ba3c4cd0f2a27a6cd8e908d126041" prot="public" virt="non-virtual"><scope>Spaces</scope><name>~Spaces</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

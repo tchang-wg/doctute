@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_base_via_cell_mail_box" kind="class" language="C++" prot="public">
+    <compoundname>BaseViaCellMailBox</compoundname>
+    <basecompoundref refid="class_cell_entity_mail_box" prot="public" virt="non-virtual">CellEntityMailBox</basecompoundref>
+    <basecompoundref refid="class_common_cell_entity_mail_box" prot="public" virt="non-virtual">CommonCellEntityMailBox</basecompoundref>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_base_via_cell_mail_box_1a0729c3b70eab784b039d781f6f625127" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BaseViaCellMailBox::Py_Header</definition>
+        <argsstring>(BaseViaCellMailBox, CommonCellEntityMailBox) public</argsstring>
+        <name>Py_Header</name>
+        <param>
+          <type><ref refid="class_base_via_cell_mail_box" kindref="compound">BaseViaCellMailBox</ref></type>
+        </param>
+        <param>
+          <type><ref refid="class_common_cell_entity_mail_box" kindref="compound">CommonCellEntityMailBox</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/mailbox.cpp" line="135" column="1" bodyfile="baseapp/mailbox.cpp" bodystart="135" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_via_cell_mail_box_1a383901790b309a8b49a6e4e56eab980a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BaseViaCellMailBox::~BaseViaCellMailBox</definition>
+        <argsstring>()</argsstring>
+        <name>~BaseViaCellMailBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/mailbox.cpp" line="144" column="1" bodyfile="baseapp/mailbox.cpp" bodystart="144" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_via_cell_mail_box_1a3db06ce0312ff93811ef21bce196e749" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>ScriptObject</type>
+        <definition>ScriptObject BaseViaCellMailBox::pyGetAttribute</definition>
+        <argsstring>(const ScriptString &amp;attrObj)</argsstring>
+        <name>pyGetAttribute</name>
+        <reimplements refid="class_server_entity_mail_box_1a2025c1dc3a0133d45d045f2c4efe7a5d">pyGetAttribute</reimplements>
+        <param>
+          <type>const ScriptString &amp;</type>
+          <declname>attrObj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method overrides the PyEntityMailBox method so that we can add the id attribute. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/mailbox.cpp" line="146" column="1" bodyfile="baseapp/mailbox.cpp" bodystart="164" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_via_cell_mail_box_1acdaa7ba3217c0c3bfa189a80c19e8d21" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BinaryOStream *</type>
+        <definition>BinaryOStream * BaseViaCellMailBox::getStreamEx</definition>
+        <argsstring>(const MethodDescription &amp;methodDesc, std::auto_ptr&lt; Mercury::ReplyMessageHandler &gt; pHandler)</argsstring>
+        <name>getStreamEx</name>
+        <reimplements refid="class_cell_entity_mail_box_1a20b48e2e1e0f7420b077e6a5afd1c34c">getStreamEx</reimplements>
+        <param>
+          <type>const MethodDescription &amp;</type>
+          <declname>methodDesc</declname>
+        </param>
+        <param>
+          <type>std::auto_ptr&lt; Mercury::ReplyMessageHandler &gt;</type>
+          <declname>pHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method gets a stream to send a message to the cell on. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/mailbox.cpp" line="147" column="1" bodyfile="baseapp/mailbox.cpp" bodystart="180" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_via_cell_mail_box_1a078ba06a8c666351286e81616ea5ba08" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>EntityMailBoxRef::Component</type>
+        <definition>EntityMailBoxRef::Component BaseViaCellMailBox::component</definition>
+        <argsstring>() const </argsstring>
+        <name>component</name>
+        <reimplements refid="class_cell_entity_mail_box_1a6d32424cbca492add38ddb1ddbf39064">component</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the type of this mailbox.</para><para>Say what type of component we are </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/mailbox.cpp" line="149" column="1" bodyfile="baseapp/mailbox.cpp" bodystart="192" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_via_cell_mail_box_1a8a04f472ee2ccdbd8919a302646e835a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const MethodDescription *</type>
+        <definition>const MethodDescription * BaseViaCellMailBox::findMethod</definition>
+        <argsstring>(const char *attr) const </argsstring>
+        <name>findMethod</name>
+        <reimplements refid="class_cell_entity_mail_box_1a9473f91821d598023edfc348bc6af46f">findMethod</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method overrides the virtual findMethod function. It returns the base MethodDescription with the input name. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/mailbox.cpp" line="150" column="1" bodyfile="baseapp/mailbox.cpp" bodystart="202" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_via_cell_mail_box_1a1988d1d010188d2ab222d70d680219d9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BaseViaCellMailBox::Py_Header</definition>
+        <argsstring>(BaseViaCellMailBox, CellEntityMailBox) public</argsstring>
+        <name>Py_Header</name>
+        <param>
+          <type><ref refid="class_base_via_cell_mail_box" kindref="compound">BaseViaCellMailBox</ref></type>
+        </param>
+        <param>
+          <type><ref refid="class_cell_entity_mail_box" kindref="compound">CellEntityMailBox</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/mailbox.cpp" line="138" column="1" bodyfile="cellapp/mailbox.cpp" bodystart="138" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_via_cell_mail_box_1a383901790b309a8b49a6e4e56eab980a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BaseViaCellMailBox::~BaseViaCellMailBox</definition>
+        <argsstring>()</argsstring>
+        <name>~BaseViaCellMailBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/mailbox.cpp" line="147" column="1" bodyfile="cellapp/mailbox.cpp" bodystart="147" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_via_cell_mail_box_1acee4df5b467e977e6c991a7c4e7122f3" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>ScriptObject</type>
+        <definition>virtual ScriptObject BaseViaCellMailBox::pyGetAttribute</definition>
+        <argsstring>(const ScriptString &amp;attrObj)</argsstring>
+        <name>pyGetAttribute</name>
+        <reimplements refid="class_server_entity_mail_box_1a2025c1dc3a0133d45d045f2c4efe7a5d">pyGetAttribute</reimplements>
+        <param>
+          <type>const ScriptString &amp;</type>
+          <declname>attrObj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method overrides the PyEntityMailBox method so that we can add the id attribute. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/mailbox.cpp" line="149" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_via_cell_mail_box_1a17f50a7654a18d7ffbce25b6e2cd71fb" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BinaryOStream *</type>
+        <definition>BinaryOStream * BaseViaCellMailBox::getStream</definition>
+        <argsstring>(const MethodDescription &amp;methodDesc, std::auto_ptr&lt; Mercury::ReplyMessageHandler &gt; pHandler)</argsstring>
+        <name>getStream</name>
+        <reimplements refid="class_cell_entity_mail_box_1a79513755ed97036e9ad390850cb634b7">getStream</reimplements>
+        <param>
+          <type>const MethodDescription &amp;</type>
+          <declname>methodDesc</declname>
+        </param>
+        <param>
+          <type>std::auto_ptr&lt; Mercury::ReplyMessageHandler &gt;</type>
+          <declname>pHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method gets a stream to send a message to the cell on. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/mailbox.cpp" line="150" column="1" bodyfile="cellapp/mailbox.cpp" bodystart="197" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_via_cell_mail_box_1ae55ae4993f509393dbe1966e7a829b6a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>EntityMailBoxRef::Component</type>
+        <definition>virtual EntityMailBoxRef::Component BaseViaCellMailBox::component</definition>
+        <argsstring>() const </argsstring>
+        <name>component</name>
+        <reimplements refid="class_cell_entity_mail_box_1a6d32424cbca492add38ddb1ddbf39064">component</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Say what type of component we are </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/mailbox.cpp" line="152" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_base_via_cell_mail_box_1afb5ee0823bbd8d4726466491c1d11da5" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const MethodDescription *</type>
+        <definition>virtual const MethodDescription* BaseViaCellMailBox::findMethod</definition>
+        <argsstring>(const char *attr) const </argsstring>
+        <name>findMethod</name>
+        <reimplements refid="class_cell_entity_mail_box_1a9473f91821d598023edfc348bc6af46f">findMethod</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method overrides the virtual findMethod function. It returns the cell MethodDescription with the input name. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/mailbox.cpp" line="153" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to create a mailbox to a base entity. Traffic for the entity is sent via the cell entity instead of directly to the base entity. This means that these mailboxes have the restrictions that cell entity mailboxes have. That is, they cannot be stored and must be used immediately. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="288">
+        <label>CommonCellEntityMailBox</label>
+        <link refid="class_common_cell_entity_mail_box"/>
+        <childnode refid="286" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="285">
+        <label>CellEntityMailBox</label>
+        <link refid="class_cell_entity_mail_box"/>
+        <childnode refid="286" relation="public-inheritance">
+        </childnode>
+        <childnode refid="288" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="287">
+        <label>PyEntityMailBox</label>
+      </node>
+      <node id="286">
+        <label>ServerEntityMailBox</label>
+        <link refid="class_server_entity_mail_box"/>
+        <childnode refid="287" relation="public-inheritance">
+        </childnode>
+        <childnode refid="287" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="284">
+        <label>BaseViaCellMailBox</label>
+        <link refid="class_base_via_cell_mail_box"/>
+        <childnode refid="285" relation="public-inheritance">
+        </childnode>
+        <childnode refid="288" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="294">
+        <label>CommonCellEntityMailBox</label>
+        <link refid="class_common_cell_entity_mail_box"/>
+        <childnode refid="291" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="290">
+        <label>CellEntityMailBox</label>
+        <link refid="class_cell_entity_mail_box"/>
+        <childnode refid="291" relation="public-inheritance">
+        </childnode>
+        <childnode refid="294" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="292">
+        <label>PyEntityMailBox</label>
+      </node>
+      <node id="291">
+        <label>ServerEntityMailBox</label>
+        <link refid="class_server_entity_mail_box"/>
+        <childnode refid="292" relation="public-inheritance">
+        </childnode>
+        <childnode refid="292" relation="public-inheritance">
+        </childnode>
+        <childnode refid="293" relation="usage">
+          <edgelabel>pLocalType_</edgelabel>
+        </childnode>
+      </node>
+      <node id="293">
+        <label>SmartPointer&lt; EntityType &gt;</label>
+        <link refid="class_smart_pointer"/>
+      </node>
+      <node id="289">
+        <label>BaseViaCellMailBox</label>
+        <link refid="class_base_via_cell_mail_box"/>
+        <childnode refid="290" relation="public-inheritance">
+        </childnode>
+        <childnode refid="294" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/mailbox.cpp" line="134" column="1" bodyfile="baseapp/mailbox.cpp" bodystart="133" bodyend="151"/>
+    <listofallmembers>
+      <member refid="class_server_entity_mail_box_1a37fa9fde4551bda091d33eed21013963" prot="protected" virt="non-virtual" ambiguityscope="CellEntityMailBox::ServerEntityMailBox::"><scope>BaseViaCellMailBox</scope><name>addr_</name></member>
+      <member refid="class_server_entity_mail_box_1a37fa9fde4551bda091d33eed21013963" prot="protected" virt="non-virtual" ambiguityscope="CellEntityMailBox::CommonCellEntityMailBox::"><scope>BaseViaCellMailBox</scope><name>addr_</name></member>
+      <member refid="class_server_entity_mail_box_1a37fa9fde4551bda091d33eed21013963" prot="protected" virt="non-virtual" ambiguityscope="CommonCellEntityMailBox::"><scope>BaseViaCellMailBox</scope><name>addr_</name></member>
+      <member refid="class_server_entity_mail_box_1aa74a6727a32255a12afd670896ca0ebf" prot="protected" virt="non-virtual" ambiguityscope="CellEntityMailBox::ServerEntityMailBox::"><scope>BaseViaCellMailBox</scope><name>clusterID_</name></member>
+      <member refid="class_server_entity_mail_box_1aa74a6727a32255a12afd670896ca0ebf" prot="protected" virt="non-virtual" ambiguityscope="CellEntityMailBox::CommonCellEntityMailBox::"><scope>BaseViaCellMailBox</scope><name>clusterID_</name></member>
+      <member refid="class_server_entity_mail_box_1aa74a6727a32255a12afd670896ca0ebf" prot="protected" virt="non-virtual" ambiguityscope="CommonCellEntityMailBox::"><scope>BaseViaCellMailBox</scope><name>clusterID_</name></member>
+      <member refid="class_base_via_cell_mail_box_1a078ba06a8c666351286e81616ea5ba08" prot="private" virt="virtual"><scope>BaseViaCellMailBox</scope><name>component</name></member>
+      <member refid="class_base_via_cell_mail_box_1ae55ae4993f509393dbe1966e7a829b6a" prot="private" virt="virtual"><scope>BaseViaCellMailBox</scope><name>component</name></member>
+      <member refid="class_base_via_cell_mail_box_1a8a04f472ee2ccdbd8919a302646e835a" prot="private" virt="virtual"><scope>BaseViaCellMailBox</scope><name>findMethod</name></member>
+      <member refid="class_base_via_cell_mail_box_1afb5ee0823bbd8d4726466491c1d11da5" prot="private" virt="virtual"><scope>BaseViaCellMailBox</scope><name>findMethod</name></member>
+      <member refid="class_base_via_cell_mail_box_1a17f50a7654a18d7ffbce25b6e2cd71fb" prot="private" virt="virtual"><scope>BaseViaCellMailBox</scope><name>getStream</name></member>
+      <member refid="class_common_cell_entity_mail_box_1af08bedf7471f28ea774ad9517b9c9df5" prot="protected" virt="non-virtual" ambiguityscope="CellEntityMailBox::"><scope>BaseViaCellMailBox</scope><name>getStreamCommon</name></member>
+      <member refid="class_common_cell_entity_mail_box_1af08bedf7471f28ea774ad9517b9c9df5" prot="protected" virt="non-virtual" ambiguityscope="CommonCellEntityMailBox::"><scope>BaseViaCellMailBox</scope><name>getStreamCommon</name></member>
+      <member refid="class_base_via_cell_mail_box_1acdaa7ba3217c0c3bfa189a80c19e8d21" prot="private" virt="virtual"><scope>BaseViaCellMailBox</scope><name>getStreamEx</name></member>
+      <member refid="class_server_entity_mail_box_1a08d188a0e07455f51514799fac1f92da" prot="protected" virt="non-virtual" ambiguityscope="CellEntityMailBox::ServerEntityMailBox::"><scope>BaseViaCellMailBox</scope><name>id_</name></member>
+      <member refid="class_server_entity_mail_box_1a08d188a0e07455f51514799fac1f92da" prot="protected" virt="non-virtual" ambiguityscope="CellEntityMailBox::CommonCellEntityMailBox::"><scope>BaseViaCellMailBox</scope><name>id_</name></member>
+      <member refid="class_server_entity_mail_box_1a08d188a0e07455f51514799fac1f92da" prot="protected" virt="non-virtual" ambiguityscope="CommonCellEntityMailBox::"><scope>BaseViaCellMailBox</scope><name>id_</name></member>
+      <member refid="class_cell_entity_mail_box_1ab3b8038037b512f27d9e14d4c4f63a35" prot="protected" virt="virtual"><scope>BaseViaCellMailBox</scope><name>pChannel</name></member>
+      <member refid="class_server_entity_mail_box_1af95a74119a60168567696de3372410c9" prot="protected" virt="non-virtual" ambiguityscope="CellEntityMailBox::ServerEntityMailBox::"><scope>BaseViaCellMailBox</scope><name>pLocalType_</name></member>
+      <member refid="class_server_entity_mail_box_1af95a74119a60168567696de3372410c9" prot="protected" virt="non-virtual" ambiguityscope="CellEntityMailBox::CommonCellEntityMailBox::"><scope>BaseViaCellMailBox</scope><name>pLocalType_</name></member>
+      <member refid="class_server_entity_mail_box_1af95a74119a60168567696de3372410c9" prot="protected" virt="non-virtual" ambiguityscope="CommonCellEntityMailBox::"><scope>BaseViaCellMailBox</scope><name>pLocalType_</name></member>
+      <member refid="class_base_via_cell_mail_box_1a0729c3b70eab784b039d781f6f625127" prot="private" virt="non-virtual"><scope>BaseViaCellMailBox</scope><name>Py_Header</name></member>
+      <member refid="class_base_via_cell_mail_box_1a1988d1d010188d2ab222d70d680219d9" prot="private" virt="non-virtual"><scope>BaseViaCellMailBox</scope><name>Py_Header</name></member>
+      <member refid="class_base_via_cell_mail_box_1a3db06ce0312ff93811ef21bce196e749" prot="private" virt="virtual"><scope>BaseViaCellMailBox</scope><name>pyGetAttribute</name></member>
+      <member refid="class_base_via_cell_mail_box_1acee4df5b467e977e6c991a7c4e7122f3" prot="private" virt="virtual"><scope>BaseViaCellMailBox</scope><name>pyGetAttribute</name></member>
+      <member refid="class_base_via_cell_mail_box_1a383901790b309a8b49a6e4e56eab980a" prot="private" virt="non-virtual"><scope>BaseViaCellMailBox</scope><name>~BaseViaCellMailBox</name></member>
+      <member refid="class_base_via_cell_mail_box_1a383901790b309a8b49a6e4e56eab980a" prot="private" virt="non-virtual"><scope>BaseViaCellMailBox</scope><name>~BaseViaCellMailBox</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

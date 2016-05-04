@@ -1,0 +1,311 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_accelerate_along_path_controller" kind="class" language="C++" prot="public">
+    <compoundname>AccelerateAlongPathController</compoundname>
+    <basecompoundref refid="class_base_acceleration_controller" prot="public" virt="non-virtual">BaseAccelerationController</basecompoundref>
+    <includes refid="accelerate__along__path__controller_8hpp" local="no">accelerate_along_path_controller.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_accelerate_along_path_controller_1a49369fa47db02cdc829c90925bc1c6f5" prot="private" static="no" mutable="no">
+        <type>BW::vector&lt; Position3D &gt;</type>
+        <definition>BW::vector&lt; Position3D &gt; AccelerateAlongPathController::waypoints_</definition>
+        <argsstring></argsstring>
+        <name>waypoints_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/accelerate_along_path_controller.hpp" line="30" column="1" bodyfile="cellapp/accelerate_along_path_controller.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_accelerate_along_path_controller_1a0dd0bffc8e65f430975b33b2ab5c4ce2" prot="private" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint AccelerateAlongPathController::progress_</definition>
+        <argsstring></argsstring>
+        <name>progress_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/accelerate_along_path_controller.hpp" line="31" column="1" bodyfile="cellapp/accelerate_along_path_controller.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_accelerate_along_path_controller_1a0c04bf234932fdb2044d796f1a405092" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AccelerateAlongPathController::AccelerateAlongPathController</definition>
+        <argsstring>()</argsstring>
+        <name>AccelerateAlongPathController</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor for <ref refid="class_accelerate_along_path_controller" kindref="compound">AccelerateAlongPathController</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/accelerate_along_path_controller.hpp" line="19" column="1" bodyfile="cellapp/accelerate_along_path_controller.cpp" bodystart="23" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_accelerate_along_path_controller_1a3873629c512a5df39dd297ce09fdf8ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AccelerateAlongPathController::AccelerateAlongPathController</definition>
+        <argsstring>(BW::vector&lt; Position3D &gt; &amp;waypoints, float acceleration, float maxSpeed, Facing facing)</argsstring>
+        <name>AccelerateAlongPathController</name>
+        <param>
+          <type>BW::vector&lt; Position3D &gt; &amp;</type>
+          <declname>waypoints</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>acceleration</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxSpeed</declname>
+        </param>
+        <param>
+          <type><ref refid="class_base_acceleration_controller_1a1eeb15aa12b74f0c68d61922ae93d171" kindref="member">Facing</ref></type>
+          <declname>facing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor for <ref refid="class_accelerate_along_path_controller" kindref="compound">AccelerateAlongPathController</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>waypoints</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of waypoints to traverse. NOTE: They are in local spaces, and the given vector will be empty after this function call. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>acceleration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of acceleration to apply. (units/second^2) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxSpeed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum speed to travel at. (units/second) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>facing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The direction to face while travelling.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>To avoid an unnecessary vector copy, the contents of &apos;waypoints&apos; is std::swapped with the member. Be aware that waypoints is not a const reference and will be empty after the function completes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/accelerate_along_path_controller.hpp" line="20" column="1" bodyfile="cellapp/accelerate_along_path_controller.cpp" bodystart="48" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_accelerate_along_path_controller_1a8bbeb41028045e53d325fc6ec1c18f74" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AccelerateAlongPathController::writeRealToStream</definition>
+        <argsstring>(BinaryOStream &amp;stream)</argsstring>
+        <name>writeRealToStream</name>
+        <reimplements refid="class_base_acceleration_controller_1afad53fabfd5f0156f3846ea90448edd2">writeRealToStream</reimplements>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method writes our state to a stream.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stream to which we should write </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/accelerate_along_path_controller.hpp" line="25" column="1" bodyfile="cellapp/accelerate_along_path_controller.cpp" bodystart="69" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_accelerate_along_path_controller_1ab190369ae2467a26fccb58f4c2fb663b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool AccelerateAlongPathController::readRealFromStream</definition>
+        <argsstring>(BinaryIStream &amp;stream)</argsstring>
+        <name>readRealFromStream</name>
+        <reimplements refid="class_base_acceleration_controller_1ad60277e25a49a970492bb40f040e8f8f">readRealFromStream</reimplements>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method reads our state from a stream.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stream from which to read</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successful, false otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/accelerate_along_path_controller.hpp" line="26" column="1" bodyfile="cellapp/accelerate_along_path_controller.cpp" bodystart="83" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_accelerate_along_path_controller_1a57d54deafb6bf886447cafcb9bbd06f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AccelerateAlongPathController::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the update function of the <ref refid="class_accelerate_along_path_controller" kindref="compound">AccelerateAlongPathController</ref> every tick. It accelerates the entity toward the next waypoint from the list given when the controller was created.</para><para>If the destination is reached the controller will cancel its self and initiate the onMove callback.</para><para><simplesect kind="see"><para>Entity.onMove </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/accelerate_along_path_controller.hpp" line="27" column="1" bodyfile="cellapp/accelerate_along_path_controller.cpp" bodystart="101" bodyend="132"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class forms a controller that moves an entity along a list of waypoints. The controller accelerates the entity though each waypoint, finally coming to a halt at the last one. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="0">
+        <label>AccelerateAlongPathController</label>
+        <link refid="class_accelerate_along_path_controller"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Updatable</label>
+      </node>
+      <node id="1">
+        <label>BaseAccelerationController</label>
+        <link refid="class_base_acceleration_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="5">
+        <label>AccelerateAlongPathController</label>
+        <link refid="class_accelerate_along_path_controller"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Updatable</label>
+      </node>
+      <node id="11">
+        <label>PyObjectPlus</label>
+      </node>
+      <node id="9">
+        <label>Entity</label>
+        <link refid="class_entity"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>BWEntity</label>
+      </node>
+      <node id="6">
+        <label>BaseAccelerationController</label>
+        <link refid="class_base_acceleration_controller"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>s_factoryFnEntity_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/accelerate_along_path_controller.hpp" line="15" column="1" bodyfile="cellapp/accelerate_along_path_controller.hpp" bodystart="14" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_accelerate_along_path_controller_1a0c04bf234932fdb2044d796f1a405092" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>AccelerateAlongPathController</name></member>
+      <member refid="class_accelerate_along_path_controller_1a3873629c512a5df39dd297ce09fdf8ce" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>AccelerateAlongPathController</name></member>
+      <member refid="class_base_acceleration_controller_1a526d520bc0a6066613ac43ed1676f021" prot="protected" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>acceleration_</name></member>
+      <member refid="class_controller_1a5c08d1a7974edb523c97f03c843b7a2a" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>addControllerDigest</name></member>
+      <member refid="class_base_acceleration_controller_1a1e263db9616f5f61d857f545212b99b1" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>BaseAccelerationController</name></member>
+      <member refid="class_controller_1a3332cc6b7c51b257f6b5bf8cccf6b296" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a797d7bd68f93f36fbd4edc92c9de300e" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a31d2c2c443222d9134e511eb734493fd" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a6ef0365a5bc295f4a92430ef0e809367" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a8972473450e1ea11239ac96c370fddd0" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a0dab5e21880d0c861495fa1909f95cbe" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a9e5ce4bd55f4d6cac2380bf3dfe95d5e" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1aef85b8faeee04f32c6c8fc384537be0d" prot="protected" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a2a148ee762b8dae72593a0fb38a029bb" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a130a7805734c754c3ff8ab59ee01dea2" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>BWAPI</name></member>
+      <member refid="class_base_acceleration_controller_1aea84de792e77d79c2c46afcafb46e2ff" prot="protected" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>calculateAccelerationVector</name></member>
+      <member refid="class_base_acceleration_controller_1aca2cc5cd8d9ed0bf167bd50d8b9ea5a1" prot="protected" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>calculateDesiredVelocity</name></member>
+      <member refid="class_controller_1ade939a909a83784f4e733140c5f6be0f" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>create</name></member>
+      <member refid="class_controller_1a7c32bc59c340ade9d98e20d72ae40e7a" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>createIfNecessary</name></member>
+      <member refid="class_controller_1a3a96f5d838427d0b251f1cf5792350db" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>CreatorFn</name></member>
+      <member refid="class_controller_1aa251a2d5e3be8104a67eb22cc7b33781" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>ct</name></member>
+      <member refid="class_controller_1ad0a29b9b91700a808c328fb828ea5433" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>disowned</name></member>
+      <member refid="class_controller_1a18e942dbb34d82bc4cfcc9718b1c970f" prot="public" virt="pure-virtual"><scope>AccelerateAlongPathController</scope><name>domain</name></member>
+      <member refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>entity</name></member>
+      <member refid="class_controller_1a30b2745a2b74633dac7bba027bfe5eda" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>EXCLUSIVE_CONTROLLER_ID_MASK</name></member>
+      <member refid="class_controller_1ad5aa8f4242778920938f18a19ca039ab" prot="public" virt="pure-virtual"><scope>AccelerateAlongPathController</scope><name>exclusiveID</name></member>
+      <member refid="class_base_acceleration_controller_1a1eeb15aa12b74f0c68d61922ae93d171" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>Facing</name></member>
+      <member refid="class_base_acceleration_controller_1aa31eaaaf71ab691f69820a9a97c29e39" prot="protected" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>facing_</name></member>
+      <member refid="class_base_acceleration_controller_1a1eeb15aa12b74f0c68d61922ae93d171afd19222d99ef137baa57ef7f58572403" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>FACING_ACCELERATION</name></member>
+      <member refid="class_base_acceleration_controller_1a1eeb15aa12b74f0c68d61922ae93d171a676325acdb8267161d90bc9d0f837ac3" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>FACING_MAX</name></member>
+      <member refid="class_base_acceleration_controller_1a1eeb15aa12b74f0c68d61922ae93d171a83a38a977ed23f98e010f9c49fb7e9b0" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>FACING_NONE</name></member>
+      <member refid="class_base_acceleration_controller_1a1eeb15aa12b74f0c68d61922ae93d171ae5aa6dc3ac042a591b8f11eaa3f50a15" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>FACING_VELOCITY</name></member>
+      <member refid="class_controller_1a4399843065da63b4d68e76bcba1c9b33" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>factories</name></member>
+      <member refid="class_controller_1a59b8e5ee7602267120c203e2d73a4aad" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>factory</name></member>
+      <member refid="class_controller_1a8c83b29edd91cff97310b85fd2dd62a9" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>FactoryFn</name></member>
+      <member refid="class_controller_1a01630a3d95bde81822c3ac80cc68bd72" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>ffn</name></member>
+      <member refid="class_controller_1a912cc50ab630c16d340e6750571c7d36" prot="protected" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>ghost</name></member>
+      <member refid="class_controller_1a8c2f39fc63cd53d3a098b14310cdbc6c" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>id</name></member>
+      <member refid="class_controller_1a97d6e40743b8130b496b1aa604670c83" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>init</name></member>
+      <member refid="class_controller_1a31bb10031669992bd8611769195460a0" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>isAttached</name></member>
+      <member refid="class_base_acceleration_controller_1a59f7bc85918ce36867bafd748f97f29e" prot="protected" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>maxSpeed_</name></member>
+      <member refid="class_base_acceleration_controller_1a8d3d66156953f18c995a95e877c24911" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>move</name></member>
+      <member refid="class_accelerate_along_path_controller_1a0dd0bffc8e65f430975b33b2ab5c4ce2" prot="private" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>progress_</name></member>
+      <member refid="class_accelerate_along_path_controller_1ab190369ae2467a26fccb58f4c2fb663b" prot="public" virt="virtual"><scope>AccelerateAlongPathController</scope><name>readRealFromStream</name></member>
+      <member refid="class_controller_1a27d88cafe564f8c3e97477f82b392b74" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>s_factoryFnEntity_</name></member>
+      <member refid="class_controller_1a28fbc433135ec5668b0de6286b0fb1fe" prot="protected" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>standardCallback</name></member>
+      <member refid="class_base_acceleration_controller_1a94c4b081451dbcd4955d33092f4bf30c" prot="public" virt="virtual"><scope>AccelerateAlongPathController</scope><name>startReal</name></member>
+      <member refid="class_base_acceleration_controller_1a2c4d18dd4be64bdfd5076d90ede89de3" prot="public" virt="virtual"><scope>AccelerateAlongPathController</scope><name>stopReal</name></member>
+      <member refid="class_controller_1aae5de9edfa47a204f2094fdeb8091dbd" prot="public" virt="pure-virtual"><scope>AccelerateAlongPathController</scope><name>type</name></member>
+      <member refid="class_controller_1ac066a12fbae3979fbe86f4ee20c02904" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>typeName</name></member>
+      <member refid="class_accelerate_along_path_controller_1a57d54deafb6bf886447cafcb9bbd06f7" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>update</name></member>
+      <member refid="class_controller_1aad8a489249dcc3b5edde468d05cb5c7f" prot="public" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>userArg</name></member>
+      <member refid="class_accelerate_along_path_controller_1a49369fa47db02cdc829c90925bc1c6f5" prot="private" virt="non-virtual"><scope>AccelerateAlongPathController</scope><name>waypoints_</name></member>
+      <member refid="class_accelerate_along_path_controller_1a8bbeb41028045e53d325fc6ec1c18f74" prot="public" virt="virtual"><scope>AccelerateAlongPathController</scope><name>writeRealToStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

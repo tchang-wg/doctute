@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_navmesh_entity_navigation_system" kind="class" language="C++" prot="public">
+    <compoundname>NavmeshEntityNavigationSystem</compoundname>
+    <includes refid="navmesh__navigation__system_8hpp" local="no">navmesh_navigation_system.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_navmesh_entity_navigation_system_1a2b1f34db2a67736b6536d514e0ca7003" prot="private" static="no" mutable="no">
+        <type>Navigator</type>
+        <definition>Navigator NavmeshEntityNavigationSystem::navigator_</definition>
+        <argsstring></argsstring>
+        <name>navigator_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/navmesh_navigation_system.hpp" line="72" column="1" bodyfile="cellapp/navmesh_navigation_system.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_navmesh_entity_navigation_system_1a0b26eeef1a6b296267e538fe7e1deeed" prot="private" static="no" mutable="no">
+        <type><ref refid="class_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity&amp; NavmeshEntityNavigationSystem::entity_</definition>
+        <argsstring></argsstring>
+        <name>entity_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/navmesh_navigation_system.hpp" line="73" column="1" bodyfile="cellapp/navmesh_navigation_system.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_navmesh_entity_navigation_system_1af574b9c22394cc8b1990b642fbc153ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NavmeshEntityNavigationSystem::NavmeshEntityNavigationSystem</definition>
+        <argsstring>(Entity &amp;entity)</argsstring>
+        <name>NavmeshEntityNavigationSystem</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/navmesh_navigation_system.hpp" line="40" column="1" bodyfile="cellapp/navmesh_navigation_system.cpp" bodystart="90" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_navmesh_entity_navigation_system_1a3d5563cae64365e9169cbea83fbb1b51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool NavmeshEntityNavigationSystem::getNavigatePosition</definition>
+        <argsstring>(const NavLoc &amp;srcLoc, const NavLoc &amp;dstLoc, float maxDistance, Vector3 &amp;nextPosition, bool &amp;passedActivatedPortal, float girth=0.5f)</argsstring>
+        <name>getNavigatePosition</name>
+        <param>
+          <type>const NavLoc &amp;</type>
+          <declname>srcLoc</declname>
+        </param>
+        <param>
+          <type>const NavLoc &amp;</type>
+          <declname>dstLoc</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxDistance</declname>
+          <defname>maxSearchDistance</defname>
+        </param>
+        <param>
+          <type>Vector3 &amp;</type>
+          <declname>nextPosition</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>passedActivatedPortal</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>girth</declname>
+          <defval>0.5f</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method gets the next straight-line step position for navigation between the given NavLocs. Note: both NavLocs must be valid.</para><para><simplesect kind="return"><para>true if a navigation position could be found, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/navmesh_navigation_system.hpp" line="42" column="1" bodyfile="cellapp/navmesh_navigation_system.cpp" bodystart="550" bodyend="629"/>
+      </memberdef>
+      <memberdef kind="function" id="class_navmesh_entity_navigation_system_1a60943cdb9824f53147a21ad67a6b3d65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Navigator &amp;</type>
+        <definition>Navigator&amp; NavmeshEntityNavigationSystem::navigator</definition>
+        <argsstring>()</argsstring>
+        <name>navigator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/navmesh_navigation_system.hpp" line="46" column="1" bodyfile="cellapp/navmesh_navigation_system.hpp" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_navmesh_entity_navigation_system_1a41d13404f29a5e51f9b86b8b7d09e2f5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_controller" kindref="compound">Controller</ref> *</type>
+        <definition>Controller * NavmeshEntityNavigationSystem::createController</definition>
+        <argsstring>(const Vector3 &amp;dstPosition, float velocity, bool faceMovement, float maxSearchDistance, float girth, float closeEnough) const </argsstring>
+        <name>createController</name>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>dstPosition</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>velocity</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>faceMovement</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxSearchDistance</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>girth</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>closeEnough</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/navmesh_navigation_system.hpp" line="48" column="1" bodyfile="cellapp/navmesh_navigation_system.cpp" bodystart="100" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_navmesh_entity_navigation_system_1ac3b297841da44bbb9e31a6b1de45a254" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject * NavmeshEntityNavigationSystem::getStopPoint</definition>
+        <argsstring>(const Vector3 &amp;destination, bool ignoreFirstStopPoint, float maxSearchDistance, float girth, float stopDist, float nearPortalDist)</argsstring>
+        <name>getStopPoint</name>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ignoreFirstStopPoint</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxSearchDistance</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>girth</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>stopDist</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>nearPortalDist</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/navmesh_navigation_system.hpp" line="52" column="1" bodyfile="cellapp/navmesh_navigation_system.cpp" bodystart="112" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="class_navmesh_entity_navigation_system_1a0d7e2b7d90c6a40b9d1213cc30b2cf21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject * NavmeshEntityNavigationSystem::navigateStep</definition>
+        <argsstring>(NavigateStepController *pNSController, const Vector3 &amp;dstPosition, float velocity, float maxMoveDistance, float maxSearchDistance, bool faceMovement, float girth, int userArg)</argsstring>
+        <name>navigateStep</name>
+        <param>
+          <type><ref refid="class_navigate_step_controller" kindref="compound">NavigateStepController</ref> *</type>
+          <declname>pNSController</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>dstPosition</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>velocity</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxMoveDistance</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxSearchDistance</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>faceMovement</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>girth</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>userArg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/navmesh_navigation_system.hpp" line="56" column="1" bodyfile="cellapp/navmesh_navigation_system.cpp" bodystart="328" bodyend="425"/>
+      </memberdef>
+      <memberdef kind="function" id="class_navmesh_entity_navigation_system_1a8a51149805fa8fbb6021f0225afb0795" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject * NavmeshEntityNavigationSystem::canNavigateTo</definition>
+        <argsstring>(const Vector3 &amp;dstPosition, float maxSearchDistance, float girth) const </argsstring>
+        <name>canNavigateTo</name>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>dstPosition</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxSearchDistance</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>girth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/navmesh_navigation_system.hpp" line="61" column="1" bodyfile="cellapp/navmesh_navigation_system.cpp" bodystart="431" bodyend="514"/>
+      </memberdef>
+      <memberdef kind="function" id="class_navmesh_entity_navigation_system_1a74b9c89b79d0794d7d64af704617333c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject * NavmeshEntityNavigationSystem::navigatePathPoints</definition>
+        <argsstring>(const Vector3 &amp;dstPosition, float maxSearchDistance, float girth) const </argsstring>
+        <name>navigatePathPoints</name>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>dstPosition</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxSearchDistance</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>girth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns a Python list contains the navigation path points to the given destination position. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/navmesh_navigation_system.hpp" line="64" column="1" bodyfile="cellapp/navmesh_navigation_system.cpp" bodystart="521" bodyend="531"/>
+      </memberdef>
+      <memberdef kind="function" id="class_navmesh_entity_navigation_system_1a6755bc69d60c81c16778b9ccceb1579d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int NavmeshEntityNavigationSystem::waySetPathLength</definition>
+        <argsstring>()</argsstring>
+        <name>waySetPathLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the length of the most recently determined navigation path in chunks. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/navmesh_navigation_system.hpp" line="67" column="1" bodyfile="cellapp/navmesh_navigation_system.cpp" bodystart="538" bodyend="541"/>
+      </memberdef>
+      <memberdef kind="function" id="class_navmesh_entity_navigation_system_1ae20274858d7db9a5a67e4e25c25ca954" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NavmeshEntityNavigationSystem::navigationDump</definition>
+        <argsstring>(const Vector3 &amp;dstPosition, float girth)</argsstring>
+        <name>navigationDump</name>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>dstPosition</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>girth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method will dump the source, destination and the current waypoint cache for the entity and the target path. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/navmesh_navigation_system.hpp" line="69" column="1" bodyfile="cellapp/navmesh_navigation_system.cpp" bodystart="635" bodyend="651"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements an EntityNavigationSystem that is based on BigWorld&apos;s navmesh. </para>    </detaileddescription>
+    <location file="cellapp/navmesh_navigation_system.hpp" line="38" column="1" bodyfile="cellapp/navmesh_navigation_system.hpp" bodystart="37" bodyend="74"/>
+    <listofallmembers>
+      <member refid="class_navmesh_entity_navigation_system_1a8a51149805fa8fbb6021f0225afb0795" prot="public" virt="non-virtual"><scope>NavmeshEntityNavigationSystem</scope><name>canNavigateTo</name></member>
+      <member refid="class_navmesh_entity_navigation_system_1a41d13404f29a5e51f9b86b8b7d09e2f5" prot="public" virt="non-virtual"><scope>NavmeshEntityNavigationSystem</scope><name>createController</name></member>
+      <member refid="class_navmesh_entity_navigation_system_1a0b26eeef1a6b296267e538fe7e1deeed" prot="private" virt="non-virtual"><scope>NavmeshEntityNavigationSystem</scope><name>entity_</name></member>
+      <member refid="class_navmesh_entity_navigation_system_1a3d5563cae64365e9169cbea83fbb1b51" prot="public" virt="non-virtual"><scope>NavmeshEntityNavigationSystem</scope><name>getNavigatePosition</name></member>
+      <member refid="class_navmesh_entity_navigation_system_1ac3b297841da44bbb9e31a6b1de45a254" prot="public" virt="non-virtual"><scope>NavmeshEntityNavigationSystem</scope><name>getStopPoint</name></member>
+      <member refid="class_navmesh_entity_navigation_system_1a74b9c89b79d0794d7d64af704617333c" prot="public" virt="non-virtual"><scope>NavmeshEntityNavigationSystem</scope><name>navigatePathPoints</name></member>
+      <member refid="class_navmesh_entity_navigation_system_1a0d7e2b7d90c6a40b9d1213cc30b2cf21" prot="public" virt="non-virtual"><scope>NavmeshEntityNavigationSystem</scope><name>navigateStep</name></member>
+      <member refid="class_navmesh_entity_navigation_system_1ae20274858d7db9a5a67e4e25c25ca954" prot="public" virt="non-virtual"><scope>NavmeshEntityNavigationSystem</scope><name>navigationDump</name></member>
+      <member refid="class_navmesh_entity_navigation_system_1a60943cdb9824f53147a21ad67a6b3d65" prot="public" virt="non-virtual"><scope>NavmeshEntityNavigationSystem</scope><name>navigator</name></member>
+      <member refid="class_navmesh_entity_navigation_system_1a2b1f34db2a67736b6536d514e0ca7003" prot="private" virt="non-virtual"><scope>NavmeshEntityNavigationSystem</scope><name>navigator_</name></member>
+      <member refid="class_navmesh_entity_navigation_system_1af574b9c22394cc8b1990b642fbc153ee" prot="public" virt="non-virtual"><scope>NavmeshEntityNavigationSystem</scope><name>NavmeshEntityNavigationSystem</name></member>
+      <member refid="class_navmesh_entity_navigation_system_1a6755bc69d60c81c16778b9ccceb1579d" prot="public" virt="non-virtual"><scope>NavmeshEntityNavigationSystem</scope><name>waySetPathLength</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

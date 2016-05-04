@@ -1,0 +1,674 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_top_level_network_node" kind="class" language="C++" prot="public">
+    <compoundname>TopLevelNetworkNode</compoundname>
+    <basecompoundref refid="class_network_node" prot="public" virt="non-virtual">NetworkNode</basecompoundref>
+    <includes refid="top__level__network__node_8hpp" local="no">top_level_network_node.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_top_level_network_node_1a0be7e95dfd44966bef0e056e68f3b82b" prot="private" static="no" mutable="no">
+        <type>Endpoint</type>
+        <definition>Endpoint TopLevelNetworkNode::epNetworkUDP_</definition>
+        <argsstring></argsstring>
+        <name>epNetworkUDP_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="65" column="1" bodyfile="tools/bwmachined/top_level_network_node.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_top_level_network_node_1a7a4273be95c590966cf953521cd22c5c" prot="private" static="no" mutable="no">
+        <type>Endpoint</type>
+        <definition>Endpoint TopLevelNetworkNode::epNetworkTCP_</definition>
+        <argsstring></argsstring>
+        <name>epNetworkTCP_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="68" column="1" bodyfile="tools/bwmachined/top_level_network_node.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_top_level_network_node_1a5d2a61c5502177a8a51066297727fb4f" prot="private" static="no" mutable="no">
+        <type>Endpoint</type>
+        <definition>Endpoint TopLevelNetworkNode::epLeafNodeListenerTCP_</definition>
+        <argsstring></argsstring>
+        <name>epLeafNodeListenerTCP_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="71" column="1" bodyfile="tools/bwmachined/top_level_network_node.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_top_level_network_node_1abda546aa543fc545ab4411184e1eca48" prot="private" static="no" mutable="no">
+        <type><ref refid="class_connection_wrapper_1_1_read_handler" kindref="compound">ConnectionWrapper::ReadHandler</ref> *</type>
+        <definition>ConnectionWrapper::ReadHandler* TopLevelNetworkNode::pConnectionReadHandler_</definition>
+        <argsstring></argsstring>
+        <name>pConnectionReadHandler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="73" column="1" bodyfile="tools/bwmachined/top_level_network_node.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_top_level_network_node_1adc794d4cd27d4c4aaa224e65af7962c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE TopLevelNetworkNode::TopLevelNetworkNode</definition>
+        <argsstring>(Mercury::EventDispatcher &amp;dispatcher, ConnectionWrapper::ReadHandler *pConnectionReadHandler, uint16 port)</argsstring>
+        <name>TopLevelNetworkNode</name>
+        <param>
+          <type>Mercury::EventDispatcher &amp;</type>
+          <declname>dispatcher</declname>
+        </param>
+        <param>
+          <type><ref refid="class_connection_wrapper_1_1_read_handler" kindref="compound">ConnectionWrapper::ReadHandler</ref> *</type>
+          <declname>pConnectionReadHandler</declname>
+        </param>
+        <param>
+          <type>uint16</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dispatcher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Event Dispatcher object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pConnectionReadHandler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A handler for packet data read off connections </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The port on which the <ref refid="class_b_w_machined" kindref="compound">BWMachined</ref> Network is communicating. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="42" column="1" bodyfile="tools/bwmachined/top_level_network_node.cpp" bodystart="22" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_top_level_network_node_1a04f509b48b2b6c5451aa5889f6acaa07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TopLevelNetworkNode::visitLeafNodesWith</definition>
+        <argsstring>(TCPConnectionWrapperVisitor &amp;visitor)</argsstring>
+        <name>visitLeafNodesWith</name>
+        <param>
+          <type><ref refid="class_t_c_p_connection_wrapper_visitor" kindref="compound">TCPConnectionWrapperVisitor</ref> &amp;</type>
+          <declname>visitor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Visits leaf node connections with the provided visitor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="46" column="1" bodyfile="tools/bwmachined/top_level_network_node.cpp" bodystart="172" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_top_level_network_node_1a28761938ba80d99a4fbd395b7cc1d671" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool TopLevelNetworkNode::sendBroadcast</definition>
+        <argsstring>(MachineGuardMessage *pMGM)</argsstring>
+        <name>sendBroadcast</name>
+        <reimplements refid="class_network_node_1a86cc9b4937b3eaafd2bc9bf25f734277">sendBroadcast</reimplements>
+        <param>
+          <type>MachineGuardMessage *</type>
+          <declname>pMGM</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Broadcasts the provided mgm to the cluster.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pMGM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MGM to broadcast</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, otherwise false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="48" column="1" bodyfile="tools/bwmachined/top_level_network_node.cpp" bodystart="141" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_top_level_network_node_1a03fbb55cc31ce6565b3e98b676913984" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool TopLevelNetworkNode::sendBroadcast</definition>
+        <argsstring>(MGMPacket *pPacket)</argsstring>
+        <name>sendBroadcast</name>
+        <reimplements refid="class_network_node_1a1be580af296fb1893b14237762170ea5">sendBroadcast</reimplements>
+        <param>
+          <type>MGMPacket *</type>
+          <declname>pPacket</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Broadcasts the provided packet to the cluster.</para><para>This method differs from sendWrappedBroadcastPacket in that responses will be handled by this <ref refid="class_b_w_machined" kindref="compound">BWMachined</ref> as a normal MGM response.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pPacket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The packet to broadcast</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, otherwise false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="49" column="1" bodyfile="tools/bwmachined/top_level_network_node.cpp" bodystart="152" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_top_level_network_node_1a85c046038033503153a83f0a2b57c89a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool TopLevelNetworkNode::sendWrappedBroadcastPacket</definition>
+        <argsstring>(MGMPacket *pPacket)</argsstring>
+        <name>sendWrappedBroadcastPacket</name>
+        <reimplements refid="class_network_node_1a36002a456a2583950e986e6a6f02b180">sendWrappedBroadcastPacket</reimplements>
+        <param>
+          <type>MGMPacket *</type>
+          <declname>pPacket</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Broadcasts the provided wrapped packet to the cluster.</para><para>This method differs to sendBroadcast in that it is for sending packets that were wrapped within a BroadcastWrapperMessage, and therefore responses will be treated as a response to a wrapped broadcast.</para><para>These responses are intended to be gathered together as a ResponseWrapperMessage and forwarded on to the original sender via a <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pPacket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The wrapped packet to broadcast.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, otherwise false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="50" column="1" bodyfile="tools/bwmachined/top_level_network_node.cpp" bodystart="161" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_top_level_network_node_1aa9d928e6e7ef822c773597d14ce9e9eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool TopLevelNetworkNode::isBroadcastResponse</definition>
+        <argsstring>(const ConnectionWrapperPtr pConnection, MGMPacket &amp;packet) const </argsstring>
+        <name>isBroadcastResponse</name>
+        <reimplements refid="class_network_node_1aa1319f908f02d0ec2d978671d4ae290d">isBroadcastResponse</reimplements>
+        <param>
+          <type>const <ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref></type>
+          <declname>pConnection</declname>
+        </param>
+        <param>
+          <type>MGMPacket &amp;</type>
+          <declname>packet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether the provided parameters indicate that this is a broadcast response message.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>endpoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The endpoint on which the MGM arrived </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>packet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received packet</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the provided mgm was a broadcast response, otherwise false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="51" column="1" bodyfile="tools/bwmachined/top_level_network_node.cpp" bodystart="346" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="class_top_level_network_node_1aacf4ede8d4b8777c34dc942333468a3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>Endpoint &amp;</type>
+        <definition>virtual Endpoint&amp; TopLevelNetworkNode::outgoingUDPEndpoint</definition>
+        <argsstring>()</argsstring>
+        <name>outgoingUDPEndpoint</name>
+        <reimplements refid="class_network_node_1acba74dd33fa9e64e0096c521f132a982">outgoingUDPEndpoint</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the UDP endpoint which is to be used for sending directed messages to a destination. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="54" column="1" bodyfile="tools/bwmachined/top_level_network_node.hpp" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_top_level_network_node_1a2a032a42b843f94507dcd13d43bf07a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref> *</type>
+        <definition>BroadcastManager * TopLevelNetworkNode::createBroadcastManager</definition>
+        <argsstring>(BroadcastWrapperMessage &amp;bwm, ConnectionWrapperPtr pReplyConnection, ManagerLookup &amp;lookup)</argsstring>
+        <name>createBroadcastManager</name>
+        <reimplements refid="class_network_node_1a5d49ce01329d82f326d534e378ec16a5">createBroadcastManager</reimplements>
+        <param>
+          <type>BroadcastWrapperMessage &amp;</type>
+          <declname>bwm</declname>
+        </param>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref></type>
+          <declname>pReplyConnection</declname>
+        </param>
+        <param>
+          <type>ManagerLookup &amp;</type>
+          <declname>lookup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A generator method which creates a <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref> that handles broadcasts sent by this network node.</para><para>The <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref>&apos;s subclass will be specific to this type of <ref refid="class_network_node" kindref="compound">NetworkNode</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bwm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The BroadcastWrapperMessage that the new <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref> sends and handles responses for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pReplyConnection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The connection wrapper to handle sending responses </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lookup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The table to update with sequence number references to the new <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to a <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref> object. This memory must be managed by the caller. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="59" column="1" bodyfile="tools/bwmachined/top_level_network_node.cpp" bodystart="356" bodyend="362"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_top_level_network_node_1a4b23c3a9ce013589a8abea2753adb1ff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TopLevelNetworkNode::broadcastPacket</definition>
+        <argsstring>(MGMPacket *pPacket)</argsstring>
+        <name>broadcastPacket</name>
+        <param>
+          <type>MGMPacket *</type>
+          <declname>pPacket</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sends the provided MGMPacket to all leaf nodes, and responds to its own broadcast as well.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pPacket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MGMPacket to broadcast.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false on packet data error, otherwise true </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="75" column="1" bodyfile="tools/bwmachined/top_level_network_node.cpp" bodystart="301" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="class_top_level_network_node_1ad0441959c5827d540bbc0067276ae705" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool TopLevelNetworkNode::initExternalNetworkInterfaces</definition>
+        <argsstring>()</argsstring>
+        <name>initExternalNetworkInterfaces</name>
+        <reimplements refid="class_network_node_1afbbdbf252700a4f76d011912fdb943f0">initExternalNetworkInterfaces</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialises external endpoints.</para><para><simplesect kind="return"><para>true on success, otherwise false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="77" column="1" bodyfile="tools/bwmachined/top_level_network_node.cpp" bodystart="51" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_top_level_network_node_1ab98804991b7ebe6d7af758e6a5892f08" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void TopLevelNetworkNode::startHeartbeat</definition>
+        <argsstring>()</argsstring>
+        <name>startHeartbeat</name>
+        <reimplements refid="class_network_node_1a69e0f788ad274f7268455975c428466f">startHeartbeat</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts the inter-machined announcement/heartbeat/keepalive system. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="78" column="1" bodyfile="tools/bwmachined/top_level_network_node.hpp" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_top_level_network_node_1a547cd367ac4863f1c39c9c51af447536" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool TopLevelNetworkNode::listenOnExternalEndpoints</definition>
+        <argsstring>()</argsstring>
+        <name>listenOnExternalEndpoints</name>
+        <reimplements refid="class_network_node_1aaebcbb0bd4bb1b687d03eb4a813e65f6">listenOnExternalEndpoints</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Registers external endpoints for dispatching and socket handling. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="79" column="1" bodyfile="tools/bwmachined/top_level_network_node.cpp" bodystart="127" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_top_level_network_node_1a27a6c5dbf66d2d4e13b4444763bdb550" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TopLevelNetworkNode::closeExternalEndpoints</definition>
+        <argsstring>()</argsstring>
+        <name>closeExternalEndpoints</name>
+        <reimplements refid="class_network_node_1a848358d82476d2c5bbf0bb8feb5631d6">closeExternalEndpoints</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Closes external endpoints. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="80" column="1" bodyfile="tools/bwmachined/top_level_network_node.cpp" bodystart="40" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_top_level_network_node_1af6c62fdc839e58297b181244a0ea32a8" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool TopLevelNetworkNode::handleWholeMachineMessageReply</definition>
+        <argsstring>(WholeMachineMessage &amp;wmm, sockaddr_in &amp;sin)</argsstring>
+        <name>handleWholeMachineMessageReply</name>
+        <reimplements refid="class_network_node_1a2f6da3a9dc5d366ab8a5d155f5e64e3f">handleWholeMachineMessageReply</reimplements>
+        <param>
+          <type>WholeMachineMessage &amp;</type>
+          <declname>wmm</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles WholeMachineMessages sent by another <ref refid="class_b_w_machined" kindref="compound">BWMachined</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wmm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received WholeMachineMessage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket address that received the message.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if handled, otherwise false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="82" column="1" bodyfile="tools/bwmachined/top_level_network_node.cpp" bodystart="368" bodyend="385"/>
+      </memberdef>
+      <memberdef kind="function" id="class_top_level_network_node_1a34c8cd077712149a66069a075516606e" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool TopLevelNetworkNode::handleHighPrecisionMachineMessageReply</definition>
+        <argsstring>(HighPrecisionMachineMessage &amp;hpmm, sockaddr_in &amp;sin)</argsstring>
+        <name>handleHighPrecisionMachineMessageReply</name>
+        <reimplements refid="class_network_node_1a2e52e8a4ae330c682b4b1f6c0bce10f3">handleHighPrecisionMachineMessageReply</reimplements>
+        <param>
+          <type>HighPrecisionMachineMessage &amp;</type>
+          <declname>hpmm</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles HighPrecisionMachineMessages sent by another <ref refid="class_b_w_machined" kindref="compound">BWMachined</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hpmm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received HighPrecisionMachineMessage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket address that received the message.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if handled, otherwise false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="84" column="1" bodyfile="tools/bwmachined/top_level_network_node.cpp" bodystart="391" bodyend="409"/>
+      </memberdef>
+      <memberdef kind="function" id="class_top_level_network_node_1a2bba2c2fd38da8be47321584077add95" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TopLevelNetworkNode::handleMachinedAnnounceBirth</definition>
+        <argsstring>(MachinedAnnounceMessage &amp;mam, sockaddr_in &amp;sin, MGMPacket &amp;replies)</argsstring>
+        <name>handleMachinedAnnounceBirth</name>
+        <reimplements refid="class_network_node_1a8a6e43d2bd94491fac81db96160874a9">handleMachinedAnnounceBirth</reimplements>
+        <param>
+          <type>MachinedAnnounceMessage &amp;</type>
+          <declname>mam</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <param>
+          <type>MGMPacket &amp;</type>
+          <declname>replies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles MachinedAnnounceMessage type ANNOUNCE_BIRTH.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received MachinedAnnounceMessage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket address that received the message. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>replies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The package to append birth replies to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="87" column="1" bodyfile="tools/bwmachined/top_level_network_node.cpp" bodystart="415" bodyend="420"/>
+      </memberdef>
+      <memberdef kind="function" id="class_top_level_network_node_1a2b1b641edc262ec3fc8bf6715b5b46d5" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TopLevelNetworkNode::handleMachinedAnnounceDeath</definition>
+        <argsstring>(MachinedAnnounceMessage &amp;mam, sockaddr_in &amp;sin)</argsstring>
+        <name>handleMachinedAnnounceDeath</name>
+        <reimplements refid="class_network_node_1a1776c9aab09009a1d6f5c07102adface">handleMachinedAnnounceDeath</reimplements>
+        <param>
+          <type>MachinedAnnounceMessage &amp;</type>
+          <declname>mam</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles MachinedAnnounceMessage type ANNOUNCE_DEATH.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received MachinedAnnounceMessage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket address that received the message. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="89" column="1" bodyfile="tools/bwmachined/top_level_network_node.cpp" bodystart="426" bodyend="433"/>
+      </memberdef>
+      <memberdef kind="function" id="class_top_level_network_node_1a919852aff5c4388237c3ed4b127d8353" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TopLevelNetworkNode::handleMachinedAnnounceExists</definition>
+        <argsstring>(MachinedAnnounceMessage &amp;mam, sockaddr_in &amp;sin)</argsstring>
+        <name>handleMachinedAnnounceExists</name>
+        <reimplements refid="class_network_node_1a49e8e8ef3d832d28ffaba2371a5e74a1">handleMachinedAnnounceExists</reimplements>
+        <param>
+          <type>MachinedAnnounceMessage &amp;</type>
+          <declname>mam</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles MachinedAnnounceMessage type ANNOUNCE_EXISTS.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received MachinedAnnounceMessage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket address that received the message. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/top_level_network_node.hpp" line="91" column="1" bodyfile="tools/bwmachined/top_level_network_node.cpp" bodystart="439" bodyend="446"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is a Top Level Node implementation of <ref refid="class_network_node" kindref="compound">NetworkNode</ref>.</para><para>As well as inheriting the localhost endpoints of <ref refid="class_network_node" kindref="compound">NetworkNode</ref>, it has two external endpoints for receiving directed messages as well as a listening endpoint for registering leaf nodes:</para><para><itemizedlist>
+<listitem><para>epNetworkUDP_ for receiving directed MGMs over UDP</para></listitem><listitem><para>epNetworkTCP_ to listen and accept non-leaf-node TCP connections. Connections to this endpoint are disconnected when the message transaction has completed (eg. a response is sent or no response is required) or has experienced an error.</para></listitem><listitem><para>epLeafNodeListenerTCP_ to listen and accept new incoming leaf node connections. Connections to this endpoint are kept open for continuous use and are used for forwarding MGM broadcast requests on to.</para></listitem></itemizedlist>
+</para><para>In conjunction with <ref refid="class_top_level_node_broadcast_manager" kindref="compound">TopLevelNodeBroadcastManager</ref>, broadcast packets are unwrapped and distributed amongst leaf nodes, as well as being directly sent to this node for immediate response. Responses are collated by the broadcast manager and sent back to the requesting source connection (which could be either a leaf node or a non-bwmachined application such as tools and server apps). </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2953">
+        <label>NetworkNode</label>
+        <link refid="class_network_node"/>
+      </node>
+      <node id="2952">
+        <label>TopLevelNetworkNode</label>
+        <link refid="class_top_level_network_node"/>
+        <childnode refid="2953" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2956">
+        <label>ConnectionWrapperMgr</label>
+        <link refid="class_connection_wrapper_mgr"/>
+      </node>
+      <node id="2955">
+        <label>NetworkNode</label>
+        <link refid="class_network_node"/>
+        <childnode refid="2956" relation="usage">
+          <edgelabel>connectionWrapperMgr_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2954">
+        <label>TopLevelNetworkNode</label>
+        <link refid="class_top_level_network_node"/>
+        <childnode refid="2955" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/bwmachined/top_level_network_node.hpp" line="40" column="1" bodyfile="tools/bwmachined/top_level_network_node.hpp" bodystart="39" bodyend="93"/>
+    <listofallmembers>
+      <member refid="class_top_level_network_node_1a4b23c3a9ce013589a8abea2753adb1ff" prot="private" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>broadcastPacket</name></member>
+      <member refid="class_network_node_1ae46a963d5928e991d1be31524c8ddf62" prot="public" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>cleanupConnectionHandlers</name></member>
+      <member refid="class_network_node_1a5d7ead3a7f13ef8209e654c3122f970e" prot="public" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>closeEndpoints</name></member>
+      <member refid="class_top_level_network_node_1a27a6c5dbf66d2d4e13b4444763bdb550" prot="private" virt="virtual"><scope>TopLevelNetworkNode</scope><name>closeExternalEndpoints</name></member>
+      <member refid="class_network_node_1a95fa25b039d62d0ef9f9ac796cef20e1" prot="protected" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>connectionWrapperMgr_</name></member>
+      <member refid="class_top_level_network_node_1a2a032a42b843f94507dcd13d43bf07a9" prot="public" virt="virtual"><scope>TopLevelNetworkNode</scope><name>createBroadcastManager</name></member>
+      <member refid="class_network_node_1abacbf8daab390687c7fee13d21cec12e" prot="protected" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>discoveryPort</name></member>
+      <member refid="class_top_level_network_node_1a5d2a61c5502177a8a51066297727fb4f" prot="private" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>epLeafNodeListenerTCP_</name></member>
+      <member refid="class_top_level_network_node_1a7a4273be95c590966cf953521cd22c5c" prot="private" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>epNetworkTCP_</name></member>
+      <member refid="class_top_level_network_node_1a0be7e95dfd44966bef0e056e68f3b82b" prot="private" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>epNetworkUDP_</name></member>
+      <member refid="class_top_level_network_node_1a34c8cd077712149a66069a075516606e" prot="private" virt="virtual"><scope>TopLevelNetworkNode</scope><name>handleHighPrecisionMachineMessageReply</name></member>
+      <member refid="class_top_level_network_node_1a2bba2c2fd38da8be47321584077add95" prot="private" virt="virtual"><scope>TopLevelNetworkNode</scope><name>handleMachinedAnnounceBirth</name></member>
+      <member refid="class_top_level_network_node_1a2b1b641edc262ec3fc8bf6715b5b46d5" prot="private" virt="virtual"><scope>TopLevelNetworkNode</scope><name>handleMachinedAnnounceDeath</name></member>
+      <member refid="class_top_level_network_node_1a919852aff5c4388237c3ed4b127d8353" prot="private" virt="virtual"><scope>TopLevelNetworkNode</scope><name>handleMachinedAnnounceExists</name></member>
+      <member refid="class_top_level_network_node_1af6c62fdc839e58297b181244a0ea32a8" prot="private" virt="virtual"><scope>TopLevelNetworkNode</scope><name>handleWholeMachineMessageReply</name></member>
+      <member refid="class_top_level_network_node_1ad0441959c5827d540bbc0067276ae705" prot="private" virt="virtual"><scope>TopLevelNetworkNode</scope><name>initExternalNetworkInterfaces</name></member>
+      <member refid="class_network_node_1a2b0a5947366d4e22c7a6c7396556a761" prot="public" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>initNetworkInterfaces</name></member>
+      <member refid="class_top_level_network_node_1aa9d928e6e7ef822c773597d14ce9e9eb" prot="public" virt="virtual"><scope>TopLevelNetworkNode</scope><name>isBroadcastResponse</name></member>
+      <member refid="class_network_node_1ad4449bcbf4ce02e3ca57552ce4fb71d5" prot="public" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>isDefaultPort</name></member>
+      <member refid="class_network_node_1a0162469d287b9bde677fd2d8fda5bf9e" prot="public" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>listenOnEndpoints</name></member>
+      <member refid="class_top_level_network_node_1a547cd367ac4863f1c39c9c51af447536" prot="private" virt="virtual"><scope>TopLevelNetworkNode</scope><name>listenOnExternalEndpoints</name></member>
+      <member refid="class_network_node_1aa52b6fb625756b157e33f0f10e2cd98b" prot="public" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>networkAddr</name></member>
+      <member refid="class_network_node_1a8ea43d56e13f46b2a1819e5b96ad3478" prot="public" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>NetworkNode</name></member>
+      <member refid="class_network_node_1a7581ca5d2410231b999f367487e4a84ca1cdc9fcaead5ce7048dd19951c818ccd" prot="public" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>NODE_LEAF</name></member>
+      <member refid="class_network_node_1a7581ca5d2410231b999f367487e4a84cadd46432278229d8ac679fbfeb21e2cc9" prot="public" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>NODE_RING_NETWORK</name></member>
+      <member refid="class_network_node_1a7581ca5d2410231b999f367487e4a84cad003b2e47c1e88e14ada5c4a8e75eb32" prot="public" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>NODE_TOP_LEVEL</name></member>
+      <member refid="class_network_node_1a7581ca5d2410231b999f367487e4a84ca5d429b377cb75808342dec855e5d09e0" prot="public" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>NODE_UNKNOWN_NETWORK</name></member>
+      <member refid="class_network_node_1a7581ca5d2410231b999f367487e4a84c" prot="public" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>NodeType</name></member>
+      <member refid="class_top_level_network_node_1aacf4ede8d4b8777c34dc942333468a3b" prot="public" virt="virtual"><scope>TopLevelNetworkNode</scope><name>outgoingUDPEndpoint</name></member>
+      <member refid="class_top_level_network_node_1abda546aa543fc545ab4411184e1eca48" prot="private" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>pConnectionReadHandler_</name></member>
+      <member refid="class_network_node_1a214eacbc97325fc7290634954d43fdc5" prot="public" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>port</name></member>
+      <member refid="class_top_level_network_node_1a28761938ba80d99a4fbd395b7cc1d671" prot="public" virt="virtual"><scope>TopLevelNetworkNode</scope><name>sendBroadcast</name></member>
+      <member refid="class_top_level_network_node_1a03fbb55cc31ce6565b3e98b676913984" prot="public" virt="virtual"><scope>TopLevelNetworkNode</scope><name>sendBroadcast</name></member>
+      <member refid="class_top_level_network_node_1a85c046038033503153a83f0a2b57c89a" prot="public" virt="virtual"><scope>TopLevelNetworkNode</scope><name>sendWrappedBroadcastPacket</name></member>
+      <member refid="class_network_node_1ad8c42da72e920b4b2470d24c588019b3" prot="public" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>setInternalInterface</name></member>
+      <member refid="class_top_level_network_node_1ab98804991b7ebe6d7af758e6a5892f08" prot="private" virt="virtual"><scope>TopLevelNetworkNode</scope><name>startHeartbeat</name></member>
+      <member refid="class_network_node_1ac17508bae117c8a432a361c02c224e13" prot="public" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>strToNodeType</name></member>
+      <member refid="class_network_node_1a37bc8d64c323d46841bdbac935a43dbb" prot="public" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>strToNodeType</name></member>
+      <member refid="class_top_level_network_node_1adc794d4cd27d4c4aaa224e65af7962c3" prot="public" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>TopLevelNetworkNode</name></member>
+      <member refid="class_top_level_network_node_1a04f509b48b2b6c5451aa5889f6acaa07" prot="public" virt="non-virtual"><scope>TopLevelNetworkNode</scope><name>visitLeafNodesWith</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

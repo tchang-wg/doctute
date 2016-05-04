@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ring__cluster_8hpp" kind="file" language="C++">
+    <compoundname>ring_cluster.hpp</compoundname>
+    <includes local="yes">cstdmf/time_queue.hpp</includes>
+    <includes local="yes">cstdmf/timestamp.hpp</includes>
+    <includes local="yes">network/endpoint.hpp</includes>
+    <includes local="yes">network/machine_guard.hpp</includes>
+    <includes local="yes">cstdmf/bw_set.hpp</includes>
+    <includedby refid="ring__network__node_8hpp" local="yes">tools/bwmachined/ring_network_node.hpp</includedby>
+    <includedby refid="ring__cluster_8cpp" local="yes">tools/bwmachined/ring_cluster.cpp</includedby>
+    <includedby refid="ring__network__node_8cpp" local="yes">tools/bwmachined/ring_network_node.cpp</includedby>
+    <incdepgraph>
+      <node id="17941">
+        <label>network/endpoint.hpp</label>
+      </node>
+      <node id="17942">
+        <label>network/machine_guard.hpp</label>
+      </node>
+      <node id="17939">
+        <label>cstdmf/time_queue.hpp</label>
+      </node>
+      <node id="17943">
+        <label>cstdmf/bw_set.hpp</label>
+      </node>
+      <node id="17940">
+        <label>cstdmf/timestamp.hpp</label>
+      </node>
+      <node id="17938">
+        <label>tools/bwmachined/ring_cluster.hpp</label>
+        <link refid="ring_cluster.hpp"/>
+        <childnode refid="17939" relation="include">
+        </childnode>
+        <childnode refid="17940" relation="include">
+        </childnode>
+        <childnode refid="17941" relation="include">
+        </childnode>
+        <childnode refid="17942" relation="include">
+        </childnode>
+        <childnode refid="17943" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="17946">
+        <label>tools/bwmachined/ring_broadcast_manager.hpp</label>
+        <link refid="ring__broadcast__manager_8hpp_source"/>
+      </node>
+      <node id="17945">
+        <label>tools/bwmachined/ring_network_node.hpp</label>
+        <link refid="ring__network__node_8hpp_source"/>
+        <childnode refid="17946" relation="include">
+        </childnode>
+      </node>
+      <node id="17944">
+        <label>tools/bwmachined/ring_cluster.hpp</label>
+        <link refid="ring_cluster.hpp"/>
+        <childnode refid="17945" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_ring_cluster" prot="public">RingCluster</innerclass>
+    <innerclass refid="class_ring_cluster_1_1_cluster_timeout_handler" prot="protected">RingCluster::ClusterTimeoutHandler</innerclass>
+    <innerclass refid="class_ring_cluster_1_1_flood_trigger_handler" prot="protected">RingCluster::FloodTriggerHandler</innerclass>
+    <innerclass refid="class_ring_cluster_1_1_flood_reply_handler" prot="protected">RingCluster::FloodReplyHandler</innerclass>
+    <innerclass refid="class_ring_cluster_1_1_birth_reply_handler" prot="protected">RingCluster::BirthReplyHandler</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RING_CLUSTER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RING_CLUSTER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/time_queue.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/timestamp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/endpoint.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/machine_guard.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_set.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_b_w_machined" kindref="compound">BWMachined</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_ring_cluster" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ring_cluster" kindref="compound">RingCluster</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ring_cluster_1a23653cb56fe03f7958efbe6b649ecd5d" kindref="member">RingCluster</ref>(<sp/><ref refid="class_b_w_machined" kindref="compound">BWMachined</ref><sp/>&amp;machined<sp/>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ring_cluster_1a48c2aa8259243d555a7d5d4ecffc3fc1" kindref="member">~RingCluster</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ring_cluster_1a9a0d75f7ab936f4f9c11789eb0f6f4ec" kindref="member">chooseBuddy</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ring_network_node" kindref="compound">RingNetworkNode</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BW::set&lt;<sp/>uint32<sp/>&gt;<sp/>Addresses;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_ring_cluster_1_1_cluster_timeout_handler" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ring_cluster_1_1_cluster_timeout_handler" kindref="compound">ClusterTimeoutHandler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>TimerHandler</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ring_cluster_1_1_cluster_timeout_handler" kindref="compound">ClusterTimeoutHandler</ref>(<sp/><ref refid="class_ring_cluster" kindref="compound">RingCluster</ref><sp/>&amp;cluster<sp/>)<sp/>:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cluster_(<sp/>cluster<sp/>),<sp/>handle_()<sp/>{}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>onRelease(<sp/>TimerHandle<sp/>handle,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pUser<sp/>)<sp/>{}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ring_cluster_1_1_cluster_timeout_handler_1a5a29310cb8155e1172a683d3a3ffaf84" kindref="member">addTimer</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TimerHandle<sp/>handle()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>handle_;<sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ring_cluster_1_1_cluster_timeout_handler_1aaf68f5a1ef4498858bfea838a38690aa" kindref="member">cancel</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>TimeQueue::TimeStamp<sp/>interval()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ring_cluster" kindref="compound">RingCluster</ref><sp/>&amp;cluster_;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TimerHandle<sp/>handle_;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Timeout<sp/>handler<sp/>for<sp/>triggering<sp/>cluster<sp/>flood<sp/>checks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_ring_cluster_1_1_flood_trigger_handler" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ring_cluster_1_1_flood_trigger_handler" kindref="compound">FloodTriggerHandler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_ring_cluster_1_1_cluster_timeout_handler" kindref="compound">ClusterTimeoutHandler</ref></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TimeQueue::TimeStamp<sp/>AVERAGE_INTERVAL<sp/>=<sp/>2000;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ring_cluster_1_1_flood_trigger_handler" kindref="compound">FloodTriggerHandler</ref>(<sp/><ref refid="class_ring_cluster" kindref="compound">RingCluster</ref><sp/>&amp;cluster<sp/>)<sp/>:</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ring_cluster_1_1_cluster_timeout_handler" kindref="compound">ClusterTimeoutHandler</ref>(<sp/>cluster<sp/>)<sp/>{}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleTimeout(<sp/>TimerHandle<sp/>handle,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pUser<sp/>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TimeQueue::TimeStamp<sp/>interval()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Timeout<sp/>handler<sp/>for<sp/>polling<sp/>the<sp/>entire<sp/>cluster</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="class_ring_cluster_1_1_flood_reply_handler" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ring_cluster_1_1_flood_reply_handler" kindref="compound">FloodReplyHandler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_ring_cluster_1_1_cluster_timeout_handler" kindref="compound">ClusterTimeoutHandler</ref></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MAX_RETRIES<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ring_cluster_1_1_flood_reply_handler" kindref="compound">FloodReplyHandler</ref>(<sp/><ref refid="class_ring_cluster" kindref="compound">RingCluster</ref><sp/>&amp;cluster<sp/>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleTimeout(<sp/>TimerHandle<sp/>handle,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pUser<sp/>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>markReceived(<sp/>uint32<sp/>addr<sp/>)<sp/>{<sp/>replied_.insert(<sp/>addr<sp/>);<sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16<sp/>seq()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>wmm_.seq();<sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sendBroadcast();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TimeQueue::TimeStamp<sp/>interval()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Addresses<sp/>replied_;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tries_;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WholeMachineMessage<sp/>wmm_;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Timeout<sp/>handler<sp/>for<sp/>birth<sp/>messages.<sp/><sp/>Basically,<sp/>when<sp/>we<sp/>are<sp/>born<sp/>people<sp/>will</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>start<sp/>replying<sp/>to<sp/>us<sp/>telling<sp/>us<sp/>how<sp/>many<sp/>other<sp/>machines<sp/>are<sp/>on<sp/>the<sp/>network.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>must<sp/>become<sp/>aware<sp/>of<sp/>this<sp/>many<sp/>machines<sp/>within<sp/>a<sp/>reasonable<sp/>timeframe<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>will<sp/>send<sp/>out<sp/>the<sp/>request<sp/>again</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="class_ring_cluster_1_1_birth_reply_handler" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ring_cluster_1_1_birth_reply_handler" kindref="compound">BirthReplyHandler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_ring_cluster_1_1_cluster_timeout_handler" kindref="compound">ClusterTimeoutHandler</ref></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ring_cluster_1_1_birth_reply_handler" kindref="compound">BirthReplyHandler</ref>(<sp/><ref refid="class_ring_cluster" kindref="compound">RingCluster</ref><sp/>&amp;cluster<sp/>)<sp/>:</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ring_cluster_1_1_cluster_timeout_handler" kindref="compound">ClusterTimeoutHandler</ref>(<sp/>cluster<sp/>)<sp/>{}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ring_cluster_1_1_cluster_timeout_handler_1a5a29310cb8155e1172a683d3a3ffaf84" kindref="member">addTimer</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleTimeout(<sp/>TimerHandle<sp/>handle,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pUser<sp/>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>markReceived(<sp/>uint32<sp/>addr,<sp/>uint32<sp/>count<sp/>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TimeQueue::TimeStamp<sp/>interval()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32<sp/>toldSize_;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_w_machined" kindref="compound">BWMachined</ref><sp/>&amp;<sp/>machined_;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>of<sp/>ip<sp/>addresses<sp/>of<sp/>known<sp/>machines</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>Addresses<sp/>machines_;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32<sp/>ownAddr_;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32<sp/>buddyAddr_;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ring_cluster_1_1_flood_trigger_handler" kindref="compound">FloodTriggerHandler</ref><sp/>floodTriggerHandler_;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ring_cluster_1_1_flood_reply_handler" kindref="compound">FloodReplyHandler</ref><sp/>*pFloodReplyHandler_;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ring_cluster_1_1_birth_reply_handler" kindref="compound">BirthReplyHandler</ref><sp/>birthHandler_;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>RING_CLUSTER_HPP</highlight></codeline>
+    </programlisting>
+    <location file="tools/bwmachined/ring_cluster.hpp"/>
+  </compounddef>
+</doxygen>

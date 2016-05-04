@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_cell_app_scorer" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>CellAppScorer</compoundname>
+    <includes refid="cellapp__comparer_8hpp" local="no">cellapp_comparer.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cell_app_scorer_1ae67b9a54bb10502ed06b39f16e384650" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual CellAppScorer::~CellAppScorer</definition>
+        <argsstring>()</argsstring>
+        <name>~CellAppScorer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellapp_comparer.hpp" line="51" column="1" bodyfile="cellappmgr/cellapp_comparer.hpp" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_scorer_1af27cd1f5b81c46539bd1aee89513ce69" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CellAppScorer::compareCellApps</definition>
+        <argsstring>(const CellApp *pOld, const CellApp *pNew, const Space *pSpace) const </argsstring>
+        <name>compareCellApps</name>
+        <param>
+          <type>const <ref refid="class_cell_app" kindref="compound">CellApp</ref> *</type>
+          <declname>pOld</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_cell_app" kindref="compound">CellApp</ref> *</type>
+          <declname>pNew</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_space" kindref="compound">Space</ref> *</type>
+          <declname>pSpace</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method compares two <ref refid="class_cell_apps" kindref="compound">CellApps</ref> using this criterion.</para><para><simplesect kind="return"><para>Float less than, equal to or greater than zero if pNew is found, respectively, to be worse, the same or better than pOld. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellapp_comparer.hpp" line="53" column="1" bodyfile="cellappmgr/cellapp_comparer.cpp" bodystart="227" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_scorer_1aa614e2f7ab0f724da167ac29ac2fc548" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool CellAppScorer::hasValidScore</definition>
+        <argsstring>(const CellApp *pApp, const Space *pSpace) const </argsstring>
+        <name>hasValidScore</name>
+        <param>
+          <type>const <ref refid="class_cell_app" kindref="compound">CellApp</ref> *</type>
+          <declname>pApp</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_space" kindref="compound">Space</ref> *</type>
+          <declname>pSpace</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellapp_comparer.hpp" line="56" column="1" bodyfile="cellappmgr/cellapp_comparer.hpp" bodystart="56" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_scorer_1a822c4335d1141db07fcf60555e49e4e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool CellAppScorer::init</definition>
+        <argsstring>(const DataSectionPtr &amp;ptr)</argsstring>
+        <name>init</name>
+        <param>
+          <type>const DataSectionPtr &amp;</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellapp_comparer.hpp" line="62" column="1" bodyfile="cellappmgr/cellapp_comparer.hpp" bodystart="62" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_cell_app_scorer_1a22b6f243892a41e48024c69b57adebc5" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>float</type>
+        <definition>virtual float CellAppScorer::getScore</definition>
+        <argsstring>(const CellApp *pApp, const Space *pSpace) const  =0</argsstring>
+        <name>getScore</name>
+        <param>
+          <type>const <ref refid="class_cell_app" kindref="compound">CellApp</ref> *</type>
+          <declname>pApp</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_space" kindref="compound">Space</ref> *</type>
+          <declname>pSpace</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellapp_comparer.hpp" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_scorer_1af3707e01de159b7cf4878fb348bfbf69" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const char *</type>
+        <definition>virtual const char* CellAppScorer::name</definition>
+        <argsstring>() const  =0</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cellapp_comparer.hpp" line="68" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class represents a single criterion on which <ref refid="class_cell_apps" kindref="compound">CellApps</ref> can be compared. </para>    </detaileddescription>
+    <location file="cellappmgr/cellapp_comparer.hpp" line="49" column="1" bodyfile="cellappmgr/cellapp_comparer.hpp" bodystart="48" bodyend="69"/>
+    <listofallmembers>
+      <member refid="class_cell_app_scorer_1af27cd1f5b81c46539bd1aee89513ce69" prot="public" virt="non-virtual"><scope>CellAppScorer</scope><name>compareCellApps</name></member>
+      <member refid="class_cell_app_scorer_1a22b6f243892a41e48024c69b57adebc5" prot="protected" virt="pure-virtual"><scope>CellAppScorer</scope><name>getScore</name></member>
+      <member refid="class_cell_app_scorer_1aa614e2f7ab0f724da167ac29ac2fc548" prot="public" virt="virtual"><scope>CellAppScorer</scope><name>hasValidScore</name></member>
+      <member refid="class_cell_app_scorer_1a822c4335d1141db07fcf60555e49e4e3" prot="public" virt="virtual"><scope>CellAppScorer</scope><name>init</name></member>
+      <member refid="class_cell_app_scorer_1af3707e01de159b7cf4878fb348bfbf69" prot="protected" virt="pure-virtual"><scope>CellAppScorer</scope><name>name</name></member>
+      <member refid="class_cell_app_scorer_1ae67b9a54bb10502ed06b39f16e384650" prot="public" virt="virtual"><scope>CellAppScorer</scope><name>~CellAppScorer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

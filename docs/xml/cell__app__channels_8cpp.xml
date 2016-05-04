@@ -1,0 +1,524 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cell__app__channels_8cpp" kind="file" language="C++">
+    <compoundname>cell_app_channels.cpp</compoundname>
+    <includes local="yes">script/first_include.hpp</includes>
+    <includes refid="cell__app__channels_8hpp" local="yes">cell_app_channels.hpp</includes>
+    <includes refid="cell__app__channel_8hpp" local="yes">cell_app_channel.hpp</includes>
+    <includes refid="cellapp__interface_8hpp" local="yes">cellapp_interface.hpp</includes>
+    <includes refid="profile_8hpp" local="yes">profile.hpp</includes>
+    <includes refid="cellapp_8hpp" local="yes">cellapp.hpp</includes>
+    <includes refid="spaces_8hpp" local="yes">spaces.hpp</includes>
+    <includes local="yes">network/event_dispatcher.hpp</includes>
+    <incdepgraph>
+      <node id="7033">
+        <label>cstdmf/shared_ptr.hpp</label>
+      </node>
+      <node id="7000">
+        <label>cstdmf/singleton.hpp</label>
+      </node>
+      <node id="7042">
+        <label>py_spaces.hpp</label>
+        <link refid="cellapp_2py__spaces_8hpp_source"/>
+        <childnode refid="7043" relation="include">
+        </childnode>
+        <childnode refid="7044" relation="include">
+        </childnode>
+        <childnode refid="7045" relation="include">
+        </childnode>
+      </node>
+      <node id="7024">
+        <label>network/misc.hpp</label>
+      </node>
+      <node id="7032">
+        <label>cstdmf/memory_stream.hpp</label>
+      </node>
+      <node id="7005">
+        <label>build/bwapi.hpp</label>
+      </node>
+      <node id="7030">
+        <label>chunk_loading/geometry_mapper.hpp</label>
+      </node>
+      <node id="7009">
+        <label>entitydef/volatile_info.hpp</label>
+      </node>
+      <node id="7022">
+        <label>cstdmf/stdmf.hpp</label>
+      </node>
+      <node id="6998">
+        <label>script/first_include.hpp</label>
+      </node>
+      <node id="7041">
+        <label>type_system/context.hpp</label>
+      </node>
+      <node id="7040">
+        <label>script/script_object.hpp</label>
+      </node>
+      <node id="7044">
+        <label>script/py_script_object.hpp</label>
+      </node>
+      <node id="7008">
+        <label>cellapp_interface.hpp</label>
+        <link refid="cellapp__interface_8hpp_source"/>
+        <childnode refid="7009" relation="include">
+        </childnode>
+        <childnode refid="7010" relation="include">
+        </childnode>
+        <childnode refid="7011" relation="include">
+        </childnode>
+        <childnode refid="7012" relation="include">
+        </childnode>
+        <childnode refid="7013" relation="include">
+        </childnode>
+      </node>
+      <node id="7034">
+        <label>cstdmf/stringmap.hpp</label>
+      </node>
+      <node id="7012">
+        <label>server/common.hpp</label>
+      </node>
+      <node id="7026">
+        <label>cstdmf/md5.hpp</label>
+      </node>
+      <node id="7036">
+        <label>pyscript/pickler.hpp</label>
+      </node>
+      <node id="7029">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="7037">
+        <label>server/entity_app.hpp</label>
+      </node>
+      <node id="7003">
+        <label>cstdmf/bw_map.hpp</label>
+      </node>
+      <node id="7004">
+        <label>cstdmf/bw_set.hpp</label>
+      </node>
+      <node id="7043">
+        <label>pyscript/pyobject_plus.hpp</label>
+      </node>
+      <node id="7023">
+        <label>cstdmf/watcher.hpp</label>
+      </node>
+      <node id="7020">
+        <label>cstdmf/safe_static.hpp</label>
+      </node>
+      <node id="7028">
+        <label>emergency_throttle.hpp</label>
+        <link refid="emergency__throttle_8hpp_source"/>
+        <childnode refid="7029" relation="include">
+        </childnode>
+      </node>
+      <node id="7017">
+        <label>Python.h</label>
+      </node>
+      <node id="7019">
+        <label>cstdmf/bw_list.hpp</label>
+      </node>
+      <node id="7016">
+        <label>cellapp.hpp</label>
+        <link refid="cellapp_8hpp_source"/>
+        <childnode refid="7017" relation="include">
+        </childnode>
+        <childnode refid="7005" relation="include">
+        </childnode>
+        <childnode refid="7018" relation="include">
+        </childnode>
+        <childnode refid="7008" relation="include">
+        </childnode>
+        <childnode refid="7021" relation="include">
+        </childnode>
+        <childnode refid="7027" relation="include">
+        </childnode>
+        <childnode refid="7028" relation="include">
+        </childnode>
+        <childnode refid="7014" relation="include">
+        </childnode>
+        <childnode refid="7030" relation="include">
+        </childnode>
+        <childnode refid="7031" relation="include">
+        </childnode>
+        <childnode refid="7032" relation="include">
+        </childnode>
+        <childnode refid="7033" relation="include">
+        </childnode>
+        <childnode refid="7000" relation="include">
+        </childnode>
+        <childnode refid="7034" relation="include">
+        </childnode>
+        <childnode refid="7035" relation="include">
+        </childnode>
+        <childnode refid="7036" relation="include">
+        </childnode>
+        <childnode refid="7012" relation="include">
+        </childnode>
+        <childnode refid="7037" relation="include">
+        </childnode>
+        <childnode refid="7038" relation="include">
+        </childnode>
+        <childnode refid="7039" relation="include">
+        </childnode>
+        <childnode refid="7040" relation="include">
+        </childnode>
+        <childnode refid="7041" relation="include">
+        </childnode>
+        <childnode refid="7042" relation="include">
+        </childnode>
+      </node>
+      <node id="7046">
+        <label>spaces.hpp</label>
+        <link refid="spaces_8hpp_source"/>
+        <childnode refid="7023" relation="include">
+        </childnode>
+        <childnode refid="7002" relation="include">
+        </childnode>
+        <childnode refid="7003" relation="include">
+        </childnode>
+      </node>
+      <node id="7035">
+        <label>entitydef/entity_description_map.hpp</label>
+      </node>
+      <node id="7025">
+        <label>server/manager_app_gateway.hpp</label>
+      </node>
+      <node id="7018">
+        <label>cellapp_death_listener.hpp</label>
+        <link refid="cellapp__death__listener_8hpp_source"/>
+        <childnode refid="7002" relation="include">
+        </childnode>
+        <childnode refid="7019" relation="include">
+        </childnode>
+        <childnode refid="7020" relation="include">
+        </childnode>
+      </node>
+      <node id="7038">
+        <label>server/id_client.hpp</label>
+      </node>
+      <node id="7002">
+        <label>network/basictypes.hpp</label>
+      </node>
+      <node id="6997">
+        <label>cellapp/cell_app_channels.cpp</label>
+        <link refid="cell_app_channels.cpp"/>
+        <childnode refid="6998" relation="include">
+        </childnode>
+        <childnode refid="6999" relation="include">
+        </childnode>
+        <childnode refid="7006" relation="include">
+        </childnode>
+        <childnode refid="7008" relation="include">
+        </childnode>
+        <childnode refid="7014" relation="include">
+        </childnode>
+        <childnode refid="7016" relation="include">
+        </childnode>
+        <childnode refid="7046" relation="include">
+        </childnode>
+        <childnode refid="7047" relation="include">
+        </childnode>
+      </node>
+      <node id="7031">
+        <label>chunk_loading/preloaded_chunk_space.hpp</label>
+      </node>
+      <node id="7013">
+        <label>server/anonymous_channel_client.hpp</label>
+      </node>
+      <node id="7006">
+        <label>cell_app_channel.hpp</label>
+        <link refid="cell__app__channel_8hpp_source"/>
+        <childnode refid="7007" relation="include">
+        </childnode>
+      </node>
+      <node id="7011">
+        <label>network/msgtypes.hpp</label>
+      </node>
+      <node id="7021">
+        <label>cellappmgr_gateway.hpp</label>
+        <link refid="cellappmgr__gateway_8hpp_source"/>
+        <childnode refid="7022" relation="include">
+        </childnode>
+        <childnode refid="7023" relation="include">
+        </childnode>
+        <childnode refid="7002" relation="include">
+        </childnode>
+        <childnode refid="7007" relation="include">
+        </childnode>
+        <childnode refid="7024" relation="include">
+        </childnode>
+        <childnode refid="7012" relation="include">
+        </childnode>
+        <childnode refid="7025" relation="include">
+        </childnode>
+        <childnode refid="7026" relation="include">
+        </childnode>
+      </node>
+      <node id="7027">
+        <label>cells.hpp</label>
+        <link refid="cells_8hpp_source"/>
+        <childnode refid="7023" relation="include">
+        </childnode>
+        <childnode refid="7002" relation="include">
+        </childnode>
+        <childnode refid="7003" relation="include">
+        </childnode>
+      </node>
+      <node id="7039">
+        <label>server/py_services_map.hpp</label>
+      </node>
+      <node id="7010">
+        <label>network/common_interface_macros.hpp</label>
+      </node>
+      <node id="7014">
+        <label>profile.hpp</label>
+        <link refid="profile_8hpp_source"/>
+        <childnode refid="7015" relation="include">
+        </childnode>
+      </node>
+      <node id="7047">
+        <label>network/event_dispatcher.hpp</label>
+      </node>
+      <node id="7015">
+        <label>cstdmf/profile.hpp</label>
+      </node>
+      <node id="7001">
+        <label>cstdmf/timer_handler.hpp</label>
+      </node>
+      <node id="7007">
+        <label>network/channel_owner.hpp</label>
+      </node>
+      <node id="7045">
+        <label>space/forward_declarations.hpp</label>
+      </node>
+      <node id="6999">
+        <label>cell_app_channels.hpp</label>
+        <link refid="cell__app__channels_8hpp_source"/>
+        <childnode refid="7000" relation="include">
+        </childnode>
+        <childnode refid="7001" relation="include">
+        </childnode>
+        <childnode refid="7002" relation="include">
+        </childnode>
+        <childnode refid="7003" relation="include">
+        </childnode>
+        <childnode refid="7004" relation="include">
+        </childnode>
+        <childnode refid="7005" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;script/first_include.hpp&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>See<sp/>http://docs.python.org/api/includes.html</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cell_app_channels.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cell_app_channel.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cellapp_interface.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;profile.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cellapp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;spaces.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/event_dispatcher.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">DECLARE_DEBUG_COMPONENT(<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">BW_SINGLETON_STORAGE_SPECIALIZED(<sp/><ref refid="class_cell_app_channels" kindref="compound">CellAppChannels</ref><sp/>)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="class_cell_app_channels" kindref="compound">CellAppChannels</ref>::<ref refid="class_cell_app_channels" kindref="compound">CellAppChannels</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>microseconds,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_mercury" kindref="compound">Mercury</ref>::EventDispatcher<sp/>&amp;<sp/>dispatcher<sp/>)<sp/>:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>map_(),</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>recentlyDead_(),</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>lastTimeOfDeath_(<sp/>0<sp/>),</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>timer_()</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_cell_app_channels_1a6a4a358f24563d238c35b1043ada6e99" kindref="member">startTimer</ref>(<sp/>microseconds,<sp/>dispatcher<sp/>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="class_cell_app_channels_1a1bf15d2145b729ce4255726ea28472b6" kindref="member">CellAppChannels::~CellAppChannels</ref>()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_cell_app_channels_1a6562d08227d076a58a76f065a7b8b856" kindref="member">stopTimer</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cell_app_channels_1a5c12ee8b8adc3c474420b13eb7b96eae" kindref="member">CellAppChannels::sendAll</ref>()</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ProfileVal<sp/>localProfile(<sp/></highlight><highlight class="stringliteral">&quot;deliverGhosts&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>START_PROFILE(<sp/>localProfile<sp/>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>all<sp/>our<sp/>regular<sp/>channels</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(Map::iterator<sp/>iter<sp/>=<sp/>map_.begin();<sp/>iter<sp/>!=<sp/>map_.end();<sp/>iter++)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref><sp/>*<sp/>pChannel<sp/>=<sp/>iter-&gt;second;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pChannel-&gt;isGood())</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pChannel-&gt;send();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>STOP_PROFILE_WITH_DATA(<sp/>localProfile,<sp/>static_cast&lt;uint32&gt;(map_.size())<sp/>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CellAppChannels::handleTimeout(<sp/>TimerHandle<sp/>handle,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>arg<sp/>)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_cell_app_channels_1a5c12ee8b8adc3c474420b13eb7b96eae" kindref="member">sendAll</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref><sp/>*<sp/>CellAppChannels::get(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>addr,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>shouldCreate<sp/>)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_ASSERT_DEV(<sp/>addr.ip<sp/>!=<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>Map::iterator<sp/>iter<sp/>=<sp/>map_.find(<sp/>addr<sp/>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(iter<sp/>!=<sp/>map_.end())</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>iter-&gt;second;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(shouldCreate)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((lastTimeOfDeath_<sp/>+</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RECENTLY_DEAD_PERIOD<sp/>*<sp/>stampsPerSecond())<sp/>&lt;<sp/>timestamp())</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>recentlyDead_.clear();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(recentlyDead_.find(<sp/>addr<sp/>)<sp/>!=<sp/>recentlyDead_.end())</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref><sp/>*<sp/>pChannel<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref>(<sp/>addr<sp/>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map_[<sp/>addr<sp/>]<sp/>=<sp/>pChannel;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pChannel;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>CellAppChannels::hasRecentlyDied(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>addr<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="121"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>recentlyDead_.find(<sp/>addr<sp/>)<sp/>!=<sp/>recentlyDead_.end();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cell_app_channels_1a1f1e9aa5c9129dab7eb8312ba0ea0453" kindref="member">CellAppChannels::remoteFailure</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>addr<sp/>)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_ASSERT(<sp/>addr.port<sp/>!=<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64<sp/>now<sp/>=<sp/>timestamp();</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lastTimeOfDeath_<sp/>+<sp/>RECENTLY_DEAD_PERIOD<sp/>*<sp/>stampsPerSecond()<sp/>&lt;<sp/>now)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>recentlyDead_.clear();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>recentlyDead_.insert(<sp/>addr<sp/>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>lastTimeOfDeath_<sp/>=<sp/>now;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>Map::iterator<sp/>iter<sp/>=<sp/>map_.find(<sp/>addr<sp/>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(iter<sp/>!=<sp/>map_.end())</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Marking<sp/>the<sp/>Channel<sp/>as<sp/>remote<sp/>failed<sp/>before<sp/>deleting<sp/>the<sp/>owner<sp/>causes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>it<sp/>to<sp/>be<sp/>deleted<sp/>instead<sp/>of<sp/>condemned.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iter-&gt;second-&gt;channel().setRemoteFailed();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>iter-&gt;second;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map_.erase(<sp/>iter<sp/>);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cell_app_channels_1a6a4a358f24563d238c35b1043ada6e99" kindref="member">CellAppChannels::startTimer</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>microseconds,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>Mercury::EventDispatcher<sp/>&amp;<sp/>dispatcher<sp/>)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_cell_app_channels_1a6562d08227d076a58a76f065a7b8b856" kindref="member">stopTimer</ref>();</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>timer_<sp/>=<sp/>dispatcher.addTimer(<sp/>microseconds,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL,<sp/></highlight><highlight class="stringliteral">&quot;CellAppChannels&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cell_app_channels_1a6562d08227d076a58a76f065a7b8b856" kindref="member">CellAppChannels::stopTimer</ref>()</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>timer_.cancel();</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cell_app_channels_1aeafdda88363f048bb1d86c52e33ba8eb" kindref="member">CellAppChannels::sendTickCompleteToAll</ref>(<sp/>GameTime<sp/>gameTime<sp/>)</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>CellAppInterface::onRemoteTickCompleteArgs<sp/>args;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>args.gameTime<sp/>=<sp/>gameTime;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>all<sp/>our<sp/>regular<sp/>channels</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(Map::iterator<sp/>iter<sp/>=<sp/>map_.begin();<sp/>iter<sp/>!=<sp/>map_.end();<sp/>iter++)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref><sp/>*<sp/>pChannel<sp/>=<sp/>iter-&gt;second;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Only<sp/>send<sp/>to<sp/>the<sp/>CellApps<sp/>who<sp/>share<sp/>cells<sp/>in<sp/>same<sp/>spaces<sp/>with<sp/>ours</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pChannel-&gt;isGood()<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(CellApp::instance().spaces().haveOtherCellsIn(<sp/>*pChannel<sp/>)))</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mercury::Bundle<sp/>&amp;<sp/>bundle<sp/>=<sp/>pChannel-&gt;bundle();</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bundle<sp/>&lt;&lt;<sp/>args;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_cell_app_channels_1a5c12ee8b8adc3c474420b13eb7b96eae" kindref="member">sendAll</ref>();</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cell_app_channels_1a4af8e1c058e62f1574105fcf18cfc6ad" kindref="member">CellAppChannels::onRemoteTickComplete</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>srcAddr,</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GameTime<sp/>remoteGameTime<sp/>)</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref><sp/>*<sp/>pChannel<sp/>=<sp/>this-&gt;</highlight><highlight class="keyword">get</highlight><highlight class="normal">(<sp/>srcAddr,</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>shouldCreate:<sp/>*/</highlight><highlight class="normal"><sp/>false<sp/>);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pChannel<sp/>==<sp/>NULL<sp/>||<sp/>!pChannel-&gt;isGood())</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>pChannel-&gt;lastReceivedTime(<sp/>remoteGameTime<sp/>);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_cell_app_channels_1aa934376ad43fa709a5e4e9fe34564a57" kindref="member">CellAppChannels::haveAllChannelsReceivedTime</ref>(<sp/>GameTime<sp/>gameTime<sp/>)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(Map::iterator<sp/>iter<sp/>=<sp/>map_.begin();<sp/>iter<sp/>!=<sp/>map_.end();<sp/>iter++)</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref><sp/>*<sp/>pChannel<sp/>=<sp/>iter-&gt;second;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pChannel-&gt;isGood()<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(CellApp::instance().spaces().haveOtherCellsIn(<sp/>*pChannel<sp/>))<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(pChannel-&gt;lastReceivedTime()<sp/>&lt;<sp/>gameTime))</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="comment">//<sp/>cell_app_channel.cpp</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="cellapp/cell_app_channels.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_entity_ghost_maintainer" kind="class" language="C++" prot="public">
+    <compoundname>EntityGhostMaintainer</compoundname>
+    <basecompoundref refid="class_cell_info_visitor" prot="public" virt="non-virtual">CellInfoVisitor</basecompoundref>
+    <includes refid="entity__ghost__maintainer_8hpp" local="no">entity_ghost_maintainer.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_entity_ghost_maintainer_1a72195e0b7685afbfc261f81573bafa52" prot="private" static="no" mutable="no">
+        <type><ref refid="class_offload_checker" kindref="compound">OffloadChecker</ref> &amp;</type>
+        <definition>OffloadChecker&amp; EntityGhostMaintainer::offloadChecker_</definition>
+        <argsstring></argsstring>
+        <name>offloadChecker_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_ghost_maintainer.hpp" line="51" column="1" bodyfile="cellapp/entity_ghost_maintainer.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_ghost_maintainer_1a683b25659b760ceca708014e7e615fdd" prot="private" static="no" mutable="no">
+        <type><ref refid="class_smart_pointer" kindref="compound">EntityPtr</ref></type>
+        <definition>EntityPtr EntityGhostMaintainer::pEntity_</definition>
+        <argsstring></argsstring>
+        <name>pEntity_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_ghost_maintainer.hpp" line="52" column="1" bodyfile="cellapp/entity_ghost_maintainer.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_ghost_maintainer_1a98f3a72b420729e478542e975262fd68" prot="private" static="no" mutable="no">
+        <type>const Mercury::Address &amp;</type>
+        <definition>const Mercury::Address&amp; EntityGhostMaintainer::ownAddress_</definition>
+        <argsstring></argsstring>
+        <name>ownAddress_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_ghost_maintainer.hpp" line="53" column="1" bodyfile="cellapp/entity_ghost_maintainer.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_ghost_maintainer_1a4b363484e74ad4827da0689243ab4062" prot="private" static="no" mutable="no">
+        <type>BW::Rect</type>
+        <definition>BW::Rect EntityGhostMaintainer::hysteresisArea_</definition>
+        <argsstring></argsstring>
+        <name>hysteresisArea_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_ghost_maintainer.hpp" line="54" column="1" bodyfile="cellapp/entity_ghost_maintainer.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_ghost_maintainer_1ab35851910240d4eafe4c125b7395dfa8" prot="private" static="no" mutable="no">
+        <type><ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref> *</type>
+        <definition>CellAppChannel* EntityGhostMaintainer::pOffloadDestination_</definition>
+        <argsstring></argsstring>
+        <name>pOffloadDestination_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_ghost_maintainer.hpp" line="55" column="1" bodyfile="cellapp/entity_ghost_maintainer.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_ghost_maintainer_1a7a391fa6e3e1ffa0a45ba32c5f4df5ea" prot="private" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint EntityGhostMaintainer::numGhostsCreated_</definition>
+        <argsstring></argsstring>
+        <name>numGhostsCreated_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_ghost_maintainer.hpp" line="56" column="1" bodyfile="cellapp/entity_ghost_maintainer.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_entity_ghost_maintainer_1aec0a1325ea581255691d44352c97a210" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE EntityGhostMaintainer::EntityGhostMaintainer</definition>
+        <argsstring>(OffloadChecker &amp;offloadChecker, EntityPtr pEntity)</argsstring>
+        <name>EntityGhostMaintainer</name>
+        <param>
+          <type><ref refid="class_offload_checker" kindref="compound">OffloadChecker</ref> &amp;</type>
+          <declname>offloadChecker</declname>
+        </param>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">EntityPtr</ref></type>
+          <declname>pEntity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offloadChecker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The associated <ref refid="class_offload_checker" kindref="compound">OffloadChecker</ref> instance. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pEntity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity to check ghosts and offloads for. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_ghost_maintainer.hpp" line="34" column="1" bodyfile="cellapp/entity_ghost_maintainer.cpp" bodystart="24" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_ghost_maintainer_1ab25610ab78927af3cd2b3f465389c849" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>EntityGhostMaintainer::~EntityGhostMaintainer</definition>
+        <argsstring>()</argsstring>
+        <name>~EntityGhostMaintainer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_ghost_maintainer.hpp" line="36" column="1" bodyfile="cellapp/entity_ghost_maintainer.cpp" bodystart="38" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_ghost_maintainer_1a05379a67c978da36137dc21901078d06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityGhostMaintainer::check</definition>
+        <argsstring>()</argsstring>
+        <name>check</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks through this entity&apos;s ghosts and checks whether the real entity needs to be offloaded elsewhere. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_ghost_maintainer.hpp" line="38" column="1" bodyfile="cellapp/entity_ghost_maintainer.cpp" bodystart="46" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_ghost_maintainer_1a9085669dbeb37c4d0011ad6475f11818" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EntityGhostMaintainer::visit</definition>
+        <argsstring>(CellInfo &amp;cellInfo)</argsstring>
+        <name>visit</name>
+        <reimplements refid="class_cell_info_visitor_1ab081c379b4bb63b217d3a33640e24686">visit</reimplements>
+        <param>
+          <type><ref refid="class_cell_info" kindref="compound">CellInfo</ref> &amp;</type>
+          <declname>cellInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override from <ref refid="class_cell_info_visitor" kindref="compound">CellInfoVisitor</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_ghost_maintainer.hpp" line="41" column="1" bodyfile="cellapp/entity_ghost_maintainer.cpp" bodystart="184" bodyend="231"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_entity_ghost_maintainer_1ab2ff3a50ecc1b88748670132ef5e46b5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_cell" kindref="compound">Cell</ref> &amp;</type>
+        <definition>Cell &amp; EntityGhostMaintainer::cell</definition>
+        <argsstring>()</argsstring>
+        <name>cell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method retrieves our entity&apos;s current cell. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_ghost_maintainer.hpp" line="44" column="1" bodyfile="cellapp/entity_ghost_maintainer.cpp" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_ghost_maintainer_1a35b0f203294608f44f7e73e9e8a6a97b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityGhostMaintainer::checkEntityForOffload</definition>
+        <argsstring>()</argsstring>
+        <name>checkEntityForOffload</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks whether the given entity requires offloading to another cell. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_ghost_maintainer.hpp" line="46" column="1" bodyfile="cellapp/entity_ghost_maintainer.cpp" bodystart="81" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_ghost_maintainer_1a7a63f70bd722ed9ef9a4816d6da9465b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EntityGhostMaintainer::markHaunts</definition>
+        <argsstring>()</argsstring>
+        <name>markHaunts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method marks each of the channels belonging to all the entity&apos;s haunts. An entity&apos;s required haunts are then unmarked during createOrUnmarkRequiredHaunts(), leaving those haunts that are not required to be removed during deleteMarkedHaunts().</para><para><simplesect kind="return"><para>true if the offload destination has an existing haunt, otherwise false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_ghost_maintainer.hpp" line="47" column="1" bodyfile="cellapp/entity_ghost_maintainer.cpp" bodystart="125" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_ghost_maintainer_1a4b5565b43703629409efc85c9b2ce5e2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityGhostMaintainer::createOrUnmarkRequiredHaunts</definition>
+        <argsstring>()</argsstring>
+        <name>createOrUnmarkRequiredHaunts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method evaluates each cell in the space&apos;s tree for suitability for adding a ghost to that cell for the given entity. It creates a ghost if one is required but not present, and leaves the channel unmarked.</para><para>If a ghost exists and the cell is still a suitable haunt for the entity, then the haunt&apos;s channel is unmarked.</para><para>Those cells that no longer require a ghost for the given entity are left alone (they should be marked for removal). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_ghost_maintainer.hpp" line="48" column="1" bodyfile="cellapp/entity_ghost_maintainer.cpp" bodystart="159" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_ghost_maintainer_1a0b22497c1a8e0f2ac54242aff6a1962d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityGhostMaintainer::deleteMarkedHaunts</definition>
+        <argsstring>()</argsstring>
+        <name>deleteMarkedHaunts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method removes ghosts on haunts that have their channels marked. All the required haunts would have had their channels unmakred in createOrUnmarkRequiredHaunts().</para><para>There are criteria for when a ghost should not be deleted:</para><para><itemizedlist>
+<listitem><para>Each iteration of the offload checker has a maximum number of ghosts that can be deleted (configurable).</para></listitem><listitem><para>A ghost will not be deleted if it is a new ghost (configurable).</para></listitem><listitem><para>A ghost will not be deleted if the real entity has been created recently (2 seconds). </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_ghost_maintainer.hpp" line="49" column="1" bodyfile="cellapp/entity_ghost_maintainer.cpp" bodystart="248" bodyend="299"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to visit all the cells of a space, and create new ghosts for those that are required for a particular entity, as well as unmark those that are are still required to exist. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1133">
+        <label>CellInfoVisitor</label>
+        <link refid="class_cell_info_visitor"/>
+      </node>
+      <node id="1132">
+        <label>EntityGhostMaintainer</label>
+        <link refid="class_entity_ghost_maintainer"/>
+        <childnode refid="1133" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1135">
+        <label>CellInfoVisitor</label>
+        <link refid="class_cell_info_visitor"/>
+      </node>
+      <node id="1134">
+        <label>EntityGhostMaintainer</label>
+        <link refid="class_entity_ghost_maintainer"/>
+        <childnode refid="1135" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/entity_ghost_maintainer.hpp" line="32" column="1" bodyfile="cellapp/entity_ghost_maintainer.hpp" bodystart="31" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_entity_ghost_maintainer_1ab2ff3a50ecc1b88748670132ef5e46b5" prot="private" virt="non-virtual"><scope>EntityGhostMaintainer</scope><name>cell</name></member>
+      <member refid="class_entity_ghost_maintainer_1a05379a67c978da36137dc21901078d06" prot="public" virt="non-virtual"><scope>EntityGhostMaintainer</scope><name>check</name></member>
+      <member refid="class_entity_ghost_maintainer_1a35b0f203294608f44f7e73e9e8a6a97b" prot="private" virt="non-virtual"><scope>EntityGhostMaintainer</scope><name>checkEntityForOffload</name></member>
+      <member refid="class_entity_ghost_maintainer_1a4b5565b43703629409efc85c9b2ce5e2" prot="private" virt="non-virtual"><scope>EntityGhostMaintainer</scope><name>createOrUnmarkRequiredHaunts</name></member>
+      <member refid="class_entity_ghost_maintainer_1a0b22497c1a8e0f2ac54242aff6a1962d" prot="private" virt="non-virtual"><scope>EntityGhostMaintainer</scope><name>deleteMarkedHaunts</name></member>
+      <member refid="class_entity_ghost_maintainer_1aec0a1325ea581255691d44352c97a210" prot="public" virt="non-virtual"><scope>EntityGhostMaintainer</scope><name>EntityGhostMaintainer</name></member>
+      <member refid="class_entity_ghost_maintainer_1a4b363484e74ad4827da0689243ab4062" prot="private" virt="non-virtual"><scope>EntityGhostMaintainer</scope><name>hysteresisArea_</name></member>
+      <member refid="class_entity_ghost_maintainer_1a7a63f70bd722ed9ef9a4816d6da9465b" prot="private" virt="non-virtual"><scope>EntityGhostMaintainer</scope><name>markHaunts</name></member>
+      <member refid="class_entity_ghost_maintainer_1a7a391fa6e3e1ffa0a45ba32c5f4df5ea" prot="private" virt="non-virtual"><scope>EntityGhostMaintainer</scope><name>numGhostsCreated_</name></member>
+      <member refid="class_entity_ghost_maintainer_1a72195e0b7685afbfc261f81573bafa52" prot="private" virt="non-virtual"><scope>EntityGhostMaintainer</scope><name>offloadChecker_</name></member>
+      <member refid="class_entity_ghost_maintainer_1a98f3a72b420729e478542e975262fd68" prot="private" virt="non-virtual"><scope>EntityGhostMaintainer</scope><name>ownAddress_</name></member>
+      <member refid="class_entity_ghost_maintainer_1a683b25659b760ceca708014e7e615fdd" prot="private" virt="non-virtual"><scope>EntityGhostMaintainer</scope><name>pEntity_</name></member>
+      <member refid="class_entity_ghost_maintainer_1ab35851910240d4eafe4c125b7395dfa8" prot="private" virt="non-virtual"><scope>EntityGhostMaintainer</scope><name>pOffloadDestination_</name></member>
+      <member refid="class_entity_ghost_maintainer_1a9085669dbeb37c4d0011ad6475f11818" prot="public" virt="virtual"><scope>EntityGhostMaintainer</scope><name>visit</name></member>
+      <member refid="class_cell_info_visitor_1a92412fa454ccf2b29e1ad3c9abb4f84e" prot="public" virt="virtual"><scope>EntityGhostMaintainer</scope><name>~CellInfoVisitor</name></member>
+      <member refid="class_entity_ghost_maintainer_1ab25610ab78927af3cd2b3f465389c849" prot="public" virt="virtual"><scope>EntityGhostMaintainer</scope><name>~EntityGhostMaintainer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

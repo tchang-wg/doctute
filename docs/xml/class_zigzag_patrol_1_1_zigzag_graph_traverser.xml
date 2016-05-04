@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_zigzag_patrol_1_1_zigzag_graph_traverser" kind="class" language="C++" prot="public">
+    <compoundname>ZigzagPatrol::ZigzagGraphTraverser</compoundname>
+    <basecompoundref refid="class_patrol_1_1_graph_traverser" prot="public" virt="non-virtual">Patrol::GraphTraverser</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_zigzag_patrol_1_1_zigzag_graph_traverser_1ab73e213c55ee7084f2e390ff2ac8ac90" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int ZigzagPatrol::ZigzagGraphTraverser::DEFAULT_CORRIDOR_WIDTH</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_CORRIDOR_WIDTH</name>
+        <initializer>= 50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/zigzag_patrol_graph.hpp" line="18" column="1" bodyfile="tools/bots/zigzag_patrol_graph.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_zigzag_patrol_1_1_zigzag_graph_traverser_1a60954c2de1ef507b5923d042c89244f1" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ZigzagPatrol::ZigzagGraphTraverser::corridorWidth_</definition>
+        <argsstring></argsstring>
+        <name>corridorWidth_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/zigzag_patrol_graph.hpp" line="31" column="1" bodyfile="tools/bots/zigzag_patrol_graph.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_zigzag_patrol_1_1_zigzag_graph_traverser_1aaa9269178009a3a28c2fc3bbbfbeb2c9" prot="protected" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 ZigzagPatrol::ZigzagGraphTraverser::sourcePos_</definition>
+        <argsstring></argsstring>
+        <name>sourcePos_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/zigzag_patrol_graph.hpp" line="32" column="1" bodyfile="tools/bots/zigzag_patrol_graph.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_zigzag_patrol_1_1_zigzag_graph_traverser_1a75113a6499375f14063304e1522fa970" prot="protected" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 ZigzagPatrol::ZigzagGraphTraverser::zigzagPos_</definition>
+        <argsstring></argsstring>
+        <name>zigzagPos_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/zigzag_patrol_graph.hpp" line="33" column="1" bodyfile="tools/bots/zigzag_patrol_graph.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_zigzag_patrol_1_1_zigzag_graph_traverser_1a3f59bc001a75185ad5b14a4d4a27a099" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ZigzagPatrol::ZigzagGraphTraverser::ZigzagGraphTraverser</definition>
+        <argsstring>(const Graph &amp;graph, float &amp;speed, Vector3 &amp;startPosition, float corridorWidth=DEFAULT_CORRIDOR_WIDTH)</argsstring>
+        <name>ZigzagGraphTraverser</name>
+        <param>
+          <type>const <ref refid="class_patrol_1_1_graph" kindref="compound">Graph</ref> &amp;</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>speed</declname>
+        </param>
+        <param>
+          <type>Vector3 &amp;</type>
+          <declname>startPosition</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>corridorWidth</declname>
+          <defval>DEFAULT_CORRIDOR_WIDTH</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/zigzag_patrol_graph.hpp" line="20" column="1" bodyfile="tools/bots/zigzag_patrol_graph.cpp" bodystart="20" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zigzag_patrol_1_1_zigzag_graph_traverser_1a259c308f622d59497c28624ab1d6f131" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ZigzagPatrol::ZigzagGraphTraverser::nextStep</definition>
+        <argsstring>(float &amp;speed, float dTime, Vector3 &amp;pos, Direction3D &amp;dir)</argsstring>
+        <name>nextStep</name>
+        <reimplements refid="class_patrol_1_1_graph_traverser_1ae08ed6bcbb434c3111ab69cf01c6edf9">nextStep</reimplements>
+        <param>
+          <type>float &amp;</type>
+          <declname>speed</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dTime</declname>
+        </param>
+        <param>
+          <type>Vector3 &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>Direction3D &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method finds the next point to move to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/zigzag_patrol_graph.hpp" line="23" column="1" bodyfile="tools/bots/zigzag_patrol_graph.cpp" bodystart="82" bodyend="139"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_zigzag_patrol_1_1_zigzag_graph_traverser_1ac2ad933335f6c59f45ee31dd8643cf97" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ZigzagPatrol::ZigzagGraphTraverser::setZigzagPos</definition>
+        <argsstring>(const Vector3 &amp;currPos)</argsstring>
+        <name>setZigzagPos</name>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>currPos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/zigzag_patrol_graph.hpp" line="29" column="1" bodyfile="tools/bots/zigzag_patrol_graph.cpp" bodystart="40" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3226">
+        <label>Patrol::GraphTraverser</label>
+        <link refid="class_patrol_1_1_graph_traverser"/>
+        <childnode refid="3227" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3225">
+        <label>ZigzagPatrol::ZigzagGraphTraverser</label>
+        <link refid="class_zigzag_patrol_1_1_zigzag_graph_traverser"/>
+        <childnode refid="3226" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3227">
+        <label>MovementController</label>
+        <link refid="class_movement_controller"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3229">
+        <label>Patrol::GraphTraverser</label>
+        <link refid="class_patrol_1_1_graph_traverser"/>
+        <childnode refid="3230" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3231" relation="usage">
+          <edgelabel>graph_</edgelabel>
+        </childnode>
+      </node>
+      <node id="3228">
+        <label>ZigzagPatrol::ZigzagGraphTraverser</label>
+        <link refid="class_zigzag_patrol_1_1_zigzag_graph_traverser"/>
+        <childnode refid="3229" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3230">
+        <label>MovementController</label>
+        <link refid="class_movement_controller"/>
+      </node>
+      <node id="3231">
+        <label>Patrol::Graph</label>
+        <link refid="class_patrol_1_1_graph"/>
+      </node>
+    </collaborationgraph>
+    <location file="tools/bots/zigzag_patrol_graph.hpp" line="16" column="1" bodyfile="tools/bots/zigzag_patrol_graph.hpp" bodystart="15" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_zigzag_patrol_1_1_zigzag_graph_traverser_1a60954c2de1ef507b5923d042c89244f1" prot="protected" virt="non-virtual"><scope>ZigzagPatrol::ZigzagGraphTraverser</scope><name>corridorWidth_</name></member>
+      <member refid="class_zigzag_patrol_1_1_zigzag_graph_traverser_1ab73e213c55ee7084f2e390ff2ac8ac90" prot="public" virt="non-virtual"><scope>ZigzagPatrol::ZigzagGraphTraverser</scope><name>DEFAULT_CORRIDOR_WIDTH</name></member>
+      <member refid="class_patrol_1_1_graph_traverser_1ad96ba63b8dc5780e3a24c25d2f365760" prot="protected" virt="non-virtual"><scope>ZigzagPatrol::ZigzagGraphTraverser</scope><name>destinationNode_</name></member>
+      <member refid="class_patrol_1_1_graph_traverser_1adc4a596fc1d727a30c2565366f327504" prot="protected" virt="non-virtual"><scope>ZigzagPatrol::ZigzagGraphTraverser</scope><name>destinationPos_</name></member>
+      <member refid="class_patrol_1_1_graph_traverser_1a31803e185511cc7b79062a6e405dd93e" prot="protected" virt="non-virtual"><scope>ZigzagPatrol::ZigzagGraphTraverser</scope><name>graph_</name></member>
+      <member refid="class_patrol_1_1_graph_traverser_1a91925b1ce75c8c9505d13edeb49c5d72" prot="public" virt="non-virtual"><scope>ZigzagPatrol::ZigzagGraphTraverser</scope><name>GraphTraverser</name></member>
+      <member refid="class_zigzag_patrol_1_1_zigzag_graph_traverser_1a259c308f622d59497c28624ab1d6f131" prot="public" virt="virtual"><scope>ZigzagPatrol::ZigzagGraphTraverser</scope><name>nextStep</name></member>
+      <member refid="class_zigzag_patrol_1_1_zigzag_graph_traverser_1ac2ad933335f6c59f45ee31dd8643cf97" prot="protected" virt="non-virtual"><scope>ZigzagPatrol::ZigzagGraphTraverser</scope><name>setZigzagPos</name></member>
+      <member refid="class_zigzag_patrol_1_1_zigzag_graph_traverser_1aaa9269178009a3a28c2fc3bbbfbeb2c9" prot="protected" virt="non-virtual"><scope>ZigzagPatrol::ZigzagGraphTraverser</scope><name>sourcePos_</name></member>
+      <member refid="class_patrol_1_1_graph_traverser_1abd9c3b07d94a190c71a26025e19e4ed2" prot="protected" virt="non-virtual"><scope>ZigzagPatrol::ZigzagGraphTraverser</scope><name>stayTime_</name></member>
+      <member refid="class_zigzag_patrol_1_1_zigzag_graph_traverser_1a3f59bc001a75185ad5b14a4d4a27a099" prot="public" virt="non-virtual"><scope>ZigzagPatrol::ZigzagGraphTraverser</scope><name>ZigzagGraphTraverser</name></member>
+      <member refid="class_zigzag_patrol_1_1_zigzag_graph_traverser_1a75113a6499375f14063304e1522fa970" prot="protected" virt="non-virtual"><scope>ZigzagPatrol::ZigzagGraphTraverser</scope><name>zigzagPos_</name></member>
+      <member refid="class_movement_controller_1a7d808aa1d9b805fb5691b1b13c4ca5ff" prot="public" virt="virtual"><scope>ZigzagPatrol::ZigzagGraphTraverser</scope><name>~MovementController</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_u_d_p_connection_wrapper" kind="class" language="C++" prot="public">
+    <compoundname>UDPConnectionWrapper</compoundname>
+    <basecompoundref refid="class_connection_wrapper" prot="public" virt="non-virtual">ConnectionWrapper</basecompoundref>
+    <includes refid="udp__connection__wrapper_8hpp" local="no">udp_connection_wrapper.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_u_d_p_connection_wrapper_1aad28afec0c56658839d52aff3e6943ca" prot="private" static="no" mutable="no">
+        <type><ref refid="class_connection_wrapper_mgr" kindref="compound">ConnectionWrapperMgr</ref> &amp;</type>
+        <definition>ConnectionWrapperMgr&amp; UDPConnectionWrapper::connectionWrapperMgr_</definition>
+        <argsstring></argsstring>
+        <name>connectionWrapperMgr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/udp_connection_wrapper.hpp" line="70" column="1" bodyfile="tools/bwmachined/udp_connection_wrapper.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_d_p_connection_wrapper_1a4293019fd13505dcbb6fe7a584f545cf" prot="private" static="no" mutable="no">
+        <type>Endpoint &amp;</type>
+        <definition>Endpoint&amp; UDPConnectionWrapper::inEndpoint_</definition>
+        <argsstring></argsstring>
+        <name>inEndpoint_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/udp_connection_wrapper.hpp" line="71" column="1" bodyfile="tools/bwmachined/udp_connection_wrapper.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_d_p_connection_wrapper_1a8a0bde586ff9ec11e06a48f7c6e62b86" prot="private" static="no" mutable="no">
+        <type>Endpoint &amp;</type>
+        <definition>Endpoint&amp; UDPConnectionWrapper::outEndpoint_</definition>
+        <argsstring></argsstring>
+        <name>outEndpoint_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/udp_connection_wrapper.hpp" line="72" column="1" bodyfile="tools/bwmachined/udp_connection_wrapper.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_d_p_connection_wrapper_1a727e53251299a027645f81703993836e" prot="private" static="no" mutable="no">
+        <type>MemoryOStream</type>
+        <definition>MemoryOStream UDPConnectionWrapper::sendBuffer_</definition>
+        <argsstring></argsstring>
+        <name>sendBuffer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/udp_connection_wrapper.hpp" line="74" column="1" bodyfile="tools/bwmachined/udp_connection_wrapper.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_u_d_p_connection_wrapper_1acefb39c43d5b5c75bc1a259639fd0721" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>UDPConnectionWrapper::UDPConnectionWrapper</definition>
+        <argsstring>(ConnectionWrapperMgr &amp;connectionWrapperMgr, Endpoint &amp;in, Endpoint &amp;out, ConnectionWrapper::ReadHandler *pReadHandler)</argsstring>
+        <name>UDPConnectionWrapper</name>
+        <param>
+          <type><ref refid="class_connection_wrapper_mgr" kindref="compound">ConnectionWrapperMgr</ref> &amp;</type>
+          <declname>connectionWrapperMgr</declname>
+        </param>
+        <param>
+          <type>Endpoint &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>Endpoint &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type><ref refid="class_connection_wrapper_1_1_read_handler" kindref="compound">ConnectionWrapper::ReadHandler</ref> *</type>
+          <declname>pReadHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/udp_connection_wrapper.hpp" line="34" column="1" bodyfile="tools/bwmachined/udp_connection_wrapper.hpp" bodystart="34" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_d_p_connection_wrapper_1a7cc1e956758c5fc4f2a2b844c43f00a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>UDPConnectionWrapper::UDPConnectionWrapper</definition>
+        <argsstring>(ConnectionWrapperMgr &amp;connectionWrapperMgr, Endpoint &amp;endpoint, ConnectionWrapper::ReadHandler *pReadHandler)</argsstring>
+        <name>UDPConnectionWrapper</name>
+        <param>
+          <type><ref refid="class_connection_wrapper_mgr" kindref="compound">ConnectionWrapperMgr</ref> &amp;</type>
+          <declname>connectionWrapperMgr</declname>
+        </param>
+        <param>
+          <type>Endpoint &amp;</type>
+          <declname>endpoint</declname>
+        </param>
+        <param>
+          <type><ref refid="class_connection_wrapper_1_1_read_handler" kindref="compound">ConnectionWrapper::ReadHandler</ref> *</type>
+          <declname>pReadHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/udp_connection_wrapper.hpp" line="44" column="1" bodyfile="tools/bwmachined/udp_connection_wrapper.hpp" bodystart="44" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_d_p_connection_wrapper_1a547fa63cb3d4523ba5da9000dc07c041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ConnectionWrapper::SendStatus</type>
+        <definition>ConnectionWrapper::SendStatus UDPConnectionWrapper::sendBufferedData</definition>
+        <argsstring>()</argsstring>
+        <name>sendBufferedData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override from <ref refid="class_connection_wrapper" kindref="compound">ConnectionWrapper</ref></para><para>For this implementation this method performs the grunt work of sending the data that was prebuffered with a call to send. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/udp_connection_wrapper.hpp" line="54" column="1" bodyfile="tools/bwmachined/udp_connection_wrapper.cpp" bodystart="101" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_d_p_connection_wrapper_1a2eaf8407dba0ef0a394ff11be07dbc15" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>ConnectionWrapper::ReceiveStatus</type>
+        <definition>BW_BEGIN_NAMESPACE ConnectionWrapper::ReceiveStatus UDPConnectionWrapper::recv</definition>
+        <argsstring>()</argsstring>
+        <name>recv</name>
+        <reimplements refid="class_connection_wrapper_1acc58a5b99dea29164f25ec7d81c190f9">recv</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override from <ref refid="class_connection_wrapper" kindref="compound">ConnectionWrapper</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/udp_connection_wrapper.hpp" line="56" column="1" bodyfile="tools/bwmachined/udp_connection_wrapper.cpp" bodystart="13" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_d_p_connection_wrapper_1ae70e3b1cd4441febc6c94fdd8c976144" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>ConnectionWrapper::SendStatus</type>
+        <definition>ConnectionWrapper::SendStatus UDPConnectionWrapper::send</definition>
+        <argsstring>(BinaryIStream &amp;input)</argsstring>
+        <name>send</name>
+        <reimplements refid="class_connection_wrapper_1ab1981d0dc34fe0008a06f9367d72d5d2">send</reimplements>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override from <ref refid="class_connection_wrapper" kindref="compound">ConnectionWrapper</ref></para><para>For this implementation the data is immediately buffered and this object is registered for write with the dispatcher via the connection wrapper manager.</para><para>This registration is to allow the connection manager to go through the appropriate handler creation if necessary (as other connection wrappers may be waiting for this same file descriptor too).</para><para>TODO: BWT-32584 - Consider the possibility of attempting to immediately write without dispatcher registration. If the socket was blocked then it could queue itself with the connection manager. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/udp_connection_wrapper.hpp" line="57" column="1" bodyfile="tools/bwmachined/udp_connection_wrapper.cpp" bodystart="78" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_d_p_connection_wrapper_1a1ad329462cdf64e2db357ce77ac00e60" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool UDPConnectionWrapper::allowOversizedPackets</definition>
+        <argsstring>() const </argsstring>
+        <name>allowOversizedPackets</name>
+        <reimplements refid="class_connection_wrapper_1ac687550868ca61c0017f24cbbb6dd435">allowOversizedPackets</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override from <ref refid="class_connection_wrapper" kindref="compound">ConnectionWrapper</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/udp_connection_wrapper.hpp" line="62" column="1" bodyfile="tools/bwmachined/udp_connection_wrapper.hpp" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_d_p_connection_wrapper_1aa9bdb4bc328f9981897cbd067715691d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>virtual int UDPConnectionWrapper::sendfd</definition>
+        <argsstring>() const </argsstring>
+        <name>sendfd</name>
+        <reimplements refid="class_connection_wrapper_1af2d8fd83bce3b1099d378be9acca50b9">sendfd</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override from <ref refid="class_connection_wrapper" kindref="compound">ConnectionWrapper</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/udp_connection_wrapper.hpp" line="67" column="1" bodyfile="tools/bwmachined/udp_connection_wrapper.hpp" bodystart="67" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>UDP implementation of the abstraction for network receive and reply operations.</para><para>This provides a virtual UDP connection for reply purposes, ie. a reply address at a certain endpoint.</para><para>Endpoints are not owned and not destroyed. Consequently there is no cleanup required, UDPConnectionWrappers simply auto-destruct when all references to the <ref refid="class_smart_pointer" kindref="compound">SmartPointer</ref> are released.</para><para><ref refid="class_u_d_p_connection_wrapper" kindref="compound">UDPConnectionWrapper</ref> can not perform its own dispatcher input handling as it does not control its own endpoint and the endpoint is shared with other UDPConnectionWrappers. Consequently it relies on being given a <ref refid="class_connection_wrapper_mgr" kindref="compound">ConnectionWrapperMgr</ref> for write registration handling. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2981">
+        <label>UDPConnectionWrapper</label>
+        <link refid="class_u_d_p_connection_wrapper"/>
+        <childnode refid="2982" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2983">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="2982">
+        <label>ConnectionWrapper</label>
+        <link refid="class_connection_wrapper"/>
+        <childnode refid="2983" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2987">
+        <label>ConnectionWrapper::ReadHandler</label>
+        <link refid="class_connection_wrapper_1_1_read_handler"/>
+      </node>
+      <node id="2984">
+        <label>UDPConnectionWrapper</label>
+        <link refid="class_u_d_p_connection_wrapper"/>
+        <childnode refid="2985" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2986">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="2985">
+        <label>ConnectionWrapper</label>
+        <link refid="class_connection_wrapper"/>
+        <childnode refid="2986" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2987" relation="usage">
+          <edgelabel>pReadHandler_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/bwmachined/udp_connection_wrapper.hpp" line="32" column="1" bodyfile="tools/bwmachined/udp_connection_wrapper.hpp" bodystart="31" bodyend="75"/>
+    <listofallmembers>
+      <member refid="class_u_d_p_connection_wrapper_1a1ad329462cdf64e2db357ce77ac00e60" prot="public" virt="virtual"><scope>UDPConnectionWrapper</scope><name>allowOversizedPackets</name></member>
+      <member refid="class_connection_wrapper_1a148b9a810bad2b953b18a26a460fb5c6" prot="public" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>ConnectionWrapper</name></member>
+      <member refid="class_connection_wrapper_1ab3834408026d5b58f72b33e60b69dd04" prot="public" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>ConnectionWrapper</name></member>
+      <member refid="class_u_d_p_connection_wrapper_1aad28afec0c56658839d52aff3e6943ca" prot="private" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>connectionWrapperMgr_</name></member>
+      <member refid="class_connection_wrapper_1ae516e3e8d68202075cb99e2d363da95f" prot="public" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>getSocketAddress</name></member>
+      <member refid="class_u_d_p_connection_wrapper_1a4293019fd13505dcbb6fe7a584f545cf" prot="private" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>inEndpoint_</name></member>
+      <member refid="class_connection_wrapper_1a0f18ea193128c62ec31a9776840bf8e9a2ed04db7bb71e673d0be238c2865cb61" prot="public" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>MAX_BUFFER_SIZE</name></member>
+      <member refid="class_connection_wrapper_1ae0d99af2aa3eb5329c0a24db14e4b035" prot="public" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>networkAddr</name></member>
+      <member refid="class_connection_wrapper_1a81e87269c2f2d69a48cc9ffc4d771a07" prot="protected" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>networkAddr_</name></member>
+      <member refid="class_connection_wrapper_1a0d25df1d2592cb158de6b0a1ad8653c5" prot="public" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>networkPort</name></member>
+      <member refid="class_connection_wrapper_1a21bba3bb96b40ccd97e4beee8ca4d9ea" prot="protected" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>networkPort_</name></member>
+      <member refid="class_u_d_p_connection_wrapper_1a8a0bde586ff9ec11e06a48f7c6e62b86" prot="private" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>outEndpoint_</name></member>
+      <member refid="class_connection_wrapper_1aa0aaf803a6acc8cf31aee2ba7f773525" prot="protected" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>pReadHandler_</name></member>
+      <member refid="class_connection_wrapper_1ae00ad8699a9af54be4959386dd931502a5c5c0e1eed380ddab0ee5987c2de71ea" prot="public" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>RECEIVE_DATA_ERROR</name></member>
+      <member refid="class_connection_wrapper_1ae00ad8699a9af54be4959386dd931502a46d6c7a5dca63e4d20531b6ff0c297d9" prot="public" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>RECEIVE_FAILURE</name></member>
+      <member refid="class_connection_wrapper_1ae00ad8699a9af54be4959386dd931502aaaacb0831ad832ab2a4638585c5b2c0c" prot="public" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>RECEIVE_IN_PROGRESS</name></member>
+      <member refid="class_connection_wrapper_1ae00ad8699a9af54be4959386dd931502a4b108c3950121b1cc0b5d73c63d235cd" prot="public" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>RECEIVE_SUCCESS</name></member>
+      <member refid="class_connection_wrapper_1ae00ad8699a9af54be4959386dd931502" prot="public" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>ReceiveStatus</name></member>
+      <member refid="class_u_d_p_connection_wrapper_1a2eaf8407dba0ef0a394ff11be07dbc15" prot="public" virt="virtual"><scope>UDPConnectionWrapper</scope><name>recv</name></member>
+      <member refid="class_u_d_p_connection_wrapper_1ae70e3b1cd4441febc6c94fdd8c976144" prot="public" virt="virtual"><scope>UDPConnectionWrapper</scope><name>send</name></member>
+      <member refid="class_connection_wrapper_1a6ae5b42c2f528732378b4e6bd58b8506ae7f522af6f42ac55d54f8f56d86f9d17" prot="public" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>SEND_FAILURE</name></member>
+      <member refid="class_connection_wrapper_1a6ae5b42c2f528732378b4e6bd58b8506a50a0aca7b72d6d728b9b3244e3c3d8a8" prot="public" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>SEND_IN_PROGRESS</name></member>
+      <member refid="class_connection_wrapper_1a6ae5b42c2f528732378b4e6bd58b8506a5b98951c666199ac68cae12b7bdc8c1c" prot="public" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>SEND_SUCCESS</name></member>
+      <member refid="class_u_d_p_connection_wrapper_1a727e53251299a027645f81703993836e" prot="private" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>sendBuffer_</name></member>
+      <member refid="class_u_d_p_connection_wrapper_1a547fa63cb3d4523ba5da9000dc07c041" prot="public" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>sendBufferedData</name></member>
+      <member refid="class_u_d_p_connection_wrapper_1aa9bdb4bc328f9981897cbd067715691d" prot="public" virt="virtual"><scope>UDPConnectionWrapper</scope><name>sendfd</name></member>
+      <member refid="class_connection_wrapper_1a6ae5b42c2f528732378b4e6bd58b8506" prot="public" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>SendStatus</name></member>
+      <member refid="class_u_d_p_connection_wrapper_1acefb39c43d5b5c75bc1a259639fd0721" prot="public" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>UDPConnectionWrapper</name></member>
+      <member refid="class_u_d_p_connection_wrapper_1a7cc1e956758c5fc4f2a2b844c43f00a3" prot="public" virt="non-virtual"><scope>UDPConnectionWrapper</scope><name>UDPConnectionWrapper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

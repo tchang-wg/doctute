@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_buffered_entity_messages" kind="class" language="C++" prot="public">
+    <compoundname>BufferedEntityMessages</compoundname>
+    <includes refid="buffered__entity__messages_8hpp" local="no">buffered_entity_messages.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_buffered_entity_messages_1a50d9651b9c638576c39e0f03832e297f" prot="private" static="no" mutable="no">
+        <type>BW::list&lt; <ref refid="class_buffered_entity_message" kindref="compound">BufferedEntityMessage</ref> * &gt;</type>
+        <definition>BW::list&lt; BufferedEntityMessage * &gt; BufferedEntityMessages::bufferedMessages_</definition>
+        <argsstring></argsstring>
+        <name>bufferedMessages_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/buffered_entity_messages.hpp" line="44" column="1" bodyfile="cellapp/buffered_entity_messages.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_buffered_entity_messages_1a13b9414ca3e2e8f6a411817757f7498b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BufferedEntityMessages::playBufferedMessages</definition>
+        <argsstring>(CellApp &amp;app)</argsstring>
+        <name>playBufferedMessages</name>
+        <param>
+          <type><ref refid="class_cell_app" kindref="compound">CellApp</ref> &amp;</type>
+          <declname>app</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method plays back any buffered messages. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/buffered_entity_messages.hpp" line="31" column="1" bodyfile="cellapp/buffered_entity_messages.cpp" bodystart="56" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_buffered_entity_messages_1a53f57143e835c573f529655ce8458b7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BufferedEntityMessages::add</definition>
+        <argsstring>(EntityMessageHandler &amp;handler, const Mercury::Address &amp;srcAddr, Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data, EntityID entityID)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="class_entity_message_handler" kindref="compound">EntityMessageHandler</ref> &amp;</type>
+          <declname>handler</declname>
+        </param>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>EntityID</type>
+          <declname>entityID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This adds a message to be handled later. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/buffered_entity_messages.hpp" line="33" column="1" bodyfile="cellapp/buffered_entity_messages.cpp" bodystart="84" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_buffered_entity_messages_1a6067d6165f571bec42d54c5bf46b633e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BufferedEntityMessages::isEmpty</definition>
+        <argsstring>() const </argsstring>
+        <name>isEmpty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/buffered_entity_messages.hpp" line="38" column="1" bodyfile="cellapp/buffered_entity_messages.hpp" bodystart="38" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_buffered_entity_messages_1a67be4bea5b6059f100e6f674e1e7b709" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t BufferedEntityMessages::size</definition>
+        <argsstring>() const </argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/buffered_entity_messages.hpp" line="41" column="1" bodyfile="cellapp/buffered_entity_messages.hpp" bodystart="41" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Objects of this type are used to handle variable length messages destined for a cell. They simply pass all the mercury parameters to the handler function. </para>    </detaileddescription>
+    <location file="cellapp/buffered_entity_messages.hpp" line="29" column="1" bodyfile="cellapp/buffered_entity_messages.hpp" bodystart="28" bodyend="45"/>
+    <listofallmembers>
+      <member refid="class_buffered_entity_messages_1a53f57143e835c573f529655ce8458b7b" prot="public" virt="non-virtual"><scope>BufferedEntityMessages</scope><name>add</name></member>
+      <member refid="class_buffered_entity_messages_1a50d9651b9c638576c39e0f03832e297f" prot="private" virt="non-virtual"><scope>BufferedEntityMessages</scope><name>bufferedMessages_</name></member>
+      <member refid="class_buffered_entity_messages_1a6067d6165f571bec42d54c5bf46b633e" prot="public" virt="non-virtual"><scope>BufferedEntityMessages</scope><name>isEmpty</name></member>
+      <member refid="class_buffered_entity_messages_1a13b9414ca3e2e8f6a411817757f7498b" prot="public" virt="non-virtual"><scope>BufferedEntityMessages</scope><name>playBufferedMessages</name></member>
+      <member refid="class_buffered_entity_messages_1a67be4bea5b6059f100e6f674e1e7b709" prot="public" virt="non-virtual"><scope>BufferedEntityMessages</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

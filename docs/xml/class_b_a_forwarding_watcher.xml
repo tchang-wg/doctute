@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_b_a_forwarding_watcher" kind="class" language="C++" prot="public">
+    <compoundname>BAForwardingWatcher</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ForwardingWatcher</basecompoundref>
+    <includes refid="watcher__forwarding__baseapp_8hpp" local="no">watcher_forwarding_baseapp.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_b_a_forwarding_watcher_1a7e57afc44300b1cbb44275bea5e94982" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ForwardingCollector *</type>
+        <definition>BW_BEGIN_NAMESPACE ForwardingCollector * BAForwardingWatcher::newCollector</definition>
+        <argsstring>(WatcherPathRequestV2 &amp;pathRequest, const BW::string &amp;destWatcher, const BW::string &amp;targetInfo)</argsstring>
+        <name>newCollector</name>
+        <param>
+          <type>WatcherPathRequestV2 &amp;</type>
+          <declname>pathRequest</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>destWatcher</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>targetInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/watcher_forwarding_baseapp.hpp" line="20" column="1" bodyfile="baseappmgr/watcher_forwarding_baseapp.cpp" bodystart="13" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_forwarding_watcher_1aa9608ee29bcaf8e7fb9d7b02cc2ac7ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AddressList *</type>
+        <definition>AddressList * BAForwardingWatcher::getComponentAddressList</definition>
+        <argsstring>(const BW::string &amp;targetInfo)</argsstring>
+        <name>getComponentAddressList</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>targetInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generate a list of <ref refid="class_base_app" kindref="compound">BaseApp(s)</ref> (Component ID, Address pair) as determined by the target information for the forwarding watchers.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>targetInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string describing which component(s) to add to the list.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of AddressPair&apos;s to forward a watcher request to. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/watcher_forwarding_baseapp.hpp" line="25" column="1" bodyfile="baseappmgr/watcher_forwarding_baseapp.cpp" bodystart="53" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_b_a_forwarding_watcher_1afe4eb682bceb22665cdbdcec65cb8c75" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>AddressPair</type>
+        <definition>AddressPair BAForwardingWatcher::addressPair</definition>
+        <argsstring>(const BaseApp &amp;baseApp) const </argsstring>
+        <name>addressPair</name>
+        <param>
+          <type>const <ref refid="class_base_app" kindref="compound">BaseApp</ref> &amp;</type>
+          <declname>baseApp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns an AddressPair for a <ref refid="class_base_app" kindref="compound">BaseApp</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/watcher_forwarding_baseapp.hpp" line="28" column="1" bodyfile="baseappmgr/watcher_forwarding_baseapp.cpp" bodystart="161" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_forwarding_watcher_1a60b7a621b043b387ea61fa9df065c750" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>AddressList *</type>
+        <definition>AddressList * BAForwardingWatcher::listLeastLoaded</definition>
+        <argsstring>(bool useBaseApp, bool useServiceApp) const </argsstring>
+        <name>listLeastLoaded</name>
+        <param>
+          <type>bool</type>
+          <declname>useBaseApp</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>useServiceApp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method lists the least loaded <ref refid="class_base_app" kindref="compound">BaseApp</ref> and/or <ref refid="class_service_app" kindref="compound">ServiceApp</ref>.</para><para><simplesect kind="return"><para>A list containing the least loaded app. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/watcher_forwarding_baseapp.hpp" line="30" column="1" bodyfile="baseappmgr/watcher_forwarding_baseapp.cpp" bodystart="86" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_forwarding_watcher_1a1366dca85b36aa217b99ee6fc6f5f129" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>AddressList *</type>
+        <definition>AddressList * BAForwardingWatcher::listAll</definition>
+        <argsstring>(bool useBaseApp, bool useServiceApp) const </argsstring>
+        <name>listAll</name>
+        <param>
+          <type>bool</type>
+          <declname>useBaseApp</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>useServiceApp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns a list of all BaseApps and/or ServiceApps.</para><para><simplesect kind="return"><para>List of all BaseApps and/or ServiceApps. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/watcher_forwarding_baseapp.hpp" line="31" column="1" bodyfile="baseappmgr/watcher_forwarding_baseapp.cpp" bodystart="132" bodyend="155"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implments a <ref refid="class_base_app_mgr" kindref="compound">BaseAppMgr</ref> specific Forwarding Watcher. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="150">
+        <label>ForwardingWatcher</label>
+      </node>
+      <node id="149">
+        <label>BAForwardingWatcher</label>
+        <link refid="class_b_a_forwarding_watcher"/>
+        <childnode refid="150" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="152">
+        <label>ForwardingWatcher</label>
+      </node>
+      <node id="151">
+        <label>BAForwardingWatcher</label>
+        <link refid="class_b_a_forwarding_watcher"/>
+        <childnode refid="152" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="baseappmgr/watcher_forwarding_baseapp.hpp" line="18" column="1" bodyfile="baseappmgr/watcher_forwarding_baseapp.hpp" bodystart="17" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_b_a_forwarding_watcher_1afe4eb682bceb22665cdbdcec65cb8c75" prot="private" virt="non-virtual"><scope>BAForwardingWatcher</scope><name>addressPair</name></member>
+      <member refid="class_b_a_forwarding_watcher_1aa9608ee29bcaf8e7fb9d7b02cc2ac7ad" prot="public" virt="non-virtual"><scope>BAForwardingWatcher</scope><name>getComponentAddressList</name></member>
+      <member refid="class_b_a_forwarding_watcher_1a1366dca85b36aa217b99ee6fc6f5f129" prot="private" virt="non-virtual"><scope>BAForwardingWatcher</scope><name>listAll</name></member>
+      <member refid="class_b_a_forwarding_watcher_1a60b7a621b043b387ea61fa9df065c750" prot="private" virt="non-virtual"><scope>BAForwardingWatcher</scope><name>listLeastLoaded</name></member>
+      <member refid="class_b_a_forwarding_watcher_1a7e57afc44300b1cbb44275bea5e94982" prot="public" virt="non-virtual"><scope>BAForwardingWatcher</scope><name>newCollector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,455 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_mongo_d_b_1_1_user_log_writer" kind="class" language="C++" prot="public">
+    <compoundname>MongoDB::UserLogWriter</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">SafeReferenceCount</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_user_log_writer_1a23a1f555c8d4906af6cfa165601ad443" prot="private" static="no" mutable="no">
+        <type><ref refid="class_mongo_d_b_1_1_connection_thread_data" kindref="compound">ConnectionThreadData</ref> &amp;</type>
+        <definition>ConnectionThreadData&amp; MongoDB::UserLogWriter::connectionData_</definition>
+        <argsstring></argsstring>
+        <name>connectionData_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="55" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_user_log_writer_1a29093b7be7eb2f72e330bf04c5676b4f" prot="private" static="no" mutable="no">
+        <type>MessageLogger::UID</type>
+        <definition>MessageLogger::UID MongoDB::UserLogWriter::uid_</definition>
+        <argsstring></argsstring>
+        <name>uid_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="57" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_user_log_writer_1ad118c9c3b63d46aa2c465dff26a01795" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string MongoDB::UserLogWriter::userName_</definition>
+        <argsstring></argsstring>
+        <name>userName_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="58" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_user_log_writer_1a21371f71610f3ad74ec9bc81efa5399f" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string MongoDB::UserLogWriter::dbName_</definition>
+        <argsstring></argsstring>
+        <name>dbName_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="59" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_user_log_writer_1ae2a6c4cf22e542a8ff82628c349579af" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string MongoDB::UserLogWriter::activeCollName_</definition>
+        <argsstring></argsstring>
+        <name>activeCollName_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="60" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1a7d569029f411706157868bc0e9d53d53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>UserLogWriter::UserLogWriter</definition>
+        <argsstring>(ConnectionThreadData &amp;connectionData, MessageLogger::UID uid, const BW::string &amp;userName, const BW::string &amp;loggerID_)</argsstring>
+        <name>UserLogWriter</name>
+        <param>
+          <type><ref refid="class_mongo_d_b_1_1_connection_thread_data" kindref="compound">ConnectionThreadData</ref> &amp;</type>
+          <declname>connectionData</declname>
+        </param>
+        <param>
+          <type>MessageLogger::UID</type>
+          <declname>uid</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>userName</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>loggerID_</declname>
+          <defname>loggerID</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. Initialize user database if it&apos;s a new user. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="25" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="26" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1a0b694deb9c0341730778917f2c57c3cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLogWriter::initDB</definition>
+        <argsstring>()</argsstring>
+        <name>initDB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize user log database, including: initialise the uid collection, server startup collection and shard the database if connecting to a MongoDB cluster. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="29" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="44" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1af871d3da22bf7529f7e62f235254713b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLogWriter::flush</definition>
+        <argsstring>(BSONObjBuffer &amp;logBuffer)</argsstring>
+        <name>flush</name>
+        <param>
+          <type>BSONObjBuffer &amp;</type>
+          <declname>logBuffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write a batch of logs to the database. Caller is in responsible for managing the logBuffer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="30" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="106" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1a0f557c700055744c132546696d97326e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLogWriter::writeComponent</definition>
+        <argsstring>(mongo::BSONObj &amp;obj)</argsstring>
+        <name>writeComponent</name>
+        <param>
+          <type>mongo::BSONObj &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write component info to the database. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="31" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="166" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1a25ce6a46cdd8769fc08901862629c672" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLogWriter::onServerStart</definition>
+        <argsstring>(uint64 timestamp)</argsstring>
+        <name>onServerStart</name>
+        <param>
+          <type>uint64</type>
+          <declname>timestamp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when server start message detected. Write one startup record to db </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="32" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="255" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1ae68331cbe21b0693371a3643829bd950" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLogWriter::rollAndPurge</definition>
+        <argsstring>(uint64 seconds)</argsstring>
+        <name>rollAndPurge</name>
+        <param>
+          <type>uint64</type>
+          <declname>seconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Roll up current active collection and purge expired log collections. Log collections whose last entry is older than seconds will be seen as expired. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="34" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="304" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1ad865c109696a906aa57f2a42d204012f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLogWriter::purgeExpiredColls</definition>
+        <argsstring>(uint64 seconds)</argsstring>
+        <name>purgeExpiredColls</name>
+        <param>
+          <type>uint64</type>
+          <declname>seconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Purge expired log collections. Log collections whose last entry is older than seconds will be seen as expired. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="35" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="319" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1a61aee8c95e9e125344af9fe93c992c2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const BW::string &amp;</type>
+        <definition>const BW::string&amp; MongoDB::UserLogWriter::getUserName</definition>
+        <argsstring>()</argsstring>
+        <name>getUserName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="37" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.hpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1a638a651bb03a6653f13fa6e28f10baf9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const BW::string &amp;</type>
+        <definition>const BW::string&amp; MongoDB::UserLogWriter::getUserDBName</definition>
+        <argsstring>()</argsstring>
+        <name>getUserDBName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="38" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.hpp" bodystart="38" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1a9899fffef10d0a53d9c454700e8034d3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLogWriter::initUIDCollection</definition>
+        <argsstring>()</argsstring>
+        <name>initUIDCollection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize the UID collection of this user&apos;s database Exceptions raised by MongoDB should be handled by caller. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="40" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="379" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1a4a3ffdb5cf79ba4019e0e82a56393dd7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLogWriter::initServerStartsColl</definition>
+        <argsstring>()</argsstring>
+        <name>initServerStartsColl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create the server start ups collection for the user database. Limit the total size of it by creating it as Capped Collection.</para><para>Exceptions raised by MongoDB should be handled by caller. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="41" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="417" bodyend="435"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1a4467509d2e351932dee473b5104db8d3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLogWriter::initComponentsColl</definition>
+        <argsstring>()</argsstring>
+        <name>initComponentsColl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create the components collection for the user database.</para><para>Exceptions raised by MongoDB should be handled by caller. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="42" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="443" bodyend="456"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1af063633d6a8a0db85f6eae9a94e119c0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLogWriter::shardDatabase</definition>
+        <argsstring>()</argsstring>
+        <name>shardDatabase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable the sharding of a database. In MongoDB, to shard a collection, the parent database should be sharded as well. This should only be called when Message <ref refid="class_logger" kindref="compound">Logger</ref> is connecting to a MongoDB cluster.</para><para>Exceptions raised by MongoDB should be handled by caller. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="43" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="466" bodyend="486"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1a66a1d8ec1e02e8d984029177c2fed41d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLogWriter::initActiveColl</definition>
+        <argsstring>()</argsstring>
+        <name>initActiveColl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new collection and use it as active collection. New logs after this will be inserted into this active collection. Enable sharding of the new collection if Message <ref refid="class_logger" kindref="compound">Logger</ref> is connected with a MongoDB cluster. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="45" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="495" bodyend="583"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1a55ea3f34511eb621a4725bcf35e793d9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLogWriter::createLogIndex</definition>
+        <argsstring>(const BW::string &amp;logCollNamespace)</argsstring>
+        <name>createLogIndex</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>logCollNamespace</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create index on user&apos;s log collection. This serves two purposes:<orderedlist>
+<listitem><para>Maintain the insertion order in query result</para></listitem><listitem><para>Limit the log scan range of query </para></listitem></orderedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="46" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="591" bodyend="599"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1a90bed9399f553d45099d307c2282db91" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BW::string</type>
+        <definition>BW::string UserLogWriter::getNewCollName</definition>
+        <argsstring>()</argsstring>
+        <name>getNewCollName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get new collection name, in the form entries_&lt;timestamp&gt;. The timestamp is in the form YYYYMMDDHHMMSS of current UTC time, like entries_20140820101400 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="47" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="606" bodyend="613"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1aa8cbe8c6676b594568a8ae2bb2a40c30" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BW::string</type>
+        <definition>BW::string UserLogWriter::getTimeStampSuffix</definition>
+        <argsstring>()</argsstring>
+        <name>getTimeStampSuffix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the timestamp suffix based on current time and in the form YYYYMMDDHHMMSS of UTC time, like entries_20140820101400 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="48" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="620" bodyend="633"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1a39633aacbb76696de0c3e4abe8f24288" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLogWriter::getCollList</definition>
+        <argsstring>(CollList &amp;collList)</argsstring>
+        <name>getCollList</name>
+        <param>
+          <type>CollList &amp;</type>
+          <declname>collList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the collections of this user log database </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="50" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="639" bodyend="650"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1aec4f36213d501e3b29315417445a1c18" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLogWriter::isCollectionExpired</definition>
+        <argsstring>(const BW::string &amp;collNS, const BW::string &amp;timeSuffix, uint64 seconds)</argsstring>
+        <name>isCollectionExpired</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>collNS</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>timeSuffix</declname>
+        </param>
+        <param>
+          <type>uint64</type>
+          <declname>seconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if the given collection is expired by checking if its last record is older than seconds. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="51" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="657" bodyend="747"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_user_log_writer_1a2521fca97e9535a082f5b40bcc807caa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserLogWriter::dropCollection</definition>
+        <argsstring>(const BW::string &amp;collNS)</argsstring>
+        <name>dropCollection</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>collNS</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Drop the collection from database </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="53" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.cpp" bodystart="753" bodyend="791"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3078">
+        <label>SafeReferenceCount</label>
+      </node>
+      <node id="3077">
+        <label>MongoDB::UserLogWriter</label>
+        <link refid="class_mongo_d_b_1_1_user_log_writer"/>
+        <childnode refid="3078" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3080">
+        <label>SafeReferenceCount</label>
+      </node>
+      <node id="3079">
+        <label>MongoDB::UserLogWriter</label>
+        <link refid="class_mongo_d_b_1_1_user_log_writer"/>
+        <childnode refid="3080" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/message_logger/mongodb/user_log_writer.hpp" line="23" column="1" bodyfile="tools/message_logger/mongodb/user_log_writer.hpp" bodystart="22" bodyend="61"/>
+    <listofallmembers>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1ae2a6c4cf22e542a8ff82628c349579af" prot="private" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>activeCollName_</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1a23a1f555c8d4906af6cfa165601ad443" prot="private" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>connectionData_</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1a55ea3f34511eb621a4725bcf35e793d9" prot="private" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>createLogIndex</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1a21371f71610f3ad74ec9bc81efa5399f" prot="private" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>dbName_</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1a2521fca97e9535a082f5b40bcc807caa" prot="private" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>dropCollection</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1af871d3da22bf7529f7e62f235254713b" prot="public" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>flush</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1a39633aacbb76696de0c3e4abe8f24288" prot="private" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>getCollList</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1a90bed9399f553d45099d307c2282db91" prot="private" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>getNewCollName</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1aa8cbe8c6676b594568a8ae2bb2a40c30" prot="private" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>getTimeStampSuffix</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1a638a651bb03a6653f13fa6e28f10baf9" prot="public" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>getUserDBName</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1a61aee8c95e9e125344af9fe93c992c2e" prot="public" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>getUserName</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1a66a1d8ec1e02e8d984029177c2fed41d" prot="private" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>initActiveColl</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1a4467509d2e351932dee473b5104db8d3" prot="private" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>initComponentsColl</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1a0b694deb9c0341730778917f2c57c3cb" prot="public" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>initDB</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1a4a3ffdb5cf79ba4019e0e82a56393dd7" prot="private" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>initServerStartsColl</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1a9899fffef10d0a53d9c454700e8034d3" prot="private" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>initUIDCollection</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1aec4f36213d501e3b29315417445a1c18" prot="private" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>isCollectionExpired</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1a25ce6a46cdd8769fc08901862629c672" prot="public" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>onServerStart</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1ad865c109696a906aa57f2a42d204012f" prot="public" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>purgeExpiredColls</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1ae68331cbe21b0693371a3643829bd950" prot="public" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>rollAndPurge</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1af063633d6a8a0db85f6eae9a94e119c0" prot="private" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>shardDatabase</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1a29093b7be7eb2f72e330bf04c5676b4f" prot="private" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>uid_</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1a7d569029f411706157868bc0e9d53d53" prot="public" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>UserLogWriter</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1ad118c9c3b63d46aa2c465dff26a01795" prot="private" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>userName_</name></member>
+      <member refid="class_mongo_d_b_1_1_user_log_writer_1a0f557c700055744c132546696d97326e" prot="public" virt="non-virtual"><scope>MongoDB::UserLogWriter</scope><name>writeComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

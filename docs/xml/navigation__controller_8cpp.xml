@@ -1,0 +1,1130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="navigation__controller_8cpp" kind="file" language="C++">
+    <compoundname>navigation_controller.cpp</compoundname>
+    <includes local="yes">script/first_include.hpp</includes>
+    <includes refid="navigation__controller_8hpp" local="yes">navigation_controller.hpp</includes>
+    <includes refid="navmesh__navigation__system_8hpp" local="yes">navmesh_navigation_system.hpp</includes>
+    <includes refid="cellapp_2entity_8hpp" local="yes">entity.hpp</includes>
+    <includes refid="cell_8hpp" local="yes">cell.hpp</includes>
+    <includes refid="cellapp_8hpp" local="yes">cellapp.hpp</includes>
+    <includes refid="cellapp__config_8hpp" local="yes">cellapp_config.hpp</includes>
+    <includes refid="real__entity_8hpp" local="yes">real_entity.hpp</includes>
+    <includes refid="entity__navigate_8hpp" local="yes">entity_navigate.hpp</includes>
+    <includes refid="profile_8hpp" local="yes">profile.hpp</includes>
+    <incdepgraph>
+      <node id="10033">
+        <label>cstdmf/shared_ptr.hpp</label>
+      </node>
+      <node id="10046">
+        <label>real_entity.hpp</label>
+        <link refid="real__entity_8hpp_source"/>
+        <childnode refid="9967" relation="include">
+        </childnode>
+        <childnode refid="9975" relation="include">
+        </childnode>
+        <childnode refid="10047" relation="include">
+        </childnode>
+        <childnode refid="9960" relation="include">
+        </childnode>
+        <childnode refid="10048" relation="include">
+        </childnode>
+        <childnode refid="9981" relation="include">
+        </childnode>
+        <childnode refid="9988" relation="include">
+        </childnode>
+        <childnode refid="10051" relation="include">
+        </childnode>
+        <childnode refid="9968" relation="include">
+        </childnode>
+        <childnode refid="9973" relation="include">
+        </childnode>
+        <childnode refid="10052" relation="include">
+        </childnode>
+        <childnode refid="9974" relation="include">
+        </childnode>
+        <childnode refid="10053" relation="include">
+        </childnode>
+        <childnode refid="10054" relation="include">
+        </childnode>
+        <childnode refid="10055" relation="include">
+        </childnode>
+      </node>
+      <node id="10011">
+        <label>math/rectt.hpp</label>
+      </node>
+      <node id="10018">
+        <label>functional</label>
+      </node>
+      <node id="10034">
+        <label>cstdmf/singleton.hpp</label>
+      </node>
+      <node id="10001">
+        <label>entitydef_script/entity_method.hpp</label>
+      </node>
+      <node id="10041">
+        <label>py_spaces.hpp</label>
+        <link refid="cellapp_2py__spaces_8hpp_source"/>
+        <childnode refid="9974" relation="include">
+        </childnode>
+        <childnode refid="10042" relation="include">
+        </childnode>
+        <childnode refid="10043" relation="include">
+        </childnode>
+      </node>
+      <node id="9991">
+        <label>network/misc.hpp</label>
+      </node>
+      <node id="9995">
+        <label>cstdmf/memory_stream.hpp</label>
+      </node>
+      <node id="10058">
+        <label>chunk/base_chunk_space.hpp</label>
+      </node>
+      <node id="9967">
+        <label>build/bwapi.hpp</label>
+      </node>
+      <node id="10031">
+        <label>chunk_loading/geometry_mapper.hpp</label>
+      </node>
+      <node id="9976">
+        <label>entitydef/volatile_info.hpp</label>
+      </node>
+      <node id="10023">
+        <label>cstdmf/stdmf.hpp</label>
+      </node>
+      <node id="9958">
+        <label>script/first_include.hpp</label>
+      </node>
+      <node id="10040">
+        <label>type_system/context.hpp</label>
+      </node>
+      <node id="9965">
+        <label>script/script_object.hpp</label>
+      </node>
+      <node id="10042">
+        <label>script/py_script_object.hpp</label>
+      </node>
+      <node id="10008">
+        <label>cell.hpp</label>
+        <link refid="cell_8hpp_source"/>
+        <childnode refid="9967" relation="include">
+        </childnode>
+        <childnode refid="9975" relation="include">
+        </childnode>
+        <childnode refid="10009" relation="include">
+        </childnode>
+        <childnode refid="10012" relation="include">
+        </childnode>
+        <childnode refid="9982" relation="include">
+        </childnode>
+        <childnode refid="9971" relation="include">
+        </childnode>
+        <childnode refid="9995" relation="include">
+        </childnode>
+        <childnode refid="9964" relation="include">
+        </childnode>
+        <childnode refid="10013" relation="include">
+        </childnode>
+        <childnode refid="10014" relation="include">
+        </childnode>
+        <childnode refid="10015" relation="include">
+        </childnode>
+        <childnode refid="9979" relation="include">
+        </childnode>
+        <childnode refid="10016" relation="include">
+        </childnode>
+        <childnode refid="10017" relation="include">
+        </childnode>
+        <childnode refid="10018" relation="include">
+        </childnode>
+      </node>
+      <node id="9975">
+        <label>cellapp_interface.hpp</label>
+        <link refid="cellapp__interface_8hpp_source"/>
+        <childnode refid="9976" relation="include">
+        </childnode>
+        <childnode refid="9977" relation="include">
+        </childnode>
+        <childnode refid="9978" relation="include">
+        </childnode>
+        <childnode refid="9979" relation="include">
+        </childnode>
+        <childnode refid="9980" relation="include">
+        </childnode>
+      </node>
+      <node id="9983">
+        <label>cstdmf/stringmap.hpp</label>
+      </node>
+      <node id="9963">
+        <label>cstdmf/binary_stream.hpp</label>
+      </node>
+      <node id="10009">
+        <label>cell_info.hpp</label>
+        <link refid="cell__info_8hpp_source"/>
+        <childnode refid="10010" relation="include">
+        </childnode>
+        <childnode refid="9964" relation="include">
+        </childnode>
+        <childnode refid="9962" relation="include">
+        </childnode>
+      </node>
+      <node id="10045">
+        <label>server/entity_app_config.hpp</label>
+      </node>
+      <node id="10051">
+        <label>mailbox.hpp</label>
+        <link refid="cellapp_2mailbox_8hpp_source"/>
+        <childnode refid="9984" relation="include">
+        </childnode>
+        <childnode refid="9997" relation="include">
+        </childnode>
+        <childnode refid="10052" relation="include">
+        </childnode>
+        <childnode refid="9974" relation="include">
+        </childnode>
+        <childnode refid="10003" relation="include">
+        </childnode>
+        <childnode refid="10004" relation="include">
+        </childnode>
+        <childnode refid="9981" relation="include">
+        </childnode>
+      </node>
+      <node id="9979">
+        <label>server/common.hpp</label>
+      </node>
+      <node id="9966">
+        <label>cstdmf/md5.hpp</label>
+      </node>
+      <node id="10053">
+        <label>server/auto_backup_and_archive.hpp</label>
+      </node>
+      <node id="10036">
+        <label>pyscript/pickler.hpp</label>
+      </node>
+      <node id="10000">
+        <label>entitydef/py_volatile_info.hpp</label>
+      </node>
+      <node id="9993">
+        <label>entity_callback_buffer.hpp</label>
+        <link refid="entity__callback__buffer_8hpp_source"/>
+        <childnode refid="9994" relation="include">
+        </childnode>
+        <childnode refid="9971" relation="include">
+        </childnode>
+        <childnode refid="9965" relation="include">
+        </childnode>
+      </node>
+      <node id="10012">
+        <label>cell_profiler.hpp</label>
+        <link refid="cell__profiler_8hpp_source"/>
+        <childnode refid="10005" relation="include">
+        </childnode>
+      </node>
+      <node id="10054">
+        <label>server/util.hpp</label>
+      </node>
+      <node id="9964">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="10003">
+        <label>pyscript/script.hpp</label>
+      </node>
+      <node id="9989">
+        <label>entitydef/data_description.hpp</label>
+      </node>
+      <node id="9982">
+        <label>cstdmf/bw_string.hpp</label>
+      </node>
+      <node id="10014">
+        <label>math/vector2.hpp</label>
+      </node>
+      <node id="9981">
+        <label>entity_type.hpp</label>
+        <link refid="cellapp_2entity__type_8hpp_source"/>
+        <childnode refid="9961" relation="include">
+        </childnode>
+        <childnode refid="9982" relation="include">
+        </childnode>
+        <childnode refid="9983" relation="include">
+        </childnode>
+        <childnode refid="9984" relation="include">
+        </childnode>
+        <childnode refid="9985" relation="include">
+        </childnode>
+        <childnode refid="9986" relation="include">
+        </childnode>
+        <childnode refid="9962" relation="include">
+        </childnode>
+        <childnode refid="9987" relation="include">
+        </childnode>
+        <childnode refid="9967" relation="include">
+        </childnode>
+      </node>
+      <node id="10052">
+        <label>network/udp_channel.hpp</label>
+      </node>
+      <node id="10048">
+        <label>entity_cache.hpp</label>
+        <link refid="entity__cache_8hpp_source"/>
+        <childnode refid="10049" relation="include">
+        </childnode>
+        <childnode refid="9963" relation="include">
+        </childnode>
+        <childnode refid="9978" relation="include">
+        </childnode>
+        <childnode refid="9964" relation="include">
+        </childnode>
+        <childnode refid="9973" relation="include">
+        </childnode>
+        <childnode refid="10044" relation="include">
+        </childnode>
+        <childnode refid="10050" relation="include">
+        </childnode>
+        <childnode refid="10006" relation="include">
+        </childnode>
+      </node>
+      <node id="10037">
+        <label>server/entity_app.hpp</label>
+      </node>
+      <node id="9968">
+        <label>server/updatable.hpp</label>
+      </node>
+      <node id="9996">
+        <label>cstdmf/time_queue.hpp</label>
+      </node>
+      <node id="9998">
+        <label>entitydef/property_event_stamps.hpp</label>
+      </node>
+      <node id="10050">
+        <label>limits.h</label>
+      </node>
+      <node id="10015">
+        <label>math/vector3.hpp</label>
+      </node>
+      <node id="10002">
+        <label>physics2/worldtri.hpp</label>
+      </node>
+      <node id="10007">
+        <label>cstdmf/bw_map.hpp</label>
+      </node>
+      <node id="10006">
+        <label>cstdmf/bw_set.hpp</label>
+      </node>
+      <node id="9974">
+        <label>pyscript/pyobject_plus.hpp</label>
+      </node>
+      <node id="10024">
+        <label>cstdmf/watcher.hpp</label>
+      </node>
+      <node id="10021">
+        <label>cstdmf/safe_static.hpp</label>
+      </node>
+      <node id="10028">
+        <label>emergency_throttle.hpp</label>
+        <link refid="emergency__throttle_8hpp_source"/>
+        <childnode refid="9964" relation="include">
+        </childnode>
+      </node>
+      <node id="10005">
+        <label>server/entity_profiler.hpp</label>
+      </node>
+      <node id="9961">
+        <label>Python.h</label>
+      </node>
+      <node id="9988">
+        <label>history_event.hpp</label>
+        <link refid="history__event_8hpp_source"/>
+        <childnode refid="9989" relation="include">
+        </childnode>
+        <childnode refid="9962" relation="include">
+        </childnode>
+        <childnode refid="9990" relation="include">
+        </childnode>
+        <childnode refid="9991" relation="include">
+        </childnode>
+        <childnode refid="9992" relation="include">
+        </childnode>
+        <childnode refid="9963" relation="include">
+        </childnode>
+      </node>
+      <node id="9992">
+        <label>cstdmf/bw_list.hpp</label>
+      </node>
+      <node id="10019">
+        <label>cellapp.hpp</label>
+        <link refid="cellapp_8hpp_source"/>
+        <childnode refid="9961" relation="include">
+        </childnode>
+        <childnode refid="9967" relation="include">
+        </childnode>
+        <childnode refid="10020" relation="include">
+        </childnode>
+        <childnode refid="9975" relation="include">
+        </childnode>
+        <childnode refid="10022" relation="include">
+        </childnode>
+        <childnode refid="10027" relation="include">
+        </childnode>
+        <childnode refid="10028" relation="include">
+        </childnode>
+        <childnode refid="10029" relation="include">
+        </childnode>
+        <childnode refid="10031" relation="include">
+        </childnode>
+        <childnode refid="10032" relation="include">
+        </childnode>
+        <childnode refid="9995" relation="include">
+        </childnode>
+        <childnode refid="10033" relation="include">
+        </childnode>
+        <childnode refid="10034" relation="include">
+        </childnode>
+        <childnode refid="9983" relation="include">
+        </childnode>
+        <childnode refid="10035" relation="include">
+        </childnode>
+        <childnode refid="10036" relation="include">
+        </childnode>
+        <childnode refid="9979" relation="include">
+        </childnode>
+        <childnode refid="10037" relation="include">
+        </childnode>
+        <childnode refid="10038" relation="include">
+        </childnode>
+        <childnode refid="10039" relation="include">
+        </childnode>
+        <childnode refid="9965" relation="include">
+        </childnode>
+        <childnode refid="10040" relation="include">
+        </childnode>
+        <childnode refid="10041" relation="include">
+        </childnode>
+      </node>
+      <node id="9999">
+        <label>entitydef/property_owner.hpp</label>
+      </node>
+      <node id="10035">
+        <label>entitydef/entity_description_map.hpp</label>
+      </node>
+      <node id="9960">
+        <label>controller.hpp</label>
+        <link refid="controller_8hpp_source"/>
+        <childnode refid="9961" relation="include">
+        </childnode>
+        <childnode refid="9962" relation="include">
+        </childnode>
+        <childnode refid="9963" relation="include">
+        </childnode>
+        <childnode refid="9964" relation="include">
+        </childnode>
+        <childnode refid="9965" relation="include">
+        </childnode>
+        <childnode refid="9966" relation="include">
+        </childnode>
+        <childnode refid="9967" relation="include">
+        </childnode>
+      </node>
+      <node id="10026">
+        <label>server/manager_app_gateway.hpp</label>
+      </node>
+      <node id="9987">
+        <label>server/entity_type_profiler.hpp</label>
+      </node>
+      <node id="9986">
+        <label>delegate_interface/entity_delegate.hpp</label>
+      </node>
+      <node id="10020">
+        <label>cellapp_death_listener.hpp</label>
+        <link refid="cellapp__death__listener_8hpp_source"/>
+        <childnode refid="9962" relation="include">
+        </childnode>
+        <childnode refid="9992" relation="include">
+        </childnode>
+        <childnode refid="10021" relation="include">
+        </childnode>
+      </node>
+      <node id="9970">
+        <label>waypoint/navloc.hpp</label>
+      </node>
+      <node id="10038">
+        <label>server/id_client.hpp</label>
+      </node>
+      <node id="9985">
+        <label>entitydef/method_description.hpp</label>
+      </node>
+      <node id="10013">
+        <label>math/math_extra.hpp</label>
+      </node>
+      <node id="10055">
+        <label>math.h</label>
+      </node>
+      <node id="9959">
+        <label>navigation_controller.hpp</label>
+        <link refid="navigation__controller_8hpp_source"/>
+        <childnode refid="9960" relation="include">
+        </childnode>
+        <childnode refid="9962" relation="include">
+        </childnode>
+        <childnode refid="9968" relation="include">
+        </childnode>
+        <childnode refid="9969" relation="include">
+        </childnode>
+        <childnode refid="9970" relation="include">
+        </childnode>
+        <childnode refid="9971" relation="include">
+        </childnode>
+      </node>
+      <node id="9962">
+        <label>network/basictypes.hpp</label>
+      </node>
+      <node id="10032">
+        <label>chunk_loading/preloaded_chunk_space.hpp</label>
+      </node>
+      <node id="9980">
+        <label>server/anonymous_channel_client.hpp</label>
+      </node>
+      <node id="10049">
+        <label>aoi_update_schemes.hpp</label>
+        <link refid="aoi__update__schemes_8hpp_source"/>
+        <childnode refid="10023" relation="include">
+        </childnode>
+        <childnode refid="10007" relation="include">
+        </childnode>
+        <childnode refid="9982" relation="include">
+        </childnode>
+      </node>
+      <node id="10017">
+        <label>deque</label>
+      </node>
+      <node id="10047">
+        <label>cell_app_channel.hpp</label>
+        <link refid="cell__app__channel_8hpp_source"/>
+        <childnode refid="10025" relation="include">
+        </childnode>
+      </node>
+      <node id="9984">
+        <label>entitydef/entity_description.hpp</label>
+      </node>
+      <node id="9978">
+        <label>network/msgtypes.hpp</label>
+      </node>
+      <node id="9994">
+        <label>cstdmf/bw_namespace.hpp</label>
+      </node>
+      <node id="9969">
+        <label>waypoint/navigator.hpp</label>
+      </node>
+      <node id="10022">
+        <label>cellappmgr_gateway.hpp</label>
+        <link refid="cellappmgr__gateway_8hpp_source"/>
+        <childnode refid="10023" relation="include">
+        </childnode>
+        <childnode refid="10024" relation="include">
+        </childnode>
+        <childnode refid="9962" relation="include">
+        </childnode>
+        <childnode refid="10025" relation="include">
+        </childnode>
+        <childnode refid="9991" relation="include">
+        </childnode>
+        <childnode refid="9979" relation="include">
+        </childnode>
+        <childnode refid="10026" relation="include">
+        </childnode>
+        <childnode refid="9966" relation="include">
+        </childnode>
+      </node>
+      <node id="10044">
+        <label>cellapp_config.hpp</label>
+        <link refid="cellapp__config_8hpp_source"/>
+        <childnode refid="10045" relation="include">
+        </childnode>
+      </node>
+      <node id="9972">
+        <label>navmesh_navigation_system.hpp</label>
+        <link refid="navmesh__navigation__system_8hpp_source"/>
+        <childnode refid="9961" relation="include">
+        </childnode>
+        <childnode refid="9959" relation="include">
+        </childnode>
+        <childnode refid="9969" relation="include">
+        </childnode>
+        <childnode refid="9970" relation="include">
+        </childnode>
+      </node>
+      <node id="10004">
+        <label>server/backup_hash.hpp</label>
+      </node>
+      <node id="10057">
+        <label>entity_extra.hpp</label>
+        <link refid="entity__extra_8hpp_source"/>
+        <childnode refid="9973" relation="include">
+        </childnode>
+      </node>
+      <node id="10027">
+        <label>cells.hpp</label>
+        <link refid="cells_8hpp_source"/>
+        <childnode refid="10024" relation="include">
+        </childnode>
+        <childnode refid="9962" relation="include">
+        </childnode>
+        <childnode refid="10007" relation="include">
+        </childnode>
+      </node>
+      <node id="10039">
+        <label>server/py_services_map.hpp</label>
+      </node>
+      <node id="9971">
+        <label>cstdmf/bw_vector.hpp</label>
+      </node>
+      <node id="9977">
+        <label>network/common_interface_macros.hpp</label>
+      </node>
+      <node id="10029">
+        <label>profile.hpp</label>
+        <link refid="profile_8hpp_source"/>
+        <childnode refid="10030" relation="include">
+        </childnode>
+      </node>
+      <node id="10016">
+        <label>algorithm</label>
+      </node>
+      <node id="9973">
+        <label>entity.hpp</label>
+        <link refid="cellapp_2entity_8hpp_source"/>
+        <childnode refid="9961" relation="include">
+        </childnode>
+        <childnode refid="9974" relation="include">
+        </childnode>
+        <childnode refid="9967" relation="include">
+        </childnode>
+        <childnode refid="9975" relation="include">
+        </childnode>
+        <childnode refid="9960" relation="include">
+        </childnode>
+        <childnode refid="9981" relation="include">
+        </childnode>
+        <childnode refid="9988" relation="include">
+        </childnode>
+        <childnode refid="9993" relation="include">
+        </childnode>
+        <childnode refid="9995" relation="include">
+        </childnode>
+        <childnode refid="9996" relation="include">
+        </childnode>
+        <childnode refid="9997" relation="include">
+        </childnode>
+        <childnode refid="9998" relation="include">
+        </childnode>
+        <childnode refid="9999" relation="include">
+        </childnode>
+        <childnode refid="10000" relation="include">
+        </childnode>
+        <childnode refid="10001" relation="include">
+        </childnode>
+        <childnode refid="9986" relation="include">
+        </childnode>
+        <childnode refid="10002" relation="include">
+        </childnode>
+        <childnode refid="10003" relation="include">
+        </childnode>
+        <childnode refid="10004" relation="include">
+        </childnode>
+        <childnode refid="10005" relation="include">
+        </childnode>
+        <childnode refid="10006" relation="include">
+        </childnode>
+        <childnode refid="9971" relation="include">
+        </childnode>
+        <childnode refid="10007" relation="include">
+        </childnode>
+      </node>
+      <node id="10056">
+        <label>entity_navigate.hpp</label>
+        <link refid="entity__navigate_8hpp_source"/>
+        <childnode refid="9973" relation="include">
+        </childnode>
+        <childnode refid="10057" relation="include">
+        </childnode>
+        <childnode refid="9972" relation="include">
+        </childnode>
+        <childnode refid="10058" relation="include">
+        </childnode>
+      </node>
+      <node id="10030">
+        <label>cstdmf/profile.hpp</label>
+      </node>
+      <node id="9957">
+        <label>cellapp/navigation_controller.cpp</label>
+        <link refid="navigation_controller.cpp"/>
+        <childnode refid="9958" relation="include">
+        </childnode>
+        <childnode refid="9959" relation="include">
+        </childnode>
+        <childnode refid="9972" relation="include">
+        </childnode>
+        <childnode refid="9973" relation="include">
+        </childnode>
+        <childnode refid="10008" relation="include">
+        </childnode>
+        <childnode refid="10019" relation="include">
+        </childnode>
+        <childnode refid="10044" relation="include">
+        </childnode>
+        <childnode refid="10046" relation="include">
+        </childnode>
+        <childnode refid="10056" relation="include">
+        </childnode>
+        <childnode refid="10029" relation="include">
+        </childnode>
+      </node>
+      <node id="10010">
+        <label>space_node.hpp</label>
+        <link refid="space__node_8hpp_source"/>
+        <childnode refid="9963" relation="include">
+        </childnode>
+        <childnode refid="10011" relation="include">
+        </childnode>
+      </node>
+      <node id="9990">
+        <label>network/interface_element.hpp</label>
+      </node>
+      <node id="10025">
+        <label>network/channel_owner.hpp</label>
+      </node>
+      <node id="10043">
+        <label>space/forward_declarations.hpp</label>
+      </node>
+      <node id="9997">
+        <label>entitydef/mailbox_base.hpp</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="navigation__controller_8cpp_1ab601e86746b3ddf8e339ba0c7c76b7b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BW_BEGIN_NAMESPACE</type>
+        <definition>BW_BEGIN_NAMESPACE IMPLEMENT_EXCLUSIVE_CONTROLLER_TYPE</definition>
+        <argsstring>(NavigationController, DOMAIN_REAL,&quot;Movement&quot;) NavigationController</argsstring>
+        <name>IMPLEMENT_EXCLUSIVE_CONTROLLER_TYPE</name>
+        <param>
+          <type><ref refid="class_navigation_controller" kindref="compound">NavigationController</ref></type>
+        </param>
+        <param>
+          <type>DOMAIN_REAL</type>
+        </param>
+        <param>
+          <type>&quot;Movement&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>destination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The location to which we should move, we don&apos;t support an entity on vehicle to navigate yet, so it&apos;s global position. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>velocity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Velocity in metres per second </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>faceMovement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether or not the entity should face the direction of movement. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxDistance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum distance to allow navigation to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>girth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The girth of the entity in metres. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>closeEnough</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The distance at which the entity is thought to be close enough. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/navigation_controller.cpp" line="22" column="1" bodyfile="cellapp/navigation_controller.cpp" bodystart="22" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;script/first_include.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;navigation_controller.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;navmesh_navigation_system.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;entity.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cell.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cellapp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cellapp_config.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;real_entity.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;entity_navigate.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;profile.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">DECLARE_DEBUG_COMPONENT(<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Section:<sp/>NavigationController</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">IMPLEMENT_EXCLUSIVE_CONTROLLER_TYPE(</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_navigation_controller" kindref="compound">NavigationController</ref>,<sp/>DOMAIN_REAL,<sp/>&quot;Movement&quot;<sp/>)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">NavigationController::NavigationController(<sp/>const<sp/>Position3D<sp/>&amp;<sp/>destination,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>velocity,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>faceMovement,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxDistance,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>girth,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>closeEnough<sp/>):</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>metresPerTick_(<sp/>velocity<sp/>/<sp/><ref refid="class_cell_app_config" kindref="compound">CellAppConfig</ref>::updateHertz()<sp/>),</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>maxDistance_(<sp/>maxDistance<sp/>),</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>girth_(<sp/>girth<sp/>),</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>closeEnough_(<sp/>closeEnough<sp/>),</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>faceMovement_(<sp/>faceMovement<sp/>),</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>nextPosition_(<sp/>Position3D()<sp/>),</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>destination_(<sp/>destination<sp/>),</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>pDstLoc_(<sp/>NULL<sp/>),</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>currentNode_(<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isEqual(<sp/>maxDistance_,<sp/>-1.f<sp/>))</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>maxDistance_<sp/>=<sp/>CellAppConfig::maxAoIRadius();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>closeEnough_<sp/>&lt;<sp/>0.001f<sp/>)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WARNING_MSG(<sp/></highlight><highlight class="stringliteral">&quot;NavigationController::NavigationController:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;closeEnough_<sp/>is<sp/>very<sp/>small<sp/>(%f)\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>closeEnough_<sp/>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">NavigationController::NavigationStatus<sp/><ref refid="class_navigation_controller_1ad5ea8b110ac9f113919b2aea3198deb1" kindref="member">NavigationController::move</ref>()</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//we<sp/>don&apos;t<sp/>support<sp/>an<sp/>entity<sp/>on<sp/>a<sp/>vehicle<sp/>to<sp/>navigate<sp/>yet.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_ASSERT(<sp/>!this-&gt;<ref refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" kindref="member">entity</ref>().pVehicle()<sp/>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>Position3D<sp/>position<sp/>=<sp/>this-&gt;<ref refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" kindref="member">entity</ref>().localPosition();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>Direction3D<sp/>direction<sp/>=<sp/>this-&gt;<ref refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" kindref="member">entity</ref>().localDirection();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>Vector3<sp/>movement<sp/>=<sp/>nextPosition_<sp/>-<sp/>position;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(movement.y<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>movement.y<sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>are<sp/>real<sp/>close,<sp/>then<sp/>finish<sp/>up.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(movement.length()<sp/>&lt;<sp/>metresPerTick_)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position<sp/>=<sp/>nextPosition_;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>movement.normalise();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>movement<sp/>*=<sp/>metresPerTick_;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position<sp/>+=<sp/>movement;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>position.y<sp/>&lt;<sp/>nextPosition_.y<sp/>)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position.y<sp/>=<sp/>nextPosition_.y;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>we<sp/>are<sp/>facing<sp/>the<sp/>right<sp/>direction.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(faceMovement_<sp/>&amp;&amp;<sp/>(!isZero(<sp/>movement.x<sp/>)<sp/>||<sp/>!isZero(<sp/>movement.z<sp/>)))</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>direction.yaw<sp/>=<sp/>movement.yaw();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>No<sp/>longer<sp/>on<sp/>the<sp/>ground...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Might<sp/>want<sp/>to<sp/>make<sp/>this<sp/>changeable<sp/>from<sp/>script</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>entities<sp/>that<sp/>want<sp/>to<sp/>be<sp/>on<sp/>the<sp/>ground.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_smart_pointer" kindref="compound">ControllerPtr</ref><sp/>pController<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" kindref="member">entity</ref>().isOnGround(<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" kindref="member">entity</ref>().setAndDropGlobalPositionAndDirection(<sp/>position,<sp/>direction<sp/>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>script<sp/>callback<sp/>cancelled<sp/>us</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!this-&gt;<ref refid="class_controller_1a31bb10031669992bd8611769195460a0" kindref="member">isAttached</ref>())</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NAVIGATION_CANCELLED;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>for<sp/>completion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>reachedFinalPos<sp/>=<sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(fabsf(<sp/>position.x<sp/>-<sp/>destination_.x<sp/>)<sp/>&lt;<sp/>closeEnough_)<sp/><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(fabsf(<sp/>position.z<sp/>-<sp/>destination_.z<sp/>)<sp/>&lt;<sp/>closeEnough_);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(reachedFinalPos)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NAVIGATION_COMPLETE;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>..<sp/>otherwise<sp/>check<sp/>if<sp/>we<sp/>are<sp/>at<sp/>the<sp/>next<sp/>update<sp/>location</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>reachedNextPos<sp/>=<sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(fabs(<sp/>position.x<sp/>-<sp/>nextPosition_.x<sp/>)<sp/>&lt;<sp/>0.001f)<sp/><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(fabs(<sp/>position.z<sp/>-<sp/>nextPosition_.z<sp/>)<sp/>&lt;<sp/>0.001f);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(reachedNextPos)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(currentNode_<sp/>&lt;<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)path_.size())</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nextPosition_<sp/>=<sp/>path_[<sp/>currentNode_<sp/>];</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++currentNode_;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NAVIGATION_IN_PROGRESS;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_entity_navigate" kindref="compound">EntityNavigate</ref><sp/>&amp;<sp/>en<sp/>=<sp/>EntityNavigate::instance(<sp/>this-&gt;<ref refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" kindref="member">entity</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_navmesh_entity_navigation_system" kindref="compound">NavmeshEntityNavigationSystem</ref><sp/>&amp;<sp/>nens<sp/>=</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="class_navmesh_entity_navigation_system" kindref="compound">NavmeshEntityNavigationSystem</ref><sp/>&amp;)en.navigationSystem();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nens.navigator().clearCachedWayPath();</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>figure<sp/>out<sp/>the<sp/>source<sp/>navloc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NavLoc<sp/>srcLoc<sp/>=<sp/>nens.navigator().createPathNavLoc(</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" kindref="member">entity</ref>().pChunkSpace(),<sp/>position,<sp/>girth_<sp/>);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>complain<sp/>if<sp/>invalid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!srcLoc.valid()<sp/>||<sp/>!pDstLoc_-&gt;valid())</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DEBUG_MSG(<sp/>&quot;NavigationController::move:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>&quot;Could<sp/>not<sp/>resolve<sp/>source<sp/>(%f,%f,%f)<sp/>or<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>&quot;destination<sp/>position<sp/>(%f,%f,%f)+%f&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>position.x,<sp/>position.y,<sp/>position.z,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>destination_.x,<sp/>destination_.y,<sp/>destination_.z,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>girth_<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NAVIGATION_FAILED;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>passedActivatedPortal;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!nens.<ref refid="class_navmesh_entity_navigation_system_1a3d5563cae64365e9169cbea83fbb1b51" kindref="member">getNavigatePosition</ref>(<sp/>srcLoc,<sp/>*pDstLoc_,<sp/>maxDistance_,<sp/></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nextPosition_,<sp/>passedActivatedPortal,<sp/>girth_<sp/>))</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NAVIGATION_FAILED;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>are<sp/>still<sp/>navigating,<sp/>setup<sp/>the<sp/>state<sp/>for<sp/>the<sp/>next<sp/>round</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>of<sp/>movement.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentNode_<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>path_.clear();</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;generateTraversalPath(<sp/>srcLoc<sp/>);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="183"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_MSG(&quot;Found<sp/>next<sp/>point<sp/>to<sp/>move<sp/>(%6.3f,<sp/>%6.3f,<sp/>%6.3f)\n&quot;,</highlight></codeline>
+<codeline lineno="184"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nextPosition_.x,<sp/>nextPosition_.y,<sp/>nextPosition_.z<sp/>);</highlight></codeline>
+<codeline lineno="185"><highlight class="comment">*/</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NAVIGATION_IN_PROGRESS;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_navigation_controller_1a1766c48a50095d0138ef2f90aca8e6ee" kindref="member">NavigationController::startReal</ref>(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*isInitialStart*/</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ToDo:<sp/>remove<sp/>when<sp/>navigation<sp/>system<sp/>supports<sp/>non-grid<sp/>space<sp/>types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!this-&gt;<ref refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" kindref="member">entity</ref>().pChunkSpace())<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WARNING_MSG(<sp/></highlight><highlight class="stringliteral">&quot;NavigationController::startReal:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Physical<sp/>Space<sp/>type<sp/>of<sp/>entity<sp/>is<sp/>not<sp/>supported&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DEBUG_MSG(&quot;Starting<sp/>navigation<sp/>controller(%6.3f,<sp/>%6.3f,<sp/>%6.3f)\n&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>destination_.x,<sp/>destination_.y,<sp/>destination_.z<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>currentNode_<sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>path_.clear();</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_entity_navigate" kindref="compound">EntityNavigate</ref><sp/>&amp;<sp/>en<sp/>=<sp/>EntityNavigate::instance(<sp/>this-&gt;<ref refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" kindref="member">entity</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_navmesh_entity_navigation_system" kindref="compound">NavmeshEntityNavigationSystem</ref><sp/>&amp;<sp/>nens<sp/>=</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="class_navmesh_entity_navigation_system" kindref="compound">NavmeshEntityNavigationSystem</ref>&amp;)en.navigationSystem();</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>figure<sp/>out<sp/>the<sp/>source<sp/>navloc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>NavLoc<sp/>srcLoc(<sp/>this-&gt;<ref refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" kindref="member">entity</ref>().pChunkSpace(),<sp/>this-&gt;<ref refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" kindref="member">entity</ref>().position(),<sp/></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>girth_<sp/>);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>figure<sp/>out<sp/>the<sp/>dest<sp/>navloc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pDstLoc_)</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>pDstLoc_;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>pDstLoc_<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>NavLoc(<sp/>this-&gt;<ref refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" kindref="member">entity</ref>().pChunkSpace(),<sp/>destination_,<sp/>girth_<sp/>);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>complain<sp/>if<sp/>invalid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pDstLoc_-&gt;valid()<sp/>&amp;&amp;<sp/>srcLoc.valid())</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pDstLoc_-&gt;clip();</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>destination_<sp/>=<sp/>pDstLoc_-&gt;point();</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DEBUG_MSG(&quot;Adjusted<sp/>destination<sp/>(%6.3f,<sp/>%6.3f,<sp/>%6.3f)\n&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>destination_.x,<sp/>destination_.y,<sp/>destination_.z<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nens.navigator().clearCachedWayPath();</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nens.navigator().clearCachedWaySetPath();</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>passedActivatedPortal;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!nens.<ref refid="class_navmesh_entity_navigation_system_1a3d5563cae64365e9169cbea83fbb1b51" kindref="member">getNavigatePosition</ref>(<sp/>srcLoc,<sp/>*pDstLoc_,<sp/>maxDistance_,<sp/></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nextPosition_,<sp/>passedActivatedPortal,<sp/>girth_<sp/>))</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nextPosition_<sp/>=<sp/>this-&gt;<ref refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" kindref="member">entity</ref>().position();</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;generateTraversalPath(<sp/>srcLoc<sp/>);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nextPosition_<sp/>=<sp/>this-&gt;<ref refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" kindref="member">entity</ref>().position();</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>CellApp::instance().registerForUpdate(<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_navigation_controller_1acd77f180ec05482fd18d73836d639dd3" kindref="member">NavigationController::stopReal</ref>(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*isFinalStop*/</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_VERIFY(<sp/>CellApp::instance().deregisterForUpdate(<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>pDstLoc_;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>pDstLoc_<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_navigation_controller_1ab1ebe69610d05457eff46919037baab3" kindref="member">NavigationController::writeRealToStream</ref>(BinaryOStream<sp/>&amp;<sp/>stream)</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>stream<sp/>&lt;&lt;<sp/>destination_<sp/>&lt;&lt;<sp/>metresPerTick_<sp/>&lt;&lt;<sp/>faceMovement_<sp/>&lt;&lt;<sp/></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>maxDistance_<sp/>&lt;&lt;<sp/>girth_;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_navigation_controller_1a5165aebc46dbeaa9f7bdd3b03728adfd" kindref="member">NavigationController::readRealFromStream</ref>(<sp/>BinaryIStream<sp/>&amp;<sp/>stream<sp/>)</highlight></codeline>
+<codeline lineno="288"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>stream<sp/>&gt;&gt;<sp/>destination_<sp/>&gt;&gt;<sp/>metresPerTick_<sp/>&gt;&gt;<sp/>faceMovement_<sp/>&gt;&gt;<sp/></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>maxDistance_<sp/>&gt;&gt;<sp/>girth_;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>nextPosition_<sp/>=<sp/>destination_;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ToDo:<sp/>remove<sp/>when<sp/>navigation<sp/>system<sp/>supports<sp/>non-grid<sp/>space<sp/>types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!this-&gt;<ref refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" kindref="member">entity</ref>().pChunkSpace())<sp/>{</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WARNING_MSG(<sp/></highlight><highlight class="stringliteral">&quot;NavigationController::readRealFromStream:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Physical<sp/>Space<sp/>type<sp/>of<sp/>entity<sp/>is<sp/>not<sp/>supported&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pDstLoc_)</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>pDstLoc_;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/>pDstLoc_<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>NavLoc(<sp/>this-&gt;<ref refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" kindref="member">entity</ref>().pChunkSpace(),<sp/>destination_,<sp/>girth_<sp/>);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight><highlight class="comment">/*~<sp/>callback<sp/>Entity.onNavigate</highlight></codeline>
+<codeline lineno="311"><highlight class="comment"><sp/>*<sp/><sp/>@components{<sp/>cell<sp/>}</highlight></codeline>
+<codeline lineno="312"><highlight class="comment"><sp/>*<sp/><sp/>This<sp/>callback<sp/>is<sp/>associated<sp/>with<sp/>the<sp/>Entity.navigate<sp/>method.</highlight></codeline>
+<codeline lineno="313"><highlight class="comment"><sp/>*<sp/><sp/>It<sp/>is<sp/>called<sp/>when<sp/>the<sp/>entity<sp/>reaches<sp/>the<sp/>desired<sp/>location.</highlight></codeline>
+<codeline lineno="314"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="315"><highlight class="comment"><sp/>*<sp/><sp/>@param<sp/>controllerID<sp/><sp/><sp/><sp/><sp/>The<sp/>id<sp/>of<sp/>the<sp/>controller<sp/>that<sp/>triggered<sp/>this</highlight></codeline>
+<codeline lineno="316"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>callback.</highlight></codeline>
+<codeline lineno="317"><highlight class="comment"><sp/>*<sp/><sp/>@param<sp/>userData<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>The<sp/>user<sp/>data<sp/>that<sp/>was<sp/>passed<sp/>to<sp/>Entity.navigate.</highlight></codeline>
+<codeline lineno="318"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight><highlight class="comment">/*~<sp/>callback<sp/>Entity.onNavigateFailed</highlight></codeline>
+<codeline lineno="320"><highlight class="comment"><sp/>*<sp/><sp/>@components{<sp/>cell<sp/>}</highlight></codeline>
+<codeline lineno="321"><highlight class="comment"><sp/>*<sp/><sp/>This<sp/>callback<sp/>is<sp/>associated<sp/>with<sp/>the<sp/>Entity.navigate<sp/>method.</highlight></codeline>
+<codeline lineno="322"><highlight class="comment"><sp/>*<sp/><sp/>It<sp/>is<sp/>called<sp/>when<sp/>the<sp/>entity<sp/>fails<sp/>to<sp/>reach<sp/>the<sp/>desired<sp/>location.</highlight></codeline>
+<codeline lineno="323"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="324"><highlight class="comment"><sp/>*<sp/><sp/>@param<sp/>controllerID<sp/><sp/><sp/><sp/><sp/>The<sp/>id<sp/>of<sp/>the<sp/>controller<sp/>that<sp/>triggered<sp/>this</highlight></codeline>
+<codeline lineno="325"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>callback.</highlight></codeline>
+<codeline lineno="326"><highlight class="comment"><sp/>*<sp/><sp/>@param<sp/>userData<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>The<sp/>user<sp/>data<sp/>that<sp/>was<sp/>passed<sp/>to<sp/>Entity.navigate.</highlight></codeline>
+<codeline lineno="327"><highlight class="comment"><sp/>*/</highlight></codeline>
+<codeline lineno="331"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_navigation_controller_1ac5d5b8144c3c09da5e8ed2741fde1cad" kindref="member">NavigationController::update</ref>()</highlight></codeline>
+<codeline lineno="332"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Keep<sp/>ourselves<sp/>alive<sp/>until<sp/>we<sp/>have<sp/>finished<sp/>cleaning<sp/>up,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>with<sp/>an<sp/>extra<sp/>reference<sp/>count<sp/>from<sp/>a<sp/>smart<sp/>pointer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_smart_pointer" kindref="compound">ControllerPtr</ref><sp/>pController<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/>NavigationStatus<sp/>navStatus<sp/>=<sp/>this-&gt;<ref refid="class_navigation_controller_1ad5ea8b110ac9f113919b2aea3198deb1" kindref="member">move</ref>();</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(navStatus<sp/>==<sp/>NAVIGATION_COMPLETE)</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DEBUG_MSG(<sp/>&quot;Reached<sp/>destination\n&quot;<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCOPED_PROFILE(<sp/>ON_NAVIGATE_PROFILE<sp/>);</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_controller_1a28fbc433135ec5668b0de6286b0fb1fe" kindref="member">standardCallback</ref>(<sp/></highlight><highlight class="stringliteral">&quot;onNavigate&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;<ref refid="class_controller_1a31bb10031669992bd8611769195460a0" kindref="member">isAttached</ref>())</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;cancel();</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(navStatus<sp/>==<sp/>NAVIGATION_FAILED)</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DEBUG_MSG(<sp/>&quot;Navigate<sp/>failed\n&quot;<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCOPED_PROFILE(<sp/>ON_NAVIGATE_PROFILE<sp/>);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_controller_1a28fbc433135ec5668b0de6286b0fb1fe" kindref="member">standardCallback</ref>(<sp/></highlight><highlight class="stringliteral">&quot;onNavigateFailed&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;<ref refid="class_controller_1a31bb10031669992bd8611769195460a0" kindref="member">isAttached</ref>())</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;cancel();</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//else<sp/>still<sp/>moving<sp/>to<sp/>destination(<sp/>=<sp/>0),<sp/>or<sp/>cancelled(<sp/>=<sp/>-2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>NavigationController::generateTraversalPath(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NavLoc<sp/>&amp;<sp/>srcLoc<sp/>)</highlight></codeline>
+<codeline lineno="374"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_entity_navigate" kindref="compound">EntityNavigate</ref><sp/>&amp;<sp/>en<sp/>=<sp/>EntityNavigate::instance(<sp/>this-&gt;<ref refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" kindref="member">entity</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_navmesh_entity_navigation_system" kindref="compound">NavmeshEntityNavigationSystem</ref><sp/>&amp;<sp/>nens<sp/>=</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="class_navmesh_entity_navigation_system" kindref="compound">NavmeshEntityNavigationSystem</ref>&amp;)en.navigationSystem();</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/>nens.navigator().getCachedWaypointPath(<sp/>path_<sp/>);</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(path_.empty())</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/>nextPosition_<sp/>=<sp/>path_[<sp/>0<sp/>];</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(srcLoc.pSet()<sp/>==<sp/>pDstLoc_-&gt;pSet())</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>path_.push_back(<sp/>destination_<sp/>);</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="391"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight><highlight class="comment">//<sp/>navigation_controller.cpp</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="cellapp/navigation_controller.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_load_entity_handler_with_callback" kind="class" language="C++" prot="public">
+    <compoundname>LoadEntityHandlerWithCallback</compoundname>
+    <basecompoundref refid="class_load_entity_handler" prot="public" virt="non-virtual">LoadEntityHandler</basecompoundref>
+    <includes refid="baseapp_2load__entity__handler_8hpp" local="no">load_entity_handler.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_load_entity_handler_with_callback_1ae10de1bc52cc555f85c4ca4b971546af" prot="private" static="no" mutable="no">
+        <type><ref refid="class_base_creation_from_d_b_callback" kindref="compound">BaseCreationFromDBCallback</ref> *const</type>
+        <definition>BaseCreationFromDBCallback* const LoadEntityHandlerWithCallback::pCallback_</definition>
+        <argsstring></argsstring>
+        <name>pCallback_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/load_entity_handler.hpp" line="66" column="1" bodyfile="baseapp/load_entity_handler.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_load_entity_handler_with_callback_1a1a9ae458e3fe298be4f9e0b6641743f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LoadEntityHandlerWithCallback::LoadEntityHandlerWithCallback</definition>
+        <argsstring>(BaseCreationFromDBCallback *pCallback, EntityTypeID entityTypeID, EntityID entityID)</argsstring>
+        <name>LoadEntityHandlerWithCallback</name>
+        <param>
+          <type><ref refid="class_base_creation_from_d_b_callback" kindref="compound">BaseCreationFromDBCallback</ref> *</type>
+          <declname>pCallback</declname>
+        </param>
+        <param>
+          <type>EntityTypeID</type>
+          <declname>entityTypeID</declname>
+        </param>
+        <param>
+          <type>EntityID</type>
+          <declname>entityID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/load_entity_handler.hpp" line="58" column="1" bodyfile="baseapp/load_entity_handler.cpp" bodystart="185" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_load_entity_handler_with_callback_1aba741bd01e2a4785ccdc8a4bcade7dd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LoadEntityHandlerWithCallback::onLoadedFromDB</definition>
+        <argsstring>(Base *pBase=NULL, EntityMailBoxRef *pMailbox=NULL, DatabaseID dbID=0)</argsstring>
+        <name>onLoadedFromDB</name>
+        <reimplements refid="class_load_entity_handler_1ab35f8cf0e19bf3b44e08f506ae73f513">onLoadedFromDB</reimplements>
+        <param>
+          <type><ref refid="class_base" kindref="compound">Base</ref> *</type>
+          <declname>pBase</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>EntityMailBoxRef *</type>
+          <declname>pMailbox</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>DatabaseID</type>
+          <declname>dbID</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/load_entity_handler.hpp" line="62" column="1" bodyfile="baseapp/load_entity_handler.cpp" bodystart="193" bodyend="222"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is a <ref refid="class_load_entity_handler" kindref="compound">LoadEntityHandler</ref> but calls a callback function on completion. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1616">
+        <label>IGetEntityHandler</label>
+      </node>
+      <node id="1618">
+        <label>DBApp::ICheckoutCompletionListener</label>
+        <link refid="class_d_b_app_1_1_i_checkout_completion_listener"/>
+      </node>
+      <node id="1614">
+        <label>LoadEntityHandlerWithCallback</label>
+        <link refid="class_load_entity_handler_with_callback"/>
+        <childnode refid="1615" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1619">
+        <label>ReplyMessageHandler</label>
+      </node>
+      <node id="1615">
+        <label>LoadEntityHandler</label>
+        <link refid="class_load_entity_handler"/>
+        <childnode refid="1616" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1617" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1618" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1619" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1617">
+        <label>IPutEntityHandler</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1622">
+        <label>IGetEntityHandler</label>
+      </node>
+      <node id="1624">
+        <label>DBApp::ICheckoutCompletionListener</label>
+        <link refid="class_d_b_app_1_1_i_checkout_completion_listener"/>
+      </node>
+      <node id="1620">
+        <label>LoadEntityHandlerWithCallback</label>
+        <link refid="class_load_entity_handler_with_callback"/>
+        <childnode refid="1621" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1625">
+        <label>ReplyMessageHandler</label>
+      </node>
+      <node id="1621">
+        <label>LoadEntityHandler</label>
+        <link refid="class_load_entity_handler"/>
+        <childnode refid="1622" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1623" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1624" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1625" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1623">
+        <label>IPutEntityHandler</label>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/load_entity_handler.hpp" line="56" column="1" bodyfile="baseapp/load_entity_handler.hpp" bodystart="55" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_load_entity_handler_1adf02f03ae9b3902722f25e879f0adeba" prot="public" virt="non-virtual"><scope>LoadEntityHandlerWithCallback</scope><name>LoadEntityHandler</name></member>
+      <member refid="class_load_entity_handler_with_callback_1a1a9ae458e3fe298be4f9e0b6641743f2" prot="public" virt="non-virtual"><scope>LoadEntityHandlerWithCallback</scope><name>LoadEntityHandlerWithCallback</name></member>
+      <member refid="class_load_entity_handler_with_callback_1aba741bd01e2a4785ccdc8a4bcade7dd7" prot="public" virt="virtual"><scope>LoadEntityHandlerWithCallback</scope><name>onLoadedFromDB</name></member>
+      <member refid="class_load_entity_handler_with_callback_1ae10de1bc52cc555f85c4ca4b971546af" prot="private" virt="non-virtual"><scope>LoadEntityHandlerWithCallback</scope><name>pCallback_</name></member>
+      <member refid="class_load_entity_handler_1a4c678d215a5fda696fa22b77a426bbd3" prot="public" virt="non-virtual"><scope>LoadEntityHandlerWithCallback</scope><name>start</name></member>
+      <member refid="class_load_entity_handler_1a8ab04d5c7262c26d229445f807363a21" prot="public" virt="virtual"><scope>LoadEntityHandlerWithCallback</scope><name>~LoadEntityHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="log__time_8cpp" kind="file" language="C++">
+    <compoundname>log_time.cpp</compoundname>
+    <includes refid="log__time_8hpp" local="yes">log_time.hpp</includes>
+    <includes local="yes">cstdmf/debug.hpp</includes>
+    <includes local="no">limits.h</includes>
+    <includedby refid="message__logger__log__time_8cpp" local="yes">tools/message_logger/unit_test/message_logger_log_time.cpp</includedby>
+    <incdepgraph>
+      <node id="20385">
+        <label>cstdmf/debug.hpp</label>
+      </node>
+      <node id="20382">
+        <label>cstdmf/stdmf.hpp</label>
+      </node>
+      <node id="20374">
+        <label>log_time.hpp</label>
+        <link refid="log__time_8hpp_source"/>
+        <childnode refid="20375" relation="include">
+        </childnode>
+        <childnode refid="20382" relation="include">
+        </childnode>
+        <childnode refid="20383" relation="include">
+        </childnode>
+        <childnode refid="20384" relation="include">
+        </childnode>
+      </node>
+      <node id="20383">
+        <label>cstdmf/binary_stream.hpp</label>
+      </node>
+      <node id="20380">
+        <label>cstdmf/bw_string.hpp</label>
+      </node>
+      <node id="20386">
+        <label>limits.h</label>
+      </node>
+      <node id="20375">
+        <label>constants.hpp</label>
+        <link refid="constants_8hpp_source"/>
+        <childnode refid="20376" relation="include">
+        </childnode>
+        <childnode refid="20377" relation="include">
+        </childnode>
+        <childnode refid="20378" relation="include">
+        </childnode>
+      </node>
+      <node id="20384">
+        <label>time.h</label>
+      </node>
+      <node id="20379">
+        <label>network/basictypes.hpp</label>
+      </node>
+      <node id="20378">
+        <label>types.hpp</label>
+        <link refid="tools_2message__logger_2types_8hpp_source"/>
+        <childnode refid="20379" relation="include">
+        </childnode>
+        <childnode refid="20380" relation="include">
+        </childnode>
+        <childnode refid="20381" relation="include">
+        </childnode>
+        <childnode refid="20382" relation="include">
+        </childnode>
+      </node>
+      <node id="20377">
+        <label>cstdmf/bw_namespace.hpp</label>
+      </node>
+      <node id="20376">
+        <label>network/logger_message_forwarder.hpp</label>
+      </node>
+      <node id="20381">
+        <label>cstdmf/bw_vector.hpp</label>
+      </node>
+      <node id="20373">
+        <label>tools/message_logger/log_time.cpp</label>
+        <link refid="log_time.cpp"/>
+        <childnode refid="20374" relation="include">
+        </childnode>
+        <childnode refid="20385" relation="include">
+        </childnode>
+        <childnode refid="20386" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;log_time.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/debug.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="class_log_time_1ac04906072b0eb983df579468a30d320f" kindref="member">LogTime::LogTime</ref><sp/>()</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{<sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="class_log_time_1ac04906072b0eb983df579468a30d320f" kindref="member">LogTime::LogTime</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ftime<sp/>)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isEqual(<sp/>ftime,<sp/>LOG_END<sp/>))</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>secs_<sp/>=<sp/>LONG_MAX;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msecs_<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>secs_<sp/>=<sp/>(Seconds)ftime;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msecs_<sp/>=<sp/>(Milliseconds)((ftime<sp/>-<sp/>secs_)<sp/>*<sp/>1000<sp/>+<sp/>0.5);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>LogTime::operator&gt;(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_log_time" kindref="compound">LogTime</ref><sp/>&amp;other<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="38"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>secs_<sp/>&gt;<sp/>other.secs_<sp/>||</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(secs_<sp/>==<sp/>other.secs_<sp/>&amp;&amp;<sp/>msecs_<sp/>&gt;<sp/>other.msecs_);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>LogTime::operator&gt;=(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_log_time" kindref="compound">LogTime</ref><sp/>&amp;other<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="45"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(secs_<sp/>==<sp/>other.secs_<sp/>&amp;&amp;<sp/>msecs_<sp/>==<sp/>other.msecs_)<sp/>||</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>&gt;<sp/>other;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>LogTime::operator&lt;(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_log_time" kindref="compound">LogTime</ref><sp/>&amp;other<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="52"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>secs_<sp/>&lt;<sp/>other.secs_<sp/>||</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(secs_<sp/>==<sp/>other.secs_<sp/>&amp;&amp;<sp/>msecs_<sp/>&lt;<sp/>other.msecs_);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>LogTime::operator&lt;=(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_log_time" kindref="compound">LogTime</ref><sp/>&amp;other<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="59"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(secs_<sp/>==<sp/>other.secs_<sp/>&amp;&amp;<sp/>msecs_<sp/>==<sp/>other.msecs_)<sp/>||</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>&lt;<sp/>other;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>LogTime::operator==(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_log_time" kindref="compound">LogTime</ref><sp/>&amp;other<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="66"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(secs_<sp/>==<sp/>other.secs_<sp/>&amp;&amp;<sp/>msecs_<sp/>==<sp/>other.msecs_);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>LogTime::asDouble()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="72"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>secs_<sp/>+<sp/>msecs_/1000.0;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/>log_time.cpp</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="tools/message_logger/log_time.cpp"/>
+  </compounddef>
+</doxygen>

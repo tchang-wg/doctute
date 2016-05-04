@@ -1,0 +1,694 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_mongo_d_b_1_1_connection_thread_data" kind="class" language="C++" prot="public">
+    <compoundname>MongoDB::ConnectionThreadData</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BackgroundThreadData</basecompoundref>
+    <includes refid="connection__thread__data_8hpp" local="no">connection_thread_data.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_mongo_d_b_1_1_connection_thread_data_1a3832fc012c55093f54fa26b53ce53cf2" prot="private" static="no">
+        <type>BW::map&lt; BW::string, BW::string &gt;</type>
+        <definition>typedef BW::map&lt; BW::string, BW::string &gt; MongoDB::ConnectionThreadData::UserDbNameMap</definition>
+        <argsstring></argsstring>
+        <name>UserDbNameMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="101" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_mongo_d_b_1_1_connection_thread_data_1a7450f5f9587d57e541cddbaef7ba02ff" prot="private" static="no">
+        <type>BW::map&lt; MessageLogger::UID, <ref refid="class_smart_pointer" kindref="compound">UserLogWriterPtr</ref> &gt;</type>
+        <definition>typedef BW::map&lt; MessageLogger::UID, UserLogWriterPtr &gt; MongoDB::ConnectionThreadData::UserLogWriterMap</definition>
+        <argsstring></argsstring>
+        <name>UserLogWriterMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="106" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_connection_thread_data_1a5e444504eca60d98ba8435b95fb5eea6" prot="public" static="no" mutable="no">
+        <type>mongo::DBClientConnection</type>
+        <definition>mongo::DBClientConnection MongoDB::ConnectionThreadData::conn_</definition>
+        <argsstring></argsstring>
+        <name>conn_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="91" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_connection_thread_data_1a393cd802d1f29e806580fd4f7da7688d" prot="private" static="no" mutable="no">
+        <type>UserLogWriterMap</type>
+        <definition>UserLogWriterMap MongoDB::ConnectionThreadData::userLogWriters_</definition>
+        <argsstring></argsstring>
+        <name>userLogWriters_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="107" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_connection_thread_data_1ae1293f7672fdff6cf5661ad4a5fa96a9" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string MongoDB::ConnectionThreadData::loggerID_</definition>
+        <argsstring></argsstring>
+        <name>loggerID_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="108" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_connection_thread_data_1a9386b337f8eb3d42356e717e1047ff93" prot="private" static="no" mutable="no">
+        <type><ref refid="class_mongo_d_b_1_1_connection_info" kindref="compound">ConnectionInfo</ref></type>
+        <definition>ConnectionInfo MongoDB::ConnectionThreadData::connectionInfo_</definition>
+        <argsstring></argsstring>
+        <name>connectionInfo_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="110" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_connection_thread_data_1ada4bdbab660366177066a33a671f48a6" prot="private" static="no" mutable="no">
+        <type>uint64</type>
+        <definition>uint64 MongoDB::ConnectionThreadData::expireSeconds_</definition>
+        <argsstring></argsstring>
+        <name>expireSeconds_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="111" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_connection_thread_data_1a0216a4b827f7d81545c303135b2094a6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MongoDB::ConnectionThreadData::isCluster_</definition>
+        <argsstring></argsstring>
+        <name>isCluster_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="112" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_connection_thread_data_1a40787a6bbce2565c7a3d9a75c4abcccd" prot="private" static="no" mutable="no">
+        <type>SimpleMutex</type>
+        <definition>SimpleMutex MongoDB::ConnectionThreadData::statusFlagsMutex_</definition>
+        <argsstring></argsstring>
+        <name>statusFlagsMutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="114" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_connection_thread_data_1a369c239e7b386263e7774b9e89dcbe4d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MongoDB::ConnectionThreadData::connectedFlag_</definition>
+        <argsstring></argsstring>
+        <name>connectedFlag_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="116" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_connection_thread_data_1ad8f49300fa488841018b91e8d8773e2e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MongoDB::ConnectionThreadData::allowReconnectFlag_</definition>
+        <argsstring></argsstring>
+        <name>allowReconnectFlag_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="117" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_connection_thread_data_1a78c67ec1b201d7e660eecea56c1b5a89" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MongoDB::ConnectionThreadData::abortFurtherProcessingFlag_</definition>
+        <argsstring></argsstring>
+        <name>abortFurtherProcessingFlag_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="118" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_connection_thread_data_1ab238f97bbfe2ef0e07b52bc7d113f842" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t MongoDB::ConnectionThreadData::cacheThreshold_</definition>
+        <argsstring></argsstring>
+        <name>cacheThreshold_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="120" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_connection_thread_data_1ade455a36a670496a815bb983ed6c38f1" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t MongoDB::ConnectionThreadData::currentCacheSize_</definition>
+        <argsstring></argsstring>
+        <name>currentCacheSize_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="121" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_connection_thread_data_1a66a1b17ea7a0a9c5e084d3075c7c1f00" prot="private" static="no" mutable="no">
+        <type>SimpleMutex</type>
+        <definition>SimpleMutex MongoDB::ConnectionThreadData::cacheSizeMutex_</definition>
+        <argsstring></argsstring>
+        <name>cacheSizeMutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="122" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1a763e7bf1b1de73905e758cffe3a40461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MongoDB::ConnectionThreadData::ConnectionThreadData</definition>
+        <argsstring>(const ConnectionInfo &amp;connectionInfo, uint64 expireSeconds, const BW::string &amp;loggerID, size_t cacheThreshold)</argsstring>
+        <name>ConnectionThreadData</name>
+        <param>
+          <type>const <ref refid="class_mongo_d_b_1_1_connection_info" kindref="compound">ConnectionInfo</ref> &amp;</type>
+          <declname>connectionInfo</declname>
+        </param>
+        <param>
+          <type>uint64</type>
+          <declname>expireSeconds</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>loggerID</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>cacheThreshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="42" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.cpp" bodystart="28" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1ab032666907d5e352ecc3cc0866423760" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool MongoDB::ConnectionThreadData::onStart</definition>
+        <argsstring>(BackgroundTaskThread &amp;thread)</argsstring>
+        <name>onStart</name>
+        <param>
+          <type>BackgroundTaskThread &amp;</type>
+          <declname>thread</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method occurs at the start of a background thread, initialises a MongoDB connection and prepares a userLogWriter for each user DB.</para><para>Its processing occurs within the child thread and therefore must be threadsafe. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="46" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.cpp" bodystart="52" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1a38186de44a5e1faae38672a24372473d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MongoDB::ConnectionThreadData::onEnd</definition>
+        <argsstring>(BackgroundTaskThread &amp;thread)</argsstring>
+        <name>onEnd</name>
+        <param>
+          <type>BackgroundTaskThread &amp;</type>
+          <declname>thread</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="47" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1a73fa316a393ea95a475cc798f664fde8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_smart_pointer" kindref="compound">UserLogWriterPtr</ref></type>
+        <definition>UserLogWriterPtr MongoDB::ConnectionThreadData::getUserLogWriter</definition>
+        <argsstring>(MessageLogger::UID uid, const BW::string &amp;username)</argsstring>
+        <name>getUserLogWriter</name>
+        <param>
+          <type>MessageLogger::UID</type>
+          <declname>uid</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the user log writer by uid </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="49" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.cpp" bodystart="271" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1afeeaf86161e3cf54093e30362ea47725" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MongoDB::ConnectionThreadData::rollUserLogs</definition>
+        <argsstring>()</argsstring>
+        <name>rollUserLogs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="51" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.cpp" bodystart="312" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1a63583473d6f59959e48e912f4c242a8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DBTaskStatus</type>
+        <definition>DBTaskStatus MongoDB::ConnectionThreadData::addRecordToCollection</definition>
+        <argsstring>(const BW::string &amp;collectionName, const mongo::BSONObj &amp;obj)</argsstring>
+        <name>addRecordToCollection</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>collectionName</declname>
+        </param>
+        <param>
+          <type>const mongo::BSONObj &amp;</type>
+          <declname>obj</declname>
+          <defname>newRecord</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write a BSON object to a MongoDB collection. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="53" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.cpp" bodystart="459" bodyend="495"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1a0b5bfeceb8e38073a931ff1a42c1dceb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DBTaskStatus</type>
+        <definition>DBTaskStatus MongoDB::ConnectionThreadData::updateRecordInCollection</definition>
+        <argsstring>(const BW::string &amp;collectionName, const mongo::BSONObj &amp;existingRecord, const mongo::BSONObj &amp;newRecord)</argsstring>
+        <name>updateRecordInCollection</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>collectionName</declname>
+        </param>
+        <param>
+          <type>const mongo::BSONObj &amp;</type>
+          <declname>existingRecord</declname>
+        </param>
+        <param>
+          <type>const mongo::BSONObj &amp;</type>
+          <declname>newRecord</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update an existing MongoDB record with an new one. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="55" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.cpp" bodystart="501" bodyend="540"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1a0b2f10a81cbfab0e900891f5950b458e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MongoDB::ConnectionThreadData::isCacheFull</definition>
+        <argsstring>()</argsstring>
+        <name>isCacheFull</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="59" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="59" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1a42b4373b94a7d87327df0034b69d7846" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MongoDB::ConnectionThreadData::increaseCacheSize</definition>
+        <argsstring>(size_t count)</argsstring>
+        <name>increaseCacheSize</name>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="65" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="65" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1a287235cf643d8504127341ae78bab97b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MongoDB::ConnectionThreadData::dereaseCacheSize</definition>
+        <argsstring>(size_t count)</argsstring>
+        <name>dereaseCacheSize</name>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="71" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="71" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1a2941a60ed4295877ebff982328bf38f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MongoDB::ConnectionThreadData::reconnectIfNecessary</definition>
+        <argsstring>()</argsstring>
+        <name>reconnectIfNecessary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method blocks the background thread until a connection becomes available or the main thread signals for us to abort.</para><para>This function should be checked at the beginning of background tasks that are going to need to utilise the connection.</para><para>It performs two services:<itemizedlist>
+<listitem><para>It allows the main thread to be notified of a successful reconnect (so that it can resume logging)</para></listitem><listitem><para>It prevents randomly spammed error messages from various background tasks attempting to repeatedly use the connection and failing.</para></listitem></itemizedlist>
+</para><para>It doesn&apos;t need to be called before every single connection usage because the connection has an auto reconnect and tasks should handle a failed connection mid-task gracefully. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="77" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.cpp" bodystart="560" bodyend="595"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1a36a34e69076004bb3cc3eb350eedf4f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MongoDB::ConnectionThreadData::getIsCluster</definition>
+        <argsstring>()</argsstring>
+        <name>getIsCluster</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="78" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1afb9e9ba738151ff4c5a13ed1fdea53cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MongoDB::ConnectionThreadData::setConnected</definition>
+        <argsstring>(bool connected)</argsstring>
+        <name>setConnected</name>
+        <param>
+          <type>bool</type>
+          <declname>connected</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the thread connected status for the main thread to check. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="81" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.cpp" bodystart="601" bodyend="605"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1ab92d0b771856f4d9f5008ee68da3eb40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MongoDB::ConnectionThreadData::isConnected</definition>
+        <argsstring>()</argsstring>
+        <name>isConnected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reports if the thread is connected. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="82" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.cpp" bodystart="611" bodyend="615"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1a4e6095240bf58609d15c99b81a4ed6eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MongoDB::ConnectionThreadData::stopReconnectAttempts</definition>
+        <argsstring>()</argsstring>
+        <name>stopReconnectAttempts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the thread connected status for the main thread to check. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="83" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.cpp" bodystart="621" bodyend="625"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1a991ca66badff976051d130e0cb7e6c9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MongoDB::ConnectionThreadData::shouldAbortReconnect</definition>
+        <argsstring>()</argsstring>
+        <name>shouldAbortReconnect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reports if the thread is connected. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="84" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.cpp" bodystart="631" bodyend="635"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1add9726418367554eb91c16314220e619" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MongoDB::ConnectionThreadData::abortFurtherProcessing</definition>
+        <argsstring>()</argsstring>
+        <name>abortFurtherProcessing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the thread connected status for the main thread to check. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="85" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.cpp" bodystart="641" bodyend="645"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1ac023e2396ef6a7d491dfee20fac92094" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MongoDB::ConnectionThreadData::shouldAbortFurtherProcessing</definition>
+        <argsstring>()</argsstring>
+        <name>shouldAbortFurtherProcessing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reports if the thread is connected. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="86" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.cpp" bodystart="651" bodyend="655"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1a6574e4b21fa1a762fce203032968f3dc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MongoDB::ConnectionThreadData::getCollectionNames</definition>
+        <argsstring>(mongo::DBClientConnection &amp;conn, const BW::string &amp;dbName, CollList &amp;rCollList)</argsstring>
+        <name>getCollectionNames</name>
+        <param>
+          <type>mongo::DBClientConnection &amp;</type>
+          <declname>conn</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>dbName</declname>
+        </param>
+        <param>
+          <type>CollList &amp;</type>
+          <declname>rCollList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="88" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.cpp" bodystart="658" bodyend="703"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1a0543ed17d46892e7da4cd384037c0ee7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MongoDB::ConnectionThreadData::initClusterStatus</definition>
+        <argsstring>()</argsstring>
+        <name>initClusterStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="94" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.cpp" bodystart="104" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1a4db78d54a039a27ea9709581c6ae9240" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MongoDB::ConnectionThreadData::initUserLogWriters</definition>
+        <argsstring>()</argsstring>
+        <name>initUserLogWriters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="95" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.cpp" bodystart="157" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1af5bd73714ec1d4982351da269c6221fc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_smart_pointer" kindref="compound">UserLogWriterPtr</ref></type>
+        <definition>UserLogWriterPtr MongoDB::ConnectionThreadData::onNewUser</definition>
+        <argsstring>(MessageLogger::UID uid, const BW::string &amp;username)</argsstring>
+        <name>onNewUser</name>
+        <param>
+          <type>MessageLogger::UID</type>
+          <declname>uid</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="97" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1a1a3ea3a0016b7182a89151945cd96fcd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MongoDB::ConnectionThreadData::getUidFromDB</definition>
+        <argsstring>(const BW::string &amp;dbName, MessageLogger::UID &amp;uid)</argsstring>
+        <name>getUidFromDB</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>dbName</declname>
+        </param>
+        <param>
+          <type>MessageLogger::UID &amp;</type>
+          <declname>uid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get user id from specified user database. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="99" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.cpp" bodystart="405" bodyend="453"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_connection_thread_data_1a0e8fa06f5e72ae7605ceefa046fae765" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MongoDB::ConnectionThreadData::getUserDatabases</definition>
+        <argsstring>(ConnectionThreadData::UserDbNameMap &amp;userDBNameMap)</argsstring>
+        <name>getUserDatabases</name>
+        <param>
+          <type>ConnectionThreadData::UserDbNameMap &amp;</type>
+          <declname>userDBNameMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the user database name list. User database name starts with bw_ml_user_ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="102" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.cpp" bodystart="339" bodyend="399"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to store data assoicated with background threads. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="814">
+        <label>MongoDB::ConnectionThreadData</label>
+        <link refid="class_mongo_d_b_1_1_connection_thread_data"/>
+        <childnode refid="815" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="815">
+        <label>BackgroundThreadData</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="816">
+        <label>MongoDB::ConnectionThreadData</label>
+        <link refid="class_mongo_d_b_1_1_connection_thread_data"/>
+        <childnode refid="817" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="817">
+        <label>BackgroundThreadData</label>
+      </node>
+    </collaborationgraph>
+    <location file="tools/message_logger/mongodb/connection_thread_data.hpp" line="40" column="1" bodyfile="tools/message_logger/mongodb/connection_thread_data.hpp" bodystart="39" bodyend="123"/>
+    <listofallmembers>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1add9726418367554eb91c16314220e619" prot="public" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>abortFurtherProcessing</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a78c67ec1b201d7e660eecea56c1b5a89" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>abortFurtherProcessingFlag_</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a63583473d6f59959e48e912f4c242a8c" prot="public" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>addRecordToCollection</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1ad8f49300fa488841018b91e8d8773e2e" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>allowReconnectFlag_</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a66a1b17ea7a0a9c5e084d3075c7c1f00" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>cacheSizeMutex_</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1ab238f97bbfe2ef0e07b52bc7d113f842" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>cacheThreshold_</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a5e444504eca60d98ba8435b95fb5eea6" prot="public" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>conn_</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a369c239e7b386263e7774b9e89dcbe4d" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>connectedFlag_</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a9386b337f8eb3d42356e717e1047ff93" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>connectionInfo_</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a763e7bf1b1de73905e758cffe3a40461" prot="public" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>ConnectionThreadData</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1ade455a36a670496a815bb983ed6c38f1" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>currentCacheSize_</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a287235cf643d8504127341ae78bab97b" prot="public" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>dereaseCacheSize</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1ada4bdbab660366177066a33a671f48a6" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>expireSeconds_</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a6574e4b21fa1a762fce203032968f3dc" prot="public" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>getCollectionNames</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a36a34e69076004bb3cc3eb350eedf4f4" prot="public" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>getIsCluster</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a1a3ea3a0016b7182a89151945cd96fcd" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>getUidFromDB</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a0e8fa06f5e72ae7605ceefa046fae765" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>getUserDatabases</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a73fa316a393ea95a475cc798f664fde8" prot="public" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>getUserLogWriter</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a42b4373b94a7d87327df0034b69d7846" prot="public" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>increaseCacheSize</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a0543ed17d46892e7da4cd384037c0ee7" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>initClusterStatus</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a4db78d54a039a27ea9709581c6ae9240" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>initUserLogWriters</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a0b2f10a81cbfab0e900891f5950b458e" prot="public" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>isCacheFull</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a0216a4b827f7d81545c303135b2094a6" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>isCluster_</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1ab92d0b771856f4d9f5008ee68da3eb40" prot="public" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>isConnected</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1ae1293f7672fdff6cf5661ad4a5fa96a9" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>loggerID_</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a38186de44a5e1faae38672a24372473d" prot="public" virt="virtual"><scope>MongoDB::ConnectionThreadData</scope><name>onEnd</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1af5bd73714ec1d4982351da269c6221fc" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>onNewUser</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1ab032666907d5e352ecc3cc0866423760" prot="public" virt="virtual"><scope>MongoDB::ConnectionThreadData</scope><name>onStart</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a2941a60ed4295877ebff982328bf38f1" prot="public" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>reconnectIfNecessary</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1afeeaf86161e3cf54093e30362ea47725" prot="public" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>rollUserLogs</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1afb9e9ba738151ff4c5a13ed1fdea53cf" prot="public" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>setConnected</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1ac023e2396ef6a7d491dfee20fac92094" prot="public" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>shouldAbortFurtherProcessing</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a991ca66badff976051d130e0cb7e6c9c" prot="public" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>shouldAbortReconnect</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a40787a6bbce2565c7a3d9a75c4abcccd" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>statusFlagsMutex_</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a4e6095240bf58609d15c99b81a4ed6eb" prot="public" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>stopReconnectAttempts</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a0b5bfeceb8e38073a931ff1a42c1dceb" prot="public" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>updateRecordInCollection</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a3832fc012c55093f54fa26b53ce53cf2" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>UserDbNameMap</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a7450f5f9587d57e541cddbaef7ba02ff" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>UserLogWriterMap</name></member>
+      <member refid="class_mongo_d_b_1_1_connection_thread_data_1a393cd802d1f29e806580fd4f7da7688d" prot="private" virt="non-virtual"><scope>MongoDB::ConnectionThreadData</scope><name>userLogWriters_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

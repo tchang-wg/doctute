@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="util_8hpp" kind="file" language="C++">
+    <compoundname>util.hpp</compoundname>
+    <includes local="yes">cstdmf/shared_ptr.hpp</includes>
+    <includes local="yes">network/basictypes.hpp</includes>
+    <includes local="yes">cstdmf/bw_map.hpp</includes>
+    <includedby refid="gr_2baseapp_8hpp" local="yes">baseappmgr/baseapp.hpp</includedby>
+    <includedby refid="baseappmgr_8hpp" local="yes">baseappmgr/baseappmgr.hpp</includedby>
+    <incdepgraph>
+      <node id="5901">
+        <label>cstdmf/shared_ptr.hpp</label>
+      </node>
+      <node id="5900">
+        <label>baseappmgr/util.hpp</label>
+        <link refid="util.hpp"/>
+        <childnode refid="5901" relation="include">
+        </childnode>
+        <childnode refid="5902" relation="include">
+        </childnode>
+        <childnode refid="5903" relation="include">
+        </childnode>
+      </node>
+      <node id="5903">
+        <label>cstdmf/bw_map.hpp</label>
+      </node>
+      <node id="5902">
+        <label>network/basictypes.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5906">
+        <label>baseappmgr/baseappmgr.hpp</label>
+        <link refid="baseappmgr_8hpp_source"/>
+      </node>
+      <node id="5904">
+        <label>baseappmgr/util.hpp</label>
+        <link refid="util.hpp"/>
+        <childnode refid="5905" relation="include">
+        </childnode>
+        <childnode refid="5906" relation="include">
+        </childnode>
+      </node>
+      <node id="5905">
+        <label>baseappmgr/baseapp.hpp</label>
+        <link refid="gr_2baseapp_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="util_8hpp_1a837e0db4fe64ab39a9123926b2dc939b" prot="public" static="no">
+        <name>AdjustBackupLocationsOp</name>
+        <enumvalue id="util_8hpp_1a837e0db4fe64ab39a9123926b2dc939ba78c004194eccf3ef0fe0105a087b6e3f" prot="public">
+          <name>ADJUST_BACKUP_LOCATIONS_OP_ADD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="util_8hpp_1a837e0db4fe64ab39a9123926b2dc939baf4f11fb9f61c141f131a4ad4e5730e0b" prot="public">
+          <name>ADJUST_BACKUP_LOCATIONS_OP_RETIRE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="util_8hpp_1a837e0db4fe64ab39a9123926b2dc939ba7773f37c10d1f3670ecd91dac392a566" prot="public">
+          <name>ADJUST_BACKUP_LOCATIONS_OP_CRASH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/util.hpp" line="18" column="1" bodyfile="baseappmgr/util.hpp" bodystart="17" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="util_8hpp_1a7ebb4e0af4811c9986231b3bbe16ef1d" prot="public" static="no">
+        <type>shared_ptr&lt; <ref refid="class_base_app" kindref="compound">BaseApp</ref> &gt;</type>
+        <definition>typedef shared_ptr&lt; BaseApp &gt; BaseAppPtr</definition>
+        <argsstring></argsstring>
+        <name>BaseAppPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/util.hpp" line="14" column="1" bodyfile="baseappmgr/util.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="util_8hpp_1a3cd01b2a89f56203ac85057c36f917e0" prot="public" static="no">
+        <type>BW::map&lt; Mercury::Address, BaseAppPtr &gt;</type>
+        <definition>typedef BW::map&lt; Mercury::Address, BaseAppPtr &gt; BaseApps</definition>
+        <argsstring></argsstring>
+        <name>BaseApps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/util.hpp" line="15" column="1" bodyfile="baseappmgr/util.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BASEAPPMGR_UTIL_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BASEAPPMGR_UTIL_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/shared_ptr.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/basictypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_map.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_base_app" kindref="compound">BaseApp</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>shared_ptr&lt;<sp/>BaseApp<sp/>&gt;<sp/>BaseAppPtr;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BW::map&lt;<sp/>Mercury::Address,<sp/>BaseAppPtr<sp/>&gt;<sp/>BaseApps;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>AdjustBackupLocationsOp</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>ADJUST_BACKUP_LOCATIONS_OP_ADD,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>ADJUST_BACKUP_LOCATIONS_OP_RETIRE,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>ADJUST_BACKUP_LOCATIONS_OP_CRASH</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>BASEAPPMGR_UTIL_HPP</highlight></codeline>
+    </programlisting>
+    <location file="baseappmgr/util.hpp"/>
+  </compounddef>
+</doxygen>

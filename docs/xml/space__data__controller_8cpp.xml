@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="space__data__controller_8cpp" kind="file" language="C++">
+    <compoundname>space_data_controller.cpp</compoundname>
+    <includes refid="space__data__controller_8hpp" local="yes">space_data_controller.hpp</includes>
+    <includes local="yes">entitydef_script/script_data_properties.hpp</includes>
+    <includes local="yes">common/space_geometry_mappings.hpp</includes>
+    <incdepgraph>
+      <node id="13810">
+        <label>space_data_controller.hpp</label>
+        <link refid="space__data__controller_8hpp_source"/>
+        <childnode refid="13811" relation="include">
+        </childnode>
+        <childnode refid="13812" relation="include">
+        </childnode>
+      </node>
+      <node id="13813">
+        <label>entitydef_script/script_data_properties.hpp</label>
+      </node>
+      <node id="13811">
+        <label>pyscript/pyobject_plus.hpp</label>
+      </node>
+      <node id="13809">
+        <label>cellappmgr/space_data_controller.cpp</label>
+        <link refid="space_data_controller.cpp"/>
+        <childnode refid="13810" relation="include">
+        </childnode>
+        <childnode refid="13813" relation="include">
+        </childnode>
+        <childnode refid="13814" relation="include">
+        </childnode>
+      </node>
+      <node id="13814">
+        <label>common/space_geometry_mappings.hpp</label>
+      </node>
+      <node id="13812">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;space_data_controller.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;entitydef_script/script_data_properties.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;common/space_geometry_mappings.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="class_space_data_controller_1a1c630122565f3e6c168d040ff3af3aa5" kindref="member">SpaceDataController::SpaceDataController</ref>(<sp/><ref refid="class_space" kindref="compound">Space</ref><sp/>*<sp/>pSpace,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EntityDescription<sp/>*<sp/>pDesc<sp/>):</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>pSpace_(<sp/>pSpace<sp/>),</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>pGeometryMappings_(<sp/>NULL<sp/>),</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>pProperties_(<sp/>NULL<sp/>)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>pGeometryMappings_.reset(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SpaceGeometryMappings()<sp/>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pDesc<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pProperties_.reset(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ScriptDataProperties(<sp/>*pDesc<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="class_space_data_controller_1a3e330f3d43226bbbb54c053ed717bb22" kindref="member">SpaceDataController::~SpaceDataController</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="cellappmgr/space_data_controller.cpp"/>
+  </compounddef>
+</doxygen>

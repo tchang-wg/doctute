@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_create_entity_handler" kind="class" language="C++" prot="public">
+    <compoundname>CreateEntityHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">InputMessageHandler</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">InputMessageHandler</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>class REQUEST</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_create_entity_handler_1aa31108ce5e231968f5c8e30393891f14" prot="public" static="no">
+        <type>void(BaseApp::*</type>
+        <definition>typedef void(BaseApp::* CreateEntityHandler&lt; REQUEST &gt;::Handler) (const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</definition>
+        <argsstring>)(const Mercury::Address &amp;srcAddr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>Handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This type is the function pointer type that handles the incoming message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/message_handlers.cpp" line="609" column="1" bodyfile="baseapp/message_handlers.cpp" bodystart="609" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_create_entity_handler_1afd72db6de2ed4a77e8170805f34ae597" prot="public" static="no">
+        <type>void(Cell::*</type>
+        <definition>typedef void(Cell::* CreateEntityHandler&lt; REQUEST &gt;::Handler) (const Mercury::Address &amp;addr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</definition>
+        <argsstring>)(const Mercury::Address &amp;addr, const Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>Handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This type is the function pointer type that handles the incoming message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/message_handlers.cpp" line="604" column="1" bodyfile="cellapp/message_handlers.cpp" bodystart="604" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_create_entity_handler_1a917a9e41e230782ba22f7f58807ea8d8" prot="private" static="no" mutable="no">
+        <type><ref refid="class_create_entity_handler_1aa31108ce5e231968f5c8e30393891f14" kindref="member">Handler</ref></type>
+        <definition>Handler CreateEntityHandler&lt; REQUEST &gt;::handler_</definition>
+        <argsstring></argsstring>
+        <name>handler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/message_handlers.cpp" line="660" column="1" bodyfile="baseapp/message_handlers.cpp" bodystart="660" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_create_entity_handler_1a4bed6511428d5fca9a3c6c471ca08eaa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CreateEntityHandler&lt; REQUEST &gt;::CreateEntityHandler</definition>
+        <argsstring>(Handler handler)</argsstring>
+        <name>CreateEntityHandler</name>
+        <param>
+          <type><ref refid="class_create_entity_handler_1aa31108ce5e231968f5c8e30393891f14" kindref="member">Handler</ref></type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/message_handlers.cpp" line="617" column="1" bodyfile="baseapp/message_handlers.cpp" bodystart="617" bodyend="621"/>
+      </memberdef>
+      <memberdef kind="function" id="class_create_entity_handler_1aec344fef18660299bac018a5ca24a051" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CreateEntityHandler&lt; REQUEST &gt;::handleMessage</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>handleMessage</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/message_handlers.cpp" line="624" column="1" bodyfile="baseapp/message_handlers.cpp" bodystart="624" bodyend="657"/>
+      </memberdef>
+      <memberdef kind="function" id="class_create_entity_handler_1a4bed6511428d5fca9a3c6c471ca08eaa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CreateEntityHandler&lt; REQUEST &gt;::CreateEntityHandler</definition>
+        <argsstring>(Handler handler)</argsstring>
+        <name>CreateEntityHandler</name>
+        <param>
+          <type><ref refid="class_create_entity_handler_1aa31108ce5e231968f5c8e30393891f14" kindref="member">Handler</ref></type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/message_handlers.cpp" line="612" column="1" bodyfile="cellapp/message_handlers.cpp" bodystart="612" bodyend="616"/>
+      </memberdef>
+      <memberdef kind="function" id="class_create_entity_handler_1aec344fef18660299bac018a5ca24a051" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CreateEntityHandler&lt; REQUEST &gt;::handleMessage</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data)</argsstring>
+        <name>handleMessage</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/message_handlers.cpp" line="619" column="1" bodyfile="cellapp/message_handlers.cpp" bodystart="619" bodyend="659"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Objects of this type are used to handle CreateEntity messages. This version supplies the source address and header. Additionally it buffers the network message (to be replayed on the next tick) if the delegate is not yet loaded (ready).</para><para>Objects of this type are used to handle variable length CreateEntity messages. This version supplies the source address and header. Additionally it buffers the network message (to be replayed on the next tick) if the delegate is not yet loaded (ready). </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="924">
+        <label>InputMessageHandler</label>
+      </node>
+      <node id="923">
+        <label>CreateEntityHandler&lt; REQUEST &gt;</label>
+        <link refid="class_create_entity_handler"/>
+        <childnode refid="924" relation="public-inheritance">
+        </childnode>
+        <childnode refid="924" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="926">
+        <label>InputMessageHandler</label>
+      </node>
+      <node id="925">
+        <label>CreateEntityHandler&lt; REQUEST &gt;</label>
+        <link refid="class_create_entity_handler"/>
+        <childnode refid="926" relation="public-inheritance">
+        </childnode>
+        <childnode refid="926" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/message_handlers.cpp" line="603" column="1" bodyfile="baseapp/message_handlers.cpp" bodystart="602" bodyend="661"/>
+    <listofallmembers>
+      <member refid="class_create_entity_handler_1a4bed6511428d5fca9a3c6c471ca08eaa" prot="public" virt="non-virtual"><scope>CreateEntityHandler</scope><name>CreateEntityHandler</name></member>
+      <member refid="class_create_entity_handler_1a4bed6511428d5fca9a3c6c471ca08eaa" prot="public" virt="non-virtual"><scope>CreateEntityHandler</scope><name>CreateEntityHandler</name></member>
+      <member refid="class_create_entity_handler_1aec344fef18660299bac018a5ca24a051" prot="public" virt="virtual"><scope>CreateEntityHandler</scope><name>handleMessage</name></member>
+      <member refid="class_create_entity_handler_1aec344fef18660299bac018a5ca24a051" prot="public" virt="virtual"><scope>CreateEntityHandler</scope><name>handleMessage</name></member>
+      <member refid="class_create_entity_handler_1aa31108ce5e231968f5c8e30393891f14" prot="public" virt="non-virtual"><scope>CreateEntityHandler</scope><name>Handler</name></member>
+      <member refid="class_create_entity_handler_1afd72db6de2ed4a77e8170805f34ae597" prot="public" virt="non-virtual"><scope>CreateEntityHandler</scope><name>Handler</name></member>
+      <member refid="class_create_entity_handler_1a917a9e41e230782ba22f7f58807ea8d8" prot="private" virt="non-virtual"><scope>CreateEntityHandler</scope><name>handler_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

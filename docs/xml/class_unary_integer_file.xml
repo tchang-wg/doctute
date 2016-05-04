@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_unary_integer_file" kind="class" language="C++" prot="public">
+    <compoundname>UnaryIntegerFile</compoundname>
+    <basecompoundref refid="class_text_file_handler" prot="public" virt="non-virtual">TextFileHandler</basecompoundref>
+    <includes refid="unary__integer__file_8hpp" local="no">unary_integer_file.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_unary_integer_file_1aa6c4a468c37601395623b760093b354e" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int UnaryIntegerFile::v_</definition>
+        <argsstring></argsstring>
+        <name>v_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/unary_integer_file.hpp" line="31" column="1" bodyfile="tools/message_logger/unary_integer_file.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_unary_integer_file_1a5c5bc94af2ece05a9e37c5c9fc0af86c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE UnaryIntegerFile::UnaryIntegerFile</definition>
+        <argsstring>()</argsstring>
+        <name>UnaryIntegerFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/unary_integer_file.hpp" line="18" column="1" bodyfile="tools/message_logger/unary_integer_file.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unary_integer_file_1a3bf37f6fe1dd3e20a52bc62b5d4a9c18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UnaryIntegerFile::init</definition>
+        <argsstring>(const char *path, const char *mode, int v)</argsstring>
+        <name>init</name>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_unary_integer_file" kindref="compound">UnaryIntegerFile</ref>&apos;s <ref refid="class_unary_integer_file_1a3bf37f6fe1dd3e20a52bc62b5d4a9c18" kindref="member">init()</ref> accepts an extra int arg unlike the <ref refid="class_unary_integer_file_1a3bf37f6fe1dd3e20a52bc62b5d4a9c18" kindref="member">init()</ref> methods of related classes, and it means a few things. In read mode, it is the value * you expect the file to have in it. In append mode, if the file doesn&apos;t exist, the value will be written to the file, and if it does exist, it means the same as it does in read mode (i.e. a sync check). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/unary_integer_file.hpp" line="21" column="1" bodyfile="tools/message_logger/unary_integer_file.cpp" bodystart="24" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unary_integer_file_1abf22b36c2f0d6bb82d0ab3ad16e2c623" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool UnaryIntegerFile::handleLine</definition>
+        <argsstring>(const char *line)</argsstring>
+        <name>handleLine</name>
+        <reimplements refid="class_text_file_handler_1a7825ed5fab29814dcb91210c8e3e1d66">handleLine</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/unary_integer_file.hpp" line="22" column="1" bodyfile="tools/message_logger/unary_integer_file.cpp" bodystart="50" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unary_integer_file_1a063f6ebf2d99124c92ef2df21073790b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void UnaryIntegerFile::flush</definition>
+        <argsstring>()</argsstring>
+        <name>flush</name>
+        <reimplements refid="class_file_handler_1aaa5e02b440b04dd78fe9ac2c8f19c69e">flush</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/unary_integer_file.hpp" line="23" column="1" bodyfile="tools/message_logger/unary_integer_file.cpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unary_integer_file_1a23b7ff850fc0e4b02dc33de90fcded93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UnaryIntegerFile::set</definition>
+        <argsstring>(int v)</argsstring>
+        <name>set</name>
+        <param>
+          <type>int</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/unary_integer_file.hpp" line="24" column="1" bodyfile="tools/message_logger/unary_integer_file.cpp" bodystart="69" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unary_integer_file_1a9d2461a0dc84f0eb83a970ed9f657f90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UnaryIntegerFile::getValue</definition>
+        <argsstring>() const </argsstring>
+        <name>getValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/unary_integer_file.hpp" line="26" column="1" bodyfile="tools/message_logger/unary_integer_file.cpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unary_integer_file_1a22f2ad66d95a3e27d416215d3ba2d03b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UnaryIntegerFile::deleteFile</definition>
+        <argsstring>()</argsstring>
+        <name>deleteFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes the file the class owns. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/unary_integer_file.hpp" line="28" column="1" bodyfile="tools/message_logger/unary_integer_file.cpp" bodystart="87" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A file containing a single number represented in ascii. The version file and the uid file in each user log directory use this. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2998">
+        <label>FileHandler</label>
+        <link refid="class_file_handler"/>
+      </node>
+      <node id="2997">
+        <label>TextFileHandler</label>
+        <link refid="class_text_file_handler"/>
+        <childnode refid="2998" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2996">
+        <label>UnaryIntegerFile</label>
+        <link refid="class_unary_integer_file"/>
+        <childnode refid="2997" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3001">
+        <label>FileHandler</label>
+        <link refid="class_file_handler"/>
+      </node>
+      <node id="3000">
+        <label>TextFileHandler</label>
+        <link refid="class_text_file_handler"/>
+        <childnode refid="3001" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2999">
+        <label>UnaryIntegerFile</label>
+        <link refid="class_unary_integer_file"/>
+        <childnode refid="3000" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/message_logger/unary_integer_file.hpp" line="16" column="1" bodyfile="tools/message_logger/unary_integer_file.hpp" bodystart="15" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_text_file_handler_1ad4ea6ba63dadcfda2cdb1d1b491f1059" prot="public" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>close</name></member>
+      <member refid="class_unary_integer_file_1a22f2ad66d95a3e27d416215d3ba2d03b" prot="public" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>deleteFile</name></member>
+      <member refid="class_file_handler_1a21db311b76430aff514bf39a238b015d" prot="public" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>filename</name></member>
+      <member refid="class_file_handler_1a48f6ab15fbc95172ce6db0878cd4d5e7" prot="protected" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>filename_</name></member>
+      <member refid="class_unary_integer_file_1a063f6ebf2d99124c92ef2df21073790b" prot="public" virt="virtual"><scope>UnaryIntegerFile</scope><name>flush</name></member>
+      <member refid="class_text_file_handler_1a7c9dc371685252d2da9ebf2e19fbe377" prot="protected" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>fp_</name></member>
+      <member refid="class_unary_integer_file_1a9d2461a0dc84f0eb83a970ed9f657f90" prot="public" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>getValue</name></member>
+      <member refid="class_unary_integer_file_1abf22b36c2f0d6bb82d0ab3ad16e2c623" prot="public" virt="virtual"><scope>UnaryIntegerFile</scope><name>handleLine</name></member>
+      <member refid="class_unary_integer_file_1a3bf37f6fe1dd3e20a52bc62b5d4a9c18" prot="public" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>init</name></member>
+      <member refid="class_text_file_handler_1a48bce068c4a745ee90888594668d4c00" prot="public" virt="non-virtual" ambiguityscope="TextFileHandler::"><scope>UnaryIntegerFile</scope><name>init</name></member>
+      <member refid="class_file_handler_1a83d056536289a502e280ad909c998e29" prot="public" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>isDirty</name></member>
+      <member refid="class_text_file_handler_1ae8586110bb5b1dfd16681ba2d282ee17" prot="public" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>isOpened</name></member>
+      <member refid="class_file_handler_1aeca3703f7450120817ff241f9ab5cebc" prot="public" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>join</name></member>
+      <member refid="class_text_file_handler_1a862ec561f457c469e70b1c8a6489df04" prot="public" virt="virtual"><scope>UnaryIntegerFile</scope><name>length</name></member>
+      <member refid="class_file_handler_1aa513ca77c5578ff7f931578c4e2f767c" prot="protected" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>length_</name></member>
+      <member refid="class_file_handler_1af160a3724165ff7d40488471ad2cfeba" prot="public" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>mode</name></member>
+      <member refid="class_file_handler_1a3d60ec446935def914042db894c1bd3a" prot="protected" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>mode_</name></member>
+      <member refid="class_text_file_handler_1a2f455865be705691ce2795bbd1a48a30" prot="public" virt="virtual"><scope>UnaryIntegerFile</scope><name>read</name></member>
+      <member refid="class_file_handler_1aa529a9fd4b544fd8b85e8aba4da1b32b" prot="public" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>refresh</name></member>
+      <member refid="class_text_file_handler_1a392e4edf92f7725a3a37212da319d7e3" prot="public" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>reopenIfChanged</name></member>
+      <member refid="class_file_handler_1a6beda2ae2fd3b91e1928615ebde690af" prot="protected" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>s_pathBuf_</name></member>
+      <member refid="class_unary_integer_file_1a23b7ff850fc0e4b02dc33de90fcded93" prot="public" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>set</name></member>
+      <member refid="class_text_file_handler_1a30b61494814350e0f7cbf45b1772398d" prot="public" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>TextFileHandler</name></member>
+      <member refid="class_unary_integer_file_1a5c5bc94af2ece05a9e37c5c9fc0af86c" prot="public" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>UnaryIntegerFile</name></member>
+      <member refid="class_unary_integer_file_1aa6c4a468c37601395623b760093b354e" prot="protected" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>v_</name></member>
+      <member refid="class_text_file_handler_1a0cd996475e7d25910d6d081553c4a81d" prot="public" virt="non-virtual"><scope>UnaryIntegerFile</scope><name>writeLine</name></member>
+      <member refid="class_text_file_handler_1aeb62378466353be7c60431a83aea7027" prot="public" virt="virtual"><scope>UnaryIntegerFile</scope><name>~TextFileHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

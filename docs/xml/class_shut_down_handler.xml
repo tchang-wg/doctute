@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_shut_down_handler" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ShutDownHandler</compoundname>
+    <derivedcompoundref refid="class_inform_handler" prot="public" virt="non-virtual">InformHandler</derivedcompoundref>
+    <derivedcompoundref refid="class_perform_base_apps_handler" prot="public" virt="non-virtual">PerformBaseAppsHandler</derivedcompoundref>
+    <includes refid="shutdown__handler_8hpp" local="no">shutdown_handler.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shut_down_handler_1a1afdd09c38e9714d007673f0819eef0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ShutDownHandler::~ShutDownHandler</definition>
+        <argsstring>()</argsstring>
+        <name>~ShutDownHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/shutdown_handler.hpp" line="18" column="1" bodyfile="cellappmgr/shutdown_handler.hpp" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shut_down_handler_1a7c3476ff01cda13b4e5193916a76897c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool ShutDownHandler::isPaused</definition>
+        <argsstring>() const </argsstring>
+        <name>isPaused</name>
+        <reimplementedby refid="class_inform_handler_1adbf02a565404f4be6427c6a075c5cfb4">isPaused</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/shutdown_handler.hpp" line="19" column="1" bodyfile="cellappmgr/shutdown_handler.hpp" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shut_down_handler_1a707f0d7241ed4e0e415db7bfc7c04de6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ShutDownHandler::checkStatus</definition>
+        <argsstring>()</argsstring>
+        <name>checkStatus</name>
+        <reimplementedby refid="class_inform_handler_1ab4b947180529ee8169eec748c4825417">checkStatus</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/shutdown_handler.hpp" line="20" column="1" bodyfile="cellappmgr/shutdown_handler.hpp" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shut_down_handler_1a07294dc5104160e3c4806bb8a15b75fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ShutDownHandler::ackBaseApps</definition>
+        <argsstring>(ShutDownStage stage)=0</argsstring>
+        <name>ackBaseApps</name>
+        <reimplementedby refid="class_perform_base_apps_handler_1a6aa0af4cbeb5e33b89a2ca77055bac27">ackBaseApps</reimplementedby>
+        <reimplementedby refid="class_inform_handler_1a45ec0c96de09a79d8286d0801ff4088c">ackBaseApps</reimplementedby>
+        <param>
+          <type>ShutDownStage</type>
+          <declname>stage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/shutdown_handler.hpp" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shut_down_handler_1a71e9a21f0ebb9b95191fc2611925d86f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ShutDownHandler::ackCellApp</definition>
+        <argsstring>(ShutDownStage stage, CellApp &amp;app)=0</argsstring>
+        <name>ackCellApp</name>
+        <reimplementedby refid="class_perform_base_apps_handler_1a9afee2b0748d5808e9543591142c6fa5">ackCellApp</reimplementedby>
+        <reimplementedby refid="class_inform_handler_1a97f0357218119da69815c84cd295b7a2">ackCellApp</reimplementedby>
+        <param>
+          <type>ShutDownStage</type>
+          <declname>stage</declname>
+        </param>
+        <param>
+          <type><ref refid="class_cell_app" kindref="compound">CellApp</ref> &amp;</type>
+          <declname>app</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/shutdown_handler.hpp" line="23" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_shut_down_handler_1a40d203908b9b2c1c5c6d4538b610db23" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShutDownHandler::start</definition>
+        <argsstring>(CellAppMgr &amp;mgr)</argsstring>
+        <name>start</name>
+        <param>
+          <type><ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> &amp;</type>
+          <declname>mgr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method starts the process of shutting down the server. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/shutdown_handler.hpp" line="25" column="1" bodyfile="cellappmgr/shutdown_handler.cpp" bodystart="200" bodyend="212"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to manage the process of shutting down the <ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref>. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2697">
+        <label>InformHandler</label>
+        <link refid="class_inform_handler"/>
+        <childnode refid="2696" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2696">
+        <label>ShutDownHandler</label>
+        <link refid="class_shut_down_handler"/>
+      </node>
+      <node id="2698">
+        <label>PerformBaseAppsHandler</label>
+        <link refid="class_perform_base_apps_handler"/>
+        <childnode refid="2696" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="cellappmgr/shutdown_handler.hpp" line="16" column="1" bodyfile="cellappmgr/shutdown_handler.hpp" bodystart="15" bodyend="26"/>
+    <listofallmembers>
+      <member refid="class_shut_down_handler_1a07294dc5104160e3c4806bb8a15b75fb" prot="public" virt="pure-virtual"><scope>ShutDownHandler</scope><name>ackBaseApps</name></member>
+      <member refid="class_shut_down_handler_1a71e9a21f0ebb9b95191fc2611925d86f" prot="public" virt="pure-virtual"><scope>ShutDownHandler</scope><name>ackCellApp</name></member>
+      <member refid="class_shut_down_handler_1a707f0d7241ed4e0e415db7bfc7c04de6" prot="public" virt="virtual"><scope>ShutDownHandler</scope><name>checkStatus</name></member>
+      <member refid="class_shut_down_handler_1a7c3476ff01cda13b4e5193916a76897c" prot="public" virt="virtual"><scope>ShutDownHandler</scope><name>isPaused</name></member>
+      <member refid="class_shut_down_handler_1a40d203908b9b2c1c5c6d4538b610db23" prot="public" virt="non-virtual"><scope>ShutDownHandler</scope><name>start</name></member>
+      <member refid="class_shut_down_handler_1a1afdd09c38e9714d007673f0819eef0e" prot="public" virt="virtual"><scope>ShutDownHandler</scope><name>~ShutDownHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

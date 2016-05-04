@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_mongo_d_b_1_1_update_app_i_d_task" kind="class" language="C++" prot="public">
+    <compoundname>MongoDB::UpdateAppIDTask</compoundname>
+    <basecompoundref refid="class_mongo_d_b_1_1_mongo_d_b_background_task" prot="public" virt="non-virtual">MongoDB::MongoDBBackgroundTask</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_update_app_i_d_task_1ad17538c1e63d837f9e1a3d17fa0feea1" prot="private" static="no" mutable="no">
+        <type>MessageLogger::UID</type>
+        <definition>MessageLogger::UID MongoDB::UpdateAppIDTask::uid_</definition>
+        <argsstring></argsstring>
+        <name>uid_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/update_appid_task.hpp" line="106" column="1" bodyfile="tools/message_logger/mongodb/tasks/update_appid_task.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_update_app_i_d_task_1aa1439121081804c8c74c6c8de5edfb24" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string MongoDB::UpdateAppIDTask::username_</definition>
+        <argsstring></argsstring>
+        <name>username_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/update_appid_task.hpp" line="107" column="1" bodyfile="tools/message_logger/mongodb/tasks/update_appid_task.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_update_app_i_d_task_1a985f1f957350ed5362cabae537146daa" prot="private" static="no" mutable="no">
+        <type>mongo::BSONObj</type>
+        <definition>mongo::BSONObj MongoDB::UpdateAppIDTask::obj_</definition>
+        <argsstring></argsstring>
+        <name>obj_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/update_appid_task.hpp" line="108" column="1" bodyfile="tools/message_logger/mongodb/tasks/update_appid_task.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_d_b_1_1_update_app_i_d_task_1a3a1ffa3b7913cc420049416a2673f769" prot="private" static="no" mutable="no">
+        <type>ServerAppInstanceID</type>
+        <definition>ServerAppInstanceID MongoDB::UpdateAppIDTask::appid_</definition>
+        <argsstring></argsstring>
+        <name>appid_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/update_appid_task.hpp" line="109" column="1" bodyfile="tools/message_logger/mongodb/tasks/update_appid_task.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mongo_d_b_1_1_update_app_i_d_task_1a5f0f01a441b7c484679ae2e1979e40c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MongoDB::UpdateAppIDTask::UpdateAppIDTask</definition>
+        <argsstring>(const mongo::BSONObj &amp;obj, ServerAppInstanceID appid)</argsstring>
+        <name>UpdateAppIDTask</name>
+        <param>
+          <type>const mongo::BSONObj &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>ServerAppInstanceID</type>
+          <declname>appid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/update_appid_task.hpp" line="26" column="1" bodyfile="tools/message_logger/mongodb/tasks/update_appid_task.hpp" bodystart="26" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_mongo_d_b_1_1_update_app_i_d_task_1ac3f60160fe863e709cb268d2e491201d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void MongoDB::UpdateAppIDTask::performBackgroundTask</definition>
+        <argsstring>(TaskManager &amp;mgr, ConnectionThreadData &amp;connectionData)</argsstring>
+        <name>performBackgroundTask</name>
+        <reimplements refid="class_mongo_d_b_1_1_mongo_d_b_background_task_1afa658d48de7addb5b97e449dd3c182fe">performBackgroundTask</reimplements>
+        <param>
+          <type>TaskManager &amp;</type>
+          <declname>mgr</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mongo_d_b_1_1_connection_thread_data" kindref="compound">ConnectionThreadData</ref> &amp;</type>
+          <declname>connectionData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/update_appid_task.hpp" line="36" column="1" bodyfile="tools/message_logger/mongodb/tasks/update_appid_task.hpp" bodystart="36" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3003">
+        <label>MongoDB::MongoDBBackgroundTask</label>
+        <link refid="class_mongo_d_b_1_1_mongo_d_b_background_task"/>
+        <childnode refid="3004" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3002">
+        <label>MongoDB::UpdateAppIDTask</label>
+        <link refid="class_mongo_d_b_1_1_update_app_i_d_task"/>
+        <childnode refid="3003" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3004">
+        <label>BackgroundTask</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3006">
+        <label>MongoDB::MongoDBBackgroundTask</label>
+        <link refid="class_mongo_d_b_1_1_mongo_d_b_background_task"/>
+        <childnode refid="3007" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3005">
+        <label>MongoDB::UpdateAppIDTask</label>
+        <link refid="class_mongo_d_b_1_1_update_app_i_d_task"/>
+        <childnode refid="3006" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3007">
+        <label>BackgroundTask</label>
+      </node>
+    </collaborationgraph>
+    <location file="tools/message_logger/mongodb/tasks/update_appid_task.hpp" line="24" column="1" bodyfile="tools/message_logger/mongodb/tasks/update_appid_task.hpp" bodystart="23" bodyend="110"/>
+    <listofallmembers>
+      <member refid="class_mongo_d_b_1_1_update_app_i_d_task_1a3a1ffa3b7913cc420049416a2673f769" prot="private" virt="non-virtual"><scope>MongoDB::UpdateAppIDTask</scope><name>appid_</name></member>
+      <member refid="class_mongo_d_b_1_1_mongo_d_b_background_task_1a50ca0ec7c9b3842b648f21db4e076a09" prot="protected" virt="non-virtual"><scope>MongoDB::UpdateAppIDTask</scope><name>doBackgroundTask</name></member>
+      <member refid="class_mongo_d_b_1_1_mongo_d_b_background_task_1a05fb4c0e7cfcf525a84f6fdb5619091e" prot="protected" virt="non-virtual"><scope>MongoDB::UpdateAppIDTask</scope><name>doBackgroundTask</name></member>
+      <member refid="class_mongo_d_b_1_1_mongo_d_b_background_task_1a7788d75382d6f561cb9a72656634826a" prot="public" virt="non-virtual"><scope>MongoDB::UpdateAppIDTask</scope><name>MongoDBBackgroundTask</name></member>
+      <member refid="class_mongo_d_b_1_1_update_app_i_d_task_1a985f1f957350ed5362cabae537146daa" prot="private" virt="non-virtual"><scope>MongoDB::UpdateAppIDTask</scope><name>obj_</name></member>
+      <member refid="class_mongo_d_b_1_1_update_app_i_d_task_1ac3f60160fe863e709cb268d2e491201d" prot="protected" virt="virtual"><scope>MongoDB::UpdateAppIDTask</scope><name>performBackgroundTask</name></member>
+      <member refid="class_mongo_d_b_1_1_update_app_i_d_task_1ad17538c1e63d837f9e1a3d17fa0feea1" prot="private" virt="non-virtual"><scope>MongoDB::UpdateAppIDTask</scope><name>uid_</name></member>
+      <member refid="class_mongo_d_b_1_1_update_app_i_d_task_1a5f0f01a441b7c484679ae2e1979e40c7" prot="public" virt="non-virtual"><scope>MongoDB::UpdateAppIDTask</scope><name>UpdateAppIDTask</name></member>
+      <member refid="class_mongo_d_b_1_1_update_app_i_d_task_1aa1439121081804c8c74c6c8de5edfb24" prot="private" virt="non-virtual"><scope>MongoDB::UpdateAppIDTask</scope><name>username_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

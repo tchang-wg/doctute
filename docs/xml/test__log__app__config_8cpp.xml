@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="test__log__app__config_8cpp" kind="file" language="C++">
+    <compoundname>test_log_app_config.cpp</compoundname>
+    <includes refid="test__log__app__config_8hpp" local="yes">test_log_app_config.hpp</includes>
+    <includes local="yes">server/server_app_option_macros.hpp</includes>
+    <incdepgraph>
+      <node id="23291">
+        <label>server/server_app_option_macros.hpp</label>
+      </node>
+      <node id="23290">
+        <label>server/server_app_config.hpp</label>
+      </node>
+      <node id="23288">
+        <label>test_log_app_config.hpp</label>
+        <link refid="test__log__app__config_8hpp_source"/>
+        <childnode refid="23289" relation="include">
+        </childnode>
+        <childnode refid="23290" relation="include">
+        </childnode>
+      </node>
+      <node id="23289">
+        <label>cstdmf/bw_namespace.hpp</label>
+      </node>
+      <node id="23287">
+        <label>tools/test_log_app/test_log_app_config.cpp</label>
+        <link refid="test_log_app_config.cpp"/>
+        <childnode refid="23288" relation="include">
+        </childnode>
+        <childnode refid="23291" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="test__log__app__config_8cpp_1affd2235ad5e52ff2dd40241b81453717" prot="public" static="no">
+        <name>BW_CONFIG_CLASS</name>
+        <initializer><ref refid="class_test_log_app_config" kindref="compound">TestLogAppConfig</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/test_log_app/test_log_app_config.cpp" line="4" column="9" bodyfile="tools/test_log_app/test_log_app_config.cpp" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="test__log__app__config_8cpp_1a6462cb22d4e160c9bb0b934471bf3338" prot="public" static="no">
+        <name>BW_CONFIG_PREFIX</name>
+        <initializer>&quot;testLogApp/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/test_log_app/test_log_app_config.cpp" line="5" column="9" bodyfile="tools/test_log_app/test_log_app_config.cpp" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;test_log_app_config.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>These<sp/>need<sp/>to<sp/>be<sp/>defined<sp/>before<sp/>including<sp/>server_app_option_macros.hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BW_CONFIG_CLASS<sp/>TestLogAppConfig</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BW_CONFIG_PREFIX<sp/>&quot;testLogApp/&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;server/server_app_option_macros.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Section:<sp/>Standard<sp/>options</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Defaults<sp/>for<sp/>automatically-generated<sp/>log<sp/>messages.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logsToGenerate,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20000<sp/>)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/>ServerAppInstanceID,<sp/><sp/>appID,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>following<sp/>components<sp/>are<sp/>combined<sp/>with<sp/>iterating<sp/>values<sp/>to<sp/>generate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>different<sp/>format<sp/>messages,<sp/>and<sp/>then<sp/>combined<sp/>with<sp/>args.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>For<sp/>example<sp/>with<sp/>7<sp/>formats,<sp/>the<sp/>following<sp/>would<sp/>be<sp/>seen:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>Generated<sp/>message<sp/>format<sp/>1<sp/>-<sp/>arg<sp/>value<sp/>=<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>Generated<sp/>message<sp/>format<sp/>2<sp/>-<sp/>arg<sp/>value<sp/>=<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>Generated<sp/>message<sp/>format<sp/>7<sp/>-<sp/>arg<sp/>value<sp/>=<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>Generated<sp/>message<sp/>format<sp/>1<sp/>-<sp/>arg<sp/>value<sp/>=<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>baseMessageFormat<sp/>cannot<sp/>be<sp/>empty.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/><ref refid="namespace_b_w" kindref="compound">BW</ref>::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/><sp/><sp/>baseMessageFormat,<sp/><sp/>&quot;Generated<sp/>message<sp/>format&quot;<sp/>)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Set<sp/>includeArgString<sp/>to<sp/>false<sp/>to<sp/>stop<sp/>an<sp/>arg<sp/>format<sp/>message<sp/>being<sp/>appended</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/><ref refid="namespace_b_w" kindref="compound">BW</ref>::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/><sp/><sp/>argMessageFormat,<sp/><sp/><sp/>&quot;-<sp/>arg<sp/>value<sp/>=&quot;<sp/>)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Breakdown/spread<sp/>of<sp/>priority<sp/>(severity)<sp/>messages<sp/>per<sp/>group<sp/>iteration.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>breakdown<sp/>is<sp/>repeated<sp/>continually<sp/>until<sp/>the<sp/>specified<sp/>or<sp/>default<sp/>message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>count<sp/>is<sp/>reached.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/>infoPriorityCount,<sp/><sp/><sp/><sp/><sp/><sp/>40<sp/>)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/>tracePriorityCount,<sp/><sp/><sp/><sp/><sp/>30<sp/>)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/>debugPriorityCount,<sp/><sp/><sp/><sp/><sp/>20<sp/>)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/>errorPriorityCount,<sp/><sp/><sp/><sp/><sp/>6<sp/>)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/>warningPriorityCount,<sp/><sp/><sp/>3<sp/>)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/>noticePriorityCount,<sp/><sp/><sp/><sp/>1<sp/>)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>unique<sp/>format<sp/>message<sp/>strings<sp/>to<sp/>generate.<sp/>It<sp/>is<sp/>best<sp/>to<sp/>use<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>value<sp/>that<sp/>is<sp/>not<sp/>a<sp/>divisor<sp/>of<sp/>the<sp/>total<sp/>number<sp/>of<sp/>priority<sp/>counts<sp/>above<sp/>-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>this<sp/>will<sp/>allow<sp/>for<sp/>a<sp/>spread<sp/>of<sp/>multiple<sp/>formats<sp/>across<sp/>each<sp/>priority.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Set<sp/>this<sp/>value<sp/>to<sp/>0<sp/>to<sp/>prevent<sp/>format<sp/>&apos;salt&apos;<sp/>from<sp/>being<sp/>inserted<sp/>into<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>format<sp/>message<sp/>after<sp/>baseMessageformat.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/>noOfFormats,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7<sp/>)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>unique<sp/>categories<sp/>to<sp/>generate.<sp/>It<sp/>is<sp/>best<sp/>to<sp/>use<sp/>a<sp/>value<sp/>that<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/>not<sp/>a<sp/>divisor<sp/>of<sp/>the<sp/>total<sp/>number<sp/>of<sp/>priority<sp/>counts<sp/>above<sp/>-<sp/>this<sp/>will<sp/>allow</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">//<sp/>for<sp/>a<sp/>spread<sp/>of<sp/>multiple<sp/>categories<sp/>across<sp/>each<sp/>priority.<sp/>Using<sp/>a<sp/>different</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/>value<sp/>to<sp/>noOfFormats<sp/>will<sp/>also<sp/>allow<sp/>a<sp/>spread<sp/>of<sp/>categories<sp/>across<sp/>formats.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/>noOfCategories,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>9<sp/>)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>value<sp/>below<sp/>determines<sp/>whether<sp/>each<sp/>group<sp/>iteration<sp/>will<sp/>include</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/>categories.<sp/>Every<sp/>&lt;nth&gt;<sp/>iteration<sp/>will<sp/>include<sp/>categories.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NOTE:<sp/>all<sp/>script<sp/>sourced<sp/>logs<sp/>always<sp/>include<sp/>categories<sp/>and<sp/>consequently</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ignore<sp/>this<sp/>value.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/>categoryGroupFrequency,<sp/>4<sp/>)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>value<sp/>below<sp/>determines<sp/>whether<sp/>each<sp/>group<sp/>iteration<sp/>will<sp/>be<sp/>from<sp/>a<sp/>script</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//<sp/>source.<sp/>Every<sp/>&lt;nth&gt;<sp/>iteration<sp/>will<sp/>have<sp/>Script<sp/>as<sp/>its<sp/>source.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/>scriptGroupFrequency,<sp/><sp/><sp/>3<sp/>)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//<sp/>How<sp/>often<sp/>to<sp/>add<sp/>metadata<sp/>to<sp/>a<sp/>message.<sp/>Every<sp/>&lt;nth&gt;<sp/>message<sp/>will<sp/>include</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">//<sp/>metadata.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/>metadataMessageFrequency,<sp/><sp/><sp/>10<sp/>)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>different<sp/>values<sp/>to<sp/>send<sp/>as<sp/>metadata</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/>noOfMetadataValues,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4<sp/>)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Keys<sp/>for<sp/>metadata<sp/>types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/><ref refid="namespace_b_w" kindref="compound">BW</ref>::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/><sp/><sp/>metadataIntTestKeyName,<sp/>&quot;testIntegerMetadata&quot;<sp/>)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/><ref refid="namespace_b_w" kindref="compound">BW</ref>::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/><sp/><sp/>metadataStrTestKeyName,<sp/>&quot;testStringMetadata&quot;<sp/>)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//Address<sp/>and<sp/>port<sp/>of<sp/>message_logger<sp/>to<sp/>force<sp/>logging<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/><ref refid="namespace_b_w" kindref="compound">BW</ref>::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/><sp/><sp/>messageLoggerAddress,<sp/>&quot;&quot;<sp/>)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">BW_OPTION<sp/><sp/><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messageLoggerPort,<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">//<sp/>test_log_app_config.cpp</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="tools/test_log_app/test_log_app_config.cpp"/>
+  </compounddef>
+</doxygen>

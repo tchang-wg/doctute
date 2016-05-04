@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="accelerate__to__point__controller_8hpp" kind="file" language="C++">
+    <compoundname>accelerate_to_point_controller.hpp</compoundname>
+    <includes refid="base__acceleration__controller_8hpp" local="yes">base_acceleration_controller.hpp</includes>
+    <includedby refid="accelerate__to__point__controller_8cpp" local="yes">cellapp/accelerate_to_point_controller.cpp</includedby>
+    <includedby refid="entity__navigate_8cpp" local="yes">cellapp/entity_navigate.cpp</includedby>
+    <incdepgraph>
+      <node id="6277">
+        <label>build/bwapi.hpp</label>
+      </node>
+      <node id="6268">
+        <label>cellapp/accelerate_to_point_controller.hpp</label>
+        <link refid="accelerate_to_point_controller.hpp"/>
+        <childnode refid="6269" relation="include">
+        </childnode>
+      </node>
+      <node id="6275">
+        <label>script/script_object.hpp</label>
+      </node>
+      <node id="6273">
+        <label>cstdmf/binary_stream.hpp</label>
+      </node>
+      <node id="6276">
+        <label>cstdmf/md5.hpp</label>
+      </node>
+      <node id="6274">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="6278">
+        <label>server/updatable.hpp</label>
+      </node>
+      <node id="6269">
+        <label>base_acceleration_controller.hpp</label>
+        <link refid="base__acceleration__controller_8hpp_source"/>
+        <childnode refid="6270" relation="include">
+        </childnode>
+        <childnode refid="6272" relation="include">
+        </childnode>
+        <childnode refid="6278" relation="include">
+        </childnode>
+      </node>
+      <node id="6271">
+        <label>Python.h</label>
+      </node>
+      <node id="6270">
+        <label>controller.hpp</label>
+        <link refid="controller_8hpp_source"/>
+        <childnode refid="6271" relation="include">
+        </childnode>
+        <childnode refid="6272" relation="include">
+        </childnode>
+        <childnode refid="6273" relation="include">
+        </childnode>
+        <childnode refid="6274" relation="include">
+        </childnode>
+        <childnode refid="6275" relation="include">
+        </childnode>
+        <childnode refid="6276" relation="include">
+        </childnode>
+        <childnode refid="6277" relation="include">
+        </childnode>
+      </node>
+      <node id="6272">
+        <label>network/basictypes.hpp</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_accelerate_to_point_controller" prot="public">AccelerateToPointController</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ACCELERATE_TO_POINT_CONTROLLER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ACCELERATE_TO_POINT_CONTROLLER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;base_acceleration_controller.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_accelerate_to_point_controller" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_accelerate_to_point_controller" kindref="compound">AccelerateToPointController</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_base_acceleration_controller" kindref="compound">BaseAccelerationController</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>DECLARE_CONTROLLER_TYPE(<sp/><ref refid="class_accelerate_to_point_controller" kindref="compound">AccelerateToPointController</ref><sp/>)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_accelerate_to_point_controller" kindref="compound">AccelerateToPointController</ref>(<sp/>Vector3<sp/>destination<sp/>=<sp/>Vector3(0,0,0),</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>acceleration<sp/>=<sp/>0.0f,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxSpeed<sp/>=<sp/>0.0f,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_base_acceleration_controller_1a1eeb15aa12b74f0c68d61922ae93d171" kindref="member">Facing</ref><sp/>facing<sp/>=<sp/><ref refid="class_base_acceleration_controller_1a1eeb15aa12b74f0c68d61922ae93d171a83a38a977ed23f98e010f9c49fb7e9b0" kindref="member">FACING_NONE</ref>,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>stopAtDestination<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_accelerate_to_point_controller_1ac4fba9ab2ed5d696e4b6b3d2a2be8cc4" kindref="member">writeRealToStream</ref>(<sp/>BinaryOStream<sp/>&amp;<sp/>stream<sp/>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_accelerate_to_point_controller_1aca599895f46106b8aaaf3d6bba0a8c9a" kindref="member">readRealFromStream</ref>(<sp/>BinaryIStream<sp/>&amp;<sp/>stream<sp/>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_accelerate_to_point_controller_1acc2910b8a85aeef78a6a1b5f7d5af4d7" kindref="member">update</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>Vector3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>destination_;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stopAtDestination_;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ACCELERATE_TO_POINT_CONTROLLER_HPP</highlight></codeline>
+    </programlisting>
+    <location file="cellapp/accelerate_to_point_controller.hpp"/>
+  </compounddef>
+</doxygen>

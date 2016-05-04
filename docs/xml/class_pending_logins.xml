@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_pending_logins" kind="class" language="C++" prot="public">
+    <compoundname>PendingLogins</compoundname>
+    <includes refid="pending__logins_8hpp" local="no">pending_logins.hpp</includes>
+    <innerclass refid="class_pending_logins_1_1_queue_element" prot="private">PendingLogins::QueueElement</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_pending_logins_1a545effedb32cbdc2275b263a51eb89a7" prot="public" static="no">
+        <type>BW::map&lt; SessionKey, <ref refid="class_pending_login" kindref="compound">PendingLogin</ref> &gt;</type>
+        <definition>typedef BW::map&lt; SessionKey, PendingLogin &gt; PendingLogins::Container</definition>
+        <argsstring></argsstring>
+        <name>Container</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="50" column="1" bodyfile="baseapp/pending_logins.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_pending_logins_1a9c46ffb92154696a6b6cb1093912f11e" prot="public" static="no">
+        <type>Container::iterator</type>
+        <definition>typedef Container::iterator PendingLogins::iterator</definition>
+        <argsstring></argsstring>
+        <name>iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="51" column="1" bodyfile="baseapp/pending_logins.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_pending_logins_1a0f8e25a0f8760f131542b3725883a84c" prot="private" static="no">
+        <type>BW::list&lt; QueueElement &gt;</type>
+        <definition>typedef BW::list&lt; QueueElement &gt; PendingLogins::Queue</definition>
+        <argsstring></argsstring>
+        <name>Queue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="99" column="1" bodyfile="baseapp/pending_logins.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_pending_logins_1a2d28874112260919fbb9cde72f5e7b1a" prot="private" static="no" mutable="no">
+        <type>Container</type>
+        <definition>Container PendingLogins::container_</definition>
+        <argsstring></argsstring>
+        <name>container_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="64" column="1" bodyfile="baseapp/pending_logins.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pending_logins_1af3956d7590f0d129c8bcbe7f383bc628" prot="private" static="no" mutable="no">
+        <type>Queue</type>
+        <definition>Queue PendingLogins::queue_</definition>
+        <argsstring></argsstring>
+        <name>queue_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="100" column="1" bodyfile="baseapp/pending_logins.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pending_logins_1a9bf132538a3d442955f607f534edb166" prot="private" static="no" mutable="no">
+        <type>uint32</type>
+        <definition>uint32 PendingLogins::numInternalLogins_</definition>
+        <argsstring></argsstring>
+        <name>numInternalLogins_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="102" column="1" bodyfile="baseapp/pending_logins.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pending_logins_1add96a4b6c5516cb57110623383a28663" prot="private" static="no" mutable="no">
+        <type>uint32</type>
+        <definition>uint32 PendingLogins::numExternalLogins_</definition>
+        <argsstring></argsstring>
+        <name>numExternalLogins_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="103" column="1" bodyfile="baseapp/pending_logins.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pending_logins_1a8f544adced070fb59163163598f50be8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE PendingLogins::PendingLogins</definition>
+        <argsstring>()</argsstring>
+        <name>PendingLogins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="53" column="1" bodyfile="baseapp/pending_logins.cpp" bodystart="21" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pending_logins_1a7ce8de806db39f3d00be9b74dbde63d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>iterator</type>
+        <definition>PendingLogins::iterator PendingLogins::find</definition>
+        <argsstring>(SessionKey key)</argsstring>
+        <name>find</name>
+        <param>
+          <type>SessionKey</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the pending login associated with the input key. Like standard STL containers, it returns the end iterator when the item cannot be found. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="55" column="1" bodyfile="baseapp/pending_logins.cpp" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pending_logins_1aac99bf35c03e65edda5a576eddcd4a8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>iterator</type>
+        <definition>PendingLogins::iterator PendingLogins::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the end iterator associated with <ref refid="class_pending_logins" kindref="compound">PendingLogins</ref> like standard STL containers. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="56" column="1" bodyfile="baseapp/pending_logins.cpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pending_logins_1afa8acb8874e3a1faf7cb9a673a6f1995" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PendingLogins::erase</definition>
+        <argsstring>(iterator iter)</argsstring>
+        <name>erase</name>
+        <param>
+          <type>iterator</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method removes the element pointed to by the input iterator. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="57" column="1" bodyfile="baseapp/pending_logins.cpp" bodystart="54" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pending_logins_1a9dfea252513485b8557d5c44d1380064" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SessionKey</type>
+        <definition>SessionKey PendingLogins::add</definition>
+        <argsstring>(Proxy *pProxy, const Mercury::Address &amp;loginAppAddr)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="class_proxy" kindref="compound">Proxy</ref> *</type>
+          <declname>pProxy</declname>
+        </param>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>loginAppAddr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a proxy to the set of pending logins. A baseAppLogin request is now expected from the client to take it out of this set. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="59" column="1" bodyfile="baseapp/pending_logins.cpp" bodystart="73" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pending_logins_1a4933144f9ced124566f896568751b8dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PendingLogins::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks whether any pending logins have timed out. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="61" column="1" bodyfile="baseapp/pending_logins.cpp" bodystart="108" bodyend="136"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to store information about entities that have logged in via the <ref refid="class_login_app" kindref="compound">LoginApp</ref> but still need to confirm this via the <ref refid="class_base_app" kindref="compound">BaseApp</ref>. </para>    </detaileddescription>
+    <location file="baseapp/pending_logins.hpp" line="48" column="1" bodyfile="baseapp/pending_logins.hpp" bodystart="47" bodyend="104"/>
+    <listofallmembers>
+      <member refid="class_pending_logins_1a9dfea252513485b8557d5c44d1380064" prot="public" virt="non-virtual"><scope>PendingLogins</scope><name>add</name></member>
+      <member refid="class_pending_logins_1a545effedb32cbdc2275b263a51eb89a7" prot="public" virt="non-virtual"><scope>PendingLogins</scope><name>Container</name></member>
+      <member refid="class_pending_logins_1a2d28874112260919fbb9cde72f5e7b1a" prot="private" virt="non-virtual"><scope>PendingLogins</scope><name>container_</name></member>
+      <member refid="class_pending_logins_1aac99bf35c03e65edda5a576eddcd4a8c" prot="public" virt="non-virtual"><scope>PendingLogins</scope><name>end</name></member>
+      <member refid="class_pending_logins_1afa8acb8874e3a1faf7cb9a673a6f1995" prot="public" virt="non-virtual"><scope>PendingLogins</scope><name>erase</name></member>
+      <member refid="class_pending_logins_1a7ce8de806db39f3d00be9b74dbde63d0" prot="public" virt="non-virtual"><scope>PendingLogins</scope><name>find</name></member>
+      <member refid="class_pending_logins_1a9c46ffb92154696a6b6cb1093912f11e" prot="public" virt="non-virtual"><scope>PendingLogins</scope><name>iterator</name></member>
+      <member refid="class_pending_logins_1add96a4b6c5516cb57110623383a28663" prot="private" virt="non-virtual"><scope>PendingLogins</scope><name>numExternalLogins_</name></member>
+      <member refid="class_pending_logins_1a9bf132538a3d442955f607f534edb166" prot="private" virt="non-virtual"><scope>PendingLogins</scope><name>numInternalLogins_</name></member>
+      <member refid="class_pending_logins_1a8f544adced070fb59163163598f50be8" prot="public" virt="non-virtual"><scope>PendingLogins</scope><name>PendingLogins</name></member>
+      <member refid="class_pending_logins_1a0f8e25a0f8760f131542b3725883a84c" prot="private" virt="non-virtual"><scope>PendingLogins</scope><name>Queue</name></member>
+      <member refid="class_pending_logins_1af3956d7590f0d129c8bcbe7f383bc628" prot="private" virt="non-virtual"><scope>PendingLogins</scope><name>queue_</name></member>
+      <member refid="class_pending_logins_1a4933144f9ced124566f896568751b8dd" prot="public" virt="non-virtual"><scope>PendingLogins</scope><name>tick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

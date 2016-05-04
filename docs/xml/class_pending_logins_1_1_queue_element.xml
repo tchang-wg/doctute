@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_pending_logins_1_1_queue_element" kind="class" language="C++" prot="private">
+    <compoundname>PendingLogins::QueueElement</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_pending_logins_1_1_queue_element_1ade99c287fa4d6e66517ce8b710d3a516" prot="private" static="no" mutable="no">
+        <type>GameTime</type>
+        <definition>GameTime PendingLogins::QueueElement::expiryTime_</definition>
+        <argsstring></argsstring>
+        <name>expiryTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="94" column="1" bodyfile="baseapp/pending_logins.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pending_logins_1_1_queue_element_1ac18a62c119806100e835d8595127fae7" prot="private" static="no" mutable="no">
+        <type>EntityID</type>
+        <definition>EntityID PendingLogins::QueueElement::proxyID_</definition>
+        <argsstring></argsstring>
+        <name>proxyID_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="95" column="1" bodyfile="baseapp/pending_logins.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pending_logins_1_1_queue_element_1ab355c09eb0d9a029159373b03b82e8db" prot="private" static="no" mutable="no">
+        <type>SessionKey</type>
+        <definition>SessionKey PendingLogins::QueueElement::loginKey_</definition>
+        <argsstring></argsstring>
+        <name>loginKey_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="96" column="1" bodyfile="baseapp/pending_logins.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pending_logins_1_1_queue_element_1a41fbb78238c31e8a8ab6f8fa4fb4becf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PendingLogins::QueueElement::QueueElement</definition>
+        <argsstring>(GameTime expiryTime, EntityID proxyID, SessionKey loginKey)</argsstring>
+        <name>QueueElement</name>
+        <param>
+          <type>GameTime</type>
+          <declname>expiryTime</declname>
+        </param>
+        <param>
+          <type>EntityID</type>
+          <declname>proxyID</declname>
+        </param>
+        <param>
+          <type>SessionKey</type>
+          <declname>loginKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="74" column="1" bodyfile="baseapp/pending_logins.hpp" bodystart="74" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pending_logins_1_1_queue_element_1a8393f1172f19c13c1a3c2865b51618fb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PendingLogins::QueueElement::hasExpired</definition>
+        <argsstring>(GameTime time) const </argsstring>
+        <name>hasExpired</name>
+        <param>
+          <type>GameTime</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="82" column="1" bodyfile="baseapp/pending_logins.hpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pending_logins_1_1_queue_element_1a3c64208a9abf2bb5680ed4a64c3a6b14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PendingLogins::QueueElement::expire</definition>
+        <argsstring>(const Mercury::Address &amp;clientAddr, bool isFirstLogin, bool isFirstExternalLogin)</argsstring>
+        <name>expire</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>clientAddr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isFirstLogin</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isFirstExternalLogin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called when a pending login expires. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="87" column="1" bodyfile="baseapp/pending_logins.cpp" bodystart="142" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pending_logins_1_1_queue_element_1a4179bad5a583995cacd4d36548ebd769" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>EntityID</type>
+        <definition>EntityID PendingLogins::QueueElement::proxyID</definition>
+        <argsstring>() const </argsstring>
+        <name>proxyID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="90" column="1" bodyfile="baseapp/pending_logins.hpp" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pending_logins_1_1_queue_element_1a5ee1121e9157643c464cb455749053de" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>SessionKey</type>
+        <definition>SessionKey PendingLogins::QueueElement::loginKey</definition>
+        <argsstring>() const </argsstring>
+        <name>loginKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/pending_logins.hpp" line="91" column="1" bodyfile="baseapp/pending_logins.hpp" bodystart="91" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to keep information in a time-sorted queue. It is used to identify proxies that have logged in via <ref refid="class_login_app" kindref="compound">LoginApp</ref> but were never confirmed directly with the <ref refid="class_base_app" kindref="compound">BaseApp</ref>. </para>    </detaileddescription>
+    <location file="baseapp/pending_logins.hpp" line="72" column="1" bodyfile="baseapp/pending_logins.hpp" bodystart="71" bodyend="97"/>
+    <listofallmembers>
+      <member refid="class_pending_logins_1_1_queue_element_1a3c64208a9abf2bb5680ed4a64c3a6b14" prot="public" virt="non-virtual"><scope>PendingLogins::QueueElement</scope><name>expire</name></member>
+      <member refid="class_pending_logins_1_1_queue_element_1ade99c287fa4d6e66517ce8b710d3a516" prot="private" virt="non-virtual"><scope>PendingLogins::QueueElement</scope><name>expiryTime_</name></member>
+      <member refid="class_pending_logins_1_1_queue_element_1a8393f1172f19c13c1a3c2865b51618fb" prot="public" virt="non-virtual"><scope>PendingLogins::QueueElement</scope><name>hasExpired</name></member>
+      <member refid="class_pending_logins_1_1_queue_element_1a5ee1121e9157643c464cb455749053de" prot="public" virt="non-virtual"><scope>PendingLogins::QueueElement</scope><name>loginKey</name></member>
+      <member refid="class_pending_logins_1_1_queue_element_1ab355c09eb0d9a029159373b03b82e8db" prot="private" virt="non-virtual"><scope>PendingLogins::QueueElement</scope><name>loginKey_</name></member>
+      <member refid="class_pending_logins_1_1_queue_element_1a4179bad5a583995cacd4d36548ebd769" prot="public" virt="non-virtual"><scope>PendingLogins::QueueElement</scope><name>proxyID</name></member>
+      <member refid="class_pending_logins_1_1_queue_element_1ac18a62c119806100e835d8595127fae7" prot="private" virt="non-virtual"><scope>PendingLogins::QueueElement</scope><name>proxyID_</name></member>
+      <member refid="class_pending_logins_1_1_queue_element_1a41fbb78238c31e8a8ab6f8fa4fb4becf" prot="public" virt="non-virtual"><scope>PendingLogins::QueueElement</scope><name>QueueElement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

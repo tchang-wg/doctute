@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_cell_app_channels" kind="class" language="C++" prot="public">
+    <compoundname>CellAppChannels</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Singleton&lt; CellAppChannels &gt;</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">TimerHandler</basecompoundref>
+    <includes refid="cell__app__channels_8hpp" local="no">cell_app_channels.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_cell_app_channels_1ae089c9cb0da3295b825af623cd3e8655" prot="private" static="no">
+        <type>BW::map&lt; Mercury::Address, <ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref> * &gt;</type>
+        <definition>typedef BW::map&lt; Mercury::Address, CellAppChannel * &gt; CellAppChannels::Map</definition>
+        <argsstring></argsstring>
+        <name>Map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_app_channels.hpp" line="57" column="1" bodyfile="cellapp/cell_app_channels.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_cell_app_channels_1ad3a2d00603dcc8c766b55bba6ef14b2d" prot="private" static="no">
+        <type>Map::iterator</type>
+        <definition>typedef Map::iterator CellAppChannels::iterator</definition>
+        <argsstring></argsstring>
+        <name>iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_app_channels.hpp" line="58" column="1" bodyfile="cellapp/cell_app_channels.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_cell_app_channels_1ab41d03b177988f444c2d6c5f022d2803" prot="private" static="no">
+        <type>BW::set&lt; Mercury::Address &gt;</type>
+        <definition>typedef BW::set&lt; Mercury::Address &gt; CellAppChannels::RecentlyDead</definition>
+        <argsstring></argsstring>
+        <name>RecentlyDead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_app_channels.hpp" line="64" column="1" bodyfile="cellapp/cell_app_channels.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_cell_app_channels_1a0f0befa3a0ffacfc1d7645030902e3dc" prot="private" static="no" mutable="no">
+        <type>Map</type>
+        <definition>Map CellAppChannels::map_</definition>
+        <argsstring></argsstring>
+        <name>map_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_app_channels.hpp" line="60" column="1" bodyfile="cellapp/cell_app_channels.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_channels_1a732e2a62097c5bde3ee178b0d0a5b5f2" prot="private" static="no" mutable="no">
+        <type>RecentlyDead</type>
+        <definition>RecentlyDead CellAppChannels::recentlyDead_</definition>
+        <argsstring></argsstring>
+        <name>recentlyDead_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_app_channels.hpp" line="65" column="1" bodyfile="cellapp/cell_app_channels.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_channels_1a5c945232f3c2458223c30b820ec5571c" prot="private" static="no" mutable="no">
+        <type>uint64</type>
+        <definition>uint64 CellAppChannels::lastTimeOfDeath_</definition>
+        <argsstring></argsstring>
+        <name>lastTimeOfDeath_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_app_channels.hpp" line="67" column="1" bodyfile="cellapp/cell_app_channels.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cell_app_channels_1a830db58ade398c0f71f31a4eec141fe5" prot="private" static="no" mutable="no">
+        <type>TimerHandle</type>
+        <definition>TimerHandle CellAppChannels::timer_</definition>
+        <argsstring></argsstring>
+        <name>timer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_app_channels.hpp" line="68" column="1" bodyfile="cellapp/cell_app_channels.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_cell_app_channels_1a4c1a20c028d525db4404da73d246fa96" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int CellAppChannels::RECENTLY_DEAD_PERIOD</definition>
+        <argsstring></argsstring>
+        <name>RECENTLY_DEAD_PERIOD</name>
+        <initializer>= 60</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_app_channels.hpp" line="62" column="1" bodyfile="cellapp/cell_app_channels.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cell_app_channels_1a0c032bdd6abdccbc528ed50b48137578" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE CellAppChannels::CellAppChannels</definition>
+        <argsstring>(int microseconds, Mercury::EventDispatcher &amp;dispatcher)</argsstring>
+        <name>CellAppChannels</name>
+        <param>
+          <type>int</type>
+          <declname>microseconds</declname>
+        </param>
+        <param>
+          <type>Mercury::EventDispatcher &amp;</type>
+          <declname>dispatcher</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_app_channels.hpp" line="32" column="1" bodyfile="cellapp/cell_app_channels.cpp" bodystart="23" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_channels_1a1bf15d2145b729ce4255726ea28472b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CellAppChannels::~CellAppChannels</definition>
+        <argsstring>()</argsstring>
+        <name>~CellAppChannels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_app_channels.hpp" line="33" column="1" bodyfile="cellapp/cell_app_channels.cpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_channels_1a1f1e9aa5c9129dab7eb8312ba0ea0453" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppChannels::remoteFailure</definition>
+        <argsstring>(const Mercury::Address &amp;addr)</argsstring>
+        <name>remoteFailure</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called when one (or all) remote processes fail. Indicate that whole machine has failed by setting port to 0. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_app_channels.hpp" line="40" column="1" bodyfile="cellapp/cell_app_channels.cpp" bodystart="130" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_channels_1a6a4a358f24563d238c35b1043ada6e99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppChannels::startTimer</definition>
+        <argsstring>(int microseconds, Mercury::EventDispatcher &amp;dispatcher)</argsstring>
+        <name>startTimer</name>
+        <param>
+          <type>int</type>
+          <declname>microseconds</declname>
+        </param>
+        <param>
+          <type>Mercury::EventDispatcher &amp;</type>
+          <declname>dispatcher</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method starts or restarts the timer which is responsible for periodically flushing all the channels. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_app_channels.hpp" line="42" column="1" bodyfile="cellapp/cell_app_channels.cpp" bodystart="161" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_channels_1a6562d08227d076a58a76f065a7b8b856" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppChannels::stopTimer</definition>
+        <argsstring>()</argsstring>
+        <name>stopTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method stops the timer which is responsible for periodically flushing all the channels. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_app_channels.hpp" line="44" column="1" bodyfile="cellapp/cell_app_channels.cpp" bodystart="173" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_channels_1a5c12ee8b8adc3c474420b13eb7b96eae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppChannels::sendAll</definition>
+        <argsstring>()</argsstring>
+        <name>sendAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method calls send on all of the <ref refid="class_cell_app_channels" kindref="compound">CellAppChannels</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_app_channels.hpp" line="46" column="1" bodyfile="cellapp/cell_app_channels.cpp" bodystart="46" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_channels_1aeafdda88363f048bb1d86c52e33ba8eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppChannels::sendTickCompleteToAll</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>sendTickCompleteToAll</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends gameTime to all other <ref refid="class_cell_apps" kindref="compound">CellApps</ref> and flushes all <ref refid="class_cell_app" kindref="compound">CellApp</ref> channels </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_app_channels.hpp" line="48" column="1" bodyfile="cellapp/cell_app_channels.cpp" bodystart="183" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_channels_1a4af8e1c058e62f1574105fcf18cfc6ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppChannels::onRemoteTickComplete</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, GameTime remoteGameTime)</argsstring>
+        <name>onRemoteTickComplete</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>GameTime</type>
+          <declname>remoteGameTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles remote message on tick processing completion </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_app_channels.hpp" line="50" column="1" bodyfile="cellapp/cell_app_channels.cpp" bodystart="211" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_channels_1aa934376ad43fa709a5e4e9fe34564a57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CellAppChannels::haveAllChannelsReceivedTime</definition>
+        <argsstring>(GameTime gameTime)</argsstring>
+        <name>haveAllChannelsReceivedTime</name>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns true if all good channels have received game time not less than the given time. No remote channels is good too. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_app_channels.hpp" line="52" column="1" bodyfile="cellapp/cell_app_channels.cpp" bodystart="230" bodyend="244"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_cell_app_channels_1aa7ecf1be7f1f780d73ae7964b831a695" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CellAppChannels::handleTimeout</definition>
+        <argsstring>(TimerHandle handle, void *arg)</argsstring>
+        <name>handleTimeout</name>
+        <param>
+          <type>TimerHandle</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/cell_app_channels.hpp" line="55" column="1" bodyfile="cellapp/cell_app_channels.cpp" bodystart="69" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is the collection of <ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref> instances. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="482">
+        <label>TimerHandler</label>
+      </node>
+      <node id="481">
+        <label>Singleton&lt; CellAppChannels &gt;</label>
+      </node>
+      <node id="480">
+        <label>CellAppChannels</label>
+        <link refid="class_cell_app_channels"/>
+        <childnode refid="481" relation="public-inheritance">
+        </childnode>
+        <childnode refid="482" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="485">
+        <label>TimerHandler</label>
+      </node>
+      <node id="484">
+        <label>Singleton&lt; CellAppChannels &gt;</label>
+      </node>
+      <node id="483">
+        <label>CellAppChannels</label>
+        <link refid="class_cell_app_channels"/>
+        <childnode refid="484" relation="public-inheritance">
+        </childnode>
+        <childnode refid="485" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/cell_app_channels.hpp" line="30" column="1" bodyfile="cellapp/cell_app_channels.hpp" bodystart="28" bodyend="69"/>
+    <listofallmembers>
+      <member refid="class_cell_app_channels_1a0c032bdd6abdccbc528ed50b48137578" prot="public" virt="non-virtual"><scope>CellAppChannels</scope><name>CellAppChannels</name></member>
+      <member refid="class_cell_app_channels_1aa7ecf1be7f1f780d73ae7964b831a695" prot="private" virt="virtual"><scope>CellAppChannels</scope><name>handleTimeout</name></member>
+      <member refid="class_cell_app_channels_1aa934376ad43fa709a5e4e9fe34564a57" prot="public" virt="non-virtual"><scope>CellAppChannels</scope><name>haveAllChannelsReceivedTime</name></member>
+      <member refid="class_cell_app_channels_1ad3a2d00603dcc8c766b55bba6ef14b2d" prot="private" virt="non-virtual"><scope>CellAppChannels</scope><name>iterator</name></member>
+      <member refid="class_cell_app_channels_1a5c945232f3c2458223c30b820ec5571c" prot="private" virt="non-virtual"><scope>CellAppChannels</scope><name>lastTimeOfDeath_</name></member>
+      <member refid="class_cell_app_channels_1ae089c9cb0da3295b825af623cd3e8655" prot="private" virt="non-virtual"><scope>CellAppChannels</scope><name>Map</name></member>
+      <member refid="class_cell_app_channels_1a0f0befa3a0ffacfc1d7645030902e3dc" prot="private" virt="non-virtual"><scope>CellAppChannels</scope><name>map_</name></member>
+      <member refid="class_cell_app_channels_1a4af8e1c058e62f1574105fcf18cfc6ad" prot="public" virt="non-virtual"><scope>CellAppChannels</scope><name>onRemoteTickComplete</name></member>
+      <member refid="class_cell_app_channels_1a4c1a20c028d525db4404da73d246fa96" prot="private" virt="non-virtual"><scope>CellAppChannels</scope><name>RECENTLY_DEAD_PERIOD</name></member>
+      <member refid="class_cell_app_channels_1ab41d03b177988f444c2d6c5f022d2803" prot="private" virt="non-virtual"><scope>CellAppChannels</scope><name>RecentlyDead</name></member>
+      <member refid="class_cell_app_channels_1a732e2a62097c5bde3ee178b0d0a5b5f2" prot="private" virt="non-virtual"><scope>CellAppChannels</scope><name>recentlyDead_</name></member>
+      <member refid="class_cell_app_channels_1a1f1e9aa5c9129dab7eb8312ba0ea0453" prot="public" virt="non-virtual"><scope>CellAppChannels</scope><name>remoteFailure</name></member>
+      <member refid="class_cell_app_channels_1a5c12ee8b8adc3c474420b13eb7b96eae" prot="public" virt="non-virtual"><scope>CellAppChannels</scope><name>sendAll</name></member>
+      <member refid="class_cell_app_channels_1aeafdda88363f048bb1d86c52e33ba8eb" prot="public" virt="non-virtual"><scope>CellAppChannels</scope><name>sendTickCompleteToAll</name></member>
+      <member refid="class_cell_app_channels_1a6a4a358f24563d238c35b1043ada6e99" prot="public" virt="non-virtual"><scope>CellAppChannels</scope><name>startTimer</name></member>
+      <member refid="class_cell_app_channels_1a6562d08227d076a58a76f065a7b8b856" prot="public" virt="non-virtual"><scope>CellAppChannels</scope><name>stopTimer</name></member>
+      <member refid="class_cell_app_channels_1a830db58ade398c0f71f31a4eec141fe5" prot="private" virt="non-virtual"><scope>CellAppChannels</scope><name>timer_</name></member>
+      <member refid="class_cell_app_channels_1a1bf15d2145b729ce4255726ea28472b6" prot="public" virt="non-virtual"><scope>CellAppChannels</scope><name>~CellAppChannels</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

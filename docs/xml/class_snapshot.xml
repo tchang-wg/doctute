@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_snapshot" kind="class" language="C++" prot="public">
+    <compoundname>Snapshot</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_snapshot_1a4924c183539b08e2fdb49e99dc68ac03" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string Snapshot::destinationIP_</definition>
+        <argsstring></argsstring>
+        <name>destinationIP_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.hpp" line="45" column="1" bodyfile="tools/transfer_db/snapshot.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_snapshot_1a0832a4570a5271b58aae01667271dc2e" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string Snapshot::destinationPath_</definition>
+        <argsstring></argsstring>
+        <name>destinationPath_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.hpp" line="46" column="1" bodyfile="tools/transfer_db/snapshot.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_snapshot_1adc80366e473a680801cd26f838b216b1" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string Snapshot::limitKbps_</definition>
+        <argsstring></argsstring>
+        <name>limitKbps_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.hpp" line="47" column="1" bodyfile="tools/transfer_db/snapshot.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_snapshot_1a3eb4358b4d45d5f2a96de4e2af782aac" prot="private" static="no" mutable="no">
+        <type>std::auto_ptr&lt; SignalProcessor &gt;</type>
+        <definition>std::auto_ptr&lt; SignalProcessor &gt; Snapshot::pSignalProcessor_</definition>
+        <argsstring></argsstring>
+        <name>pSignalProcessor_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.hpp" line="49" column="1" bodyfile="tools/transfer_db/snapshot.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_snapshot_1afbb9ea1d6bd1c57817fb2de4484d19e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Snapshot::Snapshot</definition>
+        <argsstring>()</argsstring>
+        <name>Snapshot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.hpp" line="19" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="147" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="class_snapshot_1a480e91a436e6611f613ea4d1758f43c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Snapshot::init</definition>
+        <argsstring>(BW::string destinationIP, BW::string destinationPath, BW::string limitKbps)</argsstring>
+        <name>init</name>
+        <param>
+          <type>BW::string</type>
+          <declname>destinationIP</declname>
+        </param>
+        <param>
+          <type>BW::string</type>
+          <declname>destinationPath</declname>
+        </param>
+        <param>
+          <type>BW::string</type>
+          <declname>limitKbps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.hpp" line="21" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="156" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_snapshot_1a9dfc04d15821d7144e1e26ee663175b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Snapshot::transferPrimary</definition>
+        <argsstring>()</argsstring>
+        <name>transferPrimary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method initiates the process of snapshotting the primary database. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.hpp" line="24" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="479" bodyend="534"/>
+      </memberdef>
+      <memberdef kind="function" id="class_snapshot_1a904a4cb4be707d57c02ab0d38c9711d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Snapshot::transferSecondary</definition>
+        <argsstring>(const BW::string &amp;sqlitePath)</argsstring>
+        <name>transferSecondary</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>sqlitePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method makes a safe backup of the sqlite secondary database and uses rsync to transfer it back to the requesting host.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sqlitePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The location of the sqlite database on the local host.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.hpp" line="25" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="580" bodyend="646"/>
+      </memberdef>
+      <memberdef kind="function" id="class_snapshot_1ad4e06a3bc38fa72e13194d0e09aae484" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Snapshot::onChildAboutToExec</definition>
+        <argsstring>()</argsstring>
+        <name>onChildAboutToExec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This methods is called in a child process to close all file descriptors and sockets that were opened by the parent process. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.hpp" line="27" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="219" bodyend="223"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_snapshot_1a0dc5beb3ab470f314b8824b32a2e2314" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>BW::string</type>
+        <definition>BW::string Snapshot::destination</definition>
+        <argsstring>() const </argsstring>
+        <name>destination</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method provides a convenient interface for the merged form of the IP and path that Rsync will use for copying the file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.hpp" line="30" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="353" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="class_snapshot_1a2c11501757c79bcce22f75ecb19d1f67" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Snapshot::isSnapshotHelperSetUidRoot</definition>
+        <argsstring>() const </argsstring>
+        <name>isSnapshotHelperSetUidRoot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method tests whether the snapshot_helper process is able to be successfully executed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.hpp" line="32" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="180" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_snapshot_1a76370c5100c1587dbd905be587a51dcb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Snapshot::takePrimarySnapshot</definition>
+        <argsstring>(BW::string &amp;pathToSnapshot)</argsstring>
+        <name>takePrimarySnapshot</name>
+        <param>
+          <type>BW::string &amp;</type>
+          <declname>pathToSnapshot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method uses the snapshot_helper program to take a snapshot of the LVM volume that contains the MySQL database. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.hpp" line="33" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="230" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="class_snapshot_1aee00879705c7cbb1178900b8d8968eac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Snapshot::removePrimarySnapshot</definition>
+        <argsstring>()</argsstring>
+        <name>removePrimarySnapshot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method uses the snapshot_helper program to remove a snapshot that has been previously taken and transferred back to the requesting host. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.hpp" line="34" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="313" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="class_snapshot_1ad6ba38a577ac9dc2f135ec5bc4d87d45" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Snapshot::transferSnapshotViaRsync</definition>
+        <argsstring>(BW::string srcPath)</argsstring>
+        <name>transferSnapshotViaRsync</name>
+        <param>
+          <type>BW::string</type>
+          <declname>srcPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method transfers a snapshot that has already been taken back to the requesting machine using the program rsync. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.hpp" line="36" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="469" bodyend="473"/>
+      </memberdef>
+      <memberdef kind="function" id="class_snapshot_1aae40bdff6fd678f1dad347489ab959cd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Snapshot::sendSnapshot</definition>
+        <argsstring>(BW::string srcPath)</argsstring>
+        <name>sendSnapshot</name>
+        <param>
+          <type>BW::string</type>
+          <declname>srcPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.hpp" line="37" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="364" bodyend="404"/>
+      </memberdef>
+      <memberdef kind="function" id="class_snapshot_1a14ae27f30ea73f1398459f8b515ee0c9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Snapshot::sendCompletionFile</definition>
+        <argsstring>(BW::string srcPath)</argsstring>
+        <name>sendCompletionFile</name>
+        <param>
+          <type>BW::string</type>
+          <declname>srcPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.hpp" line="38" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="410" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="class_snapshot_1aa966c13cc07ea999e4dd7f3983eefdc0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Snapshot::backupSqliteDatabase</definition>
+        <argsstring>(const BW::string &amp;srcPath, const BW::string &amp;destPath)</argsstring>
+        <name>backupSqliteDatabase</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>srcPath</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>destPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method opens both the source and destination sqlite databases and performs a safe backup from the source into the destination.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>srcPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The location of the source sqlite DB to backup. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The location where the backup should be placed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, false on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/snapshot.hpp" line="41" column="1" bodyfile="tools/transfer_db/snapshot.cpp" bodystart="546" bodyend="569"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tools/transfer_db/snapshot.hpp" line="17" column="1" bodyfile="tools/transfer_db/snapshot.hpp" bodystart="16" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_snapshot_1aa966c13cc07ea999e4dd7f3983eefdc0" prot="private" virt="non-virtual"><scope>Snapshot</scope><name>backupSqliteDatabase</name></member>
+      <member refid="class_snapshot_1a0dc5beb3ab470f314b8824b32a2e2314" prot="private" virt="non-virtual"><scope>Snapshot</scope><name>destination</name></member>
+      <member refid="class_snapshot_1a4924c183539b08e2fdb49e99dc68ac03" prot="private" virt="non-virtual"><scope>Snapshot</scope><name>destinationIP_</name></member>
+      <member refid="class_snapshot_1a0832a4570a5271b58aae01667271dc2e" prot="private" virt="non-virtual"><scope>Snapshot</scope><name>destinationPath_</name></member>
+      <member refid="class_snapshot_1a480e91a436e6611f613ea4d1758f43c5" prot="public" virt="non-virtual"><scope>Snapshot</scope><name>init</name></member>
+      <member refid="class_snapshot_1a2c11501757c79bcce22f75ecb19d1f67" prot="private" virt="non-virtual"><scope>Snapshot</scope><name>isSnapshotHelperSetUidRoot</name></member>
+      <member refid="class_snapshot_1adc80366e473a680801cd26f838b216b1" prot="private" virt="non-virtual"><scope>Snapshot</scope><name>limitKbps_</name></member>
+      <member refid="class_snapshot_1ad4e06a3bc38fa72e13194d0e09aae484" prot="public" virt="non-virtual"><scope>Snapshot</scope><name>onChildAboutToExec</name></member>
+      <member refid="class_snapshot_1a3eb4358b4d45d5f2a96de4e2af782aac" prot="private" virt="non-virtual"><scope>Snapshot</scope><name>pSignalProcessor_</name></member>
+      <member refid="class_snapshot_1aee00879705c7cbb1178900b8d8968eac" prot="private" virt="non-virtual"><scope>Snapshot</scope><name>removePrimarySnapshot</name></member>
+      <member refid="class_snapshot_1a14ae27f30ea73f1398459f8b515ee0c9" prot="private" virt="non-virtual"><scope>Snapshot</scope><name>sendCompletionFile</name></member>
+      <member refid="class_snapshot_1aae40bdff6fd678f1dad347489ab959cd" prot="private" virt="non-virtual"><scope>Snapshot</scope><name>sendSnapshot</name></member>
+      <member refid="class_snapshot_1afbb9ea1d6bd1c57817fb2de4484d19e5" prot="public" virt="non-virtual"><scope>Snapshot</scope><name>Snapshot</name></member>
+      <member refid="class_snapshot_1a76370c5100c1587dbd905be587a51dcb" prot="private" virt="non-virtual"><scope>Snapshot</scope><name>takePrimarySnapshot</name></member>
+      <member refid="class_snapshot_1a9dfc04d15821d7144e1e26ee663175b6" prot="public" virt="non-virtual"><scope>Snapshot</scope><name>transferPrimary</name></member>
+      <member refid="class_snapshot_1a904a4cb4be707d57c02ab0d38c9711d5" prot="public" virt="non-virtual"><scope>Snapshot</scope><name>transferSecondary</name></member>
+      <member refid="class_snapshot_1ad6ba38a577ac9dc2f135ec5bc4d87d45" prot="private" virt="non-virtual"><scope>Snapshot</scope><name>transferSnapshotViaRsync</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

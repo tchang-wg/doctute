@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="baseapp_2buffered__input__message__handler_8hpp" kind="file" language="C++">
+    <compoundname>buffered_input_message_handler.hpp</compoundname>
+    <includedby refid="baseapp__int__interface_8hpp" local="yes">baseapp/baseapp_int_interface.hpp</includedby>
+    <invincdepgraph>
+      <node id="1207">
+        <label>baseapp/base.hpp</label>
+        <link refid="base_8hpp_source"/>
+        <childnode refid="1208" relation="include">
+        </childnode>
+        <childnode refid="1210" relation="include">
+        </childnode>
+      </node>
+      <node id="1202">
+        <label>baseapp/buffered_input_message_handler.hpp</label>
+        <link refid="baseapp/buffered_input_message_handler.hpp"/>
+        <childnode refid="1203" relation="include">
+        </childnode>
+      </node>
+      <node id="1212">
+        <label>dbapp/relogon_attempt_handler.hpp</label>
+        <link refid="relogon__attempt__handler_8hpp_source"/>
+      </node>
+      <node id="1205">
+        <label>baseapp/add_to_baseappmgr_helper.hpp</label>
+        <link refid="add__to__baseappmgr__helper_8hpp_source"/>
+      </node>
+      <node id="1208">
+        <label>baseapp/proxy.hpp</label>
+        <link refid="proxy_8hpp_source"/>
+        <childnode refid="1204" relation="include">
+        </childnode>
+        <childnode refid="1209" relation="include">
+        </childnode>
+      </node>
+      <node id="1206">
+        <label>baseapp/service_app.hpp</label>
+        <link refid="service__app_8hpp_source"/>
+      </node>
+      <node id="1209">
+        <label>baseapp/rate_limit_message_filter.hpp</label>
+        <link refid="rate__limit__message__filter_8hpp_source"/>
+        <childnode refid="1204" relation="include">
+        </childnode>
+      </node>
+      <node id="1203">
+        <label>baseapp/baseapp_int_interface.hpp</label>
+        <link refid="baseapp__int__interface_8hpp_source"/>
+        <childnode refid="1204" relation="include">
+        </childnode>
+        <childnode refid="1207" relation="include">
+        </childnode>
+        <childnode refid="1208" relation="include">
+        </childnode>
+        <childnode refid="1211" relation="include">
+        </childnode>
+        <childnode refid="1212" relation="include">
+        </childnode>
+      </node>
+      <node id="1210">
+        <label>baseapp/service.hpp</label>
+        <link refid="service_8hpp_source"/>
+      </node>
+      <node id="1211">
+        <label>baseappmgr/baseapp.hpp</label>
+        <link refid="gr_2baseapp_8hpp_source"/>
+      </node>
+      <node id="1204">
+        <label>baseapp/baseapp.hpp</label>
+        <link refid="baseapp_8hpp_source"/>
+        <childnode refid="1205" relation="include">
+        </childnode>
+        <childnode refid="1206" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_buffered_input_message_handler" prot="public">BufferedInputMessageHandler</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>TODO<sp/>merge<sp/>with<sp/>CellApp<sp/>version<sp/>#BWT-29846</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BUFFERED_INPUT_MESSAGE_HANDLER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUFFERED_INPUT_MESSAGE_HANDLER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="comment">//<sp/>MH<sp/>shoud<sp/>be<sp/>a<sp/>MessageHandler<sp/>as<sp/>per<sp/>network/common_messgage_handlers.hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>with<sp/>a<sp/>constructor<sp/>of<sp/>MESSAGE_HANDLER(<sp/>MESSAGE_HANDLER::Handler<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Under<sp/>C++11,<sp/>the<sp/>constructor<sp/>type<sp/>doesn&apos;t<sp/>matter,<sp/>as<sp/>we<sp/>can<sp/>inherit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MESSAGE_HANDLER&apos;s<sp/>constructor<sp/>with<sp/>&apos;using&apos;,<sp/>which<sp/>would<sp/>allow<sp/>this<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>wrap<sp/>_any_<sp/>(duck-typed)<sp/>Mercury::InputMessageHandler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>the<sp/>mean-time,<sp/>specialise<sp/>this<sp/>with<sp/>a<sp/>new<sp/>constructor<sp/>if<sp/>you<sp/>need</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>to<sp/>wrap<sp/>a<sp/>different<sp/>type<sp/>of<sp/>handler.<sp/>The<sp/>handleMessage()<sp/>method<sp/>only<sp/>needs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MESSAGE_HANDLER<sp/>to<sp/>have<sp/>public<sp/>or<sp/>protected<sp/>MESSAGE_HANDLER::handleMessage()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>MESSAGE_HANDLER<sp/>&gt;</highlight></codeline>
+<codeline lineno="23" refid="class_buffered_input_message_handler" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_buffered_input_message_handler" kindref="compound">BufferedInputMessageHandler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>MESSAGE_HANDLER</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MESSAGE_HANDLER::Handler<sp/>Handler;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_buffered_input_message_handler" kindref="compound">BufferedInputMessageHandler</ref>(<sp/>Handler<sp/>handler<sp/>)<sp/>:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MESSAGE_HANDLER(<sp/>handler<sp/>)<sp/>{}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_buffered_input_message_handler_1a6eeea8bcae72b9f1af52b406e56859f8" kindref="member">handleMessage</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>srcAddr,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mercury::UnpackedMessageHeader<sp/>&amp;<sp/>header,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BinaryIStream<sp/>&amp;<sp/>data<sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>BUFFERED_INPUT_MESSAGE_HANDLER_HPP</highlight></codeline>
+    </programlisting>
+    <location file="baseapp/buffered_input_message_handler.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_patrol_1_1_graph_traverser" kind="class" language="C++" prot="public">
+    <compoundname>Patrol::GraphTraverser</compoundname>
+    <basecompoundref refid="class_movement_controller" prot="public" virt="non-virtual">MovementController</basecompoundref>
+    <derivedcompoundref refid="class_zigzag_patrol_1_1_zigzag_graph_traverser" prot="public" virt="non-virtual">ZigzagPatrol::ZigzagGraphTraverser</derivedcompoundref>
+    <includes refid="patrol__graph_8hpp" local="no">patrol_graph.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_patrol_1_1_graph_traverser_1ad96ba63b8dc5780e3a24c25d2f365760" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Patrol::GraphTraverser::destinationNode_</definition>
+        <argsstring></argsstring>
+        <name>destinationNode_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/patrol_graph.hpp" line="139" column="1" bodyfile="tools/bots/patrol_graph.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_patrol_1_1_graph_traverser_1adc4a596fc1d727a30c2565366f327504" prot="protected" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 Patrol::GraphTraverser::destinationPos_</definition>
+        <argsstring></argsstring>
+        <name>destinationPos_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/patrol_graph.hpp" line="140" column="1" bodyfile="tools/bots/patrol_graph.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_patrol_1_1_graph_traverser_1abd9c3b07d94a190c71a26025e19e4ed2" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Patrol::GraphTraverser::stayTime_</definition>
+        <argsstring></argsstring>
+        <name>stayTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/patrol_graph.hpp" line="141" column="1" bodyfile="tools/bots/patrol_graph.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_patrol_1_1_graph_traverser_1a31803e185511cc7b79062a6e405dd93e" prot="protected" static="no" mutable="no">
+        <type>const <ref refid="class_patrol_1_1_graph" kindref="compound">Graph</ref> &amp;</type>
+        <definition>const Graph&amp; Patrol::GraphTraverser::graph_</definition>
+        <argsstring></argsstring>
+        <name>graph_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/patrol_graph.hpp" line="142" column="1" bodyfile="tools/bots/patrol_graph.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_patrol_1_1_graph_traverser_1a91925b1ce75c8c9505d13edeb49c5d72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Patrol::GraphTraverser::GraphTraverser</definition>
+        <argsstring>(const Graph &amp;graph, float &amp;speed, Vector3 &amp;startPosition, bool randomise, bool snap)</argsstring>
+        <name>GraphTraverser</name>
+        <param>
+          <type>const <ref refid="class_patrol_1_1_graph" kindref="compound">Graph</ref> &amp;</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>speed</declname>
+        </param>
+        <param>
+          <type>Vector3 &amp;</type>
+          <declname>startPosition</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>randomise</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>snap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/patrol_graph.hpp" line="133" column="1" bodyfile="tools/bots/patrol_graph.cpp" bodystart="369" bodyend="396"/>
+      </memberdef>
+      <memberdef kind="function" id="class_patrol_1_1_graph_traverser_1ae08ed6bcbb434c3111ab69cf01c6edf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Patrol::GraphTraverser::nextStep</definition>
+        <argsstring>(float &amp;speed, float dTime, Vector3 &amp;pos, Direction3D &amp;dir)</argsstring>
+        <name>nextStep</name>
+        <reimplements refid="class_movement_controller_1a8508178ae0c00abc45edcec8ad80e587">nextStep</reimplements>
+        <reimplementedby refid="class_zigzag_patrol_1_1_zigzag_graph_traverser_1a259c308f622d59497c28624ab1d6f131">nextStep</reimplementedby>
+        <param>
+          <type>float &amp;</type>
+          <declname>speed</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dTime</declname>
+        </param>
+        <param>
+          <type>Vector3 &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>Direction3D &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method finds the next point to move to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/patrol_graph.hpp" line="135" column="1" bodyfile="tools/bots/patrol_graph.cpp" bodystart="402" bodyend="445"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to traverse a patrol graph. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1418">
+        <label>Patrol::GraphTraverser</label>
+        <link refid="class_patrol_1_1_graph_traverser"/>
+        <childnode refid="1419" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1420">
+        <label>ZigzagPatrol::ZigzagGraphTraverser</label>
+        <link refid="class_zigzag_patrol_1_1_zigzag_graph_traverser"/>
+        <childnode refid="1418" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1419">
+        <label>MovementController</label>
+        <link refid="class_movement_controller"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1421">
+        <label>Patrol::GraphTraverser</label>
+        <link refid="class_patrol_1_1_graph_traverser"/>
+        <childnode refid="1422" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1423" relation="usage">
+          <edgelabel>graph_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1422">
+        <label>MovementController</label>
+        <link refid="class_movement_controller"/>
+      </node>
+      <node id="1423">
+        <label>Patrol::Graph</label>
+        <link refid="class_patrol_1_1_graph"/>
+      </node>
+    </collaborationgraph>
+    <location file="tools/bots/patrol_graph.hpp" line="131" column="1" bodyfile="tools/bots/patrol_graph.hpp" bodystart="130" bodyend="143"/>
+    <listofallmembers>
+      <member refid="class_patrol_1_1_graph_traverser_1ad96ba63b8dc5780e3a24c25d2f365760" prot="protected" virt="non-virtual"><scope>Patrol::GraphTraverser</scope><name>destinationNode_</name></member>
+      <member refid="class_patrol_1_1_graph_traverser_1adc4a596fc1d727a30c2565366f327504" prot="protected" virt="non-virtual"><scope>Patrol::GraphTraverser</scope><name>destinationPos_</name></member>
+      <member refid="class_patrol_1_1_graph_traverser_1a31803e185511cc7b79062a6e405dd93e" prot="protected" virt="non-virtual"><scope>Patrol::GraphTraverser</scope><name>graph_</name></member>
+      <member refid="class_patrol_1_1_graph_traverser_1a91925b1ce75c8c9505d13edeb49c5d72" prot="public" virt="non-virtual"><scope>Patrol::GraphTraverser</scope><name>GraphTraverser</name></member>
+      <member refid="class_patrol_1_1_graph_traverser_1ae08ed6bcbb434c3111ab69cf01c6edf9" prot="public" virt="virtual"><scope>Patrol::GraphTraverser</scope><name>nextStep</name></member>
+      <member refid="class_patrol_1_1_graph_traverser_1abd9c3b07d94a190c71a26025e19e4ed2" prot="protected" virt="non-virtual"><scope>Patrol::GraphTraverser</scope><name>stayTime_</name></member>
+      <member refid="class_movement_controller_1a7d808aa1d9b805fb5691b1b13c4ca5ff" prot="public" virt="virtual"><scope>Patrol::GraphTraverser</scope><name>~MovementController</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

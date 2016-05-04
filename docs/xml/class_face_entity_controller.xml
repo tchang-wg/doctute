@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_face_entity_controller" kind="class" language="C++" prot="public">
+    <compoundname>FaceEntityController</compoundname>
+    <basecompoundref refid="class_controller" prot="public" virt="non-virtual">Controller</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Updatable</basecompoundref>
+    <includes refid="face__entity__controller_8hpp" local="no">face_entity_controller.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_face_entity_controller_1a0c11948aef5fd29e4403048cf10d1ab6" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_smart_pointer" kindref="compound">EntityPtr</ref></type>
+        <definition>EntityPtr FaceEntityController::pTargetEntity_</definition>
+        <argsstring></argsstring>
+        <name>pTargetEntity_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/face_entity_controller.hpp" line="36" column="1" bodyfile="cellapp/face_entity_controller.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_face_entity_controller_1a82024f5cfe896721f75be17e53df3bbb" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FaceEntityController::targetEntityId_</definition>
+        <argsstring></argsstring>
+        <name>targetEntityId_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/face_entity_controller.hpp" line="37" column="1" bodyfile="cellapp/face_entity_controller.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_face_entity_controller_1a008e0ff54220fb450447a665355a251c" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FaceEntityController::radiansPerTick_</definition>
+        <argsstring></argsstring>
+        <name>radiansPerTick_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/face_entity_controller.hpp" line="38" column="1" bodyfile="cellapp/face_entity_controller.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_face_entity_controller_1ac9dc37fad9e8b389d4e2c08b7230557d" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FaceEntityController::ticksToNextUpdate_</definition>
+        <argsstring></argsstring>
+        <name>ticksToNextUpdate_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/face_entity_controller.hpp" line="39" column="1" bodyfile="cellapp/face_entity_controller.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_face_entity_controller_1a84ea3676610f33474514502a071a35c9" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FaceEntityController::period_</definition>
+        <argsstring></argsstring>
+        <name>period_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/face_entity_controller.hpp" line="40" column="1" bodyfile="cellapp/face_entity_controller.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_face_entity_controller_1afdb2c292de695f876ee48842d9bdc462" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FaceEntityController::FaceEntityController</definition>
+        <argsstring>(int entityId=0, float velocity=2 *MATH_PI, int period=10)</argsstring>
+        <name>FaceEntityController</name>
+        <param>
+          <type>int</type>
+          <declname>entityId</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>velocity</declname>
+          <defval>2 *MATH_PI</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>period</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/face_entity_controller.hpp" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_face_entity_controller_1ad2c5855a05c7d9a3bd668fcb20afe207" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void FaceEntityController::startReal</definition>
+        <argsstring>(bool isInitialStart)</argsstring>
+        <name>startReal</name>
+        <reimplements refid="class_controller_1a18d601aacf49c6f9f5234ba83921285d">startReal</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>isInitialStart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method overrides the <ref refid="class_controller" kindref="compound">Controller</ref> method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/face_entity_controller.hpp" line="27" column="1" bodyfile="cellapp/face_entity_controller.cpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_face_entity_controller_1a0bbbd700213424f930e1859a41410de5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void FaceEntityController::stopReal</definition>
+        <argsstring>(bool isFinalStop)</argsstring>
+        <name>stopReal</name>
+        <reimplements refid="class_controller_1a806642c29ced79e6da8bd62c159c8294">stopReal</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>isFinalStop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method overrides the <ref refid="class_controller" kindref="compound">Controller</ref> method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/face_entity_controller.hpp" line="28" column="1" bodyfile="cellapp/face_entity_controller.cpp" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_face_entity_controller_1a42796ec6419483de85db4db52fdb4704" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FaceEntityController::writeRealToStream</definition>
+        <argsstring>(BinaryOStream &amp;stream)</argsstring>
+        <name>writeRealToStream</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method writes our state to a stream.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stream to which we should write </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/face_entity_controller.hpp" line="30" column="1" bodyfile="cellapp/face_entity_controller.cpp" bodystart="135" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_face_entity_controller_1afa04dca92a59550c5497a9adb72ed106" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FaceEntityController::readRealFromStream</definition>
+        <argsstring>(BinaryIStream &amp;stream)</argsstring>
+        <name>readRealFromStream</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method reads our state from a stream.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stream from which to read </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successful, false otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/face_entity_controller.hpp" line="31" column="1" bodyfile="cellapp/face_entity_controller.cpp" bodystart="147" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_face_entity_controller_1a1e7f3a01187b92553e3c9f2a6fb05041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FaceEntityController::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called every tick. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/face_entity_controller.hpp" line="33" column="1" bodyfile="cellapp/face_entity_controller.cpp" bodystart="59" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is the controller for an entity that is turning at a specific rate of angle/second. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1220">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="1221">
+        <label>Updatable</label>
+      </node>
+      <node id="1218">
+        <label>FaceEntityController</label>
+        <link refid="class_face_entity_controller"/>
+        <childnode refid="1219" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1221" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1219">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="1220" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1229">
+        <label>SmartPointer&lt; Entity &gt;</label>
+        <link refid="class_smart_pointer"/>
+      </node>
+      <node id="1224">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="1228">
+        <label>Updatable</label>
+      </node>
+      <node id="1222">
+        <label>FaceEntityController</label>
+        <link refid="class_face_entity_controller"/>
+        <childnode refid="1223" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1228" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1229" relation="usage">
+          <edgelabel>pTargetEntity_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1227">
+        <label>PyObjectPlus</label>
+      </node>
+      <node id="1225">
+        <label>Entity</label>
+        <link refid="class_entity"/>
+        <childnode refid="1226" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1227" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1226">
+        <label>BWEntity</label>
+      </node>
+      <node id="1223">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="1224" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1225" relation="usage">
+          <edgelabel>s_factoryFnEntity_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/face_entity_controller.hpp" line="18" column="1" bodyfile="cellapp/face_entity_controller.hpp" bodystart="17" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_controller_1a5c08d1a7974edb523c97f03c843b7a2a" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>addControllerDigest</name></member>
+      <member refid="class_controller_1a3332cc6b7c51b257f6b5bf8cccf6b296" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a797d7bd68f93f36fbd4edc92c9de300e" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a31d2c2c443222d9134e511eb734493fd" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a6ef0365a5bc295f4a92430ef0e809367" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a8972473450e1ea11239ac96c370fddd0" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a0dab5e21880d0c861495fa1909f95cbe" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a9e5ce4bd55f4d6cac2380bf3dfe95d5e" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1aef85b8faeee04f32c6c8fc384537be0d" prot="protected" virt="non-virtual"><scope>FaceEntityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a2a148ee762b8dae72593a0fb38a029bb" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a130a7805734c754c3ff8ab59ee01dea2" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1ade939a909a83784f4e733140c5f6be0f" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>create</name></member>
+      <member refid="class_controller_1a7c32bc59c340ade9d98e20d72ae40e7a" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>createIfNecessary</name></member>
+      <member refid="class_controller_1a3a96f5d838427d0b251f1cf5792350db" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>CreatorFn</name></member>
+      <member refid="class_controller_1aa251a2d5e3be8104a67eb22cc7b33781" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>ct</name></member>
+      <member refid="class_controller_1ad0a29b9b91700a808c328fb828ea5433" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>disowned</name></member>
+      <member refid="class_controller_1a18e942dbb34d82bc4cfcc9718b1c970f" prot="public" virt="pure-virtual"><scope>FaceEntityController</scope><name>domain</name></member>
+      <member refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>entity</name></member>
+      <member refid="class_controller_1a30b2745a2b74633dac7bba027bfe5eda" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>EXCLUSIVE_CONTROLLER_ID_MASK</name></member>
+      <member refid="class_controller_1ad5aa8f4242778920938f18a19ca039ab" prot="public" virt="pure-virtual"><scope>FaceEntityController</scope><name>exclusiveID</name></member>
+      <member refid="class_face_entity_controller_1afdb2c292de695f876ee48842d9bdc462" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>FaceEntityController</name></member>
+      <member refid="class_controller_1a4399843065da63b4d68e76bcba1c9b33" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>factories</name></member>
+      <member refid="class_controller_1a59b8e5ee7602267120c203e2d73a4aad" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>factory</name></member>
+      <member refid="class_controller_1a8c83b29edd91cff97310b85fd2dd62a9" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>FactoryFn</name></member>
+      <member refid="class_controller_1a01630a3d95bde81822c3ac80cc68bd72" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>ffn</name></member>
+      <member refid="class_controller_1a912cc50ab630c16d340e6750571c7d36" prot="protected" virt="non-virtual"><scope>FaceEntityController</scope><name>ghost</name></member>
+      <member refid="class_controller_1a8c2f39fc63cd53d3a098b14310cdbc6c" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>id</name></member>
+      <member refid="class_controller_1a97d6e40743b8130b496b1aa604670c83" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>init</name></member>
+      <member refid="class_controller_1a31bb10031669992bd8611769195460a0" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>isAttached</name></member>
+      <member refid="class_face_entity_controller_1a84ea3676610f33474514502a071a35c9" prot="protected" virt="non-virtual"><scope>FaceEntityController</scope><name>period_</name></member>
+      <member refid="class_face_entity_controller_1a0c11948aef5fd29e4403048cf10d1ab6" prot="protected" virt="non-virtual"><scope>FaceEntityController</scope><name>pTargetEntity_</name></member>
+      <member refid="class_face_entity_controller_1a008e0ff54220fb450447a665355a251c" prot="protected" virt="non-virtual"><scope>FaceEntityController</scope><name>radiansPerTick_</name></member>
+      <member refid="class_face_entity_controller_1afa04dca92a59550c5497a9adb72ed106" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>readRealFromStream</name></member>
+      <member refid="class_controller_1a27d88cafe564f8c3e97477f82b392b74" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>s_factoryFnEntity_</name></member>
+      <member refid="class_controller_1a28fbc433135ec5668b0de6286b0fb1fe" prot="protected" virt="non-virtual"><scope>FaceEntityController</scope><name>standardCallback</name></member>
+      <member refid="class_face_entity_controller_1ad2c5855a05c7d9a3bd668fcb20afe207" prot="public" virt="virtual"><scope>FaceEntityController</scope><name>startReal</name></member>
+      <member refid="class_face_entity_controller_1a0bbbd700213424f930e1859a41410de5" prot="public" virt="virtual"><scope>FaceEntityController</scope><name>stopReal</name></member>
+      <member refid="class_face_entity_controller_1a82024f5cfe896721f75be17e53df3bbb" prot="protected" virt="non-virtual"><scope>FaceEntityController</scope><name>targetEntityId_</name></member>
+      <member refid="class_face_entity_controller_1ac9dc37fad9e8b389d4e2c08b7230557d" prot="protected" virt="non-virtual"><scope>FaceEntityController</scope><name>ticksToNextUpdate_</name></member>
+      <member refid="class_controller_1aae5de9edfa47a204f2094fdeb8091dbd" prot="public" virt="pure-virtual"><scope>FaceEntityController</scope><name>type</name></member>
+      <member refid="class_controller_1ac066a12fbae3979fbe86f4ee20c02904" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>typeName</name></member>
+      <member refid="class_face_entity_controller_1a1e7f3a01187b92553e3c9f2a6fb05041" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>update</name></member>
+      <member refid="class_controller_1aad8a489249dcc3b5edde468d05cb5c7f" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>userArg</name></member>
+      <member refid="class_face_entity_controller_1a42796ec6419483de85db4db52fdb4704" prot="public" virt="non-virtual"><scope>FaceEntityController</scope><name>writeRealToStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

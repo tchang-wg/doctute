@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_c_a_forwarding_watcher" kind="class" language="C++" prot="public">
+    <compoundname>CAForwardingWatcher</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ForwardingWatcher</basecompoundref>
+    <includes refid="watcher__forwarding__cellapp_8hpp" local="no">watcher_forwarding_cellapp.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_a_forwarding_watcher_1a54c8341792f774bbc4bba89cd61bbd9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ForwardingCollector *</type>
+        <definition>ForwardingCollector * CAForwardingWatcher::newCollector</definition>
+        <argsstring>(WatcherPathRequestV2 &amp;pathRequest, const BW::string &amp;destWatcher, const BW::string &amp;targetInfo)</argsstring>
+        <name>newCollector</name>
+        <param>
+          <type>WatcherPathRequestV2 &amp;</type>
+          <declname>pathRequest</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>destWatcher</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>targetInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/watcher_forwarding_cellapp.hpp" line="19" column="1" bodyfile="cellappmgr/watcher_forwarding_cellapp.cpp" bodystart="55" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_a_forwarding_watcher_1a46cead409d9964a35589e35137c1a111" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AddressList *</type>
+        <definition>AddressList * CAForwardingWatcher::getComponentAddressList</definition>
+        <argsstring>(const BW::string &amp;targetInfo)</argsstring>
+        <name>getComponentAddressList</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>targetInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generate a list of <ref refid="class_cell_app" kindref="compound">CellApp(s)</ref> (Component ID, Address pair) as determined by the target information for the forwarding watchers.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>targetInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string describing which component(s) to add to the list.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of AddressPair&apos;s to forward a watcher request to. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/watcher_forwarding_cellapp.hpp" line="24" column="1" bodyfile="cellappmgr/watcher_forwarding_cellapp.cpp" bodystart="96" bodyend="136"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implments a <ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> specific Forwarding Watcher. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="439">
+        <label>ForwardingWatcher</label>
+      </node>
+      <node id="438">
+        <label>CAForwardingWatcher</label>
+        <link refid="class_c_a_forwarding_watcher"/>
+        <childnode refid="439" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="441">
+        <label>ForwardingWatcher</label>
+      </node>
+      <node id="440">
+        <label>CAForwardingWatcher</label>
+        <link refid="class_c_a_forwarding_watcher"/>
+        <childnode refid="441" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellappmgr/watcher_forwarding_cellapp.hpp" line="17" column="1" bodyfile="cellappmgr/watcher_forwarding_cellapp.hpp" bodystart="16" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_c_a_forwarding_watcher_1a46cead409d9964a35589e35137c1a111" prot="public" virt="non-virtual"><scope>CAForwardingWatcher</scope><name>getComponentAddressList</name></member>
+      <member refid="class_c_a_forwarding_watcher_1a54c8341792f774bbc4bba89cd61bbd9b" prot="public" virt="non-virtual"><scope>CAForwardingWatcher</scope><name>newCollector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

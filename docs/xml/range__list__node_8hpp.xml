@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="range__list__node_8hpp" kind="file" language="C++">
+    <compoundname>range_list_node.hpp</compoundname>
+    <includes local="yes">cstdmf/stdmf.hpp</includes>
+    <includes local="yes">cstdmf/debug.hpp</includes>
+    <includes local="no">float.h</includes>
+    <includes local="yes">cstdmf/bw_string.hpp</includes>
+    <includes local="yes">cstdmf/bw_vector.hpp</includes>
+    <includedby refid="cell__range__list_8hpp" local="yes">cellapp/cell_range_list.hpp</includedby>
+    <includedby refid="entity__range__list__node_8hpp" local="yes">cellapp/entity_range_list_node.hpp</includedby>
+    <includedby refid="mobile__range__list__node_8hpp" local="yes">cellapp/mobile_range_list_node.hpp</includedby>
+    <includedby refid="range__list__node_8cpp" local="yes">cellapp/range_list_node.cpp</includedby>
+    <includedby refid="space_8cpp" local="yes">cellapp/space.cpp</includedby>
+    <incdepgraph>
+      <node id="11585">
+        <label>float.h</label>
+      </node>
+      <node id="11584">
+        <label>cstdmf/debug.hpp</label>
+      </node>
+      <node id="11583">
+        <label>cstdmf/stdmf.hpp</label>
+      </node>
+      <node id="11586">
+        <label>cstdmf/bw_string.hpp</label>
+      </node>
+      <node id="11582">
+        <label>cellapp/range_list_node.hpp</label>
+        <link refid="range_list_node.hpp"/>
+        <childnode refid="11583" relation="include">
+        </childnode>
+        <childnode refid="11584" relation="include">
+        </childnode>
+        <childnode refid="11585" relation="include">
+        </childnode>
+        <childnode refid="11586" relation="include">
+        </childnode>
+        <childnode refid="11587" relation="include">
+        </childnode>
+      </node>
+      <node id="11587">
+        <label>cstdmf/bw_vector.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11594">
+        <label>cellapp/range_list_appeal_trigger.hpp</label>
+        <link refid="range__list__appeal__trigger_8hpp_source"/>
+      </node>
+      <node id="11592">
+        <label>cellapp/entity_range_list_node.hpp</label>
+        <link refid="entity__range__list__node_8hpp_source"/>
+        <childnode refid="11593" relation="include">
+        </childnode>
+      </node>
+      <node id="11590">
+        <label>cellapp/space.hpp</label>
+        <link refid="space_8hpp_source"/>
+        <childnode refid="11591" relation="include">
+        </childnode>
+      </node>
+      <node id="11589">
+        <label>cellapp/cell_range_list.hpp</label>
+        <link refid="cell__range__list_8hpp_source"/>
+        <childnode refid="11590" relation="include">
+        </childnode>
+      </node>
+      <node id="11588">
+        <label>cellapp/range_list_node.hpp</label>
+        <link refid="range_list_node.hpp"/>
+        <childnode refid="11589" relation="include">
+        </childnode>
+        <childnode refid="11592" relation="include">
+        </childnode>
+        <childnode refid="11595" relation="include">
+        </childnode>
+      </node>
+      <node id="11591">
+        <label>cellapp/cell_viewer_server.cpp</label>
+        <link refid="cell__viewer__server_8cpp"/>
+      </node>
+      <node id="11593">
+        <label>cellapp/range_trigger.hpp</label>
+        <link refid="range__trigger_8hpp_source"/>
+        <childnode refid="11594" relation="include">
+        </childnode>
+      </node>
+      <node id="11595">
+        <label>cellapp/mobile_range_list_node.hpp</label>
+        <link refid="mobile__range__list__node_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_range_list_node" prot="public">RangeListNode</innerclass>
+    <innerclass refid="class_range_list_terminator" prot="public">RangeListTerminator</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="range__list__node_8hpp_1aab297d8f5023e3deccabeb56b7027f92" prot="public" static="no">
+        <name>RangeListOrder</name>
+        <enumvalue id="range__list__node_8hpp_1aab297d8f5023e3deccabeb56b7027f92a3994624a0351572ed82dedf78e242bd6" prot="public">
+          <name>RANGE_LIST_ORDER_HEAD</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="range__list__node_8hpp_1aab297d8f5023e3deccabeb56b7027f92a894f485b483ccc40df982f6ad4fe47b1" prot="public">
+          <name>RANGE_LIST_ORDER_ENTITY</name>
+          <initializer>= 100</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="range__list__node_8hpp_1aab297d8f5023e3deccabeb56b7027f92a818a2098d778c67afcf6207e37c77837" prot="public">
+          <name>RANGE_LIST_ORDER_LOWER_BOUND</name>
+          <initializer>= 190</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="range__list__node_8hpp_1aab297d8f5023e3deccabeb56b7027f92a33285b5517f1fcb5192c776cc1471510" prot="public">
+          <name>RANGE_LIST_ORDER_UPPER_BOUND</name>
+          <initializer>= 200</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="range__list__node_8hpp_1aab297d8f5023e3deccabeb56b7027f92af560225e2a1c50c0e33fdaff8c3eb25c" prot="public">
+          <name>RANGE_LIST_ORDER_TAIL</name>
+          <initializer>= 0xffff</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_node.hpp" line="19" column="1" bodyfile="cellapp/range_list_node.hpp" bodystart="18" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RANGE_LIST_NODE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RANGE_LIST_NODE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/stdmf.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/debug.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;float.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_string.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_vector.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_entity" kindref="compound">Entity</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_range_trigger" kindref="compound">RangeTrigger</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>RangeListOrder</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>RANGE_LIST_ORDER_HEAD<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>RANGE_LIST_ORDER_ENTITY<sp/>=<sp/>100,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>RANGE_LIST_ORDER_LOWER_BOUND<sp/>=<sp/>190,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>RANGE_LIST_ORDER_UPPER_BOUND<sp/>=<sp/>200,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>RANGE_LIST_ORDER_TAIL<sp/>=<sp/>0xffff</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_range_list_node" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>RangeListFlags</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FLAG_NO_TRIGGERS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FLAG_ENTITY_TRIGGER<sp/><sp/><sp/><sp/><sp/>=<sp/>0x01,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FLAG_LOWER_AOI_TRIGGER<sp/><sp/>=<sp/>0x02,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FLAG_UPPER_AOI_TRIGGER<sp/><sp/>=<sp/>0x04,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FLAG_IS_ENTITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x10,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FLAG_IS_LOWER_BOUND<sp/><sp/><sp/><sp/><sp/>=<sp/>0x20</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref>(<sp/>RangeListFlags<sp/>wantsFlags,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RangeListFlags<sp/>makesFlags,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RangeListOrder<sp/>order<sp/>)<sp/>:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pPrevX_(<sp/>NULL<sp/>),</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pNextX_(<sp/>NULL<sp/>),</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pPrevZ_(<sp/>NULL<sp/>),</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pNextZ_(<sp/>NULL<sp/>),</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wantsFlags_(<sp/>wantsFlags<sp/>),</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makesFlags_(<sp/>makesFlags<sp/>),</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>order_(<sp/>order<sp/>)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="class_range_list_node" kindref="compound">RangeListNode</ref>()<sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//oldZ<sp/>is<sp/>used<sp/>to<sp/>make<sp/>the<sp/>shuffle<sp/>think<sp/>entity<sp/>is<sp/>moving<sp/>in<sp/>orthogonal<sp/>directions<sp/>only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_range_list_node_1a71f3fea44c51ea217658cb2341653bd5" kindref="member">shuffleXThenZ</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>oldX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>oldZ<sp/>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_range_list_node_1a64d09ef9737c804bae2e1747e8da4b3a" kindref="member">shuffleX</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>oldX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>oldZ<sp/>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_range_list_node_1a73e62225d1db04e36d278355dea39340" kindref="member">shuffleZ</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>oldX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>oldZ<sp/>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref><sp/>*<sp/>prevX()</highlight><highlight class="keyword"><sp/>const<sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pPrevX_;<sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref><sp/>*<sp/>prevZ()</highlight><highlight class="keyword"><sp/>const<sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pPrevZ_;<sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref><sp/>*<sp/>nextX()</highlight><highlight class="keyword"><sp/>const<sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pNextX_;<sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref><sp/>*<sp/>nextZ()</highlight><highlight class="keyword"><sp/>const<sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pNextZ_;<sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref><sp/>*<sp/>getNeighbour(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>getNext,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>getZ<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="73"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>getNext<sp/>?</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(getZ<sp/>?<sp/>pNextZ_<sp/>:<sp/>pNextX_)<sp/>:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(getZ<sp/>?<sp/>pPrevZ_<sp/>:<sp/>pPrevX_);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>prevX(<sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref><sp/>*<sp/>pNode<sp/>)<sp/>{<sp/>pPrevX_<sp/>=<sp/>pNode;<sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>prevZ(<sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref><sp/>*<sp/>pNode<sp/>)<sp/>{<sp/>pPrevZ_<sp/>=<sp/>pNode;<sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>nextX(<sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref><sp/>*<sp/>pNode<sp/>)<sp/>{<sp/>pNextX_<sp/>=<sp/>pNode;<sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>nextZ(<sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref><sp/>*<sp/>pNode<sp/>)<sp/>{<sp/>pNextZ_<sp/>=<sp/>pNode;<sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>RangeListOrder<sp/>order()</highlight><highlight class="keyword"><sp/>const<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>order_;<sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isEntity()</highlight><highlight class="keyword"><sp/>const<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(makesFlags_<sp/>&amp;<sp/>FLAG_IS_ENTITY)<sp/>!=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isLowerBound()</highlight><highlight class="keyword"><sp/>const<sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(makesFlags_<sp/>&amp;<sp/>FLAG_IS_LOWER_BOUND)<sp/>!=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>wantsCrossingWith(<sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref><sp/>*<sp/>pOther<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="90"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(wantsFlags_<sp/>&amp;<sp/>pOther-&gt;makesFlags_)<sp/>!=<sp/>0;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_range_list_node_1a45cc0b83c1b3744987c7d98328fc820d" kindref="member">removeFromRangeList</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_range_list_node_1a570ce871ee4f9b904b6b8f58059f2ab4" kindref="member">insertBeforeX</ref>(<sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref><sp/>*<sp/>entry<sp/>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_range_list_node_1a1a2694095ea91a3d9a5cbaaa2e3970e5" kindref="member">insertBeforeZ</ref>(<sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref><sp/>*<sp/>entry<sp/>);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="class_range_list_node_1a144a093e0a3f1a45bb9af7e663e249e8" kindref="member">debugRangeX</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="class_range_list_node_1af6e879e8e60e0ee3373984b539dc2191" kindref="member">debugRangeZ</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>BW::string<sp/>debugString()</highlight><highlight class="keyword"><sp/>const<sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>BW::string(<sp/></highlight><highlight class="stringliteral">&quot;Base&quot;</highlight><highlight class="normal"><sp/>);<sp/>};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>getCoord(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>getZ<sp/>)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>getZ<sp/>?<sp/>this-&gt;z()<sp/>:<sp/>this-&gt;x();<sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>crossedX(<sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref><sp/>*<sp/></highlight><highlight class="comment">/*node*/</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*positiveCrossing*/</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*oldOthX*/</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*oldOthZ*/</highlight><highlight class="normal"><sp/>)<sp/>{}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>crossedZ(<sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref><sp/>*<sp/></highlight><highlight class="comment">/*node*/</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*positiveCrossing*/</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*oldOthX*/</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*oldOthZ*/</highlight><highlight class="normal"><sp/>)<sp/>{}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//pointers<sp/>to<sp/>the<sp/>prev<sp/>and<sp/>next<sp/>entities<sp/>in<sp/>the<sp/>X<sp/>and<sp/>Z<sp/>direction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref><sp/>*<sp/>pPrevX_;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref><sp/>*<sp/>pNextX_;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref><sp/>*<sp/>pPrevZ_;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref><sp/>*<sp/>pNextZ_;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Flags<sp/>for<sp/>type<sp/>of<sp/>crossings<sp/>this<sp/>node<sp/>wants<sp/>to<sp/>receive</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>RangeListFlags<sp/><sp/>wantsFlags_;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Flags<sp/>for<sp/>type<sp/>of<sp/>crossings<sp/>this<sp/>node<sp/>wants<sp/>to<sp/>make</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>RangeListFlags<sp/><sp/>makesFlags_;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>RangeListOrder<sp/><sp/>order_;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="class_range_list_terminator" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_range_list_terminator" kindref="compound">RangeListTerminator</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref></highlight></codeline>
+<codeline lineno="133"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_range_list_terminator" kindref="compound">RangeListTerminator</ref>(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isHead<sp/>)<sp/>:</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref>(<sp/>RangeListFlags(<sp/>0<sp/>),<sp/>RangeListFlags(<sp/>0<sp/>),</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isHead<sp/>?<sp/>RANGE_LIST_ORDER_HEAD<sp/>:<sp/>RANGE_LIST_ORDER_TAIL)<sp/>{}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(order_<sp/>?<sp/>FLT_MAX<sp/>:<sp/>-FLT_MAX);<sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(order_<sp/>?<sp/>FLT_MAX<sp/>:<sp/>-FLT_MAX);<sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>BW::string<sp/>debugString()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>order_<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;Tail&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;Head&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning<sp/>(disable:4355)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>RANGE_LIST_NODE_HPP</highlight></codeline>
+    </programlisting>
+    <location file="cellapp/range_list_node.hpp"/>
+  </compounddef>
+</doxygen>

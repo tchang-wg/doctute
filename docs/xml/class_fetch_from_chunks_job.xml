@@ -1,0 +1,445 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_fetch_from_chunks_job" kind="class" language="C++" prot="public">
+    <compoundname>FetchFromChunksJob</compoundname>
+    <basecompoundref refid="class_ticked_worker_job" prot="public" virt="non-virtual">TickedWorkerJob</basecompoundref>
+    <innerclass refid="class_fetch_from_chunks_job_1_1_entity_filter" prot="public">FetchFromChunksJob::EntityFilter</innerclass>
+    <innerclass refid="class_fetch_from_chunks_job_1_1_filter" prot="public">FetchFromChunksJob::Filter</innerclass>
+    <innerclass refid="class_fetch_from_chunks_job_1_1_set_filter" prot="public">FetchFromChunksJob::SetFilter</innerclass>
+    <innerclass refid="class_fetch_from_chunks_job_1_1_simple_filter" prot="public">FetchFromChunksJob::SimpleFilter</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_fetch_from_chunks_job_1a65d689da1281ddade08d86bf4791197e" prot="private" static="no">
+        <type>BW::list&lt; std::pair&lt; DataSectionPtr, Matrix &gt; &gt;</type>
+        <definition>typedef BW::list&lt; std::pair&lt; DataSectionPtr, Matrix &gt; &gt; FetchFromChunksJob::DataQueue</definition>
+        <argsstring></argsstring>
+        <name>DataQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="530" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="530" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1a390a95727ea4da6282886609721bb54a" prot="private" static="no" mutable="no">
+        <type>const BW::string</type>
+        <definition>const BW::string FetchFromChunksJob::path_</definition>
+        <argsstring></argsstring>
+        <name>path_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="515" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="515" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1a691580ee7653c5c23ea1ff295e1ee336" prot="private" static="no" mutable="no">
+        <type>BW::set&lt; BW::string &gt;</type>
+        <definition>BW::set&lt; BW::string &gt; FetchFromChunksJob::visited_</definition>
+        <argsstring></argsstring>
+        <name>visited_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="518" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="518" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1af81bd074e5d5ac29cd855f2b1edb6c37" prot="private" static="no" mutable="no">
+        <type>BW::vector&lt; BW::string &gt;</type>
+        <definition>BW::vector&lt; BW::string &gt; FetchFromChunksJob::overlappers_</definition>
+        <argsstring></argsstring>
+        <name>overlappers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="519" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="519" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1a6e9ae856e71fefb0bedc498c670e005d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FetchFromChunksJob::currX_</definition>
+        <argsstring></argsstring>
+        <name>currX_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="520" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="520" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1ac1996654c17d7a350dc64212391eb298" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FetchFromChunksJob::currY_</definition>
+        <argsstring></argsstring>
+        <name>currY_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="521" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="521" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1a058bfcee8f876b763fa5712ef97830c2" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FetchFromChunksJob::gridSize_</definition>
+        <argsstring></argsstring>
+        <name>gridSize_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="522" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="522" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1ac1b7cdcc8e6d17a5e56ec4fbb5e8334f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FetchFromChunksJob::minX_</definition>
+        <argsstring></argsstring>
+        <name>minX_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="523" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="523" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1ad8584f5e6dac30228647ceb327da3949" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FetchFromChunksJob::maxX_</definition>
+        <argsstring></argsstring>
+        <name>maxX_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="524" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="524" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1a6abdd4f050bf549e68ffff4f327cbe92" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FetchFromChunksJob::maxY_</definition>
+        <argsstring></argsstring>
+        <name>maxY_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="525" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="525" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1a2c16b4b88fdb7da1e9ea490d35fe4a16" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FetchFromChunksJob::singleDir_</definition>
+        <argsstring></argsstring>
+        <name>singleDir_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="526" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="526" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1ac3e727af80ac1b869554efe694cbd34b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FetchFromChunksJob::loadingStarted_</definition>
+        <argsstring></argsstring>
+        <name>loadingStarted_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="527" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="527" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1a62d948a90c2d73c6e01bd91f13109b88" prot="private" static="no" mutable="no">
+        <type>DataQueue</type>
+        <definition>DataQueue FetchFromChunksJob::queue_</definition>
+        <argsstring></argsstring>
+        <name>queue_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="531" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="531" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1a80292e064c445172c605065fef264e52" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FetchFromChunksJob::loadingFinished_</definition>
+        <argsstring></argsstring>
+        <name>loadingFinished_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="532" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="532" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1a086e6d5783f3e6e774b2546c4310f0b1" prot="private" static="no" mutable="no">
+        <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+        <definition>PyObjectPtr FetchFromChunksJob::pHandler_</definition>
+        <argsstring></argsstring>
+        <name>pHandler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="535" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="535" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1a9b91f4ff58925931a5aa39dca8cfd058" prot="private" static="no" mutable="no">
+        <type>DataSectionPtr</type>
+        <definition>DataSectionPtr FetchFromChunksJob::pMainThreadDS_</definition>
+        <argsstring></argsstring>
+        <name>pMainThreadDS_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="537" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="537" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1abe5081e2d33fa1ac6b07cd75285fe830" prot="private" static="no" mutable="no">
+        <type>DataSection::iterator</type>
+        <definition>DataSection::iterator FetchFromChunksJob::mainThreadIter_</definition>
+        <argsstring></argsstring>
+        <name>mainThreadIter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="538" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="538" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1a9e8069667c1b22932ee45c936311d79c" prot="private" static="no" mutable="no">
+        <type>std::auto_ptr&lt; <ref refid="class_fetch_from_chunks_job_1_1_filter" kindref="compound">Filter</ref> &gt;</type>
+        <definition>std::auto_ptr&lt; Filter &gt; FetchFromChunksJob::pFilter_</definition>
+        <argsstring></argsstring>
+        <name>pFilter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="539" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="539" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1a2cfb49d69e92bafe0263284ec9cd660f" prot="private" static="no" mutable="no">
+        <type>Matrix</type>
+        <definition>Matrix FetchFromChunksJob::mainThreadMatrix_</definition>
+        <argsstring></argsstring>
+        <name>mainThreadMatrix_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="541" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="541" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_from_chunks_job_1a401a8ccdd41c6032c60d8c83b8685d5f" prot="private" static="no" mutable="no">
+        <type>SimpleMutex</type>
+        <definition>SimpleMutex FetchFromChunksJob::mutex_</definition>
+        <argsstring></argsstring>
+        <name>mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="543" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="543" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fetch_from_chunks_job_1ad15f7925850ceb805ba47277c5d211e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FetchFromChunksJob::FetchFromChunksJob</definition>
+        <argsstring>(const BW::string &amp;path, PyObjectPtr pHandler, Filter *pFilter)</argsstring>
+        <name>FetchFromChunksJob</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+          <declname>pHandler</declname>
+        </param>
+        <param>
+          <type><ref refid="class_fetch_from_chunks_job_1_1_filter" kindref="compound">Filter</ref> *</type>
+          <declname>pFilter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="252" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="252" bodyend="271"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_fetch_from_chunks_job_1a0bcbafb8e3167c1e03264782b812f8f4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>float</type>
+        <definition>virtual float FetchFromChunksJob::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <reimplements refid="class_worker_job_1afd3c79ced2bbc23cd3cf9dacc49ea09c">operator()</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the method that is called to do stuff in the thread. It should return the desired time in seconds that the thread wants to wait before being called again. Zero is fine if you want to be called asap (although other jobs might be in front). If you return &lt; 0 you will not be rescheduled (you will be disowned) and if &lt; -1 you will also be deleted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="275" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="275" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fetch_from_chunks_job_1acfc5be0fa14abb3a4fba83b1420dd342" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FetchFromChunksJob::getNextOutdoorChunk</definition>
+        <argsstring>()</argsstring>
+        <name>getNextOutdoorChunk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="347" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="347" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fetch_from_chunks_job_1a01694cb63f7960a0791a782dd9fca255" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DataSectionPtr</type>
+        <definition>DataSectionPtr FetchFromChunksJob::loadChunk</definition>
+        <argsstring>(const BW::string &amp;identifier, Matrix *m)</argsstring>
+        <name>loadChunk</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>identifier</declname>
+        </param>
+        <param>
+          <type>Matrix *</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method loads the chunk with the input identifier and delivers it to the main thread. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="383" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="383" bodyend="414"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fetch_from_chunks_job_1a5728700c74c2fab8974d72a9ad3c024d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool FetchFromChunksJob::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <reimplements refid="class_ticked_worker_job_1aa85ac78f0740263ae78d1c68d383f996">tick</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called every game tick in the main thread. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="420" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="420" bodyend="512"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to implement the BigWorld.fetchEntitiesFromChunks and fetchFromChunks methods. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1248">
+        <label>TickedWorkerJob</label>
+        <link refid="class_ticked_worker_job"/>
+        <childnode refid="1249" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1249">
+        <label>WorkerJob</label>
+        <link refid="class_worker_job"/>
+      </node>
+      <node id="1247">
+        <label>FetchFromChunksJob</label>
+        <link refid="class_fetch_from_chunks_job"/>
+        <childnode refid="1248" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1251">
+        <label>TickedWorkerJob</label>
+        <link refid="class_ticked_worker_job"/>
+        <childnode refid="1252" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1252">
+        <label>WorkerJob</label>
+        <link refid="class_worker_job"/>
+      </node>
+      <node id="1250">
+        <label>FetchFromChunksJob</label>
+        <link refid="class_fetch_from_chunks_job"/>
+        <childnode refid="1251" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/loading_thread.cpp" line="185" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="184" bodyend="544"/>
+    <listofallmembers>
+      <member refid="class_fetch_from_chunks_job_1a6e9ae856e71fefb0bedc498c670e005d" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>currX_</name></member>
+      <member refid="class_fetch_from_chunks_job_1ac1996654c17d7a350dc64212391eb298" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>currY_</name></member>
+      <member refid="class_fetch_from_chunks_job_1a65d689da1281ddade08d86bf4791197e" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>DataQueue</name></member>
+      <member refid="class_worker_job_1ab85f534e0406cbe24acd9997a9f2ab20" prot="public" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>deleteSelf</name></member>
+      <member refid="class_worker_job_1a45c6bd51df30d9effe7665b1b0370344" prot="public" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>DONT_RESCHEDULE</name></member>
+      <member refid="class_worker_job_1a54aa01ef176dc2241b56c438ac02213b" prot="public" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>DONT_RESCHEDULE_AND_DESTROY</name></member>
+      <member refid="class_fetch_from_chunks_job_1ad15f7925850ceb805ba47277c5d211e1" prot="public" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>FetchFromChunksJob</name></member>
+      <member refid="class_fetch_from_chunks_job_1acfc5be0fa14abb3a4fba83b1420dd342" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>getNextOutdoorChunk</name></member>
+      <member refid="class_fetch_from_chunks_job_1a058bfcee8f876b763fa5712ef97830c2" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>gridSize_</name></member>
+      <member refid="class_worker_job_1a915d4203d1b0dbf592a89f4ecc3dd78d" prot="public" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>isDisowned</name></member>
+      <member refid="class_fetch_from_chunks_job_1a01694cb63f7960a0791a782dd9fca255" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>loadChunk</name></member>
+      <member refid="class_fetch_from_chunks_job_1a80292e064c445172c605065fef264e52" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>loadingFinished_</name></member>
+      <member refid="class_fetch_from_chunks_job_1ac3e727af80ac1b869554efe694cbd34b" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>loadingStarted_</name></member>
+      <member refid="class_fetch_from_chunks_job_1abe5081e2d33fa1ac6b07cd75285fe830" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>mainThreadIter_</name></member>
+      <member refid="class_fetch_from_chunks_job_1a2cfb49d69e92bafe0263284ec9cd660f" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>mainThreadMatrix_</name></member>
+      <member refid="class_fetch_from_chunks_job_1ad8584f5e6dac30228647ceb327da3949" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>maxX_</name></member>
+      <member refid="class_fetch_from_chunks_job_1a6abdd4f050bf549e68ffff4f327cbe92" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>maxY_</name></member>
+      <member refid="class_fetch_from_chunks_job_1ac1b7cdcc8e6d17a5e56ec4fbb5e8334f" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>minX_</name></member>
+      <member refid="class_fetch_from_chunks_job_1a401a8ccdd41c6032c60d8c83b8685d5f" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>mutex_</name></member>
+      <member refid="class_fetch_from_chunks_job_1a0bcbafb8e3167c1e03264782b812f8f4" prot="private" virt="virtual"><scope>FetchFromChunksJob</scope><name>operator()</name></member>
+      <member refid="class_fetch_from_chunks_job_1af81bd074e5d5ac29cd855f2b1edb6c37" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>overlappers_</name></member>
+      <member refid="class_fetch_from_chunks_job_1a390a95727ea4da6282886609721bb54a" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>path_</name></member>
+      <member refid="class_fetch_from_chunks_job_1a9e8069667c1b22932ee45c936311d79c" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>pFilter_</name></member>
+      <member refid="class_fetch_from_chunks_job_1a086e6d5783f3e6e774b2546c4310f0b1" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>pHandler_</name></member>
+      <member refid="class_fetch_from_chunks_job_1a9b91f4ff58925931a5aa39dca8cfd058" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>pMainThreadDS_</name></member>
+      <member refid="class_fetch_from_chunks_job_1a62d948a90c2d73c6e01bd91f13109b88" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>queue_</name></member>
+      <member refid="class_fetch_from_chunks_job_1a2c16b4b88fdb7da1e9ea490d35fe4a16" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>singleDir_</name></member>
+      <member refid="class_worker_job_1a803b6fc05912dc5b6b9e2afbaa4fcf3a" prot="public" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>submit</name></member>
+      <member refid="class_fetch_from_chunks_job_1a5728700c74c2fab8974d72a9ad3c024d" prot="private" virt="virtual"><scope>FetchFromChunksJob</scope><name>tick</name></member>
+      <member refid="class_ticked_worker_job_1ac41d66d1064f1d178fec6f1494afa3a9" prot="protected" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>TickedWorkerJob</name></member>
+      <member refid="class_ticked_worker_job_1a02d005e07a6e04d449a74f38c04154d6" prot="public" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>tickJobs</name></member>
+      <member refid="class_fetch_from_chunks_job_1a691580ee7653c5c23ea1ff295e1ee336" prot="private" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>visited_</name></member>
+      <member refid="class_worker_job_1a69d5df98ea6d0ee989610be780a18555" prot="public" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>withdraw</name></member>
+      <member refid="class_worker_job_1a99e3d7e946b7302500c2b71ec6b5e92a" prot="public" virt="non-virtual"><scope>FetchFromChunksJob</scope><name>WorkerJob</name></member>
+      <member refid="class_ticked_worker_job_1aa2658b0c262aa07cf815161fcaf07510" prot="protected" virt="virtual"><scope>FetchFromChunksJob</scope><name>~TickedWorkerJob</name></member>
+      <member refid="class_worker_job_1a2021f357efe65197ce3cbff302e34df1" prot="protected" virt="virtual"><scope>FetchFromChunksJob</scope><name>~WorkerJob</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

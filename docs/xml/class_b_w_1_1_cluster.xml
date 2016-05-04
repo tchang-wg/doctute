@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_b_w_1_1_cluster" kind="class" language="C++" prot="public">
+    <compoundname>BW::Cluster</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ReferenceCount</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">ChannelOwner</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">TimerHandler</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_b_w_1_1_cluster_1a441ad6acd4864e2b8cd54fe7ec37f3af" prot="private" static="no" mutable="no">
+        <type><ref refid="class_b_w_1_1_inter_cluster_mgr" kindref="compound">InterClusterMgr</ref> &amp;</type>
+        <definition>InterClusterMgr&amp; BW::Cluster::interClusterMgr_</definition>
+        <argsstring></argsstring>
+        <name>interClusterMgr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interclustermgr/cluster.hpp" line="54" column="1" bodyfile="interclustermgr/cluster.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_1_1_cluster_1a0e849b7e18c88272534806095455d092" prot="private" static="no" mutable="no">
+        <type>TimerHandle</type>
+        <definition>TimerHandle BW::Cluster::timerHandle_</definition>
+        <argsstring></argsstring>
+        <name>timerHandle_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interclustermgr/cluster.hpp" line="55" column="1" bodyfile="interclustermgr/cluster.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_1_1_cluster_1ac00b24ccf0d5d379aa7ac493865a3420" prot="private" static="no" mutable="no">
+        <type>ClusterID</type>
+        <definition>ClusterID BW::Cluster::id_</definition>
+        <argsstring></argsstring>
+        <name>id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interclustermgr/cluster.hpp" line="56" column="1" bodyfile="interclustermgr/cluster.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_1_1_cluster_1ad78aaddf052802e59678fc52ae40302e" prot="private" static="no" mutable="no">
+        <type>UniqueID</type>
+        <definition>UniqueID BW::Cluster::uniqueID_</definition>
+        <argsstring></argsstring>
+        <name>uniqueID_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interclustermgr/cluster.hpp" line="57" column="1" bodyfile="interclustermgr/cluster.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_b_w_1_1_cluster_1afb412ba58e4ff02e90b235c95476f331" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW::Cluster::Cluster</definition>
+        <argsstring>(InterClusterMgr &amp;interClusterMgr, const Mercury::Address &amp;intAddr, ClusterID id, UniqueID uniqueID)</argsstring>
+        <name>Cluster</name>
+        <param>
+          <type><ref refid="class_b_w_1_1_inter_cluster_mgr" kindref="compound">InterClusterMgr</ref> &amp;</type>
+          <declname>interClusterMgr</declname>
+        </param>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>intAddr</declname>
+        </param>
+        <param>
+          <type>ClusterID</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>UniqueID</type>
+          <declname>uniqueID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interclustermgr/cluster.hpp" line="25" column="1" bodyfile="interclustermgr/cluster.cpp" bodystart="19" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_1_1_cluster_1aceb56321a507d9c97f82cd70418ef24e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW::Cluster::~Cluster</definition>
+        <argsstring>()</argsstring>
+        <name>~Cluster</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interclustermgr/cluster.hpp" line="28" column="1" bodyfile="interclustermgr/cluster.cpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_1_1_cluster_1aa1f5b1da9df0378b3f4e1fa96108ef30" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>ClusterID</type>
+        <definition>ClusterID BW::Cluster::id</definition>
+        <argsstring>() const </argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interclustermgr/cluster.hpp" line="30" column="1" bodyfile="interclustermgr/cluster.hpp" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_1_1_cluster_1a20265105466ceddab224dcf9715c55c9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const UniqueID &amp;</type>
+        <definition>const UniqueID&amp; BW::Cluster::uniqueID</definition>
+        <argsstring>() const </argsstring>
+        <name>uniqueID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interclustermgr/cluster.hpp" line="31" column="1" bodyfile="interclustermgr/cluster.hpp" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_1_1_cluster_1a408016888749f2baf172ab8d102d17c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BW::Cluster::handleTimeout</definition>
+        <argsstring>(TimerHandle, void *)</argsstring>
+        <name>handleTimeout</name>
+        <param>
+          <type>TimerHandle</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interclustermgr/cluster.hpp" line="34" column="1" bodyfile="interclustermgr/cluster.cpp" bodystart="43" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_1_1_cluster_1a9cc0c3ddd7f6266ad4bdd57d7cbdbee3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BW::Cluster::onAnotherClusterDeregistered</definition>
+        <argsstring>(ClusterID clusterID, DeregisterClusterTaskPtr pTask)</argsstring>
+        <name>onAnotherClusterDeregistered</name>
+        <param>
+          <type>ClusterID</type>
+          <declname>clusterID</declname>
+        </param>
+        <param>
+          <type>DeregisterClusterTaskPtr</type>
+          <declname>pTask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method notifies the cluster about the deregistering of another cluster. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interclustermgr/cluster.hpp" line="44" column="1" bodyfile="interclustermgr/cluster.cpp" bodystart="127" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_1_1_cluster_1a1080d99cf8481f1f801ce1ba2fef47ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BW::Cluster::sendPing</definition>
+        <argsstring>()</argsstring>
+        <name>sendPing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method send ping message to the cluster. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interclustermgr/cluster.hpp" line="50" column="1" bodyfile="interclustermgr/cluster.cpp" bodystart="138" bodyend="144"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_b_w_1_1_cluster_1a55daf67fa1d8150b480fcf5d15c4a7da" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_smart_pointer" kindref="compound">WatcherPtr</ref></type>
+        <definition>WatcherPtr BW::Cluster::pWatcher</definition>
+        <argsstring>()</argsstring>
+        <name>pWatcher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This static method makes a watcher associated with this object type. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interclustermgr/cluster.hpp" line="39" column="1" bodyfile="interclustermgr/cluster.cpp" bodystart="72" bodyend="87"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="708">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="710">
+        <label>TimerHandler</label>
+      </node>
+      <node id="707">
+        <label>BW::Cluster</label>
+        <link refid="class_b_w_1_1_cluster"/>
+        <childnode refid="708" relation="public-inheritance">
+        </childnode>
+        <childnode refid="709" relation="public-inheritance">
+        </childnode>
+        <childnode refid="710" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="709">
+        <label>ChannelOwner</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="712">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="714">
+        <label>TimerHandler</label>
+      </node>
+      <node id="711">
+        <label>BW::Cluster</label>
+        <link refid="class_b_w_1_1_cluster"/>
+        <childnode refid="712" relation="public-inheritance">
+        </childnode>
+        <childnode refid="713" relation="public-inheritance">
+        </childnode>
+        <childnode refid="714" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="713">
+        <label>ChannelOwner</label>
+      </node>
+    </collaborationgraph>
+    <location file="interclustermgr/cluster.hpp" line="23" column="1" bodyfile="interclustermgr/cluster.hpp" bodystart="19" bodyend="58"/>
+    <listofallmembers>
+      <member refid="class_b_w_1_1_cluster_1afb412ba58e4ff02e90b235c95476f331" prot="public" virt="non-virtual"><scope>BW::Cluster</scope><name>Cluster</name></member>
+      <member refid="class_b_w_1_1_cluster_1a408016888749f2baf172ab8d102d17c9" prot="public" virt="virtual"><scope>BW::Cluster</scope><name>handleTimeout</name></member>
+      <member refid="class_b_w_1_1_cluster_1aa1f5b1da9df0378b3f4e1fa96108ef30" prot="public" virt="non-virtual"><scope>BW::Cluster</scope><name>id</name></member>
+      <member refid="class_b_w_1_1_cluster_1ac00b24ccf0d5d379aa7ac493865a3420" prot="private" virt="non-virtual"><scope>BW::Cluster</scope><name>id_</name></member>
+      <member refid="class_b_w_1_1_cluster_1a441ad6acd4864e2b8cd54fe7ec37f3af" prot="private" virt="non-virtual"><scope>BW::Cluster</scope><name>interClusterMgr_</name></member>
+      <member refid="class_b_w_1_1_cluster_1a9cc0c3ddd7f6266ad4bdd57d7cbdbee3" prot="public" virt="non-virtual"><scope>BW::Cluster</scope><name>onAnotherClusterDeregistered</name></member>
+      <member refid="class_b_w_1_1_cluster_1a55daf67fa1d8150b480fcf5d15c4a7da" prot="public" virt="non-virtual"><scope>BW::Cluster</scope><name>pWatcher</name></member>
+      <member refid="class_b_w_1_1_cluster_1a1080d99cf8481f1f801ce1ba2fef47ff" prot="public" virt="non-virtual"><scope>BW::Cluster</scope><name>sendPing</name></member>
+      <member refid="class_b_w_1_1_cluster_1a0e849b7e18c88272534806095455d092" prot="private" virt="non-virtual"><scope>BW::Cluster</scope><name>timerHandle_</name></member>
+      <member refid="class_b_w_1_1_cluster_1a20265105466ceddab224dcf9715c55c9" prot="public" virt="non-virtual"><scope>BW::Cluster</scope><name>uniqueID</name></member>
+      <member refid="class_b_w_1_1_cluster_1ad78aaddf052802e59678fc52ae40302e" prot="private" virt="non-virtual"><scope>BW::Cluster</scope><name>uniqueID_</name></member>
+      <member refid="class_b_w_1_1_cluster_1aceb56321a507d9c97f82cd70418ef24e" prot="public" virt="non-virtual"><scope>BW::Cluster</scope><name>~Cluster</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

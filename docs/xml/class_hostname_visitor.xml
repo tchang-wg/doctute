@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_hostname_visitor" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>HostnameVisitor</compoundname>
+    <derivedcompoundref refid="class_hostname_copier" prot="public" virt="non-virtual">HostnameCopier</derivedcompoundref>
+    <derivedcompoundref refid="class_hostname_populator" prot="public" virt="non-virtual">HostnamePopulator</derivedcompoundref>
+    <includes refid="hostnames_8hpp" local="no">hostnames.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_hostname_visitor_1ad51dfd74791935e692a91c9abd3f1edd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool HostnameVisitor::onHost</definition>
+        <argsstring>(MessageLogger::IPAddress ipAddress, const BW::string &amp;hostname)=0</argsstring>
+        <name>onHost</name>
+        <reimplementedby refid="class_hostname_copier_1a03bd5c1ab8f713ea407545b38c39a6d6">onHost</reimplementedby>
+        <reimplementedby refid="class_hostname_populator_1a6c82f67abeda33a0e0e0ecd1f7bdaf54">onHost</reimplementedby>
+        <param>
+          <type>MessageLogger::IPAddress</type>
+          <declname>ipAddress</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>hostname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/hostnames.hpp" line="20" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This abstract class provides a template which can be used to retrieve the hosts being stored in a <ref refid="class_hostnames" kindref="compound">Hostnames</ref> instance. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1470">
+        <label>HostnamePopulator</label>
+        <link refid="class_hostname_populator"/>
+        <childnode refid="1468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1469">
+        <label>HostnameCopier</label>
+        <link refid="class_hostname_copier"/>
+        <childnode refid="1468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1468">
+        <label>HostnameVisitor</label>
+        <link refid="class_hostname_visitor"/>
+      </node>
+    </inheritancegraph>
+    <location file="tools/message_logger/hostnames.hpp" line="18" column="1" bodyfile="tools/message_logger/hostnames.hpp" bodystart="17" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_hostname_visitor_1ad51dfd74791935e692a91c9abd3f1edd" prot="public" virt="pure-virtual"><scope>HostnameVisitor</scope><name>onHost</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

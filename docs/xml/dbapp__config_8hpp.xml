@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dbapp__config_8hpp" kind="file" language="C++">
+    <compoundname>dbapp_config.hpp</compoundname>
+    <includes local="yes">server/server_app_config.hpp</includes>
+    <includedby refid="dbapp_2dbapp_8cpp" local="yes">dbapp/dbapp.cpp</includedby>
+    <includedby refid="dbapp__config_8cpp" local="yes">dbapp/dbapp_config.cpp</includedby>
+    <includedby refid="entity__auto__loader_8cpp" local="yes">dbapp/entity_auto_loader.cpp</includedby>
+    <includedby refid="look__up__entity__handler_8cpp" local="yes">dbapp/look_up_entity_handler.cpp</includedby>
+    <includedby refid="dbapp_2main_8cpp" local="yes">dbapp/main.cpp</includedby>
+    <includedby refid="xml__engine__creator_8cpp" local="yes">dbapp/xml_engine_creator.cpp</includedby>
+    <incdepgraph>
+      <node id="14413">
+        <label>dbapp/dbapp_config.hpp</label>
+        <link refid="dbapp_config.hpp"/>
+        <childnode refid="14414" relation="include">
+        </childnode>
+      </node>
+      <node id="14414">
+        <label>server/server_app_config.hpp</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_d_b_app_config" prot="public">DBAppConfig</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;server/server_app_config.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="class_d_b_app_config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_d_b_app_config" kindref="compound">DBAppConfig</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>ServerAppConfig</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>int<sp/>&gt;<sp/>dumpEntityDescription;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>int<sp/>&gt;<sp/>maxConcurrentEntityLoaders;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>int<sp/>&gt;<sp/>numDBLockRetries;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>shouldCacheLogOnRecords;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>shouldDelayLookUpSend;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>int<sp/>&gt;<sp/>accountNameLookUpCacheSize;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>recentTransfersCacheTimeToLive;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>From<sp/>LoginConditionsConfig</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>overloadLevel;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>overloadTolerancePeriod;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Shared<sp/>DB<sp/>config<sp/>is<sp/>available<sp/>via<sp/>DBConfig::get()<sp/>(lib/db/db_config.hpp)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>postInit();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>dbapp_config.hpp</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="dbapp/dbapp_config.hpp"/>
+  </compounddef>
+</doxygen>

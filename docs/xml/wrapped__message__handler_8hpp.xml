@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="wrapped__message__handler_8hpp" kind="file" language="C++">
+    <compoundname>wrapped_message_handler.hpp</compoundname>
+    <includes refid="broadcast__manager_8hpp" local="yes">broadcast_manager.hpp</includes>
+    <includes refid="connection__wrapper_8hpp" local="yes">connection_wrapper.hpp</includes>
+    <includes local="yes">network/endpoint.hpp</includes>
+    <includes local="yes">network/machine_guard.hpp</includes>
+    <includes local="yes">cstdmf/time_queue.hpp</includes>
+    <includedby refid="bwmachined_8hpp" local="yes">tools/bwmachined/bwmachined.hpp</includedby>
+    <includedby refid="test__wrapped__message__handler_8cpp" local="yes">tools/bwmachined/unit_test/test_wrapped_message_handler.cpp</includedby>
+    <includedby refid="wrapped__message__handler_8cpp" local="yes">tools/bwmachined/wrapped_message_handler.cpp</includedby>
+    <incdepgraph>
+      <node id="18524">
+        <label>cstdmf/memory_stream.hpp</label>
+      </node>
+      <node id="18522">
+        <label>network/endpoint.hpp</label>
+      </node>
+      <node id="18526">
+        <label>network/machine_guard.hpp</label>
+      </node>
+      <node id="18523">
+        <label>cstdmf/binary_stream.hpp</label>
+      </node>
+      <node id="18525">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="18528">
+        <label>cstdmf/time_queue.hpp</label>
+      </node>
+      <node id="18521">
+        <label>connection_wrapper.hpp</label>
+        <link refid="connection__wrapper_8hpp_source"/>
+        <childnode refid="18522" relation="include">
+        </childnode>
+        <childnode refid="18523" relation="include">
+        </childnode>
+        <childnode refid="18524" relation="include">
+        </childnode>
+        <childnode refid="18525" relation="include">
+        </childnode>
+      </node>
+      <node id="18527">
+        <label>cstdmf/bw_list.hpp</label>
+      </node>
+      <node id="18520">
+        <label>broadcast_manager.hpp</label>
+        <link refid="broadcast__manager_8hpp_source"/>
+        <childnode refid="18521" relation="include">
+        </childnode>
+        <childnode refid="18522" relation="include">
+        </childnode>
+        <childnode refid="18526" relation="include">
+        </childnode>
+        <childnode refid="18527" relation="include">
+        </childnode>
+        <childnode refid="18528" relation="include">
+        </childnode>
+      </node>
+      <node id="18519">
+        <label>tools/bwmachined/wrapped_message_handler.hpp</label>
+        <link refid="wrapped_message_handler.hpp"/>
+        <childnode refid="18520" relation="include">
+        </childnode>
+        <childnode refid="18521" relation="include">
+        </childnode>
+        <childnode refid="18522" relation="include">
+        </childnode>
+        <childnode refid="18526" relation="include">
+        </childnode>
+        <childnode refid="18528" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="18531">
+        <label>tools/bwmachined/incoming_packet.hpp</label>
+        <link refid="incoming__packet_8hpp_source"/>
+      </node>
+      <node id="18530">
+        <label>tools/bwmachined/bwmachined.hpp</label>
+        <link refid="bwmachined_8hpp_source"/>
+        <childnode refid="18531" relation="include">
+        </childnode>
+      </node>
+      <node id="18529">
+        <label>tools/bwmachined/wrapped_message_handler.hpp</label>
+        <link refid="wrapped_message_handler.hpp"/>
+        <childnode refid="18530" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_wrapped_message_handler" prot="public">WrappedMessageHandler</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>WRAPPED_MESSAGE_HANDLER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WRAPPED_MESSAGE_HANDLER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;broadcast_manager.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;connection_wrapper.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/endpoint.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/machine_guard.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/time_queue.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_b_w_machined" kindref="compound">BWMachined</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">BWMachineDNetwork;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_wrapped_message_handler" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_wrapped_message_handler" kindref="compound">WrappedMessageHandler</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wrapped_message_handler_1a3aead9ca75a8f9d7a88873d129419201" kindref="member">WrappedMessageHandler</ref>(</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TimeQueue64::TimeStamp<sp/>timeoutMillis<sp/>=</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(MachineGuardMessage::TIMEOUT_SECONDS<sp/>*<sp/>1000),</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8<sp/>maxAttempts<sp/>=<sp/>MachineGuardMessage::MAX_SEND_ATTEMPTS<sp/>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wrapped_message_handler_1ad071324cfe83591820724a6765e43e97" kindref="member">~WrappedMessageHandler</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_wrapped_message_handler_1a56e3da0813bbdcf6d754c7fee761224d" kindref="member">addBroadcastRequest</ref>(<sp/>BroadcastWrapperMessage<sp/>&amp;<sp/>bwm,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_b_w_machined" kindref="compound">BWMachined</ref><sp/>&amp;<sp/>machined,<sp/><ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref><sp/>pReplyConnection<sp/>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_wrapped_message_handler_1a4cd6d99a09478fc57991842bad7f7464" kindref="member">interceptPacket</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MGMPacket<sp/>&amp;<sp/>packet,<sp/>uint32<sp/>ip<sp/>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wrapped_message_handler_1a396b61d19aa572b4992813af02fcdb16" kindref="member">process</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Primary<sp/>storage<sp/>for<sp/>the<sp/>managers,<sp/>effectively<sp/>sorted<sp/>by<sp/>broadcast<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>SortedManagers<sp/>sortedManagers_;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Managers<sp/>indexed<sp/>by<sp/>the<sp/>sequence<sp/>number<sp/>of<sp/>their<sp/>internal<sp/>packets.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>ManagerLookup<sp/>managersBySeq_;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>TimeQueue64::TimeStamp<sp/>timeoutMillis_;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8<sp/>maxAttempts_;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>WRAPPED_MESSAGE_HANDLER_HPP</highlight></codeline>
+    </programlisting>
+    <location file="tools/bwmachined/wrapped_message_handler.hpp"/>
+  </compounddef>
+</doxygen>

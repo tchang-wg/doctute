@@ -1,0 +1,494 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_entity_population" kind="class" language="C++" prot="public">
+    <compoundname>EntityPopulation</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BW::map&lt; EntityID, Entity * &gt;</basecompoundref>
+    <basecompoundref refid="class_cell_app_death_listener" prot="public" virt="non-virtual">CellAppDeathListener</basecompoundref>
+    <includes refid="entity__population_8hpp" local="no">entity_population.hpp</includes>
+    <innerclass refid="class_entity_population_1_1_observer" prot="public">EntityPopulation::Observer</innerclass>
+    <innerclass refid="struct_entity_population_1_1_recent_teleport_data" prot="private">EntityPopulation::RecentTeleportData</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_entity_population_1ad2ad59e03d777da463b41663088a4a03" prot="private" static="no">
+        <type>BW::map&lt; EntityID, <ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref> * &gt;</type>
+        <definition>typedef BW::map&lt; EntityID, CellAppChannel* &gt; EntityPopulation::RealChannels</definition>
+        <argsstring></argsstring>
+        <name>RealChannels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="70" column="1" bodyfile="cellapp/entity_population.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_entity_population_1a48231ac9f0625e6a4b13ed073f7ffe47" prot="private" static="no">
+        <type>BW::multimap&lt; EntityID, <ref refid="class_entity_population_1_1_observer" kindref="compound">Observer</ref> * &gt;</type>
+        <definition>typedef BW::multimap&lt; EntityID, Observer * &gt; EntityPopulation::Observers</definition>
+        <argsstring></argsstring>
+        <name>Observers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="75" column="1" bodyfile="cellapp/entity_population.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_entity_population_1a5c03ae8b4bb6a6d1da39cdc2735ad2d2" prot="private" static="no">
+        <type>BW::multimap&lt; Mercury::Address, RecentTeleportData &gt;</type>
+        <definition>typedef BW::multimap&lt; Mercury::Address, RecentTeleportData &gt; EntityPopulation::BaseAddrs</definition>
+        <argsstring></argsstring>
+        <name>BaseAddrs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="87" column="1" bodyfile="cellapp/entity_population.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_entity_population_1ae4b013620b1f491cef9c024000b0ffe0" prot="private" static="no" mutable="yes">
+        <type>RealChannels</type>
+        <definition>RealChannels EntityPopulation::currChannels_</definition>
+        <argsstring></argsstring>
+        <name>currChannels_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="77" column="1" bodyfile="cellapp/entity_population.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_population_1afe7bede53d53f851ba58464d49bf3820" prot="private" static="no" mutable="yes">
+        <type>RealChannels</type>
+        <definition>RealChannels EntityPopulation::prevChannels_</definition>
+        <argsstring></argsstring>
+        <name>prevChannels_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="78" column="1" bodyfile="cellapp/entity_population.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_population_1a49d9dde8efc31413f314427ec08a06a7" prot="private" static="no" mutable="yes">
+        <type>BaseAddrs</type>
+        <definition>BaseAddrs EntityPopulation::currRecentTeleportData_</definition>
+        <argsstring></argsstring>
+        <name>currRecentTeleportData_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="88" column="1" bodyfile="cellapp/entity_population.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_population_1ab4086de8dd4c6e2a8cef6d9c6bc4d6e7" prot="private" static="no" mutable="yes">
+        <type>BaseAddrs</type>
+        <definition>BaseAddrs EntityPopulation::prevRecentTeleportData_</definition>
+        <argsstring></argsstring>
+        <name>prevRecentTeleportData_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="89" column="1" bodyfile="cellapp/entity_population.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_population_1a5f9d8ed799f282c2cedfddf422cdfe91" prot="private" static="no" mutable="yes">
+        <type>Observers</type>
+        <definition>Observers EntityPopulation::observers_</definition>
+        <argsstring></argsstring>
+        <name>observers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="99" column="1" bodyfile="cellapp/entity_population.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_entity_population_1a4df940a3a3e5341b1b7f79bae6a09424" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>BW_BEGIN_NAMESPACE void EntityPopulation::add</definition>
+        <argsstring>(Entity &amp;entity)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds an entity to the population. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="42" column="1" bodyfile="cellapp/entity_population.cpp" bodystart="31" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_population_1a7490d27a588044c4ca8d4961275df811" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityPopulation::remove</definition>
+        <argsstring>(Entity &amp;entity)</argsstring>
+        <name>remove</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method removes an entity from the population. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="43" column="1" bodyfile="cellapp/entity_population.cpp" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_population_1a3252076190de19e449603b54f2e09a92" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityPopulation::addObserver</definition>
+        <argsstring>(EntityID id, Observer *pObserver) const </argsstring>
+        <name>addObserver</name>
+        <param>
+          <type>EntityID</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_entity_population_1_1_observer" kindref="compound">Observer</ref> *</type>
+          <declname>pObserver</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds an observer on the population. This is an object that wants to be told be a particular entity joins the population.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the entity to watch out for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pObserver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object that will be told when the entity arrives.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Once the observer has been told that the entity has arrived, it is removed from the list of observers. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="45" column="1" bodyfile="cellapp/entity_population.cpp" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_population_1a940a6cbd765c5e781d88cf6a0e82ce64" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EntityPopulation::removeObserver</definition>
+        <argsstring>(EntityID id, Observer *pObserver) const </argsstring>
+        <name>removeObserver</name>
+        <param>
+          <type>EntityID</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_entity_population_1_1_observer" kindref="compound">Observer</ref> *</type>
+          <declname>pObserver</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method removes an observer on the population.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the entity to watch out for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pObserver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object that will be told when the entity arrives. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="46" column="1" bodyfile="cellapp/entity_population.cpp" bodystart="76" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_population_1a8a687ca227e7c59933c552b974dc3ac4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityPopulation::notifyObservers</definition>
+        <argsstring>(Entity &amp;entity) const </argsstring>
+        <name>notifyObservers</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method notifies observers of a new entity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="48" column="1" bodyfile="cellapp/entity_population.cpp" bodystart="101" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_population_1a2c543ae7065b51ddc711bcc056dce3eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityPopulation::rememberRealChannel</definition>
+        <argsstring>(EntityID id, CellAppChannel &amp;channel)</argsstring>
+        <name>rememberRealChannel</name>
+        <param>
+          <type>EntityID</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref> &amp;</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called when a ghost entity is destroyed. It remembers where it thought the real entity was. This is used if a message arrives for this entity. The message will be forwarded to this address. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="51" column="1" bodyfile="cellapp/entity_population.cpp" bodystart="126" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_population_1a13b59a0ca247584493f7888d30717a19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityPopulation::forgetRealChannel</definition>
+        <argsstring>(EntityID id)</argsstring>
+        <name>forgetRealChannel</name>
+        <param>
+          <type>EntityID</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="53" column="1" bodyfile="cellapp/entity_population.hpp" bodystart="53" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_population_1a6a37f6d6719274182c15d2f24eb07237" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityPopulation::rememberBaseChannel</definition>
+        <argsstring>(Entity &amp;entity, const Mercury::Address &amp;addr) const </argsstring>
+        <name>rememberBaseChannel</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds the baseapp channel from a recently offloaded real </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="59" column="1" bodyfile="cellapp/entity_population.cpp" bodystart="136" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_population_1a47bd3b76d06da03a9390d8519cf00cec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityPopulation::expireRealChannels</definition>
+        <argsstring>() const </argsstring>
+        <name>expireRealChannels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method frees the cached real addresses. It should be called periodically to allow freeing of the associated memory. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="61" column="1" bodyfile="cellapp/entity_population.cpp" bodystart="151" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_population_1a9ef922779bb796d210563f1ebb610da5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityPopulation::notifyBasesOfCellAppDeath</definition>
+        <argsstring>(const Mercury::Address &amp;addr, Mercury::BundleSendingMap &amp;bundles, AckCellAppDeathHelper *pAckHelper) const </argsstring>
+        <name>notifyBasesOfCellAppDeath</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>Mercury::BundleSendingMap &amp;</type>
+          <declname>bundles</declname>
+        </param>
+        <param>
+          <type><ref refid="class_ack_cell_app_death_helper" kindref="compound">AckCellAppDeathHelper</ref> *</type>
+          <declname>pAckHelper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called on <ref refid="class_cell_app" kindref="compound">CellApp</ref> death. It begins where handleCellAppDeath left off, any recently offloaded entities who&apos;s ghosts have already been destroyed (probably through teleport) will </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="63" column="1" bodyfile="cellapp/entity_population.cpp" bodystart="238" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_population_1abec7d09bdf359f6c74cee5ed74a275db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref> *</type>
+        <definition>CellAppChannel * EntityPopulation::findRealChannel</definition>
+        <argsstring>(EntityID id) const </argsstring>
+        <name>findRealChannel</name>
+        <param>
+          <type>EntityID</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method attempts to find a possible location for entity with the input id. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="67" column="1" bodyfile="cellapp/entity_population.cpp" bodystart="165" bodyend="182"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_entity_population_1af2cf39e0601baa61898cea2521d16179" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EntityPopulation::handleCellAppDeath</definition>
+        <argsstring>(const Mercury::Address &amp;addr)</argsstring>
+        <name>handleCellAppDeath</name>
+        <reimplements refid="class_cell_app_death_listener_1a659bfb429976219f17a49f7181e32d94">handleCellAppDeath</reimplements>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called on <ref refid="class_cell_app" kindref="compound">CellApp</ref> death. We remove any reference to the <ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref> to the dead app. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="71" column="1" bodyfile="cellapp/entity_population.cpp" bodystart="255" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_population_1a34aef320c4a5b65cd67cf2e5ca435e67" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityPopulation::forgetRealChannel</definition>
+        <argsstring>(RealChannels &amp;channels, const Mercury::Address &amp;addr)</argsstring>
+        <name>forgetRealChannel</name>
+        <param>
+          <type>RealChannels &amp;</type>
+          <declname>channels</declname>
+        </param>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method will remove all mappings from the given collection that refer to the dead channel. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="72" column="1" bodyfile="cellapp/entity_population.cpp" bodystart="266" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_population_1a93ffbf841a372d36a3b18e2fe1509e2a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityPopulation::notifyBaseRangeOfCellAppDeath</definition>
+        <argsstring>(BaseAddrs &amp;container, const Mercury::Address &amp;addr, Mercury::BundleSendingMap &amp;bundles, AckCellAppDeathHelper *pAckHelper) const </argsstring>
+        <name>notifyBaseRangeOfCellAppDeath</name>
+        <param>
+          <type>BaseAddrs &amp;</type>
+          <declname>container</declname>
+        </param>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>Mercury::BundleSendingMap &amp;</type>
+          <declname>bundles</declname>
+        </param>
+        <param>
+          <type><ref refid="class_ack_cell_app_death_helper" kindref="compound">AckCellAppDeathHelper</ref> *</type>
+          <declname>pAckHelper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method informs base entities that their cell entity may be on a dead <ref refid="class_cell_app" kindref="compound">CellApp</ref>. Entities that have recently teleported to the dead <ref refid="class_cell_app" kindref="compound">CellApp</ref> inform the base entity that this is where they believe the real cell entity is. If the base entity thought the cell entity was still here, it believes this message and updates the location of the real. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_population.hpp" line="91" column="1" bodyfile="cellapp/entity_population.cpp" bodystart="192" bodyend="230"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to store all of the entities in the application. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1157">
+        <label>BW::map&lt; EntityID, Entity * &gt;</label>
+      </node>
+      <node id="1156">
+        <label>EntityPopulation</label>
+        <link refid="class_entity_population"/>
+        <childnode refid="1157" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1158" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1158">
+        <label>CellAppDeathListener</label>
+        <link refid="class_cell_app_death_listener"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1160">
+        <label>BW::map&lt; EntityID, Entity * &gt;</label>
+      </node>
+      <node id="1159">
+        <label>EntityPopulation</label>
+        <link refid="class_entity_population"/>
+        <childnode refid="1160" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1161" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1161">
+        <label>CellAppDeathListener</label>
+        <link refid="class_cell_app_death_listener"/>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/entity_population.hpp" line="29" column="1" bodyfile="cellapp/entity_population.hpp" bodystart="26" bodyend="100"/>
+    <listofallmembers>
+      <member refid="class_entity_population_1a4df940a3a3e5341b1b7f79bae6a09424" prot="public" virt="non-virtual"><scope>EntityPopulation</scope><name>add</name></member>
+      <member refid="class_entity_population_1a3252076190de19e449603b54f2e09a92" prot="public" virt="non-virtual"><scope>EntityPopulation</scope><name>addObserver</name></member>
+      <member refid="class_entity_population_1a5c03ae8b4bb6a6d1da39cdc2735ad2d2" prot="private" virt="non-virtual"><scope>EntityPopulation</scope><name>BaseAddrs</name></member>
+      <member refid="class_cell_app_death_listener_1ac7bf695557751ac343853d0a6d0077be" prot="public" virt="non-virtual"><scope>EntityPopulation</scope><name>CellAppDeathListener</name></member>
+      <member refid="class_entity_population_1ae4b013620b1f491cef9c024000b0ffe0" prot="private" virt="non-virtual"><scope>EntityPopulation</scope><name>currChannels_</name></member>
+      <member refid="class_entity_population_1a49d9dde8efc31413f314427ec08a06a7" prot="private" virt="non-virtual"><scope>EntityPopulation</scope><name>currRecentTeleportData_</name></member>
+      <member refid="class_entity_population_1a47bd3b76d06da03a9390d8519cf00cec" prot="public" virt="non-virtual"><scope>EntityPopulation</scope><name>expireRealChannels</name></member>
+      <member refid="class_entity_population_1abec7d09bdf359f6c74cee5ed74a275db" prot="public" virt="non-virtual"><scope>EntityPopulation</scope><name>findRealChannel</name></member>
+      <member refid="class_entity_population_1a13b59a0ca247584493f7888d30717a19" prot="public" virt="non-virtual"><scope>EntityPopulation</scope><name>forgetRealChannel</name></member>
+      <member refid="class_entity_population_1a34aef320c4a5b65cd67cf2e5ca435e67" prot="private" virt="non-virtual"><scope>EntityPopulation</scope><name>forgetRealChannel</name></member>
+      <member refid="class_entity_population_1af2cf39e0601baa61898cea2521d16179" prot="private" virt="virtual"><scope>EntityPopulation</scope><name>handleCellAppDeath</name></member>
+      <member refid="class_entity_population_1a93ffbf841a372d36a3b18e2fe1509e2a" prot="private" virt="non-virtual"><scope>EntityPopulation</scope><name>notifyBaseRangeOfCellAppDeath</name></member>
+      <member refid="class_entity_population_1a9ef922779bb796d210563f1ebb610da5" prot="public" virt="non-virtual"><scope>EntityPopulation</scope><name>notifyBasesOfCellAppDeath</name></member>
+      <member refid="class_entity_population_1a8a687ca227e7c59933c552b974dc3ac4" prot="public" virt="non-virtual"><scope>EntityPopulation</scope><name>notifyObservers</name></member>
+      <member refid="class_entity_population_1a48231ac9f0625e6a4b13ed073f7ffe47" prot="private" virt="non-virtual"><scope>EntityPopulation</scope><name>Observers</name></member>
+      <member refid="class_entity_population_1a5f9d8ed799f282c2cedfddf422cdfe91" prot="private" virt="non-virtual"><scope>EntityPopulation</scope><name>observers_</name></member>
+      <member refid="class_entity_population_1afe7bede53d53f851ba58464d49bf3820" prot="private" virt="non-virtual"><scope>EntityPopulation</scope><name>prevChannels_</name></member>
+      <member refid="class_entity_population_1ab4086de8dd4c6e2a8cef6d9c6bc4d6e7" prot="private" virt="non-virtual"><scope>EntityPopulation</scope><name>prevRecentTeleportData_</name></member>
+      <member refid="class_entity_population_1ad2ad59e03d777da463b41663088a4a03" prot="private" virt="non-virtual"><scope>EntityPopulation</scope><name>RealChannels</name></member>
+      <member refid="class_entity_population_1a6a37f6d6719274182c15d2f24eb07237" prot="public" virt="non-virtual"><scope>EntityPopulation</scope><name>rememberBaseChannel</name></member>
+      <member refid="class_entity_population_1a2c543ae7065b51ddc711bcc056dce3eb" prot="public" virt="non-virtual"><scope>EntityPopulation</scope><name>rememberRealChannel</name></member>
+      <member refid="class_entity_population_1a7490d27a588044c4ca8d4961275df811" prot="public" virt="non-virtual"><scope>EntityPopulation</scope><name>remove</name></member>
+      <member refid="class_entity_population_1a940a6cbd765c5e781d88cf6a0e82ce64" prot="public" virt="non-virtual"><scope>EntityPopulation</scope><name>removeObserver</name></member>
+      <member refid="class_cell_app_death_listener_1a54f1a9fc174135f45741e861c94d80bc" prot="public" virt="virtual"><scope>EntityPopulation</scope><name>~CellAppDeathListener</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_m_g_m_packet_handler" kind="class" language="C++" prot="public">
+    <compoundname>MGMPacketHandler</compoundname>
+    <basecompoundref refid="class_connection_wrapper_1_1_read_handler" prot="public" virt="non-virtual">ConnectionWrapper::ReadHandler</basecompoundref>
+    <includes refid="mgm__packet__handler_8hpp" local="no">mgm_packet_handler.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_m_g_m_packet_handler_1a89888e4fdd81ba40eb38079c563417c7" prot="private" static="no" mutable="no">
+        <type><ref refid="class_b_w_machined" kindref="compound">BWMachined</ref> &amp;</type>
+        <definition>BWMachined&amp; MGMPacketHandler::machined_</definition>
+        <argsstring></argsstring>
+        <name>machined_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/mgm_packet_handler.hpp" line="28" column="1" bodyfile="tools/bwmachined/mgm_packet_handler.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_g_m_packet_handler_1aee5d569adb473b06d4977c2227b01043" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MGMPacketHandler::MGMPacketHandler</definition>
+        <argsstring>(BWMachined &amp;machined)</argsstring>
+        <name>MGMPacketHandler</name>
+        <param>
+          <type><ref refid="class_b_w_machined" kindref="compound">BWMachined</ref> &amp;</type>
+          <declname>machined</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/mgm_packet_handler.hpp" line="19" column="1" bodyfile="tools/bwmachined/mgm_packet_handler.hpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_g_m_packet_handler_1a4833b8d1a30aa097fa668cea9963eddc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>BW_BEGIN_NAMESPACE bool MGMPacketHandler::onReadComplete</definition>
+        <argsstring>(ConnectionWrapperPtr pConnection, BinaryIStream &amp;input)</argsstring>
+        <name>onReadComplete</name>
+        <reimplements refid="class_connection_wrapper_1_1_read_handler_1afb7938bb8de822ccadbb941701f01f86">onReadComplete</reimplements>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref></type>
+          <declname>pConnection</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>input</declname>
+          <defname>inputStream</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override from <ref refid="class_connection_wrapper_1_1_read_handler" kindref="compound">ConnectionWrapper::ReadHandler</ref></para><para><simplesect kind="return"><para>false if the stream had erroneous data, otherwise true </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/mgm_packet_handler.hpp" line="24" column="1" bodyfile="tools/bwmachined/mgm_packet_handler.cpp" bodystart="12" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A connection wrapper handler class for processing received connection wrapper data as MGM packets </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1904">
+        <label>ConnectionWrapper::ReadHandler</label>
+        <link refid="class_connection_wrapper_1_1_read_handler"/>
+      </node>
+      <node id="1903">
+        <label>MGMPacketHandler</label>
+        <link refid="class_m_g_m_packet_handler"/>
+        <childnode refid="1904" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1906">
+        <label>ConnectionWrapper::ReadHandler</label>
+        <link refid="class_connection_wrapper_1_1_read_handler"/>
+      </node>
+      <node id="1905">
+        <label>MGMPacketHandler</label>
+        <link refid="class_m_g_m_packet_handler"/>
+        <childnode refid="1906" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/bwmachined/mgm_packet_handler.hpp" line="17" column="1" bodyfile="tools/bwmachined/mgm_packet_handler.hpp" bodystart="16" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_m_g_m_packet_handler_1a89888e4fdd81ba40eb38079c563417c7" prot="private" virt="non-virtual"><scope>MGMPacketHandler</scope><name>machined_</name></member>
+      <member refid="class_m_g_m_packet_handler_1aee5d569adb473b06d4977c2227b01043" prot="public" virt="non-virtual"><scope>MGMPacketHandler</scope><name>MGMPacketHandler</name></member>
+      <member refid="class_m_g_m_packet_handler_1a4833b8d1a30aa097fa668cea9963eddc" prot="public" virt="virtual"><scope>MGMPacketHandler</scope><name>onReadComplete</name></member>
+      <member refid="class_connection_wrapper_1_1_read_handler_1a71587df7f96b87a5eb6e01b115aaaef8" prot="public" virt="non-virtual"><scope>MGMPacketHandler</scope><name>ReadHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

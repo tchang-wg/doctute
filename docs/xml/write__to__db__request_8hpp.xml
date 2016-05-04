@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="write__to__db__request_8hpp" kind="file" language="C++">
+    <compoundname>write_to_db_request.hpp</compoundname>
+    <includes local="yes">cstdmf/smartpointer.hpp</includes>
+    <includes local="yes">db/database_gateway.hpp</includes>
+    <includes local="yes">pyscript/pyobject_pointer.hpp</includes>
+    <includes local="yes">pyscript/script.hpp</includes>
+    <includedby refid="base_8hpp" local="yes">baseapp/base.hpp</includedby>
+    <includedby refid="write__to__db__request_8cpp" local="yes">baseapp/write_to_db_request.cpp</includedby>
+    <incdepgraph>
+      <node id="5662">
+        <label>pyscript/pyobject_pointer.hpp</label>
+      </node>
+      <node id="5660">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="5663">
+        <label>pyscript/script.hpp</label>
+      </node>
+      <node id="5659">
+        <label>baseapp/write_to_db_request.hpp</label>
+        <link refid="write_to_db_request.hpp"/>
+        <childnode refid="5660" relation="include">
+        </childnode>
+        <childnode refid="5661" relation="include">
+        </childnode>
+        <childnode refid="5662" relation="include">
+        </childnode>
+        <childnode refid="5663" relation="include">
+        </childnode>
+      </node>
+      <node id="5661">
+        <label>db/database_gateway.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5665">
+        <label>baseapp/base.hpp</label>
+        <link refid="base_8hpp_source"/>
+        <childnode refid="5666" relation="include">
+        </childnode>
+        <childnode refid="5671" relation="include">
+        </childnode>
+      </node>
+      <node id="5668">
+        <label>baseapp/add_to_baseappmgr_helper.hpp</label>
+        <link refid="add__to__baseappmgr__helper_8hpp_source"/>
+      </node>
+      <node id="5664">
+        <label>baseapp/write_to_db_request.hpp</label>
+        <link refid="write_to_db_request.hpp"/>
+        <childnode refid="5665" relation="include">
+        </childnode>
+      </node>
+      <node id="5666">
+        <label>baseapp/proxy.hpp</label>
+        <link refid="proxy_8hpp_source"/>
+        <childnode refid="5667" relation="include">
+        </childnode>
+        <childnode refid="5670" relation="include">
+        </childnode>
+      </node>
+      <node id="5669">
+        <label>baseapp/service_app.hpp</label>
+        <link refid="service__app_8hpp_source"/>
+      </node>
+      <node id="5670">
+        <label>baseapp/rate_limit_message_filter.hpp</label>
+        <link refid="rate__limit__message__filter_8hpp_source"/>
+        <childnode refid="5667" relation="include">
+        </childnode>
+      </node>
+      <node id="5671">
+        <label>baseapp/service.hpp</label>
+        <link refid="service_8hpp_source"/>
+      </node>
+      <node id="5667">
+        <label>baseapp/baseapp.hpp</label>
+        <link refid="baseapp_8hpp_source"/>
+        <childnode refid="5668" relation="include">
+        </childnode>
+        <childnode refid="5669" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_write_to_d_b_request" prot="public">WriteToDBRequest</innerclass>
+    <innerclass refid="class_write_to_d_b_request_1_1_i_handler" prot="public">WriteToDBRequest::IHandler</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="write__to__db__request_8hpp_1a63dd5718ef919e45a87c26d2f3fd1e90" prot="public" static="no">
+        <type><ref refid="class_smart_pointer" kindref="compound">SmartPointer</ref>&lt; <ref refid="class_base" kindref="compound">Base</ref> &gt;</type>
+        <definition>typedef SmartPointer&lt; Base &gt; BasePtr</definition>
+        <argsstring></argsstring>
+        <name>BasePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/write_to_db_request.hpp" line="15" column="1" bodyfile="baseapp/write_to_db_request.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>WRITE_TO_DB_REQUEST_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WRITE_TO_DB_REQUEST_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/smartpointer.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;db/database_gateway.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pyscript/pyobject_pointer.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pyscript/script.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_base" kindref="compound">Base</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="class_smart_pointer" kindref="compound">SmartPointer&lt; Base &gt;</ref><sp/><ref refid="class_smart_pointer" kindref="compound">BasePtr</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_base_app" kindref="compound">BaseApp</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_write_to_d_b_request" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_write_to_d_b_request" kindref="compound">WriteToDBRequest</ref><sp/>:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Mercury::ReplyMessageHandler,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>IDatabaseReplyWaiter&lt;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>StreamHelpers::DBAppInterface::writeEntity<sp/>&gt;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40" refid="class_write_to_d_b_request_1_1_i_handler" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_write_to_d_b_request_1_1_i_handler" kindref="compound">IHandler</ref></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>CompletionStatus</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>COMPLETED_SUCCESS,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>COMPLETED_FAILED,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SHUTTING_DOWN</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_write_to_d_b_request_1_1_i_handler_1a4eb6fe869cf90c28f097b2dd850bba14" kindref="member">onWriteToDBComplete</ref>(</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CompletionStatus<sp/>completionStatus<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="63" refid="class_write_to_d_b_request_1_1_i_handler_1a8734d12827e0ed82bc842d7a64c2a7ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_write_to_d_b_request_1_1_i_handler_1a8734d12827e0ed82bc842d7a64c2a7ba" kindref="member">~IHandler</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_write_to_d_b_request_1a70090f1a74dbbe3823eb87182ffc0184" kindref="member">newRequest</ref>(<sp/><ref refid="class_base_app" kindref="compound">BaseApp</ref><sp/>&amp;<sp/>baseApp,<sp/><ref refid="class_base" kindref="compound">Base</ref><sp/>&amp;<sp/>base,<sp/>WriteDBFlags<sp/>flags,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_write_to_d_b_request_1_1_i_handler" kindref="compound">IHandler</ref><sp/>*<sp/>pHandler,<sp/><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref><sp/>pCellData,<sp/>DatabaseID<sp/>explicitDBID,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BW::string<sp/>*<sp/>pErrorString<sp/>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_write_to_d_b_request_1a0b83b8928f9cbdd6cb5f45ea804d23f1" kindref="member">onWriteToSecondaryDBComplete</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_write_to_d_b_request" kindref="compound">WriteToDBRequest</ref>(<sp/><ref refid="class_base_app" kindref="compound">BaseApp</ref><sp/>&amp;<sp/>baseApp,<sp/><ref refid="class_base" kindref="compound">Base</ref><sp/>&amp;<sp/>base,<sp/>WriteDBFlags<sp/>flags,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_write_to_d_b_request_1_1_i_handler" kindref="compound">IHandler</ref><sp/>*<sp/>pHandler,<sp/><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref><sp/>pCellData,<sp/>DatabaseID<sp/>dbID<sp/>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="class_write_to_d_b_request" kindref="compound">WriteToDBRequest</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>BW::string<sp/>baseDescription()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>shouldWriteToSecondaryDB()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>entityCanBeOnCell()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>start();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>startWithCellData();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>startBaseBackup();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>startPrimaryDatabaseWrite();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>startSecondaryDatabaseWrite();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>onGetCellData(<sp/>BinaryIStream<sp/>&amp;<sp/>data<sp/>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>onBaseBackupReply(<sp/>BinaryIStream<sp/>&amp;<sp/>data<sp/>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>onRequestFinished();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkFinished();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>fail(<sp/>IHandler::CompletionStatus<sp/>status<sp/>=<sp/>IHandler::COMPLETED_FAILED<sp/>);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Overrides<sp/>from<sp/>Mercury::ReplyMessageHandler.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleMessage(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>source,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mercury::UnpackedMessageHeader<sp/>&amp;<sp/>header,<sp/>BinaryIStream<sp/>&amp;<sp/>data,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>arg<sp/>)<sp/></highlight><highlight class="comment">/*<sp/>override<sp/>*/</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleException(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::NubException<sp/>&amp;<sp/>exception,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>arg<sp/>)<sp/></highlight><highlight class="comment">/*<sp/>override<sp/>*/</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleShuttingDown(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::NubException<sp/>&amp;<sp/>exception,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>arg<sp/>)<sp/></highlight><highlight class="comment">/*<sp/>override<sp/>*/</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>StreamHelpers::DBAppInterface::writeEntity<sp/>StreamHelper;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Overrides<sp/>from<sp/>IDatabaseReplyWaiter&lt;<sp/>StreamHelper<sp/>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>onSendRequestToDBApp(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Request<sp/>&amp;<sp/>request,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>DBAppDescriptor<sp/>&amp;<sp/>dbApp<sp/>)<sp/></highlight><highlight class="comment">/*<sp/>override<sp/>*/</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>onReply(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>StreamHelper::Request<sp/>&amp;<sp/>request,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>StreamHelper::Reply<sp/>&amp;<sp/>reply<sp/>)<sp/></highlight><highlight class="comment">/*<sp/>override<sp/>*/</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>onNetworkFailure(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>StreamHelper::Request<sp/>&amp;<sp/>request<sp/>)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>override<sp/>*/</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>onShutDown(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>StreamHelper::Request<sp/>&amp;<sp/>request<sp/>)<sp/></highlight><highlight class="comment">/*<sp/>override<sp/>*/</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_base_app" kindref="compound">BaseApp</ref><sp/>&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>baseApp_;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_smart_pointer" kindref="compound">BasePtr</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pBase_;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>WriteDBFlags<sp/><sp/><sp/><sp/>flags_;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_write_to_d_b_request_1_1_i_handler" kindref="compound">IHandler</ref><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>pHandler_;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>MemoryOStream<sp/><sp/><sp/>data_;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref><sp/><sp/><sp/><sp/><sp/>pCellData_;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>DatabaseID<sp/><sp/><sp/><sp/><sp/><sp/>dbID_;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>uint<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numOutstandingRequests_;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hasFailed_;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shouldBackUp_;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hasBackedUp_;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hasWrittenToDB_;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>WRITE_TO_DB_REQUEST_HPP</highlight></codeline>
+    </programlisting>
+    <location file="baseapp/write_to_db_request.hpp"/>
+  </compounddef>
+</doxygen>

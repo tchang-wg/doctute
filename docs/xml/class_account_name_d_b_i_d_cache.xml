@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_account_name_d_b_i_d_cache" kind="class" language="C++" prot="public">
+    <compoundname>AccountNameDBIDCache</compoundname>
+    <includes refid="account__name__dbid__cache_8hpp" local="no">account_name_dbid_cache.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_account_name_d_b_i_d_cache_1a6b7738ec33c78163384385bf49acb6ac" prot="private" static="no">
+        <type>std::pair&lt; EntityTypeID, BW::string &gt;</type>
+        <definition>typedef std::pair&lt; EntityTypeID, BW::string &gt; AccountNameDBIDCache::CacheKey</definition>
+        <argsstring></argsstring>
+        <name>CacheKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/account_name_dbid_cache.hpp" line="58" column="1" bodyfile="dbapp/account_name_dbid_cache.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_account_name_d_b_i_d_cache_1a8c4e4ce3b6d2053396b4a41c284f8ea0" prot="private" static="no">
+        <type>LRUCacheT&lt; CacheKey, DatabaseID &gt;</type>
+        <definition>typedef LRUCacheT&lt; CacheKey, DatabaseID &gt; AccountNameDBIDCache::Cache</definition>
+        <argsstring></argsstring>
+        <name>Cache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/account_name_dbid_cache.hpp" line="59" column="1" bodyfile="dbapp/account_name_dbid_cache.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_account_name_d_b_i_d_cache_1afe915117b117b557cf2740cba72b78c9" prot="private" static="no" mutable="no">
+        <type>Cache</type>
+        <definition>Cache AccountNameDBIDCache::cache_</definition>
+        <argsstring></argsstring>
+        <name>cache_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/account_name_dbid_cache.hpp" line="60" column="1" bodyfile="dbapp/account_name_dbid_cache.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_account_name_d_b_i_d_cache_1a71d8f47291acf9653703e15f15c71dcc" prot="private" static="no" mutable="yes">
+        <type>float</type>
+        <definition>float AccountNameDBIDCache::hitAverage_</definition>
+        <argsstring></argsstring>
+        <name>hitAverage_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/account_name_dbid_cache.hpp" line="62" column="1" bodyfile="dbapp/account_name_dbid_cache.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_account_name_d_b_i_d_cache_1a78a7534c6f069561775ed6f5253308fd" prot="private" static="no" mutable="yes">
+        <type>uint</type>
+        <definition>uint AccountNameDBIDCache::numQueries_</definition>
+        <argsstring></argsstring>
+        <name>numQueries_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/account_name_dbid_cache.hpp" line="63" column="1" bodyfile="dbapp/account_name_dbid_cache.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_account_name_d_b_i_d_cache_1a373afcfb7639bc6faa920685ba6dd728" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE AccountNameDBIDCache::AccountNameDBIDCache</definition>
+        <argsstring>(size_t maxSize)</argsstring>
+        <name>AccountNameDBIDCache</name>
+        <param>
+          <type>size_t</type>
+          <declname>maxSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>maxSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum number of entries in the cache. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/account_name_dbid_cache.hpp" line="26" column="1" bodyfile="dbapp/account_name_dbid_cache.cpp" bodystart="11" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_account_name_d_b_i_d_cache_1a17d521703ca22cc4daf089b1f1221b54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AccountNameDBIDCache::query</definition>
+        <argsstring>(EntityDBKey &amp;entityKey)</argsstring>
+        <name>query</name>
+        <param>
+          <type>EntityDBKey &amp;</type>
+          <declname>entityKey</declname>
+          <defname>key</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method queries the cache for the DBID for the name contained in the given key, updating the key if found.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key with the name to query against, and the DBID to update.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the key was found in the cache and updated with the DBID, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/account_name_dbid_cache.hpp" line="28" column="1" bodyfile="dbapp/account_name_dbid_cache.cpp" bodystart="29" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_account_name_d_b_i_d_cache_1ac020c7496bb3ad48cccf58997c21a735" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AccountNameDBIDCache::insert</definition>
+        <argsstring>(const EntityDBKey &amp;key)</argsstring>
+        <name>insert</name>
+        <param>
+          <type>const EntityDBKey &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a new entry into the cache.</para><para>The oldest entry is removed, if necessary, in order to preserve the maximum size constraint. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/account_name_dbid_cache.hpp" line="29" column="1" bodyfile="dbapp/account_name_dbid_cache.cpp" bodystart="55" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_account_name_d_b_i_d_cache_1adf6c99187a76f65f27cf4d5aebf59a1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AccountNameDBIDCache::erase</definition>
+        <argsstring>(const EntityDBKey &amp;key)</argsstring>
+        <name>erase</name>
+        <param>
+          <type>const EntityDBKey &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method removes the given key from the cache, if it exists.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key to remove.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the key was removed, false if the key was not present. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/account_name_dbid_cache.hpp" line="30" column="1" bodyfile="dbapp/account_name_dbid_cache.cpp" bodystart="75" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_account_name_d_b_i_d_cache_1a969dd5c730e52663a80dc5d7ecb6440b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AccountNameDBIDCache::hitAverage</definition>
+        <argsstring>() const </argsstring>
+        <name>hitAverage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the hit ratio. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/account_name_dbid_cache.hpp" line="33" column="1" bodyfile="dbapp/account_name_dbid_cache.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_account_name_d_b_i_d_cache_1a3b082bb0cf48fc6dd53f1b205c24ba8e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint AccountNameDBIDCache::numQueries</definition>
+        <argsstring>() const </argsstring>
+        <name>numQueries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the number of queries made. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/account_name_dbid_cache.hpp" line="36" column="1" bodyfile="dbapp/account_name_dbid_cache.hpp" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_account_name_d_b_i_d_cache_1ab077a68cf1e02f0667daa381d9763a30" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t AccountNameDBIDCache::size</definition>
+        <argsstring>() const </argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the number of entries held in the cache. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/account_name_dbid_cache.hpp" line="39" column="1" bodyfile="dbapp/account_name_dbid_cache.hpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_account_name_d_b_i_d_cache_1aa21b721e4e17ad4f3146a48399eb9d48" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t AccountNameDBIDCache::maxSize</definition>
+        <argsstring>() const </argsstring>
+        <name>maxSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the maximum number of entries held in the cache. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/account_name_dbid_cache.hpp" line="42" column="1" bodyfile="dbapp/account_name_dbid_cache.hpp" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_account_name_d_b_i_d_cache_1acde58c96d59793ac5f9b654a80852614" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AccountNameDBIDCache::maxSize</definition>
+        <argsstring>(size_t newMaxSize)</argsstring>
+        <name>maxSize</name>
+        <param>
+          <type>size_t</type>
+          <declname>newMaxSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the maximum number of entries allowed to be held in the cache, removing entries if necessary starting from the least recently used.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newMaxSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new maximum size of the cache. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/account_name_dbid_cache.hpp" line="51" column="1" bodyfile="dbapp/account_name_dbid_cache.hpp" bodystart="51" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class holds a cache of account name to DBID mappings. </para>    </detaileddescription>
+    <location file="dbapp/account_name_dbid_cache.hpp" line="24" column="1" bodyfile="dbapp/account_name_dbid_cache.hpp" bodystart="23" bodyend="64"/>
+    <listofallmembers>
+      <member refid="class_account_name_d_b_i_d_cache_1a373afcfb7639bc6faa920685ba6dd728" prot="public" virt="non-virtual"><scope>AccountNameDBIDCache</scope><name>AccountNameDBIDCache</name></member>
+      <member refid="class_account_name_d_b_i_d_cache_1a8c4e4ce3b6d2053396b4a41c284f8ea0" prot="private" virt="non-virtual"><scope>AccountNameDBIDCache</scope><name>Cache</name></member>
+      <member refid="class_account_name_d_b_i_d_cache_1afe915117b117b557cf2740cba72b78c9" prot="private" virt="non-virtual"><scope>AccountNameDBIDCache</scope><name>cache_</name></member>
+      <member refid="class_account_name_d_b_i_d_cache_1a6b7738ec33c78163384385bf49acb6ac" prot="private" virt="non-virtual"><scope>AccountNameDBIDCache</scope><name>CacheKey</name></member>
+      <member refid="class_account_name_d_b_i_d_cache_1adf6c99187a76f65f27cf4d5aebf59a1b" prot="public" virt="non-virtual"><scope>AccountNameDBIDCache</scope><name>erase</name></member>
+      <member refid="class_account_name_d_b_i_d_cache_1a969dd5c730e52663a80dc5d7ecb6440b" prot="public" virt="non-virtual"><scope>AccountNameDBIDCache</scope><name>hitAverage</name></member>
+      <member refid="class_account_name_d_b_i_d_cache_1a71d8f47291acf9653703e15f15c71dcc" prot="private" virt="non-virtual"><scope>AccountNameDBIDCache</scope><name>hitAverage_</name></member>
+      <member refid="class_account_name_d_b_i_d_cache_1ac020c7496bb3ad48cccf58997c21a735" prot="public" virt="non-virtual"><scope>AccountNameDBIDCache</scope><name>insert</name></member>
+      <member refid="class_account_name_d_b_i_d_cache_1aa21b721e4e17ad4f3146a48399eb9d48" prot="public" virt="non-virtual"><scope>AccountNameDBIDCache</scope><name>maxSize</name></member>
+      <member refid="class_account_name_d_b_i_d_cache_1acde58c96d59793ac5f9b654a80852614" prot="public" virt="non-virtual"><scope>AccountNameDBIDCache</scope><name>maxSize</name></member>
+      <member refid="class_account_name_d_b_i_d_cache_1a3b082bb0cf48fc6dd53f1b205c24ba8e" prot="public" virt="non-virtual"><scope>AccountNameDBIDCache</scope><name>numQueries</name></member>
+      <member refid="class_account_name_d_b_i_d_cache_1a78a7534c6f069561775ed6f5253308fd" prot="private" virt="non-virtual"><scope>AccountNameDBIDCache</scope><name>numQueries_</name></member>
+      <member refid="class_account_name_d_b_i_d_cache_1a17d521703ca22cc4daf089b1f1221b54" prot="public" virt="non-virtual"><scope>AccountNameDBIDCache</scope><name>query</name></member>
+      <member refid="class_account_name_d_b_i_d_cache_1ab077a68cf1e02f0667daa381d9763a30" prot="public" virt="non-virtual"><scope>AccountNameDBIDCache</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,391 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_m_l_metadata_1_1_mongo_d_b_metadata_stream" kind="class" language="C++" prot="public">
+    <compoundname>MLMetadata::MongoDBMetadataStream</compoundname>
+    <basecompoundref refid="class_m_l_metadata_1_1_log_metadata_stream" prot="public" virt="non-virtual">MLMetadata::LogMetadataStream</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1a7972681873901c75191047281bfc7e3e" prot="private" static="no" mutable="no">
+        <type>mongo::BSONObjBuilder</type>
+        <definition>mongo::BSONObjBuilder MLMetadata::MongoDBMetadataStream::binaryOutput_</definition>
+        <argsstring></argsstring>
+        <name>binaryOutput_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/metadata.hpp" line="38" column="1" bodyfile="tools/message_logger/mongodb/metadata.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1a71cc8ee921b9eb0ae4b458106abffb82" prot="private" static="no" mutable="no">
+        <type>mongo::BSONObjBuilder</type>
+        <definition>mongo::BSONObjBuilder MLMetadata::MongoDBMetadataStream::binaryOutputJSON_</definition>
+        <argsstring></argsstring>
+        <name>binaryOutputJSON_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/metadata.hpp" line="39" column="1" bodyfile="tools/message_logger/mongodb/metadata.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1af1ed22f6a2bf111d908dfb220adf70e3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MLMetadata::MongoDBMetadataStream::jsonAdded_</definition>
+        <argsstring></argsstring>
+        <name>jsonAdded_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/metadata.hpp" line="41" column="1" bodyfile="tools/message_logger/mongodb/metadata.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1a1a793f46b9fc2e5c594a5eeea11fa856" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MLMetadata::MongoDBMetadataStream::MongoDBMetadataStream</definition>
+        <argsstring>()</argsstring>
+        <name>MongoDBMetadataStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create the MongoDB metadata object </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/metadata.hpp" line="19" column="1" bodyfile="tools/message_logger/mongodb/metadata.cpp" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1ad72daac2185d2b222776797a4f190fda" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_m_l_metadata_1_1_log_metadata_stream" kindref="compound">MLMetadata::LogMetadataStream</ref> &amp;</type>
+        <definition>MLMetadata::LogMetadataStream &amp; MLMetadata::MongoDBMetadataStream::add</definition>
+        <argsstring>(const BW::string &amp;key, int value)</argsstring>
+        <name>add</name>
+        <reimplements refid="class_m_l_metadata_1_1_log_metadata_stream_1a35ed4442e4fe17d6f77260b3e614f1ad">add</reimplements>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a key and accompanying int value to the metadata object</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>metadata key </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>metadata value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>this stream, suitable for further chained operations </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/metadata.hpp" line="20" column="1" bodyfile="tools/message_logger/mongodb/metadata.cpp" bodystart="22" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1ae863e3645f3e62af3527363a549bf6ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_m_l_metadata_1_1_log_metadata_stream" kindref="compound">MLMetadata::LogMetadataStream</ref> &amp;</type>
+        <definition>MLMetadata::LogMetadataStream &amp; MLMetadata::MongoDBMetadataStream::add</definition>
+        <argsstring>(const BW::string &amp;key, long long int value)</argsstring>
+        <name>add</name>
+        <reimplements refid="class_m_l_metadata_1_1_log_metadata_stream_1aa1b03d9045217e95561fb926a16e5b21">add</reimplements>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>long long int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a key and accompanying long long int value to the metadata object</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>metadata key </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>metadata value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>this stream, suitable for further chained operations </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/metadata.hpp" line="21" column="1" bodyfile="tools/message_logger/mongodb/metadata.cpp" bodystart="39" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1abfd318b12d6af46537bebded1a516324" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_m_l_metadata_1_1_log_metadata_stream" kindref="compound">MLMetadata::LogMetadataStream</ref> &amp;</type>
+        <definition>MLMetadata::LogMetadataStream &amp; MLMetadata::MongoDBMetadataStream::add</definition>
+        <argsstring>(const BW::string &amp;key, unsigned int value)</argsstring>
+        <name>add</name>
+        <reimplements refid="class_m_l_metadata_1_1_log_metadata_stream_1a86f231d54b30d4400138a5e84f874c6c">add</reimplements>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a key and accompanying unsigned int value to the metadata object</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>metadata key </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>metadata value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>this stream, suitable for further chained operations </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/metadata.hpp" line="23" column="1" bodyfile="tools/message_logger/mongodb/metadata.cpp" bodystart="56" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1adcf4ba6d18a2112aaf49d963463cf663" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_m_l_metadata_1_1_log_metadata_stream" kindref="compound">MLMetadata::LogMetadataStream</ref> &amp;</type>
+        <definition>MLMetadata::LogMetadataStream &amp; MLMetadata::MongoDBMetadataStream::add</definition>
+        <argsstring>(const BW::string &amp;key, float value)</argsstring>
+        <name>add</name>
+        <reimplements refid="class_m_l_metadata_1_1_log_metadata_stream_1aadb4d9b1f32d61b47c3405c9e6e0f597">add</reimplements>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a key and accompanying float value to the metadata object</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>metadata key </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>metadata value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>this stream, suitable for further chained operations </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/metadata.hpp" line="25" column="1" bodyfile="tools/message_logger/mongodb/metadata.cpp" bodystart="73" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1a6f33ada18f43c1abc2cb130342bb1a55" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_m_l_metadata_1_1_log_metadata_stream" kindref="compound">MLMetadata::LogMetadataStream</ref> &amp;</type>
+        <definition>MLMetadata::LogMetadataStream &amp; MLMetadata::MongoDBMetadataStream::add</definition>
+        <argsstring>(const BW::string &amp;key, double value)</argsstring>
+        <name>add</name>
+        <reimplements refid="class_m_l_metadata_1_1_log_metadata_stream_1a2694541ac486b58689bc76eb1c13151e">add</reimplements>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a key and accompanying double value to the metadata object</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>metadata key </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>metadata value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>this stream, suitable for further chained operations </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/metadata.hpp" line="27" column="1" bodyfile="tools/message_logger/mongodb/metadata.cpp" bodystart="90" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1a6f0c7d21d926a1418c98c13ab59d38bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_m_l_metadata_1_1_log_metadata_stream" kindref="compound">MLMetadata::LogMetadataStream</ref> &amp;</type>
+        <definition>MLMetadata::LogMetadataStream &amp; MLMetadata::MongoDBMetadataStream::add</definition>
+        <argsstring>(const BW::string &amp;key, const BW::string &amp;value)</argsstring>
+        <name>add</name>
+        <reimplements refid="class_m_l_metadata_1_1_log_metadata_stream_1a93a9d29cb4ed55cc51cc40081807ab38">add</reimplements>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a key and accompanying string value to the metadata object</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>metadata key </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>metadata value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>this stream, suitable for further chained operations </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/metadata.hpp" line="29" column="1" bodyfile="tools/message_logger/mongodb/metadata.cpp" bodystart="107" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1a77e9376b844e24c85e42e306d65f10ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool MLMetadata::MongoDBMetadataStream::setJSON</definition>
+        <argsstring>(const BW::string &amp;json)</argsstring>
+        <name>setJSON</name>
+        <reimplements refid="class_m_l_metadata_1_1_log_metadata_stream_1aa650a8ef51c2080f2e0dbe696e07ade1">setJSON</reimplements>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>json</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write a fully-formed <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> object to the metadata. Overwrites any existing key/value pairs and prevents future additions.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>json</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a fully formed <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> string to save as metadata </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>whether the <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> was valid, and therefore whether the update succeeded. Further updates are allowed on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/metadata.hpp" line="31" column="1" bodyfile="tools/message_logger/mongodb/metadata.cpp" bodystart="125" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1a77ed687bad31f7137b9b8d8bb52838b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BW::string</type>
+        <definition>BW::string MLMetadata::MongoDBMetadataStream::getJSON</definition>
+        <argsstring>()</argsstring>
+        <name>getJSON</name>
+        <reimplements refid="class_m_l_metadata_1_1_log_metadata_stream_1a972cb8485901bc9e7e1d1b80396156fc">getJSON</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> representation of this metadata object</para><para><simplesect kind="return"><para>the <ref refid="class_j_s_o_n" kindref="compound">JSON</ref> metadata string </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/metadata.hpp" line="32" column="1" bodyfile="tools/message_logger/mongodb/metadata.cpp" bodystart="149" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1a4dacb16449b4ab9eb7a00eb2c17a7c00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mongo::BSONObj</type>
+        <definition>mongo::BSONObj MLMetadata::MongoDBMetadataStream::getBSON</definition>
+        <argsstring>()</argsstring>
+        <name>getBSON</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the BSON representation of this metadata object, ready to store in MongoDB.</para><para><simplesect kind="return"><para>the BSON metadata object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/metadata.hpp" line="33" column="1" bodyfile="tools/message_logger/mongodb/metadata.cpp" bodystart="161" bodyend="171"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1957">
+        <label>MLMetadata::MongoDBMetadataStream</label>
+        <link refid="class_m_l_metadata_1_1_mongo_d_b_metadata_stream"/>
+        <childnode refid="1958" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1958">
+        <label>MLMetadata::LogMetadataStream</label>
+        <link refid="class_m_l_metadata_1_1_log_metadata_stream"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1959">
+        <label>MLMetadata::MongoDBMetadataStream</label>
+        <link refid="class_m_l_metadata_1_1_mongo_d_b_metadata_stream"/>
+        <childnode refid="1960" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1960">
+        <label>MLMetadata::LogMetadataStream</label>
+        <link refid="class_m_l_metadata_1_1_log_metadata_stream"/>
+      </node>
+    </collaborationgraph>
+    <location file="tools/message_logger/mongodb/metadata.hpp" line="17" column="1" bodyfile="tools/message_logger/mongodb/metadata.hpp" bodystart="16" bodyend="42"/>
+    <listofallmembers>
+      <member refid="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1ad72daac2185d2b222776797a4f190fda" prot="public" virt="virtual"><scope>MLMetadata::MongoDBMetadataStream</scope><name>add</name></member>
+      <member refid="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1ae863e3645f3e62af3527363a549bf6ad" prot="public" virt="virtual"><scope>MLMetadata::MongoDBMetadataStream</scope><name>add</name></member>
+      <member refid="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1abfd318b12d6af46537bebded1a516324" prot="public" virt="virtual"><scope>MLMetadata::MongoDBMetadataStream</scope><name>add</name></member>
+      <member refid="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1adcf4ba6d18a2112aaf49d963463cf663" prot="public" virt="virtual"><scope>MLMetadata::MongoDBMetadataStream</scope><name>add</name></member>
+      <member refid="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1a6f33ada18f43c1abc2cb130342bb1a55" prot="public" virt="virtual"><scope>MLMetadata::MongoDBMetadataStream</scope><name>add</name></member>
+      <member refid="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1a6f0c7d21d926a1418c98c13ab59d38bc" prot="public" virt="virtual"><scope>MLMetadata::MongoDBMetadataStream</scope><name>add</name></member>
+      <member refid="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1a7972681873901c75191047281bfc7e3e" prot="private" virt="non-virtual"><scope>MLMetadata::MongoDBMetadataStream</scope><name>binaryOutput_</name></member>
+      <member refid="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1a71cc8ee921b9eb0ae4b458106abffb82" prot="private" virt="non-virtual"><scope>MLMetadata::MongoDBMetadataStream</scope><name>binaryOutputJSON_</name></member>
+      <member refid="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1a4dacb16449b4ab9eb7a00eb2c17a7c00" prot="public" virt="non-virtual"><scope>MLMetadata::MongoDBMetadataStream</scope><name>getBSON</name></member>
+      <member refid="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1a77ed687bad31f7137b9b8d8bb52838b7" prot="public" virt="virtual"><scope>MLMetadata::MongoDBMetadataStream</scope><name>getJSON</name></member>
+      <member refid="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1af1ed22f6a2bf111d908dfb220adf70e3" prot="private" virt="non-virtual"><scope>MLMetadata::MongoDBMetadataStream</scope><name>jsonAdded_</name></member>
+      <member refid="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1a1a793f46b9fc2e5c594a5eeea11fa856" prot="public" virt="non-virtual"><scope>MLMetadata::MongoDBMetadataStream</scope><name>MongoDBMetadataStream</name></member>
+      <member refid="class_m_l_metadata_1_1_mongo_d_b_metadata_stream_1a77e9376b844e24c85e42e306d65f10ac" prot="public" virt="virtual"><scope>MLMetadata::MongoDBMetadataStream</scope><name>setJSON</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

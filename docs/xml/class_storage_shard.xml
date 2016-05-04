@@ -1,0 +1,698 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_storage_shard" kind="class" language="C++" prot="public">
+    <compoundname>StorageShard</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ReferenceCount</basecompoundref>
+    <includes refid="storage__shard_8hpp" local="no">storage_shard.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_storage_shard_1a689742a5e864f451e7f1d790b9b79a7c" prot="public" static="no">
+        <type>DBHashSchemes::DBAppIDBuckets&lt; DBAppPtr &gt;::HashScheme</type>
+        <definition>typedef DBHashSchemes::DBAppIDBuckets&lt; DBAppPtr &gt;::HashScheme StorageShard::DBApps</definition>
+        <argsstring></argsstring>
+        <name>DBApps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="32" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_storage_shard_1a85fcad524ce6db4d90e1d9bb527e646d" prot="public" static="no">
+        <type>DBApps::const_iterator</type>
+        <definition>typedef DBApps::const_iterator StorageShard::const_iterator</definition>
+        <argsstring></argsstring>
+        <name>const_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="33" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_storage_shard_1ae7b5f0101182bc26897b516409671b17" prot="public" static="no">
+        <type>StorageShardDescriptor::Status</type>
+        <definition>typedef StorageShardDescriptor::Status StorageShard::Status</definition>
+        <argsstring></argsstring>
+        <name>Status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="34" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_storage_shard_1a39b31bb131b14133cae8fb769abeabfe" prot="public" static="yes" mutable="no">
+        <type>const ShardGUID</type>
+        <definition>BW_BEGIN_NAMESPACE const ShardGUID StorageShard::GUID_SHARD_ALPHA</definition>
+        <argsstring></argsstring>
+        <name>GUID_SHARD_ALPHA</name>
+        <initializer>=
+	StorageShardDescriptor::GUID_SHARD_ALPHA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="36" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_storage_shard_1aacf782450420f4c10a6b10c4097763c9" prot="private" static="no" mutable="no">
+        <type>StorageShardDescriptor</type>
+        <definition>StorageShardDescriptor StorageShard::descriptor_</definition>
+        <argsstring></argsstring>
+        <name>descriptor_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="182" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_storage_shard_1a0c361aa5a7291c427b44021a7c6a5af2" prot="private" static="no" mutable="no">
+        <type>DBApps</type>
+        <definition>DBApps StorageShard::dbApps_</definition>
+        <argsstring></argsstring>
+        <name>dbApps_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="184" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_storage_shard_1ad4286704ebe75bb4f9657b2890fc7907" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t StorageShard::numOutstandingAllocations_</definition>
+        <argsstring></argsstring>
+        <name>numOutstandingAllocations_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="185" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_storage_shard_1a9229b789bddd67c73dbdfd79e75c69eb" prot="private" static="no" mutable="no">
+        <type>AutoLoadStatus</type>
+        <definition>AutoLoadStatus StorageShard::autoLoadStatus_</definition>
+        <argsstring></argsstring>
+        <name>autoLoadStatus_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="186" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_storage_shard_1a3bb278781d18e399b22804cff3491857" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>StorageShard::StorageShard</definition>
+        <argsstring>()</argsstring>
+        <name>StorageShard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor for Shard-Alpha. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="38" column="1" bodyfile="dbappmgr/storage_shard.cpp" bodystart="60" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1a26cc0e92cf90fdfefe2cbd9551f11eed" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>StorageShard::StorageShard</definition>
+        <argsstring>(const StorageShardDescriptor &amp;descriptor)</argsstring>
+        <name>StorageShard</name>
+        <param>
+          <type>const StorageShardDescriptor &amp;</type>
+          <declname>descriptor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor for complementary storage-shards.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>descriptor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The storage-shard descriptor. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="40" column="1" bodyfile="dbappmgr/storage_shard.cpp" bodystart="77" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1a476da94e1b64203ee351176e4ebb6f6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StorageShard::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="42" column="1" bodyfile="dbappmgr/storage_shard.cpp" bodystart="86" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1a1dfe722d1c4f8ae76e60f9899c20df4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void StorageShard::addAllocation</definition>
+        <argsstring>()</argsstring>
+        <name>addAllocation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a <ref refid="class_d_b_app" kindref="compound">DBApp</ref> allocation to be accounted for in numDBApps().</para><para>DBApps won&apos;t be added until confirmation is received that they are connected, at which point they are considered to be properly added to this storage shard. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="51" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1ae40e0fcf4a72ce3be98f95fe50200a63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StorageShard::confirmDBAppConnection</definition>
+        <argsstring>(DBApp &amp;dbApp)</argsstring>
+        <name>confirmDBAppConnection</name>
+        <param>
+          <type><ref refid="class_d_b_app" kindref="compound">DBApp</ref> &amp;</type>
+          <declname>dbApp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a <ref refid="class_d_b_app" kindref="compound">DBApp</ref> to the storage pool as part of handling the confirmation of successful connection from that <ref refid="class_d_b_app" kindref="compound">DBApp</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dbApp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_d_b_app" kindref="compound">DBApp</ref> to add. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="53" column="1" bodyfile="dbappmgr/storage_shard.cpp" bodystart="98" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1a3ae7831d8268315cb2ae46bbc7f17c1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StorageShard::recoverDBAppConnection</definition>
+        <argsstring>(DBApp &amp;dbApp)</argsstring>
+        <name>recoverDBAppConnection</name>
+        <param>
+          <type><ref refid="class_d_b_app" kindref="compound">DBApp</ref> &amp;</type>
+          <declname>dbApp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a <ref refid="class_d_b_app" kindref="compound">DBApp</ref> to the storage pool as part of recovery.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pDBApp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_d_b_app" kindref="compound">DBApp</ref> to add. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="54" column="1" bodyfile="dbappmgr/storage_shard.cpp" bodystart="117" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1a99b8d5930f0a770e75cde463be0bd641" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t StorageShard::numDBAppsAllocated</definition>
+        <argsstring>() const </argsstring>
+        <name>numDBAppsAllocated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the number of DBApps allocated (but not necessarily connected completely yet). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="60" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1aa38092392f563d81fef76f2b1d369926" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t StorageShard::numDBAppsConnected</definition>
+        <argsstring>() const </argsstring>
+        <name>numDBAppsConnected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the number of DBApps that have been allocated and connected to this shard. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="69" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1aa5d8653e34d29f86ceb24d3d7528a086" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool StorageShard::hasDBApps</definition>
+        <argsstring>(bool shouldIncludeAllocated=false) const </argsstring>
+        <name>hasDBApps</name>
+        <param>
+          <type>bool</type>
+          <declname>shouldIncludeAllocated</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if there are no DBApps connected, optionally including allocated DBApps. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="76" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1ac31d5fd422fde8b89b945373f9d8af0b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool StorageShard::isAlpha</definition>
+        <argsstring>() const </argsstring>
+        <name>isAlpha</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns true if this object represents Shard-Alpha. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="85" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1a8f5378040286070af570d0183c47e8b2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const StorageShardDescriptor &amp;</type>
+        <definition>const StorageShardDescriptor&amp; StorageShard::descriptor</definition>
+        <argsstring>() const </argsstring>
+        <name>descriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the descriptor for this storage-shard. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="90" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1afb545fa0caebe6971785de9348f7d5bd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>ShardGUID</type>
+        <definition>ShardGUID StorageShard::guid</definition>
+        <argsstring>() const </argsstring>
+        <name>guid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the GUID for this storage-shard. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="95" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1a1c16de15a98ba5fb8763801017d97662" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StorageShard::guid</definition>
+        <argsstring>(ShardGUID guid)</argsstring>
+        <name>guid</name>
+        <param>
+          <type>ShardGUID</type>
+          <declname>guid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the ShardGUID value of the storage-shard.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>guid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ShardGUID. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="97" column="1" bodyfile="dbappmgr/storage_shard.cpp" bodystart="142" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1a9aa6f3b385142235b7ec6e9954813612" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const BW::string</type>
+        <definition>const BW::string StorageShard::guidAsString</definition>
+        <argsstring>() const </argsstring>
+        <name>guidAsString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the GUID for this storage-shard as a human-readable string. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="103" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="103" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1acf1d5a63622dc0a1cfdb212a8ac76820" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const BW::string &amp;</type>
+        <definition>const BW::string&amp; StorageShard::name</definition>
+        <argsstring>() const </argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the name of the storage-shard. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="108" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1ac6d7f90ae0472cf4b82837e101fcf2eb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Status</type>
+        <definition>Status StorageShard::status</definition>
+        <argsstring>() const </argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the storage-shard status. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="113" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="113" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1addc933ea0ab3353a5823c656b627411f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StorageShard::status</definition>
+        <argsstring>(Status status)</argsstring>
+        <name>status</name>
+        <param>
+          <type>Status</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the status code for this storage-shard.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new status code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="115" column="1" bodyfile="dbappmgr/storage_shard.cpp" bodystart="153" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1a841630312463299e44d15eedc0d89417" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const BW::string</type>
+        <definition>const BW::string StorageShard::statusAsString</definition>
+        <argsstring>() const </argsstring>
+        <name>statusAsString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the storage-shard status as a human-readable string. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="120" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1a37809f8c1f98742531b4072cece5e07c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>AutoLoadStatus</type>
+        <definition>AutoLoadStatus StorageShard::hasAutoLoadFinished</definition>
+        <argsstring>() const </argsstring>
+        <name>hasAutoLoadFinished</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns whether the auto load has finished. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="128" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="128" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1a4973a4974ac660836092eaa6c93d3027" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void StorageShard::hasAutoLoadFinished</definition>
+        <argsstring>(AutoLoadStatus status)</argsstring>
+        <name>hasAutoLoadFinished</name>
+        <param>
+          <type>AutoLoadStatus</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets whether the auto load has finished. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="133" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="133" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1a62c987ccedaa5c85fd081c3e7a29f728" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_d_b_app" kindref="compound">DBApp</ref> *</type>
+        <definition>DBApp * StorageShard::pDBAppAlpha</definition>
+        <argsstring>()</argsstring>
+        <name>pDBAppAlpha</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the DBApp-Alpha for this storage-shard, or NULL if this storage-shard has no connected DBApps. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="138" column="1" bodyfile="dbappmgr/storage_shard.cpp" bodystart="163" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1ae8109e59f2097b557ec92bb68ab65651" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_d_b_app" kindref="compound">DBApp</ref> *</type>
+        <definition>const DBApp* StorageShard::pDBAppAlpha</definition>
+        <argsstring>() const </argsstring>
+        <name>pDBAppAlpha</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the DBApp-Alpha for this storage-shard, or NULL if this storage-shard has no connected DBApps (const version). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="144" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="144" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1a849ef3e261b0e8bce947f37950d5a361" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_d_b_app" kindref="compound">DBApp</ref> *</type>
+        <definition>DBApp * StorageShard::pLeastLoadedDBApp</definition>
+        <argsstring>()</argsstring>
+        <name>pLeastLoadedDBApp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the <ref refid="class_d_b_app" kindref="compound">DBApp</ref> to be used as the least-loaded <ref refid="class_d_b_app" kindref="compound">DBApp</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="150" column="1" bodyfile="dbappmgr/storage_shard.cpp" bodystart="177" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1a9577d35622d5fc3bb67b45ac1b4bd560" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_d_b_app" kindref="compound">DBApp</ref> *</type>
+        <definition>const DBApp* StorageShard::pLeastLoadedDBApp</definition>
+        <argsstring>() const </argsstring>
+        <name>pLeastLoadedDBApp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the <ref refid="class_d_b_app" kindref="compound">DBApp</ref> to be used as the least-loaded <ref refid="class_d_b_app" kindref="compound">DBApp</ref> (const version). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="157" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="157" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1a979dbeef9f8a44e17af5430e6f4e9645" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StorageShard::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method resets the ShardGUID and status of the storage-shard. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="162" column="1" bodyfile="dbappmgr/storage_shard.cpp" bodystart="128" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1a30371921013136fc17dbaa4893c6a1b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StorageShard::onDBAppDeath</definition>
+        <argsstring>(DBApp &amp;dbApp)</argsstring>
+        <name>onDBAppDeath</name>
+        <param>
+          <type><ref refid="class_d_b_app" kindref="compound">DBApp</ref> &amp;</type>
+          <declname>dbApp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles the situation where one of the DBApps allocated to this storage-shard has died.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dbApp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_d_b_app" kindref="compound">DBApp</ref> that died. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="164" column="1" bodyfile="dbappmgr/storage_shard.cpp" bodystart="196" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1af87de194a189d590f49fc7b3d504c3d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StorageShard::writeToStream</definition>
+        <argsstring>(BinaryOStream &amp;stream) const </argsstring>
+        <name>writeToStream</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method writes this storage shard to the given stream.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The stream to write to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="166" column="1" bodyfile="dbappmgr/storage_shard.cpp" bodystart="214" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1a8639c159173cdf20ebac32c876b8c12e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const_iterator</type>
+        <definition>const_iterator StorageShard::dbAppsBegin</definition>
+        <argsstring>() const </argsstring>
+        <name>dbAppsBegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the start of the range of hash map values for DBApps. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="172" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="172" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="class_storage_shard_1acbe0fed7c84d5284f0db739286659023" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const_iterator</type>
+        <definition>const_iterator StorageShard::dbAppsEnd</definition>
+        <argsstring>() const </argsstring>
+        <name>dbAppsEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the end of the range of hash map values for DBApps. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="177" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="177" bodyend="177"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_storage_shard_1a6cc8f90c38262494ceaf6a48d27c6fb8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_smart_pointer" kindref="compound">WatcherPtr</ref></type>
+        <definition>WatcherPtr StorageShard::pWatcher</definition>
+        <argsstring>()</argsstring>
+        <name>pWatcher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns a watcher suitable for watching <ref refid="class_storage_shard" kindref="compound">StorageShard</ref> instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="179" column="1" bodyfile="dbappmgr/storage_shard.cpp" bodystart="227" bodyend="247"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_storage_shard_1a1b2a215f764a359dfe6e536ca882c806" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend BinaryOStream &amp;</type>
+        <definition>BinaryOStream&amp; operator&lt;&lt;</definition>
+        <argsstring>(BinaryOStream &amp;os, const StorageShard &amp;shard)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_storage_shard" kindref="compound">StorageShard</ref> &amp;</type>
+          <declname>shard</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Out-streaming operator for <ref refid="class_storage_shard" kindref="compound">StorageShard</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/storage_shard.hpp" line="188" column="1" bodyfile="dbappmgr/storage_shard.cpp" bodystart="49" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref>&apos;s representation of a storage-shard. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2838">
+        <label>StorageShard</label>
+        <link refid="class_storage_shard"/>
+        <childnode refid="2839" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2839">
+        <label>ReferenceCount</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2840">
+        <label>StorageShard</label>
+        <link refid="class_storage_shard"/>
+        <childnode refid="2841" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2841">
+        <label>ReferenceCount</label>
+      </node>
+    </collaborationgraph>
+    <location file="dbappmgr/storage_shard.hpp" line="30" column="1" bodyfile="dbappmgr/storage_shard.hpp" bodystart="29" bodyend="190"/>
+    <listofallmembers>
+      <member refid="class_storage_shard_1a1dfe722d1c4f8ae76e60f9899c20df4b" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>addAllocation</name></member>
+      <member refid="class_storage_shard_1a9229b789bddd67c73dbdfd79e75c69eb" prot="private" virt="non-virtual"><scope>StorageShard</scope><name>autoLoadStatus_</name></member>
+      <member refid="class_storage_shard_1ae40e0fcf4a72ce3be98f95fe50200a63" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>confirmDBAppConnection</name></member>
+      <member refid="class_storage_shard_1a85fcad524ce6db4d90e1d9bb527e646d" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>const_iterator</name></member>
+      <member refid="class_storage_shard_1a689742a5e864f451e7f1d790b9b79a7c" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>DBApps</name></member>
+      <member refid="class_storage_shard_1a0c361aa5a7291c427b44021a7c6a5af2" prot="private" virt="non-virtual"><scope>StorageShard</scope><name>dbApps_</name></member>
+      <member refid="class_storage_shard_1a8639c159173cdf20ebac32c876b8c12e" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>dbAppsBegin</name></member>
+      <member refid="class_storage_shard_1acbe0fed7c84d5284f0db739286659023" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>dbAppsEnd</name></member>
+      <member refid="class_storage_shard_1a8f5378040286070af570d0183c47e8b2" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>descriptor</name></member>
+      <member refid="class_storage_shard_1aacf782450420f4c10a6b10c4097763c9" prot="private" virt="non-virtual"><scope>StorageShard</scope><name>descriptor_</name></member>
+      <member refid="class_storage_shard_1a476da94e1b64203ee351176e4ebb6f6c" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>destroy</name></member>
+      <member refid="class_storage_shard_1afb545fa0caebe6971785de9348f7d5bd" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>guid</name></member>
+      <member refid="class_storage_shard_1a1c16de15a98ba5fb8763801017d97662" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>guid</name></member>
+      <member refid="class_storage_shard_1a39b31bb131b14133cae8fb769abeabfe" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>GUID_SHARD_ALPHA</name></member>
+      <member refid="class_storage_shard_1a9aa6f3b385142235b7ec6e9954813612" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>guidAsString</name></member>
+      <member refid="class_storage_shard_1a37809f8c1f98742531b4072cece5e07c" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>hasAutoLoadFinished</name></member>
+      <member refid="class_storage_shard_1a4973a4974ac660836092eaa6c93d3027" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>hasAutoLoadFinished</name></member>
+      <member refid="class_storage_shard_1aa5d8653e34d29f86ceb24d3d7528a086" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>hasDBApps</name></member>
+      <member refid="class_storage_shard_1ac31d5fd422fde8b89b945373f9d8af0b" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>isAlpha</name></member>
+      <member refid="class_storage_shard_1acf1d5a63622dc0a1cfdb212a8ac76820" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>name</name></member>
+      <member refid="class_storage_shard_1a99b8d5930f0a770e75cde463be0bd641" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>numDBAppsAllocated</name></member>
+      <member refid="class_storage_shard_1aa38092392f563d81fef76f2b1d369926" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>numDBAppsConnected</name></member>
+      <member refid="class_storage_shard_1ad4286704ebe75bb4f9657b2890fc7907" prot="private" virt="non-virtual"><scope>StorageShard</scope><name>numOutstandingAllocations_</name></member>
+      <member refid="class_storage_shard_1a30371921013136fc17dbaa4893c6a1b4" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>onDBAppDeath</name></member>
+      <member refid="class_storage_shard_1a1b2a215f764a359dfe6e536ca882c806" prot="private" virt="non-virtual"><scope>StorageShard</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_storage_shard_1a62c987ccedaa5c85fd081c3e7a29f728" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>pDBAppAlpha</name></member>
+      <member refid="class_storage_shard_1ae8109e59f2097b557ec92bb68ab65651" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>pDBAppAlpha</name></member>
+      <member refid="class_storage_shard_1a849ef3e261b0e8bce947f37950d5a361" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>pLeastLoadedDBApp</name></member>
+      <member refid="class_storage_shard_1a9577d35622d5fc3bb67b45ac1b4bd560" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>pLeastLoadedDBApp</name></member>
+      <member refid="class_storage_shard_1a6cc8f90c38262494ceaf6a48d27c6fb8" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>pWatcher</name></member>
+      <member refid="class_storage_shard_1a3ae7831d8268315cb2ae46bbc7f17c1e" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>recoverDBAppConnection</name></member>
+      <member refid="class_storage_shard_1a979dbeef9f8a44e17af5430e6f4e9645" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>reset</name></member>
+      <member refid="class_storage_shard_1ae7b5f0101182bc26897b516409671b17" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>Status</name></member>
+      <member refid="class_storage_shard_1ac6d7f90ae0472cf4b82837e101fcf2eb" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>status</name></member>
+      <member refid="class_storage_shard_1addc933ea0ab3353a5823c656b627411f" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>status</name></member>
+      <member refid="class_storage_shard_1a841630312463299e44d15eedc0d89417" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>statusAsString</name></member>
+      <member refid="class_storage_shard_1a3bb278781d18e399b22804cff3491857" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>StorageShard</name></member>
+      <member refid="class_storage_shard_1a26cc0e92cf90fdfefe2cbd9551f11eed" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>StorageShard</name></member>
+      <member refid="class_storage_shard_1af87de194a189d590f49fc7b3d504c3d8" prot="public" virt="non-virtual"><scope>StorageShard</scope><name>writeToStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

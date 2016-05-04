@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cell__app__channel_8hpp" kind="file" language="C++">
+    <compoundname>cell_app_channel.hpp</compoundname>
+    <includes local="yes">network/channel_owner.hpp</includes>
+    <includedby refid="real__entity_8hpp" local="yes">cellapp/real_entity.hpp</includedby>
+    <includedby refid="cell__app__channel_8cpp" local="yes">cellapp/cell_app_channel.cpp</includedby>
+    <includedby refid="cell__app__channels_8cpp" local="yes">cellapp/cell_app_channels.cpp</includedby>
+    <includedby refid="entity__ghost__maintainer_8cpp" local="yes">cellapp/entity_ghost_maintainer.cpp</includedby>
+    <includedby refid="entity__population_8cpp" local="yes">cellapp/entity_population.cpp</includedby>
+    <includedby refid="offload__checker_8cpp" local="yes">cellapp/offload_checker.cpp</includedby>
+    <includedby refid="spaces_8cpp" local="yes">cellapp/spaces.cpp</includedby>
+    <incdepgraph>
+      <node id="6992">
+        <label>cellapp/cell_app_channel.hpp</label>
+        <link refid="cell_app_channel.hpp"/>
+        <childnode refid="6993" relation="include">
+        </childnode>
+      </node>
+      <node id="6993">
+        <label>network/channel_owner.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6995">
+        <label>cellapp/real_entity.hpp</label>
+        <link refid="real__entity_8hpp_source"/>
+        <childnode refid="6996" relation="include">
+        </childnode>
+      </node>
+      <node id="6996">
+        <label>cellapp/witness.hpp</label>
+        <link refid="witness_8hpp_source"/>
+      </node>
+      <node id="6994">
+        <label>cellapp/cell_app_channel.hpp</label>
+        <link refid="cell_app_channel.hpp"/>
+        <childnode refid="6995" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_cell_app_channel" prot="public">CellAppChannel</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CELL_APP_CHANNEL_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CELL_APP_CHANNEL_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/channel_owner.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_cell_app_channel" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Mercury::ChannelOwner</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mark()</highlight><highlight class="keyword"><sp/>const<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mark_;<sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>mark(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>mark_<sp/>=<sp/>v;<sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>GameTime<sp/>lastReceivedTime()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>lastReceivedTime_;<sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>lastReceivedTime(<sp/>GameTime<sp/>time<sp/>)<sp/>{<sp/>lastReceivedTime_<sp/>=<sp/>time;<sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isGood()</highlight><highlight class="keyword"><sp/>const<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!this-&gt;channel().hasRemoteFailed();<sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_cell_app_channel" kindref="compound">CellAppChannel</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>addr<sp/>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>mark_;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>GameTime<sp/>lastReceivedTime_;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_cell_app_channels" kindref="compound">CellAppChannels</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>CELL_APP_CHANNEL_HPP</highlight></codeline>
+    </programlisting>
+    <location file="cellapp/cell_app_channel.hpp"/>
+  </compounddef>
+</doxygen>

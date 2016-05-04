@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_fetch_data_section_job" kind="class" language="C++" prot="public">
+    <compoundname>FetchDataSectionJob</compoundname>
+    <basecompoundref refid="class_ticked_worker_job" prot="public" virt="non-virtual">TickedWorkerJob</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_fetch_data_section_job_1a54af65f5dc32ee862deacd3b75b12e64" prot="private" static="no" mutable="no">
+        <type>const BW::string</type>
+        <definition>const BW::string FetchDataSectionJob::path_</definition>
+        <argsstring></argsstring>
+        <name>path_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="129" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_data_section_job_1a092a1f8895666a044aea087eedab231e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+        <definition>PyObjectPtr FetchDataSectionJob::pHandler_</definition>
+        <argsstring></argsstring>
+        <name>pHandler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="132" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_data_section_job_1a2a1a4bb435785e54d2764f3e877fb1bc" prot="private" static="no" mutable="no">
+        <type>DataSectionPtr</type>
+        <definition>DataSectionPtr FetchDataSectionJob::pDataSection_</definition>
+        <argsstring></argsstring>
+        <name>pDataSection_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="135" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fetch_data_section_job_1a67f97689003644bce2accf421d2cc727" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FetchDataSectionJob::loadingFinished_</definition>
+        <argsstring></argsstring>
+        <name>loadingFinished_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="136" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fetch_data_section_job_1a79fd3076d941fe7882159715b1c532a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FetchDataSectionJob::FetchDataSectionJob</definition>
+        <argsstring>(const BW::string &amp;path, PyObjectPtr pHandler)</argsstring>
+        <name>FetchDataSectionJob</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+          <declname>pHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the data section to load. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pHandler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Python &quot;function&quot; that will be called with the loaded data section. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="77" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="77" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_fetch_data_section_job_1ae1409557dcd5ecc2f35c381c0a83586b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>float</type>
+        <definition>virtual float FetchDataSectionJob::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <reimplements refid="class_worker_job_1afd3c79ced2bbc23cd3cf9dacc49ea09c">operator()</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the method that is called to do stuff in the thread. It should return the desired time in seconds that the thread wants to wait before being called again. Zero is fine if you want to be called asap (although other jobs might be in front). If you return &lt; 0 you will not be rescheduled (you will be disowned) and if &lt; -1 you will also be deleted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="88" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="88" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fetch_data_section_job_1a95e39cb28d73f67d0d101a4d51151f24" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool FetchDataSectionJob::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <reimplements refid="class_ticked_worker_job_1aa85ac78f0740263ae78d1c68d383f996">tick</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/loading_thread.cpp" line="97" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="97" bodyend="126"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to implement BigWorld.fetchDataSection. It is used to load a data section from the loading thread. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1242">
+        <label>TickedWorkerJob</label>
+        <link refid="class_ticked_worker_job"/>
+        <childnode refid="1243" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1243">
+        <label>WorkerJob</label>
+        <link refid="class_worker_job"/>
+      </node>
+      <node id="1241">
+        <label>FetchDataSectionJob</label>
+        <link refid="class_fetch_data_section_job"/>
+        <childnode refid="1242" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1245">
+        <label>TickedWorkerJob</label>
+        <link refid="class_ticked_worker_job"/>
+        <childnode refid="1246" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1246">
+        <label>WorkerJob</label>
+        <link refid="class_worker_job"/>
+      </node>
+      <node id="1244">
+        <label>FetchDataSectionJob</label>
+        <link refid="class_fetch_data_section_job"/>
+        <childnode refid="1245" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/loading_thread.cpp" line="68" column="1" bodyfile="baseapp/loading_thread.cpp" bodystart="67" bodyend="137"/>
+    <listofallmembers>
+      <member refid="class_worker_job_1ab85f534e0406cbe24acd9997a9f2ab20" prot="public" virt="non-virtual"><scope>FetchDataSectionJob</scope><name>deleteSelf</name></member>
+      <member refid="class_worker_job_1a45c6bd51df30d9effe7665b1b0370344" prot="public" virt="non-virtual"><scope>FetchDataSectionJob</scope><name>DONT_RESCHEDULE</name></member>
+      <member refid="class_worker_job_1a54aa01ef176dc2241b56c438ac02213b" prot="public" virt="non-virtual"><scope>FetchDataSectionJob</scope><name>DONT_RESCHEDULE_AND_DESTROY</name></member>
+      <member refid="class_fetch_data_section_job_1a79fd3076d941fe7882159715b1c532a7" prot="public" virt="non-virtual"><scope>FetchDataSectionJob</scope><name>FetchDataSectionJob</name></member>
+      <member refid="class_worker_job_1a915d4203d1b0dbf592a89f4ecc3dd78d" prot="public" virt="non-virtual"><scope>FetchDataSectionJob</scope><name>isDisowned</name></member>
+      <member refid="class_fetch_data_section_job_1a67f97689003644bce2accf421d2cc727" prot="private" virt="non-virtual"><scope>FetchDataSectionJob</scope><name>loadingFinished_</name></member>
+      <member refid="class_fetch_data_section_job_1ae1409557dcd5ecc2f35c381c0a83586b" prot="private" virt="virtual"><scope>FetchDataSectionJob</scope><name>operator()</name></member>
+      <member refid="class_fetch_data_section_job_1a54af65f5dc32ee862deacd3b75b12e64" prot="private" virt="non-virtual"><scope>FetchDataSectionJob</scope><name>path_</name></member>
+      <member refid="class_fetch_data_section_job_1a2a1a4bb435785e54d2764f3e877fb1bc" prot="private" virt="non-virtual"><scope>FetchDataSectionJob</scope><name>pDataSection_</name></member>
+      <member refid="class_fetch_data_section_job_1a092a1f8895666a044aea087eedab231e" prot="private" virt="non-virtual"><scope>FetchDataSectionJob</scope><name>pHandler_</name></member>
+      <member refid="class_worker_job_1a803b6fc05912dc5b6b9e2afbaa4fcf3a" prot="public" virt="non-virtual"><scope>FetchDataSectionJob</scope><name>submit</name></member>
+      <member refid="class_fetch_data_section_job_1a95e39cb28d73f67d0d101a4d51151f24" prot="private" virt="virtual"><scope>FetchDataSectionJob</scope><name>tick</name></member>
+      <member refid="class_ticked_worker_job_1ac41d66d1064f1d178fec6f1494afa3a9" prot="protected" virt="non-virtual"><scope>FetchDataSectionJob</scope><name>TickedWorkerJob</name></member>
+      <member refid="class_ticked_worker_job_1a02d005e07a6e04d449a74f38c04154d6" prot="public" virt="non-virtual"><scope>FetchDataSectionJob</scope><name>tickJobs</name></member>
+      <member refid="class_worker_job_1a69d5df98ea6d0ee989610be780a18555" prot="public" virt="non-virtual"><scope>FetchDataSectionJob</scope><name>withdraw</name></member>
+      <member refid="class_worker_job_1a99e3d7e946b7302500c2b71ec6b5e92a" prot="public" virt="non-virtual"><scope>FetchDataSectionJob</scope><name>WorkerJob</name></member>
+      <member refid="class_ticked_worker_job_1aa2658b0c262aa07cf815161fcaf07510" prot="protected" virt="virtual"><scope>FetchDataSectionJob</scope><name>~TickedWorkerJob</name></member>
+      <member refid="class_worker_job_1a2021f357efe65197ce3cbff302e34df1" prot="protected" virt="virtual"><scope>FetchDataSectionJob</scope><name>~WorkerJob</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_transaction_pool" kind="class" language="C++" prot="public">
+    <compoundname>TransactionPool</compoundname>
+    <includes refid="sqlite__database_8hpp" local="no">sqlite_database.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_transaction_pool_1a84355f60eefc26d7f625e2d7070acfb5" prot="private" static="no">
+        <type>BW::vector&lt; <ref refid="class_transaction" kindref="compound">Transaction</ref> * &gt;</type>
+        <definition>typedef BW::vector&lt; Transaction * &gt; TransactionPool::Transactions</definition>
+        <argsstring></argsstring>
+        <name>Transactions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="92" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_transaction_pool_1aec22e99d341ef66330b8d45225ccdc90" prot="private" static="no" mutable="no">
+        <type>Transactions</type>
+        <definition>Transactions TransactionPool::pool_</definition>
+        <argsstring></argsstring>
+        <name>pool_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="94" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_transaction_pool_1add0339b5925e891e4e66f4a98ad10650" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t TransactionPool::poolSize_</definition>
+        <argsstring></argsstring>
+        <name>poolSize_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="95" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_transaction_pool_1aec8a88694b96845308fba9bcf756524c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TransactionPool::TransactionPool</definition>
+        <argsstring>()</argsstring>
+        <name>TransactionPool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="83" column="1" bodyfile="baseapp/sqlite_database.cpp" bodystart="207" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transaction_pool_1a280b07d1eb0ef6564d17446e6d67d71b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TransactionPool::~TransactionPool</definition>
+        <argsstring>()</argsstring>
+        <name>~TransactionPool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="84" column="1" bodyfile="baseapp/sqlite_database.cpp" bodystart="215" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transaction_pool_1a1c607fb074d9f6636fe3ece32e1e0352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_transaction" kindref="compound">Transaction</ref> *</type>
+        <definition>Transaction * TransactionPool::acquire</definition>
+        <argsstring>()</argsstring>
+        <name>acquire</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method acquires a transaction from the pool. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="86" column="1" bodyfile="baseapp/sqlite_database.cpp" bodystart="240" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transaction_pool_1ad7d969afe914dd4fe8afd202a9feaf79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TransactionPool::release</definition>
+        <argsstring>(Transaction *pTrans, bool okayIfNotEmpty=false)</argsstring>
+        <name>release</name>
+        <param>
+          <type><ref refid="class_transaction" kindref="compound">Transaction</ref> *</type>
+          <declname>pTrans</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>okayIfNotEmpty</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method releases a transaction back into the pool. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="87" column="1" bodyfile="baseapp/sqlite_database.cpp" bodystart="271" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transaction_pool_1aa337e630ae3f28654c7c1dcce51a750e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int TransactionPool::size</definition>
+        <argsstring>() const </argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/sqlite_database.hpp" line="89" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="89" bodyend="89"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is a pool of transactions. </para>    </detaileddescription>
+    <location file="baseapp/sqlite_database.hpp" line="81" column="1" bodyfile="baseapp/sqlite_database.hpp" bodystart="80" bodyend="96"/>
+    <listofallmembers>
+      <member refid="class_transaction_pool_1a1c607fb074d9f6636fe3ece32e1e0352" prot="public" virt="non-virtual"><scope>TransactionPool</scope><name>acquire</name></member>
+      <member refid="class_transaction_pool_1aec22e99d341ef66330b8d45225ccdc90" prot="private" virt="non-virtual"><scope>TransactionPool</scope><name>pool_</name></member>
+      <member refid="class_transaction_pool_1add0339b5925e891e4e66f4a98ad10650" prot="private" virt="non-virtual"><scope>TransactionPool</scope><name>poolSize_</name></member>
+      <member refid="class_transaction_pool_1ad7d969afe914dd4fe8afd202a9feaf79" prot="public" virt="non-virtual"><scope>TransactionPool</scope><name>release</name></member>
+      <member refid="class_transaction_pool_1aa337e630ae3f28654c7c1dcce51a750e" prot="public" virt="non-virtual"><scope>TransactionPool</scope><name>size</name></member>
+      <member refid="class_transaction_pool_1aec8a88694b96845308fba9bcf756524c" prot="public" virt="non-virtual"><scope>TransactionPool</scope><name>TransactionPool</name></member>
+      <member refid="class_transaction_pool_1a84355f60eefc26d7f625e2d7070acfb5" prot="private" virt="non-virtual"><scope>TransactionPool</scope><name>Transactions</name></member>
+      <member refid="class_transaction_pool_1a280b07d1eb0ef6564d17446e6d67d71b" prot="public" virt="non-virtual"><scope>TransactionPool</scope><name>~TransactionPool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

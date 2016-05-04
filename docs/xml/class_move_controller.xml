@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_move_controller" kind="class" language="C++" prot="public">
+    <compoundname>MoveController</compoundname>
+    <basecompoundref refid="class_controller" prot="public" virt="non-virtual">Controller</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Updatable</basecompoundref>
+    <derivedcompoundref refid="class_move_to_entity_controller" prot="public" virt="non-virtual">MoveToEntityController</derivedcompoundref>
+    <derivedcompoundref refid="class_move_to_point_controller" prot="public" virt="non-virtual">MoveToPointController</derivedcompoundref>
+    <derivedcompoundref refid="class_navigate_step_controller" prot="public" virt="non-virtual">NavigateStepController</derivedcompoundref>
+    <includes refid="move__controller_8hpp" local="no">move_controller.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_move_controller_1a72c99f9abef8e50e89f920e8146e3223" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MoveController::metresPerTick_</definition>
+        <argsstring></argsstring>
+        <name>metresPerTick_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="41" column="1" bodyfile="cellapp/move_controller.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_move_controller_1ae3e2cf6e3746f74145f33ddb60002865" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MoveController::faceMovement_</definition>
+        <argsstring></argsstring>
+        <name>faceMovement_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="42" column="1" bodyfile="cellapp/move_controller.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_move_controller_1a408c98c6dbb30eeb6c49908ef5149a32" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MoveController::moveVertically_</definition>
+        <argsstring></argsstring>
+        <name>moveVertically_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="43" column="1" bodyfile="cellapp/move_controller.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_move_controller_1acf3285411ce9fb4ae49d14de99f67d56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE MoveController::MoveController</definition>
+        <argsstring>(float velocity, bool faceMovement=true, bool moveVertically=false)</argsstring>
+        <name>MoveController</name>
+        <param>
+          <type>float</type>
+          <declname>velocity</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>faceMovement</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>moveVertically</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>velocity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Velocity in metres per second </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>faceMovement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the entity should face the direction of movement. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>moveVertically</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Indicates whether or not the entity should be moved vertically (i.e. along the y-axis). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="21" column="1" bodyfile="cellapp/move_controller.cpp" bodystart="62" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_controller_1a5694f884aaba561b19c9e52efcaaa265" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MoveController::startReal</definition>
+        <argsstring>(bool isInitialStart)</argsstring>
+        <name>startReal</name>
+        <reimplements refid="class_controller_1a18d601aacf49c6f9f5234ba83921285d">startReal</reimplements>
+        <reimplementedby refid="class_navigate_step_controller_1a289f20e8caa145f2b98a8b3942dc72e8">startReal</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>isInitialStart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method overrides the <ref refid="class_controller" kindref="compound">Controller</ref> method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="24" column="1" bodyfile="cellapp/move_controller.cpp" bodystart="180" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_controller_1a3ae341674d764efc7962cbc76de3e940" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MoveController::stopReal</definition>
+        <argsstring>(bool isFinalStop)</argsstring>
+        <name>stopReal</name>
+        <reimplements refid="class_controller_1a806642c29ced79e6da8bd62c159c8294">stopReal</reimplements>
+        <reimplementedby refid="class_navigate_step_controller_1a0f5ee97a3590ce2cbcb091abd4d07cc1">stopReal</reimplementedby>
+        <reimplementedby refid="class_move_to_entity_controller_1a04efe4459a0edb8eb66124d437c602a2">stopReal</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>isFinalStop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method overrides the <ref refid="class_controller" kindref="compound">Controller</ref> method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="25" column="1" bodyfile="cellapp/move_controller.cpp" bodystart="190" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_controller_1ad818709aad84ba8633b3554447cb01f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MoveController::move</definition>
+        <argsstring>(const Position3D &amp;destination, float *pRemainingTicks=NULL)</argsstring>
+        <name>move</name>
+        <param>
+          <type>const Position3D &amp;</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>pRemainingTicks</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method moves the entity towards the destination by metresPerTick_, the destination is in local space.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>destination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position to move to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pRemainingTicks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of remaining ticks (if provided). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="27" column="1" bodyfile="cellapp/move_controller.cpp" bodystart="79" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_controller_1a5e28ae25d4ad864bddc786312fd28074" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MoveController::writeRealToStream</definition>
+        <argsstring>(BinaryOStream &amp;stream)</argsstring>
+        <name>writeRealToStream</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="30" column="1" bodyfile="cellapp/move_controller.cpp" bodystart="161" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_controller_1a31c0ef5d2584653f88d12b06e68654c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MoveController::readRealFromStream</definition>
+        <argsstring>(BinaryIStream &amp;stream)</argsstring>
+        <name>readRealFromStream</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="31" column="1" bodyfile="cellapp/move_controller.cpp" bodystart="168" bodyend="174"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_move_controller_1aca61ece3abc266c8dc743a9f347bc205" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MoveController::faceMovement</definition>
+        <argsstring>() const </argsstring>
+        <name>faceMovement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="34" column="1" bodyfile="cellapp/move_controller.hpp" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_controller_1a02f91149fe74192a8ad1c1dbc2fa711f" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MoveController::moveVertically</definition>
+        <argsstring>() const </argsstring>
+        <name>moveVertically</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="35" column="1" bodyfile="cellapp/move_controller.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_controller_1adea7b1f4677b271b22a3a9c98815af69" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MoveController::setEntityPosition</definition>
+        <argsstring>(const Position3D &amp;position, const Direction3D &amp;direction)</argsstring>
+        <name>setEntityPosition</name>
+        <reimplementedby refid="class_navigate_step_controller_1ae5822649b5a79992616dd921e9a80451">setEntityPosition</reimplementedby>
+        <param>
+          <type>const Position3D &amp;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>const Direction3D &amp;</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the entity position and direction during a movement. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/move_controller.hpp" line="37" column="1" bodyfile="cellapp/move_controller.cpp" bodystart="199" bodyend="203"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Abstract base class from which other controllers are derived. It just knows how to move towards a given destination by a given velocity in metres per second. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1966">
+        <label>MoveToPointController</label>
+        <link refid="class_move_to_point_controller"/>
+        <childnode refid="1961" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1963">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="1961">
+        <label>MoveController</label>
+        <link refid="class_move_controller"/>
+        <childnode refid="1962" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1964" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1964">
+        <label>Updatable</label>
+      </node>
+      <node id="1965">
+        <label>MoveToEntityController</label>
+        <link refid="class_move_to_entity_controller"/>
+        <childnode refid="1961" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1962">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="1963" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1967">
+        <label>NavigateStepController</label>
+        <link refid="class_navigate_step_controller"/>
+        <childnode refid="1961" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1970">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="1968">
+        <label>MoveController</label>
+        <link refid="class_move_controller"/>
+        <childnode refid="1969" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1974" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1974">
+        <label>Updatable</label>
+      </node>
+      <node id="1973">
+        <label>PyObjectPlus</label>
+      </node>
+      <node id="1971">
+        <label>Entity</label>
+        <link refid="class_entity"/>
+        <childnode refid="1972" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1973" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1972">
+        <label>BWEntity</label>
+      </node>
+      <node id="1969">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="1970" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1971" relation="usage">
+          <edgelabel>s_factoryFnEntity_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/move_controller.hpp" line="19" column="1" bodyfile="cellapp/move_controller.hpp" bodystart="18" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_controller_1a5c08d1a7974edb523c97f03c843b7a2a" prot="public" virt="non-virtual"><scope>MoveController</scope><name>addControllerDigest</name></member>
+      <member refid="class_controller_1a3332cc6b7c51b257f6b5bf8cccf6b296" prot="public" virt="non-virtual"><scope>MoveController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a797d7bd68f93f36fbd4edc92c9de300e" prot="public" virt="non-virtual"><scope>MoveController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a31d2c2c443222d9134e511eb734493fd" prot="public" virt="non-virtual"><scope>MoveController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a6ef0365a5bc295f4a92430ef0e809367" prot="public" virt="non-virtual"><scope>MoveController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a8972473450e1ea11239ac96c370fddd0" prot="public" virt="non-virtual"><scope>MoveController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a0dab5e21880d0c861495fa1909f95cbe" prot="public" virt="non-virtual"><scope>MoveController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a9e5ce4bd55f4d6cac2380bf3dfe95d5e" prot="public" virt="non-virtual"><scope>MoveController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1aef85b8faeee04f32c6c8fc384537be0d" prot="protected" virt="non-virtual"><scope>MoveController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a2a148ee762b8dae72593a0fb38a029bb" prot="public" virt="non-virtual"><scope>MoveController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a130a7805734c754c3ff8ab59ee01dea2" prot="public" virt="non-virtual"><scope>MoveController</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1ade939a909a83784f4e733140c5f6be0f" prot="public" virt="non-virtual"><scope>MoveController</scope><name>create</name></member>
+      <member refid="class_controller_1a7c32bc59c340ade9d98e20d72ae40e7a" prot="public" virt="non-virtual"><scope>MoveController</scope><name>createIfNecessary</name></member>
+      <member refid="class_controller_1a3a96f5d838427d0b251f1cf5792350db" prot="public" virt="non-virtual"><scope>MoveController</scope><name>CreatorFn</name></member>
+      <member refid="class_controller_1aa251a2d5e3be8104a67eb22cc7b33781" prot="public" virt="non-virtual"><scope>MoveController</scope><name>ct</name></member>
+      <member refid="class_controller_1ad0a29b9b91700a808c328fb828ea5433" prot="public" virt="non-virtual"><scope>MoveController</scope><name>disowned</name></member>
+      <member refid="class_controller_1a18e942dbb34d82bc4cfcc9718b1c970f" prot="public" virt="pure-virtual"><scope>MoveController</scope><name>domain</name></member>
+      <member refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" prot="public" virt="non-virtual"><scope>MoveController</scope><name>entity</name></member>
+      <member refid="class_controller_1a30b2745a2b74633dac7bba027bfe5eda" prot="public" virt="non-virtual"><scope>MoveController</scope><name>EXCLUSIVE_CONTROLLER_ID_MASK</name></member>
+      <member refid="class_controller_1ad5aa8f4242778920938f18a19ca039ab" prot="public" virt="pure-virtual"><scope>MoveController</scope><name>exclusiveID</name></member>
+      <member refid="class_move_controller_1aca61ece3abc266c8dc743a9f347bc205" prot="protected" virt="non-virtual"><scope>MoveController</scope><name>faceMovement</name></member>
+      <member refid="class_move_controller_1ae3e2cf6e3746f74145f33ddb60002865" prot="private" virt="non-virtual"><scope>MoveController</scope><name>faceMovement_</name></member>
+      <member refid="class_controller_1a4399843065da63b4d68e76bcba1c9b33" prot="public" virt="non-virtual"><scope>MoveController</scope><name>factories</name></member>
+      <member refid="class_controller_1a59b8e5ee7602267120c203e2d73a4aad" prot="public" virt="non-virtual"><scope>MoveController</scope><name>factory</name></member>
+      <member refid="class_controller_1a8c83b29edd91cff97310b85fd2dd62a9" prot="public" virt="non-virtual"><scope>MoveController</scope><name>FactoryFn</name></member>
+      <member refid="class_controller_1a01630a3d95bde81822c3ac80cc68bd72" prot="public" virt="non-virtual"><scope>MoveController</scope><name>ffn</name></member>
+      <member refid="class_controller_1a912cc50ab630c16d340e6750571c7d36" prot="protected" virt="non-virtual"><scope>MoveController</scope><name>ghost</name></member>
+      <member refid="class_controller_1a8c2f39fc63cd53d3a098b14310cdbc6c" prot="public" virt="non-virtual"><scope>MoveController</scope><name>id</name></member>
+      <member refid="class_controller_1a97d6e40743b8130b496b1aa604670c83" prot="public" virt="non-virtual"><scope>MoveController</scope><name>init</name></member>
+      <member refid="class_controller_1a31bb10031669992bd8611769195460a0" prot="public" virt="non-virtual"><scope>MoveController</scope><name>isAttached</name></member>
+      <member refid="class_move_controller_1a72c99f9abef8e50e89f920e8146e3223" prot="private" virt="non-virtual"><scope>MoveController</scope><name>metresPerTick_</name></member>
+      <member refid="class_move_controller_1ad818709aad84ba8633b3554447cb01f2" prot="public" virt="non-virtual"><scope>MoveController</scope><name>move</name></member>
+      <member refid="class_move_controller_1acf3285411ce9fb4ae49d14de99f67d56" prot="public" virt="non-virtual"><scope>MoveController</scope><name>MoveController</name></member>
+      <member refid="class_move_controller_1a02f91149fe74192a8ad1c1dbc2fa711f" prot="protected" virt="non-virtual"><scope>MoveController</scope><name>moveVertically</name></member>
+      <member refid="class_move_controller_1a408c98c6dbb30eeb6c49908ef5149a32" prot="private" virt="non-virtual"><scope>MoveController</scope><name>moveVertically_</name></member>
+      <member refid="class_move_controller_1a31c0ef5d2584653f88d12b06e68654c0" prot="public" virt="non-virtual"><scope>MoveController</scope><name>readRealFromStream</name></member>
+      <member refid="class_controller_1a27d88cafe564f8c3e97477f82b392b74" prot="public" virt="non-virtual"><scope>MoveController</scope><name>s_factoryFnEntity_</name></member>
+      <member refid="class_move_controller_1adea7b1f4677b271b22a3a9c98815af69" prot="protected" virt="virtual"><scope>MoveController</scope><name>setEntityPosition</name></member>
+      <member refid="class_controller_1a28fbc433135ec5668b0de6286b0fb1fe" prot="protected" virt="non-virtual"><scope>MoveController</scope><name>standardCallback</name></member>
+      <member refid="class_move_controller_1a5694f884aaba561b19c9e52efcaaa265" prot="public" virt="virtual"><scope>MoveController</scope><name>startReal</name></member>
+      <member refid="class_move_controller_1a3ae341674d764efc7962cbc76de3e940" prot="public" virt="virtual"><scope>MoveController</scope><name>stopReal</name></member>
+      <member refid="class_controller_1aae5de9edfa47a204f2094fdeb8091dbd" prot="public" virt="pure-virtual"><scope>MoveController</scope><name>type</name></member>
+      <member refid="class_controller_1ac066a12fbae3979fbe86f4ee20c02904" prot="public" virt="non-virtual"><scope>MoveController</scope><name>typeName</name></member>
+      <member refid="class_controller_1aad8a489249dcc3b5edde468d05cb5c7f" prot="public" virt="non-virtual"><scope>MoveController</scope><name>userArg</name></member>
+      <member refid="class_move_controller_1a5e28ae25d4ad864bddc786312fd28074" prot="public" virt="non-virtual"><scope>MoveController</scope><name>writeRealToStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

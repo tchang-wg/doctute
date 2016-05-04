@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_mock_handler" kind="class" language="C++" prot="public">
+    <compoundname>MockHandler</compoundname>
+    <includes refid="mock__handler_8hpp" local="no">mock_handler.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_mock_handler_1a8929cfedad3d7599c3cfc99d8f973429" prot="public" static="no">
+        <name>MessageStatus</name>
+        <enumvalue id="class_mock_handler_1a8929cfedad3d7599c3cfc99d8f973429a826cb53c3dab7dc3d4fc558eac25e410" prot="public">
+          <name>MESSAGE_HANDLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mock_handler_1a8929cfedad3d7599c3cfc99d8f973429a5bcb91a5e160b0d2b9cf39cf8355a0f2" prot="public">
+          <name>MESSAGE_NOT_HANDLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mock_handler_1a8929cfedad3d7599c3cfc99d8f973429a69385d5ded4d25ab21fc9bbb9c63c860" prot="public">
+          <name>MESSAGE_HANDLING_FAILURE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/mock_handler.hpp" line="23" column="1" bodyfile="tools/bwmachined/mock_handler.hpp" bodystart="22" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mock_handler_1aa7f7446937a306f8bb930d9e0980c016" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MessageStatus</type>
+        <definition>MockHandler::MessageStatus MockHandler::handleMessage</definition>
+        <argsstring>(MachineGuardMessage &amp;mgm, bool isLocalSourceAddr, MGMPacket &amp;replies)</argsstring>
+        <name>handleMessage</name>
+        <param>
+          <type>MachineGuardMessage &amp;</type>
+          <declname>mgm</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isLocalSourceAddr</declname>
+        </param>
+        <param>
+          <type>MGMPacket &amp;</type>
+          <declname>replies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method provides immediate, consistent, expected responses to specific messages without forwarding them between the external and internal network layers.</para><para>It is designed to be used by the Automated Test suites.</para><para>A return value of MockHandler::MESSAGE_NOT_HANDLED is intended to be handled by the calling method.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mgm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mgm to handle </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isLocalSourceAddr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean value indicating whether the source address is from the local machine </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>replies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mgm packet to append replies to</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>MockHandler::MessageStatus </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/mock_handler.hpp" line="29" column="1" bodyfile="tools/bwmachined/mock_handler.cpp" bodystart="44" bodyend="241"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class provides immediate, consistent, expected responses to specific messages without forwarding them between the external and internal network layers.</para><para>It is designed to be used by the Automated Test suite. </para>    </detaileddescription>
+    <location file="tools/bwmachined/mock_handler.hpp" line="19" column="1" bodyfile="tools/bwmachined/mock_handler.hpp" bodystart="18" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_mock_handler_1aa7f7446937a306f8bb930d9e0980c016" prot="public" virt="non-virtual"><scope>MockHandler</scope><name>handleMessage</name></member>
+      <member refid="class_mock_handler_1a8929cfedad3d7599c3cfc99d8f973429a826cb53c3dab7dc3d4fc558eac25e410" prot="public" virt="non-virtual"><scope>MockHandler</scope><name>MESSAGE_HANDLED</name></member>
+      <member refid="class_mock_handler_1a8929cfedad3d7599c3cfc99d8f973429a69385d5ded4d25ab21fc9bbb9c63c860" prot="public" virt="non-virtual"><scope>MockHandler</scope><name>MESSAGE_HANDLING_FAILURE</name></member>
+      <member refid="class_mock_handler_1a8929cfedad3d7599c3cfc99d8f973429a5bcb91a5e160b0d2b9cf39cf8355a0f2" prot="public" virt="non-virtual"><scope>MockHandler</scope><name>MESSAGE_NOT_HANDLED</name></member>
+      <member refid="class_mock_handler_1a8929cfedad3d7599c3cfc99d8f973429" prot="public" virt="non-virtual"><scope>MockHandler</scope><name>MessageStatus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

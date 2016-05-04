@@ -1,0 +1,800 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_range_trigger" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>RangeTrigger</compoundname>
+    <derivedcompoundref refid="class_ao_i_trigger" prot="public" virt="non-virtual">AoITrigger</derivedcompoundref>
+    <derivedcompoundref refid="class_proximity_range_trigger" prot="public" virt="non-virtual">ProximityRangeTrigger</derivedcompoundref>
+    <derivedcompoundref refid="class_range_list_appeal_trigger" prot="public" virt="non-virtual">RangeListAppealTrigger</derivedcompoundref>
+    <derivedcompoundref refid="class_vision_range_trigger" prot="public" virt="non-virtual">VisionRangeTrigger</derivedcompoundref>
+    <includes refid="range__trigger_8hpp" local="no">range_trigger.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_range_trigger_1acf88a27ec42a567da6ce48847471cf0d" prot="public" static="no" mutable="no">
+        <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+        <definition>RangeListNode* RangeTrigger::pCentralNode_</definition>
+        <argsstring></argsstring>
+        <name>pCentralNode_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="221" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_range_trigger_1a564277927d6392e9f946eac96bbf28d8" prot="public" static="no" mutable="no">
+        <type><ref refid="class_range_trigger_node" kindref="compound">RangeTriggerNode</ref></type>
+        <definition>RangeTriggerNode RangeTrigger::upperBound_</definition>
+        <argsstring></argsstring>
+        <name>upperBound_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="223" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_range_trigger_1a96e251f9a96ff6e18f74ac9b647a29dc" prot="public" static="no" mutable="no">
+        <type><ref refid="class_range_trigger_node" kindref="compound">RangeTriggerNode</ref></type>
+        <definition>RangeTriggerNode RangeTrigger::lowerBound_</definition>
+        <argsstring></argsstring>
+        <name>lowerBound_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="224" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_range_trigger_1a6d0ce5a8601e64ac090250bd1c384624" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RangeTrigger::oldEntityX_</definition>
+        <argsstring></argsstring>
+        <name>oldEntityX_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="227" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_range_trigger_1ad23ef2b8c7160c3bf9898b697a42f60b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RangeTrigger::oldEntityZ_</definition>
+        <argsstring></argsstring>
+        <name>oldEntityZ_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="228" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_range_trigger_1a6db90bc220c9a01fc1058aaef53c99e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RangeTrigger::RangeTrigger</definition>
+        <argsstring>(RangeListNode *pCentralNode, float range, RangeListNode::RangeListFlags wantsFlagsLower, RangeListNode::RangeListFlags wantsFlagsUpper, RangeListNode::RangeListFlags makesFlagsLower, RangeListNode::RangeListFlags makesFlagsUpper)</argsstring>
+        <name>RangeTrigger</name>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+          <declname>pCentralNode</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>range</declname>
+        </param>
+        <param>
+          <type>RangeListNode::RangeListFlags</type>
+          <declname>wantsFlagsLower</declname>
+        </param>
+        <param>
+          <type>RangeListNode::RangeListFlags</type>
+          <declname>wantsFlagsUpper</declname>
+        </param>
+        <param>
+          <type>RangeListNode::RangeListFlags</type>
+          <declname>makesFlagsLower</declname>
+        </param>
+        <param>
+          <type>RangeListNode::RangeListFlags</type>
+          <declname>makesFlagsUpper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCentralNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node around which this trigger is based </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The range (in metres) of this trigger. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wantsFlagsLower</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wantsFlagsUpper</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>makesFlagsLower</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>makesFlagsUpeer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="67" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="433" bodyend="447"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1a71e0918e9d36cb75becacabec9c4b78b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>RangeTrigger::~RangeTrigger</definition>
+        <argsstring>()</argsstring>
+        <name>~RangeTrigger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="72" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="453" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1a12fa2db7cbf4d534f1b9ec4c227098f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeTrigger::insert</definition>
+        <argsstring>()</argsstring>
+        <name>insert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method performs the initial shuffle after range triggers have been created. It cannot be called from our constructor since the constructor of our derived class (which implements the trigger methods) has not yet been called (and it crashes if you try :) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="74" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="464" bodyend="534"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1ae621f3f691d64dc27662316d86bee8f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeTrigger::remove</definition>
+        <argsstring>()</argsstring>
+        <name>remove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method removes the triggers from the range list, first contracting them to a point (i.e. radius of 0) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="75" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="541" bodyend="550"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1ae76f23ffdf580976415200475da1c001" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeTrigger::removeWithoutContracting</definition>
+        <argsstring>()</argsstring>
+        <name>removeWithoutContracting</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method removes the triggers from the range list, without contracting the nodes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="76" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="557" bodyend="561"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1a3581a23c0557024ca3e8e37db8ea5951" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeTrigger::shuffleXThenZ</definition>
+        <argsstring>(float oldX, float oldZ)</argsstring>
+        <name>shuffleXThenZ</name>
+        <param>
+          <type>float</type>
+          <declname>oldX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oldZ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method shuffles the upper and lower bound triggers.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>oldX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The old value of X (oldX is the central (subject&apos;s) oldX). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oldZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The old value of Z (oldZ is the central (subject&apos;s) oldZ). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="78" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="570" bodyend="581"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1a4ed1d9ffbd2e6896c5fc177a4a874481" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeTrigger::shuffleXThenZExpand</definition>
+        <argsstring>(bool xInc, bool zInc, float oldX, float oldZ)</argsstring>
+        <name>shuffleXThenZExpand</name>
+        <param>
+          <type>bool</type>
+          <declname>xInc</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>zInc</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oldX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oldZ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method shuffles only the trigger nodes that would expand the area encompassed by this trigger, for a movement in the direction indicated. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="79" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="588" bodyend="601"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1a19ec1644a0b20fde7d1451122ba9236a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeTrigger::shuffleXThenZContract</definition>
+        <argsstring>(bool xInc, bool zInc, float oldX, float oldZ)</argsstring>
+        <name>shuffleXThenZContract</name>
+        <param>
+          <type>bool</type>
+          <declname>xInc</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>zInc</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oldX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oldZ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method shuffles only the trigger nodes that would contract the area encompassed by this trigger, for a movement in the direction indicated. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="80" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="608" bodyend="624"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1a73c4d12a5184991b73e6b585cd3d3a9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RangeTrigger::setRange</definition>
+        <argsstring>(float range)</argsstring>
+        <name>setRange</name>
+        <param>
+          <type>float</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the ranges of the upper and lower bound triggers</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- range of the param </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="82" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="632" bodyend="639"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1aef795871cdf9174c15313e1a5325b746" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>BW::string</type>
+        <definition>BW::string RangeTrigger::debugString</definition>
+        <argsstring>() const </argsstring>
+        <name>debugString</name>
+        <reimplementedby refid="class_range_list_appeal_trigger_1a059dfb297f97e3b713ce6de679085aa7">debugString</reimplementedby>
+        <reimplementedby refid="class_vision_range_trigger_1a2e43ef464b2f5e16cf1352409e13af4a">debugString</reimplementedby>
+        <reimplementedby refid="class_proximity_range_trigger_1ae1d3ad9651df6d649c3ea85ec118cfec">debugString</reimplementedby>
+        <reimplementedby refid="class_ao_i_trigger_1af81449d779de8a0f1ed8fa36fec5a263">debugString</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return what kind of triggers these are </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="84" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="645" bodyend="648"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1a9fa6069eb2d5e98bf7d643c4f42a1bd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void RangeTrigger::triggerEnter</definition>
+        <argsstring>(Entity &amp;entity)=0</argsstring>
+        <name>triggerEnter</name>
+        <reimplementedby refid="class_range_list_appeal_trigger_1a8fa12b731f4c3c8d74d88faa69ab74b8">triggerEnter</reimplementedby>
+        <reimplementedby refid="class_vision_range_trigger_1a0141ac838c45f479b63bd578f7e3c82a">triggerEnter</reimplementedby>
+        <reimplementedby refid="class_proximity_range_trigger_1a55e943936564e85f5ff3d71b771608af">triggerEnter</reimplementedby>
+        <reimplementedby refid="class_ao_i_trigger_1a4ad7b005b1327d3831db8845c3944b44">triggerEnter</reimplementedby>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1a8fbc452e69f0fd9b93b5eaf8ed8e826c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void RangeTrigger::triggerLeave</definition>
+        <argsstring>(Entity &amp;entity)=0</argsstring>
+        <name>triggerLeave</name>
+        <reimplementedby refid="class_range_list_appeal_trigger_1a4784b918e8ae991656cb74bd6e346baa">triggerLeave</reimplementedby>
+        <reimplementedby refid="class_vision_range_trigger_1acbe89e7c4bf443ff223f28aaa108e730">triggerLeave</reimplementedby>
+        <reimplementedby refid="class_proximity_range_trigger_1ac00e5366dc771a9beeda4a2fed8080bc">triggerLeave</reimplementedby>
+        <reimplementedby refid="class_ao_i_trigger_1a256e0a9e733bf7a1afb17ba1eb5b1552">triggerLeave</reimplementedby>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="87" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1a9246caf8e52b4cae6bc35f5ddfad0b82" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="class_entity" kindref="compound">Entity</ref> *</type>
+        <definition>virtual Entity* RangeTrigger::pEntity</definition>
+        <argsstring>() const  =0</argsstring>
+        <name>pEntity</name>
+        <reimplementedby refid="class_range_list_appeal_trigger_1a83c72d0fc4fd3660bcc3034793044712">pEntity</reimplementedby>
+        <reimplementedby refid="class_vision_range_trigger_1aaac58d9da11b62ea208e50ccc3ea12e7">pEntity</reimplementedby>
+        <reimplementedby refid="class_proximity_range_trigger_1ab38223b5a2cb032e7d9a47980550d421">pEntity</reimplementedby>
+        <reimplementedby refid="class_ao_i_trigger_1a5f53f50efe256b815eb60ea93a51836d">pEntity</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="88" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1aeff1830e60140e662ed4860b5643ec42" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RangeTrigger::contains</definition>
+        <argsstring>(RangeListNode *pQuery) const </argsstring>
+        <name>contains</name>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+          <declname>pQuery</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method determines whether or not the given node is contained within this trigger. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="90" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="655" bodyend="674"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1a0b4044811c57fb58d5f820144d8400cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RangeTrigger::containsInZ</definition>
+        <argsstring>(RangeListNode *pQuery) const </argsstring>
+        <name>containsInZ</name>
+        <param>
+          <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+          <declname>pQuery</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method determines whether or not the given node is contained within the Z-range of this trigger. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="91" column="1" bodyfile="cellapp/range_trigger.cpp" bodystart="681" bodyend="695"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1adfccbfa2b358cf89762257b5d3dd5684" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_range_list_node" kindref="compound">RangeListNode</ref> *</type>
+        <definition>RangeListNode* RangeTrigger::pCentralNode</definition>
+        <argsstring>() const </argsstring>
+        <name>pCentralNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="93" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1a5f143c56c232a3d20931a0ced1602a40" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_range_trigger_node" kindref="compound">RangeTriggerNode</ref> *</type>
+        <definition>const RangeTriggerNode* RangeTrigger::pUpperTrigger</definition>
+        <argsstring>() const </argsstring>
+        <name>pUpperTrigger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="95" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1af48b4cf29fd77b09baaafbc785f9d245" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_range_trigger_node" kindref="compound">RangeTriggerNode</ref> *</type>
+        <definition>const RangeTriggerNode* RangeTrigger::pLowerTrigger</definition>
+        <argsstring>() const </argsstring>
+        <name>pLowerTrigger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="96" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1a28bc711be32005e2785d4fe28dfda5a7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RangeTrigger::wasInXRange</definition>
+        <argsstring>(float x, float range) const </argsstring>
+        <name>wasInXRange</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="98" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="98" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1a6f50a6873a988cd80a9c59383c1973f8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RangeTrigger::isInXRange</definition>
+        <argsstring>(float x, float range) const </argsstring>
+        <name>isInXRange</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="110" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="110" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1ad43f67e4d8b50459583689dbe1df7297" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RangeTrigger::wasInZRange</definition>
+        <argsstring>(float z, float range) const </argsstring>
+        <name>wasInZRange</name>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="124" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="124" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1aa48898952667da7dfd7275da6f89a905" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RangeTrigger::isInZRange</definition>
+        <argsstring>(float z, float range) const </argsstring>
+        <name>isInZRange</name>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="138" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="138" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1a44642be5012b39fcdde3d3a0e64e6d73" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RangeTrigger::wasInXRange</definition>
+        <argsstring>(float entityLower, float entityUpper, float range) const </argsstring>
+        <name>wasInXRange</name>
+        <param>
+          <type>float</type>
+          <declname>entityLower</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>entityUpper</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="154" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="154" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1a2a8b1832751784172b884c4a9a26b838" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RangeTrigger::isInXRange</definition>
+        <argsstring>(float entityLower, float entityUpper, float range) const </argsstring>
+        <name>isInXRange</name>
+        <param>
+          <type>float</type>
+          <declname>entityLower</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>entityUpper</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="168" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="168" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1af93d0aef64d9662b593416cd9a555482" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RangeTrigger::wasInZRange</definition>
+        <argsstring>(float entityLower, float entityUpper, float range) const </argsstring>
+        <name>wasInZRange</name>
+        <param>
+          <type>float</type>
+          <declname>entityLower</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>entityUpper</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="182" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="182" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1a3081bd6db75397b759420c19a4b4bfef" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RangeTrigger::isInZRange</definition>
+        <argsstring>(float entityLower, float entityUpper, float range) const </argsstring>
+        <name>isInZRange</name>
+        <param>
+          <type>float</type>
+          <declname>entityLower</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>entityUpper</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="195" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="195" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1aef9e3c3e7d1e0ffd61690e27dafc6179" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float RangeTrigger::range</definition>
+        <argsstring>() const </argsstring>
+        <name>range</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="209" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="209" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_trigger_1a7b971b295879e8cd13a91983134fbb9f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RangeTrigger::contains</definition>
+        <argsstring>(float x, float z) const </argsstring>
+        <name>contains</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_trigger.hpp" line="211" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="211" bodyend="217"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class encapsulates a full range trigger. It contains a upper and lower bound trigger node. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2355">
+        <label>VisionRangeTrigger</label>
+        <link refid="class_vision_range_trigger"/>
+        <childnode refid="2351" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2351">
+        <label>RangeTrigger</label>
+        <link refid="class_range_trigger"/>
+      </node>
+      <node id="2352">
+        <label>AoITrigger</label>
+        <link refid="class_ao_i_trigger"/>
+        <childnode refid="2351" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2353">
+        <label>ProximityRangeTrigger</label>
+        <link refid="class_proximity_range_trigger"/>
+        <childnode refid="2351" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2354">
+        <label>RangeListAppealTrigger</label>
+        <link refid="class_range_list_appeal_trigger"/>
+        <childnode refid="2351" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2356">
+        <label>RangeTrigger</label>
+        <link refid="class_range_trigger"/>
+        <childnode refid="2357" relation="usage">
+          <edgelabel>lowerBound_</edgelabel>
+          <edgelabel>upperBound_</edgelabel>
+        </childnode>
+        <childnode refid="2358" relation="usage">
+          <edgelabel>pCentralNode_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2357">
+        <label>RangeTriggerNode</label>
+        <link refid="class_range_trigger_node"/>
+        <childnode refid="2358" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2356" relation="usage">
+          <edgelabel>pRange_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2358">
+        <label>RangeListNode</label>
+        <link refid="class_range_list_node"/>
+        <childnode refid="2358" relation="usage">
+          <edgelabel>pPrevX_</edgelabel>
+          <edgelabel>pPrevZ_</edgelabel>
+          <edgelabel>pNextX_</edgelabel>
+          <edgelabel>pNextZ_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/range_trigger.hpp" line="65" column="1" bodyfile="cellapp/range_trigger.hpp" bodystart="64" bodyend="229"/>
+    <listofallmembers>
+      <member refid="class_range_trigger_1aeff1830e60140e662ed4860b5643ec42" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>contains</name></member>
+      <member refid="class_range_trigger_1a7b971b295879e8cd13a91983134fbb9f" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>contains</name></member>
+      <member refid="class_range_trigger_1a0b4044811c57fb58d5f820144d8400cb" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>containsInZ</name></member>
+      <member refid="class_range_trigger_1aef795871cdf9174c15313e1a5325b746" prot="public" virt="virtual"><scope>RangeTrigger</scope><name>debugString</name></member>
+      <member refid="class_range_trigger_1a12fa2db7cbf4d534f1b9ec4c227098f3" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>insert</name></member>
+      <member refid="class_range_trigger_1a6f50a6873a988cd80a9c59383c1973f8" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>isInXRange</name></member>
+      <member refid="class_range_trigger_1a2a8b1832751784172b884c4a9a26b838" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>isInXRange</name></member>
+      <member refid="class_range_trigger_1aa48898952667da7dfd7275da6f89a905" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>isInZRange</name></member>
+      <member refid="class_range_trigger_1a3081bd6db75397b759420c19a4b4bfef" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>isInZRange</name></member>
+      <member refid="class_range_trigger_1a96e251f9a96ff6e18f74ac9b647a29dc" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>lowerBound_</name></member>
+      <member refid="class_range_trigger_1a6d0ce5a8601e64ac090250bd1c384624" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>oldEntityX_</name></member>
+      <member refid="class_range_trigger_1ad23ef2b8c7160c3bf9898b697a42f60b" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>oldEntityZ_</name></member>
+      <member refid="class_range_trigger_1adfccbfa2b358cf89762257b5d3dd5684" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>pCentralNode</name></member>
+      <member refid="class_range_trigger_1acf88a27ec42a567da6ce48847471cf0d" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>pCentralNode_</name></member>
+      <member refid="class_range_trigger_1a9246caf8e52b4cae6bc35f5ddfad0b82" prot="public" virt="pure-virtual"><scope>RangeTrigger</scope><name>pEntity</name></member>
+      <member refid="class_range_trigger_1af48b4cf29fd77b09baaafbc785f9d245" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>pLowerTrigger</name></member>
+      <member refid="class_range_trigger_1a5f143c56c232a3d20931a0ced1602a40" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>pUpperTrigger</name></member>
+      <member refid="class_range_trigger_1aef9e3c3e7d1e0ffd61690e27dafc6179" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>range</name></member>
+      <member refid="class_range_trigger_1a6db90bc220c9a01fc1058aaef53c99e8" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>RangeTrigger</name></member>
+      <member refid="class_range_trigger_1ae621f3f691d64dc27662316d86bee8f4" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>remove</name></member>
+      <member refid="class_range_trigger_1ae76f23ffdf580976415200475da1c001" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>removeWithoutContracting</name></member>
+      <member refid="class_range_trigger_1a73c4d12a5184991b73e6b585cd3d3a9b" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>setRange</name></member>
+      <member refid="class_range_trigger_1a3581a23c0557024ca3e8e37db8ea5951" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>shuffleXThenZ</name></member>
+      <member refid="class_range_trigger_1a19ec1644a0b20fde7d1451122ba9236a" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>shuffleXThenZContract</name></member>
+      <member refid="class_range_trigger_1a4ed1d9ffbd2e6896c5fc177a4a874481" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>shuffleXThenZExpand</name></member>
+      <member refid="class_range_trigger_1a9fa6069eb2d5e98bf7d643c4f42a1bd8" prot="public" virt="pure-virtual"><scope>RangeTrigger</scope><name>triggerEnter</name></member>
+      <member refid="class_range_trigger_1a8fbc452e69f0fd9b93b5eaf8ed8e826c" prot="public" virt="pure-virtual"><scope>RangeTrigger</scope><name>triggerLeave</name></member>
+      <member refid="class_range_trigger_1a564277927d6392e9f946eac96bbf28d8" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>upperBound_</name></member>
+      <member refid="class_range_trigger_1a28bc711be32005e2785d4fe28dfda5a7" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>wasInXRange</name></member>
+      <member refid="class_range_trigger_1a44642be5012b39fcdde3d3a0e64e6d73" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>wasInXRange</name></member>
+      <member refid="class_range_trigger_1ad43f67e4d8b50459583689dbe1df7297" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>wasInZRange</name></member>
+      <member refid="class_range_trigger_1af93d0aef64d9662b593416cd9a555482" prot="public" virt="non-virtual"><scope>RangeTrigger</scope><name>wasInZRange</name></member>
+      <member refid="class_range_trigger_1a71e0918e9d36cb75becacabec9c4b78b" prot="public" virt="virtual"><scope>RangeTrigger</scope><name>~RangeTrigger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

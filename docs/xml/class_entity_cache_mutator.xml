@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_entity_cache_mutator" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>EntityCacheMutator</compoundname>
+    <derivedcompoundref refid="class_ao_i_cleaner" prot="public" virt="non-virtual">AoICleaner</derivedcompoundref>
+    <derivedcompoundref refid="class_ao_i_preparer" prot="public" virt="non-virtual">AoIPreparer</derivedcompoundref>
+    <includes refid="entity__cache_8hpp" local="no">entity_cache.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_entity_cache_mutator_1af624620b457532b13f300f713593aa9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void EntityCacheMutator::mutate</definition>
+        <argsstring>(EntityCache &amp;cache)=0</argsstring>
+        <name>mutate</name>
+        <reimplementedby refid="class_ao_i_preparer_1a86474cd7b6ca9f803c374556c7522ae2">mutate</reimplementedby>
+        <reimplementedby refid="class_ao_i_cleaner_1a67070cd60b302ed9b4b3b16eae3603eb">mutate</reimplementedby>
+        <param>
+          <type><ref refid="class_entity_cache" kindref="compound">EntityCache</ref> &amp;</type>
+          <declname>cache</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity_cache.hpp" line="244" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements the interface used to visit all <ref refid="class_entity_cache" kindref="compound">EntityCache</ref> instances in an AoI, potentially modifying each <ref refid="class_entity_cache" kindref="compound">EntityCache</ref> in some way. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1095">
+        <label>AoIPreparer</label>
+        <link refid="class_ao_i_preparer"/>
+        <childnode refid="1093" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1094">
+        <label>AoICleaner</label>
+        <link refid="class_ao_i_cleaner"/>
+        <childnode refid="1093" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1093">
+        <label>EntityCacheMutator</label>
+        <link refid="class_entity_cache_mutator"/>
+      </node>
+    </inheritancegraph>
+    <location file="cellapp/entity_cache.hpp" line="242" column="1" bodyfile="cellapp/entity_cache.hpp" bodystart="241" bodyend="245"/>
+    <listofallmembers>
+      <member refid="class_entity_cache_mutator_1af624620b457532b13f300f713593aa9b" prot="public" virt="pure-virtual"><scope>EntityCacheMutator</scope><name>mutate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

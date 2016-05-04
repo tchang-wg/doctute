@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_put_entity_handler" kind="class" language="C++" prot="public">
+    <compoundname>PutEntityHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDatabaseReplyWaiter&lt; StreamHelpers::DBAppInterface::writeEntity &gt;</basecompoundref>
+    <includes refid="dbapp_2login__handler_8hpp" local="no">login_handler.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_put_entity_handler_1acd810f15663761d321061fc640c76094" prot="public" static="no">
+        <type>StreamHelpers::DBAppInterface::writeEntity</type>
+        <definition>typedef StreamHelpers::DBAppInterface::writeEntity PutEntityHandler::StreamHelper</definition>
+        <argsstring></argsstring>
+        <name>StreamHelper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/login_handler.hpp" line="41" column="1" bodyfile="dbapp/login_handler.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_put_entity_handler_1a3beb8458b98b9ab27dd895d9340968bf" prot="public" static="no">
+        <type>void(LoginHandler::*</type>
+        <definition>typedef void(LoginHandler::* PutEntityHandler::MemberFunc) (const DatabaseOperationResult &amp;, const EntityKey &amp;key)</definition>
+        <argsstring>)(const DatabaseOperationResult &amp;, const EntityKey &amp;key)</argsstring>
+        <name>MemberFunc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/login_handler.hpp" line="43" column="1" bodyfile="dbapp/login_handler.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_put_entity_handler_1a890230774f86f0ab289c5fab08b92288" prot="private" static="no" mutable="no">
+        <type><ref refid="class_login_handler" kindref="compound">LoginHandler</ref> &amp;</type>
+        <definition>LoginHandler&amp; PutEntityHandler::loginHandler_</definition>
+        <argsstring></argsstring>
+        <name>loginHandler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/login_handler.hpp" line="56" column="1" bodyfile="dbapp/login_handler.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_put_entity_handler_1abbdcfcc89ec6dd49bb87d576343abee8" prot="private" static="no" mutable="no">
+        <type>MemberFunc</type>
+        <definition>MemberFunc PutEntityHandler::memberFunc_</definition>
+        <argsstring></argsstring>
+        <name>memberFunc_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/login_handler.hpp" line="57" column="1" bodyfile="dbapp/login_handler.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_put_entity_handler_1a77a37dd1609caffcac9225e296cb6ff7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PutEntityHandler::PutEntityHandler</definition>
+        <argsstring>(LoginHandler &amp;loginHandler, MemberFunc memberFunc)</argsstring>
+        <name>PutEntityHandler</name>
+        <param>
+          <type><ref refid="class_login_handler" kindref="compound">LoginHandler</ref> &amp;</type>
+          <declname>loginHandler</declname>
+        </param>
+        <param>
+          <type>MemberFunc</type>
+          <declname>memberFunc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/login_handler.hpp" line="46" column="1" bodyfile="dbapp/login_handler.cpp" bodystart="995" bodyend="1000"/>
+      </memberdef>
+      <memberdef kind="function" id="class_put_entity_handler_1a077195ee9cce371c14d92ad6fb502620" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PutEntityHandler::onReply</definition>
+        <argsstring>(const StreamHelper::Request &amp;request, const StreamHelper::Reply &amp;reply)</argsstring>
+        <name>onReply</name>
+        <param>
+          <type>const StreamHelper::Request &amp;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>const StreamHelper::Reply &amp;</type>
+          <declname>reply</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/login_handler.hpp" line="48" column="1" bodyfile="dbapp/login_handler.cpp" bodystart="1006" bodyend="1010"/>
+      </memberdef>
+      <memberdef kind="function" id="class_put_entity_handler_1ac4f23a2f014c2fff8582095603e98f38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PutEntityHandler::onNetworkFailure</definition>
+        <argsstring>(const StreamHelper::Request &amp;request)</argsstring>
+        <name>onNetworkFailure</name>
+        <param>
+          <type>const StreamHelper::Request &amp;</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/login_handler.hpp" line="51" column="1" bodyfile="dbapp/login_handler.cpp" bodystart="1016" bodyend="1021"/>
+      </memberdef>
+      <memberdef kind="function" id="class_put_entity_handler_1add21900e47e7d504f698002c71efa3be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PutEntityHandler::onShutDown</definition>
+        <argsstring>(const StreamHelper::Request &amp;request)</argsstring>
+        <name>onShutDown</name>
+        <param>
+          <type>const StreamHelper::Request &amp;</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/login_handler.hpp" line="53" column="1" bodyfile="dbapp/login_handler.cpp" bodystart="1027" bodyend="1032"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This simple class is used to handle the different versions of onPutEntityComplete. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2206">
+        <label>IDatabaseReplyWaiter&lt; StreamHelpers::DBAppInterface::writeEntity &gt;</label>
+      </node>
+      <node id="2205">
+        <label>PutEntityHandler</label>
+        <link refid="class_put_entity_handler"/>
+        <childnode refid="2206" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2208">
+        <label>IDatabaseReplyWaiter&lt; StreamHelpers::DBAppInterface::writeEntity &gt;</label>
+      </node>
+      <node id="2207">
+        <label>PutEntityHandler</label>
+        <link refid="class_put_entity_handler"/>
+        <childnode refid="2208" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="dbapp/login_handler.hpp" line="39" column="1" bodyfile="dbapp/login_handler.hpp" bodystart="36" bodyend="58"/>
+    <listofallmembers>
+      <member refid="class_put_entity_handler_1a890230774f86f0ab289c5fab08b92288" prot="private" virt="non-virtual"><scope>PutEntityHandler</scope><name>loginHandler_</name></member>
+      <member refid="class_put_entity_handler_1a3beb8458b98b9ab27dd895d9340968bf" prot="public" virt="non-virtual"><scope>PutEntityHandler</scope><name>MemberFunc</name></member>
+      <member refid="class_put_entity_handler_1abbdcfcc89ec6dd49bb87d576343abee8" prot="private" virt="non-virtual"><scope>PutEntityHandler</scope><name>memberFunc_</name></member>
+      <member refid="class_put_entity_handler_1ac4f23a2f014c2fff8582095603e98f38" prot="public" virt="non-virtual"><scope>PutEntityHandler</scope><name>onNetworkFailure</name></member>
+      <member refid="class_put_entity_handler_1a077195ee9cce371c14d92ad6fb502620" prot="public" virt="non-virtual"><scope>PutEntityHandler</scope><name>onReply</name></member>
+      <member refid="class_put_entity_handler_1add21900e47e7d504f698002c71efa3be" prot="public" virt="non-virtual"><scope>PutEntityHandler</scope><name>onShutDown</name></member>
+      <member refid="class_put_entity_handler_1a77a37dd1609caffcac9225e296cb6ff7" prot="public" virt="non-virtual"><scope>PutEntityHandler</scope><name>PutEntityHandler</name></member>
+      <member refid="class_put_entity_handler_1acd810f15663761d321061fc640c76094" prot="public" virt="non-virtual"><scope>PutEntityHandler</scope><name>StreamHelper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="interclustermgr__interface_8hpp" kind="file" language="C++">
+    <compoundname>interclustermgr_interface.hpp</compoundname>
+    <includes local="yes">network/basictypes.hpp</includes>
+    <includes local="yes">network/common_interface_macros.hpp</includes>
+    <includedby refid="baseappmgr_8cpp" local="yes">baseappmgr/baseappmgr.cpp</includedby>
+    <includedby refid="interclustermgr__interface_8cpp" local="yes">interclustermgr/interclustermgr_interface.cpp</includedby>
+    <includedby refid="interclustermgr_8hpp" local="yes">interclustermgr/interclustermgr.hpp</includedby>
+    <includedby refid="interclustermgr_2message__handlers_8cpp" local="yes">interclustermgr/message_handlers.cpp</includedby>
+    <incdepgraph>
+      <node id="16109">
+        <label>interclustermgr/interclustermgr_interface.hpp</label>
+        <link refid="interclustermgr_interface.hpp"/>
+        <childnode refid="16110" relation="include">
+        </childnode>
+        <childnode refid="16111" relation="include">
+        </childnode>
+      </node>
+      <node id="16110">
+        <label>network/basictypes.hpp</label>
+      </node>
+      <node id="16111">
+        <label>network/common_interface_macros.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="16112">
+        <label>interclustermgr/interclustermgr_interface.hpp</label>
+        <link refid="interclustermgr_interface.hpp"/>
+        <childnode refid="16113" relation="include">
+        </childnode>
+      </node>
+      <node id="16113">
+        <label>interclustermgr/interclustermgr.hpp</label>
+        <link refid="interclustermgr_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespace_b_w">BW</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="interclustermgr__interface_8hpp_1a4a7ca7f0aeac41253252345926123fe2" prot="public" static="no">
+        <name>INTERCLUSTER_MGR_INTERFACE_HPP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interclustermgr/interclustermgr_interface.hpp" line="6" column="9" bodyfile="interclustermgr/interclustermgr_interface.hpp" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="interclustermgr__interface_8hpp_1a70edfa98edf047d3b1212b022ec026ac" prot="public" static="no">
+        <name>INTERFACE_NAME</name>
+        <initializer>InterClusterMgrInterface</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interclustermgr/interclustermgr_interface.hpp" line="11" column="10" bodyfile="interclustermgr/interclustermgr_interface.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#if<sp/>defined(<sp/>DEFINE_INTERFACE_HERE<sp/>)<sp/>||<sp/>defined(<sp/>DEFINE_SERVER_HERE<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#undef<sp/>INTERCLUSTER_MGR_INTERFACE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INTERCLUSTER_MGR_INTERFACE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERCLUSTER_MGR_INTERFACE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/basictypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>INTERFACE_NAME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERFACE_NAME<sp/>InterClusterMgrInterface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/common_interface_macros.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_b_w" kindref="compound">BW</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Section:<sp/>InterClusterMgr<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>pack(<sp/>push,<sp/>1<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">BEGIN_MERCURY_INTERFACE(<sp/>InterClusterMgrInterface<sp/>)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG_EX(<sp/>InterClusterMgr,<sp/>registerCluster<sp/>)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/>Mercury::Address<sp/><sp/><sp/><sp/>baseAppMgrAddress;</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UniqueID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uniqueID;</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ClusterID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requestedClusterID;</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_BEGIN_STRUCT_MSG_EX(<sp/>InterClusterMgr,<sp/>deregisterCluster<sp/>)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ClusterID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clusterID;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>END_STRUCT_MESSAGE()</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>BW_STREAM_MSG(<sp/>InterClusterMgr,<sp/>baseAppMgrPong<sp/>)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">END_MERCURY_INTERFACE()</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>pack(<sp/>pop<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>BW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>INTERCLUSTER_MGR_INTERFACE_HPP</highlight></codeline>
+    </programlisting>
+    <location file="interclustermgr/interclustermgr_interface.hpp"/>
+  </compounddef>
+</doxygen>

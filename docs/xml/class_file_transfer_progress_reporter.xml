@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_file_transfer_progress_reporter" kind="class" language="C++" prot="public">
+    <compoundname>FileTransferProgressReporter</compoundname>
+    <basecompoundref refid="class_sluggish_progress_reporter" prot="private" virt="non-virtual">SluggishProgressReporter</basecompoundref>
+    <includes refid="file__transfer__progress__reporter_8hpp" local="no">file_transfer_progress_reporter.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_file_transfer_progress_reporter_1a6aab6e3ce25ead0b9863043c7af943a0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FileTransferProgressReporter::numFiles_</definition>
+        <argsstring></argsstring>
+        <name>numFiles_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" line="56" column="1" bodyfile="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_file_transfer_progress_reporter_1a62f67d133a9298918eff66d4383050e1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FileTransferProgressReporter::startedFiles_</definition>
+        <argsstring></argsstring>
+        <name>startedFiles_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" line="57" column="1" bodyfile="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_file_transfer_progress_reporter_1ae3b5b31c28aab2aca55abb45277bc159" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FileTransferProgressReporter::doneFiles_</definition>
+        <argsstring></argsstring>
+        <name>doneFiles_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" line="58" column="1" bodyfile="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_file_transfer_progress_reporter_1a6af3fda87cd46f6a123b18fc6ba1f388" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FileTransferProgressReporter::numBytes_</definition>
+        <argsstring></argsstring>
+        <name>numBytes_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" line="59" column="1" bodyfile="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_file_transfer_progress_reporter_1abac9ad0b6bc98d09540b535a8b2f7131" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FileTransferProgressReporter::doneBytes_</definition>
+        <argsstring></argsstring>
+        <name>doneBytes_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" line="60" column="1" bodyfile="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_file_transfer_progress_reporter_1af599a180a06283d5d28379eed8b9afa5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FileTransferProgressReporter::FileTransferProgressReporter</definition>
+        <argsstring>(DBAppStatusReporter &amp;reporter, int numFiles)</argsstring>
+        <name>FileTransferProgressReporter</name>
+        <param>
+          <type><ref refid="class_d_b_app_status_reporter" kindref="compound">DBAppStatusReporter</ref> &amp;</type>
+          <declname>reporter</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numFiles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" line="20" column="1" bodyfile="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" bodystart="20" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_transfer_progress_reporter_1afdbcd5ebfe604f315cf87818b94944e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FileTransferProgressReporter::onStartTransfer</definition>
+        <argsstring>(int numBytesInFile)</argsstring>
+        <name>onStartTransfer</name>
+        <param>
+          <type>int</type>
+          <declname>numBytesInFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" line="32" column="1" bodyfile="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" bodystart="32" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_transfer_progress_reporter_1a5e20abd85bdd296892088d37be75142a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FileTransferProgressReporter::onReceiveData</definition>
+        <argsstring>(int numBytes)</argsstring>
+        <name>onReceiveData</name>
+        <param>
+          <type>int</type>
+          <declname>numBytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" line="40" column="1" bodyfile="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" bodystart="40" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_transfer_progress_reporter_1ad932e7ca497ac7b6dd37805ecc1dc0f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FileTransferProgressReporter::onFinishTransfer</definition>
+        <argsstring>()</argsstring>
+        <name>onFinishTransfer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" line="46" column="1" bodyfile="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_file_transfer_progress_reporter_1a107814711981513b44a134afec35b0ed" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>BW_BEGIN_NAMESPACE void FileTransferProgressReporter::reportProgressNow</definition>
+        <argsstring>()</argsstring>
+        <name>reportProgressNow</name>
+        <reimplements refid="class_sluggish_progress_reporter_1a7c336d6847d24a9b6cefdcc77b534346">reportProgressNow</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override <ref refid="class_sluggish_progress_reporter" kindref="compound">SluggishProgressReporter</ref> method </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" line="52" column="1" bodyfile="tools/consolidate_dbs/file_transfer_progress_reporter.cpp" bodystart="11" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This object is passed around to various operations to so that there is a a single object that knows about the progress of file transfer and can report it to <ref refid="class_d_b_app" kindref="compound">DBApp</ref>. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1287">
+        <label>SluggishProgressReporter</label>
+        <link refid="class_sluggish_progress_reporter"/>
+      </node>
+      <node id="1286">
+        <label>FileTransferProgressReporter</label>
+        <link refid="class_file_transfer_progress_reporter"/>
+        <childnode refid="1287" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1289">
+        <label>SluggishProgressReporter</label>
+        <link refid="class_sluggish_progress_reporter"/>
+      </node>
+      <node id="1288">
+        <label>FileTransferProgressReporter</label>
+        <link refid="class_file_transfer_progress_reporter"/>
+        <childnode refid="1289" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" line="15" column="1" bodyfile="tools/consolidate_dbs/file_transfer_progress_reporter.hpp" bodystart="14" bodyend="61"/>
+    <listofallmembers>
+      <member refid="class_file_transfer_progress_reporter_1abac9ad0b6bc98d09540b535a8b2f7131" prot="private" virt="non-virtual"><scope>FileTransferProgressReporter</scope><name>doneBytes_</name></member>
+      <member refid="class_file_transfer_progress_reporter_1ae3b5b31c28aab2aca55abb45277bc159" prot="private" virt="non-virtual"><scope>FileTransferProgressReporter</scope><name>doneFiles_</name></member>
+      <member refid="class_file_transfer_progress_reporter_1af599a180a06283d5d28379eed8b9afa5" prot="public" virt="non-virtual"><scope>FileTransferProgressReporter</scope><name>FileTransferProgressReporter</name></member>
+      <member refid="class_file_transfer_progress_reporter_1a6af3fda87cd46f6a123b18fc6ba1f388" prot="private" virt="non-virtual"><scope>FileTransferProgressReporter</scope><name>numBytes_</name></member>
+      <member refid="class_file_transfer_progress_reporter_1a6aab6e3ce25ead0b9863043c7af943a0" prot="private" virt="non-virtual"><scope>FileTransferProgressReporter</scope><name>numFiles_</name></member>
+      <member refid="class_file_transfer_progress_reporter_1ad932e7ca497ac7b6dd37805ecc1dc0f3" prot="public" virt="non-virtual"><scope>FileTransferProgressReporter</scope><name>onFinishTransfer</name></member>
+      <member refid="class_file_transfer_progress_reporter_1a5e20abd85bdd296892088d37be75142a" prot="public" virt="non-virtual"><scope>FileTransferProgressReporter</scope><name>onReceiveData</name></member>
+      <member refid="class_file_transfer_progress_reporter_1afdbcd5ebfe604f315cf87818b94944e8" prot="public" virt="non-virtual"><scope>FileTransferProgressReporter</scope><name>onStartTransfer</name></member>
+      <member refid="class_sluggish_progress_reporter_1abff1e44cef9eee4288b63f82f1f66b97" prot="private" virt="non-virtual"><scope>FileTransferProgressReporter</scope><name>reporter</name></member>
+      <member refid="class_sluggish_progress_reporter_1a513e4d67fc4e85c0328d8191c4a86d53" prot="private" virt="non-virtual"><scope>FileTransferProgressReporter</scope><name>reportProgress</name></member>
+      <member refid="class_file_transfer_progress_reporter_1a107814711981513b44a134afec35b0ed" prot="private" virt="virtual"><scope>FileTransferProgressReporter</scope><name>reportProgressNow</name></member>
+      <member refid="class_sluggish_progress_reporter_1ab807400b3da190ed09ef0441dbea5046" prot="private" virt="non-virtual"><scope>FileTransferProgressReporter</scope><name>SluggishProgressReporter</name></member>
+      <member refid="class_file_transfer_progress_reporter_1a62f67d133a9298918eff66d4383050e1" prot="private" virt="non-virtual"><scope>FileTransferProgressReporter</scope><name>startedFiles_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

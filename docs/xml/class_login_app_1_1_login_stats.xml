@@ -1,0 +1,508 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_login_app_1_1_login_stats" kind="class" language="C++" prot="private">
+    <compoundname>LoginApp::LoginStats</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">TimerHandler</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_login_app_1_1_login_stats_1aef6bef669e22477827eb5b8d8d5c508d" prot="private" static="no" mutable="no">
+        <type>AccumulatingEMA&lt; uint32 &gt;</type>
+        <definition>AccumulatingEMA&lt; uint32 &gt; LoginApp::LoginStats::fails_</definition>
+        <argsstring></argsstring>
+        <name>fails_</name>
+        <briefdescription>
+<para>Failed logins. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="370" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="370" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1_1_login_stats_1ad4c6fedb03290a9309cbb6099febd065" prot="private" static="no" mutable="no">
+        <type>AccumulatingEMA&lt; uint32 &gt;</type>
+        <definition>AccumulatingEMA&lt; uint32 &gt; LoginApp::LoginStats::rateLimited_</definition>
+        <argsstring></argsstring>
+        <name>rateLimited_</name>
+        <briefdescription>
+<para>Rate-limited logins. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="372" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1_1_login_stats_1a64ca9f0060fed65f775a0dd6b7ce61c5" prot="private" static="no" mutable="no">
+        <type>AccumulatingEMA&lt; uint32 &gt;</type>
+        <definition>AccumulatingEMA&lt; uint32 &gt; LoginApp::LoginStats::pending_</definition>
+        <argsstring></argsstring>
+        <name>pending_</name>
+        <briefdescription>
+<para>Repeated logins that matched a pending login. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="374" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="374" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1_1_login_stats_1a8cfdc689678a0a811f9e46be7b32393d" prot="private" static="no" mutable="no">
+        <type>AccumulatingEMA&lt; uint32 &gt;</type>
+        <definition>AccumulatingEMA&lt; uint32 &gt; LoginApp::LoginStats::successes_</definition>
+        <argsstring></argsstring>
+        <name>successes_</name>
+        <briefdescription>
+<para>Successful logins. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="376" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="376" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1_1_login_stats_1a913a6111d259e0d244f6d781077ee580" prot="private" static="no" mutable="no">
+        <type>AccumulatingEMA&lt; uint32 &gt;</type>
+        <definition>AccumulatingEMA&lt; uint32 &gt; LoginApp::LoginStats::all_</definition>
+        <argsstring></argsstring>
+        <name>all_</name>
+        <briefdescription>
+<para>All logins. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="378" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="378" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1_1_login_stats_1a9b0c80269705b61d638963c22fde2e23" prot="private" static="no" mutable="no">
+        <type>AccumulatingEMA&lt; uint32 &gt;</type>
+        <definition>AccumulatingEMA&lt; uint32 &gt; LoginApp::LoginStats::failedByIPAddressBan_</definition>
+        <argsstring></argsstring>
+        <name>failedByIPAddressBan_</name>
+        <briefdescription>
+<para>Failed login attempts because of their IP address banned. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="380" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="380" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1_1_login_stats_1a33c34a8c085b62b80e635e1da73f20e4" prot="private" static="no" mutable="no">
+        <type>AccumulatingEMA&lt; uint32 &gt;</type>
+        <definition>AccumulatingEMA&lt; uint32 &gt; LoginApp::LoginStats::attemptsWithPassword_</definition>
+        <argsstring></argsstring>
+        <name>attemptsWithPassword_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Failed basic login attempts when passwordless only logins allowed </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="383" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="383" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1_1_login_stats_1a9e68f4dcd7324714c65d9d7196cec9c1" prot="private" static="no" mutable="no">
+        <type>EMA</type>
+        <definition>EMA LoginApp::LoginStats::calculationTime_</definition>
+        <argsstring></argsstring>
+        <name>calculationTime_</name>
+        <briefdescription>
+<para>Reported client-side calculation time for challenges. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="386" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="386" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1_1_login_stats_1a56469014fd6ef550336518de2ddd58a9" prot="private" static="no" mutable="no">
+        <type>EMA</type>
+        <definition>EMA LoginApp::LoginStats::verificationTime_</definition>
+        <argsstring></argsstring>
+        <name>verificationTime_</name>
+        <briefdescription>
+<para>Server-side verification time for challenge responses. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="388" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="388" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_login_app_1_1_login_stats_1a2a16f5c7e94a3d9c7344fff1fa5f0277" prot="private" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float LoginApp::LoginStats::COUNT_BIAS</definition>
+        <argsstring></argsstring>
+        <name>COUNT_BIAS</name>
+        <initializer>= 2.f /
+	(WEIGHTING_NUM_SAMPLES + 1)</initializer>
+        <briefdescription>
+<para>The bias for all the count-based exponential averages. </para>        </briefdescription>
+        <detaileddescription>
+<para>The EMA bias for the login statistics. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="391" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_login_app_1_1_login_stats_1abe069642bbbd0f6f04cb992b88acad71" prot="private" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float LoginApp::LoginStats::TIME_BIAS</definition>
+        <argsstring></argsstring>
+        <name>TIME_BIAS</name>
+        <initializer>= 
+	EMA::calculateBiasFromNumSamples( 100 )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The bias for the challenge calculation and verification time averages.</para><para>The EMA bias for the challenge calculation and verification time averages. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="394" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="394" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1a72da0c2744bb34f35669c6b1a57d090e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LoginApp::LoginStats::LoginStats</definition>
+        <argsstring>()</argsstring>
+        <name>LoginStats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="231" column="1" bodyfile="loginapp/loginapp.cpp" bodystart="1697" bodyend="1707"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1acac8e8681d97ba3b6d736143f4e60436" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>LoginApp::LoginStats::~LoginStats</definition>
+        <argsstring>()</argsstring>
+        <name>~LoginStats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="234" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="234" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1abcfaf366439b2fda56e522c958c95fd1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::LoginStats::handleTimeout</definition>
+        <argsstring>(TimerHandle handle, void *arg)</argsstring>
+        <name>handleTimeout</name>
+        <param>
+          <type>TimerHandle</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="239" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="239" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1acd5fecc5917443e454f3eda8ffef8bc8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::LoginStats::incRateLimited</definition>
+        <argsstring>()</argsstring>
+        <name>incRateLimited</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Increment the count for rate-limited logins. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="249" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="249" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1a8a87edfa0f6ca073169be4eae5059645" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::LoginStats::incFails</definition>
+        <argsstring>()</argsstring>
+        <name>incFails</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Increment the count for failed logins. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="254" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="254" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1abbcd483e8387397c8bb868f53a683030" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::LoginStats::incPending</definition>
+        <argsstring>()</argsstring>
+        <name>incPending</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Increment the count for repeated logins (duplicate logins that came in from the client while the original was pending. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="260" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="260" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1aae89fbdff6acbd6fa13fdb969a0c2ab7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::LoginStats::incSuccesses</definition>
+        <argsstring>()</argsstring>
+        <name>incSuccesses</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Increment the count for successful logins. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="265" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="265" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1a16e4ea913fe160265a27882f338a909d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::LoginStats::challengeCalculationTimeSample</definition>
+        <argsstring>(float sample)</argsstring>
+        <name>challengeCalculationTimeSample</name>
+        <param>
+          <type>float</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a sample for a successful challenge calculation duration. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="272" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="272" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1a95195337a1643e0aa8880178c377bcc2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::LoginStats::challengeVerificationTimeSample</definition>
+        <argsstring>(float sample)</argsstring>
+        <name>challengeVerificationTimeSample</name>
+        <param>
+          <type>float</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adds a sample for a challenge verification duration. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="281" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="281" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1a17683ca76c1dc405024651976f987e4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::LoginStats::incFailedByIPAddressBan</definition>
+        <argsstring>()</argsstring>
+        <name>incFailedByIPAddressBan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Increment the count for failedByIPAddressBan logins. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="289" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="289" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1a8b971abc05c30c2fef649cc0f737b428" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::LoginStats::incAttemptsWithPassword</definition>
+        <argsstring>()</argsstring>
+        <name>incAttemptsWithPassword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Increment the count for attemptsWithPassword logins. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="294" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="294" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1a1491d3603751e1d551424c089fec185f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float LoginApp::LoginStats::fails</definition>
+        <argsstring>() const </argsstring>
+        <name>fails</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the failed logins per second average. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="301" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="301" bodyend="301"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1a8435632e66105d8d5bf7f0e4a24b1311" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float LoginApp::LoginStats::rateLimited</definition>
+        <argsstring>() const </argsstring>
+        <name>rateLimited</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the rate-limited logins per second average. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="306" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="306" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1afd19538f0324a97f873a83e2b8adc8b5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float LoginApp::LoginStats::pending</definition>
+        <argsstring>() const </argsstring>
+        <name>pending</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the repeated logins (due to already pending login) per second average. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="312" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="312" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1a23e9930a1c48a969b72bd38ac3fabfc2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float LoginApp::LoginStats::successes</definition>
+        <argsstring>() const </argsstring>
+        <name>successes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the successful logins per second average. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="317" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="317" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1ae1de3eaf130e9ef459cd41f61045082a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float LoginApp::LoginStats::all</definition>
+        <argsstring>() const </argsstring>
+        <name>all</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the logins per second average. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="322" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="322" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1a11a1b19c7cb6f3ac246a79ab314919b9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float LoginApp::LoginStats::challengeCalculationAverage</definition>
+        <argsstring>() const </argsstring>
+        <name>challengeCalculationAverage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the average time reported for calculating challenge results. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="329" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="329" bodyend="332"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1a04d7e048f28ca97bff3933d12d2ca76b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float LoginApp::LoginStats::challengeVerificationAverage</definition>
+        <argsstring>() const </argsstring>
+        <name>challengeVerificationAverage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the average time for verifying incoming challenges. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="338" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="338" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1ace41d05eff5b74b2a5bc8a7d159b70db" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float LoginApp::LoginStats::failedByIPAddressBan</definition>
+        <argsstring>() const </argsstring>
+        <name>failedByIPAddressBan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the failedByIPAddressBan per second average. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="347" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="347" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1aa97cabb148d4103d025c5aabd356184e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float LoginApp::LoginStats::attemptsWithPassword</definition>
+        <argsstring>() const </argsstring>
+        <name>attemptsWithPassword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the attemptsWithPassword per second average. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="352" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="352" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_app_1_1_login_stats_1a8fb104194a82c2cd4afe59e7ea857d88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoginApp::LoginStats::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method updates the averages to the accumulated values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/loginapp.hpp" line="357" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="357" bodyend="366"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class represents login statistics. These statistics are exposed to watchers. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1744">
+        <label>LoginApp::LoginStats</label>
+        <childnode refid="1745" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1745">
+        <label>TimerHandler</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1746">
+        <label>LoginApp::LoginStats</label>
+        <childnode refid="1747" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1747">
+        <label>TimerHandler</label>
+      </node>
+    </collaborationgraph>
+    <location file="loginapp/loginapp.hpp" line="229" column="1" bodyfile="loginapp/loginapp.hpp" bodystart="228" bodyend="395"/>
+    <listofallmembers>
+      <member refid="class_login_app_1_1_login_stats_1ae1de3eaf130e9ef459cd41f61045082a" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>all</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a913a6111d259e0d244f6d781077ee580" prot="private" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>all_</name></member>
+      <member refid="class_login_app_1_1_login_stats_1aa97cabb148d4103d025c5aabd356184e" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>attemptsWithPassword</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a33c34a8c085b62b80e635e1da73f20e4" prot="private" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>attemptsWithPassword_</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a9e68f4dcd7324714c65d9d7196cec9c1" prot="private" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>calculationTime_</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a11a1b19c7cb6f3ac246a79ab314919b9" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>challengeCalculationAverage</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a16e4ea913fe160265a27882f338a909d" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>challengeCalculationTimeSample</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a04d7e048f28ca97bff3933d12d2ca76b" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>challengeVerificationAverage</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a95195337a1643e0aa8880178c377bcc2" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>challengeVerificationTimeSample</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a2a16f5c7e94a3d9c7344fff1fa5f0277" prot="private" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>COUNT_BIAS</name></member>
+      <member refid="class_login_app_1_1_login_stats_1ace41d05eff5b74b2a5bc8a7d159b70db" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>failedByIPAddressBan</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a9b0c80269705b61d638963c22fde2e23" prot="private" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>failedByIPAddressBan_</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a1491d3603751e1d551424c089fec185f" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>fails</name></member>
+      <member refid="class_login_app_1_1_login_stats_1aef6bef669e22477827eb5b8d8d5c508d" prot="private" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>fails_</name></member>
+      <member refid="class_login_app_1_1_login_stats_1abcfaf366439b2fda56e522c958c95fd1" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>handleTimeout</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a8b971abc05c30c2fef649cc0f737b428" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>incAttemptsWithPassword</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a17683ca76c1dc405024651976f987e4b" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>incFailedByIPAddressBan</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a8a87edfa0f6ca073169be4eae5059645" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>incFails</name></member>
+      <member refid="class_login_app_1_1_login_stats_1abbcd483e8387397c8bb868f53a683030" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>incPending</name></member>
+      <member refid="class_login_app_1_1_login_stats_1acd5fecc5917443e454f3eda8ffef8bc8" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>incRateLimited</name></member>
+      <member refid="class_login_app_1_1_login_stats_1aae89fbdff6acbd6fa13fdb969a0c2ab7" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>incSuccesses</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a72da0c2744bb34f35669c6b1a57d090e" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>LoginStats</name></member>
+      <member refid="class_login_app_1_1_login_stats_1afd19538f0324a97f873a83e2b8adc8b5" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>pending</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a64ca9f0060fed65f775a0dd6b7ce61c5" prot="private" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>pending_</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a8435632e66105d8d5bf7f0e4a24b1311" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>rateLimited</name></member>
+      <member refid="class_login_app_1_1_login_stats_1ad4c6fedb03290a9309cbb6099febd065" prot="private" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>rateLimited_</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a23e9930a1c48a969b72bd38ac3fabfc2" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>successes</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a8cfdc689678a0a811f9e46be7b32393d" prot="private" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>successes_</name></member>
+      <member refid="class_login_app_1_1_login_stats_1abe069642bbbd0f6f04cb992b88acad71" prot="private" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>TIME_BIAS</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a8fb104194a82c2cd4afe59e7ea857d88" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>update</name></member>
+      <member refid="class_login_app_1_1_login_stats_1a56469014fd6ef550336518de2ddd58a9" prot="private" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>verificationTime_</name></member>
+      <member refid="class_login_app_1_1_login_stats_1acac8e8681d97ba3b6d736143f4e60436" prot="public" virt="non-virtual"><scope>LoginApp::LoginStats</scope><name>~LoginStats</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

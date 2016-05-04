@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_patrol_1_1_graph" kind="class" language="C++" prot="public">
+    <compoundname>Patrol::Graph</compoundname>
+    <includes refid="patrol__graph_8hpp" local="no">patrol_graph.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_patrol_1_1_graph_1a77586191dc35b820723c68b7061cc2d8" prot="private" static="no">
+        <type>BW::vector&lt; <ref refid="class_patrol_1_1_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>typedef BW::vector&lt; Node &gt; Patrol::Graph::Nodes</definition>
+        <argsstring></argsstring>
+        <name>Nodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/patrol_graph.hpp" line="106" column="1" bodyfile="tools/bots/patrol_graph.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_patrol_1_1_graph_1ac3d4f14714fe545a72dbe08f80b81c74" prot="private" static="no" mutable="no">
+        <type>Nodes</type>
+        <definition>Nodes Patrol::Graph::nodes_</definition>
+        <argsstring></argsstring>
+        <name>nodes_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/patrol_graph.hpp" line="107" column="1" bodyfile="tools/bots/patrol_graph.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_patrol_1_1_graph_1a97e327fec7619a6e93e1d6ca913e2ad7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Patrol::Graph::Graph</definition>
+        <argsstring>()</argsstring>
+        <name>Graph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/patrol_graph.hpp" line="97" column="1" bodyfile="tools/bots/patrol_graph.cpp" bodystart="208" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="class_patrol_1_1_graph_1ab53748dc18d9ca3a6dde3361fba95ff2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Patrol::Graph::init</definition>
+        <argsstring>(DataSection *pSection, float scalePos, float scaleSpeed)</argsstring>
+        <name>init</name>
+        <param>
+          <type>DataSection *</type>
+          <declname>pSection</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scalePos</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scaleSpeed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method initialises this patrol graph. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/patrol_graph.hpp" line="98" column="1" bodyfile="tools/bots/patrol_graph.cpp" bodystart="216" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="class_patrol_1_1_graph_1a98d7f6de66bd380dfd371a953fef9281" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Patrol::Graph::findClosestNode</definition>
+        <argsstring>(const Vector3 &amp;position) const </argsstring>
+        <name>findClosestNode</name>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the node that is closest to the input point. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/patrol_graph.hpp" line="100" column="1" bodyfile="tools/bots/patrol_graph.cpp" bodystart="275" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="class_patrol_1_1_graph_1afd859fcec06e7e7e7ae0300add08bfa1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="class_patrol_1_1_node" kindref="compound">Node</ref> *</type>
+        <definition>const Node * Patrol::Graph::node</definition>
+        <argsstring>(int index) const </argsstring>
+        <name>node</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method return the node with the input index. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/patrol_graph.hpp" line="101" column="1" bodyfile="tools/bots/patrol_graph.cpp" bodystart="303" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="class_patrol_1_1_graph_1a8606f1f3c957ce868902813b8b5e8ce8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Patrol::Graph::size</definition>
+        <argsstring>() const </argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bots/patrol_graph.hpp" line="103" column="1" bodyfile="tools/bots/patrol_graph.hpp" bodystart="103" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements a patrol graph that bots can follow. </para>    </detaileddescription>
+    <location file="tools/bots/patrol_graph.hpp" line="95" column="1" bodyfile="tools/bots/patrol_graph.hpp" bodystart="94" bodyend="108"/>
+    <listofallmembers>
+      <member refid="class_patrol_1_1_graph_1a98d7f6de66bd380dfd371a953fef9281" prot="public" virt="non-virtual"><scope>Patrol::Graph</scope><name>findClosestNode</name></member>
+      <member refid="class_patrol_1_1_graph_1a97e327fec7619a6e93e1d6ca913e2ad7" prot="public" virt="non-virtual"><scope>Patrol::Graph</scope><name>Graph</name></member>
+      <member refid="class_patrol_1_1_graph_1ab53748dc18d9ca3a6dde3361fba95ff2" prot="public" virt="non-virtual"><scope>Patrol::Graph</scope><name>init</name></member>
+      <member refid="class_patrol_1_1_graph_1afd859fcec06e7e7e7ae0300add08bfa1" prot="public" virt="non-virtual"><scope>Patrol::Graph</scope><name>node</name></member>
+      <member refid="class_patrol_1_1_graph_1a77586191dc35b820723c68b7061cc2d8" prot="private" virt="non-virtual"><scope>Patrol::Graph</scope><name>Nodes</name></member>
+      <member refid="class_patrol_1_1_graph_1ac3d4f14714fe545a72dbe08f80b81c74" prot="private" virt="non-virtual"><scope>Patrol::Graph</scope><name>nodes_</name></member>
+      <member refid="class_patrol_1_1_graph_1a8606f1f3c957ce868902813b8b5e8ce8" prot="public" virt="non-virtual"><scope>Patrol::Graph</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

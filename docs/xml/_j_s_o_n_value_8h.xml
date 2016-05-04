@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="_j_s_o_n_value_8h" kind="file" language="C++">
+    <compoundname>JSONValue.h</compoundname>
+    <includes local="yes">cstdmf/bw_string.hpp</includes>
+    <includes refid="_j_s_o_n_8h" local="yes">JSON.h</includes>
+    <includedby refid="_j_s_o_n_8h" local="yes">dbapp_extensions/wgbilling_spa/JSON.h</includedby>
+    <includedby refid="_j_s_o_n_value_8cpp" local="yes">dbapp_extensions/wgbilling_spa/JSONValue.cpp</includedby>
+    <incdepgraph>
+      <node id="15286">
+        <label>cstdmf/bw_string.hpp</label>
+      </node>
+      <node id="15289">
+        <label>cstdmf/bw_map.hpp</label>
+      </node>
+      <node id="15288">
+        <label>cstdmf/bw_vector.hpp</label>
+      </node>
+      <node id="15285">
+        <label>dbapp_extensions/wgbilling_spa/JSONValue.h</label>
+        <link refid="JSONValue.h"/>
+        <childnode refid="15286" relation="include">
+        </childnode>
+        <childnode refid="15287" relation="include">
+        </childnode>
+      </node>
+      <node id="15287">
+        <label>JSON.h</label>
+        <link refid="_j_s_o_n_8h_source"/>
+        <childnode refid="15288" relation="include">
+        </childnode>
+        <childnode refid="15286" relation="include">
+        </childnode>
+        <childnode refid="15289" relation="include">
+        </childnode>
+        <childnode refid="15285" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="15292">
+        <label>dbapp_extensions/wgbilling_spa/types.hpp</label>
+        <link refid="dbapp__extensions_2wgbilling__spa_2types_8hpp_source"/>
+        <childnode refid="15293" relation="include">
+        </childnode>
+        <childnode refid="15294" relation="include">
+        </childnode>
+        <childnode refid="15295" relation="include">
+        </childnode>
+      </node>
+      <node id="15293">
+        <label>dbapp_extensions/wgbilling_spa/http_pipeline.hpp</label>
+        <link refid="http__pipeline_8hpp_source"/>
+        <childnode refid="15294" relation="include">
+        </childnode>
+      </node>
+      <node id="15295">
+        <label>dbapp_extensions/wgbilling_spa/spa_request_pool.hpp</label>
+        <link refid="spa__request__pool_8hpp_source"/>
+        <childnode refid="15296" relation="include">
+        </childnode>
+        <childnode refid="15294" relation="include">
+        </childnode>
+        <childnode refid="15297" relation="include">
+        </childnode>
+      </node>
+      <node id="15297">
+        <label>dbapp_extensions/wgbilling_spa/spa_request.hpp</label>
+        <link refid="spa__request_8hpp_source"/>
+        <childnode refid="15298" relation="include">
+        </childnode>
+      </node>
+      <node id="15296">
+        <label>dbapp_extensions/wgbilling_spa/spa_billing_system.hpp</label>
+        <link refid="spa__billing__system_8hpp_source"/>
+      </node>
+      <node id="15294">
+        <label>dbapp_extensions/wgbilling_spa/spa_pipeline.hpp</label>
+        <link refid="spa__pipeline_8hpp_source"/>
+        <childnode refid="15295" relation="include">
+        </childnode>
+      </node>
+      <node id="15298">
+        <label>dbapp_extensions/wgbilling_spa/spa_login_request.hpp</label>
+        <link refid="spa__login__request_8hpp_source"/>
+      </node>
+      <node id="15290">
+        <label>dbapp_extensions/wgbilling_spa/JSONValue.h</label>
+        <link refid="JSONValue.h"/>
+        <childnode refid="15291" relation="include">
+        </childnode>
+      </node>
+      <node id="15291">
+        <label>dbapp_extensions/wgbilling_spa/JSON.h</label>
+        <link refid="_j_s_o_n_8h_source"/>
+        <childnode refid="15292" relation="include">
+        </childnode>
+        <childnode refid="15290" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_j_s_o_n_value" prot="public">JSONValue</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_j_s_o_n_value_8h_1a5a14a5134beaf233cc0ca7d849f2c5d0" prot="public" static="no">
+        <name>JSONType</name>
+        <enumvalue id="_j_s_o_n_value_8h_1a5a14a5134beaf233cc0ca7d849f2c5d0a5146de78d242fa44a41bb421f73ad50b" prot="public">
+          <name>JSONType_Null</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_j_s_o_n_value_8h_1a5a14a5134beaf233cc0ca7d849f2c5d0a09aec29fafa61991f266619b8dd340f0" prot="public">
+          <name>JSONType_String</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_j_s_o_n_value_8h_1a5a14a5134beaf233cc0ca7d849f2c5d0a8078517720897378e4dab55064528652" prot="public">
+          <name>JSONType_Bool</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_j_s_o_n_value_8h_1a5a14a5134beaf233cc0ca7d849f2c5d0af2e3ca899b0b701fe8b34fb1b6219704" prot="public">
+          <name>JSONType_Number</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_j_s_o_n_value_8h_1a5a14a5134beaf233cc0ca7d849f2c5d0af38a377d08b357782141b20e45528c66" prot="public">
+          <name>JSONType_Array</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_j_s_o_n_value_8h_1a5a14a5134beaf233cc0ca7d849f2c5d0a652415b3efcbbbe4eedffe9844d9021f" prot="public">
+          <name>JSONType_Object</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/JSONValue.h" line="34" column="1" bodyfile="dbapp_extensions/wgbilling_spa/JSONValue.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>File<sp/>JSONValue.h<sp/>part<sp/>of<sp/>the<sp/>SimpleJSON<sp/>Library<sp/>-<sp/>http://mjpa.in/json</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2010<sp/>Mike<sp/>Anchor</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_JSONVALUE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_JSONVALUE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_string.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;JSON.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_j_s_o_n" kindref="compound">JSON</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>JSONType<sp/>{<sp/>JSONType_Null,<sp/>JSONType_String,<sp/>JSONType_Bool,<sp/>JSONType_Number,<sp/>JSONType_Array,<sp/>JSONType_Object<sp/>};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_j_s_o_n_value" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_j_s_o_n_value" kindref="compound">JSONValue</ref></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_j_s_o_n" kindref="compound">JSON</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_j_s_o_n_value_1a53cb9b84540e492d5c8efb8d84906bd0" kindref="member">JSONValue</ref>(</highlight><highlight class="comment">/*NULL*/</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_j_s_o_n_value_1a53cb9b84540e492d5c8efb8d84906bd0" kindref="member">JSONValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*m_char_value);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_j_s_o_n_value_1a53cb9b84540e492d5c8efb8d84906bd0" kindref="member">JSONValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::wstring<sp/>&amp;m_string_value);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_j_s_o_n_value_1a53cb9b84540e492d5c8efb8d84906bd0" kindref="member">JSONValue</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_bool_value);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_j_s_o_n_value_1a53cb9b84540e492d5c8efb8d84906bd0" kindref="member">JSONValue</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m_number_value);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_j_s_o_n_value_1a53cb9b84540e492d5c8efb8d84906bd0" kindref="member">JSONValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>JSONArray<sp/>&amp;m_array_value);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_j_s_o_n_value_1a53cb9b84540e492d5c8efb8d84906bd0" kindref="member">JSONValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>JSONObject<sp/>&amp;m_object_value);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_j_s_o_n_value_1ae71766eb548ae78c060f0c308ceceb4b" kindref="member">~JSONValue</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_j_s_o_n_value_1aa1f82febbed62b4736fd22659deeff46" kindref="member">IsNull</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_j_s_o_n_value_1ada29006af025a5959e79b373e31c5775" kindref="member">IsString</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_j_s_o_n_value_1af1322cab379ad85f2adf1792b843b492" kindref="member">IsBool</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_j_s_o_n_value_1a37d949d2dcbe9ed9506bdaa74c2e7678" kindref="member">IsNumber</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_j_s_o_n_value_1ab1421cbcab766cd4632b2e768a5e2d26" kindref="member">IsArray</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_j_s_o_n_value_1a82d2d60f92bb5d9803c40d51eb8749ff" kindref="member">IsObject</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::wstring<sp/>&amp;<ref refid="class_j_s_o_n_value_1a4db468c0037840483b4a2697fcccecae" kindref="member">AsString</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_j_s_o_n_value_1a56af7863b4a860979259d9a426580b32" kindref="member">AsBool</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_j_s_o_n_value_1ab0ff732d7c1c4017295313919fa571fa" kindref="member">AsNumber</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>JSONArray<sp/>&amp;<ref refid="class_j_s_o_n_value_1a62f36548b0f0d25d72c41058d8216226" kindref="member">AsArray</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>JSONObject<sp/>&amp;<ref refid="class_j_s_o_n_value_1abaaba0f72daa1a4a75b07c4ba6d185fc" kindref="member">AsObject</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BW::wstring<sp/><ref refid="class_j_s_o_n_value_1aabaed8ecfe5bb7d653a11c28e2256b5f" kindref="member">Stringify</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_j_s_o_n_value" kindref="compound">JSONValue</ref><sp/>*<ref refid="class_j_s_o_n_value_1abfbaa2b86a6c0f5ea3d358077d653709" kindref="member">Parse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>**data);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>BW::wstring<sp/>StringifyString(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::wstring<sp/>&amp;str);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSONType<sp/>type;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BW::wstring<sp/>string_value;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bool_value;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>number_value;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSONArray<sp/>array_value;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSONObject<sp/>object_value;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="dbapp_extensions/wgbilling_spa/JSONValue.h"/>
+  </compounddef>
+</doxygen>

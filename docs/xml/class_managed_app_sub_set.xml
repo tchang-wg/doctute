@@ -1,0 +1,663 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_managed_app_sub_set" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ManagedAppSubSet</compoundname>
+    <derivedcompoundref refid="class_base_app_sub_set" prot="public" virt="non-virtual">BaseAppSubSet</derivedcompoundref>
+    <derivedcompoundref refid="class_service_app_sub_set" prot="public" virt="non-virtual">ServiceAppSubSet</derivedcompoundref>
+    <includes refid="baseappmgr_8hpp" local="no">baseappmgr.hpp</includes>
+      <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="class_managed_app_sub_set_1a7993c958b270b71fc1550664b8b05243" prot="protected" static="no">
+        <type><ref refid="class_base_app_mgr_config" kindref="compound">BaseAppMgrConfig</ref></type>
+        <definition>typedef BaseAppMgrConfig ManagedAppSubSet::Config</definition>
+        <argsstring></argsstring>
+        <name>Config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="104" column="1" bodyfile="baseappmgr/baseappmgr.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_managed_app_sub_set_1a2293230584344b6a4a21262111c50c3a" prot="protected" static="no" mutable="no">
+        <type>BaseApps &amp;</type>
+        <definition>BaseApps&amp; ManagedAppSubSet::apps_</definition>
+        <argsstring></argsstring>
+        <name>apps_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="131" column="1" bodyfile="baseappmgr/baseappmgr.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_managed_app_sub_set_1a2bd1f78453a1873d52da60b559edacc8" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> &amp;</type>
+        <definition>CellAppMgr&amp; ManagedAppSubSet::cellAppMgr_</definition>
+        <argsstring></argsstring>
+        <name>cellAppMgr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="132" column="1" bodyfile="baseappmgr/baseappmgr.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_managed_app_sub_set_1a00282c9a59f9a737329bd2125f8ee076" prot="protected" static="no" mutable="no">
+        <type>BaseAppID</type>
+        <definition>BaseAppID ManagedAppSubSet::lastAppID_</definition>
+        <argsstring></argsstring>
+        <name>lastAppID_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="133" column="1" bodyfile="baseappmgr/baseappmgr.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_managed_app_sub_set_1a8f3315f9fc36536f7cdc8e04ad5a9179" prot="protected" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint ManagedAppSubSet::size_</definition>
+        <argsstring></argsstring>
+        <name>size_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="135" column="1" bodyfile="baseappmgr/baseappmgr.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_managed_app_sub_set_1a99cdc061a933ff2c54b2e4b8f209ee18" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ManagedAppSubSet::hasIdealBackups_</definition>
+        <argsstring></argsstring>
+        <name>hasIdealBackups_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="137" column="1" bodyfile="baseappmgr/baseappmgr.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_managed_app_sub_set_1a8a4de47d63927e4ee9f78a0e353df49e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint ManagedAppSubSet::size</definition>
+        <argsstring>() const </argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="67" column="1" bodyfile="baseappmgr/baseappmgr.hpp" bodystart="67" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1a3eed42973644dfd73a564b944321e48d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_base_app" kindref="compound">BaseApp</ref> *</type>
+        <definition>BaseApp * ManagedAppSubSet::findLeastLoadedApp</definition>
+        <argsstring>() const </argsstring>
+        <name>findLeastLoadedApp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method finds the least loaded <ref refid="class_base_app" kindref="compound">BaseApp</ref>.</para><para><simplesect kind="return"><para>The least loaded <ref refid="class_base_app" kindref="compound">BaseApp</ref>. If none exists, NULL is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="72" column="1" bodyfile="baseappmgr/baseappmgr.cpp" bodystart="815" bodyend="837"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1a5d7414f5bdfeb2863ca7bdb0ed86d5e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ManagedAppSubSet::minAppLoad</definition>
+        <argsstring>() const </argsstring>
+        <name>minAppLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the minimum <ref refid="class_base" kindref="compound">Base</ref> App load. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="73" column="1" bodyfile="baseappmgr/baseappmgr.cpp" bodystart="927" bodyend="939"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1a8321c1751a9b48e0712518b1d8031f28" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ManagedAppSubSet::avgAppLoad</definition>
+        <argsstring>() const </argsstring>
+        <name>avgAppLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the average <ref refid="class_base" kindref="compound">Base</ref> App load. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="74" column="1" bodyfile="baseappmgr/baseappmgr.cpp" bodystart="945" bodyend="957"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1a87cfe0c32aa58e20a046fd2dde1d3a07" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ManagedAppSubSet::maxAppLoad</definition>
+        <argsstring>() const </argsstring>
+        <name>maxAppLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the maximum <ref refid="class_base" kindref="compound">Base</ref> App load. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="75" column="1" bodyfile="baseappmgr/baseappmgr.cpp" bodystart="963" bodyend="975"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1a8690438091b176fcab388f2972a9027d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>BaseAppID</type>
+        <definition>BaseAppID ManagedAppSubSet::lastAppID</definition>
+        <argsstring>() const </argsstring>
+        <name>lastAppID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="77" column="1" bodyfile="baseappmgr/baseappmgr.hpp" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1a83f71a0a1f92efc61ffafd03609c5019" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ManagedAppSubSet::adjustBackupLocations</definition>
+        <argsstring>(BaseApp &amp;app, AdjustBackupLocationsOp op)</argsstring>
+        <name>adjustBackupLocations</name>
+        <param>
+          <type><ref refid="class_base_app" kindref="compound">BaseApp</ref> &amp;</type>
+          <declname>app</declname>
+        </param>
+        <param>
+          <type>AdjustBackupLocationsOp</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method adjusts who each <ref refid="class_base_app" kindref="compound">BaseApp</ref> is backing up to. It is called whenever <ref refid="class_base_app" kindref="compound">BaseApp</ref> is added or removed.</para><para>This is used by the new-style backup. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="79" column="1" bodyfile="baseappmgr/baseappmgr.cpp" bodystart="1814" bodyend="1869"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1a97775160bb458064d7b75b0c1eda5a61" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ManagedAppSubSet::updateCreateBaseInfo</definition>
+        <argsstring>()=0</argsstring>
+        <name>updateCreateBaseInfo</name>
+        <reimplementedby refid="class_base_app_sub_set_1a6ec779093c94bc735b4420c1392af79c">updateCreateBaseInfo</reimplementedby>
+        <reimplementedby refid="class_service_app_sub_set_1ab301779d188a68462514a5241f68dc5f">updateCreateBaseInfo</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1a3c83cb073b01bfc9bc0648996c695413" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ManagedAppSubSet::recoverBaseApp</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, BaseAppMgr &amp;baseAppMgr, const Mercury::Address &amp;addrForCells, const Mercury::Address &amp;addrForClients, BaseAppID id, bool isServiceApp, BinaryIStream &amp;data)</argsstring>
+        <name>recoverBaseApp</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type><ref refid="class_base_app_mgr" kindref="compound">BaseAppMgr</ref> &amp;</type>
+          <declname>baseAppMgr</declname>
+        </param>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addrForCells</declname>
+        </param>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addrForClients</declname>
+        </param>
+        <param>
+          <type>BaseAppID</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isServiceApp</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method reconstructs a <ref refid="class_base_app" kindref="compound">BaseApp</ref> after the death of an old <ref refid="class_base_app_mgr" kindref="compound">BaseAppMgr</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>baseAppMgr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_base_app_mgr" kindref="compound">BaseAppMgr</ref> used by <ref refid="class_base_app" kindref="compound">BaseApp</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>addrForCells</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Internal address. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>addrForClients</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>External address. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_base_app" kindref="compound">BaseApp</ref> ID. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isServiceApp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_base_app" kindref="compound">BaseApp</ref> kind. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Recovery data stream. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="82" column="1" bodyfile="baseappmgr/baseappmgr.cpp" bodystart="1572" bodyend="1598"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1ac5ab306d8252ecf11325aef350e7055e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ManagedAppSubSet::killApp</definition>
+        <argsstring>(const BaseApp &amp;baseApp, const BWMachineDNetwork *pBWMachineD)</argsstring>
+        <name>killApp</name>
+        <param>
+          <type>const <ref refid="class_base_app" kindref="compound">BaseApp</ref> &amp;</type>
+          <declname>baseApp</declname>
+        </param>
+        <param>
+          <type>const BWMachineDNetwork *</type>
+          <declname>pBWMachineD</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends SIGQUIT to a <ref refid="class_base_app" kindref="compound">BaseApp</ref> via machined. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>baseApp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_base_app" kindref="compound">BaseApp</ref> to kill. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="87" column="1" bodyfile="baseappmgr/baseappmgr.cpp" bodystart="1876" bodyend="1890"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1ac5d50641d93f897c79dd0e1ca81bc74b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ManagedAppSubSet::addApp</definition>
+        <argsstring>(const BaseAppPtr &amp;pBaseApp)</argsstring>
+        <name>addApp</name>
+        <reimplementedby refid="class_base_app_sub_set_1a190923b2ca89b5e58a7161b359438108">addApp</reimplementedby>
+        <param>
+          <type>const BaseAppPtr &amp;</type>
+          <declname>pBaseApp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method inserts a newly created <ref refid="class_base_app" kindref="compound">BaseApp</ref> into the shared container and updates subset&apos;s cached size. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pBaseApp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_base_app" kindref="compound">BaseApp</ref> to add. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="89" column="1" bodyfile="baseappmgr/baseappmgr.cpp" bodystart="1898" bodyend="1915"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1a96ee088daaced5132f9072b0cf9e3510" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ManagedAppSubSet::removeApp</definition>
+        <argsstring>(const BaseApp &amp;baseApp)</argsstring>
+        <name>removeApp</name>
+        <param>
+          <type>const <ref refid="class_base_app" kindref="compound">BaseApp</ref> &amp;</type>
+          <declname>baseApp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method removes a <ref refid="class_base_app" kindref="compound">BaseApp</ref> into from the shared container and updates subset&apos;s cached size. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pBaseApp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_base_app" kindref="compound">BaseApp</ref> to remove. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="90" column="1" bodyfile="baseappmgr/baseappmgr.cpp" bodystart="1923" bodyend="1927"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1ab0f2357321ca8dd93603f2c501d25d73" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ManagedAppSubSet::onBaseAppDeath</definition>
+        <argsstring>(BaseApp &amp;app, const BWMachineDNetwork *pBWMachineD)</argsstring>
+        <name>onBaseAppDeath</name>
+        <reimplementedby refid="class_service_app_sub_set_1ac8c74f31d6cace8d4ca026ebef818743">onBaseAppDeath</reimplementedby>
+        <param>
+          <type><ref refid="class_base_app" kindref="compound">BaseApp</ref> &amp;</type>
+          <declname>app</declname>
+          <defname>baseApp</defname>
+        </param>
+        <param>
+          <type>const BWMachineDNetwork *</type>
+          <declname>pBWMachineD</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method processes an unexpected <ref refid="class_base_app" kindref="compound">BaseApp</ref> death. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>baseApp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Died <ref refid="class_base_app" kindref="compound">BaseApp</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><emphasis>true</emphasis> if the server should be shut down. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="91" column="1" bodyfile="baseappmgr/baseappmgr.cpp" bodystart="1974" bodyend="2043"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1a95fb6f013a00cda87b36c1ffdb38724d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BaseAppID</type>
+        <definition>BaseAppID ManagedAppSubSet::getNextAppID</definition>
+        <argsstring>()</argsstring>
+        <name>getNextAppID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns an ID for a new <ref refid="class_base_app" kindref="compound">BaseApp</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="94" column="1" bodyfile="baseappmgr/baseappmgr.cpp" bodystart="981" bodyend="985"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1af80a872e1c5f24ec5d62f0d30b2c7a08" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint</type>
+        <definition>virtual uint ManagedAppSubSet::minimumRequiredApps</definition>
+        <argsstring>() const  =0</argsstring>
+        <name>minimumRequiredApps</name>
+        <reimplementedby refid="class_base_app_sub_set_1acb5128af4157a4ecd4c40c27c8ea8542">minimumRequiredApps</reimplementedby>
+        <reimplementedby refid="class_service_app_sub_set_1a94319252d85c6db8176207fd6f5a0ee6">minimumRequiredApps</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method should return the minimum number of apps required for a particular subset. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="100" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_managed_app_sub_set_1aaa8cfc64ecfa40e4f25830c74c69976c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ManagedAppSubSet::ManagedAppSubSet</definition>
+        <argsstring>(BaseApps &amp;apps, CellAppMgr &amp;cellAppMgr)</argsstring>
+        <name>ManagedAppSubSet</name>
+        <param>
+          <type>BaseApps &amp;</type>
+          <declname>apps</declname>
+        </param>
+        <param>
+          <type><ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> &amp;</type>
+          <declname>cellAppMgr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>apps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Collection of all managed <ref refid="class_base_app" kindref="compound">BaseApp</ref>&apos;s. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cellAppMgr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis><ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref></emphasis> reference used to notify <ref refid="class_cell_app" kindref="compound">CellApp</ref>&apos;s about base entity events. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="103" column="1" bodyfile="baseappmgr/baseappmgr.cpp" bodystart="123" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1af407c4e3f6f4cd287a7e4d88e206121c" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="class_base_apps_iterator" kindref="compound">BaseAppsIterator</ref></type>
+        <definition>virtual BaseAppsIterator ManagedAppSubSet::iterator</definition>
+        <argsstring>() const  =0</argsstring>
+        <name>iterator</name>
+        <reimplementedby refid="class_base_app_sub_set_1ada7e115f04663067d0caadacd03f93ba">iterator</reimplementedby>
+        <reimplementedby refid="class_service_app_sub_set_1a324e9c82ef9570beef6f18b36d53c37d">iterator</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method should return an iterator that only enumerates apps from this subset. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="110" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1a9ed0af78f76e494ef3f793a6d4bc4d57" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ManagedAppSubSet::~ManagedAppSubSet</definition>
+        <argsstring>()</argsstring>
+        <name>~ManagedAppSubSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="111" column="1" bodyfile="baseappmgr/baseappmgr.hpp" bodystart="111" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_managed_app_sub_set_1a2695b33559aea825ff1b51dff17ee996" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ManagedAppSubSet::stopBackupsTo</definition>
+        <argsstring>(const Mercury::Address &amp;addr)</argsstring>
+        <name>stopBackupsTo</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method request subset peer <ref refid="class_base_app" kindref="compound">BaseApp</ref> to stop backing up to the given <ref refid="class_base_app" kindref="compound">BaseApp</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of the <ref refid="class_base_app" kindref="compound">BaseApp</ref> to which the backups should be stopped. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="114" column="1" bodyfile="baseappmgr/baseappmgr.cpp" bodystart="2164" bodyend="2171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1ad02e383f1e328fedf1eabbc47bf4654e" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint ManagedAppSubSet::countApps</definition>
+        <argsstring>() const </argsstring>
+        <name>countApps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method counts the number of apps in the subset. Used for debugging only. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="115" column="1" bodyfile="baseappmgr/baseappmgr.cpp" bodystart="134" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1a53ce5beacacf0f3fd75f25c0e93b136b" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ManagedAppSubSet::hasIdealBackups</definition>
+        <argsstring>() const </argsstring>
+        <name>hasIdealBackups</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns whether there are multiple BaseApps with different IP addresses. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="116" column="1" bodyfile="baseappmgr/baseappmgr.cpp" bodystart="1413" bodyend="1434"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1a67fb5973c17e926b3498eba3226ab707" prot="private" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const char *</type>
+        <definition>virtual const char* ManagedAppSubSet::appName</definition>
+        <argsstring>() const  =0</argsstring>
+        <name>appName</name>
+        <reimplementedby refid="class_base_app_sub_set_1a63096ac94fcf9b416e62f834a433e8b8">appName</reimplementedby>
+        <reimplementedby refid="class_service_app_sub_set_1ae01e89f1ef7c00449117a5018c7435aa">appName</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method should return a camel-case base name (no ID) for an app in this subset. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="122" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_managed_app_sub_set_1a8acf42ee4e643bb1a9642f45dbc50659" prot="private" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool ManagedAppSubSet::shutDownOnAppDeath</definition>
+        <argsstring>() const  =0</argsstring>
+        <name>shutDownOnAppDeath</name>
+        <reimplementedby refid="class_base_app_sub_set_1a2055a31210f3155ef0dccb37023b913f">shutDownOnAppDeath</reimplementedby>
+        <reimplementedby refid="class_service_app_sub_set_1a79f8a7f6dbeeb200e2956471f49abc15">shutDownOnAppDeath</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method should return <emphasis>true</emphasis> if the server should be shut down when an app from this subset dies. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/baseappmgr.hpp" line="128" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class encapsulates operations that should be applied only to a subset of managed BaseApps. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1855">
+        <label>BaseAppSubSet</label>
+        <link refid="class_base_app_sub_set"/>
+        <childnode refid="1854" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1856">
+        <label>ServiceAppSubSet</label>
+        <link refid="class_service_app_sub_set"/>
+        <childnode refid="1854" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1854">
+        <label>ManagedAppSubSet</label>
+        <link refid="class_managed_app_sub_set"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1860">
+        <label>TimerHandler</label>
+      </node>
+      <node id="1861">
+        <label>Singleton&lt; CellAppMgr &gt;</label>
+      </node>
+      <node id="1858">
+        <label>CellAppMgr</label>
+        <link refid="class_cell_app_mgr"/>
+        <childnode refid="1859" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1860" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1861" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1857">
+        <label>ManagedAppSubSet</label>
+        <link refid="class_managed_app_sub_set"/>
+        <childnode refid="1858" relation="usage">
+          <edgelabel>cellAppMgr_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1859">
+        <label>ManagerApp</label>
+      </node>
+    </collaborationgraph>
+    <location file="baseappmgr/baseappmgr.hpp" line="65" column="1" bodyfile="baseappmgr/baseappmgr.hpp" bodystart="64" bodyend="138"/>
+    <listofallmembers>
+      <member refid="class_managed_app_sub_set_1ac5d50641d93f897c79dd0e1ca81bc74b" prot="public" virt="virtual"><scope>ManagedAppSubSet</scope><name>addApp</name></member>
+      <member refid="class_managed_app_sub_set_1a83f71a0a1f92efc61ffafd03609c5019" prot="public" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>adjustBackupLocations</name></member>
+      <member refid="class_managed_app_sub_set_1a67fb5973c17e926b3498eba3226ab707" prot="private" virt="pure-virtual"><scope>ManagedAppSubSet</scope><name>appName</name></member>
+      <member refid="class_managed_app_sub_set_1a2293230584344b6a4a21262111c50c3a" prot="protected" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>apps_</name></member>
+      <member refid="class_managed_app_sub_set_1a8321c1751a9b48e0712518b1d8031f28" prot="public" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>avgAppLoad</name></member>
+      <member refid="class_managed_app_sub_set_1a2bd1f78453a1873d52da60b559edacc8" prot="protected" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>cellAppMgr_</name></member>
+      <member refid="class_managed_app_sub_set_1a7993c958b270b71fc1550664b8b05243" prot="protected" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>Config</name></member>
+      <member refid="class_managed_app_sub_set_1ad02e383f1e328fedf1eabbc47bf4654e" prot="private" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>countApps</name></member>
+      <member refid="class_managed_app_sub_set_1a3eed42973644dfd73a564b944321e48d" prot="public" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>findLeastLoadedApp</name></member>
+      <member refid="class_managed_app_sub_set_1a95fb6f013a00cda87b36c1ffdb38724d" prot="public" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>getNextAppID</name></member>
+      <member refid="class_managed_app_sub_set_1a53ce5beacacf0f3fd75f25c0e93b136b" prot="private" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>hasIdealBackups</name></member>
+      <member refid="class_managed_app_sub_set_1a99cdc061a933ff2c54b2e4b8f209ee18" prot="protected" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>hasIdealBackups_</name></member>
+      <member refid="class_managed_app_sub_set_1af407c4e3f6f4cd287a7e4d88e206121c" prot="protected" virt="pure-virtual"><scope>ManagedAppSubSet</scope><name>iterator</name></member>
+      <member refid="class_managed_app_sub_set_1ac5ab306d8252ecf11325aef350e7055e" prot="public" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>killApp</name></member>
+      <member refid="class_managed_app_sub_set_1a8690438091b176fcab388f2972a9027d" prot="public" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>lastAppID</name></member>
+      <member refid="class_managed_app_sub_set_1a00282c9a59f9a737329bd2125f8ee076" prot="protected" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>lastAppID_</name></member>
+      <member refid="class_managed_app_sub_set_1aaa8cfc64ecfa40e4f25830c74c69976c" prot="protected" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>ManagedAppSubSet</name></member>
+      <member refid="class_managed_app_sub_set_1a87cfe0c32aa58e20a046fd2dde1d3a07" prot="public" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>maxAppLoad</name></member>
+      <member refid="class_managed_app_sub_set_1a5d7414f5bdfeb2863ca7bdb0ed86d5e7" prot="public" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>minAppLoad</name></member>
+      <member refid="class_managed_app_sub_set_1af80a872e1c5f24ec5d62f0d30b2c7a08" prot="public" virt="pure-virtual"><scope>ManagedAppSubSet</scope><name>minimumRequiredApps</name></member>
+      <member refid="class_managed_app_sub_set_1ab0f2357321ca8dd93603f2c501d25d73" prot="public" virt="virtual"><scope>ManagedAppSubSet</scope><name>onBaseAppDeath</name></member>
+      <member refid="class_managed_app_sub_set_1a3c83cb073b01bfc9bc0648996c695413" prot="public" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>recoverBaseApp</name></member>
+      <member refid="class_managed_app_sub_set_1a96ee088daaced5132f9072b0cf9e3510" prot="public" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>removeApp</name></member>
+      <member refid="class_managed_app_sub_set_1a8acf42ee4e643bb1a9642f45dbc50659" prot="private" virt="pure-virtual"><scope>ManagedAppSubSet</scope><name>shutDownOnAppDeath</name></member>
+      <member refid="class_managed_app_sub_set_1a8a4de47d63927e4ee9f78a0e353df49e" prot="public" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>size</name></member>
+      <member refid="class_managed_app_sub_set_1a8f3315f9fc36536f7cdc8e04ad5a9179" prot="protected" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>size_</name></member>
+      <member refid="class_managed_app_sub_set_1a2695b33559aea825ff1b51dff17ee996" prot="private" virt="non-virtual"><scope>ManagedAppSubSet</scope><name>stopBackupsTo</name></member>
+      <member refid="class_managed_app_sub_set_1a97775160bb458064d7b75b0c1eda5a61" prot="public" virt="pure-virtual"><scope>ManagedAppSubSet</scope><name>updateCreateBaseInfo</name></member>
+      <member refid="class_managed_app_sub_set_1a9ed0af78f76e494ef3f793a6d4bc4d57" prot="protected" virt="virtual"><scope>ManagedAppSubSet</scope><name>~ManagedAppSubSet</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

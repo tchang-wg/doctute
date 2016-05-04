@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="mldb_2metadata_8cpp" kind="file" language="C++">
+    <compoundname>metadata.cpp</compoundname>
+    <includes refid="mldb_2metadata_8hpp" local="yes">metadata.hpp</includes>
+    <includes refid="constants_8hpp" local="yes">../constants.hpp</includes>
+    <includes local="yes">cstdmf/debug.hpp</includes>
+    <includes local="no">sys/socket.h</includes>
+    <includes local="no">netinet/in.h</includes>
+    <includes local="no">arpa/inet.h</includes>
+    <includes local="no">netdb.h</includes>
+    <includes local="no">string.h</includes>
+    <incdepgraph>
+      <node id="20618">
+        <label>netinet/in.h</label>
+      </node>
+      <node id="20619">
+        <label>arpa/inet.h</label>
+      </node>
+      <node id="20616">
+        <label>cstdmf/debug.hpp</label>
+      </node>
+      <node id="20613">
+        <label>cstdmf/stdmf.hpp</label>
+      </node>
+      <node id="20608">
+        <label>cstdmf/bw_string.hpp</label>
+      </node>
+      <node id="20620">
+        <label>netdb.h</label>
+      </node>
+      <node id="20621">
+        <label>string.h</label>
+      </node>
+      <node id="20603">
+        <label>tools/message_logger/mldb/metadata.cpp</label>
+        <link refid="mldb/metadata.cpp"/>
+        <childnode refid="20604" relation="include">
+        </childnode>
+        <childnode refid="20614" relation="include">
+        </childnode>
+        <childnode refid="20616" relation="include">
+        </childnode>
+        <childnode refid="20617" relation="include">
+        </childnode>
+        <childnode refid="20618" relation="include">
+        </childnode>
+        <childnode refid="20619" relation="include">
+        </childnode>
+        <childnode refid="20620" relation="include">
+        </childnode>
+        <childnode refid="20621" relation="include">
+        </childnode>
+      </node>
+      <node id="20605">
+        <label>../binary_file_handler.hpp</label>
+        <link refid="binary__file__handler_8hpp_source"/>
+        <childnode refid="20606" relation="include">
+        </childnode>
+        <childnode refid="20609" relation="include">
+        </childnode>
+      </node>
+      <node id="20614">
+        <label>../constants.hpp</label>
+        <link refid="constants_8hpp_source"/>
+        <childnode refid="20615" relation="include">
+        </childnode>
+        <childnode refid="20607" relation="include">
+        </childnode>
+        <childnode refid="20610" relation="include">
+        </childnode>
+      </node>
+      <node id="20611">
+        <label>network/basictypes.hpp</label>
+      </node>
+      <node id="20610">
+        <label>../types.hpp</label>
+        <link refid="tools_2message__logger_2types_8hpp_source"/>
+        <childnode refid="20611" relation="include">
+        </childnode>
+        <childnode refid="20608" relation="include">
+        </childnode>
+        <childnode refid="20612" relation="include">
+        </childnode>
+        <childnode refid="20613" relation="include">
+        </childnode>
+      </node>
+      <node id="20615">
+        <label>network/logger_message_forwarder.hpp</label>
+      </node>
+      <node id="20607">
+        <label>cstdmf/bw_namespace.hpp</label>
+      </node>
+      <node id="20617">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="20606">
+        <label>file_handler.hpp</label>
+        <link refid="file__handler_8hpp_source"/>
+        <childnode refid="20607" relation="include">
+        </childnode>
+        <childnode refid="20608" relation="include">
+        </childnode>
+      </node>
+      <node id="20604">
+        <label>metadata.hpp</label>
+        <link refid="mldb_2metadata_8hpp_source"/>
+        <childnode refid="20605" relation="include">
+        </childnode>
+        <childnode refid="20610" relation="include">
+        </childnode>
+        <childnode refid="20613" relation="include">
+        </childnode>
+      </node>
+      <node id="20612">
+        <label>cstdmf/bw_vector.hpp</label>
+      </node>
+      <node id="20609">
+        <label>network/file_stream.hpp</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="mldb_2metadata_8cpp_1acddbffd5f2f0fc4cfaa4c6719ba5c0c3" prot="public" static="yes" mutable="no">
+        <type>BW_BEGIN_NAMESPACE const char *</type>
+        <definition>BW_BEGIN_NAMESPACE const char* METADATA_FILE</definition>
+        <argsstring></argsstring>
+        <name>METADATA_FILE</name>
+        <initializer>= &quot;metadata&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mldb/metadata.cpp" line="17" column="1" bodyfile="tools/message_logger/mldb/metadata.cpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;metadata.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../constants.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/debug.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/socket.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;netinet/in.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;arpa/inet.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/socket.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;netdb.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>METADATA_FILE<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;metadata&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="class_metadata_m_l_d_b_1a2b4f5c88b5460dffdbe7ecefa2d0dcb6" kindref="member">MetadataMLDB::MetadataMLDB</ref>()</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="class_metadata_m_l_d_b_1ab94f9a90cf0ad24f76786bdfef7406dd" kindref="member">MetadataMLDB::~MetadataMLDB</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;flush();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>MetadataMLDB::init(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pUserLogDir,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pSuffix,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pMode<sp/>)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pUserLogDir<sp/>==<sp/>NULL<sp/>||<sp/>pSuffix<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[<sp/>1024<sp/>];</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;getMetadataFileName(<sp/>pUserLogDir,<sp/>pSuffix,<sp/>buf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<sp/>buf<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_binary_file_handler_1a7bd532fd2f29b7505b34802225c7df94" kindref="member">BinaryFileHandler::init</ref>(<sp/>buf,<sp/>pMode<sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MetadataMLDB::getMetadataFileName(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pUserLogDir,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pSuffix,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>pBuf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="53"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>bw_snprintf(<sp/>pBuf,<sp/>size,<sp/></highlight><highlight class="stringliteral">&quot;%s%c%s.%s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pUserLogDir,<sp/>PATH_SEPARATOR,<sp/>METADATA_FILE,<sp/>pSuffix<sp/>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_metadata_m_l_d_b_1a64e9779f7583c9221094a512797d5bfb" kindref="member">MetadataMLDB::writeMetadataToMLDB</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>metadata<sp/>)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>the<sp/>metadata<sp/>to<sp/>disk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>*pFile_<sp/>&lt;&lt;<sp/>metadata;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!pFile_-&gt;commit())</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CRITICAL_MSG(<sp/></highlight><highlight class="stringliteral">&quot;MetadataMLDB::writeMetadataToMLDB:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Couldn&apos;t<sp/>write<sp/>metadata<sp/>for<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>metadata.c_str()<sp/>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>MetadataMLDB::readFromOffset(<sp/>MessageLogger::MetaDataOffset<sp/>offset,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>BW::string<sp/>&amp;<sp/>result<sp/>)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!pFile_)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ERROR_MSG(<sp/></highlight><highlight class="stringliteral">&quot;MetadataMLDB::readFromOffset:<sp/>No<sp/>file<sp/>stream<sp/>exists\n&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pFile_-&gt;seek(<sp/>offset<sp/>)<sp/>==<sp/>-1)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ERROR_MSG(<sp/></highlight><highlight class="stringliteral">&quot;MetadataMLDB::readFromOffset:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>seek<sp/>to<sp/>meta<sp/>data<sp/>location:<sp/>%s\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pFile_-&gt;strerror()<sp/>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>the<sp/>metadata<sp/>from<sp/>disk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>(*pFile_)<sp/>&gt;&gt;<sp/>result;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment">//<sp/>metadata.cpp</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="tools/message_logger/mldb/metadata.cpp"/>
+  </compounddef>
+</doxygen>

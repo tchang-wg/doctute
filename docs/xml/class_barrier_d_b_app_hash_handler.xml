@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_barrier_d_b_app_hash_handler" kind="class" language="C++" prot="public">
+    <compoundname>BarrierDBAppHashHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ShutdownSafeReplyMessageHandler</basecompoundref>
+    <basecompoundref prot="private" virt="non-virtual">IBarrierDBAppHashHandler</basecompoundref>
+    <includes refid="reply__handlers_8hpp" local="no">reply_handlers.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_barrier_d_b_app_hash_handler_1aced120b3d0a6f696b3149d4bc9a42c2a" prot="private" static="no" mutable="no">
+        <type>const Mercury::Address</type>
+        <definition>const Mercury::Address BarrierDBAppHashHandler::address_</definition>
+        <argsstring></argsstring>
+        <name>address_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="88" column="1" bodyfile="baseappmgr/reply_handlers.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_d_b_app_hash_handler_1ad514f973aee29a834597e6c5f7ee7dfd" prot="private" static="no" mutable="no">
+        <type>const Mercury::ReplyID</type>
+        <definition>const Mercury::ReplyID BarrierDBAppHashHandler::replyID_</definition>
+        <argsstring></argsstring>
+        <name>replyID_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="89" column="1" bodyfile="baseappmgr/reply_handlers.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_barrier_d_b_app_hash_handler_1a79bece75603e3c4f31b503c9bc0ad1b8" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t BarrierDBAppHashHandler::replyCount_</definition>
+        <argsstring></argsstring>
+        <name>replyCount_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="90" column="1" bodyfile="baseappmgr/reply_handlers.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_barrier_d_b_app_hash_handler_1a8f8ce6f118f7cb6c85259e00f455109b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BarrierDBAppHashHandler::BarrierDBAppHashHandler</definition>
+        <argsstring>(const Mercury::Address &amp;address, const Mercury::ReplyID replyID, size_t count)</argsstring>
+        <name>BarrierDBAppHashHandler</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>const Mercury::ReplyID</type>
+          <declname>replyID</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of the process where the reply is sent to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>replyID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the reply </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of processes to send the request to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="75" column="1" bodyfile="baseappmgr/reply_handlers.cpp" bodystart="185" bodyend="193"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_barrier_d_b_app_hash_handler_1a132a2870b3eda9f74892e4dec4962b2e" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BarrierDBAppHashHandler::handleMessage</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data, void *)</argsstring>
+        <name>handleMessage</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles the reply message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="79" column="1" bodyfile="baseappmgr/reply_handlers.cpp" bodystart="199" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_d_b_app_hash_handler_1a16dc11c66ef8089aaada4314df59f880" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BarrierDBAppHashHandler::handleException</definition>
+        <argsstring>(const Mercury::NubException &amp;ne, void *)</argsstring>
+        <name>handleException</name>
+        <param>
+          <type>const Mercury::NubException &amp;</type>
+          <declname>ne</declname>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles an exception to the request. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="83" column="1" bodyfile="baseappmgr/reply_handlers.cpp" bodystart="211" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_d_b_app_hash_handler_1ad82624854b945d974b73354f633b7364" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BarrierDBAppHashHandler::finalise</definition>
+        <argsstring>()</argsstring>
+        <name>finalise</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method finalises and deletes this handler. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="85" column="1" bodyfile="baseappmgr/reply_handlers.cpp" bodystart="221" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="class_barrier_d_b_app_hash_handler_1a0c3d4d1b27cdd8e2381f99f43f3b2a78" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BarrierDBAppHashHandler::decCount</definition>
+        <argsstring>()</argsstring>
+        <name>decCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method decrements the number of outstanding requests. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="86" column="1" bodyfile="baseappmgr/reply_handlers.cpp" bodystart="237" bodyend="245"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to collect replies from all BaseApps and send reply to <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref> when all replies arrive. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="155">
+        <label>IDatabase::IBarrierDBAppHashHandler</label>
+      </node>
+      <node id="153">
+        <label>BarrierDBAppHashHandler</label>
+        <link refid="class_barrier_d_b_app_hash_handler"/>
+        <childnode refid="154" relation="public-inheritance">
+        </childnode>
+        <childnode refid="155" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="154">
+        <label>ShutdownSafeReplyMessageHandler</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="158">
+        <label>IDatabase::IBarrierDBAppHashHandler</label>
+      </node>
+      <node id="156">
+        <label>BarrierDBAppHashHandler</label>
+        <link refid="class_barrier_d_b_app_hash_handler"/>
+        <childnode refid="157" relation="public-inheritance">
+        </childnode>
+        <childnode refid="158" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="157">
+        <label>ShutdownSafeReplyMessageHandler</label>
+      </node>
+    </collaborationgraph>
+    <location file="baseappmgr/reply_handlers.hpp" line="73" column="1" bodyfile="baseappmgr/reply_handlers.hpp" bodystart="71" bodyend="91"/>
+    <listofallmembers>
+      <member refid="class_barrier_d_b_app_hash_handler_1aced120b3d0a6f696b3149d4bc9a42c2a" prot="private" virt="non-virtual"><scope>BarrierDBAppHashHandler</scope><name>address_</name></member>
+      <member refid="class_barrier_d_b_app_hash_handler_1a8f8ce6f118f7cb6c85259e00f455109b" prot="public" virt="non-virtual"><scope>BarrierDBAppHashHandler</scope><name>BarrierDBAppHashHandler</name></member>
+      <member refid="class_barrier_d_b_app_hash_handler_1a0c3d4d1b27cdd8e2381f99f43f3b2a78" prot="private" virt="non-virtual"><scope>BarrierDBAppHashHandler</scope><name>decCount</name></member>
+      <member refid="class_barrier_d_b_app_hash_handler_1ad82624854b945d974b73354f633b7364" prot="private" virt="non-virtual"><scope>BarrierDBAppHashHandler</scope><name>finalise</name></member>
+      <member refid="class_barrier_d_b_app_hash_handler_1a16dc11c66ef8089aaada4314df59f880" prot="private" virt="virtual"><scope>BarrierDBAppHashHandler</scope><name>handleException</name></member>
+      <member refid="class_barrier_d_b_app_hash_handler_1a132a2870b3eda9f74892e4dec4962b2e" prot="private" virt="virtual"><scope>BarrierDBAppHashHandler</scope><name>handleMessage</name></member>
+      <member refid="class_barrier_d_b_app_hash_handler_1a79bece75603e3c4f31b503c9bc0ad1b8" prot="private" virt="non-virtual"><scope>BarrierDBAppHashHandler</scope><name>replyCount_</name></member>
+      <member refid="class_barrier_d_b_app_hash_handler_1ad514f973aee29a834597e6c5f7ee7dfd" prot="private" virt="non-virtual"><scope>BarrierDBAppHashHandler</scope><name>replyID_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

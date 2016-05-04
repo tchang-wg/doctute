@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_secondary_d_b_initer" kind="class" language="C++" prot="public">
+    <compoundname>SecondaryDBIniter</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ShutdownSafeReplyMessageHandler</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_secondary_d_b_initer_1a51afa3591a9b2501a4e6c97648e9f3db" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string SecondaryDBIniter::filename_</definition>
+        <argsstring></argsstring>
+        <name>filename_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp.cpp" line="609" column="1" bodyfile="baseapp/baseapp.cpp" bodystart="609" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_secondary_d_b_initer_1a3c67cbcd0b3a99a2ad3297317539b416" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SecondaryDBIniter::isOkay_</definition>
+        <argsstring></argsstring>
+        <name>isOkay_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp.cpp" line="610" column="1" bodyfile="baseapp/baseapp.cpp" bodystart="610" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_secondary_d_b_initer_1abc87af9f9e20f5e327bbbc92bbd65d8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SecondaryDBIniter::SecondaryDBIniter</definition>
+        <argsstring>()</argsstring>
+        <name>SecondaryDBIniter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp.cpp" line="569" column="1" bodyfile="baseapp/baseapp.cpp" bodystart="569" bodyend="573"/>
+      </memberdef>
+      <memberdef kind="function" id="class_secondary_d_b_initer_1a9c2cdb04ae02786ff02e40cae0d9e59e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SecondaryDBIniter::init</definition>
+        <argsstring>(Mercury::NetworkInterface &amp;interface, Mercury::UDPChannel &amp;channel)</argsstring>
+        <name>init</name>
+        <param>
+          <type>Mercury::NetworkInterface &amp;</type>
+          <declname>interface</declname>
+        </param>
+        <param>
+          <type>Mercury::UDPChannel &amp;</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method queries <ref refid="class_d_b_app" kindref="compound">DBApp</ref> for secondary db details using a blocking request. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp.cpp" line="579" column="1" bodyfile="baseapp/baseapp.cpp" bodystart="579" bodyend="590"/>
+      </memberdef>
+      <memberdef kind="function" id="class_secondary_d_b_initer_1a9547f9518d141008f9ef051c742d48d8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const BW::string &amp;</type>
+        <definition>const BW::string&amp; SecondaryDBIniter::filename</definition>
+        <argsstring>() const </argsstring>
+        <name>filename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp.cpp" line="592" column="1" bodyfile="baseapp/baseapp.cpp" bodystart="592" bodyend="592"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_secondary_d_b_initer_1a8c1e96dd3579088374915b6bc00c13e4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SecondaryDBIniter::handleMessage</definition>
+        <argsstring>(const Mercury::Address &amp;src, Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data, void *arg)</argsstring>
+        <name>handleMessage</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp.cpp" line="595" column="1" bodyfile="baseapp/baseapp.cpp" bodystart="595" bodyend="600"/>
+      </memberdef>
+      <memberdef kind="function" id="class_secondary_d_b_initer_1a210e255e97f691aba66728ab1b11a5e1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SecondaryDBIniter::handleException</definition>
+        <argsstring>(const Mercury::NubException &amp;exception, void *arg)</argsstring>
+        <name>handleException</name>
+        <param>
+          <type>const Mercury::NubException &amp;</type>
+          <declname>exception</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/baseapp.cpp" line="602" column="1" bodyfile="baseapp/baseapp.cpp" bodystart="602" bodyend="607"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to get the initialisation data required to create the secondary database. The primary database is queried for this information in a blocking manner. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2567">
+        <label>SecondaryDBIniter</label>
+        <link refid="class_secondary_d_b_initer"/>
+        <childnode refid="2568" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2568">
+        <label>ShutdownSafeReplyMessageHandler</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2569">
+        <label>SecondaryDBIniter</label>
+        <link refid="class_secondary_d_b_initer"/>
+        <childnode refid="2570" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2570">
+        <label>ShutdownSafeReplyMessageHandler</label>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/baseapp.cpp" line="567" column="1" bodyfile="baseapp/baseapp.cpp" bodystart="566" bodyend="611"/>
+    <listofallmembers>
+      <member refid="class_secondary_d_b_initer_1a9547f9518d141008f9ef051c742d48d8" prot="public" virt="non-virtual"><scope>SecondaryDBIniter</scope><name>filename</name></member>
+      <member refid="class_secondary_d_b_initer_1a51afa3591a9b2501a4e6c97648e9f3db" prot="private" virt="non-virtual"><scope>SecondaryDBIniter</scope><name>filename_</name></member>
+      <member refid="class_secondary_d_b_initer_1a210e255e97f691aba66728ab1b11a5e1" prot="private" virt="non-virtual"><scope>SecondaryDBIniter</scope><name>handleException</name></member>
+      <member refid="class_secondary_d_b_initer_1a8c1e96dd3579088374915b6bc00c13e4" prot="private" virt="non-virtual"><scope>SecondaryDBIniter</scope><name>handleMessage</name></member>
+      <member refid="class_secondary_d_b_initer_1a9c2cdb04ae02786ff02e40cae0d9e59e" prot="public" virt="non-virtual"><scope>SecondaryDBIniter</scope><name>init</name></member>
+      <member refid="class_secondary_d_b_initer_1a3c67cbcd0b3a99a2ad3297317539b416" prot="private" virt="non-virtual"><scope>SecondaryDBIniter</scope><name>isOkay_</name></member>
+      <member refid="class_secondary_d_b_initer_1abc87af9f9e20f5e327bbbc92bbd65d8e" prot="public" virt="non-virtual"><scope>SecondaryDBIniter</scope><name>SecondaryDBIniter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

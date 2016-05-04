@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_spa_pipeline" kind="class" language="C++" prot="public">
+    <compoundname>SpaPipeline</compoundname>
+    <basecompoundref refid="class_http_pipeline" prot="public" virt="non-virtual">HttpPipeline</basecompoundref>
+    <includes refid="spa__pipeline_8hpp" local="no">spa_pipeline.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spa_pipeline_1a60e5f1eda839aaaf7aa2729bb07c47dc" prot="private" static="no" mutable="no">
+        <type><ref refid="class_spa_request_pool" kindref="compound">SpaRequestPool</ref> &amp;</type>
+        <definition>SpaRequestPool&amp; SpaPipeline::requestPool_</definition>
+        <argsstring></argsstring>
+        <name>requestPool_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_pipeline.hpp" line="28" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_pipeline.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spa_pipeline_1a7dbb9add8c0cbe127b6807331d75782f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE SpaPipeline::SpaPipeline</definition>
+        <argsstring>(SpaRequestPool &amp;pool)</argsstring>
+        <name>SpaPipeline</name>
+        <param>
+          <type><ref refid="class_spa_request_pool" kindref="compound">SpaRequestPool</ref> &amp;</type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_pipeline.hpp" line="20" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_pipeline.cpp" bodystart="11" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spa_pipeline_1ab9e8e2d848f6c08c6dd14d0c07394343" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>SpaPipeline::~SpaPipeline</definition>
+        <argsstring>()</argsstring>
+        <name>~SpaPipeline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_pipeline.hpp" line="21" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_pipeline.cpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spa_pipeline_1a5cbdb938cd29003ae010de7c4b586ec8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SpaPipeline::onConnectionFailure</definition>
+        <argsstring>(const HttpRequestBatch &amp;succeeded, const HttpRequestBatch &amp;failed)</argsstring>
+        <name>onConnectionFailure</name>
+        <reimplements refid="class_http_pipeline_1a723fc3e7432b536bd679bc02c830f1a4">onConnectionFailure</reimplements>
+        <param>
+          <type>const HttpRequestBatch &amp;</type>
+          <declname>succeeded</declname>
+        </param>
+        <param>
+          <type>const HttpRequestBatch &amp;</type>
+          <declname>failed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This abstract callback method is invoked on a pipeline error before entering failed state.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>succeeded</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A colection of pointers to all the successfully processed requests from the batch.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>failed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A collection of pointers to all the requests that were enqueued, but could not be processed due to pipeline failure. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_pipeline.hpp" line="23" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_pipeline.cpp" bodystart="30" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spa_pipeline_1a31e99449a683b02270ab44da7cf86343" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SpaPipeline::onBatchSuccess</definition>
+        <argsstring>(const HttpRequestBatch &amp;succeeded)</argsstring>
+        <name>onBatchSuccess</name>
+        <reimplements refid="class_http_pipeline_1a718ead8b514143486e2108869500cc0b">onBatchSuccess</reimplements>
+        <param>
+          <type>const HttpRequestBatch &amp;</type>
+          <declname>succeeded</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This abstract callback method is invoked on a successful completion of request batch processing.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>succeeded</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A collection of pointers to all the processed requests. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/spa_pipeline.hpp" line="25" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_pipeline.cpp" bodystart="60" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements a <ref refid="class_http_pipeline" kindref="compound">HttpPipeline</ref> which gets it&apos;s Endpoint from an aggregating <ref refid="class_spa_request_pool" kindref="compound">SpaRequestPool</ref> and forwards all its notifications here. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2808">
+        <label>Mercury::InputNotificationHandler</label>
+      </node>
+      <node id="2807">
+        <label>TcpConnection</label>
+        <link refid="class_tcp_connection"/>
+        <childnode refid="2808" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2809" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2809">
+        <label>TimerHandler</label>
+      </node>
+      <node id="2805">
+        <label>SpaPipeline</label>
+        <link refid="class_spa_pipeline"/>
+        <childnode refid="2806" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2806">
+        <label>HttpPipeline</label>
+        <link refid="class_http_pipeline"/>
+        <childnode refid="2807" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2813">
+        <label>Mercury::InputNotificationHandler</label>
+      </node>
+      <node id="2812">
+        <label>TcpConnection</label>
+        <link refid="class_tcp_connection"/>
+        <childnode refid="2813" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2814" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2814">
+        <label>TimerHandler</label>
+      </node>
+      <node id="2810">
+        <label>SpaPipeline</label>
+        <link refid="class_spa_pipeline"/>
+        <childnode refid="2811" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2811">
+        <label>HttpPipeline</label>
+        <link refid="class_http_pipeline"/>
+        <childnode refid="2812" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="dbapp_extensions/wgbilling_spa/spa_pipeline.hpp" line="18" column="1" bodyfile="dbapp_extensions/wgbilling_spa/spa_pipeline.hpp" bodystart="17" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_http_pipeline_1a38d8fb10f1afa46c003c72e6651c7051" prot="public" virt="non-virtual"><scope>SpaPipeline</scope><name>fail</name></member>
+      <member refid="class_http_pipeline_1aea919a94137bbaaf6ac43716a53ba70d" prot="public" virt="non-virtual"><scope>SpaPipeline</scope><name>HttpPipeline</name></member>
+      <member refid="class_http_pipeline_1a56dc7c97cf3b2be0ae7b5bab7c0ff23e" prot="public" virt="non-virtual"><scope>SpaPipeline</scope><name>isProcessing</name></member>
+      <member refid="class_spa_pipeline_1a31e99449a683b02270ab44da7cf86343" prot="public" virt="virtual"><scope>SpaPipeline</scope><name>onBatchSuccess</name></member>
+      <member refid="class_spa_pipeline_1a5cbdb938cd29003ae010de7c4b586ec8" prot="public" virt="virtual"><scope>SpaPipeline</scope><name>onConnectionFailure</name></member>
+      <member refid="class_http_pipeline_1a5140097dcf4e7442ee32ef1886449614" prot="public" virt="non-virtual"><scope>SpaPipeline</scope><name>processRequests</name></member>
+      <member refid="class_spa_pipeline_1a60e5f1eda839aaaf7aa2729bb07c47dc" prot="private" virt="non-virtual"><scope>SpaPipeline</scope><name>requestPool_</name></member>
+      <member refid="class_spa_pipeline_1a7dbb9add8c0cbe127b6807331d75782f" prot="public" virt="non-virtual"><scope>SpaPipeline</scope><name>SpaPipeline</name></member>
+      <member refid="class_http_pipeline_1ab4ccbb7ac5f03014d085f958c6085b03" prot="public" virt="virtual"><scope>SpaPipeline</scope><name>~HttpPipeline</name></member>
+      <member refid="class_spa_pipeline_1ab9e8e2d848f6c08c6dd14d0c07394343" prot="public" virt="virtual"><scope>SpaPipeline</scope><name>~SpaPipeline</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

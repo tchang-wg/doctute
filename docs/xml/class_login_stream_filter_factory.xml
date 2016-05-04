@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_login_stream_filter_factory" kind="class" language="C++" prot="public">
+    <compoundname>LoginStreamFilterFactory</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">StreamFilterFactory</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">WebSocketHandshakeHandler</basecompoundref>
+    <includes refid="login__stream__filter__factory_8hpp" local="no">login_stream_filter_factory.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_login_stream_filter_factory_1af0ceef3f077589ec0ced7a664962d13b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>LoginStreamFilterFactory::LoginStreamFilterFactory</definition>
+        <argsstring>()</argsstring>
+        <name>LoginStreamFilterFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/login_stream_filter_factory.hpp" line="25" column="1" bodyfile="loginapp/login_stream_filter_factory.hpp" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_stream_filter_factory_1a35aafbcb2e75a40c2e7d153ba7b68a93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual LoginStreamFilterFactory::~LoginStreamFilterFactory</definition>
+        <argsstring>()</argsstring>
+        <name>~LoginStreamFilterFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/login_stream_filter_factory.hpp" line="33" column="1" bodyfile="loginapp/login_stream_filter_factory.hpp" bodystart="33" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_stream_filter_factory_1ad6b409a8850ee9ccbec4becc0b4216eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>Mercury::StreamFilterPtr</type>
+        <definition>virtual Mercury::StreamFilterPtr LoginStreamFilterFactory::createFor</definition>
+        <argsstring>(Mercury::TCPChannel &amp;channel)</argsstring>
+        <name>createFor</name>
+        <param>
+          <type>Mercury::TCPChannel &amp;</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/login_stream_filter_factory.hpp" line="38" column="1" bodyfile="loginapp/login_stream_filter_factory.hpp" bodystart="38" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_stream_filter_factory_1af20e01feca890056dd3e2eafa4accd87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool LoginStreamFilterFactory::shouldAcceptHandshake</definition>
+        <argsstring>(const Mercury::WebSocketStreamFilter &amp;filter, const Mercury::HTTPRequest &amp;request, Subprotocols &amp;subprotocols)</argsstring>
+        <name>shouldAcceptHandshake</name>
+        <param>
+          <type>const Mercury::WebSocketStreamFilter &amp;</type>
+          <declname>filter</declname>
+        </param>
+        <param>
+          <type>const Mercury::HTTPRequest &amp;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>Subprotocols &amp;</type>
+          <declname>subprotocols</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loginapp/login_stream_filter_factory.hpp" line="48" column="1" bodyfile="loginapp/login_stream_filter_factory.hpp" bodystart="48" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is the filter factory for TCP channels created on the <ref refid="class_login_app" kindref="compound">LoginApp</ref>, when WebSockets is enabled. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1750">
+        <label>WebSocketHandshakeHandler</label>
+      </node>
+      <node id="1749">
+        <label>StreamFilterFactory</label>
+      </node>
+      <node id="1748">
+        <label>LoginStreamFilterFactory</label>
+        <link refid="class_login_stream_filter_factory"/>
+        <childnode refid="1749" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1750" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1753">
+        <label>WebSocketHandshakeHandler</label>
+      </node>
+      <node id="1752">
+        <label>StreamFilterFactory</label>
+      </node>
+      <node id="1751">
+        <label>LoginStreamFilterFactory</label>
+        <link refid="class_login_stream_filter_factory"/>
+        <childnode refid="1752" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1753" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="loginapp/login_stream_filter_factory.hpp" line="19" column="1" bodyfile="loginapp/login_stream_filter_factory.hpp" bodystart="17" bodyend="59"/>
+    <listofallmembers>
+      <member refid="class_login_stream_filter_factory_1ad6b409a8850ee9ccbec4becc0b4216eb" prot="public" virt="virtual"><scope>LoginStreamFilterFactory</scope><name>createFor</name></member>
+      <member refid="class_login_stream_filter_factory_1af0ceef3f077589ec0ced7a664962d13b" prot="public" virt="non-virtual"><scope>LoginStreamFilterFactory</scope><name>LoginStreamFilterFactory</name></member>
+      <member refid="class_login_stream_filter_factory_1af20e01feca890056dd3e2eafa4accd87" prot="public" virt="virtual"><scope>LoginStreamFilterFactory</scope><name>shouldAcceptHandshake</name></member>
+      <member refid="class_login_stream_filter_factory_1a35aafbcb2e75a40c2e7d153ba7b68a93" prot="public" virt="virtual"><scope>LoginStreamFilterFactory</scope><name>~LoginStreamFilterFactory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

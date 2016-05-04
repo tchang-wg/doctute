@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_ao_i_cleaner" kind="class" language="C++" prot="public">
+    <compoundname>AoICleaner</compoundname>
+    <basecompoundref refid="class_entity_cache_mutator" prot="public" virt="non-virtual">EntityCacheMutator</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_ao_i_cleaner_1a0d3a5f0101684e7755afe1a90ed6f188" prot="public" static="no" mutable="no">
+        <type><ref refid="class_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity&amp; AoICleaner::rOwner_</definition>
+        <argsstring></argsstring>
+        <name>rOwner_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.cpp" line="1776" column="1" bodyfile="cellapp/witness.cpp" bodystart="1776" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ao_i_cleaner_1a3e6c89c8f8c338ca3347e2920a40136b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AoICleaner::AoICleaner</definition>
+        <argsstring>(Entity &amp;rOwner)</argsstring>
+        <name>AoICleaner</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>rOwner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.cpp" line="1746" column="1" bodyfile="cellapp/witness.cpp" bodystart="1746" bodyend="1746"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ao_i_cleaner_1a67070cd60b302ed9b4b3b16eae3603eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void AoICleaner::mutate</definition>
+        <argsstring>(EntityCache &amp;cache)</argsstring>
+        <name>mutate</name>
+        <reimplements refid="class_entity_cache_mutator_1af624620b457532b13f300f713593aa9b">mutate</reimplements>
+        <param>
+          <type><ref refid="class_entity_cache" kindref="compound">EntityCache</ref> &amp;</type>
+          <declname>cache</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/witness.cpp" line="1748" column="1" bodyfile="cellapp/witness.cpp" bodystart="1748" bodyend="1774"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to trigger callbacks and clean up after entities which were in AoI when the <ref refid="class_ao_i_preparer" kindref="compound">AoIPreparer</ref> was run, but are no longer in AoI under the newly-inserted <ref refid="class_ao_i_trigger" kindref="compound">AoITrigger</ref>. This is exactly how Witness::init handles onloading entities which no longer fall into our AoI. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="93">
+        <label>AoICleaner</label>
+        <link refid="class_ao_i_cleaner"/>
+        <childnode refid="94" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="94">
+        <label>EntityCacheMutator</label>
+        <link refid="class_entity_cache_mutator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="95">
+        <label>AoICleaner</label>
+        <link refid="class_ao_i_cleaner"/>
+        <childnode refid="96" relation="public-inheritance">
+        </childnode>
+        <childnode refid="97" relation="usage">
+          <edgelabel>rOwner_</edgelabel>
+        </childnode>
+      </node>
+      <node id="99">
+        <label>PyObjectPlus</label>
+      </node>
+      <node id="97">
+        <label>Entity</label>
+        <link refid="class_entity"/>
+        <childnode refid="98" relation="public-inheritance">
+        </childnode>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="98">
+        <label>BWEntity</label>
+      </node>
+      <node id="96">
+        <label>EntityCacheMutator</label>
+        <link refid="class_entity_cache_mutator"/>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/witness.cpp" line="1744" column="1" bodyfile="cellapp/witness.cpp" bodystart="1743" bodyend="1777"/>
+    <listofallmembers>
+      <member refid="class_ao_i_cleaner_1a3e6c89c8f8c338ca3347e2920a40136b" prot="public" virt="non-virtual"><scope>AoICleaner</scope><name>AoICleaner</name></member>
+      <member refid="class_ao_i_cleaner_1a67070cd60b302ed9b4b3b16eae3603eb" prot="public" virt="virtual"><scope>AoICleaner</scope><name>mutate</name></member>
+      <member refid="class_ao_i_cleaner_1a0d3a5f0101684e7755afe1a90ed6f188" prot="public" virt="non-virtual"><scope>AoICleaner</scope><name>rOwner_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

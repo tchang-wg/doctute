@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_mail_box_remapper_wrapper" kind="class" language="C++" prot="public">
+    <compoundname>MailBoxRemapperWrapper</compoundname>
+    <basecompoundref prot="private" virt="non-virtual">IGetEntityHandler</basecompoundref>
+    <includes refid="mail__box__remapper__wrapper_8hpp" local="no">mail_box_remapper_wrapper.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mail_box_remapper_wrapper_1a59e554176ed2b6bb6d19e63a0e2722f3" prot="private" static="no" mutable="no">
+        <type><ref refid="class_d_b_app" kindref="compound">DBApp</ref> &amp;</type>
+        <definition>DBApp&amp; MailBoxRemapperWrapper::dbApp_</definition>
+        <argsstring></argsstring>
+        <name>dbApp_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/mail_box_remapper_wrapper.hpp" line="58" column="1" bodyfile="dbapp/mail_box_remapper_wrapper.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mail_box_remapper_wrapper_1a4ec16cfdd3f43a5ba2ad455f2b9dfc81" prot="private" static="no" mutable="no">
+        <type>IDatabase::IGetEntityHandler &amp;</type>
+        <definition>IDatabase::IGetEntityHandler&amp; MailBoxRemapperWrapper::child_</definition>
+        <argsstring></argsstring>
+        <name>child_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/mail_box_remapper_wrapper.hpp" line="59" column="1" bodyfile="dbapp/mail_box_remapper_wrapper.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_mail_box_remapper_wrapper_1a15acef89d66b114cd6fd877ae35b15bc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IDatabase::IGetEntityHandler &amp;</type>
+        <definition>static IDatabase::IGetEntityHandler&amp; MailBoxRemapperWrapper::wrap</definition>
+        <argsstring>(DBApp &amp;dbApp, IDatabase::IGetEntityHandler &amp;child)</argsstring>
+        <name>wrap</name>
+        <param>
+          <type><ref refid="class_d_b_app" kindref="compound">DBApp</ref> &amp;</type>
+          <declname>dbApp</declname>
+        </param>
+        <param>
+          <type>IDatabase::IGetEntityHandler &amp;</type>
+          <declname>child</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Static method to return a new IGetEntityHandler that wraps the given instance.</para><para>The returned handler manages its own memory, but the calling code is still responsible for the wrapped child handler.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dbApp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_d_b_app" kindref="compound">DBApp</ref> instance. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>child</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The child handler to be wrapped. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/mail_box_remapper_wrapper.hpp" line="29" column="1" bodyfile="dbapp/mail_box_remapper_wrapper.hpp" bodystart="29" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_mail_box_remapper_wrapper_1aabf4935bad04db220f43549ef222e2f9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MailBoxRemapperWrapper::MailBoxRemapperWrapper</definition>
+        <argsstring>(DBApp &amp;dbApp, IDatabase::IGetEntityHandler &amp;child)</argsstring>
+        <name>MailBoxRemapperWrapper</name>
+        <param>
+          <type><ref refid="class_d_b_app" kindref="compound">DBApp</ref> &amp;</type>
+          <declname>dbApp</declname>
+        </param>
+        <param>
+          <type>IDatabase::IGetEntityHandler &amp;</type>
+          <declname>child</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dBApp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_d_b_app" kindref="compound">DBApp</ref> instance. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>child</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The child handler to be wrapped. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/mail_box_remapper_wrapper.hpp" line="45" column="1" bodyfile="dbapp/mail_box_remapper_wrapper.hpp" bodystart="45" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mail_box_remapper_wrapper_1a753e6f2fe4ba73623ce90b4a6d3a8884" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>BW_BEGIN_NAMESPACE void MailBoxRemapperWrapper::onGetEntityComplete</definition>
+        <argsstring>(const DatabaseOperationResult &amp;result, const EntityDBKey &amp;entityKey, const EntityMailBoxRef *pBaseEntityLocation, bool shouldAutoLoad, GameTime gameTime)</argsstring>
+        <name>onGetEntityComplete</name>
+        <param>
+          <type>const DatabaseOperationResult &amp;</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>const EntityDBKey &amp;</type>
+          <declname>entityKey</declname>
+        </param>
+        <param>
+          <type>const EntityMailBoxRef *</type>
+          <declname>pBaseEntityLocation</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>shouldAutoLoad</declname>
+        </param>
+        <param>
+          <type>GameTime</type>
+          <declname>gameTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/mail_box_remapper_wrapper.hpp" line="53" column="1" bodyfile="dbapp/mail_box_remapper_wrapper.cpp" bodystart="13" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class wraps a child handler, so that we can muck around with the results before passing them on. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1837">
+        <label>IGetEntityHandler</label>
+      </node>
+      <node id="1836">
+        <label>MailBoxRemapperWrapper</label>
+        <link refid="class_mail_box_remapper_wrapper"/>
+        <childnode refid="1837" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1839">
+        <label>IGetEntityHandler</label>
+      </node>
+      <node id="1838">
+        <label>MailBoxRemapperWrapper</label>
+        <link refid="class_mail_box_remapper_wrapper"/>
+        <childnode refid="1839" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="dbapp/mail_box_remapper_wrapper.hpp" line="17" column="1" bodyfile="dbapp/mail_box_remapper_wrapper.hpp" bodystart="16" bodyend="60"/>
+    <listofallmembers>
+      <member refid="class_mail_box_remapper_wrapper_1a4ec16cfdd3f43a5ba2ad455f2b9dfc81" prot="private" virt="non-virtual"><scope>MailBoxRemapperWrapper</scope><name>child_</name></member>
+      <member refid="class_mail_box_remapper_wrapper_1a59e554176ed2b6bb6d19e63a0e2722f3" prot="private" virt="non-virtual"><scope>MailBoxRemapperWrapper</scope><name>dbApp_</name></member>
+      <member refid="class_mail_box_remapper_wrapper_1aabf4935bad04db220f43549ef222e2f9" prot="private" virt="non-virtual"><scope>MailBoxRemapperWrapper</scope><name>MailBoxRemapperWrapper</name></member>
+      <member refid="class_mail_box_remapper_wrapper_1a753e6f2fe4ba73623ce90b4a6d3a8884" prot="private" virt="non-virtual"><scope>MailBoxRemapperWrapper</scope><name>onGetEntityComplete</name></member>
+      <member refid="class_mail_box_remapper_wrapper_1a15acef89d66b114cd6fd877ae35b15bc" prot="public" virt="non-virtual"><scope>MailBoxRemapperWrapper</scope><name>wrap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

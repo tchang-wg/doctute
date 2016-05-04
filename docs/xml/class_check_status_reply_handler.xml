@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_check_status_reply_handler" kind="class" language="C++" prot="public">
+    <compoundname>CheckStatusReplyHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ShutdownSafeReplyMessageHandler</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">ForwardingReplyHandler</basecompoundref>
+    <includes refid="reply__handlers_8hpp" local="no">reply_handlers.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_check_status_reply_handler_1a74c9d3a38e388b9f491cb557b593c225" prot="private" static="no" mutable="no">
+        <type><ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref> &amp;</type>
+        <definition>DBAppMgr&amp; CheckStatusReplyHandler::dbAppMgr_</definition>
+        <argsstring></argsstring>
+        <name>dbAppMgr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/dbappmgr.cpp" line="3151" column="1" bodyfile="dbappmgr/dbappmgr.cpp" bodystart="3151" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_check_status_reply_handler_1ab454eed7ec350655a83f7c3697a716be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CheckStatusReplyHandler::CheckStatusReplyHandler</definition>
+        <argsstring>(const Mercury::Address &amp;srcAddr, Mercury::ReplyID replyID)</argsstring>
+        <name>CheckStatusReplyHandler</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>srcAddr</declname>
+        </param>
+        <param>
+          <type>Mercury::ReplyID</type>
+          <declname>replyID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="128" column="1" bodyfile="baseappmgr/reply_handlers.cpp" bodystart="373" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="class_check_status_reply_handler_1aaefff6481371bd5dd2a3293e71fbcada" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CheckStatusReplyHandler::prependData</definition>
+        <argsstring>(BinaryIStream &amp;inStream, BinaryOStream &amp;outStream)</argsstring>
+        <name>prependData</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>inStream</declname>
+        </param>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>outStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override from ForwardingReplyHandler. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="132" column="1" bodyfile="baseappmgr/reply_handlers.cpp" bodystart="385" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="class_check_status_reply_handler_1a6ffbd7cab785a4e4ae5ae69d8502e7d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CheckStatusReplyHandler::appendErrorData</definition>
+        <argsstring>(BinaryOStream &amp;outStream)</argsstring>
+        <name>appendErrorData</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>outStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override from ForwardingReplyHandler. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseappmgr/reply_handlers.hpp" line="136" column="1" bodyfile="baseappmgr/reply_handlers.cpp" bodystart="400" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="class_check_status_reply_handler_1a29b8e920eb4730793f7cb83d8ae228f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CheckStatusReplyHandler::CheckStatusReplyHandler</definition>
+        <argsstring>(DBAppMgr &amp;dbAppMgr)</argsstring>
+        <name>CheckStatusReplyHandler</name>
+        <param>
+          <type><ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref> &amp;</type>
+          <declname>dbAppMgr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dbAppMgr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object that will destream the status result. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/dbappmgr.cpp" line="3117" column="1" bodyfile="dbappmgr/dbappmgr.cpp" bodystart="3117" bodyend="3119"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_check_status_reply_handler_1ae89743a7b4ed2125ad3eba0ebc95ade8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CheckStatusReplyHandler::handleMessage</definition>
+        <argsstring>(const Mercury::Address &amp;, Mercury::UnpackedMessageHeader &amp;, BinaryIStream &amp;data, void *)</argsstring>
+        <name>handleMessage</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle status check reply.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>srcAddr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ignored. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ignored. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stream containing the reply. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ignored. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/dbappmgr.cpp" line="3131" column="1" bodyfile="dbappmgr/dbappmgr.cpp" bodystart="3131" bodyend="3137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_check_status_reply_handler_1ad1f669bd3ae3368d93c6d1c843ad24c0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CheckStatusReplyHandler::handleException</definition>
+        <argsstring>(const Mercury::NubException &amp;, void *)</argsstring>
+        <name>handleException</name>
+        <param>
+          <type>const Mercury::NubException &amp;</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle exception which preventing a reply from being recieved.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ne</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ignored. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ignored. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbappmgr/dbappmgr.cpp" line="3145" column="1" bodyfile="dbappmgr/dbappmgr.cpp" bodystart="3145" bodyend="3149"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to handle replies from the <ref refid="class_cell_app_mgr" kindref="compound">CellAppMgr</ref> to the checkStatus request.</para><para>This method handles the checkStatus request&apos;s reply. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="614">
+        <label>CheckStatusReplyHandler</label>
+        <link refid="class_check_status_reply_handler"/>
+        <childnode refid="615" relation="public-inheritance">
+        </childnode>
+        <childnode refid="616" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="616">
+        <label>ForwardingReplyHandler</label>
+      </node>
+      <node id="615">
+        <label>ShutdownSafeReplyMessageHandler</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="617">
+        <label>CheckStatusReplyHandler</label>
+        <link refid="class_check_status_reply_handler"/>
+        <childnode refid="618" relation="public-inheritance">
+        </childnode>
+        <childnode refid="619" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="619">
+        <label>ForwardingReplyHandler</label>
+      </node>
+      <node id="618">
+        <label>ShutdownSafeReplyMessageHandler</label>
+      </node>
+    </collaborationgraph>
+    <location file="baseappmgr/reply_handlers.hpp" line="126" column="1" bodyfile="baseappmgr/reply_handlers.hpp" bodystart="125" bodyend="137"/>
+    <listofallmembers>
+      <member refid="class_check_status_reply_handler_1a6ffbd7cab785a4e4ae5ae69d8502e7d0" prot="public" virt="non-virtual"><scope>CheckStatusReplyHandler</scope><name>appendErrorData</name></member>
+      <member refid="class_check_status_reply_handler_1ab454eed7ec350655a83f7c3697a716be" prot="public" virt="non-virtual"><scope>CheckStatusReplyHandler</scope><name>CheckStatusReplyHandler</name></member>
+      <member refid="class_check_status_reply_handler_1a29b8e920eb4730793f7cb83d8ae228f7" prot="public" virt="non-virtual"><scope>CheckStatusReplyHandler</scope><name>CheckStatusReplyHandler</name></member>
+      <member refid="class_check_status_reply_handler_1a74c9d3a38e388b9f491cb557b593c225" prot="private" virt="non-virtual"><scope>CheckStatusReplyHandler</scope><name>dbAppMgr_</name></member>
+      <member refid="class_check_status_reply_handler_1ad1f669bd3ae3368d93c6d1c843ad24c0" prot="private" virt="virtual"><scope>CheckStatusReplyHandler</scope><name>handleException</name></member>
+      <member refid="class_check_status_reply_handler_1ae89743a7b4ed2125ad3eba0ebc95ade8" prot="private" virt="virtual"><scope>CheckStatusReplyHandler</scope><name>handleMessage</name></member>
+      <member refid="class_check_status_reply_handler_1aaefff6481371bd5dd2a3293e71fbcada" prot="public" virt="non-virtual"><scope>CheckStatusReplyHandler</scope><name>prependData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,940 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_controller" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Controller</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ReferenceCount</basecompoundref>
+    <derivedcompoundref refid="class_base_acceleration_controller" prot="public" virt="non-virtual">BaseAccelerationController</derivedcompoundref>
+    <derivedcompoundref refid="class_face_entity_controller" prot="public" virt="non-virtual">FaceEntityController</derivedcompoundref>
+    <derivedcompoundref refid="class_move_controller" prot="public" virt="non-virtual">MoveController</derivedcompoundref>
+    <derivedcompoundref refid="class_navigation_controller" prot="public" virt="non-virtual">NavigationController</derivedcompoundref>
+    <derivedcompoundref refid="class_passenger_controller" prot="public" virt="non-virtual">PassengerController</derivedcompoundref>
+    <derivedcompoundref refid="class_portal_config_controller" prot="public" virt="non-virtual">PortalConfigController</derivedcompoundref>
+    <derivedcompoundref refid="class_proximity_controller" prot="public" virt="non-virtual">ProximityController</derivedcompoundref>
+    <derivedcompoundref refid="class_timer_controller" prot="public" virt="non-virtual">TimerController</derivedcompoundref>
+    <derivedcompoundref refid="class_visibility_controller" prot="public" virt="non-virtual">VisibilityController</derivedcompoundref>
+    <derivedcompoundref refid="class_vision_controller" prot="public" virt="non-virtual">VisionController</derivedcompoundref>
+    <derivedcompoundref refid="class_yaw_rotator_controller" prot="public" virt="non-virtual">YawRotatorController</derivedcompoundref>
+    <includes refid="controller_8hpp" local="no">controller.hpp</includes>
+    <innerclass refid="struct_controller_1_1_controller_type_info" prot="public">Controller::ControllerTypeInfo</innerclass>
+    <innerclass refid="struct_controller_1_1_factory_fn_ret" prot="public">Controller::FactoryFnRet</innerclass>
+    <innerclass refid="class_controller_1_1_type_registerer" prot="public">Controller::TypeRegisterer</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_controller_1a3a96f5d838427d0b251f1cf5792350db" prot="public" static="no">
+        <type><ref refid="class_controller" kindref="compound">Controller</ref> *(*</type>
+        <definition>typedef Controller*(* Controller::CreatorFn) ()</definition>
+        <argsstring>)()</argsstring>
+        <name>CreatorFn</name>
+        <briefdescription>
+<para><ref refid="class_controller" kindref="compound">Controller</ref> creator function prototype. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="115" column="1" bodyfile="cellapp/controller.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_controller_1a8c83b29edd91cff97310b85fd2dd62a9" prot="public" static="no">
+        <type><ref refid="struct_controller_1_1_factory_fn_ret" kindref="compound">FactoryFnRet</ref>(*</type>
+        <definition>typedef FactoryFnRet(* Controller::FactoryFn) (PyObject *args, PyObject *kwargs)</definition>
+        <argsstring>)(PyObject *args, PyObject *kwargs)</argsstring>
+        <name>FactoryFn</name>
+        <briefdescription>
+<para>Python factory function prototype. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="129" column="1" bodyfile="cellapp/controller.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_controller_1a383462e8f3b91166913ec7336b8e2a38" prot="private" static="no">
+        <type>BW::vector&lt; <ref refid="struct_controller_1_1_controller_type_info" kindref="compound">ControllerTypeInfo</ref> &gt;</type>
+        <definition>typedef BW::vector&lt; ControllerTypeInfo &gt; Controller::ControllerTypeRegistry</definition>
+        <argsstring></argsstring>
+        <name>ControllerTypeRegistry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="170" column="1" bodyfile="cellapp/controller.hpp" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_controller_1a30b2745a2b74633dac7bba027bfe5eda" prot="public" static="yes" mutable="no">
+        <type>const ControllerID</type>
+        <definition>const ControllerID Controller::EXCLUSIVE_CONTROLLER_ID_MASK</definition>
+        <argsstring></argsstring>
+        <name>EXCLUSIVE_CONTROLLER_ID_MASK</name>
+        <initializer>= 0x7fff</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="44" column="1" bodyfile="cellapp/controller.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_controller_1a27d88cafe564f8c3e97477f82b392b74" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_entity" kindref="compound">Entity</ref> *</type>
+        <definition>Entity * Controller::s_factoryFnEntity_</definition>
+        <argsstring></argsstring>
+        <name>s_factoryFnEntity_</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para><ref refid="class_entity" kindref="compound">Entity</ref> that factory fn is being called for. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="166" column="1" bodyfile="cellapp/controller.hpp" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_controller_1a542eb704acd266fecdfd8d85d0d7baeb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Controllers</definition>
+        <argsstring></argsstring>
+        <name>Controllers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="94" column="1" bodyfile="cellapp/controller.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_controller_1ac066a12fbae3979fbe86f4ee20c02904" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char * Controller::typeName</definition>
+        <argsstring></argsstring>
+        <name>typeName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="133" column="1" bodyfile="cellapp/controller.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_controller_1aa251a2d5e3be8104a67eb22cc7b33781" prot="public" static="no" mutable="no">
+        <type>const char ControllerType &amp;</type>
+        <definition>const char ControllerType&amp; Controller::ct</definition>
+        <argsstring></argsstring>
+        <name>ct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="133" column="1" bodyfile="cellapp/controller.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_controller_1a01630a3d95bde81822c3ac80cc68bd72" prot="public" static="no" mutable="no">
+        <type>const char ControllerType <ref refid="class_controller_1a8c83b29edd91cff97310b85fd2dd62a9" kindref="member">FactoryFn</ref></type>
+        <definition>const char ControllerType FactoryFn Controller::ffn</definition>
+        <argsstring></argsstring>
+        <name>ffn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="133" column="1" bodyfile="cellapp/controller.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_controller_1a7c32bc59c340ade9d98e20d72ae40e7a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Controller::createIfNecessary</definition>
+        <argsstring></argsstring>
+        <name>createIfNecessary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="136" column="1" bodyfile="cellapp/controller.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_controller_1a85342148cd2b3b08b1e64bc7dcf28660" prot="private" static="no" mutable="no">
+        <type><ref refid="class_entity" kindref="compound">Entity</ref> *</type>
+        <definition>Entity* Controller::pEntity_</definition>
+        <argsstring></argsstring>
+        <name>pEntity_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="173" column="1" bodyfile="cellapp/controller.hpp" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_controller_1a3621bba77acbc8c189bf6e42ba9b67ec" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Controller::userArg_</definition>
+        <argsstring></argsstring>
+        <name>userArg_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="174" column="1" bodyfile="cellapp/controller.hpp" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_controller_1a01308b80e29cb1f9b9a4777c00b932b9" prot="private" static="no" mutable="no">
+        <type>ControllerID</type>
+        <definition>ControllerID Controller::controllerID_</definition>
+        <argsstring></argsstring>
+        <name>controllerID_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="175" column="1" bodyfile="cellapp/controller.hpp" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_controller_1a3332cc6b7c51b257f6b5bf8cccf6b296" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Controller::BWAPI</definition>
+        <argsstring>(CELLAPP_API) Controller()</argsstring>
+        <name>BWAPI</name>
+        <param>
+          <type>CELLAPP_API</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a797d7bd68f93f36fbd4edc92c9de300e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Controller::BWAPI</definition>
+        <argsstring>(CELLAPP_API) virtual ~Controller()</argsstring>
+        <name>BWAPI</name>
+        <param>
+          <type>CELLAPP_API</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a97d6e40743b8130b496b1aa604670c83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Controller::init</definition>
+        <argsstring>(Entity *pEntity, ControllerID id, int userArg)</argsstring>
+        <name>init</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> *</type>
+          <declname>pEntity</declname>
+        </param>
+        <param>
+          <type>ControllerID</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>userArg</declname>
+        </param>
+        <briefdescription>
+<para>Initialise this new controller. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method initialises this controller. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="50" column="1" bodyfile="cellapp/controller.cpp" bodystart="44" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1ad0a29b9b91700a808c328fb828ea5433" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Controller::disowned</definition>
+        <argsstring>()</argsstring>
+        <name>disowned</name>
+        <briefdescription>
+<para>Let this controlled know it has been disowned. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method clears the entity pointer when we have been disowned. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="52" column="1" bodyfile="cellapp/controller.cpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1aae5de9edfa47a204f2094fdeb8091dbd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>ControllerType</type>
+        <definition>virtual ControllerType Controller::type</definition>
+        <argsstring>() const  =0</argsstring>
+        <name>type</name>
+        <briefdescription>
+<para>Return our type, for serialisation only. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a18e942dbb34d82bc4cfcc9718b1c970f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>ControllerDomain</type>
+        <definition>virtual ControllerDomain Controller::domain</definition>
+        <argsstring>() const  =0</argsstring>
+        <name>domain</name>
+        <briefdescription>
+<para>Return our domain. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1ad5aa8f4242778920938f18a19ca039ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>ControllerID</type>
+        <definition>virtual ControllerID Controller::exclusiveID</definition>
+        <argsstring>() const  =0</argsstring>
+        <name>exclusiveID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a31d2c2c443222d9134e511eb734493fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Controller::BWAPI</definition>
+        <argsstring>(CELLAPP_API) const char *typeName() const </argsstring>
+        <name>BWAPI</name>
+        <param>
+          <type>CELLAPP_API</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a31bb10031669992bd8611769195460a0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Controller::isAttached</definition>
+        <argsstring>() const </argsstring>
+        <name>isAttached</name>
+        <briefdescription>
+<para>Return whether or not we are attached to an entity. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="64" column="1" bodyfile="cellapp/controller.hpp" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity&amp; Controller::entity</definition>
+        <argsstring>()</argsstring>
+        <name>entity</name>
+        <briefdescription>
+<para>Return the entity that owns us. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="67" column="1" bodyfile="cellapp/controller.hpp" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a8c2f39fc63cd53d3a098b14310cdbc6c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>ControllerID</type>
+        <definition>ControllerID Controller::id</definition>
+        <argsstring>() const </argsstring>
+        <name>id</name>
+        <briefdescription>
+<para>Return our unique ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="70" column="1" bodyfile="cellapp/controller.hpp" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1aad8a489249dcc3b5edde468d05cb5c7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Controller::userArg</definition>
+        <argsstring>()</argsstring>
+        <name>userArg</name>
+        <briefdescription>
+<para>Return the user data for this controller. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="73" column="1" bodyfile="cellapp/controller.hpp" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a6ef0365a5bc295f4a92430ef0e809367" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Controller::BWAPI</definition>
+        <argsstring>(CELLAPP_API) virtual void writeRealToStream(BinaryOStream &amp;stream)</argsstring>
+        <name>BWAPI</name>
+        <param>
+          <type>CELLAPP_API</type>
+        </param>
+        <briefdescription>
+<para>Write our state to a buffer. (Don&apos;t stop running yet.) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a8972473450e1ea11239ac96c370fddd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Controller::BWAPI</definition>
+        <argsstring>(CELLAPP_API) virtual bool readRealFromStream(BinaryIStream &amp;stream)</argsstring>
+        <name>BWAPI</name>
+        <param>
+          <type>CELLAPP_API</type>
+        </param>
+        <briefdescription>
+<para>Read our state from a buffer. (Don&apos;t start running yet.) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a0dab5e21880d0c861495fa1909f95cbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Controller::BWAPI</definition>
+        <argsstring>(CELLAPP_API) virtual void writeGhostToStream(BinaryOStream &amp;stream)</argsstring>
+        <name>BWAPI</name>
+        <param>
+          <type>CELLAPP_API</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="81" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a9e5ce4bd55f4d6cac2380bf3dfe95d5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Controller::BWAPI</definition>
+        <argsstring>(CELLAPP_API) virtual bool readGhostFromStream(BinaryIStream &amp;stream)</argsstring>
+        <name>BWAPI</name>
+        <param>
+          <type>CELLAPP_API</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="82" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a2a148ee762b8dae72593a0fb38a029bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Controller::BWAPI</definition>
+        <argsstring>(CELLAPP_API) static void registerControllerType(CreatorFn cfn</argsstring>
+        <name>BWAPI</name>
+        <param>
+          <type>CELLAPP_API</type>
+        </param>
+        <briefdescription>
+<para>Register a controller type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="132" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a130a7805734c754c3ff8ab59ee01dea2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Controller::BWAPI</definition>
+        <argsstring>(CELLAPP_API) static ControllerID getExclusiveID(const char *exclusiveClass</argsstring>
+        <name>BWAPI</name>
+        <param>
+          <type>CELLAPP_API</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="135" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_controller_1a18d601aacf49c6f9f5234ba83921285d" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Controller::startReal</definition>
+        <argsstring>(bool isInitialStart)</argsstring>
+        <name>startReal</name>
+        <reimplementedby refid="class_move_controller_1a5694f884aaba561b19c9e52efcaaa265">startReal</reimplementedby>
+        <reimplementedby refid="class_vision_controller_1adb07a77e63114b0edd3c3406b69fa54f">startReal</reimplementedby>
+        <reimplementedby refid="class_face_entity_controller_1ad2c5855a05c7d9a3bd668fcb20afe207">startReal</reimplementedby>
+        <reimplementedby refid="class_yaw_rotator_controller_1a8c6458e48127aacc9c25d3f0736ae99d">startReal</reimplementedby>
+        <reimplementedby refid="class_proximity_controller_1add19c0b64769fcf4156e86c1ace01215">startReal</reimplementedby>
+        <reimplementedby refid="class_timer_controller_1a3b84e3fb335975c663fa2e7ef19debfd">startReal</reimplementedby>
+        <reimplementedby refid="class_navigation_controller_1a1766c48a50095d0138ef2f90aca8e6ee">startReal</reimplementedby>
+        <reimplementedby refid="class_base_acceleration_controller_1a94c4b081451dbcd4955d33092f4bf30c">startReal</reimplementedby>
+        <reimplementedby refid="class_navigate_step_controller_1a289f20e8caa145f2b98a8b3942dc72e8">startReal</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>isInitialStart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This virtual method is called when this controller is started on a real entity. It can be overridden by derived controllers to perform tasks when the controller is started initially or when the controller has been offloaded with an offloaded entity.</para><para>The controller must be in DOMAIN_REAL for this to be called.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isInitialStart</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if this is the first time this controller has been started, false if from an offload (or a restore). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="87" column="1" bodyfile="cellapp/controller.cpp" bodystart="181" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a806642c29ced79e6da8bd62c159c8294" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Controller::stopReal</definition>
+        <argsstring>(bool isFinalStop)</argsstring>
+        <name>stopReal</name>
+        <reimplementedby refid="class_move_controller_1a3ae341674d764efc7962cbc76de3e940">stopReal</reimplementedby>
+        <reimplementedby refid="class_accelerate_to_entity_controller_1adfa0cb0d7117d61ecccffe306affa883">stopReal</reimplementedby>
+        <reimplementedby refid="class_vision_controller_1aa17ba6f0ee414f81714628a8240c9296">stopReal</reimplementedby>
+        <reimplementedby refid="class_face_entity_controller_1a0bbbd700213424f930e1859a41410de5">stopReal</reimplementedby>
+        <reimplementedby refid="class_yaw_rotator_controller_1abb6d8a9d791752a610da5e3b8ce5b856">stopReal</reimplementedby>
+        <reimplementedby refid="class_proximity_controller_1a1fda57f5857c0d07fcb339d8ccbffdd3">stopReal</reimplementedby>
+        <reimplementedby refid="class_timer_controller_1af37eb194d0fe72a747a3724a27dc6aad">stopReal</reimplementedby>
+        <reimplementedby refid="class_navigation_controller_1acd77f180ec05482fd18d73836d639dd3">stopReal</reimplementedby>
+        <reimplementedby refid="class_base_acceleration_controller_1a2c4d18dd4be64bdfd5076d90ede89de3">stopReal</reimplementedby>
+        <reimplementedby refid="class_navigate_step_controller_1a0f5ee97a3590ce2cbcb091abd4d07cc1">stopReal</reimplementedby>
+        <reimplementedby refid="class_move_to_entity_controller_1a04efe4459a0edb8eb66124d437c602a2">stopReal</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>isFinalStop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This virtual method is called when this controller is started on a real entity. It can be overridden by derived controllers to perform tasks when the controller is stopped for the last time or when the controller is being offloaded with an offloaded entity.</para><para>The controller must be in DOMAIN_REAL for this to be called.</para><para>Nothing must be done in these methods which could cause a controller to be created.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isFinalStop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if this is the final time this controller will be stopped, false if caused by an offload. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="88" column="1" bodyfile="cellapp/controller.cpp" bodystart="200" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a3c737e518051ad6decaadf86919c7a5b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Controller::BWAPI</definition>
+        <argsstring>(CELLAPP_API) virtual void startGhost()</argsstring>
+        <name>BWAPI</name>
+        <param>
+          <type>CELLAPP_API</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1aaa0b72092b9f0f2ba18da00674d9c8c1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Controller::BWAPI</definition>
+        <argsstring>(CELLAPP_API) virtual void stopGhost()</argsstring>
+        <name>BWAPI</name>
+        <param>
+          <type>CELLAPP_API</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="91" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_controller_1aef85b8faeee04f32c6c8fc384537be0d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Controller::BWAPI</definition>
+        <argsstring>(CELLAPP_API) void cancel()</argsstring>
+        <name>BWAPI</name>
+        <param>
+          <type>CELLAPP_API</type>
+        </param>
+        <briefdescription>
+<para>Cancel this controller. This can be done by other <ref refid="class_controllers" kindref="compound">Controllers</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a912cc50ab630c16d340e6750571c7d36" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Controller::ghost</definition>
+        <argsstring>()</argsstring>
+        <name>ghost</name>
+        <briefdescription>
+<para>Ghost the ghost part of this controller to all the haunts of its entity. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method updates the ghost of this controller on all ghosts of the entity. It can only be called on controllers on real entities. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="101" column="1" bodyfile="cellapp/controller.cpp" bodystart="127" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a28fbc433135ec5668b0de6286b0fb1fe" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Controller::standardCallback</definition>
+        <argsstring>(const char *methodName)</argsstring>
+        <name>standardCallback</name>
+        <param>
+          <type>const char *</type>
+          <declname>methodName</declname>
+        </param>
+        <briefdescription>
+<para>Send a standard callback to the script object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method calls a named callback on the script object with two arguments: the id of the controller, and the user data.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>methodName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the method to call </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="104" column="1" bodyfile="cellapp/controller.cpp" bodystart="139" bodyend="162"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_controller_1ade939a909a83784f4e733140c5f6be0f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_smart_pointer" kindref="compound">ControllerPtr</ref></type>
+        <definition>ControllerPtr Controller::create</definition>
+        <argsstring>(ControllerType type)</argsstring>
+        <name>create</name>
+        <param>
+          <type>ControllerType</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Create a controller given a type. </para>        </briefdescription>
+        <detaileddescription>
+<para>This static method creates a new controller given a type.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of controller to create.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to new controller. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="108" column="1" bodyfile="cellapp/controller.cpp" bodystart="347" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a59b8e5ee7602267120c203e2d73a4aad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject * Controller::factory</definition>
+        <argsstring>(Entity *pEntity, const char *name)</argsstring>
+        <name>factory</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> *</type>
+          <declname>pEntity</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This static method returns a python object representing the factory method for the given named controller, if such a controller exists. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="110" column="1" bodyfile="cellapp/controller.cpp" bodystart="378" bodyend="402"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a4399843065da63b4d68e76bcba1c9b33" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ControllerType</type>
+        <definition>ControllerType Controller::factories</definition>
+        <argsstring>(const ScriptList &amp;pList, const char *prefix=NULL)</argsstring>
+        <name>factories</name>
+        <param>
+          <type>const ScriptList &amp;</type>
+          <declname>pList</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>prefix</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This static method adds the controller factory method names to the given tuple, and returns the number it added. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="111" column="1" bodyfile="cellapp/controller.cpp" bodystart="409" bodyend="448"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a5c08d1a7974edb523c97f03c843b7a2a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Controller::addControllerDigest</definition>
+        <argsstring>(MD5 &amp;md5)</argsstring>
+        <name>addControllerDigest</name>
+        <param>
+          <type>MD5 &amp;</type>
+          <declname>md5</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This static method add controller type name into MD5 digest. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="137" column="1" bodyfile="cellapp/controller.cpp" bodystart="526" bodyend="536"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_controller_1af7c7bfef1648b4e334418fa89855d647" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ControllerTypeRegistry &amp;</type>
+        <definition>Controller::ControllerTypeRegistry &amp; Controller::typeRegistry</definition>
+        <argsstring>()</argsstring>
+        <name>typeRegistry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This static method returns a singleton container with entries about all registered controller types indexed by controller type ID. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/controller.hpp" line="171" column="1" bodyfile="cellapp/controller.cpp" bodystart="333" bodyend="337"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A controller is a server object that is owned by a real entity. It must move between cells when the entity moves, and must be able to serialise its state for this reason. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="865">
+        <label>MoveToPointController</label>
+        <link refid="class_move_to_point_controller"/>
+        <childnode refid="863" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="870">
+        <label>ProximityController</label>
+        <link refid="class_proximity_controller"/>
+        <childnode refid="856" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="857">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="867">
+        <label>NavigationController</label>
+        <link refid="class_navigation_controller"/>
+        <childnode refid="856" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="859">
+        <label>AccelerateAlongPathController</label>
+        <link refid="class_accelerate_along_path_controller"/>
+        <childnode refid="858" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="863">
+        <label>MoveController</label>
+        <link refid="class_move_controller"/>
+        <childnode refid="856" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="862">
+        <label>FaceEntityController</label>
+        <link refid="class_face_entity_controller"/>
+        <childnode refid="856" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="874">
+        <label>ScanVisionController</label>
+        <link refid="class_scan_vision_controller"/>
+        <childnode refid="873" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="872">
+        <label>VisibilityController</label>
+        <link refid="class_visibility_controller"/>
+        <childnode refid="856" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="860">
+        <label>AccelerateToEntityController</label>
+        <link refid="class_accelerate_to_entity_controller"/>
+        <childnode refid="858" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="858">
+        <label>BaseAccelerationController</label>
+        <link refid="class_base_acceleration_controller"/>
+        <childnode refid="856" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="869">
+        <label>PortalConfigController</label>
+        <link refid="class_portal_config_controller"/>
+        <childnode refid="856" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="868">
+        <label>PassengerController</label>
+        <link refid="class_passenger_controller"/>
+        <childnode refid="856" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="864">
+        <label>MoveToEntityController</label>
+        <link refid="class_move_to_entity_controller"/>
+        <childnode refid="863" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="875">
+        <label>YawRotatorController</label>
+        <link refid="class_yaw_rotator_controller"/>
+        <childnode refid="856" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="856">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="857" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="871">
+        <label>TimerController</label>
+        <link refid="class_timer_controller"/>
+        <childnode refid="856" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="861">
+        <label>AccelerateToPointController</label>
+        <link refid="class_accelerate_to_point_controller"/>
+        <childnode refid="858" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="866">
+        <label>NavigateStepController</label>
+        <link refid="class_navigate_step_controller"/>
+        <childnode refid="863" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="873">
+        <label>VisionController</label>
+        <link refid="class_vision_controller"/>
+        <childnode refid="856" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="877">
+        <label>ReferenceCount</label>
+      </node>
+      <node id="880">
+        <label>PyObjectPlus</label>
+      </node>
+      <node id="878">
+        <label>Entity</label>
+        <link refid="class_entity"/>
+        <childnode refid="879" relation="public-inheritance">
+        </childnode>
+        <childnode refid="880" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="879">
+        <label>BWEntity</label>
+      </node>
+      <node id="876">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="877" relation="public-inheritance">
+        </childnode>
+        <childnode refid="878" relation="usage">
+          <edgelabel>s_factoryFnEntity_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/controller.hpp" line="42" column="1" bodyfile="cellapp/controller.hpp" bodystart="41" bodyend="176"/>
+    <listofallmembers>
+      <member refid="class_controller_1a5c08d1a7974edb523c97f03c843b7a2a" prot="public" virt="non-virtual"><scope>Controller</scope><name>addControllerDigest</name></member>
+      <member refid="class_controller_1a3332cc6b7c51b257f6b5bf8cccf6b296" prot="public" virt="non-virtual"><scope>Controller</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a797d7bd68f93f36fbd4edc92c9de300e" prot="public" virt="non-virtual"><scope>Controller</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a31d2c2c443222d9134e511eb734493fd" prot="public" virt="non-virtual"><scope>Controller</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a6ef0365a5bc295f4a92430ef0e809367" prot="public" virt="non-virtual"><scope>Controller</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a8972473450e1ea11239ac96c370fddd0" prot="public" virt="non-virtual"><scope>Controller</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a0dab5e21880d0c861495fa1909f95cbe" prot="public" virt="non-virtual"><scope>Controller</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a9e5ce4bd55f4d6cac2380bf3dfe95d5e" prot="public" virt="non-virtual"><scope>Controller</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a3c737e518051ad6decaadf86919c7a5b" prot="private" virt="non-virtual"><scope>Controller</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1aaa0b72092b9f0f2ba18da00674d9c8c1" prot="private" virt="non-virtual"><scope>Controller</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1aef85b8faeee04f32c6c8fc384537be0d" prot="protected" virt="non-virtual"><scope>Controller</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a2a148ee762b8dae72593a0fb38a029bb" prot="public" virt="non-virtual"><scope>Controller</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a130a7805734c754c3ff8ab59ee01dea2" prot="public" virt="non-virtual"><scope>Controller</scope><name>BWAPI</name></member>
+      <member refid="class_controller_1a01308b80e29cb1f9b9a4777c00b932b9" prot="private" virt="non-virtual"><scope>Controller</scope><name>controllerID_</name></member>
+      <member refid="class_controller_1a542eb704acd266fecdfd8d85d0d7baeb" prot="private" virt="non-virtual"><scope>Controller</scope><name>Controllers</name></member>
+      <member refid="class_controller_1a383462e8f3b91166913ec7336b8e2a38" prot="private" virt="non-virtual"><scope>Controller</scope><name>ControllerTypeRegistry</name></member>
+      <member refid="class_controller_1ade939a909a83784f4e733140c5f6be0f" prot="public" virt="non-virtual"><scope>Controller</scope><name>create</name></member>
+      <member refid="class_controller_1a7c32bc59c340ade9d98e20d72ae40e7a" prot="public" virt="non-virtual"><scope>Controller</scope><name>createIfNecessary</name></member>
+      <member refid="class_controller_1a3a96f5d838427d0b251f1cf5792350db" prot="public" virt="non-virtual"><scope>Controller</scope><name>CreatorFn</name></member>
+      <member refid="class_controller_1aa251a2d5e3be8104a67eb22cc7b33781" prot="public" virt="non-virtual"><scope>Controller</scope><name>ct</name></member>
+      <member refid="class_controller_1ad0a29b9b91700a808c328fb828ea5433" prot="public" virt="non-virtual"><scope>Controller</scope><name>disowned</name></member>
+      <member refid="class_controller_1a18e942dbb34d82bc4cfcc9718b1c970f" prot="public" virt="pure-virtual"><scope>Controller</scope><name>domain</name></member>
+      <member refid="class_controller_1a9644932b8c5acaad28c5dc0ecda356a3" prot="public" virt="non-virtual"><scope>Controller</scope><name>entity</name></member>
+      <member refid="class_controller_1a30b2745a2b74633dac7bba027bfe5eda" prot="public" virt="non-virtual"><scope>Controller</scope><name>EXCLUSIVE_CONTROLLER_ID_MASK</name></member>
+      <member refid="class_controller_1ad5aa8f4242778920938f18a19ca039ab" prot="public" virt="pure-virtual"><scope>Controller</scope><name>exclusiveID</name></member>
+      <member refid="class_controller_1a4399843065da63b4d68e76bcba1c9b33" prot="public" virt="non-virtual"><scope>Controller</scope><name>factories</name></member>
+      <member refid="class_controller_1a59b8e5ee7602267120c203e2d73a4aad" prot="public" virt="non-virtual"><scope>Controller</scope><name>factory</name></member>
+      <member refid="class_controller_1a8c83b29edd91cff97310b85fd2dd62a9" prot="public" virt="non-virtual"><scope>Controller</scope><name>FactoryFn</name></member>
+      <member refid="class_controller_1a01630a3d95bde81822c3ac80cc68bd72" prot="public" virt="non-virtual"><scope>Controller</scope><name>ffn</name></member>
+      <member refid="class_controller_1a912cc50ab630c16d340e6750571c7d36" prot="protected" virt="non-virtual"><scope>Controller</scope><name>ghost</name></member>
+      <member refid="class_controller_1a8c2f39fc63cd53d3a098b14310cdbc6c" prot="public" virt="non-virtual"><scope>Controller</scope><name>id</name></member>
+      <member refid="class_controller_1a97d6e40743b8130b496b1aa604670c83" prot="public" virt="non-virtual"><scope>Controller</scope><name>init</name></member>
+      <member refid="class_controller_1a31bb10031669992bd8611769195460a0" prot="public" virt="non-virtual"><scope>Controller</scope><name>isAttached</name></member>
+      <member refid="class_controller_1a85342148cd2b3b08b1e64bc7dcf28660" prot="private" virt="non-virtual"><scope>Controller</scope><name>pEntity_</name></member>
+      <member refid="class_controller_1a27d88cafe564f8c3e97477f82b392b74" prot="public" virt="non-virtual"><scope>Controller</scope><name>s_factoryFnEntity_</name></member>
+      <member refid="class_controller_1a28fbc433135ec5668b0de6286b0fb1fe" prot="protected" virt="non-virtual"><scope>Controller</scope><name>standardCallback</name></member>
+      <member refid="class_controller_1a18d601aacf49c6f9f5234ba83921285d" prot="private" virt="virtual"><scope>Controller</scope><name>startReal</name></member>
+      <member refid="class_controller_1a806642c29ced79e6da8bd62c159c8294" prot="private" virt="virtual"><scope>Controller</scope><name>stopReal</name></member>
+      <member refid="class_controller_1aae5de9edfa47a204f2094fdeb8091dbd" prot="public" virt="pure-virtual"><scope>Controller</scope><name>type</name></member>
+      <member refid="class_controller_1ac066a12fbae3979fbe86f4ee20c02904" prot="public" virt="non-virtual"><scope>Controller</scope><name>typeName</name></member>
+      <member refid="class_controller_1af7c7bfef1648b4e334418fa89855d647" prot="private" virt="non-virtual"><scope>Controller</scope><name>typeRegistry</name></member>
+      <member refid="class_controller_1aad8a489249dcc3b5edde468d05cb5c7f" prot="public" virt="non-virtual"><scope>Controller</scope><name>userArg</name></member>
+      <member refid="class_controller_1a3621bba77acbc8c189bf6e42ba9b67ec" prot="private" virt="non-virtual"><scope>Controller</scope><name>userArg_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

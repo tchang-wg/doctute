@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="space__branch_8hpp" kind="file" language="C++">
+    <compoundname>space_branch.hpp</compoundname>
+    <includes refid="space__node_8hpp" local="yes">space_node.hpp</includes>
+    <includedby refid="space_8cpp" local="yes">cellapp/space.cpp</includedby>
+    <includedby refid="space__branch_8cpp" local="yes">cellapp/space_branch.cpp</includedby>
+    <incdepgraph>
+      <node id="12417">
+        <label>math/rectt.hpp</label>
+      </node>
+      <node id="12416">
+        <label>cstdmf/binary_stream.hpp</label>
+      </node>
+      <node id="12414">
+        <label>cellapp/space_branch.hpp</label>
+        <link refid="space_branch.hpp"/>
+        <childnode refid="12415" relation="include">
+        </childnode>
+      </node>
+      <node id="12415">
+        <label>space_node.hpp</label>
+        <link refid="space__node_8hpp_source"/>
+        <childnode refid="12416" relation="include">
+        </childnode>
+        <childnode refid="12417" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_space_branch" prot="public">SpaceBranch</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SPACE_BRANCH_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;space_node.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_space" kindref="compound">Space</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_space_branch" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_space_branch" kindref="compound">SpaceBranch</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_space_node" kindref="compound">SpaceNode</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_space_branch_1a67db701b367c3dc5a5f35c7b3fd37e82" kindref="member">SpaceBranch</ref>(<sp/><ref refid="class_space" kindref="compound">Space</ref><sp/>&amp;<sp/>space,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::Rect<sp/>&amp;<sp/>rect,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BinaryIStream<sp/>&amp;<sp/>stream,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isHorizontal<sp/>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_space_branch_1a7553f03d0dfded15574d541fcf752a12" kindref="member">~SpaceBranch</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_space_branch_1a5ffa953c0c905cfbc927729bbee15755" kindref="member">deleteTree</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_cell_info" kindref="compound">CellInfo</ref><sp/>*<sp/><ref refid="class_space_branch_1aec879f3215fef14c848318df9ec67d80" kindref="member">pCellAt</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_space_branch_1acc5acb26315a5d8677ba7e7602065057" kindref="member">visitRect</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::Rect<sp/>&amp;<sp/>rect,<sp/><ref refid="class_cell_info_visitor" kindref="compound">CellInfoVisitor</ref><sp/>&amp;<sp/>visitor<sp/>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_space_branch_1a43a4183156e23a19748fe2482c20bc76" kindref="member">addToStream</ref>(<sp/>BinaryOStream<sp/>&amp;<sp/>stream<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>position_;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>isHorizontal_;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_space_node" kindref="compound">SpaceNode</ref><sp/>*<sp/>pLeft_;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_space_node" kindref="compound">SpaceNode</ref><sp/>*<sp/>pRight_;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SPACE_BRANCH_HPP</highlight></codeline>
+    </programlisting>
+    <location file="cellapp/space_branch.hpp"/>
+  </compounddef>
+</doxygen>

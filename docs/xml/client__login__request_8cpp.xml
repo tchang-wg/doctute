@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="client__login__request_8cpp" kind="file" language="C++">
+    <compoundname>client_login_request.cpp</compoundname>
+    <includes refid="client__login__request_8hpp" local="yes">client_login_request.hpp</includes>
+    <includes refid="loginapp__config_8hpp" local="yes">loginapp_config.hpp</includes>
+    <includes local="yes">connection/login_challenge.hpp</includes>
+    <includes local="yes">cstdmf/timestamp.hpp</includes>
+    <incdepgraph>
+      <node id="16126">
+        <label>cstdmf/debug.hpp</label>
+      </node>
+      <node id="16128">
+        <label>cstdmf/stdmf.hpp</label>
+      </node>
+      <node id="16124">
+        <label>cstdmf/binary_stream.hpp</label>
+      </node>
+      <node id="16122">
+        <label>loginapp/client_login_request.cpp</label>
+        <link refid="client_login_request.cpp"/>
+        <childnode refid="16123" relation="include">
+        </childnode>
+        <childnode refid="16131" relation="include">
+        </childnode>
+        <childnode refid="16135" relation="include">
+        </childnode>
+        <childnode refid="16134" relation="include">
+        </childnode>
+      </node>
+      <node id="16135">
+        <label>connection/login_challenge.hpp</label>
+      </node>
+      <node id="16127">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="16125">
+        <label>cstdmf/bw_string.hpp</label>
+      </node>
+      <node id="16133">
+        <label>server/server_app_config.hpp</label>
+      </node>
+      <node id="16123">
+        <label>client_login_request.hpp</label>
+        <link refid="client__login__request_8hpp_source"/>
+        <childnode refid="16124" relation="include">
+        </childnode>
+        <childnode refid="16125" relation="include">
+        </childnode>
+        <childnode refid="16126" relation="include">
+        </childnode>
+        <childnode refid="16127" relation="include">
+        </childnode>
+        <childnode refid="16128" relation="include">
+        </childnode>
+        <childnode refid="16129" relation="include">
+        </childnode>
+        <childnode refid="16130" relation="include">
+        </childnode>
+      </node>
+      <node id="16130">
+        <label>connection/server_log_on_params.hpp</label>
+      </node>
+      <node id="16131">
+        <label>loginapp_config.hpp</label>
+        <link refid="loginapp__config_8hpp_source"/>
+        <childnode refid="16132" relation="include">
+        </childnode>
+        <childnode refid="16133" relation="include">
+        </childnode>
+        <childnode refid="16134" relation="include">
+        </childnode>
+      </node>
+      <node id="16134">
+        <label>cstdmf/timestamp.hpp</label>
+      </node>
+      <node id="16129">
+        <label>connection/login_reply_record.hpp</label>
+      </node>
+      <node id="16132">
+        <label>server/external_app_config.hpp</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;client_login_request.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;loginapp_config.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;connection/login_challenge.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/timestamp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><ref refid="class_client_login_request_1ae335937d25d46bd3264f30e4e0aaa091" kindref="member">ClientLoginRequest::ClientLoginRequest</ref>()<sp/>:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>set<sp/>creationTime_<sp/>to<sp/>0<sp/>to<sp/>indicate<sp/>that<sp/>the<sp/>login<sp/>is<sp/>pending.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>creationTime_(<sp/>0<sp/>),</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pParams_(<sp/>NULL<sp/>),</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pChannel_(<sp/>NULL<sp/>),</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>challengeType_(),</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>didFailChallenge_(<sp/>false<sp/>),</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pLoginChallenge_(<sp/>NULL<sp/>),</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>replyRecord_()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><ref refid="class_client_login_request_1a957e6ea2f3c0956d00a3b946c88d1b22" kindref="member">ClientLoginRequest::~ClientLoginRequest</ref>()</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_client_login_request_1ab026dbf0f3d3b42f828b06062d540edd" kindref="member">ClientLoginRequest::setLoginChallenge</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>challengeType,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_smart_pointer" kindref="compound">LoginChallengePtr</ref><sp/>pLoginChallenge<sp/>)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>challengeType_<sp/>=<sp/>challengeType;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>pLoginChallenge_<sp/>=<sp/>pLoginChallenge;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>MemoryOStream<sp/>data;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>pLoginChallenge_-&gt;writeChallengeToStream(<sp/>data<sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>didFailChallenge_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_client_login_request_1a03e5065b304d7456aad4b1a9d4f7c151" kindref="member">ClientLoginRequest::clearChallenge</ref>()</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>challengeType_.clear();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>pLoginChallenge_<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_client_login_request_1a20a95e74058568f720784e082d92eb17" kindref="member">ClientLoginRequest::isPendingAuthentication</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="67"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!pLoginChallenge_<sp/>&amp;&amp;<sp/>pParams_<sp/>&amp;&amp;<sp/>(creationTime_<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_client_login_request_1a11b7c98090b397c968f1eb1e1b753b91" kindref="member">ClientLoginRequest::isTooOld</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="76"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64<sp/>MAX_LOGIN_DELAY<sp/>=<sp/>LoginAppConfig::maxLoginDelayInStamps();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!this-&gt;isPendingAuthentication()<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(timestamp()<sp/>-<sp/>creationTime_<sp/>&gt;<sp/>MAX_LOGIN_DELAY);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_client_login_request_1acb8f90765a477d4dbf5a43f55c08ebcc" kindref="member">ClientLoginRequest::writeLoginChallengeToStream</ref>(</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BinaryOStream<sp/>&amp;<sp/>stream<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="89"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_ASSERT(<sp/>pLoginChallenge_<sp/>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>stream<sp/>&lt;&lt;<sp/>challengeType_;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>MF_VERIFY(<sp/>pLoginChallenge_-&gt;writeChallengeToStream(<sp/>stream<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_client_login_request_1a4ee5d10eaaec17cc89e0edc76ec6d646" kindref="member">ClientLoginRequest::setData</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>LoginReplyRecord<sp/>&amp;<sp/>record,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>serverMsg<sp/>)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>replyRecord_<sp/>=<sp/>record;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>serverMsg_<sp/>=<sp/>serverMsg;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>creationTime_<sp/>=<sp/>timestamp();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">//<sp/>client_login_request.cpp</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="loginapp/client_login_request.cpp"/>
+  </compounddef>
+</doxygen>

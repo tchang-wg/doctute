@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_service_starter" kind="class" language="C++" prot="public">
+    <compoundname>ServiceStarter</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ReplyHandler</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_service_starter_1aaa5529cba61e31f31c9a0da3c89a9e60" prot="private" static="no" mutable="no">
+        <type>Tags</type>
+        <definition>Tags ServiceStarter::tags_</definition>
+        <argsstring></argsstring>
+        <name>tags_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/service_starter.hpp" line="29" column="1" bodyfile="baseapp/service_starter.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_service_starter_1af7a8ec25a92db335a08bd37baedd4e77" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ServiceStarter::hasTags_</definition>
+        <argsstring></argsstring>
+        <name>hasTags_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/service_starter.hpp" line="30" column="1" bodyfile="baseapp/service_starter.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_service_starter_1ab819ecb58d3454f6d856d57d949c4994" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE ServiceStarter::ServiceStarter</definition>
+        <argsstring>()</argsstring>
+        <name>ServiceStarter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/service_starter.hpp" line="16" column="1" bodyfile="baseapp/service_starter.cpp" bodystart="17" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_service_starter_1a03468281d023bb8eea0c90035451bf60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ServiceStarter::init</definition>
+        <argsstring>(const BWMachineDNetwork *pBWMachineD)</argsstring>
+        <name>init</name>
+        <param>
+          <type>const BWMachineDNetwork *</type>
+          <declname>pBWMachineD</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method initialises the service starter with the set of service names that should be started. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/service_starter.hpp" line="17" column="1" bodyfile="baseapp/service_starter.cpp" bodystart="28" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_service_starter_1ada7fd9c0cb4c08335f2f0b5898993edb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ServiceStarter::finishInit</definition>
+        <argsstring>(int layoutId)</argsstring>
+        <name>finishInit</name>
+        <param>
+          <type>int</type>
+          <declname>layoutId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method merges the set of service names with an initial layout, if specified. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/service_starter.hpp" line="18" column="1" bodyfile="baseapp/service_starter.cpp" bodystart="71" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="class_service_starter_1a159daa31f6999460f2d7d338dcd49757" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ServiceStarter::run</definition>
+        <argsstring>(EntityCreator &amp;entityCreator) const </argsstring>
+        <name>run</name>
+        <param>
+          <type><ref refid="class_entity_creator" kindref="compound">EntityCreator</ref> &amp;</type>
+          <declname>entityCreator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method starts the appropriate services on this <ref refid="class_service_app" kindref="compound">ServiceApp</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/service_starter.hpp" line="20" column="1" bodyfile="baseapp/service_starter.cpp" bodystart="224" bodyend="257"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_service_starter_1a5e7a004358b618a89fc959c8b8d0f9c9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ServiceStarter::onTagsMessage</definition>
+        <argsstring>(TagsMessage &amp;tm, uint32 addr)</argsstring>
+        <name>onTagsMessage</name>
+        <param>
+          <type>TagsMessage &amp;</type>
+          <declname>tm</declname>
+        </param>
+        <param>
+          <type>uint32</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method handles the reply from bwmachined. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/service_starter.hpp" line="23" column="1" bodyfile="baseapp/service_starter.cpp" bodystart="51" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_service_starter_1a93e27d63e4ca08b5b8f5ada0df133257" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ServiceStarter::shouldStartService</definition>
+        <argsstring>(const EntityTypePtr &amp;pType) const </argsstring>
+        <name>shouldStartService</name>
+        <param>
+          <type>const <ref refid="class_smart_pointer" kindref="compound">EntityTypePtr</ref> &amp;</type>
+          <declname>pType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns whether the service with the given name should be started on this <ref refid="class_service_app" kindref="compound">ServiceApp</ref>. This is determined by the [Services] section in /etc/bwmachined.conf. and by whether service should be active on current serverMode </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/service_starter.hpp" line="25" column="1" bodyfile="baseapp/service_starter.cpp" bodystart="201" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="class_service_starter_1a57693fe2fa9cbfd34f7db9098031e265" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ServiceStarter::readFragmentsFromLayout</definition>
+        <argsstring>(DataSectionPtr pLayout, Tags &amp;fragments)</argsstring>
+        <name>readFragmentsFromLayout</name>
+        <param>
+          <type>DataSectionPtr</type>
+          <declname>pLayout</declname>
+        </param>
+        <param>
+          <type>Tags &amp;</type>
+          <declname>fragments</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is a helper to read fragments from a layout section </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/service_starter.hpp" line="27" column="1" bodyfile="baseapp/service_starter.cpp" bodystart="178" bodyend="191"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2684">
+        <label>ServiceStarter</label>
+        <link refid="class_service_starter"/>
+        <childnode refid="2685" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2685">
+        <label>ReplyHandler</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2686">
+        <label>ServiceStarter</label>
+        <link refid="class_service_starter"/>
+        <childnode refid="2687" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2687">
+        <label>ReplyHandler</label>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/service_starter.hpp" line="14" column="1" bodyfile="baseapp/service_starter.hpp" bodystart="13" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_service_starter_1ada7fd9c0cb4c08335f2f0b5898993edb" prot="public" virt="non-virtual"><scope>ServiceStarter</scope><name>finishInit</name></member>
+      <member refid="class_service_starter_1af7a8ec25a92db335a08bd37baedd4e77" prot="private" virt="non-virtual"><scope>ServiceStarter</scope><name>hasTags_</name></member>
+      <member refid="class_service_starter_1a03468281d023bb8eea0c90035451bf60" prot="public" virt="non-virtual"><scope>ServiceStarter</scope><name>init</name></member>
+      <member refid="class_service_starter_1a5e7a004358b618a89fc959c8b8d0f9c9" prot="private" virt="non-virtual"><scope>ServiceStarter</scope><name>onTagsMessage</name></member>
+      <member refid="class_service_starter_1a57693fe2fa9cbfd34f7db9098031e265" prot="private" virt="non-virtual"><scope>ServiceStarter</scope><name>readFragmentsFromLayout</name></member>
+      <member refid="class_service_starter_1a159daa31f6999460f2d7d338dcd49757" prot="public" virt="non-virtual"><scope>ServiceStarter</scope><name>run</name></member>
+      <member refid="class_service_starter_1ab819ecb58d3454f6d856d57d949c4994" prot="public" virt="non-virtual"><scope>ServiceStarter</scope><name>ServiceStarter</name></member>
+      <member refid="class_service_starter_1a93e27d63e4ca08b5b8f5ada0df133257" prot="private" virt="non-virtual"><scope>ServiceStarter</scope><name>shouldStartService</name></member>
+      <member refid="class_service_starter_1aaa5529cba61e31f31c9a0da3c89a9e60" prot="private" virt="non-virtual"><scope>ServiceStarter</scope><name>tags_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

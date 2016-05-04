@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="face__entity__controller_8hpp" kind="file" language="C++">
+    <compoundname>face_entity_controller.hpp</compoundname>
+    <includes refid="controller_8hpp" local="yes">controller.hpp</includes>
+    <includes local="yes">network/basictypes.hpp</includes>
+    <includes local="yes">server/updatable.hpp</includes>
+    <includedby refid="cellapp_2entity_8cpp" local="yes">cellapp/entity.cpp</includedby>
+    <includedby refid="face__entity__controller_8cpp" local="yes">cellapp/face_entity_controller.cpp</includedby>
+    <incdepgraph>
+      <node id="9673">
+        <label>cellapp/face_entity_controller.hpp</label>
+        <link refid="face_entity_controller.hpp"/>
+        <childnode refid="9674" relation="include">
+        </childnode>
+        <childnode refid="9676" relation="include">
+        </childnode>
+        <childnode refid="9682" relation="include">
+        </childnode>
+      </node>
+      <node id="9681">
+        <label>build/bwapi.hpp</label>
+      </node>
+      <node id="9679">
+        <label>script/script_object.hpp</label>
+      </node>
+      <node id="9677">
+        <label>cstdmf/binary_stream.hpp</label>
+      </node>
+      <node id="9680">
+        <label>cstdmf/md5.hpp</label>
+      </node>
+      <node id="9678">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="9682">
+        <label>server/updatable.hpp</label>
+      </node>
+      <node id="9675">
+        <label>Python.h</label>
+      </node>
+      <node id="9674">
+        <label>controller.hpp</label>
+        <link refid="controller_8hpp_source"/>
+        <childnode refid="9675" relation="include">
+        </childnode>
+        <childnode refid="9676" relation="include">
+        </childnode>
+        <childnode refid="9677" relation="include">
+        </childnode>
+        <childnode refid="9678" relation="include">
+        </childnode>
+        <childnode refid="9679" relation="include">
+        </childnode>
+        <childnode refid="9680" relation="include">
+        </childnode>
+        <childnode refid="9681" relation="include">
+        </childnode>
+      </node>
+      <node id="9676">
+        <label>network/basictypes.hpp</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_face_entity_controller" prot="public">FaceEntityController</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="face__entity__controller_8hpp_1a98e032c77f9fa052154591b3da724a1f" prot="public" static="no" mutable="no">
+        <type>BW_BEGIN_NAMESPACE typedef <ref refid="class_smart_pointer" kindref="compound">SmartPointer</ref>&lt; <ref refid="class_entity" kindref="compound">Entity</ref> &gt;</type>
+        <definition>BW_BEGIN_NAMESPACE typedef SmartPointer&lt; Entity &gt; EntityPtr</definition>
+        <argsstring></argsstring>
+        <name>EntityPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/face_entity_controller.hpp" line="11" column="1" bodyfile="cellapp/face_entity_controller.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>FACE_ENTITY_CONTROLLER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FACE_ENTITY_CONTROLLER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;controller.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;network/basictypes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;server/updatable.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="class_smart_pointer" kindref="compound">SmartPointer&lt; Entity &gt;</ref><sp/><ref refid="class_smart_pointer" kindref="compound">EntityPtr</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_face_entity_controller" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_face_entity_controller" kindref="compound">FaceEntityController</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_controller" kindref="compound">Controller</ref>,<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Updatable</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>DECLARE_CONTROLLER_TYPE(<sp/><ref refid="class_face_entity_controller" kindref="compound">FaceEntityController</ref><sp/>)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_face_entity_controller" kindref="compound">FaceEntityController</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>entityId<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>velocity<sp/>=<sp/>2*MATH_PI,<sp/></highlight><highlight class="comment">//<sp/>in<sp/>radians<sp/>per<sp/>second</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>period<sp/>=<sp/>10<sp/>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Overrides<sp/>from<sp/>Controller</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_face_entity_controller_1ad2c5855a05c7d9a3bd668fcb20afe207" kindref="member">startReal</ref>(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isInitialStart<sp/>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_face_entity_controller_1a0bbbd700213424f930e1859a41410de5" kindref="member">stopReal</ref>(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isFinalStop<sp/>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_face_entity_controller_1a42796ec6419483de85db4db52fdb4704" kindref="member">writeRealToStream</ref>(<sp/>BinaryOStream<sp/>&amp;<sp/>stream<sp/>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_face_entity_controller_1afa04dca92a59550c5497a9adb72ed106" kindref="member">readRealFromStream</ref>(<sp/>BinaryIStream<sp/>&amp;<sp/>stream<sp/>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_face_entity_controller_1a1e7f3a01187b92553e3c9f2a6fb05041" kindref="member">update</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_smart_pointer" kindref="compound">EntityPtr</ref><sp/><sp/>pTargetEntity_;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>targetEntityId_;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>radiansPerTick_;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>ticksToNextUpdate_;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>period_;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>FACE_ENTITY_CONTROLLER_HPP</highlight></codeline>
+    </programlisting>
+    <location file="cellapp/face_entity_controller.hpp"/>
+  </compounddef>
+</doxygen>

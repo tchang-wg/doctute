@@ -1,0 +1,1503 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_b_w_machined" kind="class" language="C++" prot="public">
+    <compoundname>BWMachined</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Singleton&lt; BWMachined &gt;</basecompoundref>
+    <innerclass refid="class_b_w_machined_1_1_cleanup_handler" prot="private">BWMachined::CleanupHandler</innerclass>
+    <innerclass refid="class_b_w_machined_1_1_delayed_packet_handler" prot="private">BWMachined::DelayedPacketHandler</innerclass>
+    <innerclass refid="class_b_w_machined_1_1_update_handler" prot="private">BWMachined::UpdateHandler</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_b_w_machined_1a3a8991d55b45e12a891c873802adbe79" prot="public" static="no">
+        <name>ReadProcTableStatus</name>
+        <enumvalue id="class_b_w_machined_1a3a8991d55b45e12a891c873802adbe79a4565eaa012421dfb4a49feb6e4b21226" prot="public">
+          <name>READ_PROC_SUCCESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_b_w_machined_1a3a8991d55b45e12a891c873802adbe79a9fd828b035edd9c61b1a6d356745d985" prot="public">
+          <name>READ_PROC_ERROR_FILE_NOT_FOUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_b_w_machined_1a3a8991d55b45e12a891c873802adbe79a1a5c59a21696502d2011e98e5d98b8c3" prot="public">
+          <name>READ_PROC_ERROR_STAT_FILE_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_b_w_machined_1a3a8991d55b45e12a891c873802adbe79a0f90dca1f59ae80e21f8514e72f0d57b" prot="public">
+          <name>READ_PROC_ERROR_OUTDATED_FILE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_b_w_machined_1a3a8991d55b45e12a891c873802adbe79ad58379bd76a8df38cfea630fbc5acda5" prot="public">
+          <name>READ_PROC_ERROR_CORRUPT_FILE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="34" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="33" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="class_b_w_machined_1aa99840c6a02a47e07664776cdfc44824" prot="protected" static="no">
+        <type>BW::map&lt; BW::string, Tags &gt;</type>
+        <definition>typedef BW::map&lt; BW::string, Tags &gt; BWMachined::TagsMap</definition>
+        <argsstring></argsstring>
+        <name>TagsMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="196" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_b_w_machined_1aecf4ad37cf30e2baad6c45de0bee5fce" prot="protected" static="no">
+        <type>BW::map&lt; uint8, <ref refid="class_listeners" kindref="compound">Listeners</ref>&lt; SignalListenerMessage &gt; &gt;</type>
+        <definition>typedef BW::map&lt; uint8, Listeners&lt; SignalListenerMessage &gt; &gt; BWMachined::SignalListenerMap</definition>
+        <argsstring></argsstring>
+        <name>SignalListenerMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="207" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_b_w_machined_1a84efc0c49d0a51a853f7f1cdf67bb221" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* BWMachined::STATE_FILE</definition>
+        <argsstring></argsstring>
+        <name>STATE_FILE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="52" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_b_w_machined_1a396e20b339f17bfd9a8e6edc793ab73e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class IncomingPacket</definition>
+        <argsstring></argsstring>
+        <name>IncomingPacket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="65" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_b_w_machined_1a7851d0ee97ba462ddb239f07cc806f8a" prot="private" static="no" mutable="no">
+        <type>DelayedPacketHandler</type>
+        <definition>DelayedPacketHandler BWMachined::delayedPacketHandler_</definition>
+        <argsstring></argsstring>
+        <name>delayedPacketHandler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="115" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a1e1c8278cda5832cc2e977d9827d6dba" prot="private" static="no" mutable="no">
+        <type>UpdateHandler</type>
+        <definition>UpdateHandler BWMachined::updateHandler_</definition>
+        <argsstring></argsstring>
+        <name>updateHandler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="131" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a726b5ea131de213428534e1dee4bb38f" prot="private" static="no" mutable="no">
+        <type>CleanupHandler</type>
+        <definition>CleanupHandler BWMachined::cleanupHandler_</definition>
+        <argsstring></argsstring>
+        <name>cleanupHandler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="147" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1aae0216e9323b5dc69db63728838f54ca" prot="private" static="no" mutable="no">
+        <type><ref refid="class_m_g_m_packet_handler" kindref="compound">MGMPacketHandler</ref></type>
+        <definition>MGMPacketHandler BWMachined::mgmPacketHandler_</definition>
+        <argsstring></argsstring>
+        <name>mgmPacketHandler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="149" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1ad2a8009712c3741ea28812d39c59c515" prot="private" static="no" mutable="no">
+        <type>Mercury::EventDispatcher</type>
+        <definition>Mercury::EventDispatcher BWMachined::dispatcher_</definition>
+        <argsstring></argsstring>
+        <name>dispatcher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="158" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a4d053ebfd55e6a0c373f027775a57e8c" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string BWMachined::pidPath_</definition>
+        <argsstring></argsstring>
+        <name>pidPath_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="160" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a262182cc54fde266a9c856d0d292518c" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string BWMachined::configFile_</definition>
+        <argsstring></argsstring>
+        <name>configFile_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="162" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a473574449a069905700f77c979926a63" prot="private" static="no" mutable="no">
+        <type>u_int32_t</type>
+        <definition>u_int32_t BWMachined::topLevelNodeAddr_</definition>
+        <argsstring></argsstring>
+        <name>topLevelNodeAddr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="164" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a0aeebfb63a70c7ae7fd11f1c89ec3aa2" prot="private" static="no" mutable="no">
+        <type>std::auto_ptr&lt; <ref refid="class_mock_handler" kindref="compound">MockHandler</ref> &gt;</type>
+        <definition>std::auto_ptr&lt; MockHandler &gt; BWMachined::pMockMessageHandler_</definition>
+        <argsstring></argsstring>
+        <name>pMockMessageHandler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="166" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a2cb52d76f2703c3dffd4f0cb1515a1a8" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string BWMachined::internalInterface_</definition>
+        <argsstring></argsstring>
+        <name>internalInterface_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="168" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1ad135aff75f421369a79609b87bbee4de" prot="private" static="no" mutable="no">
+        <type><ref refid="class_network_node" kindref="compound">NetworkNode</ref> *</type>
+        <definition>NetworkNode* BWMachined::pNetworkNode_</definition>
+        <argsstring></argsstring>
+        <name>pNetworkNode_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="170" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a81dae0efd65127bf52ad8771464ca296" prot="private" static="no" mutable="no">
+        <type>NetworkNode::NodeType</type>
+        <definition>NetworkNode::NodeType BWMachined::nodeType_</definition>
+        <argsstring></argsstring>
+        <name>nodeType_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="171" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_b_w_machined_1a97359d6c81fed579a3f978e030694385" prot="protected" static="yes" mutable="no">
+        <type>const TimeQueue64::TimeStamp</type>
+        <definition>const TimeQueue64::TimeStamp BWMachined::UPDATE_INTERVAL_MS</definition>
+        <argsstring></argsstring>
+        <name>UPDATE_INTERVAL_MS</name>
+        <initializer>= 1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="191" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a1df34a50f077e488e4bdf5d0219ef900" prot="protected" static="yes" mutable="no">
+        <type>const TimeQueue64::TimeStamp</type>
+        <definition>const TimeQueue64::TimeStamp BWMachined::CLEANUP_INTERVAL_MS</definition>
+        <argsstring></argsstring>
+        <name>CLEANUP_INTERVAL_MS</name>
+        <initializer>= 250</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="194" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_b_w_machined_1a73aa95a3dc43bb99bcc0aed0b13d7e60" prot="protected" static="no" mutable="no">
+        <type>TagsMap</type>
+        <definition>TagsMap BWMachined::tags_</definition>
+        <argsstring></argsstring>
+        <name>tags_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="197" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a79f50eda5fc241db825d5476b348817c" prot="protected" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string BWMachined::timingMethod_</definition>
+        <argsstring></argsstring>
+        <name>timingMethod_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="198" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a97b86e33f982ffec334300cbe999c325" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_server_platform" kindref="compound">ServerPlatform</ref> *</type>
+        <definition>ServerPlatform* BWMachined::pServerPlatform_</definition>
+        <argsstring></argsstring>
+        <name>pServerPlatform_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="199" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a62f1400c829576c9eee273f4745c8cd1" prot="protected" static="no" mutable="no">
+        <type><ref refid="struct_system_info" kindref="compound">SystemInfo</ref></type>
+        <definition>SystemInfo BWMachined::systemInfo_</definition>
+        <argsstring></argsstring>
+        <name>systemInfo_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="201" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a9341fa1a35eecdc7221e9d4789bbdfda" prot="protected" static="no" mutable="no">
+        <type>ProcessInfoList</type>
+        <definition>ProcessInfoList BWMachined::procs_</definition>
+        <argsstring></argsstring>
+        <name>procs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="202" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a459d814aa686756b58448803cd05642b" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_listeners" kindref="compound">Listeners</ref>&lt; ListenerMessage &gt;</type>
+        <definition>Listeners&lt; ListenerMessage &gt; BWMachined::birthListeners_</definition>
+        <argsstring></argsstring>
+        <name>birthListeners_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="204" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a352b3b6d2a699118c3621d47a9dcf7b2" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_listeners" kindref="compound">Listeners</ref>&lt; ListenerMessage &gt;</type>
+        <definition>Listeners&lt; ListenerMessage &gt; BWMachined::deathListeners_</definition>
+        <argsstring></argsstring>
+        <name>deathListeners_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="205" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a15d96936176390280b13aa39a30c0bb3" prot="protected" static="no" mutable="no">
+        <type>SignalListenerMap</type>
+        <definition>SignalListenerMap BWMachined::signalListeners_</definition>
+        <argsstring></argsstring>
+        <name>signalListeners_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="208" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1aced50474e2a9d21458edd4b833f47738" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_user_map" kindref="compound">UserMap</ref></type>
+        <definition>UserMap BWMachined::users_</definition>
+        <argsstring></argsstring>
+        <name>users_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="210" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1ab9947ab3288336573f9834843eda01bd" prot="protected" static="no" mutable="no">
+        <type>ServerInfo *</type>
+        <definition>ServerInfo* BWMachined::pServerInfo_</definition>
+        <argsstring></argsstring>
+        <name>pServerInfo_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="213" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a7ce05341d41b669a07205c483171b6c9" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_wrapped_message_handler" kindref="compound">WrappedMessageHandler</ref></type>
+        <definition>WrappedMessageHandler BWMachined::wrappedMessageHandler_</definition>
+        <argsstring></argsstring>
+        <name>wrappedMessageHandler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="217" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a05c06696998e5619d2672461d9d981c4" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BWMachined::maxPacketDelayMillisec_</definition>
+        <argsstring></argsstring>
+        <name>maxPacketDelayMillisec_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="221" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_w_machined_1a205026d8925f613e1c145dd9f4e06228" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_syslog_message_handler" kindref="compound">SyslogMessageHandler</ref></type>
+        <definition>SyslogMessageHandler BWMachined::syslogHandler_</definition>
+        <argsstring></argsstring>
+        <name>syslogHandler_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="224" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_b_w_machined_1a44dbcfde46f72855bafaf12636b2c9fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BWMachined::BWMachined</definition>
+        <argsstring>(uint16 port, BW::string &amp;configFile, NetworkNode::NodeType nodeType, BW::string &amp;topLevelNode, bool mockMode=false)</argsstring>
+        <name>BWMachined</name>
+        <param>
+          <type>uint16</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>BW::string &amp;</type>
+          <declname>configFile</declname>
+        </param>
+        <param>
+          <type>NetworkNode::NodeType</type>
+          <declname>nodeType</declname>
+        </param>
+        <param>
+          <type>BW::string &amp;</type>
+          <declname>topLevelNode</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>mockMode</declname>
+          <defname>isMockMode</defname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="42" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="64" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a1030007d7ec3eea8f9aedff1a9134956" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BWMachined::~BWMachined</definition>
+        <argsstring>()</argsstring>
+        <name>~BWMachined</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="45" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="204" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a5ac3ed3374219071267423c24d20a599" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BWMachined::readConfigFile</definition>
+        <argsstring>()</argsstring>
+        <name>readConfigFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method reads the tags from both bwmachined.conf and bigworld.conf. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="47" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="647" bodyend="818"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1afe50ba7b471355ffed3714ce97c8ac60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BWMachined::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: Document me </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="48" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="848" bodyend="912"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a01e5fd40875df3962293da5cc603daa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BWMachined::setPidPath</definition>
+        <argsstring>(BW::string pidPath)</argsstring>
+        <name>setPidPath</name>
+        <param>
+          <type>BW::string</type>
+          <declname>pidPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set PID path read in from command line arguments. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="50" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="570" bodyend="573"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a03a750bee6b7dd5aab5e193705ede91c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BWMachined::save</definition>
+        <argsstring>()</argsstring>
+        <name>save</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes this machine&apos;s process table to disk so it can be restarted under the same state. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="53" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="296" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a9961c77084adda8d932437837d2c985e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BWMachined::writeProcessTable</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>writeProcessTable</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes this machine&apos;s process table to a state file.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename to write the process table to.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, otherwise false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="54" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="335" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a8ba0406fdb9585175dbdda1d6b248b80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BWMachined::load</definition>
+        <argsstring>()</argsstring>
+        <name>load</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads a process table from disk. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="55" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="379" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a5a313f1f77f1ffa023de130a292fda8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ReadProcTableStatus</type>
+        <definition>BWMachined::ReadProcTableStatus BWMachined::readProcessTable</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>readProcessTable</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads and verifies a previously saved state file into the process table.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename to write the process table to.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>BWMachined::ReadProcTableStatus enum </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="56" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="418" bodyend="496"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a737046a01931b162eb2885bb2b2b1411" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>INLINE const char * BWMachined::timingMethod</definition>
+        <argsstring>() const </argsstring>
+        <name>timingMethod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="58" column="1" bodyfile="tools/bwmachined/bwmachined.ipp" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a89e570134fd5df24b510748b8f80d613" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BWMachined::closeEndpoints</definition>
+        <argsstring>()</argsstring>
+        <name>closeEndpoints</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Close all of the open sockets owned by this <ref refid="class_b_w_machined" kindref="compound">BWMachined</ref> object. This is called from inside startProcess() to ensure that child processes don&apos;t hold onto these sockets. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="60" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="504" bodyend="507"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a05f0ab0d3bdeebbaeb27ffe89500fcce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BWMachined::readPacket</definition>
+        <argsstring>(ConnectionWrapperPtr pConnection, BinaryIStream &amp;inputStream)</argsstring>
+        <name>readPacket</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref></type>
+          <declname>pConnection</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>inputStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads a packet from the provided input stream and either delays the packet handling if staggered, otherwise immediately passes it to the handlePacket method.</para><para>The stream is consumed as far as the MGMPacket::read method consumes a stream, which is determined by the packet length as indicated in the stream. This happens on both failure and success.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pConnection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The connection wrapper which received the stream and is to be used for sending replies </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received data in the form of a BinaryIStream</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the packet can be read off the connection wrapper, otherwise false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="62" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="939" bodyend="980"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a4721a3a04f43a7e67ee907d8777a5d3d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BWMachined::maxPacketDelay</definition>
+        <argsstring>() const </argsstring>
+        <name>maxPacketDelay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: Document me </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="67" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="2053" bodyend="2056"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a044ec8f0d7f1bf5f405acbcadf413373" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TimerHandle</type>
+        <definition>TimerHandle BWMachined::addTimer</definition>
+        <argsstring>(TimeQueue64::TimeStamp microseconds, TimerHandler *pHandler, void *arg, const char *name)</argsstring>
+        <name>addTimer</name>
+        <param>
+          <type>TimeQueue64::TimeStamp</type>
+          <declname>microseconds</declname>
+        </param>
+        <param>
+          <type>TimerHandler *</type>
+          <declname>pHandler</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: Document me </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="69" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="2150" bodyend="2154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1afec024c1bfdadcf88b33660e09ed1f9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BWMachined::registerReadFileDescriptor</definition>
+        <argsstring>(const int fd, Mercury::InputNotificationHandler *pHandler, const char *description=NULL)</argsstring>
+        <name>registerReadFileDescriptor</name>
+        <param>
+          <type>const int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>Mercury::InputNotificationHandler *</type>
+          <declname>pHandler</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>description</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: Document me </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="72" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="2109" bodyend="2114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1aa0711a70c7623938975bf9a8a15da97d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BWMachined::deregisterReadFileDescriptor</definition>
+        <argsstring>(const int fd)</argsstring>
+        <name>deregisterReadFileDescriptor</name>
+        <param>
+          <type>const int</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: Document me </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="75" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="2120" bodyend="2123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1af93d3969ef8b2ba3089ee36938bf0140" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BWMachined::registerWriteFileDescriptor</definition>
+        <argsstring>(const int fd, Mercury::InputNotificationHandler *pHandler, const char *description=NULL)</argsstring>
+        <name>registerWriteFileDescriptor</name>
+        <param>
+          <type>const int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>Mercury::InputNotificationHandler *</type>
+          <declname>pHandler</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>description</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: Document me </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="76" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="2129" bodyend="2135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a2e11b5d5094302624b3c1c740b4c648a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BWMachined::deregisterWriteFileDescriptor</definition>
+        <argsstring>(const int fd)</argsstring>
+        <name>deregisterWriteFileDescriptor</name>
+        <param>
+          <type>const int</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: Document me </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="79" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="2141" bodyend="2144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1ac7a52c527f8e57e98c0528997cf56a0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BWMachined::stopProcessing</definition>
+        <argsstring>()</argsstring>
+        <name>stopProcessing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stop the <ref refid="class_b_w_machined" kindref="compound">BWMachined</ref> main processing loop, thus shutting it down. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="81" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="918" bodyend="921"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1af0c08f2c7b605cf92b20dc286c208d78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BWMachined::sendBroadcast</definition>
+        <argsstring>(MachineGuardMessage *pMGM)</argsstring>
+        <name>sendBroadcast</name>
+        <param>
+          <type>MachineGuardMessage *</type>
+          <declname>pMGM</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Broadcasts the provided mgm to the cluster.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pMGM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MGM to broadcast</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, otherwise false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="83" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="1131" bodyend="1134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a524e48715f0827643c410012031f454a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BWMachined::sendBroadcast</definition>
+        <argsstring>(MGMPacket *pPacket)</argsstring>
+        <name>sendBroadcast</name>
+        <param>
+          <type>MGMPacket *</type>
+          <declname>pPacket</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Broadcasts the provided packet to the cluster.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pPacket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The packet to broadcast</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, otherwise false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="84" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="1144" bodyend="1147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a51d2932f1625526980739d4a4df920ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BWMachined::sendWrappedBroadcastPacket</definition>
+        <argsstring>(MGMPacket *pPacket)</argsstring>
+        <name>sendWrappedBroadcastPacket</name>
+        <param>
+          <type>MGMPacket *</type>
+          <declname>pPacket</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Broadcasts the provided wrapped packet to the cluster.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pPacket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The wrapped packet to broadcast.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, otherwise false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="85" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="1157" bodyend="1160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a647bf4134f73b09a44f4100a0507bf73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref> *</type>
+        <definition>BroadcastManager * BWMachined::createBroadcastManager</definition>
+        <argsstring>(BroadcastWrapperMessage &amp;bwm, ConnectionWrapperPtr pReplyConnection, ManagerLookup &amp;lookup)</argsstring>
+        <name>createBroadcastManager</name>
+        <param>
+          <type>BroadcastWrapperMessage &amp;</type>
+          <declname>bwm</declname>
+        </param>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref></type>
+          <declname>pReplyConnection</declname>
+        </param>
+        <param>
+          <type>ManagerLookup &amp;</type>
+          <declname>lookup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref> via the network node.</para><para>The <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref>&apos;s subclass will be specific to the type of <ref refid="class_network_node" kindref="compound">NetworkNode</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bwm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The BroadcastWrapperMessage that the new <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref> sends and handles responses for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pReplyConnection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The connection wrapper to handle sending responses. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lookup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The table to update with sequence number references to the new <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to a <ref refid="class_broadcast_manager" kindref="compound">BroadcastManager</ref> object. This memory must be managed by the caller. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="86" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="1179" bodyend="1184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a43b52bfebb6fd19f0328728e5116ebe0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Mercury::EventDispatcher &amp;</type>
+        <definition>Mercury::EventDispatcher&amp; BWMachined::dispatcher</definition>
+        <argsstring>()</argsstring>
+        <name>dispatcher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="90" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="90" bodyend="93"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_b_w_machined_1aa6dc7412110f1cfc01e72e31185689e2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BWMachined::initNetworkNode</definition>
+        <argsstring>(uint16 port)</argsstring>
+        <name>initNetworkNode</name>
+        <param>
+          <type>uint16</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="97" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="250" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1ab0e808453ee68d231357e484caf94f49" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BWMachined::handleCreateMessage</definition>
+        <argsstring>(ConnectionWrapperPtr pConnection, sockaddr_in &amp;sin, MachineGuardMessage &amp;mgm, MGMPacket &amp;replies)</argsstring>
+        <name>handleCreateMessage</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref></type>
+          <declname>pConnection</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <param>
+          <type>MachineGuardMessage &amp;</type>
+          <declname>mgm</declname>
+        </param>
+        <param>
+          <type>MGMPacket &amp;</type>
+          <declname>replies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: Document me </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="99" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="1882" bodyend="2047"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1ae61b25c143999c79055945f50d612545" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BWMachined::allCleanupOperations</definition>
+        <argsstring>(bool freeAll)</argsstring>
+        <name>allCleanupOperations</name>
+        <param>
+          <type>bool</type>
+          <declname>freeAll</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: Document me </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="102" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="2160" bodyend="2169"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1ac21594b47493a136d5d1cdc0b593266f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BWMachined::resolveAndSetTopLevelNodeAddress</definition>
+        <argsstring>(BW::string topLevelNode)</argsstring>
+        <name>resolveAndSetTopLevelNodeAddress</name>
+        <param>
+          <type>BW::string</type>
+          <declname>topLevelNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resolves hostname or IP, converts to an in_addr and stores in topLevelNodeAddr_</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topLevelNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hostname or IP to resolve</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if resolve and set was successful, false otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="104" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="829" bodyend="842"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_b_w_machined_1ae8148ea7f98ffda819be008c6acc0114" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BWMachined::findBroadcastInterface</definition>
+        <argsstring>()</argsstring>
+        <name>findBroadcastInterface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="174" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a51731c6c0a6d2541beb071d2f6794d7c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BWMachined::updateSystemInfo</definition>
+        <argsstring>()</argsstring>
+        <name>updateSystemInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: Document me </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="175" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="986" bodyend="1071"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a6e94b835a313e1428e08efe72471666e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BWMachined::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: Document me </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="176" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="1077" bodyend="1102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a695587c8c5c73c1f28965053a5184b99" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BWMachined::broadcastToListeners</definition>
+        <argsstring>(ProcessMessage &amp;pm, int type)</argsstring>
+        <name>broadcastToListeners</name>
+        <param>
+          <type>ProcessMessage &amp;</type>
+          <declname>pm</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inform other machined&apos;s on the network about the birth or death of a process on this machine so that they can in turn inform their registered listeners about it.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>TODO</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="177" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="1112" bodyend="1121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1aa769abaa4339d51a837cf4877fd3d1a4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BWMachined::removeRegisteredProc</definition>
+        <argsstring>(unsigned index)</argsstring>
+        <name>removeRegisteredProc</name>
+        <param>
+          <type>unsigned</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: Document me </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="178" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="1190" bodyend="1205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a521df66418205699c135e440408e151d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BWMachined::sendSignal</definition>
+        <argsstring>(const SignalMessage &amp;sm, in_addr addr)</argsstring>
+        <name>sendSignal</name>
+        <param>
+          <type>const SignalMessage &amp;</type>
+          <declname>sm</declname>
+        </param>
+        <param>
+          <type>in_addr</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: Document me </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="179" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="1211" bodyend="1233"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a51171389b40f4e0824fee593c1a11721" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BWMachined::handlePacket</definition>
+        <argsstring>(ConnectionWrapperPtr pConnection, sockaddr_in &amp;sin, MGMPacket &amp;packet)</argsstring>
+        <name>handlePacket</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref></type>
+          <declname>pConnection</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <param>
+          <type>MGMPacket &amp;</type>
+          <declname>packet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method invokes the handler for each message in the packet.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>TODO</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="181" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="1241" bodyend="1292"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a6d2f3b123f0a7f21796184afdc65cb8c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BWMachined::handleMessage</definition>
+        <argsstring>(ConnectionWrapperPtr pConnection, sockaddr_in &amp;sin, MachineGuardMessage &amp;mgm, MGMPacket &amp;replies)</argsstring>
+        <name>handleMessage</name>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">ConnectionWrapperPtr</ref></type>
+          <declname>pConnection</declname>
+        </param>
+        <param>
+          <type>sockaddr_in &amp;</type>
+          <declname>sin</declname>
+        </param>
+        <param>
+          <type>MachineGuardMessage &amp;</type>
+          <declname>mgm</declname>
+        </param>
+        <param>
+          <type>MGMPacket &amp;</type>
+          <declname>replies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Processes a received MGM and adds MGM responses to the replies param.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pConnection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the connection wrapper which received the message and can be used to send replies over </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address that received the message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mgm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received MGM </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>replies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mgm packet to append replies to</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="183" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="1306" bodyend="1876"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a260de47a40716d1feea701eba82204a4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BWMachined::readConfigFile</definition>
+        <argsstring>(FILE *pFile)</argsstring>
+        <name>readConfigFile</name>
+        <param>
+          <type>FILE *</type>
+          <declname>pFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read the tags from specified configuration file. No need to close input file.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the file handle of a config file.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if file parsing was successful, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="186" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="584" bodyend="641"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1a4ce11009f0983102f1b2b9b5263c6107" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * BWMachined::findOption</definition>
+        <argsstring>(const char *optionName, const char *oldOptionName)</argsstring>
+        <name>findOption</name>
+        <param>
+          <type>const char *</type>
+          <declname>optionName</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>oldOptionName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="187" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="514" bodyend="564"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="419">
+        <label>BWMachined</label>
+        <link refid="class_b_w_machined"/>
+        <childnode refid="420" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="420">
+        <label>Singleton&lt; BWMachined &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="423">
+        <label>WrappedMessageHandler</label>
+        <link refid="class_wrapped_message_handler"/>
+      </node>
+      <node id="426">
+        <label>Listeners&lt; ListenerMessage &gt;</label>
+        <link refid="class_listeners"/>
+      </node>
+      <node id="421">
+        <label>BWMachined</label>
+        <link refid="class_b_w_machined"/>
+        <childnode refid="422" relation="public-inheritance">
+        </childnode>
+        <childnode refid="423" relation="usage">
+          <edgelabel>wrappedMessageHandler_</edgelabel>
+        </childnode>
+        <childnode refid="424" relation="usage">
+          <edgelabel>syslogHandler_</edgelabel>
+        </childnode>
+        <childnode refid="426" relation="usage">
+          <edgelabel>deathListeners_</edgelabel>
+          <edgelabel>birthListeners_</edgelabel>
+        </childnode>
+        <childnode refid="427" relation="usage">
+          <edgelabel>systemInfo_</edgelabel>
+        </childnode>
+        <childnode refid="430" relation="usage">
+          <edgelabel>pServerPlatform_</edgelabel>
+        </childnode>
+        <childnode refid="431" relation="usage">
+          <edgelabel>users_</edgelabel>
+        </childnode>
+      </node>
+      <node id="429">
+        <label>MaxStat</label>
+        <link refid="struct_max_stat"/>
+        <childnode refid="428" relation="usage">
+          <edgelabel>val</edgelabel>
+          <edgelabel>max</edgelabel>
+        </childnode>
+      </node>
+      <node id="422">
+        <label>Singleton&lt; BWMachined &gt;</label>
+      </node>
+      <node id="430">
+        <label>ServerPlatform</label>
+        <link refid="class_server_platform"/>
+        <childnode refid="421" relation="usage">
+          <edgelabel>machined_</edgelabel>
+        </childnode>
+      </node>
+      <node id="427">
+        <label>SystemInfo</label>
+        <link refid="struct_system_info"/>
+        <childnode refid="428" relation="usage">
+          <edgelabel>packTotIn</edgelabel>
+          <edgelabel>packDropOut</edgelabel>
+          <edgelabel>packTotOut</edgelabel>
+          <edgelabel>packDropIn</edgelabel>
+        </childnode>
+        <childnode refid="429" relation="usage">
+          <edgelabel>iowait</edgelabel>
+          <edgelabel>mem</edgelabel>
+        </childnode>
+      </node>
+      <node id="431">
+        <label>UserMap</label>
+        <link refid="class_user_map"/>
+      </node>
+      <node id="428">
+        <label>Stat&lt; uint64 &gt;</label>
+        <link refid="class_stat"/>
+      </node>
+      <node id="425">
+        <label>DebugMessageCallback</label>
+      </node>
+      <node id="424">
+        <label>SyslogMessageHandler</label>
+        <link refid="class_syslog_message_handler"/>
+        <childnode refid="425" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/bwmachined/bwmachined.hpp" line="31" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="30" bodyend="227"/>
+    <listofallmembers>
+      <member refid="class_b_w_machined_1a044ec8f0d7f1bf5f405acbcadf413373" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>addTimer</name></member>
+      <member refid="class_b_w_machined_1ae61b25c143999c79055945f50d612545" prot="private" virt="non-virtual"><scope>BWMachined</scope><name>allCleanupOperations</name></member>
+      <member refid="class_b_w_machined_1a459d814aa686756b58448803cd05642b" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>birthListeners_</name></member>
+      <member refid="class_b_w_machined_1a695587c8c5c73c1f28965053a5184b99" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>broadcastToListeners</name></member>
+      <member refid="class_b_w_machined_1a44dbcfde46f72855bafaf12636b2c9fc" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>BWMachined</name></member>
+      <member refid="class_b_w_machined_1a1df34a50f077e488e4bdf5d0219ef900" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>CLEANUP_INTERVAL_MS</name></member>
+      <member refid="class_b_w_machined_1a726b5ea131de213428534e1dee4bb38f" prot="private" virt="non-virtual"><scope>BWMachined</scope><name>cleanupHandler_</name></member>
+      <member refid="class_b_w_machined_1a89e570134fd5df24b510748b8f80d613" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>closeEndpoints</name></member>
+      <member refid="class_b_w_machined_1a262182cc54fde266a9c856d0d292518c" prot="private" virt="non-virtual"><scope>BWMachined</scope><name>configFile_</name></member>
+      <member refid="class_b_w_machined_1a647bf4134f73b09a44f4100a0507bf73" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>createBroadcastManager</name></member>
+      <member refid="class_b_w_machined_1a352b3b6d2a699118c3621d47a9dcf7b2" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>deathListeners_</name></member>
+      <member refid="class_b_w_machined_1a7851d0ee97ba462ddb239f07cc806f8a" prot="private" virt="non-virtual"><scope>BWMachined</scope><name>delayedPacketHandler_</name></member>
+      <member refid="class_b_w_machined_1aa0711a70c7623938975bf9a8a15da97d" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>deregisterReadFileDescriptor</name></member>
+      <member refid="class_b_w_machined_1a2e11b5d5094302624b3c1c740b4c648a" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>deregisterWriteFileDescriptor</name></member>
+      <member refid="class_b_w_machined_1a43b52bfebb6fd19f0328728e5116ebe0" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>dispatcher</name></member>
+      <member refid="class_b_w_machined_1ad2a8009712c3741ea28812d39c59c515" prot="private" virt="non-virtual"><scope>BWMachined</scope><name>dispatcher_</name></member>
+      <member refid="class_b_w_machined_1ae8148ea7f98ffda819be008c6acc0114" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>findBroadcastInterface</name></member>
+      <member refid="class_b_w_machined_1a4ce11009f0983102f1b2b9b5263c6107" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>findOption</name></member>
+      <member refid="class_b_w_machined_1ab0e808453ee68d231357e484caf94f49" prot="private" virt="non-virtual"><scope>BWMachined</scope><name>handleCreateMessage</name></member>
+      <member refid="class_b_w_machined_1a6d2f3b123f0a7f21796184afdc65cb8c" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>handleMessage</name></member>
+      <member refid="class_b_w_machined_1a51171389b40f4e0824fee593c1a11721" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>handlePacket</name></member>
+      <member refid="class_b_w_machined_1a396e20b339f17bfd9a8e6edc793ab73e" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>IncomingPacket</name></member>
+      <member refid="class_b_w_machined_1aa6dc7412110f1cfc01e72e31185689e2" prot="private" virt="non-virtual"><scope>BWMachined</scope><name>initNetworkNode</name></member>
+      <member refid="class_b_w_machined_1a2cb52d76f2703c3dffd4f0cb1515a1a8" prot="private" virt="non-virtual"><scope>BWMachined</scope><name>internalInterface_</name></member>
+      <member refid="class_b_w_machined_1a8ba0406fdb9585175dbdda1d6b248b80" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>load</name></member>
+      <member refid="class_b_w_machined_1a4721a3a04f43a7e67ee907d8777a5d3d" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>maxPacketDelay</name></member>
+      <member refid="class_b_w_machined_1a05c06696998e5619d2672461d9d981c4" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>maxPacketDelayMillisec_</name></member>
+      <member refid="class_b_w_machined_1aae0216e9323b5dc69db63728838f54ca" prot="private" virt="non-virtual"><scope>BWMachined</scope><name>mgmPacketHandler_</name></member>
+      <member refid="class_b_w_machined_1a81dae0efd65127bf52ad8771464ca296" prot="private" virt="non-virtual"><scope>BWMachined</scope><name>nodeType_</name></member>
+      <member refid="class_b_w_machined_1a4d053ebfd55e6a0c373f027775a57e8c" prot="private" virt="non-virtual"><scope>BWMachined</scope><name>pidPath_</name></member>
+      <member refid="class_b_w_machined_1a0aeebfb63a70c7ae7fd11f1c89ec3aa2" prot="private" virt="non-virtual"><scope>BWMachined</scope><name>pMockMessageHandler_</name></member>
+      <member refid="class_b_w_machined_1ad135aff75f421369a79609b87bbee4de" prot="private" virt="non-virtual"><scope>BWMachined</scope><name>pNetworkNode_</name></member>
+      <member refid="class_b_w_machined_1a9341fa1a35eecdc7221e9d4789bbdfda" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>procs_</name></member>
+      <member refid="class_b_w_machined_1ab9947ab3288336573f9834843eda01bd" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>pServerInfo_</name></member>
+      <member refid="class_b_w_machined_1a97b86e33f982ffec334300cbe999c325" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>pServerPlatform_</name></member>
+      <member refid="class_b_w_machined_1a3a8991d55b45e12a891c873802adbe79ad58379bd76a8df38cfea630fbc5acda5" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>READ_PROC_ERROR_CORRUPT_FILE</name></member>
+      <member refid="class_b_w_machined_1a3a8991d55b45e12a891c873802adbe79a9fd828b035edd9c61b1a6d356745d985" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>READ_PROC_ERROR_FILE_NOT_FOUND</name></member>
+      <member refid="class_b_w_machined_1a3a8991d55b45e12a891c873802adbe79a0f90dca1f59ae80e21f8514e72f0d57b" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>READ_PROC_ERROR_OUTDATED_FILE</name></member>
+      <member refid="class_b_w_machined_1a3a8991d55b45e12a891c873802adbe79a1a5c59a21696502d2011e98e5d98b8c3" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>READ_PROC_ERROR_STAT_FILE_FAILED</name></member>
+      <member refid="class_b_w_machined_1a3a8991d55b45e12a891c873802adbe79a4565eaa012421dfb4a49feb6e4b21226" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>READ_PROC_SUCCESS</name></member>
+      <member refid="class_b_w_machined_1a5ac3ed3374219071267423c24d20a599" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>readConfigFile</name></member>
+      <member refid="class_b_w_machined_1a260de47a40716d1feea701eba82204a4" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>readConfigFile</name></member>
+      <member refid="class_b_w_machined_1a05f0ab0d3bdeebbaeb27ffe89500fcce" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>readPacket</name></member>
+      <member refid="class_b_w_machined_1a5a313f1f77f1ffa023de130a292fda8c" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>readProcessTable</name></member>
+      <member refid="class_b_w_machined_1a3a8991d55b45e12a891c873802adbe79" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>ReadProcTableStatus</name></member>
+      <member refid="class_b_w_machined_1afec024c1bfdadcf88b33660e09ed1f9c" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>registerReadFileDescriptor</name></member>
+      <member refid="class_b_w_machined_1af93d3969ef8b2ba3089ee36938bf0140" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>registerWriteFileDescriptor</name></member>
+      <member refid="class_b_w_machined_1aa769abaa4339d51a837cf4877fd3d1a4" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>removeRegisteredProc</name></member>
+      <member refid="class_b_w_machined_1ac21594b47493a136d5d1cdc0b593266f" prot="private" virt="non-virtual"><scope>BWMachined</scope><name>resolveAndSetTopLevelNodeAddress</name></member>
+      <member refid="class_b_w_machined_1afe50ba7b471355ffed3714ce97c8ac60" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>run</name></member>
+      <member refid="class_b_w_machined_1a03a750bee6b7dd5aab5e193705ede91c" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>save</name></member>
+      <member refid="class_b_w_machined_1af0c08f2c7b605cf92b20dc286c208d78" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>sendBroadcast</name></member>
+      <member refid="class_b_w_machined_1a524e48715f0827643c410012031f454a" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>sendBroadcast</name></member>
+      <member refid="class_b_w_machined_1a521df66418205699c135e440408e151d" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>sendSignal</name></member>
+      <member refid="class_b_w_machined_1a51d2932f1625526980739d4a4df920ef" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>sendWrappedBroadcastPacket</name></member>
+      <member refid="class_b_w_machined_1a01e5fd40875df3962293da5cc603daa0" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>setPidPath</name></member>
+      <member refid="class_b_w_machined_1aecf4ad37cf30e2baad6c45de0bee5fce" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>SignalListenerMap</name></member>
+      <member refid="class_b_w_machined_1a15d96936176390280b13aa39a30c0bb3" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>signalListeners_</name></member>
+      <member refid="class_b_w_machined_1a84efc0c49d0a51a853f7f1cdf67bb221" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>STATE_FILE</name></member>
+      <member refid="class_b_w_machined_1ac7a52c527f8e57e98c0528997cf56a0e" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>stopProcessing</name></member>
+      <member refid="class_b_w_machined_1a205026d8925f613e1c145dd9f4e06228" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>syslogHandler_</name></member>
+      <member refid="class_b_w_machined_1a62f1400c829576c9eee273f4745c8cd1" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>systemInfo_</name></member>
+      <member refid="class_b_w_machined_1a73aa95a3dc43bb99bcc0aed0b13d7e60" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>tags_</name></member>
+      <member refid="class_b_w_machined_1aa99840c6a02a47e07664776cdfc44824" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>TagsMap</name></member>
+      <member refid="class_b_w_machined_1a737046a01931b162eb2885bb2b2b1411" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>timingMethod</name></member>
+      <member refid="class_b_w_machined_1a79f50eda5fc241db825d5476b348817c" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>timingMethod_</name></member>
+      <member refid="class_b_w_machined_1a473574449a069905700f77c979926a63" prot="private" virt="non-virtual"><scope>BWMachined</scope><name>topLevelNodeAddr_</name></member>
+      <member refid="class_b_w_machined_1a6e94b835a313e1428e08efe72471666e" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>update</name></member>
+      <member refid="class_b_w_machined_1a97359d6c81fed579a3f978e030694385" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>UPDATE_INTERVAL_MS</name></member>
+      <member refid="class_b_w_machined_1a1e1c8278cda5832cc2e977d9827d6dba" prot="private" virt="non-virtual"><scope>BWMachined</scope><name>updateHandler_</name></member>
+      <member refid="class_b_w_machined_1a51731c6c0a6d2541beb071d2f6794d7c" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>updateSystemInfo</name></member>
+      <member refid="class_b_w_machined_1aced50474e2a9d21458edd4b833f47738" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>users_</name></member>
+      <member refid="class_b_w_machined_1a7ce05341d41b669a07205c483171b6c9" prot="protected" virt="non-virtual"><scope>BWMachined</scope><name>wrappedMessageHandler_</name></member>
+      <member refid="class_b_w_machined_1a9961c77084adda8d932437837d2c985e" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>writeProcessTable</name></member>
+      <member refid="class_b_w_machined_1a1030007d7ec3eea8f9aedff1a9134956" prot="public" virt="non-virtual"><scope>BWMachined</scope><name>~BWMachined</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

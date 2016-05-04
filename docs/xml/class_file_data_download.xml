@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_file_data_download" kind="class" language="C++" prot="public">
+    <compoundname>FileDataDownload</compoundname>
+    <basecompoundref refid="class_data_download" prot="public" virt="non-virtual">DataDownload</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_file_data_download_1a514263588da8764fd53b4b9bf49054cd" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_file_streaming_job" kindref="compound">FileStreamingJob</ref> *</type>
+        <definition>FileStreamingJob* FileDataDownload::pJob_</definition>
+        <argsstring></argsstring>
+        <name>pJob_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.cpp" line="591" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="591" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_file_data_download_1a84bb07335fcbe89650594c1a45b222c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FileDataDownload::FileDataDownload</definition>
+        <argsstring>(const BW::string &amp;path, PyObjectPtr pDesc, uint16 id, DataDownloads &amp;dls)</argsstring>
+        <name>FileDataDownload</name>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+          <declname>pDesc</declname>
+        </param>
+        <param>
+          <type>uint16</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_data_downloads" kindref="compound">DataDownloads</ref> &amp;</type>
+          <declname>dls</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.cpp" line="579" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="598" bodyend="608"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_data_download_1a593305681a86451c8fc77454ef6dd8b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>FileDataDownload::~FileDataDownload</definition>
+        <argsstring>()</argsstring>
+        <name>~FileDataDownload</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.cpp" line="582" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="614" bodyend="620"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_file_data_download_1a0f823d19bfc3c537f4b55822c12ab472" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void FileDataDownload::read</definition>
+        <argsstring>(BinaryOStream &amp;os, int nBytes)</argsstring>
+        <name>read</name>
+        <reimplements refid="class_data_download_1a3c48d27ba5b37959e93f714acdf9cb5d">read</reimplements>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nBytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.cpp" line="585" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="626" bodyend="629"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_data_download_1a1aae6219f80d24efc0c8d6ba39b39b22" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int FileDataDownload::available</definition>
+        <argsstring>() const </argsstring>
+        <name>available</name>
+        <reimplements refid="class_data_download_1a0b4a69d42967057194360c131f20ab0a">available</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.cpp" line="587" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="635" bodyend="638"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_data_download_1a0a611369919b1bff72232b6db2253496" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool FileDataDownload::done</definition>
+        <argsstring>() const </argsstring>
+        <name>done</name>
+        <reimplements refid="class_data_download_1ae185eb2c52d73219875ab42f613fb241">done</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.cpp" line="588" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="644" bodyend="647"/>
+      </memberdef>
+      <memberdef kind="function" id="class_file_data_download_1a04587cdfcacc8d942014a91b3f6b2c61" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool FileDataDownload::good</definition>
+        <argsstring>() const </argsstring>
+        <name>good</name>
+        <reimplements refid="class_data_download_1ab6e3f7940893b552cc68427a3cba07b9">good</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.cpp" line="589" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="653" bodyend="656"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A file being sent with streamFileToClient(). </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1254">
+        <label>DataDownload</label>
+        <link refid="class_data_download"/>
+      </node>
+      <node id="1253">
+        <label>FileDataDownload</label>
+        <link refid="class_file_data_download"/>
+        <childnode refid="1254" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1256">
+        <label>DataDownload</label>
+        <link refid="class_data_download"/>
+      </node>
+      <node id="1255">
+        <label>FileDataDownload</label>
+        <link refid="class_file_data_download"/>
+        <childnode refid="1256" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1257" relation="usage">
+          <edgelabel>pJob_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1258">
+        <label>WorkerJob</label>
+        <link refid="class_worker_job"/>
+      </node>
+      <node id="1257">
+        <label>FileStreamingJob</label>
+        <link refid="class_file_streaming_job"/>
+        <childnode refid="1258" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/data_downloads.cpp" line="577" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="576" bodyend="592"/>
+    <listofallmembers>
+      <member refid="class_data_download_1a8251e1a58fdd63ed6aadd09c767b6991" prot="public" virt="non-virtual"><scope>FileDataDownload</scope><name>addToBundle</name></member>
+      <member refid="class_file_data_download_1a1aae6219f80d24efc0c8d6ba39b39b22" prot="protected" virt="virtual"><scope>FileDataDownload</scope><name>available</name></member>
+      <member refid="class_data_download_1a2da7474b666371ca9e87e96db63adc5b" prot="public" virt="non-virtual"><scope>FileDataDownload</scope><name>DataDownload</name></member>
+      <member refid="class_file_data_download_1a0a611369919b1bff72232b6db2253496" prot="protected" virt="virtual"><scope>FileDataDownload</scope><name>done</name></member>
+      <member refid="class_file_data_download_1a84bb07335fcbe89650594c1a45b222c4" prot="public" virt="non-virtual"><scope>FileDataDownload</scope><name>FileDataDownload</name></member>
+      <member refid="class_file_data_download_1a04587cdfcacc8d942014a91b3f6b2c61" prot="protected" virt="virtual"><scope>FileDataDownload</scope><name>good</name></member>
+      <member refid="class_data_download_1a94463d085134f7f36acddfd0da9e5de2" prot="protected" virt="non-virtual"><scope>FileDataDownload</scope><name>good_</name></member>
+      <member refid="class_data_download_1a374332e0e03422bdbcef802d9c89c6be" prot="public" virt="non-virtual"><scope>FileDataDownload</scope><name>id</name></member>
+      <member refid="class_data_download_1acce39ddebe3f4c3897536e390670d6f3" prot="public" virt="non-virtual"><scope>FileDataDownload</scope><name>id</name></member>
+      <member refid="class_data_download_1a8201535c10d41b071f222a3148ae88eb" prot="public" virt="non-virtual"><scope>FileDataDownload</scope><name>onDone</name></member>
+      <member refid="class_data_download_1a8fe543df98aa46a51905938c2a271872" prot="public" virt="non-virtual"><scope>FileDataDownload</scope><name>packetOverhead</name></member>
+      <member refid="class_file_data_download_1a514263588da8764fd53b4b9bf49054cd" prot="protected" virt="non-virtual"><scope>FileDataDownload</scope><name>pJob_</name></member>
+      <member refid="class_file_data_download_1a0f823d19bfc3c537f4b55822c12ab472" prot="protected" virt="virtual"><scope>FileDataDownload</scope><name>read</name></member>
+      <member refid="class_data_download_1ae277f0c7dca3d234ed5a52477340c9b2" prot="public" virt="virtual"><scope>FileDataDownload</scope><name>~DataDownload</name></member>
+      <member refid="class_file_data_download_1a593305681a86451c8fc77454ef6dd8b3" prot="public" virt="virtual"><scope>FileDataDownload</scope><name>~FileDataDownload</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

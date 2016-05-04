@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="server__platform__windows_8hpp" kind="file" language="C++">
+    <compoundname>server_platform_windows.hpp</compoundname>
+    <includes refid="server__platform_8hpp" local="yes">server_platform.hpp</includes>
+    <includes local="yes">cstdmf/bw_namespace.hpp</includes>
+    <includedby refid="server__platform__windows_8cpp" local="yes">tools/bwmachined/server_platform_windows.cpp</includedby>
+    <incdepgraph>
+      <node id="18210">
+        <label>cstdmf/memory_stream.hpp</label>
+      </node>
+      <node id="18200">
+        <label>tools/bwmachined/server_platform_windows.hpp</label>
+        <link refid="server_platform_windows.hpp"/>
+        <childnode refid="18201" relation="include">
+        </childnode>
+        <childnode refid="18212" relation="include">
+        </childnode>
+      </node>
+      <node id="18213">
+        <label>cstdmf/stdmf.hpp</label>
+      </node>
+      <node id="18208">
+        <label>network/endpoint.hpp</label>
+      </node>
+      <node id="18205">
+        <label>network/machine_guard.hpp</label>
+      </node>
+      <node id="18209">
+        <label>cstdmf/binary_stream.hpp</label>
+      </node>
+      <node id="18211">
+        <label>cstdmf/smartpointer.hpp</label>
+      </node>
+      <node id="18203">
+        <label>cstdmf/bw_string.hpp</label>
+      </node>
+      <node id="18204">
+        <label>usermap.hpp</label>
+        <link refid="usermap_8hpp_source"/>
+        <childnode refid="18205" relation="include">
+        </childnode>
+      </node>
+      <node id="18214">
+        <label>cstdmf/bw_set.hpp</label>
+      </node>
+      <node id="18218">
+        <label>sys/types.h</label>
+      </node>
+      <node id="18207">
+        <label>connection_wrapper.hpp</label>
+        <link refid="connection__wrapper_8hpp_source"/>
+        <childnode refid="18208" relation="include">
+        </childnode>
+        <childnode refid="18209" relation="include">
+        </childnode>
+        <childnode refid="18210" relation="include">
+        </childnode>
+        <childnode refid="18211" relation="include">
+        </childnode>
+      </node>
+      <node id="18217">
+        <label>network/portmap.hpp</label>
+      </node>
+      <node id="18216">
+        <label>network/interfaces.hpp</label>
+      </node>
+      <node id="18212">
+        <label>cstdmf/bw_namespace.hpp</label>
+      </node>
+      <node id="18202">
+        <label>process_binary_version.hpp</label>
+        <link refid="process__binary__version_8hpp_source"/>
+        <childnode refid="18203" relation="include">
+        </childnode>
+      </node>
+      <node id="18206">
+        <label>message_with_destination.hpp</label>
+        <link refid="message__with__destination_8hpp_source"/>
+        <childnode refid="18207" relation="include">
+        </childnode>
+        <childnode refid="18205" relation="include">
+        </childnode>
+        <childnode refid="18208" relation="include">
+        </childnode>
+      </node>
+      <node id="18215">
+        <label>cstdmf/bw_vector.hpp</label>
+      </node>
+      <node id="18201">
+        <label>server_platform.hpp</label>
+        <link refid="server__platform_8hpp_source"/>
+        <childnode refid="18202" relation="include">
+        </childnode>
+        <childnode refid="18204" relation="include">
+        </childnode>
+        <childnode refid="18206" relation="include">
+        </childnode>
+        <childnode refid="18212" relation="include">
+        </childnode>
+        <childnode refid="18203" relation="include">
+        </childnode>
+        <childnode refid="18213" relation="include">
+        </childnode>
+        <childnode refid="18214" relation="include">
+        </childnode>
+        <childnode refid="18209" relation="include">
+        </childnode>
+        <childnode refid="18215" relation="include">
+        </childnode>
+        <childnode refid="18216" relation="include">
+        </childnode>
+        <childnode refid="18217" relation="include">
+        </childnode>
+        <childnode refid="18205" relation="include">
+        </childnode>
+        <childnode refid="18218" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_server_platform_windows" prot="public">ServerPlatformWindows</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SERVER_PLATFORM_WINDOWS_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVER_PLATFORM_WINDOWS_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;server_platform.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/bw_namespace.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_server_platform_windows" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_server_platform_windows" kindref="compound">ServerPlatformWindows</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_server_platform" kindref="compound">ServerPlatform</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_server_platform_windows_1a821c363ecad16f803690bd4e53834464" kindref="member">ServerPlatformWindows</ref>(<sp/><ref refid="class_b_w_machined" kindref="compound">BWMachined</ref><sp/>&amp;<sp/>machined<sp/>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Overrides<sp/>from<sp/>ServerPlatform</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_server_platform_windows_1abdd8a9135b4ec77ab1211c4c797457a5" kindref="member">isProcessRunning</ref>(<sp/>uint16<sp/>pid<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_server_platform_windows_1acb69df9fc04a21bc228277d9b0ed7060" kindref="member">killProcess</ref>(<sp/>uint16<sp/>pid,<sp/>uint8<sp/>signal<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_server_platform_windows_1aaef93c4044daf381aa2a6592798af6b5" kindref="member">updateSystemInfo</ref>(<sp/><ref refid="struct_system_info" kindref="compound">SystemInfo</ref><sp/>&amp;<sp/>systemInfo,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ServerInfo<sp/>*<sp/>pServerInfo<sp/>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_server_platform_windows_1a3c8416b6d1584044482af31fd39d10a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_server_platform_windows_1a3c8416b6d1584044482af31fd39d10a0" kindref="member">checkCoreDumps</ref>(<sp/>MachineGuardMessage::UserId<sp/>uid,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>bwRoot,<sp/>UserMessage::CoreDumps<sp/>&amp;<sp/>coreDumps<sp/>)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_server_platform_windows_1a497eefaf2e783333423d54918006a082" kindref="member">updateCPUInfo</ref>(<sp/><ref refid="struct_system_info" kindref="compound">SystemInfo</ref><sp/>&amp;<sp/>systemInfo<sp/>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_server_platform_windows_1a39789bf89a7a70d5e1ba668babb70ff9" kindref="member">canProcessMessageWithUid</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>msgUid<sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>UserMessage*<sp/><ref refid="class_server_platform_windows_1ac119e1d31e87fb793c4f7752d660023e" kindref="member">addUserToMapByUid</ref>(<sp/><ref refid="class_user_map" kindref="compound">UserMap</ref><sp/>*<sp/>pUserMap,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>uid<sp/>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>UserMessage*<sp/><ref refid="class_server_platform_windows_1ae92933c8538a12ba9166a06417f3d8ac" kindref="member">addUserToMapByUsername</ref>(<sp/><ref refid="class_user_map" kindref="compound">UserMap</ref><sp/>*<sp/>pUserMap,<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>pUserName<sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_server_platform_windows_1aea5af165bd19b9bd120d8de412b658b2" kindref="member">notifyNetworkInitialised</ref>(<sp/>uint16<sp/>port<sp/>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="class_server_platform_windows_1a0c1f75cff57313a023cab94596f4ce3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/><ref refid="class_server_platform_windows_1a0c1f75cff57313a023cab94596f4ce3e" kindref="member">stateFileName</ref>()</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stateFileName_;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getProcessCpuMem(BW::ProcessInfo<sp/>&amp;pi,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BW::SystemInfo<sp/>&amp;si);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bool<sp/>updateProcessStats(ThingData<sp/>&amp;<sp/>td);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getProcessorSpeeds(<sp/>BW::vector&lt;float&gt;<sp/>&amp;speeds<sp/>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>true<sp/>if<sp/>the<sp/>pPmwd<sp/>is<sp/>ready<sp/>to<sp/>send</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>(having<sp/>updated<sp/>the<sp/>values<sp/>for<sp/>PidMessage::pid_<sp/>and<sp/>pidMessage::running_)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>otherwise<sp/>the<sp/>machine-guard<sp/>code<sp/>has<sp/>claimed<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>will<sp/>dispose<sp/>of<sp/>it<sp/>later</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>startProcess(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>bwBinaryDir,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>bwResPath,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>config,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>binaryName,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MachineGuardMessage::UserId<sp/>uid,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16<sp/>gid,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>home,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BW::vector&lt;<sp/>const<sp/>char<sp/>*<sp/>&gt;<sp/>args,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_message_with_destination" kindref="compound">PidMessageWithDestination</ref><sp/>*<sp/>pPmwd<sp/>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>validateProcessInfo(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_process_info" kindref="compound">ProcessInfo</ref><sp/>&amp;processInfo<sp/>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>updateProcessStats(<sp/><ref refid="struct_process_info" kindref="compound">ProcessInfo</ref><sp/>&amp;pi,<sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_system_info" kindref="compound">SystemInfo</ref><sp/>&amp;si<sp/>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>BW::string<sp/>getMachineConfigFileName()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>BW::string<sp/>getBigWorldConfigFileName()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BW::vector&lt;<sp/>BW::string<sp/>&gt;<sp/><ref refid="class_server_platform_1a5ea03261fef71821068ef416580b4034" kindref="member">StringList</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initKernelVersion()<sp/>{}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>initArchitecture();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initAppDataPath();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64<sp/>subtractFileTime(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FILETIME<sp/>&amp;<sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>FILETIME<sp/>&amp;<sp/>b<sp/>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>directoryExists(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>directoryPath<sp/>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>discoverCoreFilesWithin(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>basePath,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UserMessage::CoreDumps<sp/>&amp;<sp/>coreDumps<sp/>)<sp/>{}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>checkBinariesExist(<sp/>MachineGuardMessage::UserId<sp/>uid,<sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BW::string<sp/>&amp;<sp/>bwRoot,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ProcessSet<sp/>&amp;<sp/>processes<sp/>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FILETIME<sp/>structures<sp/>used<sp/>to<sp/>determine<sp/>CPU<sp/>load.<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>FILETIME<sp/>prevSysKernel_;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>FILETIME<sp/>prevSysUser_;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>FILETIME<sp/>prevProcKernel_;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>FILETIME<sp/>prevProcUser_;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Caching<sp/>of<sp/>the<sp/>Windows<sp/>UID<sp/>environment<sp/>variable.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>windowsUid_;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>word<sp/>size<sp/>of<sp/>the<sp/>host<sp/>architecture<sp/>(32<sp/>/<sp/>64)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>BW::string<sp/>architecture_;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>hasExtendedStats_;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>full<sp/>file<sp/>path<sp/>in<sp/>which<sp/>to<sp/>store<sp/>the<sp/>process<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>BW::string<sp/>appDataPath_;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>BW::string<sp/>stateFileName_;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SERVER_PLATFORM_WINDOWS_HPP</highlight></codeline>
+    </programlisting>
+    <location file="tools/bwmachined/server_platform_windows.hpp"/>
+  </compounddef>
+</doxygen>

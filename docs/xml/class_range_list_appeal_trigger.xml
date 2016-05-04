@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_range_list_appeal_trigger" kind="class" language="C++" prot="public">
+    <compoundname>RangeListAppealTrigger</compoundname>
+    <basecompoundref refid="class_range_trigger" prot="public" virt="non-virtual">RangeTrigger</basecompoundref>
+    <includes refid="range__list__appeal__trigger_8hpp" local="no">range_list_appeal_trigger.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_range_list_appeal_trigger_1a7531b5b4d5d8cbe7bb5faf5e510a2c9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE RangeListAppealTrigger::RangeListAppealTrigger</definition>
+        <argsstring>(EntityRangeListNode *pEntityNode, float range)</argsstring>
+        <name>RangeListAppealTrigger</name>
+        <param>
+          <type><ref refid="class_entity_range_list_node" kindref="compound">EntityRangeListNode</ref> *</type>
+          <declname>pEntityNode</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_appeal_trigger.hpp" line="16" column="1" bodyfile="cellapp/range_list_appeal_trigger.cpp" bodystart="15" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_appeal_trigger_1a8fa12b731f4c3c8d74d88faa69ab74b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RangeListAppealTrigger::triggerEnter</definition>
+        <argsstring>(Entity &amp;entity)</argsstring>
+        <name>triggerEnter</name>
+        <reimplements refid="class_range_trigger_1a9fa6069eb2d5e98bf7d643c4f42a1bd8">triggerEnter</reimplements>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_appeal_trigger.hpp" line="18" column="1" bodyfile="cellapp/range_list_appeal_trigger.hpp" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_appeal_trigger_1a4784b918e8ae991656cb74bd6e346baa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RangeListAppealTrigger::triggerLeave</definition>
+        <argsstring>(Entity &amp;entity)</argsstring>
+        <name>triggerLeave</name>
+        <reimplements refid="class_range_trigger_1a8fbc452e69f0fd9b93b5eaf8ed8e826c">triggerLeave</reimplements>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_appeal_trigger.hpp" line="19" column="1" bodyfile="cellapp/range_list_appeal_trigger.hpp" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_appeal_trigger_1a83c72d0fc4fd3660bcc3034793044712" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="class_entity" kindref="compound">Entity</ref> *</type>
+        <definition>virtual Entity* RangeListAppealTrigger::pEntity</definition>
+        <argsstring>() const </argsstring>
+        <name>pEntity</name>
+        <reimplements refid="class_range_trigger_1a9246caf8e52b4cae6bc35f5ddfad0b82">pEntity</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_appeal_trigger.hpp" line="20" column="1" bodyfile="cellapp/range_list_appeal_trigger.hpp" bodystart="20" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_range_list_appeal_trigger_1a059dfb297f97e3b713ce6de679085aa7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>BW::string</type>
+        <definition>BW::string RangeListAppealTrigger::debugString</definition>
+        <argsstring>() const </argsstring>
+        <name>debugString</name>
+        <reimplements refid="class_range_trigger_1aef795871cdf9174c15313e1a5325b746">debugString</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return what kind of triggers these are </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/range_list_appeal_trigger.hpp" line="24" column="1" bodyfile="cellapp/range_list_appeal_trigger.cpp" bodystart="26" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to support &quot;large&quot; entities. That is entities that have a non-zero AppealRadius. These entities can be seen further than the Area of Interest of a player. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2336">
+        <label>RangeTrigger</label>
+        <link refid="class_range_trigger"/>
+      </node>
+      <node id="2335">
+        <label>RangeListAppealTrigger</label>
+        <link refid="class_range_list_appeal_trigger"/>
+        <childnode refid="2336" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2338">
+        <label>RangeTrigger</label>
+        <link refid="class_range_trigger"/>
+        <childnode refid="2339" relation="usage">
+          <edgelabel>lowerBound_</edgelabel>
+          <edgelabel>upperBound_</edgelabel>
+        </childnode>
+        <childnode refid="2340" relation="usage">
+          <edgelabel>pCentralNode_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2337">
+        <label>RangeListAppealTrigger</label>
+        <link refid="class_range_list_appeal_trigger"/>
+        <childnode refid="2338" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2339">
+        <label>RangeTriggerNode</label>
+        <link refid="class_range_trigger_node"/>
+        <childnode refid="2340" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2338" relation="usage">
+          <edgelabel>pRange_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2340">
+        <label>RangeListNode</label>
+        <link refid="class_range_list_node"/>
+        <childnode refid="2340" relation="usage">
+          <edgelabel>pPrevX_</edgelabel>
+          <edgelabel>pPrevZ_</edgelabel>
+          <edgelabel>pNextX_</edgelabel>
+          <edgelabel>pNextZ_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/range_list_appeal_trigger.hpp" line="14" column="1" bodyfile="cellapp/range_list_appeal_trigger.hpp" bodystart="13" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_range_trigger_1aeff1830e60140e662ed4860b5643ec42" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>contains</name></member>
+      <member refid="class_range_trigger_1a7b971b295879e8cd13a91983134fbb9f" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>contains</name></member>
+      <member refid="class_range_trigger_1a0b4044811c57fb58d5f820144d8400cb" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>containsInZ</name></member>
+      <member refid="class_range_list_appeal_trigger_1a059dfb297f97e3b713ce6de679085aa7" prot="public" virt="virtual"><scope>RangeListAppealTrigger</scope><name>debugString</name></member>
+      <member refid="class_range_trigger_1a12fa2db7cbf4d534f1b9ec4c227098f3" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>insert</name></member>
+      <member refid="class_range_trigger_1a6f50a6873a988cd80a9c59383c1973f8" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>isInXRange</name></member>
+      <member refid="class_range_trigger_1a2a8b1832751784172b884c4a9a26b838" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>isInXRange</name></member>
+      <member refid="class_range_trigger_1aa48898952667da7dfd7275da6f89a905" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>isInZRange</name></member>
+      <member refid="class_range_trigger_1a3081bd6db75397b759420c19a4b4bfef" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>isInZRange</name></member>
+      <member refid="class_range_trigger_1a96e251f9a96ff6e18f74ac9b647a29dc" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>lowerBound_</name></member>
+      <member refid="class_range_trigger_1a6d0ce5a8601e64ac090250bd1c384624" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>oldEntityX_</name></member>
+      <member refid="class_range_trigger_1ad23ef2b8c7160c3bf9898b697a42f60b" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>oldEntityZ_</name></member>
+      <member refid="class_range_trigger_1adfccbfa2b358cf89762257b5d3dd5684" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>pCentralNode</name></member>
+      <member refid="class_range_trigger_1acf88a27ec42a567da6ce48847471cf0d" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>pCentralNode_</name></member>
+      <member refid="class_range_list_appeal_trigger_1a83c72d0fc4fd3660bcc3034793044712" prot="public" virt="virtual"><scope>RangeListAppealTrigger</scope><name>pEntity</name></member>
+      <member refid="class_range_trigger_1af48b4cf29fd77b09baaafbc785f9d245" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>pLowerTrigger</name></member>
+      <member refid="class_range_trigger_1a5f143c56c232a3d20931a0ced1602a40" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>pUpperTrigger</name></member>
+      <member refid="class_range_trigger_1aef9e3c3e7d1e0ffd61690e27dafc6179" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>range</name></member>
+      <member refid="class_range_list_appeal_trigger_1a7531b5b4d5d8cbe7bb5faf5e510a2c9e" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>RangeListAppealTrigger</name></member>
+      <member refid="class_range_trigger_1a6db90bc220c9a01fc1058aaef53c99e8" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>RangeTrigger</name></member>
+      <member refid="class_range_trigger_1ae621f3f691d64dc27662316d86bee8f4" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>remove</name></member>
+      <member refid="class_range_trigger_1ae76f23ffdf580976415200475da1c001" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>removeWithoutContracting</name></member>
+      <member refid="class_range_trigger_1a73c4d12a5184991b73e6b585cd3d3a9b" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>setRange</name></member>
+      <member refid="class_range_trigger_1a3581a23c0557024ca3e8e37db8ea5951" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>shuffleXThenZ</name></member>
+      <member refid="class_range_trigger_1a19ec1644a0b20fde7d1451122ba9236a" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>shuffleXThenZContract</name></member>
+      <member refid="class_range_trigger_1a4ed1d9ffbd2e6896c5fc177a4a874481" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>shuffleXThenZExpand</name></member>
+      <member refid="class_range_list_appeal_trigger_1a8fa12b731f4c3c8d74d88faa69ab74b8" prot="public" virt="virtual"><scope>RangeListAppealTrigger</scope><name>triggerEnter</name></member>
+      <member refid="class_range_list_appeal_trigger_1a4784b918e8ae991656cb74bd6e346baa" prot="public" virt="virtual"><scope>RangeListAppealTrigger</scope><name>triggerLeave</name></member>
+      <member refid="class_range_trigger_1a564277927d6392e9f946eac96bbf28d8" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>upperBound_</name></member>
+      <member refid="class_range_trigger_1a28bc711be32005e2785d4fe28dfda5a7" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>wasInXRange</name></member>
+      <member refid="class_range_trigger_1a44642be5012b39fcdde3d3a0e64e6d73" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>wasInXRange</name></member>
+      <member refid="class_range_trigger_1ad43f67e4d8b50459583689dbe1df7297" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>wasInZRange</name></member>
+      <member refid="class_range_trigger_1af93d0aef64d9662b593416cd9a555482" prot="public" virt="non-virtual"><scope>RangeListAppealTrigger</scope><name>wasInZRange</name></member>
+      <member refid="class_range_trigger_1a71e0918e9d36cb75becacabec9c4b78b" prot="public" virt="virtual"><scope>RangeListAppealTrigger</scope><name>~RangeTrigger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

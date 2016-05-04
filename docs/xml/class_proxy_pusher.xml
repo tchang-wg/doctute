@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_proxy_pusher" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ProxyPusher</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">TimerHandler</basecompoundref>
+    <derivedcompoundref refid="class_proxy_pusher_t" prot="public" virt="non-virtual">ProxyPusherT&lt; MSG, FUTYPE, FTYPE, FNAME &gt;</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_proxy_pusher_1aa68af728f8bae615f59fff3fd3700650" prot="private" static="no" mutable="no">
+        <type><ref refid="class_proxy" kindref="compound">Proxy</ref> *</type>
+        <definition>Proxy* ProxyPusher::pProxy_</definition>
+        <argsstring></argsstring>
+        <name>pProxy_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/proxy.cpp" line="570" column="1" bodyfile="baseapp/proxy.cpp" bodystart="570" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_proxy_pusher_1a33507b216139ef4dae55bcaa0f97de72" prot="private" static="no" mutable="no">
+        <type>TimerHandle</type>
+        <definition>TimerHandle ProxyPusher::timerHandle_</definition>
+        <argsstring></argsstring>
+        <name>timerHandle_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/proxy.cpp" line="571" column="1" bodyfile="baseapp/proxy.cpp" bodystart="571" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_proxy_pusher_1a8374088ca3af99f7b2036dae1806c7cb" prot="private" static="no" mutable="no">
+        <type>const GameTime</type>
+        <definition>const GameTime ProxyPusher::tickSyncPeriod_</definition>
+        <argsstring></argsstring>
+        <name>tickSyncPeriod_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/proxy.cpp" line="572" column="1" bodyfile="baseapp/proxy.cpp" bodystart="572" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_proxy_pusher_1ae7f25c3b728cca38e270646ed3a73d56" prot="private" static="no" mutable="no">
+        <type>GameTime</type>
+        <definition>GameTime ProxyPusher::nextTickSyncTime_</definition>
+        <argsstring></argsstring>
+        <name>nextTickSyncTime_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/proxy.cpp" line="573" column="1" bodyfile="baseapp/proxy.cpp" bodystart="573" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_proxy_pusher_1a34494706bd1c8bce1a5c9b60e35e457b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ProxyPusher::tickSyncMsgNum_</definition>
+        <argsstring></argsstring>
+        <name>tickSyncMsgNum_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/proxy.cpp" line="574" column="1" bodyfile="baseapp/proxy.cpp" bodystart="574" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_proxy_pusher_1a366a99689c4c7c33c52d52f9f6b1f9d1" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ProxyPusher::ProxyPusher</definition>
+        <argsstring>(Proxy *pProxy, TimeQueue::TimeStamp period)</argsstring>
+        <name>ProxyPusher</name>
+        <param>
+          <type><ref refid="class_proxy" kindref="compound">Proxy</ref> *</type>
+          <declname>pProxy</declname>
+        </param>
+        <param>
+          <type>TimeQueue::TimeStamp</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/proxy.cpp" line="514" column="1" bodyfile="baseapp/proxy.cpp" bodystart="514" bodyend="520"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_proxy_pusher_1aa4d1e542f0f85d1c53c80d9d9642263f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProxyPusher::appendTickSyncMsg</definition>
+        <argsstring>(Mercury::Bundle &amp;bundle)</argsstring>
+        <name>appendTickSyncMsg</name>
+        <param>
+          <type>Mercury::Bundle &amp;</type>
+          <declname>bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method appends a tick synchronisation message to the bundle. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/proxy.cpp" line="526" column="1" bodyfile="baseapp/proxy.cpp" bodystart="526" bodyend="532"/>
+      </memberdef>
+      <memberdef kind="function" id="class_proxy_pusher_1a4d3cea5703161821baa8971051d52f94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ProxyPusher::~ProxyPusher</definition>
+        <argsstring>()</argsstring>
+        <name>~ProxyPusher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/proxy.cpp" line="534" column="1" bodyfile="baseapp/proxy.cpp" bodystart="534" bodyend="537"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_proxy_pusher_1ac39fb8e47cfa093796b590046fb6bfff" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ProxyPusher::appendTickSyncMsg</definition>
+        <argsstring>(Mercury::Bundle &amp;bundle, GameTime time)=0</argsstring>
+        <name>appendTickSyncMsg</name>
+        <reimplementedby refid="class_proxy_pusher_t_1ad0162205a9d4e22cb741ee7742ec4d1f">appendTickSyncMsg</reimplementedby>
+        <param>
+          <type>Mercury::Bundle &amp;</type>
+          <declname>bundle</declname>
+        </param>
+        <param>
+          <type>GameTime</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/proxy.cpp" line="540" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_proxy_pusher_1a057ae492105322c8905446b63ac525f6" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ProxyPusher::setTickSyncTime</definition>
+        <argsstring>(Mercury::Bundle &amp;bundle, GameTime time)=0</argsstring>
+        <name>setTickSyncTime</name>
+        <reimplementedby refid="class_proxy_pusher_t_1a4c96a6a76a1f8c5bff0b1d3df21f01ee">setTickSyncTime</reimplementedby>
+        <param>
+          <type>Mercury::Bundle &amp;</type>
+          <declname>bundle</declname>
+        </param>
+        <param>
+          <type>GameTime</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/proxy.cpp" line="541" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_proxy_pusher_1a5641b59f88c56167471a4f2329f8ffdf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ProxyPusher::handleTimeout</definition>
+        <argsstring>(TimerHandle, void *)</argsstring>
+        <name>handleTimeout</name>
+        <param>
+          <type>TimerHandle</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/proxy.cpp" line="543" column="1" bodyfile="baseapp/proxy.cpp" bodystart="543" bodyend="566"/>
+      </memberdef>
+      <memberdef kind="function" id="class_proxy_pusher_1ad5f3bb0b48102a138d8ea11316f56a3f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ProxyPusher::onRelease</definition>
+        <argsstring>(TimerHandle handle, void *pUser)</argsstring>
+        <name>onRelease</name>
+        <param>
+          <type>TimerHandle</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pUser</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/proxy.cpp" line="568" column="1" bodyfile="baseapp/proxy.cpp" bodystart="568" bodyend="568"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class calls sendBundleToClient on the proxy periodically. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2191">
+        <label>TimerHandler</label>
+      </node>
+      <node id="2192">
+        <label>ProxyPusherT&lt; MSG, FUTYPE, FTYPE, FNAME &gt;</label>
+        <link refid="class_proxy_pusher_t"/>
+        <childnode refid="2190" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2190">
+        <label>ProxyPusher</label>
+        <link refid="class_proxy_pusher"/>
+        <childnode refid="2191" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2194">
+        <label>TimerHandler</label>
+      </node>
+      <node id="2193">
+        <label>ProxyPusher</label>
+        <link refid="class_proxy_pusher"/>
+        <childnode refid="2194" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="baseapp/proxy.cpp" line="512" column="1" bodyfile="baseapp/proxy.cpp" bodystart="511" bodyend="575"/>
+    <listofallmembers>
+      <member refid="class_proxy_pusher_1aa4d1e542f0f85d1c53c80d9d9642263f" prot="public" virt="non-virtual"><scope>ProxyPusher</scope><name>appendTickSyncMsg</name></member>
+      <member refid="class_proxy_pusher_1ac39fb8e47cfa093796b590046fb6bfff" prot="private" virt="pure-virtual"><scope>ProxyPusher</scope><name>appendTickSyncMsg</name></member>
+      <member refid="class_proxy_pusher_1a5641b59f88c56167471a4f2329f8ffdf" prot="private" virt="virtual"><scope>ProxyPusher</scope><name>handleTimeout</name></member>
+      <member refid="class_proxy_pusher_1ae7f25c3b728cca38e270646ed3a73d56" prot="private" virt="non-virtual"><scope>ProxyPusher</scope><name>nextTickSyncTime_</name></member>
+      <member refid="class_proxy_pusher_1ad5f3bb0b48102a138d8ea11316f56a3f" prot="private" virt="virtual"><scope>ProxyPusher</scope><name>onRelease</name></member>
+      <member refid="class_proxy_pusher_1aa68af728f8bae615f59fff3fd3700650" prot="private" virt="non-virtual"><scope>ProxyPusher</scope><name>pProxy_</name></member>
+      <member refid="class_proxy_pusher_1a366a99689c4c7c33c52d52f9f6b1f9d1" prot="protected" virt="non-virtual"><scope>ProxyPusher</scope><name>ProxyPusher</name></member>
+      <member refid="class_proxy_pusher_1a057ae492105322c8905446b63ac525f6" prot="private" virt="pure-virtual"><scope>ProxyPusher</scope><name>setTickSyncTime</name></member>
+      <member refid="class_proxy_pusher_1a34494706bd1c8bce1a5c9b60e35e457b" prot="private" virt="non-virtual"><scope>ProxyPusher</scope><name>tickSyncMsgNum_</name></member>
+      <member refid="class_proxy_pusher_1a8374088ca3af99f7b2036dae1806c7cb" prot="private" virt="non-virtual"><scope>ProxyPusher</scope><name>tickSyncPeriod_</name></member>
+      <member refid="class_proxy_pusher_1a33507b216139ef4dae55bcaa0f97de72" prot="private" virt="non-virtual"><scope>ProxyPusher</scope><name>timerHandle_</name></member>
+      <member refid="class_proxy_pusher_1a4d3cea5703161821baa8971051d52f94" prot="public" virt="virtual"><scope>ProxyPusher</scope><name>~ProxyPusher</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

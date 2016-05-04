@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cellappmgr__config_8hpp" kind="file" language="C++">
+    <compoundname>cellappmgr_config.hpp</compoundname>
+    <includes local="yes">server/manager_app_config.hpp</includes>
+    <includedby refid="cellapp__comparer_8hpp" local="yes">cellappmgr/cellapp_comparer.hpp</includedby>
+    <includedby refid="cell__app__group_8cpp" local="yes">cellappmgr/cell_app_group.cpp</includedby>
+    <includedby refid="cell__data_8cpp" local="yes">cellappmgr/cell_data.cpp</includedby>
+    <includedby refid="gr_2cellapp_8cpp" local="yes">cellappmgr/cellapp.cpp</includedby>
+    <includedby refid="cellapp__comparer_8cpp" local="yes">cellappmgr/cellapp_comparer.cpp</includedby>
+    <includedby refid="cellappmgr_8cpp" local="yes">cellappmgr/cellappmgr.cpp</includedby>
+    <includedby refid="cellappmgr__config_8cpp" local="yes">cellappmgr/cellappmgr_config.cpp</includedby>
+    <includedby refid="cellapps_8cpp" local="yes">cellappmgr/cellapps.cpp</includedby>
+    <includedby refid="internal__node_8cpp" local="yes">cellappmgr/internal_node.cpp</includedby>
+    <includedby refid="cellappmgr_2main_8cpp" local="yes">cellappmgr/main.cpp</includedby>
+    <includedby refid="shutdown__handler_8cpp" local="yes">cellappmgr/shutdown_handler.cpp</includedby>
+    <incdepgraph>
+      <node id="13582">
+        <label>cellappmgr/cellappmgr_config.hpp</label>
+        <link refid="cellappmgr_config.hpp"/>
+        <childnode refid="13583" relation="include">
+        </childnode>
+      </node>
+      <node id="13583">
+        <label>server/manager_app_config.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="13586">
+        <label>cellappmgr/cellapps.hpp</label>
+        <link refid="cellapps_8hpp_source"/>
+        <childnode refid="13587" relation="include">
+        </childnode>
+      </node>
+      <node id="13587">
+        <label>cellappmgr/cellappmgr.hpp</label>
+        <link refid="cellappmgr_8hpp_source"/>
+      </node>
+      <node id="13585">
+        <label>cellappmgr/cellapp_comparer.hpp</label>
+        <link refid="cellapp__comparer_8hpp_source"/>
+        <childnode refid="13586" relation="include">
+        </childnode>
+      </node>
+      <node id="13584">
+        <label>cellappmgr/cellappmgr_config.hpp</label>
+        <link refid="cellappmgr_config.hpp"/>
+        <childnode refid="13585" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_cell_app_mgr_config" prot="public">CellAppMgrConfig</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CELLAPPMGR_CONFIG_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CELLAPPMGR_CONFIG_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;server/manager_app_config.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_cell_app_mgr_config" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_cell_app_mgr_config" kindref="compound">CellAppMgrConfig</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>ManagerAppConfig</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>MetaLoadBalanceScheme</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCHEME_LARGEST,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCHEME_SMALLEST,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCHEME_HYBRID</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>int<sp/>&gt;<sp/>maxLoadingCells;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>minLoadingArea;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>cellAppTimeout;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>uint64<sp/>&gt;<sp/>cellAppTimeoutInStamps;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>archivePeriod;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>int<sp/>&gt;<sp/>archivePeriodInTicks;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>shouldArchiveSpaceData;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>estimatedInitialCellLoad;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>loadBalancePeriod;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>int<sp/>&gt;<sp/>metaLoadBalanceScheme;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>metaLoadBalancePeriod;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>metaLoadBalanceTolerance;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>shouldShowMetaLoadBalanceDebug;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>shuttingDownDelay;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>shuttingDownDelayInTicks()</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>secondsToTicks(<sp/>shuttingDownDelay(),<sp/>0<sp/>);<sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>bool<sp/>&gt;<sp/>shouldLimitBalanceToChunks;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>loadSmoothingBias;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOptionGetSet&lt;<sp/>bool<sp/>&gt;<sp/>shouldLoadBalance;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOptionGetSet&lt;<sp/>bool<sp/>&gt;<sp/>shouldMetaLoadBalance;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ServerAppOption&lt;<sp/>float<sp/>&gt;<sp/>ghostDistance;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>shouldBalanceUnloadedChunks()</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>maxLoadingCells()<sp/>&gt;<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>postInit();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>CELLAPPMGR_CONFIG_HPP</highlight></codeline>
+    </programlisting>
+    <location file="cellappmgr/cellappmgr_config.hpp"/>
+  </compounddef>
+</doxygen>

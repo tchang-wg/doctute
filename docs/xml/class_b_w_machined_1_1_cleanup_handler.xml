@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_b_w_machined_1_1_cleanup_handler" kind="class" language="C++" prot="private">
+    <compoundname>BWMachined::CleanupHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">TimerHandler</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_b_w_machined_1_1_cleanup_handler_1a2620cd4188ce1f607e321f2005f55624" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_b_w_machined" kindref="compound">BWMachined</ref> &amp;</type>
+        <definition>BWMachined&amp; BWMachined::CleanupHandler::machined_</definition>
+        <argsstring></argsstring>
+        <name>machined_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="144" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_b_w_machined_1_1_cleanup_handler_1a9f23c11357de5b18d1c18dec8a0ba20f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BWMachined::CleanupHandler::CleanupHandler</definition>
+        <argsstring>(BWMachined &amp;machined)</argsstring>
+        <name>CleanupHandler</name>
+        <param>
+          <type><ref refid="class_b_w_machined" kindref="compound">BWMachined</ref> &amp;</type>
+          <declname>machined</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="139" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="139" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1_1_cleanup_handler_1a17bc7daf9727dfd511f390afedbb7a16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BWMachined::CleanupHandler::handleTimeout</definition>
+        <argsstring>(TimerHandle handle, void *pUnused)</argsstring>
+        <name>handleTimeout</name>
+        <param>
+          <type>TimerHandle</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pUnused</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: Document me </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="140" column="1" bodyfile="tools/bwmachined/bwmachined.cpp" bodystart="2067" bodyend="2071"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_w_machined_1_1_cleanup_handler_1a85367d802c3f90c53ae40cad0c2a7c32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BWMachined::CleanupHandler::onRelease</definition>
+        <argsstring>(TimerHandle handle, void *pUnused)</argsstring>
+        <name>onRelease</name>
+        <param>
+          <type>TimerHandle</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pUnused</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/bwmachined/bwmachined.hpp" line="141" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="141" bodyend="141"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="630">
+        <label>BWMachined::CleanupHandler</label>
+        <childnode refid="631" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="631">
+        <label>TimerHandler</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="636">
+        <label>WrappedMessageHandler</label>
+        <link refid="class_wrapped_message_handler"/>
+      </node>
+      <node id="639">
+        <label>Listeners&lt; ListenerMessage &gt;</label>
+        <link refid="class_listeners"/>
+      </node>
+      <node id="634">
+        <label>BWMachined</label>
+        <link refid="class_b_w_machined"/>
+        <childnode refid="635" relation="public-inheritance">
+        </childnode>
+        <childnode refid="636" relation="usage">
+          <edgelabel>wrappedMessageHandler_</edgelabel>
+        </childnode>
+        <childnode refid="637" relation="usage">
+          <edgelabel>syslogHandler_</edgelabel>
+        </childnode>
+        <childnode refid="639" relation="usage">
+          <edgelabel>deathListeners_</edgelabel>
+          <edgelabel>birthListeners_</edgelabel>
+        </childnode>
+        <childnode refid="640" relation="usage">
+          <edgelabel>systemInfo_</edgelabel>
+        </childnode>
+        <childnode refid="643" relation="usage">
+          <edgelabel>pServerPlatform_</edgelabel>
+        </childnode>
+        <childnode refid="644" relation="usage">
+          <edgelabel>users_</edgelabel>
+        </childnode>
+      </node>
+      <node id="642">
+        <label>MaxStat</label>
+        <link refid="struct_max_stat"/>
+        <childnode refid="641" relation="usage">
+          <edgelabel>val</edgelabel>
+          <edgelabel>max</edgelabel>
+        </childnode>
+      </node>
+      <node id="632">
+        <label>BWMachined::CleanupHandler</label>
+        <childnode refid="633" relation="public-inheritance">
+        </childnode>
+        <childnode refid="634" relation="usage">
+          <edgelabel>machined_</edgelabel>
+        </childnode>
+      </node>
+      <node id="633">
+        <label>TimerHandler</label>
+      </node>
+      <node id="635">
+        <label>Singleton&lt; BWMachined &gt;</label>
+      </node>
+      <node id="643">
+        <label>ServerPlatform</label>
+        <link refid="class_server_platform"/>
+        <childnode refid="634" relation="usage">
+          <edgelabel>machined_</edgelabel>
+        </childnode>
+      </node>
+      <node id="640">
+        <label>SystemInfo</label>
+        <link refid="struct_system_info"/>
+        <childnode refid="641" relation="usage">
+          <edgelabel>packTotIn</edgelabel>
+          <edgelabel>packDropOut</edgelabel>
+          <edgelabel>packTotOut</edgelabel>
+          <edgelabel>packDropIn</edgelabel>
+        </childnode>
+        <childnode refid="642" relation="usage">
+          <edgelabel>iowait</edgelabel>
+          <edgelabel>mem</edgelabel>
+        </childnode>
+      </node>
+      <node id="644">
+        <label>UserMap</label>
+        <link refid="class_user_map"/>
+      </node>
+      <node id="641">
+        <label>Stat&lt; uint64 &gt;</label>
+        <link refid="class_stat"/>
+      </node>
+      <node id="638">
+        <label>DebugMessageCallback</label>
+      </node>
+      <node id="637">
+        <label>SyslogMessageHandler</label>
+        <link refid="class_syslog_message_handler"/>
+        <childnode refid="638" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tools/bwmachined/bwmachined.hpp" line="137" column="1" bodyfile="tools/bwmachined/bwmachined.hpp" bodystart="136" bodyend="145"/>
+    <listofallmembers>
+      <member refid="class_b_w_machined_1_1_cleanup_handler_1a9f23c11357de5b18d1c18dec8a0ba20f" prot="public" virt="non-virtual"><scope>BWMachined::CleanupHandler</scope><name>CleanupHandler</name></member>
+      <member refid="class_b_w_machined_1_1_cleanup_handler_1a17bc7daf9727dfd511f390afedbb7a16" prot="public" virt="non-virtual"><scope>BWMachined::CleanupHandler</scope><name>handleTimeout</name></member>
+      <member refid="class_b_w_machined_1_1_cleanup_handler_1a2620cd4188ce1f607e321f2005f55624" prot="protected" virt="non-virtual"><scope>BWMachined::CleanupHandler</scope><name>machined_</name></member>
+      <member refid="class_b_w_machined_1_1_cleanup_handler_1a85367d802c3f90c53ae40cad0c2a7c32" prot="public" virt="non-virtual"><scope>BWMachined::CleanupHandler</scope><name>onRelease</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

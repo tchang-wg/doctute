@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_dns_resolve_task" kind="class" language="C++" prot="public">
+    <compoundname>DnsResolveTask</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BackgroundTask</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_dns_resolve_task_1a053a5fd2498245c81d0d18b38c9e2634" prot="private" static="no" mutable="no">
+        <type><ref refid="class_dns_resolver" kindref="compound">DnsResolver</ref> &amp;</type>
+        <definition>DnsResolver&amp; DnsResolveTask::dnsResolver_</definition>
+        <argsstring></argsstring>
+        <name>dnsResolver_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" line="30" column="1" bodyfile="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dns_resolve_task_1a9be326f6b49ae4d22604934f3a492489" prot="private" static="no" mutable="no">
+        <type>DnsResolver::AttemptID</type>
+        <definition>DnsResolver::AttemptID DnsResolveTask::attemptId_</definition>
+        <argsstring></argsstring>
+        <name>attemptId_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" line="32" column="1" bodyfile="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dns_resolve_task_1ab14c430bab36d012c345aa074b494d3a" prot="private" static="no" mutable="no">
+        <type>const BW::string</type>
+        <definition>const BW::string DnsResolveTask::hostname_</definition>
+        <argsstring></argsstring>
+        <name>hostname_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" line="34" column="1" bodyfile="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dns_resolve_task_1af36f5013db95e0edb39ff0b370d27aae" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tcp_connection" kindref="compound">TcpConnection</ref> &amp;</type>
+        <definition>TcpConnection&amp; DnsResolveTask::connection_</definition>
+        <argsstring></argsstring>
+        <name>connection_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" line="35" column="1" bodyfile="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dns_resolve_task_1a7ae9b5ec8c3eb7b30e3579f7b07ef52f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DnsResolveTask::isSuccess_</definition>
+        <argsstring></argsstring>
+        <name>isSuccess_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" line="37" column="1" bodyfile="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_dns_resolve_task_1aa09c2e5938c0234c6800e44f4cd321bd" prot="private" static="no" mutable="no">
+        <type>u_int32_t</type>
+        <definition>u_int32_t DnsResolveTask::ipAddress_</definition>
+        <argsstring></argsstring>
+        <name>ipAddress_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" line="38" column="1" bodyfile="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_dns_resolve_task_1ae2a8ed616ed6d757b0c59cb8ec12b2bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DnsResolveTask::DnsResolveTask</definition>
+        <argsstring>(DnsResolver &amp;dnsResolver, DnsResolver::AttemptID attemptId, const BW::string &amp;hostname, TcpConnection &amp;connection)</argsstring>
+        <name>DnsResolveTask</name>
+        <param>
+          <type><ref refid="class_dns_resolver" kindref="compound">DnsResolver</ref> &amp;</type>
+          <declname>dnsResolver</declname>
+        </param>
+        <param>
+          <type>DnsResolver::AttemptID</type>
+          <declname>attemptId</declname>
+        </param>
+        <param>
+          <type>const BW::string &amp;</type>
+          <declname>hostname</declname>
+        </param>
+        <param>
+          <type><ref refid="class_tcp_connection" kindref="compound">TcpConnection</ref> &amp;</type>
+          <declname>connection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" line="20" column="1" bodyfile="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" bodystart="45" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dns_resolve_task_1ad89fcbc7d4b7e176473b90299f587ba1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DnsResolveTask::doMainThreadTask</definition>
+        <argsstring>(TaskManager &amp;mgr)</argsstring>
+        <name>doMainThreadTask</name>
+        <param>
+          <type>TaskManager &amp;</type>
+          <declname>mgr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" line="24" column="1" bodyfile="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" bodystart="71" bodyend="75"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_dns_resolve_task_1a16fce914bcd4f185ee5ee84728ddd8cb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DnsResolveTask::doBackgroundTask</definition>
+        <argsstring>(TaskManager &amp;mgr)</argsstring>
+        <name>doBackgroundTask</name>
+        <param>
+          <type>TaskManager &amp;</type>
+          <declname>mgr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" line="27" column="1" bodyfile="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" bodystart="60" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements the background task that performs the work for a DNS lookup. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1057">
+        <label>DnsResolveTask</label>
+        <link refid="class_dns_resolve_task"/>
+        <childnode refid="1058" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1058">
+        <label>BackgroundTask</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1059">
+        <label>DnsResolveTask</label>
+        <link refid="class_dns_resolve_task"/>
+        <childnode refid="1060" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1060">
+        <label>BackgroundTask</label>
+      </node>
+    </collaborationgraph>
+    <location file="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" line="18" column="1" bodyfile="dbapp_extensions/wgbilling_spa/dns_resolver.cpp" bodystart="17" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_dns_resolve_task_1a9be326f6b49ae4d22604934f3a492489" prot="private" virt="non-virtual"><scope>DnsResolveTask</scope><name>attemptId_</name></member>
+      <member refid="class_dns_resolve_task_1af36f5013db95e0edb39ff0b370d27aae" prot="private" virt="non-virtual"><scope>DnsResolveTask</scope><name>connection_</name></member>
+      <member refid="class_dns_resolve_task_1a053a5fd2498245c81d0d18b38c9e2634" prot="private" virt="non-virtual"><scope>DnsResolveTask</scope><name>dnsResolver_</name></member>
+      <member refid="class_dns_resolve_task_1ae2a8ed616ed6d757b0c59cb8ec12b2bd" prot="public" virt="non-virtual"><scope>DnsResolveTask</scope><name>DnsResolveTask</name></member>
+      <member refid="class_dns_resolve_task_1a16fce914bcd4f185ee5ee84728ddd8cb" prot="protected" virt="non-virtual"><scope>DnsResolveTask</scope><name>doBackgroundTask</name></member>
+      <member refid="class_dns_resolve_task_1ad89fcbc7d4b7e176473b90299f587ba1" prot="public" virt="non-virtual"><scope>DnsResolveTask</scope><name>doMainThreadTask</name></member>
+      <member refid="class_dns_resolve_task_1ab14c430bab36d012c345aa074b494d3a" prot="private" virt="non-virtual"><scope>DnsResolveTask</scope><name>hostname_</name></member>
+      <member refid="class_dns_resolve_task_1aa09c2e5938c0234c6800e44f4cd321bd" prot="private" virt="non-virtual"><scope>DnsResolveTask</scope><name>ipAddress_</name></member>
+      <member refid="class_dns_resolve_task_1a7ae9b5ec8c3eb7b30e3579f7b07ef52f" prot="private" virt="non-virtual"><scope>DnsResolveTask</scope><name>isSuccess_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

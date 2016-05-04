@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_cell_app_groups" kind="class" language="C++" prot="public">
+    <compoundname>CellAppGroups</compoundname>
+    <includes refid="cell__app__groups_8hpp" local="no">cell_app_groups.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_cell_app_groups_1ac72acf09627ec486f741f7c2f87eb45c" prot="private" static="no">
+        <type>BW::list&lt; <ref refid="class_cell_app_group" kindref="compound">CellAppGroup</ref> &gt;</type>
+        <definition>typedef BW::list&lt; CellAppGroup &gt; CellAppGroups::List</definition>
+        <argsstring></argsstring>
+        <name>List</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_groups.hpp" line="26" column="1" bodyfile="cellappmgr/cell_app_groups.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_cell_app_groups_1a4593584866b0713edcf45c6edbb0da5c" prot="private" static="no" mutable="no">
+        <type>List</type>
+        <definition>List CellAppGroups::list_</definition>
+        <argsstring></argsstring>
+        <name>list_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_groups.hpp" line="27" column="1" bodyfile="cellappmgr/cell_app_groups.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cell_app_groups_1a526d5576821b8592b93061660072e7c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE CellAppGroups::CellAppGroups</definition>
+        <argsstring>(const CellApps &amp;cellApps)</argsstring>
+        <name>CellAppGroups</name>
+        <param>
+          <type>const <ref refid="class_cell_apps" kindref="compound">CellApps</ref> &amp;</type>
+          <declname>cellApps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. The input <ref refid="class_cell_apps" kindref="compound">CellApps</ref> are partitioned into a list of Group objects. Each Group is the set of <ref refid="class_cell_apps" kindref="compound">CellApps</ref> that can balance their load via normal load balancing. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_groups.hpp" line="18" column="1" bodyfile="cellappmgr/cell_app_groups.cpp" bodystart="18" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_groups_1aef50874587b3e45f86b89f1d78ff1c75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppGroups::checkForOverloaded</definition>
+        <argsstring>(float addCellThreshold)</argsstring>
+        <name>checkForOverloaded</name>
+        <param>
+          <type>float</type>
+          <declname>addCellThreshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks whether there are any overloaded <ref refid="class_cell_app" kindref="compound">CellApp</ref> groups and adds cells, if necessary, to help balance the load. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_groups.hpp" line="20" column="1" bodyfile="cellappmgr/cell_app_groups.cpp" bodystart="66" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_groups_1aa3f28b0c17699b84ae1da5d855eb86ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CellAppGroups::checkForUnderloaded</definition>
+        <argsstring>(float retireCellThreshold)</argsstring>
+        <name>checkForUnderloaded</name>
+        <param>
+          <type>float</type>
+          <declname>retireCellThreshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks whether any current groups are underloaded. If so, it will remove the cells from one of the <ref refid="class_cell_apps" kindref="compound">CellApps</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_groups.hpp" line="21" column="1" bodyfile="cellappmgr/cell_app_groups.cpp" bodystart="92" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_app_groups_1a31d1a9ef6973a5719791c13694aedc6b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>BW::string</type>
+        <definition>BW::string CellAppGroups::asString</definition>
+        <argsstring>() const </argsstring>
+        <name>asString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method generates a string representation of the set of <ref refid="class_cell_app" kindref="compound">CellApp</ref> groups with more than one <ref refid="class_cell_app" kindref="compound">CellApp</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellappmgr/cell_app_groups.hpp" line="23" column="1" bodyfile="cellappmgr/cell_app_groups.cpp" bodystart="109" bodyend="141"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is a collection of all the CellApp::Group objects. </para>    </detaileddescription>
+    <location file="cellappmgr/cell_app_groups.hpp" line="16" column="1" bodyfile="cellappmgr/cell_app_groups.hpp" bodystart="15" bodyend="28"/>
+    <listofallmembers>
+      <member refid="class_cell_app_groups_1a31d1a9ef6973a5719791c13694aedc6b" prot="public" virt="non-virtual"><scope>CellAppGroups</scope><name>asString</name></member>
+      <member refid="class_cell_app_groups_1a526d5576821b8592b93061660072e7c9" prot="public" virt="non-virtual"><scope>CellAppGroups</scope><name>CellAppGroups</name></member>
+      <member refid="class_cell_app_groups_1aef50874587b3e45f86b89f1d78ff1c75" prot="public" virt="non-virtual"><scope>CellAppGroups</scope><name>checkForOverloaded</name></member>
+      <member refid="class_cell_app_groups_1aa3f28b0c17699b84ae1da5d855eb86ac" prot="public" virt="non-virtual"><scope>CellAppGroups</scope><name>checkForUnderloaded</name></member>
+      <member refid="class_cell_app_groups_1ac72acf09627ec486f741f7c2f87eb45c" prot="private" virt="non-virtual"><scope>CellAppGroups</scope><name>List</name></member>
+      <member refid="class_cell_app_groups_1a4593584866b0713edcf45c6edbb0da5c" prot="private" virt="non-virtual"><scope>CellAppGroups</scope><name>list_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

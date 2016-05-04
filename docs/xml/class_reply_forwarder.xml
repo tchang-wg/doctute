@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_reply_forwarder" kind="class" language="C++" prot="public">
+    <compoundname>ReplyForwarder</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ShutdownSafeReplyMessageHandler</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_reply_forwarder_1a6de2b854c0781bd7b7eb363180286f35" prot="private" static="no" mutable="no">
+        <type>Mercury::Address</type>
+        <definition>Mercury::Address ReplyForwarder::destAddr_</definition>
+        <argsstring></argsstring>
+        <name>destAddr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity.cpp" line="2247" column="1" bodyfile="cellapp/entity.cpp" bodystart="2247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_reply_forwarder_1a6843bd5d21907e414d305d142110ac6e" prot="private" static="no" mutable="no">
+        <type>Mercury::ReplyID</type>
+        <definition>Mercury::ReplyID ReplyForwarder::replyID_</definition>
+        <argsstring></argsstring>
+        <name>replyID_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity.cpp" line="2248" column="1" bodyfile="cellapp/entity.cpp" bodystart="2248" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_reply_forwarder_1ad0d963bb0b83974af9d3eadc9d984022" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ReplyForwarder::ReplyForwarder</definition>
+        <argsstring>(const Mercury::Address &amp;destAddr, Mercury::ReplyID replyID)</argsstring>
+        <name>ReplyForwarder</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>destAddr</declname>
+        </param>
+        <param>
+          <type>Mercury::ReplyID</type>
+          <declname>replyID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity.cpp" line="2223" column="1" bodyfile="cellapp/entity.cpp" bodystart="2223" bodyend="2225"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_reply_forwarder_1a538cca11fa0b792f54af9563fc19c36c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ReplyForwarder::handleMessage</definition>
+        <argsstring>(const Mercury::Address &amp;source, Mercury::UnpackedMessageHeader &amp;header, BinaryIStream &amp;data, void *arg)</argsstring>
+        <name>handleMessage</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>Mercury::UnpackedMessageHeader &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity.cpp" line="2228" column="1" bodyfile="cellapp/entity.cpp" bodystart="2228" bodyend="2236"/>
+      </memberdef>
+      <memberdef kind="function" id="class_reply_forwarder_1adc567c0969cfae6fcbf77555d1ec9b44" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ReplyForwarder::handleException</definition>
+        <argsstring>(const Mercury::NubException &amp;exception, void *arg)</argsstring>
+        <name>handleException</name>
+        <param>
+          <type>const Mercury::NubException &amp;</type>
+          <declname>exception</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cellapp/entity.cpp" line="2238" column="1" bodyfile="cellapp/entity.cpp" bodystart="2238" bodyend="2244"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to handle a reply message and forward it onto a new address. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2435">
+        <label>ShutdownSafeReplyMessageHandler</label>
+      </node>
+      <node id="2434">
+        <label>ReplyForwarder</label>
+        <link refid="class_reply_forwarder"/>
+        <childnode refid="2435" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2437">
+        <label>ShutdownSafeReplyMessageHandler</label>
+      </node>
+      <node id="2436">
+        <label>ReplyForwarder</label>
+        <link refid="class_reply_forwarder"/>
+        <childnode refid="2437" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cellapp/entity.cpp" line="2221" column="1" bodyfile="cellapp/entity.cpp" bodystart="2220" bodyend="2249"/>
+    <listofallmembers>
+      <member refid="class_reply_forwarder_1a6de2b854c0781bd7b7eb363180286f35" prot="private" virt="non-virtual"><scope>ReplyForwarder</scope><name>destAddr_</name></member>
+      <member refid="class_reply_forwarder_1adc567c0969cfae6fcbf77555d1ec9b44" prot="private" virt="virtual"><scope>ReplyForwarder</scope><name>handleException</name></member>
+      <member refid="class_reply_forwarder_1a538cca11fa0b792f54af9563fc19c36c" prot="private" virt="virtual"><scope>ReplyForwarder</scope><name>handleMessage</name></member>
+      <member refid="class_reply_forwarder_1ad0d963bb0b83974af9d3eadc9d984022" prot="public" virt="non-virtual"><scope>ReplyForwarder</scope><name>ReplyForwarder</name></member>
+      <member refid="class_reply_forwarder_1a6843bd5d21907e414d305d142110ac6e" prot="private" virt="non-virtual"><scope>ReplyForwarder</scope><name>replyID_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

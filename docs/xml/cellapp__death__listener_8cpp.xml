@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cellapp__death__listener_8cpp" kind="file" language="C++">
+    <compoundname>cellapp_death_listener.cpp</compoundname>
+    <includes refid="cellapp__death__listener_8hpp" local="yes">cellapp_death_listener.hpp</includes>
+    <incdepgraph>
+      <node id="7737">
+        <label>cstdmf/safe_static.hpp</label>
+      </node>
+      <node id="7736">
+        <label>cstdmf/bw_list.hpp</label>
+      </node>
+      <node id="7734">
+        <label>cellapp_death_listener.hpp</label>
+        <link refid="cellapp__death__listener_8hpp_source"/>
+        <childnode refid="7735" relation="include">
+        </childnode>
+        <childnode refid="7736" relation="include">
+        </childnode>
+        <childnode refid="7737" relation="include">
+        </childnode>
+      </node>
+      <node id="7735">
+        <label>network/basictypes.hpp</label>
+      </node>
+      <node id="7733">
+        <label>cellapp/cellapp_death_listener.cpp</label>
+        <link refid="cellapp_death_listener.cpp"/>
+        <childnode refid="7734" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;cellapp_death_listener.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Section:<sp/>CellAppDeathListeners</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="class_cell_app_death_listeners" kindref="compound">CellAppDeathListeners</ref><sp/>&amp;<sp/><ref refid="class_cell_app_death_listeners_1abe8288386afb74fd0746b737cfe67c63" kindref="member">CellAppDeathListeners::instance</ref>()</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*s_pCellAppDeathListeners;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cell_app_death_listeners_1af54abaa473805da824af53182b4f13df" kindref="member">CellAppDeathListeners::handleCellAppDeath</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Mercury::Address<sp/>&amp;<sp/>addr<sp/>)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Be<sp/>careful<sp/>with<sp/>iteration<sp/>as<sp/>any<sp/>of<sp/>these<sp/>objects<sp/>could<sp/>be<sp/>deleted<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>disappear<sp/>from<sp/>the<sp/>list<sp/>at<sp/>any<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>iterator<sp/>iter<sp/>=<sp/>listeners_.begin();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(iter<sp/>!=<sp/>listeners_.end())</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_cell_app_death_listener" kindref="compound">CellAppDeathListener</ref><sp/>&amp;<sp/>listener<sp/>=<sp/>**iter;<sp/>++iter;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>listener.<ref refid="class_cell_app_death_listener_1a659bfb429976219f17a49f7181e32d94" kindref="member">handleCellAppDeath</ref>(<sp/>addr<sp/>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">CellAppDeathListeners::iterator<sp/><ref refid="class_cell_app_death_listeners_1a1aae406c325b9d22021c0c2a3239ce60" kindref="member">CellAppDeathListeners::addListener</ref>(</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_app_death_listener" kindref="compound">CellAppDeathListener</ref><sp/>*<sp/>pListener<sp/>)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>listeners_.insert(<sp/>listeners_.end(),<sp/>pListener<sp/>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cell_app_death_listeners_1ad5ebeb37030a9d16682ff1e0257c5841" kindref="member">CellAppDeathListeners::delListener</ref>(<sp/>iterator<sp/>&amp;<sp/>iter<sp/>)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>listeners_.erase(<sp/>iter<sp/>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Section:<sp/>CellAppDeathListener</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><ref refid="class_cell_app_death_listener_1ac7bf695557751ac343853d0a6d0077be" kindref="member">CellAppDeathListener::CellAppDeathListener</ref>()<sp/>:</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>iter_(<sp/><ref refid="class_cell_app_death_listeners" kindref="compound">CellAppDeathListeners</ref>::<ref refid="class_cell_app_death_listeners_1abe8288386afb74fd0746b737cfe67c63" kindref="member">instance</ref>().<ref refid="class_cell_app_death_listeners_1a1aae406c325b9d22021c0c2a3239ce60" kindref="member">addListener</ref>(<sp/>this<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><ref refid="class_cell_app_death_listener_1a54f1a9fc174135f45741e861c94d80bc" kindref="member">CellAppDeathListener::~CellAppDeathListener</ref>()</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cell_app_death_listeners_1abe8288386afb74fd0746b737cfe67c63" kindref="member">CellAppDeathListeners::instance</ref>().<ref refid="class_cell_app_death_listeners_1ad5ebeb37030a9d16682ff1e0257c5841" kindref="member">delListener</ref>(<sp/>iter_<sp/>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>cellapp_death_listener.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="cellapp/cellapp_death_listener.cpp"/>
+  </compounddef>
+</doxygen>

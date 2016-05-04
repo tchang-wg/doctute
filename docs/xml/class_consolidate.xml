@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_consolidate" kind="class" language="C++" prot="public">
+    <compoundname>Consolidate</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_consolidate_1a29f3a5bc716b85249f4fd9144d660db8" prot="private" static="no" mutable="no">
+        <type>Endpoint</type>
+        <definition>Endpoint Consolidate::endpoint_</definition>
+        <argsstring></argsstring>
+        <name>endpoint_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/consolidate.hpp" line="30" column="1" bodyfile="tools/transfer_db/consolidate.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_consolidate_1a1922305c9d604bf545df70f34b59262e" prot="private" static="no" mutable="no">
+        <type>off_t</type>
+        <definition>off_t Consolidate::sqliteSize_</definition>
+        <argsstring></argsstring>
+        <name>sqliteSize_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/consolidate.hpp" line="32" column="1" bodyfile="tools/transfer_db/consolidate.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_consolidate_1a5e1df2818ab77e2b4afeed517f241a0e" prot="private" static="no" mutable="no">
+        <type>BW::string</type>
+        <definition>BW::string Consolidate::sqliteFilename_</definition>
+        <argsstring></argsstring>
+        <name>sqliteFilename_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/consolidate.hpp" line="33" column="1" bodyfile="tools/transfer_db/consolidate.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_consolidate_1a05442bfc67d3eab52012d4abf0e7bf43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE Consolidate::Consolidate</definition>
+        <argsstring>(BW::string dbFilename)</argsstring>
+        <name>Consolidate</name>
+        <param>
+          <type>BW::string</type>
+          <declname>dbFilename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/consolidate.hpp" line="17" column="1" bodyfile="tools/transfer_db/consolidate.cpp" bodystart="57" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_consolidate_1ad93b7928dfa6990f68bcb42e7e3c9255" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Consolidate::~Consolidate</definition>
+        <argsstring>()</argsstring>
+        <name>~Consolidate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/consolidate.hpp" line="18" column="1" bodyfile="tools/transfer_db/consolidate.cpp" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_consolidate_1a32ba783193ca6832068861a5cfe233e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Consolidate::transferTo</definition>
+        <argsstring>(Mercury::Address &amp;receivingAddress)</argsstring>
+        <name>transferTo</name>
+        <param>
+          <type>Mercury::Address &amp;</type>
+          <declname>receivingAddress</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/consolidate.hpp" line="20" column="1" bodyfile="tools/transfer_db/consolidate.cpp" bodystart="122" bodyend="177"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_consolidate_1aef4492d833f4cfae1ea39c13016eb005" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Consolidate::prepareDBForSend</definition>
+        <argsstring>()</argsstring>
+        <name>prepareDBForSend</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method checks the filename requested is a valid SQLite DB file and removes any journal files before allowing it to be sent. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/consolidate.hpp" line="23" column="1" bodyfile="tools/transfer_db/consolidate.cpp" bodystart="184" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="class_consolidate_1a9674256dc637c1da0b8ffe7bd461435e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Consolidate::readAndSendDB</definition>
+        <argsstring>()</argsstring>
+        <name>readAndSendDB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/consolidate.hpp" line="24" column="1" bodyfile="tools/transfer_db/consolidate.cpp" bodystart="221" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="class_consolidate_1a45f127423773bcf635b2cc683a03baaa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Consolidate::waitForDeleteCommand</definition>
+        <argsstring>()</argsstring>
+        <name>waitForDeleteCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/consolidate.hpp" line="25" column="1" bodyfile="tools/transfer_db/consolidate.cpp" bodystart="314" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="class_consolidate_1ad5d38a7455fdbbfbb617e94dffe24b4a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Consolidate::error</definition>
+        <argsstring>(BW::string errorStr, BW::string supplementalStr)</argsstring>
+        <name>error</name>
+        <param>
+          <type>BW::string</type>
+          <declname>errorStr</declname>
+        </param>
+        <param>
+          <type>BW::string</type>
+          <declname>supplementalStr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/transfer_db/consolidate.hpp" line="27" column="1" bodyfile="tools/transfer_db/consolidate.cpp" bodystart="76" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tools/transfer_db/consolidate.hpp" line="15" column="1" bodyfile="tools/transfer_db/consolidate.hpp" bodystart="14" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_consolidate_1a05442bfc67d3eab52012d4abf0e7bf43" prot="public" virt="non-virtual"><scope>Consolidate</scope><name>Consolidate</name></member>
+      <member refid="class_consolidate_1a29f3a5bc716b85249f4fd9144d660db8" prot="private" virt="non-virtual"><scope>Consolidate</scope><name>endpoint_</name></member>
+      <member refid="class_consolidate_1ad5d38a7455fdbbfbb617e94dffe24b4a" prot="private" virt="non-virtual"><scope>Consolidate</scope><name>error</name></member>
+      <member refid="class_consolidate_1aef4492d833f4cfae1ea39c13016eb005" prot="private" virt="non-virtual"><scope>Consolidate</scope><name>prepareDBForSend</name></member>
+      <member refid="class_consolidate_1a9674256dc637c1da0b8ffe7bd461435e" prot="private" virt="non-virtual"><scope>Consolidate</scope><name>readAndSendDB</name></member>
+      <member refid="class_consolidate_1a5e1df2818ab77e2b4afeed517f241a0e" prot="private" virt="non-virtual"><scope>Consolidate</scope><name>sqliteFilename_</name></member>
+      <member refid="class_consolidate_1a1922305c9d604bf545df70f34b59262e" prot="private" virt="non-virtual"><scope>Consolidate</scope><name>sqliteSize_</name></member>
+      <member refid="class_consolidate_1a32ba783193ca6832068861a5cfe233e7" prot="public" virt="non-virtual"><scope>Consolidate</scope><name>transferTo</name></member>
+      <member refid="class_consolidate_1a45f127423773bcf635b2cc683a03baaa" prot="private" virt="non-virtual"><scope>Consolidate</scope><name>waitForDeleteCommand</name></member>
+      <member refid="class_consolidate_1ad93b7928dfa6990f68bcb42e7e3c9255" prot="public" virt="non-virtual"><scope>Consolidate</scope><name>~Consolidate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

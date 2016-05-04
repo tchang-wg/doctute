@@ -1,0 +1,387 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_query_range_iterator" kind="class" language="C++" prot="public">
+    <compoundname>QueryRangeIterator</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_query_range_iterator_1aa867984fd1bf59774ef3e9645f0db196" prot="private" static="no" mutable="no">
+        <type>const <ref refid="class_query_range" kindref="compound">QueryRange</ref> *</type>
+        <definition>const QueryRange* QueryRangeIterator::pQueryRange_</definition>
+        <argsstring></argsstring>
+        <name>pQueryRange_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="50" column="1" bodyfile="tools/message_logger/query_range_iterator.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_query_range_iterator_1aa82c3638586ac6beb765a162757d3a6e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int QueryRangeIterator::segmentNum_</definition>
+        <argsstring></argsstring>
+        <name>segmentNum_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="53" column="1" bodyfile="tools/message_logger/query_range_iterator.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_query_range_iterator_1af97a52a7d348f78a3e47c25c73dce15e" prot="private" static="no" mutable="no">
+        <type>union QueryRangeIterator::@12</type>
+        <definition>union QueryRangeIterator::@12 QueryRangeIterator::@13</definition>
+        <argsstring></argsstring>
+        <name>@13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_query_range_iterator_1ae7f11bf1a593dfce58570a8afcc74f14" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int QueryRangeIterator::metaOffset_</definition>
+        <argsstring></argsstring>
+        <name>metaOffset_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="62" column="1" bodyfile="tools/message_logger/query_range_iterator.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_query_range_iterator_1a98a428572b44f06eb7f07042079bd637" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int QueryRangeIterator::entryNum_</definition>
+        <argsstring></argsstring>
+        <name>entryNum_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="58" column="1" bodyfile="tools/message_logger/query_range_iterator.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_query_range_iterator_1ab25944659012b3851587dfdde3b87272" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int QueryRangeIterator::argsOffset_</definition>
+        <argsstring></argsstring>
+        <name>argsOffset_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="59" column="1" bodyfile="tools/message_logger/query_range_iterator.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_query_range_iterator_1a69fcb4509259c9c0b50a526a13d14a37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BW_BEGIN_NAMESPACE QueryRangeIterator::QueryRangeIterator</definition>
+        <argsstring>(const QueryRange *queryRange, int segmentNum=-1, int entryNum=-1, int metaOffset=0)</argsstring>
+        <name>QueryRangeIterator</name>
+        <param>
+          <type>const <ref refid="class_query_range" kindref="compound">QueryRange</ref> *</type>
+          <declname>queryRange</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>segmentNum</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>entryNum</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>metaOffset</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This iterator class is intended to remove some of the annoying (and error prone) handling of QueryRange::direction_ from this module&apos;s code. As far as this class is concerned, the positive direction is always towards the end of the search, whether the search is running forwards or backwards. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="17" column="1" bodyfile="tools/message_logger/query_range_iterator.cpp" bodystart="19" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_iterator_1a83f6a1111791b14a09291cf77d11cdc3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QueryRangeIterator::isGood</definition>
+        <argsstring>() const </argsstring>
+        <name>isGood</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>&apos;Goodness&apos; is tied into the segmentNum_ field. The entryNum_ field is used to determine that an iterator is out of range to the left or right. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="25" column="1" bodyfile="tools/message_logger/query_range_iterator.cpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_iterator_1a07c082735b03f11a1647c0a5e0096636" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="class_user_segment_reader" kindref="compound">UserSegmentReader</ref> *</type>
+        <definition>const UserSegmentReader * QueryRangeIterator::getSegment</definition>
+        <argsstring>() const </argsstring>
+        <name>getSegment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="27" column="1" bodyfile="tools/message_logger/query_range_iterator.cpp" bodystart="206" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_iterator_1a0bd5edb3543604bd5cd361c2939c634c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int QueryRangeIterator::getSegmentNumber</definition>
+        <argsstring>() const </argsstring>
+        <name>getSegmentNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="29" column="1" bodyfile="tools/message_logger/query_range_iterator.cpp" bodystart="212" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_iterator_1af9f047c9f766352d4bc10038c8c86c6b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int QueryRangeIterator::getEntryNumber</definition>
+        <argsstring>() const </argsstring>
+        <name>getEntryNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="30" column="1" bodyfile="tools/message_logger/query_range_iterator.cpp" bodystart="218" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_iterator_1a0e93843e6ddf59e2cebacf63213d8188" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int QueryRangeIterator::getArgsOffset</definition>
+        <argsstring>() const </argsstring>
+        <name>getArgsOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="31" column="1" bodyfile="tools/message_logger/query_range_iterator.cpp" bodystart="230" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_iterator_1a8e56de943aa43114a35ae09f380370ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int QueryRangeIterator::getMetaOffset</definition>
+        <argsstring>() const </argsstring>
+        <name>getMetaOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="32" column="1" bodyfile="tools/message_logger/query_range_iterator.cpp" bodystart="224" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_iterator_1ae8d7d0ac03a1ada945da13925bee5897" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_log_entry_address" kindref="compound">LogEntryAddress</ref></type>
+        <definition>LogEntryAddress QueryRangeIterator::getAddress</definition>
+        <argsstring>() const </argsstring>
+        <name>getAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="34" column="1" bodyfile="tools/message_logger/query_range_iterator.cpp" bodystart="236" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_iterator_1a14f49674da1bf3c362b2b9c610645e53" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>BW::string</type>
+        <definition>BW::string QueryRangeIterator::asString</definition>
+        <argsstring>() const </argsstring>
+        <name>asString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the iterator details as a string for debugging and error reporting. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="36" column="1" bodyfile="tools/message_logger/query_range_iterator.cpp" bodystart="246" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_iterator_1abcf5ad58ec27fe808b467b9d09280e93" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QueryRangeIterator::operator&lt;</definition>
+        <argsstring>(const QueryRangeIterator &amp;other) const </argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="class_query_range_iterator" kindref="compound">QueryRangeIterator</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="38" column="1" bodyfile="tools/message_logger/query_range_iterator.cpp" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_iterator_1a84b91c2f0269fb295aea092a0d390e2e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QueryRangeIterator::operator&lt;=</definition>
+        <argsstring>(const QueryRangeIterator &amp;other) const </argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>const <ref refid="class_query_range_iterator" kindref="compound">QueryRangeIterator</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="39" column="1" bodyfile="tools/message_logger/query_range_iterator.cpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_iterator_1a0e705c4a18f51b56ef788a7951356a4f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QueryRangeIterator::operator==</definition>
+        <argsstring>(const QueryRangeIterator &amp;other) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="class_query_range_iterator" kindref="compound">QueryRangeIterator</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="40" column="1" bodyfile="tools/message_logger/query_range_iterator.cpp" bodystart="50" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_iterator_1abb95ef2e69f8f17e38e07449460aad0f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int QueryRangeIterator::operator-</definition>
+        <argsstring>(const QueryRangeIterator &amp;other) const </argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="class_query_range_iterator" kindref="compound">QueryRangeIterator</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This returns the offset (in entries) between this iterator and another iterator. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="41" column="1" bodyfile="tools/message_logger/query_range_iterator.cpp" bodystart="146" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_iterator_1af9f14b56a89c06803e3d276fd13b08fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_query_range_iterator" kindref="compound">QueryRangeIterator</ref> &amp;</type>
+        <definition>QueryRangeIterator &amp; QueryRangeIterator::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="42" column="1" bodyfile="tools/message_logger/query_range_iterator.cpp" bodystart="65" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_range_iterator_1a70b1e378f4bf54885fc7763387b866b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_query_range_iterator" kindref="compound">QueryRangeIterator</ref> &amp;</type>
+        <definition>QueryRangeIterator &amp; QueryRangeIterator::operator--</definition>
+        <argsstring>()</argsstring>
+        <name>operator--</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="43" column="1" bodyfile="tools/message_logger/query_range_iterator.cpp" bodystart="72" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_query_range_iterator_1a84c2190edb695f1dc57a1dac8de7d60b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_query_range_iterator" kindref="compound">QueryRangeIterator</ref></type>
+        <definition>static QueryRangeIterator QueryRangeIterator::error</definition>
+        <argsstring>(QueryRange &amp;queryRange)</argsstring>
+        <name>error</name>
+        <param>
+          <type><ref refid="class_query_range" kindref="compound">QueryRange</ref> &amp;</type>
+          <declname>queryRange</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="20" column="1" bodyfile="tools/message_logger/query_range_iterator.hpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_query_range_iterator_1a7742767b84e14492889a5fe5171f65bd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QueryRangeIterator::step</definition>
+        <argsstring>(SearchDirection direction)</argsstring>
+        <name>step</name>
+        <param>
+          <type>SearchDirection</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper method for operator++ and operator--. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/query_range_iterator.hpp" line="47" column="1" bodyfile="tools/message_logger/query_range_iterator.cpp" bodystart="82" bodyend="139"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tools/message_logger/query_range_iterator.hpp" line="15" column="1" bodyfile="tools/message_logger/query_range_iterator.hpp" bodystart="14" bodyend="63"/>
+    <listofallmembers>
+      <member refid="class_query_range_iterator_1ab25944659012b3851587dfdde3b87272" prot="public" virt="non-virtual"><scope>QueryRangeIterator</scope><name>argsOffset_</name></member>
+      <member refid="class_query_range_iterator_1a14f49674da1bf3c362b2b9c610645e53" prot="public" virt="non-virtual"><scope>QueryRangeIterator</scope><name>asString</name></member>
+      <member refid="class_query_range_iterator_1a98a428572b44f06eb7f07042079bd637" prot="public" virt="non-virtual"><scope>QueryRangeIterator</scope><name>entryNum_</name></member>
+      <member refid="class_query_range_iterator_1a84c2190edb695f1dc57a1dac8de7d60b" prot="public" virt="non-virtual"><scope>QueryRangeIterator</scope><name>error</name></member>
+      <member refid="class_query_range_iterator_1ae8d7d0ac03a1ada945da13925bee5897" prot="public" virt="non-virtual"><scope>QueryRangeIterator</scope><name>getAddress</name></member>
+      <member refid="class_query_range_iterator_1a0e93843e6ddf59e2cebacf63213d8188" prot="public" virt="non-virtual"><scope>QueryRangeIterator</scope><name>getArgsOffset</name></member>
+      <member refid="class_query_range_iterator_1af9f047c9f766352d4bc10038c8c86c6b" prot="public" virt="non-virtual"><scope>QueryRangeIterator</scope><name>getEntryNumber</name></member>
+      <member refid="class_query_range_iterator_1a8e56de943aa43114a35ae09f380370ac" prot="public" virt="non-virtual"><scope>QueryRangeIterator</scope><name>getMetaOffset</name></member>
+      <member refid="class_query_range_iterator_1a07c082735b03f11a1647c0a5e0096636" prot="public" virt="non-virtual"><scope>QueryRangeIterator</scope><name>getSegment</name></member>
+      <member refid="class_query_range_iterator_1a0bd5edb3543604bd5cd361c2939c634c" prot="public" virt="non-virtual"><scope>QueryRangeIterator</scope><name>getSegmentNumber</name></member>
+      <member refid="class_query_range_iterator_1a83f6a1111791b14a09291cf77d11cdc3" prot="public" virt="non-virtual"><scope>QueryRangeIterator</scope><name>isGood</name></member>
+      <member refid="class_query_range_iterator_1ae7f11bf1a593dfce58570a8afcc74f14" prot="private" virt="non-virtual"><scope>QueryRangeIterator</scope><name>metaOffset_</name></member>
+      <member refid="class_query_range_iterator_1af9f14b56a89c06803e3d276fd13b08fa" prot="public" virt="non-virtual"><scope>QueryRangeIterator</scope><name>operator++</name></member>
+      <member refid="class_query_range_iterator_1abb95ef2e69f8f17e38e07449460aad0f" prot="public" virt="non-virtual"><scope>QueryRangeIterator</scope><name>operator-</name></member>
+      <member refid="class_query_range_iterator_1a70b1e378f4bf54885fc7763387b866b4" prot="public" virt="non-virtual"><scope>QueryRangeIterator</scope><name>operator--</name></member>
+      <member refid="class_query_range_iterator_1abcf5ad58ec27fe808b467b9d09280e93" prot="public" virt="non-virtual"><scope>QueryRangeIterator</scope><name>operator&lt;</name></member>
+      <member refid="class_query_range_iterator_1a84b91c2f0269fb295aea092a0d390e2e" prot="public" virt="non-virtual"><scope>QueryRangeIterator</scope><name>operator&lt;=</name></member>
+      <member refid="class_query_range_iterator_1a0e705c4a18f51b56ef788a7951356a4f" prot="public" virt="non-virtual"><scope>QueryRangeIterator</scope><name>operator==</name></member>
+      <member refid="class_query_range_iterator_1aa867984fd1bf59774ef3e9645f0db196" prot="private" virt="non-virtual"><scope>QueryRangeIterator</scope><name>pQueryRange_</name></member>
+      <member refid="class_query_range_iterator_1a69fcb4509259c9c0b50a526a13d14a37" prot="public" virt="non-virtual"><scope>QueryRangeIterator</scope><name>QueryRangeIterator</name></member>
+      <member refid="class_query_range_iterator_1aa82c3638586ac6beb765a162757d3a6e" prot="private" virt="non-virtual"><scope>QueryRangeIterator</scope><name>segmentNum_</name></member>
+      <member refid="class_query_range_iterator_1a7742767b84e14492889a5fe5171f65bd" prot="private" virt="non-virtual"><scope>QueryRangeIterator</scope><name>step</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

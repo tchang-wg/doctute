@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="py__client_8hpp" kind="file" language="C++">
+    <compoundname>py_client.hpp</compoundname>
+    <includes local="yes">cstdmf/memory_stream.hpp</includes>
+    <includes local="yes">pyscript/pyobject_plus.hpp</includes>
+    <includes local="yes">server/recording_options.hpp</includes>
+    <includedby refid="cellapp_2entity_8cpp" local="yes">cellapp/entity.cpp</includedby>
+    <includedby refid="py__client_8cpp" local="yes">cellapp/py_client.cpp</includedby>
+    <incdepgraph>
+      <node id="11047">
+        <label>cstdmf/memory_stream.hpp</label>
+      </node>
+      <node id="11048">
+        <label>pyscript/pyobject_plus.hpp</label>
+      </node>
+      <node id="11046">
+        <label>cellapp/py_client.hpp</label>
+        <link refid="py_client.hpp"/>
+        <childnode refid="11047" relation="include">
+        </childnode>
+        <childnode refid="11048" relation="include">
+        </childnode>
+        <childnode refid="11049" relation="include">
+        </childnode>
+      </node>
+      <node id="11049">
+        <label>server/recording_options.hpp</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_py_client" prot="public">PyClient</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>PY_CLIENT_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PY_CLIENT_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/memory_stream.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pyscript/pyobject_plus.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;server/recording_options.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_entity" kindref="compound">Entity</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/*~<sp/>class<sp/>NoModule.PyClient</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>@components{<sp/>cell<sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>PyClient<sp/>is<sp/>the<sp/>device<sp/>through<sp/>which<sp/>a<sp/>real<sp/>cell<sp/>Entity<sp/>is<sp/>able<sp/>to<sp/>call<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>methods<sp/>on<sp/>its<sp/>client<sp/>instances.<sp/>A<sp/>new<sp/>PyClient<sp/>object<sp/>is<sp/>created<sp/>by<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>BigWorld<sp/>each<sp/>time<sp/>an<sp/>entity&apos;s<sp/>&quot;client&quot;,<sp/>&quot;otherClients&quot;<sp/>or<sp/>&quot;allClients&quot;</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/>attributes<sp/>are<sp/>accessed,<sp/>and<sp/>each<sp/>time<sp/>an<sp/>entity&apos;s<sp/>&quot;clientEntity&quot;<sp/>function</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/>is<sp/>called.<sp/>Objects<sp/>of<sp/>this<sp/>type<sp/>cannot<sp/>otherwise<sp/>be<sp/>created<sp/>via<sp/>script.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>PyClient<sp/>can<sp/>be<sp/>used<sp/>to<sp/>send<sp/>method<sp/>calls<sp/>to<sp/>either<sp/>the<sp/>client<sp/>which<sp/>owns</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/><sp/>the<sp/>entity,<sp/>all<sp/>clients<sp/>except<sp/>the<sp/>one<sp/>which<sp/>owns<sp/>the<sp/>entity,<sp/>or<sp/>all<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/>clients.<sp/>It<sp/>can<sp/>also<sp/>be<sp/>used<sp/>to<sp/>call<sp/>methods<sp/>on<sp/>a<sp/>different<sp/>entity<sp/>which<sp/>is</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/>owned<sp/>by<sp/>the<sp/>same<sp/>client.<sp/>These<sp/>options<sp/>are<sp/>set<sp/>when<sp/>the<sp/>PyClient<sp/>is<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/>created,<sp/>and<sp/>cannot<sp/>be<sp/>altered<sp/>afterwards<sp/>via<sp/>python.<sp/>The<sp/>PyClient<sp/>objects<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/>provided<sp/>by<sp/>the<sp/>entity<sp/>members<sp/>client,<sp/>otherClients,<sp/>allClients<sp/>and<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/>clientEntity<sp/>are<sp/>each<sp/>set<sp/>up<sp/>differently<sp/>in<sp/>these<sp/>respects,<sp/>as<sp/>described<sp/>in</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>the<sp/>Entity<sp/>class<sp/>documentation.</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/>PyClient<sp/>objects<sp/>have<sp/>no<sp/>default<sp/>attributes<sp/>or<sp/>methods,<sp/>however<sp/>BigWorld<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/><sp/>populates<sp/>them<sp/>with<sp/>ClientCaller<sp/>objects<sp/>which<sp/>represent<sp/>the<sp/>methods<sp/>that</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/><sp/>can<sp/>be<sp/>called.<sp/>These<sp/>are<sp/>built<sp/>using<sp/>information<sp/>provided<sp/>in<sp/>the<sp/>entity</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/><sp/>def<sp/>files.<sp/>A<sp/>ClientCaller<sp/>object<sp/>can<sp/>then<sp/>be<sp/>called<sp/>as<sp/>if<sp/>it<sp/>were<sp/>the</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/><sp/>method<sp/>that<sp/>it<sp/>represents,<sp/>which<sp/>causes<sp/>it<sp/>to<sp/>add<sp/>a<sp/>request<sp/>to<sp/>call<sp/>the</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/><sp/>appropriate<sp/>function<sp/>on<sp/>the<sp/>next<sp/>bundles<sp/>that<sp/>are<sp/>sent<sp/>to<sp/>the<sp/>appropriate</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/><sp/>clients.</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/><sp/>Example:</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/><sp/>If<sp/>the<sp/>.def<sp/>file<sp/>&quot;myEntityClass.def&quot;<sp/>contained<sp/>the<sp/>following</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/><sp/>@{</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>&amp;lt;ClientMethods&amp;gt;</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;lt;pointAt&amp;gt;</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;lt;Arg&amp;gt;<sp/>OBJECT_ID<sp/>&amp;lt;/Arg&amp;gt;<sp/>&amp;lt;!--<sp/>entity<sp/>to<sp/>point<sp/>at<sp/>--&amp;gt;</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;lt;/pointAt&amp;gt;</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>&amp;lt;/ClientMethods&amp;gt;</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/><sp/>@}</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/><sp/>then<sp/>where<sp/>&quot;myEntity&quot;<sp/>is<sp/>an<sp/>instance<sp/>of<sp/>&quot;myEntityClass&quot;,<sp/>the<sp/>following</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/><sp/>python<sp/>code<sp/>would<sp/>be<sp/>valid.</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/><sp/>@{</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*<sp/><sp/>#<sp/>This<sp/>example<sp/>tells<sp/>myEntity<sp/>to<sp/>point<sp/>at<sp/>the<sp/>entity<sp/>with<sp/>ID<sp/>#100,<sp/>on<sp/>a<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*<sp/><sp/>#<sp/>range<sp/>of<sp/>clients.</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/>*<sp/><sp/>#<sp/>the<sp/>client<sp/>which<sp/>owns<sp/>myEntity</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/>*<sp/><sp/>myEntity.client.pointAt(<sp/>100<sp/>)</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/>*<sp/><sp/>#<sp/>all<sp/>clients<sp/>other<sp/>than<sp/>the<sp/>one<sp/>which<sp/>owns<sp/>myEntity</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/>*<sp/><sp/>myEntity.otherClient.pointAt(<sp/>100<sp/>)</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/>*<sp/><sp/>#<sp/>all<sp/>clients</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/>*<sp/><sp/>myEntity.allClients.pointAt(<sp/>100<sp/>)</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/>*<sp/><sp/>@}</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/>*/</highlight></codeline>
+<codeline lineno="71" refid="class_py_client" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_py_client" kindref="compound">PyClient</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>PyObjectPlus</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>Py_Header(<sp/><ref refid="class_py_client" kindref="compound">PyClient</ref>,<sp/>PyObjectPlus<sp/>)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_py_client" kindref="compound">PyClient</ref>(<sp/><ref refid="class_entity" kindref="compound">Entity</ref><sp/>&amp;<sp/>clientEntity,<sp/><ref refid="class_entity" kindref="compound">Entity</ref><sp/>&amp;<sp/>destEntity,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isOwn,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isForOthers,<sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RecordingOption<sp/>recordingOption<sp/>=<sp/>RECORDING_OPTION_METHOD_DEFAULT,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PyTypeObject<sp/>*<sp/>pType<sp/>=<sp/>&amp;PyClient::s_type_<sp/>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="class_py_client" kindref="compound">PyClient</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>ScriptObject<sp/>pyGetAttribute(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ScriptString<sp/>&amp;<sp/>attrObj<sp/>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>PY_KEYWORD_METHOD_DECLARE(<sp/>pyCall<sp/>)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>PyObject<sp/>*<sp/>pyRepr()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_entity" kindref="compound">Entity</ref><sp/>&amp;<sp/>clientEntity_;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_entity" kindref="compound">Entity</ref><sp/>&amp;<sp/>destEntity_;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isForOwn_;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isForOthers_;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>RecordingOption<sp/>recordingOption_;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>PY_CLIENT_HPP</highlight></codeline>
+    </programlisting>
+    <location file="cellapp/py_client.hpp"/>
+  </compounddef>
+</doxygen>

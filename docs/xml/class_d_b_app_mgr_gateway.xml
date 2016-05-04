@@ -1,0 +1,458 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_d_b_app_mgr_gateway" kind="class" language="C++" prot="public">
+    <compoundname>DBAppMgrGateway</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ManagerAppGateway</basecompoundref>
+    <includes refid="dbappmgr__gateway_8hpp" local="no">dbappmgr_gateway.hpp</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_d_b_app_mgr_gateway_1a747902f60079c57e555f7c98c0e5ba7f" prot="private" static="yes" mutable="no">
+        <type>const Mercury::NubException</type>
+        <definition>BW_BEGIN_NAMESPACE const Mercury::NubException DBAppMgrGateway::CHANNEL_NOT_ESTABLISHED</definition>
+        <argsstring></argsstring>
+        <name>CHANNEL_NOT_ESTABLISHED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/dbappmgr_gateway.hpp" line="75" column="1" bodyfile="dbapp/dbappmgr_gateway.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_d_b_app_mgr_gateway_1a690772119a3fd8667c5f93d0f95fcad8" prot="private" static="no" mutable="no">
+        <type>Mercury::UDPBundle</type>
+        <definition>Mercury::UDPBundle DBAppMgrGateway::bufferedBundle_</definition>
+        <argsstring></argsstring>
+        <name>bufferedBundle_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/dbappmgr_gateway.hpp" line="77" column="1" bodyfile="dbapp/dbappmgr_gateway.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_b_app_mgr_gateway_1a84e001537da9c17fd9d7c46b22649380" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DBAppMgrGateway::DBAppMgrGateway</definition>
+        <argsstring>(Mercury::NetworkInterface &amp;interface)</argsstring>
+        <name>DBAppMgrGateway</name>
+        <param>
+          <type>Mercury::NetworkInterface &amp;</type>
+          <declname>interface</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The constructor for <ref refid="class_d_b_app_mgr_gateway" kindref="compound">DBAppMgrGateway</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/dbappmgr_gateway.hpp" line="33" column="1" bodyfile="dbapp/dbappmgr_gateway.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_app_mgr_gateway_1addd9124b9d7604775c965989456d89d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DBAppMgrGateway::~DBAppMgrGateway</definition>
+        <argsstring>()</argsstring>
+        <name>~DBAppMgrGateway</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/dbappmgr_gateway.hpp" line="35" column="1" bodyfile="dbapp/dbappmgr_gateway.cpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_app_mgr_gateway_1aced3fe5640c6874d9406d3938e3f62b3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Mercury::Address &amp;</type>
+        <definition>const Mercury::Address&amp; DBAppMgrGateway::address</definition>
+        <argsstring>() const </argsstring>
+        <name>address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/dbappmgr_gateway.hpp" line="37" column="1" bodyfile="dbapp/dbappmgr_gateway.hpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_app_mgr_gateway_1a45e3399cf901ff275fb6376169bc15bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBAppMgrGateway::address</definition>
+        <argsstring>(const Mercury::Address &amp;address)</argsstring>
+        <name>address</name>
+        <param>
+          <type>const Mercury::Address &amp;</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method changes the address to <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref> address. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/dbappmgr_gateway.hpp" line="42" column="1" bodyfile="dbapp/dbappmgr_gateway.cpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_app_mgr_gateway_1a7b1bfc2311d7a74a48f21c47927b38d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBAppMgrGateway::sendBufferedMessages</definition>
+        <argsstring>()</argsstring>
+        <name>sendBufferedMessages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends messages buffered while the channel to <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref> was not established. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/dbappmgr_gateway.hpp" line="44" column="1" bodyfile="dbapp/dbappmgr_gateway.cpp" bodystart="54" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_app_mgr_gateway_1a444a38b3215444c41a4e0e0a8d286552" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBAppMgrGateway::recoverDBApp</definition>
+        <argsstring>(DBAppID id, const StorageShardDescriptor &amp;shardDescriptor, bool hasConnectedToDB)</argsstring>
+        <name>recoverDBApp</name>
+        <param>
+          <type>DBAppID</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const StorageShardDescriptor &amp;</type>
+          <declname>shardDescriptor</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>hasConnectedToDB</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends recovery information about this <ref refid="class_d_b_app" kindref="compound">DBApp</ref> to a newly started instance of <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_d_b_app" kindref="compound">DBApp</ref> ID. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shardDescriptor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The shard descriptor. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hasConnectedToDB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Has the <ref refid="class_d_b_app" kindref="compound">DBApp</ref> connected to the database or not. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/dbappmgr_gateway.hpp" line="46" column="1" bodyfile="dbapp/dbappmgr_gateway.cpp" bodystart="84" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_app_mgr_gateway_1a25ee6206da49db096976b07a3d61ee54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename RANDOM_ACCESS_ITERATOR</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void DBAppMgrGateway::notifyTransferCycleComplete</definition>
+        <argsstring>(RANDOM_ACCESS_ITERATOR begin, RANDOM_ACCESS_ITERATOR end)</argsstring>
+        <name>notifyTransferCycleComplete</name>
+        <param>
+          <type>RANDOM_ACCESS_ITERATOR</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>RANDOM_ACCESS_ITERATOR</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends notification of transfer completion for this <ref refid="class_d_b_app" kindref="compound">DBApp</ref> for the given range of GUIDs.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The beginning of the range of storage-shard GUIDs. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The end of the range of storage-shard GUIDs. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/dbappmgr_gateway.hpp" line="52" column="1" bodyfile="dbapp/dbappmgr_gateway.hpp" bodystart="126" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_app_mgr_gateway_1a5a1e8fbf5d3167a8da74afc624c880ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBAppMgrGateway::statusCheck</definition>
+        <argsstring>(Mercury::ReplyMessageHandler *pReplyHandler)</argsstring>
+        <name>statusCheck</name>
+        <param>
+          <type>Mercury::ReplyMessageHandler *</type>
+          <declname>pReplyHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method requests server status from <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/dbappmgr_gateway.hpp" line="55" column="1" bodyfile="dbapp/dbappmgr_gateway.cpp" bodystart="103" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_app_mgr_gateway_1af1f13d9e5e0da57b601724c3b475f163" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBAppMgrGateway::addDBApp</definition>
+        <argsstring>(Mercury::ReplyMessageHandler *pReplyHandler)</argsstring>
+        <name>addDBApp</name>
+        <param>
+          <type>Mercury::ReplyMessageHandler *</type>
+          <declname>pReplyHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is used to register this <ref refid="class_d_b_app" kindref="compound">DBApp</ref> to the <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/dbappmgr_gateway.hpp" line="56" column="1" bodyfile="dbapp/dbappmgr_gateway.cpp" bodystart="123" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_app_mgr_gateway_1a5dd21df1b446eadd1d66395228f670bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename RANDOM_ACCESS_ITERATOR</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void DBAppMgrGateway::sendStorageShardsData</definition>
+        <argsstring>(RANDOM_ACCESS_ITERATOR begin, RANDOM_ACCESS_ITERATOR end)</argsstring>
+        <name>sendStorageShardsData</name>
+        <param>
+          <type>RANDOM_ACCESS_ITERATOR</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>RANDOM_ACCESS_ITERATOR</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sends the shard descriptors to <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref>, read from Shard-Alpha.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of a range of StorageShardDescriptors to send. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The end of a range of StorageShardDescriptors to send. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/dbappmgr_gateway.hpp" line="60" column="1" bodyfile="dbapp/dbappmgr_gateway.hpp" bodystart="88" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_app_mgr_gateway_1afd39d37a501221b0dcb331b2764462df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBAppMgrGateway::notifyStorageShardConnectionResult</definition>
+        <argsstring>(bool isSuccess, ShardGUID guid)</argsstring>
+        <name>notifyStorageShardConnectionResult</name>
+        <param>
+          <type>bool</type>
+          <declname>isSuccess</declname>
+        </param>
+        <param>
+          <type>ShardGUID</type>
+          <declname>guid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is used to notify the <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref> of the result of connecting to a shard&apos;s database.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isSuccess</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether it connects successfully or not. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>guid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ShardGUID value of the shard. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/dbappmgr_gateway.hpp" line="63" column="1" bodyfile="dbapp/dbappmgr_gateway.cpp" bodystart="151" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_app_mgr_gateway_1a8ef6737490327d7f36860a0811d4ab4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBAppMgrGateway::notifyServerStartupComplete</definition>
+        <argsstring>(bool didAutoLoad)</argsstring>
+        <name>notifyServerStartupComplete</name>
+        <param>
+          <type>bool</type>
+          <declname>didAutoLoad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method notifies <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref> from DBApp-Alpha that server startup initialisation has been completed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>didAutoLoad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether there are entities auto-loaded. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/dbappmgr_gateway.hpp" line="64" column="1" bodyfile="dbapp/dbappmgr_gateway.cpp" bodystart="178" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_app_mgr_gateway_1af2ccb0c4b26c2007784d4e678a785d89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename RANDOM_ACCESS_ITERATOR</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void DBAppMgrGateway::onPersistTransitionCompletions</definition>
+        <argsstring>(RANDOM_ACCESS_ITERATOR begin, RANDOM_ACCESS_ITERATOR end)</argsstring>
+        <name>onPersistTransitionCompletions</name>
+        <param>
+          <type>RANDOM_ACCESS_ITERATOR</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>RANDOM_ACCESS_ITERATOR</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method replies to a persistTransitionCompletions request from the <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref> with failure.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The beginning of the range of GUIDs for storage-shards that were updated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The end of the range of GUIDs for storage-shards that were updated. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/dbappmgr_gateway.hpp" line="67" column="1" bodyfile="dbapp/dbappmgr_gateway.hpp" bodystart="174" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_app_mgr_gateway_1a70c1b2c51762ccdbc5da197d16dbb589" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBAppMgrGateway::onPersistTransitionCompletionsFailed</definition>
+        <argsstring>()</argsstring>
+        <name>onPersistTransitionCompletionsFailed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method replies to a persistStorageShardsStatuses request from the <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref> with failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/dbappmgr_gateway.hpp" line="70" column="1" bodyfile="dbapp/dbappmgr_gateway.cpp" bodystart="197" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_app_mgr_gateway_1a9bc232f37bcbb9c2548fb463338a6b4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBAppMgrGateway::requestControlledShutDown</definition>
+        <argsstring>()</argsstring>
+        <name>requestControlledShutDown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method makes a request to the <ref refid="class_d_b_app_mgr" kindref="compound">DBAppMgr</ref> to start a controlled shutdown. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dbapp/dbappmgr_gateway.hpp" line="72" column="1" bodyfile="dbapp/dbappmgr_gateway.cpp" bodystart="215" bodyend="228"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is a simple helper class that is used to represent the remote db manager. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1007">
+        <label>DBAppMgrGateway</label>
+        <link refid="class_d_b_app_mgr_gateway"/>
+        <childnode refid="1008" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1008">
+        <label>ManagerAppGateway</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1009">
+        <label>DBAppMgrGateway</label>
+        <link refid="class_d_b_app_mgr_gateway"/>
+        <childnode refid="1010" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1010">
+        <label>ManagerAppGateway</label>
+      </node>
+    </collaborationgraph>
+    <location file="dbapp/dbappmgr_gateway.hpp" line="31" column="1" bodyfile="dbapp/dbappmgr_gateway.hpp" bodystart="30" bodyend="78"/>
+    <listofallmembers>
+      <member refid="class_d_b_app_mgr_gateway_1af1f13d9e5e0da57b601724c3b475f163" prot="public" virt="non-virtual"><scope>DBAppMgrGateway</scope><name>addDBApp</name></member>
+      <member refid="class_d_b_app_mgr_gateway_1aced3fe5640c6874d9406d3938e3f62b3" prot="public" virt="non-virtual"><scope>DBAppMgrGateway</scope><name>address</name></member>
+      <member refid="class_d_b_app_mgr_gateway_1a45e3399cf901ff275fb6376169bc15bb" prot="public" virt="non-virtual"><scope>DBAppMgrGateway</scope><name>address</name></member>
+      <member refid="class_d_b_app_mgr_gateway_1a690772119a3fd8667c5f93d0f95fcad8" prot="private" virt="non-virtual"><scope>DBAppMgrGateway</scope><name>bufferedBundle_</name></member>
+      <member refid="class_d_b_app_mgr_gateway_1a747902f60079c57e555f7c98c0e5ba7f" prot="private" virt="non-virtual"><scope>DBAppMgrGateway</scope><name>CHANNEL_NOT_ESTABLISHED</name></member>
+      <member refid="class_d_b_app_mgr_gateway_1a84e001537da9c17fd9d7c46b22649380" prot="public" virt="non-virtual"><scope>DBAppMgrGateway</scope><name>DBAppMgrGateway</name></member>
+      <member refid="class_d_b_app_mgr_gateway_1a8ef6737490327d7f36860a0811d4ab4f" prot="public" virt="non-virtual"><scope>DBAppMgrGateway</scope><name>notifyServerStartupComplete</name></member>
+      <member refid="class_d_b_app_mgr_gateway_1afd39d37a501221b0dcb331b2764462df" prot="public" virt="non-virtual"><scope>DBAppMgrGateway</scope><name>notifyStorageShardConnectionResult</name></member>
+      <member refid="class_d_b_app_mgr_gateway_1a25ee6206da49db096976b07a3d61ee54" prot="public" virt="non-virtual"><scope>DBAppMgrGateway</scope><name>notifyTransferCycleComplete</name></member>
+      <member refid="class_d_b_app_mgr_gateway_1af2ccb0c4b26c2007784d4e678a785d89" prot="public" virt="non-virtual"><scope>DBAppMgrGateway</scope><name>onPersistTransitionCompletions</name></member>
+      <member refid="class_d_b_app_mgr_gateway_1a70c1b2c51762ccdbc5da197d16dbb589" prot="public" virt="non-virtual"><scope>DBAppMgrGateway</scope><name>onPersistTransitionCompletionsFailed</name></member>
+      <member refid="class_d_b_app_mgr_gateway_1a444a38b3215444c41a4e0e0a8d286552" prot="public" virt="non-virtual"><scope>DBAppMgrGateway</scope><name>recoverDBApp</name></member>
+      <member refid="class_d_b_app_mgr_gateway_1a9bc232f37bcbb9c2548fb463338a6b4b" prot="public" virt="non-virtual"><scope>DBAppMgrGateway</scope><name>requestControlledShutDown</name></member>
+      <member refid="class_d_b_app_mgr_gateway_1a7b1bfc2311d7a74a48f21c47927b38d0" prot="public" virt="non-virtual"><scope>DBAppMgrGateway</scope><name>sendBufferedMessages</name></member>
+      <member refid="class_d_b_app_mgr_gateway_1a5dd21df1b446eadd1d66395228f670bd" prot="public" virt="non-virtual"><scope>DBAppMgrGateway</scope><name>sendStorageShardsData</name></member>
+      <member refid="class_d_b_app_mgr_gateway_1a5a1e8fbf5d3167a8da74afc624c880ed" prot="public" virt="non-virtual"><scope>DBAppMgrGateway</scope><name>statusCheck</name></member>
+      <member refid="class_d_b_app_mgr_gateway_1addd9124b9d7604775c965989456d89d7" prot="public" virt="non-virtual"><scope>DBAppMgrGateway</scope><name>~DBAppMgrGateway</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_mongo_d_b_1_1_mongo_d_b_background_task" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>MongoDB::MongoDBBackgroundTask</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BackgroundTask</basecompoundref>
+    <derivedcompoundref refid="class_mongo_d_b_1_1_add_server_start_task" prot="public" virt="non-virtual">MongoDB::AddServerStartTask</derivedcompoundref>
+    <derivedcompoundref refid="class_mongo_d_b_1_1_flush_task" prot="public" virt="non-virtual">MongoDB::FlushTask</derivedcompoundref>
+    <derivedcompoundref refid="class_mongo_d_b_1_1_reconnect_task" prot="public" virt="non-virtual">MongoDB::ReconnectTask</derivedcompoundref>
+    <derivedcompoundref refid="class_mongo_d_b_1_1_roll_task" prot="public" virt="non-virtual">MongoDB::RollTask</derivedcompoundref>
+    <derivedcompoundref refid="class_mongo_d_b_1_1_update_app_i_d_task" prot="public" virt="non-virtual">MongoDB::UpdateAppIDTask</derivedcompoundref>
+    <derivedcompoundref refid="class_mongo_d_b_1_1_update_i_d_string_pair_task" prot="public" virt="non-virtual">MongoDB::UpdateIDStringPairTask&lt; IDType &gt;</derivedcompoundref>
+    <derivedcompoundref refid="class_mongo_d_b_1_1_write_app_i_d_task" prot="public" virt="non-virtual">MongoDB::WriteAppIDTask</derivedcompoundref>
+    <derivedcompoundref refid="class_mongo_d_b_1_1_write_i_d_string_pair_task" prot="public" virt="non-virtual">MongoDB::WriteIDStringPairTask&lt; IDType &gt;</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mongo_d_b_1_1_mongo_d_b_background_task_1a7788d75382d6f561cb9a72656634826a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MongoDB::MongoDBBackgroundTask::MongoDBBackgroundTask</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>MongoDBBackgroundTask</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/mongodb_background_task.hpp" line="18" column="1" bodyfile="tools/message_logger/mongodb/tasks/mongodb_background_task.hpp" bodystart="18" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_mongo_d_b_1_1_mongo_d_b_background_task_1a50ca0ec7c9b3842b648f21db4e076a09" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MongoDB::MongoDBBackgroundTask::doBackgroundTask</definition>
+        <argsstring>(TaskManager &amp;mgr, BackgroundTaskThread *pThread)</argsstring>
+        <name>doBackgroundTask</name>
+        <param>
+          <type>TaskManager &amp;</type>
+          <declname>mgr</declname>
+        </param>
+        <param>
+          <type>BackgroundTaskThread *</type>
+          <declname>pThread</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/mongodb_background_task.hpp" line="21" column="1" bodyfile="tools/message_logger/mongodb/tasks/mongodb_background_task.cpp" bodystart="14" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_mongo_d_b_background_task_1a05fb4c0e7cfcf525a84f6fdb5619091e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MongoDB::MongoDBBackgroundTask::doBackgroundTask</definition>
+        <argsstring>(TaskManager &amp;mgr)</argsstring>
+        <name>doBackgroundTask</name>
+        <param>
+          <type>TaskManager &amp;</type>
+          <declname>mgr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/mongodb_background_task.hpp" line="23" column="1" bodyfile="tools/message_logger/mongodb/tasks/mongodb_background_task.hpp" bodystart="23" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_d_b_1_1_mongo_d_b_background_task_1afa658d48de7addb5b97e449dd3c182fe" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void MongoDB::MongoDBBackgroundTask::performBackgroundTask</definition>
+        <argsstring>(TaskManager &amp;mgr, ConnectionThreadData &amp;connectionData)=0</argsstring>
+        <name>performBackgroundTask</name>
+        <reimplementedby refid="class_mongo_d_b_1_1_roll_task_1aae2aeb76dd8675f5a2fcbe45d5fb47e4">performBackgroundTask</reimplementedby>
+        <reimplementedby refid="class_mongo_d_b_1_1_reconnect_task_1ac8c414bd8eda4b918bf665d05d622c47">performBackgroundTask</reimplementedby>
+        <reimplementedby refid="class_mongo_d_b_1_1_add_server_start_task_1a838e18c09fbb26deeab6873fc90531db">performBackgroundTask</reimplementedby>
+        <reimplementedby refid="class_mongo_d_b_1_1_flush_task_1a480b7143eedbd3d838d1d93f4b017048">performBackgroundTask</reimplementedby>
+        <reimplementedby refid="class_mongo_d_b_1_1_update_app_i_d_task_1ac3f60160fe863e709cb268d2e491201d">performBackgroundTask</reimplementedby>
+        <reimplementedby refid="class_mongo_d_b_1_1_write_i_d_string_pair_task_1a234df8547a9dc6d6cb3cb993c24060d5">performBackgroundTask</reimplementedby>
+        <reimplementedby refid="class_mongo_d_b_1_1_write_app_i_d_task_1a4403484d02e5d3650db7eef14d5ef2b7">performBackgroundTask</reimplementedby>
+        <reimplementedby refid="class_mongo_d_b_1_1_update_i_d_string_pair_task_1af83f9856bd469ebe9a66fc8be9ac94b8">performBackgroundTask</reimplementedby>
+        <param>
+          <type>TaskManager &amp;</type>
+          <declname>mgr</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mongo_d_b_1_1_connection_thread_data" kindref="compound">ConnectionThreadData</ref> &amp;</type>
+          <declname>connectionData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tools/message_logger/mongodb/tasks/mongodb_background_task.hpp" line="29" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1948">
+        <label>MongoDB::FlushTask</label>
+        <link refid="class_mongo_d_b_1_1_flush_task"/>
+        <childnode refid="1945" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1949">
+        <label>MongoDB::ReconnectTask</label>
+        <link refid="class_mongo_d_b_1_1_reconnect_task"/>
+        <childnode refid="1945" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1952">
+        <label>MongoDB::UpdateIDStringPairTask&lt; IDType &gt;</label>
+        <link refid="class_mongo_d_b_1_1_update_i_d_string_pair_task"/>
+        <childnode refid="1945" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1945">
+        <label>MongoDB::MongoDBBackgroundTask</label>
+        <link refid="class_mongo_d_b_1_1_mongo_d_b_background_task"/>
+        <childnode refid="1946" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1951">
+        <label>MongoDB::UpdateAppIDTask</label>
+        <link refid="class_mongo_d_b_1_1_update_app_i_d_task"/>
+        <childnode refid="1945" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1947">
+        <label>MongoDB::AddServerStartTask</label>
+        <link refid="class_mongo_d_b_1_1_add_server_start_task"/>
+        <childnode refid="1945" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1950">
+        <label>MongoDB::RollTask</label>
+        <link refid="class_mongo_d_b_1_1_roll_task"/>
+        <childnode refid="1945" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1954">
+        <label>MongoDB::WriteIDStringPairTask&lt; IDType &gt;</label>
+        <link refid="class_mongo_d_b_1_1_write_i_d_string_pair_task"/>
+        <childnode refid="1945" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1946">
+        <label>BackgroundTask</label>
+      </node>
+      <node id="1953">
+        <label>MongoDB::WriteAppIDTask</label>
+        <link refid="class_mongo_d_b_1_1_write_app_i_d_task"/>
+        <childnode refid="1945" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1955">
+        <label>MongoDB::MongoDBBackgroundTask</label>
+        <link refid="class_mongo_d_b_1_1_mongo_d_b_background_task"/>
+        <childnode refid="1956" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1956">
+        <label>BackgroundTask</label>
+      </node>
+    </collaborationgraph>
+    <location file="tools/message_logger/mongodb/tasks/mongodb_background_task.hpp" line="16" column="1" bodyfile="tools/message_logger/mongodb/tasks/mongodb_background_task.hpp" bodystart="15" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_mongo_d_b_1_1_mongo_d_b_background_task_1a50ca0ec7c9b3842b648f21db4e076a09" prot="protected" virt="non-virtual"><scope>MongoDB::MongoDBBackgroundTask</scope><name>doBackgroundTask</name></member>
+      <member refid="class_mongo_d_b_1_1_mongo_d_b_background_task_1a05fb4c0e7cfcf525a84f6fdb5619091e" prot="protected" virt="non-virtual"><scope>MongoDB::MongoDBBackgroundTask</scope><name>doBackgroundTask</name></member>
+      <member refid="class_mongo_d_b_1_1_mongo_d_b_background_task_1a7788d75382d6f561cb9a72656634826a" prot="public" virt="non-virtual"><scope>MongoDB::MongoDBBackgroundTask</scope><name>MongoDBBackgroundTask</name></member>
+      <member refid="class_mongo_d_b_1_1_mongo_d_b_background_task_1afa658d48de7addb5b97e449dd3c182fe" prot="protected" virt="pure-virtual"><scope>MongoDB::MongoDBBackgroundTask</scope><name>performBackgroundTask</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

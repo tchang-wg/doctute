@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="consolidate__entity__task_8hpp" kind="file" language="C++">
+    <compoundname>consolidate_entity_task.hpp</compoundname>
+    <includes local="yes">cstdmf/memory_stream.hpp</includes>
+    <includes local="yes">db_storage/idatabase.hpp</includes>
+    <includes local="yes">db_storage_mysql/tasks/entity_task.hpp</includes>
+    <includedby refid="consolidate__entity__task_8cpp" local="yes">tools/consolidate_dbs/consolidate_entity_task.cpp</includedby>
+    <includedby refid="primary__database__update__queue_8cpp" local="yes">tools/consolidate_dbs/primary_database_update_queue.cpp</includedby>
+    <incdepgraph>
+      <node id="18646">
+        <label>cstdmf/memory_stream.hpp</label>
+      </node>
+      <node id="18648">
+        <label>db_storage_mysql/tasks/entity_task.hpp</label>
+      </node>
+      <node id="18645">
+        <label>tools/consolidate_dbs/consolidate_entity_task.hpp</label>
+        <link refid="consolidate_entity_task.hpp"/>
+        <childnode refid="18646" relation="include">
+        </childnode>
+        <childnode refid="18647" relation="include">
+        </childnode>
+        <childnode refid="18648" relation="include">
+        </childnode>
+      </node>
+      <node id="18647">
+        <label>db_storage/idatabase.hpp</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_consolidate_entity_task" prot="public">ConsolidateEntityTask</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CONSOLIDATE_ENTITY_TASK_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONSOLIDATE_ENTITY_TASK_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cstdmf/memory_stream.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;db_storage/idatabase.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;db_storage_mysql/tasks/entity_task.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="namespace_b_w___b_e_g_i_n___n_a_m_e_s_p_a_c_e" kindref="compound">BW_BEGIN_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_consolidate_entity_task" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_consolidate_entity_task" kindref="compound">ConsolidateEntityTask</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>EntityTask</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_consolidate_entity_task_1aaf96c59ed40d2482d85f0e6ce58f7f9d" kindref="member">ConsolidateEntityTask</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EntityTypeMapping<sp/>&amp;<sp/>entityTypeMapping,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DatabaseID<sp/>dbID,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BinaryIStream<sp/>&amp;<sp/>stream,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GameTime<sp/>time,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IDatabase::IPutEntityHandler<sp/>&amp;<sp/>handler<sp/>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>performBackgroundTask(<sp/>MySql<sp/>&amp;<sp/>conn<sp/>)<sp/></highlight><highlight class="comment">/*<sp/>override<sp/>*/</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>performEntityMainThreadTask(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>DatabaseOperationResult<sp/>&amp;<sp/>result<sp/>)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>override<sp/>*/</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>MemoryOStream<sp/>stream_;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>GameTime<sp/>time_;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>IDatabase::IPutEntityHandler<sp/>&amp;<sp/>handler_;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">BW_END_NAMESPACE</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>CONSOLIDATE_ENTITY_TASK_HPP</highlight></codeline>
+    </programlisting>
+    <location file="tools/consolidate_dbs/consolidate_entity_task.hpp"/>
+  </compounddef>
+</doxygen>

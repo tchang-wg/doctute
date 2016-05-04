@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_data_downloads" kind="class" language="C++" prot="public">
+    <compoundname>DataDownloads</compoundname>
+    <includes refid="data__downloads_8hpp" local="no">data_downloads.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_data_downloads_1a893fca9b5497ad1d874b1e45c988affd" prot="private" static="no">
+        <type>std::deque&lt; <ref refid="class_data_download" kindref="compound">DataDownload</ref> * &gt;</type>
+        <definition>typedef std::deque&lt; DataDownload* &gt; DataDownloads::Container</definition>
+        <argsstring></argsstring>
+        <name>Container</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="53" column="1" bodyfile="baseapp/data_downloads.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_data_downloads_1a797a30464f8124a087cab1cce3507249" prot="private" static="no">
+        <type>BW::set&lt; uint16 &gt;</type>
+        <definition>typedef BW::set&lt; uint16 &gt; DataDownloads::IDSet</definition>
+        <argsstring></argsstring>
+        <name>IDSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="63" column="1" bodyfile="baseapp/data_downloads.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_data_downloads_1a1743917fbfd0107f0634230ae09d92b0" prot="private" static="no" mutable="no">
+        <type>Container</type>
+        <definition>Container DataDownloads::dls_</definition>
+        <argsstring></argsstring>
+        <name>dls_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="57" column="1" bodyfile="baseapp/data_downloads.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_downloads_1ac1e5c37faed2123b90688160da72ec72" prot="private" static="no" mutable="no">
+        <type>uint16</type>
+        <definition>uint16 DataDownloads::freeID_</definition>
+        <argsstring></argsstring>
+        <name>freeID_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="60" column="1" bodyfile="baseapp/data_downloads.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_downloads_1a8b96396f0a13346068582ba09eadc825" prot="private" static="no" mutable="no">
+        <type>IDSet</type>
+        <definition>IDSet DataDownloads::usedIDs_</definition>
+        <argsstring></argsstring>
+        <name>usedIDs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="64" column="1" bodyfile="baseapp/data_downloads.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_data_downloads_1a5188f0009051dba565c94f78e3087ea5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DataDownloads::DataDownloads</definition>
+        <argsstring>()</argsstring>
+        <name>DataDownloads</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="37" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_downloads_1a8c30dcdb351e7aec9a7809accec405a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DataDownloads::~DataDownloads</definition>
+        <argsstring>()</argsstring>
+        <name>~DataDownloads</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="38" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="85" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_downloads_1a0e9b719612b1207d4e9ce9dba8e533ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject * DataDownloads::streamToClient</definition>
+        <argsstring>(DataDownloadFactory &amp;factory, PyObjectPtr pDesc, int id)</argsstring>
+        <name>streamToClient</name>
+        <param>
+          <type><ref refid="class_data_download_factory" kindref="compound">DataDownloadFactory</ref> &amp;</type>
+          <declname>factory</declname>
+        </param>
+        <param>
+          <type><ref refid="class_smart_pointer" kindref="compound">PyObjectPtr</ref></type>
+          <declname>pDesc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a download from the supplied factory to our list of active downloads, and start streaming at the next opportunity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="40" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="264" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_downloads_1af547226ab0470e7b501d35a56d42b264" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DataDownloads::addToBundle</definition>
+        <argsstring>(Mercury::Bundle &amp;bundle, int &amp;remaining, IFinishedDownloads &amp;finishedDownloads)</argsstring>
+        <name>addToBundle</name>
+        <param>
+          <type>Mercury::Bundle &amp;</type>
+          <declname>bundle</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>remaining</declname>
+        </param>
+        <param>
+          <type><ref refid="class_i_finished_downloads" kindref="compound">IFinishedDownloads</ref> &amp;</type>
+          <declname>finishedDownloads</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method attempts to add some of the downloads to a bundle.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bundle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bundle to stream to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>remaining</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum amount to try to add. This value is reduced by the amount that is actually sent. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>finishedDownloads</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is told of any downloads that finish during this call.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes downloaded. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="43" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="105" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_downloads_1a0c62f2122a8cce9004136a8856f3324f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DataDownloads::push_back</definition>
+        <argsstring>(DataDownload *pDL)</argsstring>
+        <name>push_back</name>
+        <param>
+          <type><ref refid="class_data_download" kindref="compound">DataDownload</ref> *</type>
+          <declname>pDL</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Queue a download into this collection. Auto-assign a new ID to the download if it is passed with an ID of -1. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="46" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="149" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_downloads_1a1b619b93979cd2e584a82b2558d969c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DataDownloads::contains</definition>
+        <argsstring>(uint16 id) const </argsstring>
+        <name>contains</name>
+        <param>
+          <type>uint16</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if the given id is already present in the list. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="47" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="216" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_downloads_1a9b3c7f68a96bf2893215c3816e5a50eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DataDownloads::empty</definition>
+        <argsstring>() const </argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if there are no active downloads </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="48" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="228" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_downloads_1ab75a20727096af5364b7f82c5fff9eb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DataDownloads::abortDownloads</definition>
+        <argsstring>(IFinishedDownloads &amp;finishedDownloads)</argsstring>
+        <name>abortDownloads</name>
+        <param>
+          <type><ref refid="class_i_finished_downloads" kindref="compound">IFinishedDownloads</ref> &amp;</type>
+          <declname>finishedDownloads</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Aborts all current downloads and reverts us to a pristine state </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="50" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="238" bodyend="257"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_data_downloads_1a3a66c1112c8ec777129d3d14e2dc2c73" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Container::iterator</type>
+        <definition>DataDownloads::Container::iterator DataDownloads::erase</definition>
+        <argsstring>(Container::iterator it)</argsstring>
+        <name>erase</name>
+        <param>
+          <type>Container::iterator</type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove a download from this collection. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="55" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="192" bodyend="210"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_data_downloads_1a4f74f6c819a3dd80f33687fb2138358a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend BinaryOStream &amp;</type>
+        <definition>BinaryOStream&amp; operator&lt;&lt;</definition>
+        <argsstring>(BinaryOStream &amp;b, const DataDownloads &amp;rDownloads)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>BinaryOStream &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_data_downloads" kindref="compound">DataDownloads</ref> &amp;</type>
+          <declname>rDownloads</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implement output streaming for <ref refid="class_data_downloads" kindref="compound">DataDownloads</ref> instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="66" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="295" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_data_downloads_1a783593fb90ab008dfb636e0c03b95d31" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend BinaryIStream &amp;</type>
+        <definition>BinaryIStream&amp; operator&gt;&gt;</definition>
+        <argsstring>(BinaryIStream &amp;b, DataDownloads &amp;rDownloads)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type>BinaryIStream &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="class_data_downloads" kindref="compound">DataDownloads</ref> &amp;</type>
+          <declname>rDownloads</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implement input streaming for <ref refid="class_data_downloads" kindref="compound">DataDownloads</ref> instances. All streamed-in downloads are considered to have failed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="baseapp/data_downloads.hpp" line="68" column="1" bodyfile="baseapp/data_downloads.cpp" bodystart="316" bodyend="336"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A collection of partially completed downloads. </para>    </detaileddescription>
+    <location file="baseapp/data_downloads.hpp" line="35" column="1" bodyfile="baseapp/data_downloads.hpp" bodystart="34" bodyend="70"/>
+    <listofallmembers>
+      <member refid="class_data_downloads_1ab75a20727096af5364b7f82c5fff9eb1" prot="public" virt="non-virtual"><scope>DataDownloads</scope><name>abortDownloads</name></member>
+      <member refid="class_data_downloads_1af547226ab0470e7b501d35a56d42b264" prot="public" virt="non-virtual"><scope>DataDownloads</scope><name>addToBundle</name></member>
+      <member refid="class_data_downloads_1a893fca9b5497ad1d874b1e45c988affd" prot="private" virt="non-virtual"><scope>DataDownloads</scope><name>Container</name></member>
+      <member refid="class_data_downloads_1a1b619b93979cd2e584a82b2558d969c9" prot="public" virt="non-virtual"><scope>DataDownloads</scope><name>contains</name></member>
+      <member refid="class_data_downloads_1a5188f0009051dba565c94f78e3087ea5" prot="public" virt="non-virtual"><scope>DataDownloads</scope><name>DataDownloads</name></member>
+      <member refid="class_data_downloads_1a1743917fbfd0107f0634230ae09d92b0" prot="private" virt="non-virtual"><scope>DataDownloads</scope><name>dls_</name></member>
+      <member refid="class_data_downloads_1a9b3c7f68a96bf2893215c3816e5a50eb" prot="public" virt="non-virtual"><scope>DataDownloads</scope><name>empty</name></member>
+      <member refid="class_data_downloads_1a3a66c1112c8ec777129d3d14e2dc2c73" prot="private" virt="non-virtual"><scope>DataDownloads</scope><name>erase</name></member>
+      <member refid="class_data_downloads_1ac1e5c37faed2123b90688160da72ec72" prot="private" virt="non-virtual"><scope>DataDownloads</scope><name>freeID_</name></member>
+      <member refid="class_data_downloads_1a797a30464f8124a087cab1cce3507249" prot="private" virt="non-virtual"><scope>DataDownloads</scope><name>IDSet</name></member>
+      <member refid="class_data_downloads_1a4f74f6c819a3dd80f33687fb2138358a" prot="private" virt="non-virtual"><scope>DataDownloads</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_data_downloads_1a783593fb90ab008dfb636e0c03b95d31" prot="private" virt="non-virtual"><scope>DataDownloads</scope><name>operator&gt;&gt;</name></member>
+      <member refid="class_data_downloads_1a0c62f2122a8cce9004136a8856f3324f" prot="public" virt="non-virtual"><scope>DataDownloads</scope><name>push_back</name></member>
+      <member refid="class_data_downloads_1a0e9b719612b1207d4e9ce9dba8e533ce" prot="public" virt="non-virtual"><scope>DataDownloads</scope><name>streamToClient</name></member>
+      <member refid="class_data_downloads_1a8b96396f0a13346068582ba09eadc825" prot="private" virt="non-virtual"><scope>DataDownloads</scope><name>usedIDs_</name></member>
+      <member refid="class_data_downloads_1a8c30dcdb351e7aec9a7809accec405a0" prot="public" virt="non-virtual"><scope>DataDownloads</scope><name>~DataDownloads</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
