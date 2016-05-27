@@ -144,13 +144,26 @@
             
   <div class="section" id="batch-compiler">
 <h1>Batch Compiler<a class="headerlink" href="#batch-compiler" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#configuration" id="id2">Configuration</a><ul>
+<li><a class="reference internal" href="#setting-up-converters" id="id3">Setting Up Converters</a></li>
+<li><a class="reference internal" href="#setting-up-asset-rules" id="id4">Setting Up Asset Rules</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#running-the-batch-compiler" id="id5">Running the Batch Compiler</a></li>
+<li><a class="reference internal" href="#command-line-options" id="id6">Command-Line Options</a></li>
+<li><a class="reference internal" href="#output" id="id7">Output</a></li>
+<li><a class="reference internal" href="#report" id="id8">Report</a></li>
+</ul>
+</div>
 <p>The Batch Compiler is a command-line front end for converting asset
 source files into game-ready compiled assets. It can convert a single
 source file or a folder of source files.</p>
 <div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Configuration</a><a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="setting-up-converters">
-<h3>Setting Up Converters<a class="headerlink" href="#setting-up-converters" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id3">Setting Up Converters</a><a class="headerlink" href="#setting-up-converters" title="Permalink to this headline">¶</a></h3>
 <p>Before running the Batch Compiler, ensure that all of the converter
 plugins you wish to use exist in a reachable folder (preferably in the
 same folder as the Batch Compiler executable), and that they are listed
@@ -162,14 +175,14 @@ in the executable folder—only the appropriate version of the plugin will
 be loaded.</p>
 </div>
 <div class="section" id="setting-up-asset-rules">
-<h3>Setting Up Asset Rules<a class="headerlink" href="#setting-up-asset-rules" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">Setting Up Asset Rules</a><a class="headerlink" href="#setting-up-asset-rules" title="Permalink to this headline">¶</a></h3>
 <p>Batch Compiler uses asset rules to determine what files on disk are
 assets, and how to convert them. For information on setting up asset
 rules, see <a class="reference internal" href="assetrules.html"><span class="doc">Asset Rules</span></a>.</p>
 </div>
 </div>
 <div class="section" id="running-the-batch-compiler">
-<h2>Running the Batch Compiler<a class="headerlink" href="#running-the-batch-compiler" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">Running the Batch Compiler</a><a class="headerlink" href="#running-the-batch-compiler" title="Permalink to this headline">¶</a></h2>
 <p>To run the Batch Compiler from the command line use the command:</p>
 <div class="highlight-none"><div class="highlight"><pre><span></span>batch_compiler.exe target
 </pre></div>
@@ -186,7 +199,7 @@ that directory. The Batch Compiler supports both absolute and relative
 paths. It currently does not support BigWorld Technology resource paths.</p>
 </div>
 <div class="section" id="command-line-options">
-<span id="id1"></span><h2>Command-Line Options<a class="headerlink" href="#command-line-options" title="Permalink to this headline">¶</a></h2>
+<span id="id1"></span><h2><a class="toc-backref" href="#id6">Command-Line Options</a><a class="headerlink" href="#command-line-options" title="Permalink to this headline">¶</a></h2>
 <p>The Batch Compiler can be run with a number of command-line options:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">-intermediatePath</span> <span class="pre">path</span></code>
@@ -236,7 +249,7 @@ files are saved to custom locations, an external file cache is used, and
 a report is saved on completion.</p>
 </div>
 <div class="section" id="output">
-<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id7">Output</a><a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h2>
 <p>When the Batch Compiler is run, real-time progress is reported to the
 console during the conversion process. The asset pipeline operates in
 two stages—discovery and conversion.</p>
@@ -274,7 +287,7 @@ change to the source asset being detected since the last run of the
 asset pipeline (skipped).</p>
 </div>
 <div class="section" id="report">
-<h2>Report<a class="headerlink" href="#report" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id8">Report</a><a class="headerlink" href="#report" title="Permalink to this headline">¶</a></h2>
 <p>The Batch Compiler can be run with the -report option to produce an HTML
 report on completion. The report is essentially a summary of the Batch
 Compiler real time output, but structured in a way that is easier to

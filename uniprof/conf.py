@@ -31,8 +31,7 @@ import sphinx_rtd_theme
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc',
-    'breathe'
+    'sphinx.ext.autodoc'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -50,9 +49,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Asset Pipeline'
-copyright = u'2016, Wargaming Sydney'
-author = u'Wargaming Sydney'
+project = u'Universal Profiler'
+copyright = u'2016, Wargaming'
+author = u'Wargaming'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -150,7 +149,7 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 def setup(app):
-   # app.add_javascript("custom.js")
+   app.add_javascript("custom.js")
    app.add_stylesheet("custom.css")
 
 # Add any extra paths that contain custom files (such as robots.txt or
@@ -214,7 +213,7 @@ def setup(app):
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'assetpipeline'
+htmlhelp_basename = 'uniprof'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -236,8 +235,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'doctute.tex', u'doctute Documentation',
-     u'Tim Chang', 'manual'),
+    (master_doc, 'uniprof.tex', u'Universal Profiler Documentation',
+     u'Wargaming Sydney', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -266,7 +265,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'doctute', u'doctute Documentation',
+    (master_doc, 'uniprof', u'Universal Profiler Documentation',
      [author], 1)
 ]
 
@@ -280,8 +279,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'doctute', u'doctute Documentation',
-     author, 'doctute', 'One line description of project.',
+    (master_doc, 'uniprof', u'Universal Profiler Documentation',
+     author, 'uniprof', 'Universal Profiler Documentation',
      'Miscellaneous'),
 ]
 
@@ -296,9 +295,3 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
-
-# Breathe projects
-breathe_projects = { "BigWorld Technology": "./../xml"}
-
-# Breathe default project
-breathe_default_project = "BigWorld Technology"

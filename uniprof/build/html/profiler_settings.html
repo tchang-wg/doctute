@@ -1,0 +1,264 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Profiler Settings &mdash; Universal Profiler  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Universal Profiler  documentation" href="index.html"/>
+        <link rel="next" title="Profile Analyzer" href="profile_analyzer.html"/>
+        <link rel="prev" title="Universal Profiler" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Universal Profiler
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Universal Profiler</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Profiler Settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#environment-variables">Environment variables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="profile_analyzer.html">Profile Analyzer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzer_background.html">Analyzer Background Mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzer_command_line.html">Running Analyzer from the Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings_recommendations.html">Settings Recommendations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_analyzer.html">Building the Profile Analyzer</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Universal Profiler</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Profiler Settings</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/profiler_settings.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="profiler-settings">
+<h1>Profiler Settings<a class="headerlink" href="#profiler-settings" title="Permalink to this headline">¶</a></h1>
+<p>By default, the profiler is not compiled in consumer builds. It is set by the ENABLE_UNIPROF and FORCE_ENABLE_UNIPROF defines in <code class="docutils literal"><span class="pre">cstdmf/config.hpp</span></code>.</p>
+<p>Moreover, there&#8217;s a notion of <strong>level</strong> for most of the profiler events. The level limit is set during compilation. Lower-level events will not be written to the log: this avoids potential overheads that could occur if logging low-level events caused the compiler to generate excessive amounts of logging code. This way, the amount of logged information and profiling overhead can be varied for different tasks. Fine adjustment of profiler compilation time is performed in <code class="docutils literal"><span class="pre">profiler/runtime/config.hpp</span></code>.</p>
+<p>To view more detailed performance and memory usage logs, launch <code class="docutils literal"><span class="pre">Wot_h_detail.exe</span></code> (located in the same directory as the <code class="docutils literal"><span class="pre">WorldOfTanks.exe</span></code> file). Make sure that <code class="docutils literal"><span class="pre">Wot_h_detail.exe</span></code> is up to date, as it is prepared separately from the main .exe file.</p>
+<div class="section" id="environment-variables">
+<span id="id1"></span><h2>Environment variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h2>
+<p>The profiler&#8217;s activities can be partially set through environment variables. To set these variables:</p>
+<ol class="arabic simple">
+<li>Open the <strong>Control Panel</strong>, and in the Large Icons view, click <strong>System</strong>.</li>
+<li>In the System window&#8217;s navigation menu, click <strong>Advanced System Settings</strong>.</li>
+<li>Click the <strong>Advanced</strong> tab, and then click <strong>Environment Variables</strong>.</li>
+<li>In the System Variables section, click <strong>New</strong> and add the following variables:</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="8%" />
+<col width="86%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Variable name</th>
+<th class="head">Variable values</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>UNIPROF_ENABLE</td>
+<td>true, false</td>
+<td>Indicates whether profiling is enabled. Disabled by default.</td>
+</tr>
+<tr class="row-odd"><td>UNIPROF_MEMORY_ENABLE</td>
+<td>true, false</td>
+<td>Indicates whether memory profiling is enabled. Disabled by default.</td>
+</tr>
+<tr class="row-even"><td>UNIPROF_LOGNAME</td>
+<td>(location and name of log file)</td>
+<td>Contains the name of the file to which the log will be written. If it ends with a slash (/), the name of the file will be generated automatically. For example a value of &#8220;profile_date/&#8221; would result in a log file called profile_date/[current time].upl). If a directory is not specified, the file will be created in the current directory.</td>
+</tr>
+<tr class="row-odd"><td>UNIPROF_AUTOSTART</td>
+<td>yes, no</td>
+<td>Defines whether main thread profiling begins once the application starts. Yes by default.</td>
+</tr>
+<tr class="row-even"><td>UNIPROF_INCLUDE_WORKERS</td>
+<td>yes, no</td>
+<td>Defines whether secondary threads are profiled. Yes by default.</td>
+</tr>
+<tr class="row-odd"><td>UNIPROF_INCLUDE_GPU</td>
+<td>yes, no</td>
+<td>Defines whether the GPU will be profiled. Yes by default.</td>
+</tr>
+</tbody>
+</table>
+<p>Main thread profiling can be enabled or disabled during a profiling session by pressing <code class="docutils literal"><span class="pre">F12</span></code>.</p>
+<p><strong>Note:</strong> The captured logs can become large, especially with detailed logging (one minute equals about 1.5 GB), so it is important to make sure there is enough space on the disk before running the profiler.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="profile_analyzer.html" class="btn btn-neutral float-right" title="Profile Analyzer" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Universal Profiler" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Wargaming.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/custom.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Batch Compiler &mdash; Asset Pipeline  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Asset Pipeline  documentation" href="index.html"/>
+        <link rel="next" title="TestCompiler" href="testcompiler.html"/>
+        <link rel="prev" title="Asset Pipeline" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Asset Pipeline
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Asset Pipeline</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Batch Compiler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-converters">Setting Up Converters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-asset-rules">Setting Up Asset Rules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-batch-compiler">Running the Batch Compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#command-line-options">Command-Line Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#output">Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#report">Report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testcompiler.html">TestCompiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jitcompiler.html">JIT Compiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilityclasses.html">Utility Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extendingassetpipeline.html">Extending the Asset Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assetrules.html">Asset Rules</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Asset Pipeline</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Batch Compiler</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/batchcompiler.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="batch-compiler">
+<h1>Batch Compiler<a class="headerlink" href="#batch-compiler" title="Permalink to this headline">¶</a></h1>
+<p>The Batch Compiler is a command-line front end for converting asset
+source files into game-ready compiled assets. It can convert a single
+source file or a folder of source files.</p>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-up-converters">
+<h3>Setting Up Converters<a class="headerlink" href="#setting-up-converters" title="Permalink to this headline">¶</a></h3>
+<p>Before running the Batch Compiler, ensure that all of the converter
+plugins you wish to use exist in a reachable folder (preferably in the
+same folder as the Batch Compiler executable), and that they are listed
+in the <code class="docutils literal"><span class="pre">batch_compiler_plugins.txt</span></code> file. If you are running the debug
+version of the Batch Compiler (<code class="docutils literal"><span class="pre">batch_compiler_d.exe</span></code>), ensure that
+you have the debug versions of the plugins you wish to load. It is safe
+for both the debug and non-debug version of a converter plugin to exist
+in the executable folder—only the appropriate version of the plugin will
+be loaded.</p>
+</div>
+<div class="section" id="setting-up-asset-rules">
+<h3>Setting Up Asset Rules<a class="headerlink" href="#setting-up-asset-rules" title="Permalink to this headline">¶</a></h3>
+<p>Batch Compiler uses asset rules to determine what files on disk are
+assets, and how to convert them. For information on setting up asset
+rules, see <a class="reference internal" href="assetrules.html"><span class="doc">Asset Rules</span></a>.</p>
+</div>
+</div>
+<div class="section" id="running-the-batch-compiler">
+<h2>Running the Batch Compiler<a class="headerlink" href="#running-the-batch-compiler" title="Permalink to this headline">¶</a></h2>
+<p>To run the Batch Compiler from the command line use the command:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>batch_compiler.exe target
+</pre></div>
+</div>
+<p>To run the debug version of the Batch Compiler use:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>batch_compiler_d.exe target
+</pre></div>
+</div>
+<p>For both commands, <code class="docutils literal"><span class="pre">target</span></code> is the source file or directory to
+process. If the target specified is an asset file, the batch compiler
+will process only that asset. If the target specified is a directory the
+batch compiler will recursively search for and convert all assets under
+that directory. The Batch Compiler supports both absolute and relative
+paths. It currently does not support BigWorld Technology resource paths.</p>
+</div>
+<div class="section" id="command-line-options">
+<span id="id1"></span><h2>Command-Line Options<a class="headerlink" href="#command-line-options" title="Permalink to this headline">¶</a></h2>
+<p>The Batch Compiler can be run with a number of command-line options:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">-intermediatePath</span> <span class="pre">path</span></code>
+where path specifies where to save intermediate files. By default,
+intermediate files are saved to the same location as their source
+files.</li>
+<li><code class="docutils literal"><span class="pre">-outputPath</span> <span class="pre">path</span></code>
+where path specifies where to save output files. By default, output
+files are saved to the same location as their source files.</li>
+<li><code class="docutils literal"><span class="pre">-cachePath</span> <span class="pre">path</span></code>
+where path specifies the directory location of the external shared
+file cache. By default no file cache is used.</li>
+<li><code class="docutils literal"><span class="pre">-j</span> <span class="pre">numThreads</span></code>
+where numThreads specifies the number of threads to run the asset
+pipeline with. The more threads the asset pipeline is allowed to use
+the better it can utilize CPU cores, resulting in a faster execution
+time. By default, one thread is used.</li>
+<li><code class="docutils literal"><span class="pre">-report</span> <span class="pre">reportFile</span></code>
+where reportFile is the file location where the Batch Compiler will
+save a report at the end of the conversion process. This file should
+have an html filename extension. If this option is omitted, the Batch
+Compiler will not generate a report.</li>
+<li><code class="docutils literal"><span class="pre">-pluginConfig</span> <span class="pre">pluginsFile</span></code>
+where pluginsFile is a file containing the list of plugins to use in
+conversion. By default, a file called <code class="docutils literal"><span class="pre">batch_compiler_plugins.txt</span></code>
+is used.</li>
+</ul>
+<p>Examples:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>batch_compiler_d.exe D:\2_current\res\bigworld\
+                     -report D:\2_current\bigworld_report.html -j 4
+</pre></div>
+</div>
+<p>Runs the debug version of the Batch Compiler over the
+<code class="docutils literal"><span class="pre">res\bigworld</span></code>&nbsp;directory with 4 threads. Intermediate and output files
+are saved in the same location as their source files, no file cache is
+used, and a report is saved upon completion.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>batch_compiler.exe ..\..\..\res\fantasydemo\
+                   -intermediatePath ..\..\..\intermediate\fantasydemo\
+                   -outputPath ..\..\..\packed\fantasydemo\
+                   -cachePath \\ASSETCACHE\assetcache
+                   -report ..\..\..\fantasydemo_report.html -j 8
+</pre></div>
+</div>
+<p>Runs the release version of the Batch Compiler over the
+<code class="docutils literal"><span class="pre">res\fantasydemo</span></code>&nbsp;directory with 8 threads. Intermediate and output
+files are saved to custom locations, an external file cache is used, and
+a report is saved on completion.</p>
+</div>
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h2>
+<p>When the Batch Compiler is run, real-time progress is reported to the
+console during the conversion process. The asset pipeline operates in
+two stages—discovery and conversion.</p>
+<p>During the discovery stage, the asset pipeline traverses directories and
+files, searching for source assets to convert.&nbsp;The Batch Compiler
+reports each directory it iterates through and the file name of every
+source asset it encounters. At the end of this stage, the Batch Compiler
+reports the number of source assets found as &#8216;tasks&#8217; and the number of
+directories and files it traversed.</p>
+<p>In the conversion stage, the Batch Compiler reports the progress of each
+conversion task in real time. As the asset pipeline can be run on
+multiple threads, multiple tasks can be executed simultaneously, with
+each task reporting its progress to the console. This can result in the
+output of each task getting jumbled with the output of other tasks
+running simultaneously. To counter this, each task is given an id which
+is displayed at the start of each line of output associated with that
+task.</p>
+<p>As a task is being processed, if an error or warning is encountered
+(triggered by the BWT warning macros), the error or warning will be
+displayed to the console output with the id of the task in which the
+error or warning was encountered. Similarly if an assert is triggered
+during the processing of a task, the assert message and line number will
+be displayed to the console output with the appropriate task id. Asserts
+triggered during task processing are swallowed by the asset pipeline and
+do not cause the front-end compiler to crash or bring up a critical
+dialog.</p>
+<p>At the end of processing each task, Batch Compiler displays the success
+status for the conversion of that task. After processing the last task
+it displays a summary of all the tasks. The summary shows the number of
+tasks that succeeded and the number of tasks that failed. Of the tasks
+that succeeded, it shows the number of those that were actually
+converted, those whose dependencies were checked but were not in need of
+conversion (up to date) and those that were skipped completely due to no
+change to the source asset being detected since the last run of the
+asset pipeline (skipped).</p>
+</div>
+<div class="section" id="report">
+<h2>Report<a class="headerlink" href="#report" title="Permalink to this headline">¶</a></h2>
+<p>The Batch Compiler can be run with the -report option to produce an HTML
+report on completion. The report is essentially a summary of the Batch
+Compiler real time output, but structured in a way that is easier to
+navigate.</p>
+<p>The report contains lists of the tasks that were converted, specifying
+which ones failed, had warnings, were converted, were up to date, or
+were skipped completely. Each of these lists contains links to the
+summaries of the individual tasks themselves. These summaries contain
+the success status of the task, a log of any warnings, errors or asserts
+that were encountered and a list of any output files that were generated
+by the task.</p>
+<p>The report also contains some information not available in the real-time
+output of the Batch Compiler, including the duration of the entire
+conversion process and the time taken to convert each task. Each task
+summary will contain links to the subtasks that task was dependent on,
+allowing you to track task errors or warnings through to subtasks.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="testcompiler.html" class="btn btn-neutral float-right" title="TestCompiler" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Asset Pipeline" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Wargaming Sydney.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

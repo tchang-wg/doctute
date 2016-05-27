@@ -1,0 +1,520 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Profile Analyzer &mdash; Universal Profiler  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Universal Profiler  documentation" href="index.html"/>
+        <link rel="next" title="Analyzer Background Mode (receiving statistics on several playbacks of one replay)" href="analyzer_background.html"/>
+        <link rel="prev" title="Profiler Settings" href="profiler_settings.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Universal Profiler
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Universal Profiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="profiler_settings.html">Profiler Settings</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Profile Analyzer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starting-profile-analyzer">Starting Profile Analyzer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analyzing-logs">Analyzing Logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fps-graph">FPS Graph</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-context-menu">The Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interpolation-settings">Interpolation settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changing-the-graph-color">Changing the Graph Color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#docking-and-undocking-the-fps-graph">Docking and Undocking the FPS Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#graph-smoothing">Graph Smoothing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fps-files">.fps files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#frametime-graphs">FrameTime Graphs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#analyzing-gpu-functions">Analyzing GPU functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#analysis-of-the-time-taken-by-subsystems-work">Analysis of the Time Taken by Subsystems Work</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hiding-subsystems">Hiding subsystems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#editing-a-subsystem-definition">Editing a Subsystem Definition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-etl-logs-to-track-memory-allocations">Using ETL logs to track memory allocations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#batch-mode-using-profile-log-recorder">Batch mode using profile_log_recorder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#default-mode">Default mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nodes">Nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#keyboard-shortcuts">Keyboard shortcuts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#symbols">Symbols</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#adjusting-the-symbol-path">Adjusting the Symbol Path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#viewing-symbol-information">Viewing Symbol Information</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#statistics-modules">Statistics Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#call-tree-detailed-analysis">Call Tree Detailed Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comparing-two-frames">Comparing Two Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#history-of-time-taken-by-a-function-stack-watch">History of Time Taken by a Function (stack watch)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="analyzer_background.html">Analyzer Background Mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzer_command_line.html">Running Analyzer from the Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings_recommendations.html">Settings Recommendations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_analyzer.html">Building the Profile Analyzer</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Universal Profiler</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Profile Analyzer</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/profile_analyzer.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="profile-analyzer">
+<h1>Profile Analyzer<a class="headerlink" href="#profile-analyzer" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Profile Analyzer is a separate application stored in <code class="docutils literal"><span class="pre">game/tankfield/tools/profile_analyzer</span></code>. All the necessary Qt libraries can be found there too.</p>
+<a class="reference internal image-reference" href="_images/profile_analyzer.png"><img alt="_images/profile_analyzer.png" src="_images/profile_analyzer.png" style="width: 802.5px; height: 403.5px;" /></a>
+</div>
+<div class="section" id="starting-profile-analyzer">
+<h2>Starting Profile Analyzer<a class="headerlink" href="#starting-profile-analyzer" title="Permalink to this headline">¶</a></h2>
+<p>When launched without arguments, Profile Analyzer will work in GUI mode. GUI mode helps to find and thoroughly scan bottlenecks in the client&#8217;s work. To start profiling, open a log file by clicking <strong>Logs</strong> &gt; <strong>Open log</strong>, or by using the <code class="docutils literal"><span class="pre">Ctrl+O</span></code> shortcut, and selecting a log file.</p>
+<p><strong>Note:</strong> Uploading and processing log files can take a long time; therefore, it is better to open logs one by one.</p>
+</div>
+<div class="section" id="analyzing-logs">
+<h2>Analyzing Logs<a class="headerlink" href="#analyzing-logs" title="Permalink to this headline">¶</a></h2>
+<p>The opened log (or logs) will appear in the table at the top of the window; the analysis will be launched in the background thread. You can analyze full logs as well as those written by the working client. This enables you to track the impact of disabling the subsystems.</p>
+<p>The top part of the main analyzer window (the log pane) contains a tree-view table with general information on the opened logs. Each line corresponds to one log. Logs can be expanded to display a list of logged threads. In some cases, lines corresponding to threads contain subelements.</p>
+<a class="reference internal image-reference" href="_images/log_pane.png"><img alt="_images/log_pane.png" src="_images/log_pane.png" style="width: 802.5px; height: 131.0px;" /></a>
+<p>To interact with this table, right-click and select an action from the context menu.</p>
+<p>Each thread has a type (indicated in brackets after the thread number). The thread types are:</p>
+<ul class="simple">
+<li><strong>main</strong> – the main application thread and usually the most interesting one</li>
+<li><strong>bg</strong> – background threads that work with asynchronous resource loading, etc.</li>
+<li><strong>gpu</strong> – virtual thread that contains events from the video controller</li>
+<li><strong>memory</strong> – supplementary thread that logs memory allocations and deallocations created by non-profiled threads (Umbra, Scaleform, etc.)</li>
+</ul>
+<p>The lifecycle of most threads consists of the initialization (startup), &#8220;effective job&#8221; execution, and finalization (shutdown). An &#8220;effective job&#8221; in this case is when a recurrent task is performed. An example of a task is the uploading of a resource. Such a task is called a <strong>frame</strong>. Some threads are not divided into phases and can only be analyzed as a whole.</p>
+<p>The stages of the thread&#8217;s lifecycle are visually displayed next to the name of the thread. Stages where there&#8217;s no thread (or it is not profiled) are marked in white. Lifecycles are marked in other colors—refer to the keys in the tooltip.</p>
+</div>
+<div class="section" id="fps-graph">
+<h2>FPS Graph<a class="headerlink" href="#fps-graph" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/fps_graph.png"><img alt="_images/fps_graph.png" src="_images/fps_graph.png" style="width: 268.0px; height: 261.0px;" /></a>
+<p>The FPS graph, located in the bottom left corner of the window, is a visual representation of the uploaded logging data. The keys for color, corresponding log/thread names, and statistics are placed to the right of the chart.</p>
+<p>The X axis represents the client operation time (replay time) in seconds, and the Y axis represents instant FPS (reverse frame interval). The zero point is set as the moment of the scene startup to make it easier to compare replays.</p>
+<p>Graph controls:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="65%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function</th>
+<th class="head">Shortcut</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Hold mouse button</td>
+<td>Move displayed data area</td>
+</tr>
+<tr class="row-odd"><td>Shift + click</td>
+<td>Place a vertical mark (repeating the action at the same point will remove the mark)</td>
+</tr>
+<tr class="row-even"><td>Shift + hold mouse button</td>
+<td>Region selection (the vertical mark described above is a particular case of a selected region with zero width)</td>
+</tr>
+<tr class="row-odd"><td>Mouse scroll</td>
+<td>Horizontal zoom around the center of the selected region or of the visible region (when a region is not selected)</td>
+</tr>
+<tr class="row-even"><td>Shift + mouse scroll</td>
+<td>Vertical zoom around the lower bound of the visible region</td>
+</tr>
+<tr class="row-odd"><td>Right click</td>
+<td>Context menu (see Context menu entries below)</td>
+</tr>
+<tr class="row-even"><td>Scrollbars and &#8220;+/-&#8221; buttons at the bottom right of the graph</td>
+<td>Alternative options for moving and zooming the displayed data region</td>
+</tr>
+<tr class="row-odd"><td>[] button in the bottom left corner of the graph</td>
+<td>Make the displayed data region equal to the region of all data</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Region selection (<code class="docutils literal"><span class="pre">Shift+Click</span></code>) is useful for selecting a section to zoom in. The statistics to the right of the graph are calculated for the selected region (or for all data with a positive X value, if there&#8217;s no selected region).</p>
+<div class="section" id="the-context-menu">
+<h3>The Context Menu<a class="headerlink" href="#the-context-menu" title="Permalink to this headline">¶</a></h3>
+<p>Right-clicking on the graph shows the context menu.</p>
+<a class="reference internal image-reference" href="_images/fps_graph_context.png"><img alt="_images/fps_graph_context.png" src="_images/fps_graph_context.png" style="width: 324.0px; height: 86.0px;" /></a>
+<p>The context menu contains the following:</p>
+<ul class="simple">
+<li>A list of threads shown in the FPS graph.</li>
+<li><strong>Hide all</strong> - hides all lines in the graph.</li>
+<li>A list of &#8220;Hide&#8221; options for each thread in the graph, which allows hiding of individual graphs in the</li>
+<li>A list of interpolation settings - <strong>No interpolation</strong>, <strong>Linear interpolation</strong> and <strong>Bezier interpolation</strong>. See <a class="reference internal" href="#interpolation-settings"><span class="std std-ref">Interpolation settings</span></a> for more information.</li>
+</ul>
+<p>For each thread in the context menu, there are several additional options.</p>
+<ul class="simple">
+<li><strong>Frame (segment (num) frame (num))</strong> – shows actions that can be performed on the frame at the specified segment and position.</li>
+<li><strong>Range (segment (num) frames (range))</strong> – shows actions that can be performed on the selected range of frames.</li>
+<li><strong>Set zero to frame start</strong> – realigns the x-axis so that &#8220;0&#8221; is at the selected frame.</li>
+</ul>
+<p>To learn about the actions that can be performed on the selected frame or range (<strong>Analyze</strong>, <strong>Mark as left</strong>, <strong>Mark as right</strong>), see <a class="reference internal" href="#call-tree-detailed-analysis"><span class="std std-ref">Call Tree Detailed Analysis</span></a> for details.</p>
+</div>
+<div class="section" id="interpolation-settings">
+<span id="id1"></span><h3>Interpolation settings<a class="headerlink" href="#interpolation-settings" title="Permalink to this headline">¶</a></h3>
+<p>There are three types of smoothing: No interpolation, Linear interpolation, and Bezier interpolation. These affect the visual representation of the smoothed graph, and do not affect the average FPS rate. The variant with no interpolation is more detailed (frame borders are clearer); the variant with linear interpolation is more commonly used. Note that each point in this mode indicates the <strong>beginning</strong> of a frame.</p>
+<p>To change the interpolation setting of the graph, right-click the graph and select the desired setting in the context menu.</p>
+</div>
+<div class="section" id="changing-the-graph-color">
+<h3>Changing the Graph Color<a class="headerlink" href="#changing-the-graph-color" title="Permalink to this headline">¶</a></h3>
+<p>To change the graph color and line thickness, click the line in the &#8220;C&#8221; column of the table to the right of the graph. A color picker appears, allowing you to change the color and line thickness.</p>
+<a class="reference internal image-reference" href="_images/color_picker.png"><img alt="_images/color_picker.png" src="_images/color_picker.png" style="width: 278.0px; height: 240.5px;" /></a>
+</div>
+<div class="section" id="docking-and-undocking-the-fps-graph">
+<h3>Docking and Undocking the FPS Graph<a class="headerlink" href="#docking-and-undocking-the-fps-graph" title="Permalink to this headline">¶</a></h3>
+<p>The FPS graph can be undocked. Click the Close button to hide it; click the <strong>Plotters</strong> command in the main window menu to open it.</p>
+</div>
+<div class="section" id="graph-smoothing">
+<h3>Graph Smoothing<a class="headerlink" href="#graph-smoothing" title="Permalink to this headline">¶</a></h3>
+<p>To reduce the visual noise of the graph, you can use Smoothing. Graph smoothing can help produce more readable graphs to indicate trends, at the expense of precision.</p>
+<p>To enable Smoothing, select the desired setting from the <strong>Smoothing</strong> menu. The width of the smoothing windows can be adjusted there (0, 2, or 5 seconds). Changing the Smoothing setting may alter the average FPS for the graph. The average FPS is most precise when Smoothing equals 0 sec. However, if the value is 0, the graph is the least clear and is appropriate only for a detailed analysis of separate frames.</p>
+<p>The image below shows a zoomed section of the graph where smoothing is set to 0:</p>
+<a class="reference internal image-reference" href="_images/UP4.png"><img alt="_images/UP4.png" src="_images/UP4.png" style="width: 960.0px; height: 509.0px;" /></a>
+<p>To remove a log that is no longer required, right-click and select <strong>Unload log</strong>.</p>
+</div>
+</div>
+<div class="section" id="fps-files">
+<h2>.fps files<a class="headerlink" href="#fps-files" title="Permalink to this headline">¶</a></h2>
+<p>An .fps file is used for visually comparing graphs and processing several indicators (e.g. number of frames, average FPS, minimum FPS). You can upload .fps files and display them on the graph together with .upl files.</p>
+<p>To upload an .fps file, click <strong>Logs</strong> &gt; <strong>Open FPS</strong> file.</p>
+</div>
+<div class="section" id="frametime-graphs">
+<h2>FrameTime Graphs<a class="headerlink" href="#frametime-graphs" title="Permalink to this headline">¶</a></h2>
+<p>The FrameTime graph is placed next to the FPS graph by default. Frametime (frame intervals) of different threads can be displayed there. Unlike in the FPS graph, the Y axis here represents the timeline in milliseconds.</p>
+<p>If needed, additional graphs can be created through <strong>Plotters</strong> &gt; <strong>Create new overview</strong>.</p>
+<p>To add or remove frametimes for a particular thread:</p>
+<ol class="arabic simple">
+<li>Expand the log in the log pane, and right-click the <strong>thread</strong> line.</li>
+<li>In the context menu, select the option for the desired overview graph. For example, to display a thread on the Overview 1 graph, choose &#8220;Overview 1&#8221; from the menu.</li>
+</ol>
+<p>Besides frametimes, this graph can display time taken to perform separate functions in each frame (see Stack Watch below for details).</p>
+<div class="section" id="analyzing-gpu-functions">
+<h3>Analyzing GPU functions<a class="headerlink" href="#analyzing-gpu-functions" title="Permalink to this headline">¶</a></h3>
+<p>To analyze functions performed by GPU, enable the UNIPROF_INCLUDE_GPU system variable before writing the log. After uploading the log to Profile Analyzer, expand the necessary log, select <strong>Thread # (gpu)</strong>, right-click it and select <strong>Overview 1</strong>.</p>
+<p>To view Overview 1, enable it in the <strong>Plotters</strong> menu (other Overviews can also be created there). Only data on the GPU thread will be displayed.</p>
+</div>
+</div>
+<div class="section" id="analysis-of-the-time-taken-by-subsystems-work">
+<h2>Analysis of the Time Taken by Subsystems Work<a class="headerlink" href="#analysis-of-the-time-taken-by-subsystems-work" title="Permalink to this headline">¶</a></h2>
+<p>To analyze subsystems, right-click the <strong>thread</strong> line in the log pane and then click <strong>Analyze subsystems</strong>. This option takes the user to the graph window, with frametimes of the thread + time taken by each subsystem in each frame. This can be used for:</p>
+<ul class="simple">
+<li>Demonstrating and comparing resource intensiveness of a certain subsystem</li>
+<li>Identifying problem frames/ranges for the subsystem</li>
+<li>Testing the optimization of separate subsystems</li>
+</ul>
+<p>Each subsystem is defined by entry points – the beginning and end of functions determine the borders of the time interval that we attribute to a certain subsystem. Time taken by any function not designated as an &#8220;entry point&#8221; for any subsystem is attributed to the same subsystem as its caller.</p>
+<div class="section" id="hiding-subsystems">
+<h3>Hiding subsystems<a class="headerlink" href="#hiding-subsystems" title="Permalink to this headline">¶</a></h3>
+<p>To hide unwanted subsystems, right-click the graph and click <strong>Hide</strong> for the corresponding subsystem.</p>
+</div>
+<div class="section" id="editing-a-subsystem-definition">
+<h3>Editing a Subsystem Definition<a class="headerlink" href="#editing-a-subsystem-definition" title="Permalink to this headline">¶</a></h3>
+<p>The subsystem definition (list of subsystems and entry points) is stored in the Profile Analyzer configuration. It can be edited by right-clicking the <strong>thread</strong> parent line in the log pane and clicking <strong>Edit subsystems definition</strong> in the context menu.</p>
+<a class="reference internal image-reference" href="_images/edit_subsys_context.png"><img alt="_images/edit_subsys_context.png" src="_images/edit_subsys_context.png" style="width: 215.5px; height: 93.0px;" /></a>
+<a class="reference internal image-reference" href="_images/edit_subsys.png"><img alt="_images/edit_subsys.png" src="_images/edit_subsys.png" style="width: 449.5px; height: 182.0px;" /></a>
+<p>Settings can be changed in two ways: globally (saved in the configuration) and locally for one log, which is suitable for temporary changes. For temporary changes, the changed subsystem definition will refer to a single log, and will not be saved on shutting down the app. This can be set by selecting <strong>Store definitions locally for a log</strong> at the bottom of the subsystem definition editing window.</p>
+</div>
+</div>
+<div class="section" id="using-etl-logs-to-track-memory-allocations">
+<h2>Using ETL logs to track memory allocations<a class="headerlink" href="#using-etl-logs-to-track-memory-allocations" title="Permalink to this headline">¶</a></h2>
+<p>ETL logs can be generated in two possible modes:</p>
+<ol class="arabic simple">
+<li>Batch mode (using .bat files and <code class="docutils literal"><span class="pre">profile_log_recorder.exe</span></code>).</li>
+<li>Default mode (using <code class="docutils literal"><span class="pre">profile_analyzer.exe</span></code>).</li>
+</ol>
+<p><strong>Note:</strong> Before trying to collect .etl logs it is important to launch the <code class="docutils literal"><span class="pre">wpr.reg</span></code> file in the <code class="docutils literal"><span class="pre">/game/bin/tools/profile_log_recorder</span></code> folder to make necessary changes to Windows Registry.</p>
+<div class="section" id="batch-mode-using-profile-log-recorder">
+<h3>Batch mode using profile_log_recorder<a class="headerlink" href="#batch-mode-using-profile-log-recorder" title="Permalink to this headline">¶</a></h3>
+<p><strong>Note:</strong> You must have administrator account access to collect logs in batch mode.</p>
+<p>Below is an example of a working .bat file for collecting .etl logs:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>set UNIPROF_ENABLE=true
+
+set UNIPROF_LOGNAME=D:\\logs4\\
+
+E:\\core_2\\game\\bin\\tools\\profile_log_recorder\\profile_log_recorder.exe -out 2 -cmd E:\\core_2\\game\\bin\\client\\win32\\WoT_h_detail.exe
+
+E:\\core_2\\game\\bin\\tools\\profile_log_recorder\\profile_log_recorder.exe -out 3 -cmd E:\\core_2\\game\\bin\\client\\win32\\WoT_h_detail2.exe
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">profile_log_recorder.exe</span></code> accepts the following parameters:</p>
+<ul class="simple">
+<li><strong>-out</strong> – name of subdirectory of <code class="docutils literal"><span class="pre">D:\logs4\</span></code> in which .upl and .etl logs should be saved.</li>
+<li><strong>-cmd</strong> – command line with which profiled application should be called. You can add command line arguments to it.</li>
+</ul>
+<p>Please note that full paths should be used (it must be possible to run your .bat file using the &#8220;Run as administrator&#8221; command from the Windows Explorer context menu). Additionally, you should use absolute paths in your .bat file - if you run it with &#8220;Run as administrator&#8221;, your current directory will be changed.</p>
+<p>UNIPROF_LOGNAME is the full path to the directory where the logs are saved. After profile_log_recorder finishes recording it creates logs in this directory. The <strong>-out</strong> command-line parameter can be used to specify a subdirectory under this directory in which .upl and .etl logs should be saved. See <a class="reference internal" href="profiler_settings.html#environment-variables"><span class="std std-ref">Environment variables</span></a> for more information.</p>
+<p>It is a good idea to always launch .bat files as administrator. Otherwise, environment variables that were specified before launching profile_log_recorder will be overwritten.</p>
+</div>
+<div class="section" id="default-mode">
+<h3>Default mode<a class="headerlink" href="#default-mode" title="Permalink to this headline">¶</a></h3>
+<p>To collect logs in default mode, make sure you have the UNIPROF_ENABLE and UNIPROF_LOGNAME environment variables defined and initialized with appropriate values.</p>
+<p>To start collecting logs:</p>
+<ol class="arabic simple">
+<li>Launch Profile Analyzer from an administrator account.</li>
+<li>Click <strong>Logs</strong> &gt; <strong>Record log</strong>.</li>
+<li>Select the .exe file to use for log recording.</li>
+<li>Wait until the application finishes. If you close Profile Analyzer before log recording finishes you may not be able to record a new log without restarting Windows.</li>
+</ol>
+<p>When the application finishes Profile Analyzer will automatically open the recorded log. .etl logs are saved together with the corresponding .upl logs. To work with these logs, open the corresponding .upl log in Profile Analyzer.</p>
+<div class="section" id="nodes">
+<h4>Nodes<a class="headerlink" href="#nodes" title="Permalink to this headline">¶</a></h4>
+<p>You will see three nodes: one .upl and two .etl (kernel and user). The kernel log is responsible for tracking of virtual memory allocations. The user log is responsible for tracking heap allocations (using the <code class="docutils literal"><span class="pre">new</span></code> operator, <code class="docutils literal"><span class="pre">HeapAlloc</span></code> function, etc.).</p>
+<p>To start working with one of these nodes, right-click on the node to open the context menu.</p>
+<p>For the <strong>kernel</strong> log node, the context menu contains these items:</p>
+<ul class="simple">
+<li>Analyze committed virtual memory usage</li>
+<li>Analyze reserved virtual memory usage</li>
+<li>Analyze loaded modules</li>
+<li>Edit rules (for more convenient classification of allocations by function names)</li>
+<li>Save reports</li>
+</ul>
+<p>For the <strong>user</strong> log node, the context menu contains these items:</p>
+<ul class="simple">
+<li>Analyze heap memory usage (memory allocated by <code class="docutils literal"><span class="pre">new</span></code>, <code class="docutils literal"><span class="pre">HeapAlloc</span></code>, etc.)</li>
+<li>Analyze video memory usage (from D3D resource trackers, memory that is allocated during creation of vertex buffers, index buffers, textures etc.)</li>
+<li>Analyze file mapping events</li>
+<li>Save reports</li>
+</ul>
+<p>After analysis finishes you will see a plot with information about memory consumption. It is possible to analyze either an interval of time or a single moment. After you choose a region to analyze and select <strong>Analyze</strong> from the context menu, a table of allocations is displayed. For each memory region it is possible to fetch information about the call stack of the allocation point and the call stack of the deallocation point.</p>
+</div>
+<div class="section" id="keyboard-shortcuts">
+<h4>Keyboard shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h4>
+<p>Profile Analyzer supports two possible options for copying information about the selected allocation: copying general data (with <code class="docutils literal"><span class="pre">Ctrl+C</span></code>) and copying of the callstack (with <code class="docutils literal"><span class="pre">Ctrl+T</span></code>).</p>
+</div>
+</div>
+<div class="section" id="symbols">
+<h3>Symbols<a class="headerlink" href="#symbols" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="adjusting-the-symbol-path">
+<h4>Adjusting the Symbol Path<a class="headerlink" href="#adjusting-the-symbol-path" title="Permalink to this headline">¶</a></h4>
+<p>In order to see not just raw pointers but function and module names, you need to correctly adjust the symbol path. It can be configured in file <code class="docutils literal"><span class="pre">/game/bin/tools/profile_analyzer/analyzer_config.json</span></code>, in the <code class="docutils literal"><span class="pre">symbols_search_path</span></code> node. It should already contain the path to Microsoft Symbol Server by default. You need to add the path to your local symbol cache and add .exe and .pdb files of a client application to this cache using symstore.exe (for example, <code class="docutils literal"><span class="pre">symstore.exe</span> <span class="pre">add</span> <span class="pre">/f</span> <span class="pre">d:\\WoT_h_detail.exe</span> <span class="pre">/s</span> <span class="pre">E:/symbols</span> <span class="pre">/t</span> <span class="pre">prodname</span></code>).</p>
+<p>If you need to add a symbol server located on a remote disk, use the form <code class="docutils literal"><span class="pre">\\by1-dfs-01\DepExchange$\Symbols\</span></code> instead of <code class="docutils literal"><span class="pre">X:\Symbols</span></code>. Additionally you need to make sure you have access to this directory from the account under which you ran Profile Analyzer.</p>
+</div>
+<div class="section" id="viewing-symbol-information">
+<h4>Viewing Symbol Information<a class="headerlink" href="#viewing-symbol-information" title="Permalink to this headline">¶</a></h4>
+<p>To check if everything is properly adjusted:</p>
+<ol class="arabic simple">
+<li>Right-click the compound log to open the context menu.</li>
+<li>Select &#8220;PDB info&#8221; to open the PDB Info window.</li>
+</ol>
+<p>This window contains information about successfully loaded symbols and failed ones. Additional details about syntax for <code class="docutils literal"><span class="pre">symbols_search_path</span></code> can be found here: <a class="reference external" href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms681416(v=vs.85).aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/ms681416(v=vs.85).aspx</a></p>
+<p>After the symbol path is properly adjusted you should be able to see call stacks of any allocation from the table. Note that when a tooltip appears for the first time, it usually contains no function names. To resolve this, wait a few seconds before accessing the tooltip again. Note that the callstack tooltip takes longer to appear if some .pdb symbols have not yet been processed.</p>
+</div>
+</div>
+</div>
+<div class="section" id="statistics-modules">
+<h2>Statistics Modules<a class="headerlink" href="#statistics-modules" title="Permalink to this headline">¶</a></h2>
+<p>There is one action for each supported statistic type in the Statistics menu of the main window. Selecting one of these options displays a popup window with graphs (one for each open log) that show how the value of the selected statistic changes with time. Currently, we are collecting the number of draw calls and rendered triangles in every frame; developers can easily add any other statistics needed.</p>
+</div>
+<div class="section" id="call-tree-detailed-analysis">
+<span id="id2"></span><h2>Call Tree Detailed Analysis<a class="headerlink" href="#call-tree-detailed-analysis" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>Frame details</strong>  module can be used to perform a detailed analysis of activities during a specified period of time. This shows how much time was spent on the operation of subsystems in a certain frame (or all frames within the range). This is one of the most useful and frequently used features in the profiler, because it can help determine the cause of a particular performance bug by identifying time consuming subsystems, functions, scripts, and so on.</p>
+<p><strong>To analyze a frame</strong>
+1. Open the the context menu of the FPS or FrameTime graph.
+2. Select <strong>[log name](thread [num]</strong> &gt; <strong>Frame (segment [num] frame [num])</strong> &gt; <strong>Analyze</strong>.</p>
+<p><strong>To track events that happen once every few frames</strong>
+1. Hold Shift, and click and drag to select an area in the graph.
+2. Open the context menu, and choose <strong>[log name](thread [num]</strong> &gt; <strong>Range (segment [num] frames [range])</strong> &gt; <strong>Analyze</strong>. Note, this analysis can take a long time.</p>
+<p><strong>To analyse thread startup or shutdown or a whole segment of a thread</strong>
+1. Select a thread in the Logs Control window.
+2. Open the context menu, and select <strong>Analyze thread startup</strong>, <strong>Analyze thread shutdown</strong>, or <strong>Analyze whole segment</strong>.</p>
+<a class="reference internal image-reference" href="_images/UP5.png"><img alt="_images/UP5.png" src="_images/UP5.png" style="width: 579.0px; height: 484.5px;" /></a>
+<p>The Detailed Analysis window has three tabs: <strong>Call tree</strong> , <strong>Back-trace</strong>,  and <strong>Forward trace</strong>.</p>
+<p><strong>Call tree</strong> shows a tree with all logged functions written in the correct hierarchy. The <strong>Total, ms</strong> column shows the time taken to perform each function; <strong>Pure time, ms</strong> shows the time taken to perform each function without taking into account time spent in called subfunctions. If a function is an entry points to a subsystem, the subsystem name is shown in the <strong>Subsystem</strong> column. You can navigate to the same function in <strong>Back-trace</strong> tab by selecting <strong>Jump to back-trace</strong> from the context menu. The history for the time of performing a certain function in each frame can be merged and displayed via the context menu (Stack watch and Live watch modes).</p>
+<p><strong>Back-trace</strong> shows a list of all functions that were performed during the analyzed period of time, as well as the corresponding number of calls and time spent. Each function can be expanded to show where it was called from. This mode is useful for performing a quick search of bottlenecks in slow frames.</p>
+<p><strong>Forward trace</strong> shows a simplified call tree, where functions of the same name are merged. This mode can be of more use for the analysis than a complete call tree, especially for frame succession analysis.</p>
+</div>
+<div class="section" id="comparing-two-frames">
+<h2>Comparing Two Frames<a class="headerlink" href="#comparing-two-frames" title="Permalink to this headline">¶</a></h2>
+<p>The stack diff module is used for comparing two frames (or regions). This can also be very useful as it demonstrates the difference in subsystems/functions.</p>
+<p>To compare frames or regions, mark them as &#8220;left&#8221; and &#8220;right&#8221; (from the FPS or frametimes graph context menu, choose <strong>Mark frame/range as left/right...</strong> ), and go to <strong>Comparison</strong> &gt; <strong>Perform diff</strong> (<code class="docutils literal"><span class="pre">Ctrl+D</span></code>). A tree consisting of 2 calltrees joined by the function name appear in this mode. When analyzing two regions, it may be useful to normalize the number of calls to the region length in the frames (select <strong>Normalize to one frame</strong>).</p>
+</div>
+<div class="section" id="history-of-time-taken-by-a-function-stack-watch">
+<h2>History of Time Taken by a Function (stack watch)<a class="headerlink" href="#history-of-time-taken-by-a-function-stack-watch" title="Permalink to this headline">¶</a></h2>
+<p>If you notice a questionable function in the detailed frame analysis mode, it is possible to find out how much time has been spent on it in each frame. To do so, right-click the function line in the call tree analysis window and choose <strong>Measure</strong> in the context menu. Then go into the context menu again and select the window (for example, Overview 1) to display graphs in.</p>
+<p>Time taken by a function can be measured in real-time, when working in the online analysis mode (the analyzer works simultaneously with the client that writes the log): choose <strong>Live watch</strong> instead of <strong>Measure</strong>. Time taken by a function in all new frames will be added to the graphs. With that, an additional line for all such functions will appear in the logs control window (under the line of a corresponding thread): they will contain information on time taken by a function in the last frame analyzed.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="analyzer_background.html" class="btn btn-neutral float-right" title="Analyzer Background Mode (receiving statistics on several playbacks of one replay)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="profiler_settings.html" class="btn btn-neutral" title="Profiler Settings" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Wargaming.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/custom.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

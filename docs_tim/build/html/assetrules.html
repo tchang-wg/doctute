@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Asset Rules &mdash; Asset Pipeline  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Asset Pipeline  documentation" href="index.html"/>
+        <link rel="prev" title="Extending the Asset Pipeline" href="extendingassetpipeline.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Asset Pipeline
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Asset Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batchcompiler.html">Batch Compiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testcompiler.html">TestCompiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jitcompiler.html">JIT Compiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilityclasses.html">Utility Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extendingassetpipeline.html">Extending the Asset Pipeline</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Asset Rules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#source-rules">Source Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#destination-rules">Destination Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#location-of-asset-rules-xml">Location of asset_rules.xml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#excluding-files-from-conversion">Excluding Files from Conversion</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Asset Pipeline</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Asset Rules</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/assetrules.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="asset-rules">
+<h1>Asset Rules<a class="headerlink" href="#asset-rules" title="Permalink to this headline">¶</a></h1>
+<p>The asset pipeline uses conversion rules to determine which files on
+disk are assets, and how to convert them.</p>
+<p>Conversion rules can be created in C++ and registered through a plugin
+system (for more information, see <a class="reference internal" href="extendingassetpipeline.html#registering-converters-and-conversion-rules"><span class="std std-ref">Registering Converters and Conversion Rules</span></a>).</p>
+<p>Alternatively, conversion rules can be created through
+<code class="docutils literal"><span class="pre">asset_rules.xml</span></code> configuration files. An <code class="docutils literal"><span class="pre">asset_rules.xml</span></code> file can
+contain any number of source rules and destination rules.</p>
+<div class="section" id="source-rules">
+<h2>Source Rules<a class="headerlink" href="#source-rules" title="Permalink to this headline">¶</a></h2>
+<p>A source rule contains a regex to match source assets to converters. For
+example:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;rule</span> <span class="na">pattern=</span><span class="s">&quot;^texture_details\.xml$&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;root&gt;</span>true<span class="nt">&lt;/root&gt;</span>
+    <span class="nt">&lt;converter&gt;</span>HierarchicalConfigConverter<span class="nt">&lt;/converter&gt;</span>
+    <span class="nt">&lt;converterParams&gt;</span>-f texture_details.xml -o system/data/texture_detail_levels.xml<span class="nt">&lt;/converterParams&gt;</span>
+<span class="nt">&lt;/rule&gt;</span>
+</pre></div>
+</div>
+<p>This rule matches the source asset “texture_details.xml” to the
+HierarchicalConfigConverter with the parameters “-f texture_details.xml
+-o system/data/texture_detail_levels.xml” and specifies that the asset
+is a root asset.</p>
+</div>
+<div class="section" id="destination-rules">
+<h2>Destination Rules<a class="headerlink" href="#destination-rules" title="Permalink to this headline">¶</a></h2>
+<p>A destination rule contains a regex to match built assets to their
+source files, through a regex replace pattern. For example:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;rule</span> <span class="na">pattern=</span><span class="s">&quot;.*(\\.fxo)$&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;sourcePattern&gt;</span>(\\.[0-1]+)?(\\.fxo)$<span class="nt">&lt;/sourcePattern&gt;</span>
+    <span class="nt">&lt;sourceFormat&gt;</span>.fx<span class="nt">&lt;/sourceFormat&gt;</span>
+<span class="nt">&lt;/rule&gt;</span>
+</pre></div>
+</div>
+<p>This rule matches a file such as “myshader.01.fxo” and uses
+regex_replace( “&gt;(\\.[0-1]+)?(\\.fxo)$”, “.fx” ) to determine the
+source file, “myshader.fx”.</p>
+</div>
+<div class="section" id="location-of-asset-rules-xml">
+<h2>Location of asset_rules.xml<a class="headerlink" href="#location-of-asset-rules-xml" title="Permalink to this headline">¶</a></h2>
+<p>You can place <code class="docutils literal"><span class="pre">asset_rules.xml</span></code> files in any resource folder. The
+folder hierarchy is used to define custom rules or overrides for
+subfolders. For example, consider if the following rule existed in an
+<code class="docutils literal"><span class="pre">asset_rules.xml</span></code> file in the <code class="docutils literal"><span class="pre">bigworld/shaders</span></code> folder.</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;rule</span> <span class="na">pattern=</span><span class="s">&quot;.*(\\.fx)$&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;root&gt;</span>true<span class="nt">&lt;/root&gt;</span>
+    <span class="nt">&lt;converter&gt;</span>EffectConverter<span class="nt">&lt;/converter&gt;</span>
+<span class="nt">&lt;/rule&gt;</span>
+</pre></div>
+</div>
+<p>Any file with the <code class="docutils literal"><span class="pre">.fx</span></code> suffix in any folder under
+<code class="docutils literal"><span class="pre">bigworld/shaders</span></code> would be considered a root asset and would use the
+EffectConverter. Suppose we then created an <code class="docutils literal"><span class="pre">asset_rules.xml</span></code> file
+containing the following rule, in the <code class="docutils literal"><span class="pre">bigworld/shaders/custom</span></code>
+folder:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;rule</span> <span class="na">pattern=</span><span class="s">&quot;.*(\\.fx)$&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;root&gt;</span>false<span class="nt">&lt;/root&gt;</span>
+<span class="nt">&lt;/rule&gt;</span>
+</pre></div>
+</div>
+<p>Any file with <code class="docutils literal"><span class="pre">.fx</span></code> suffix in any folder under
+<code class="docutils literal"><span class="pre">bigworld/shaders/custom</span></code> would now be considered a non-root asset.
+However, as these assets would still be in a subfolder of
+<code class="docutils literal"><span class="pre">bigworld/shaders</span></code>, they would still be using the EffectConverter as
+defined by the rule in <code class="docutils literal"><span class="pre">bigworld/shaders</span></code>.</p>
+</div>
+<div class="section" id="excluding-files-from-conversion">
+<h2>Excluding Files from Conversion<a class="headerlink" href="#excluding-files-from-conversion" title="Permalink to this headline">¶</a></h2>
+<p>Source rules can also use a “noConversion” tag to indicate that certain
+files should not be converted. For example if the following rule was
+added to the <code class="docutils literal"><span class="pre">asset_rules.xml</span></code> file in the <code class="docutils literal"><span class="pre">bigworld/shaders</span></code>
+folder, any file ending in “do_not_convert.fx” would be ignored by the
+asset pipeline:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;rule</span> <span class="na">pattern=</span><span class="s">&quot;.*(do_not_convert\\.fx)$&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt; noCoversion</span> <span class="nt">&gt;</span>false<span class="nt">&lt;/noCoversion&gt;</span>
+<span class="nt">&lt;/rule&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="extendingassetpipeline.html" class="btn btn-neutral" title="Extending the Asset Pipeline" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Wargaming Sydney.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

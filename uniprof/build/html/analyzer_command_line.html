@@ -1,0 +1,271 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Running Analyzer from the Command-Line &mdash; Universal Profiler  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Universal Profiler  documentation" href="index.html"/>
+        <link rel="next" title="Settings Recommendations" href="settings_recommendations.html"/>
+        <link rel="prev" title="Analyzer Background Mode (receiving statistics on several playbacks of one replay)" href="analyzer_background.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Universal Profiler
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Universal Profiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="profiler_settings.html">Profiler Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="profile_analyzer.html">Profile Analyzer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzer_background.html">Analyzer Background Mode</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Running Analyzer from the Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings_recommendations.html">Settings Recommendations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_analyzer.html">Building the Profile Analyzer</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Universal Profiler</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Running Analyzer from the Command-Line</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/analyzer_command_line.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="running-analyzer-from-the-command-line">
+<span id="command-line"></span><h1>Running Analyzer from the Command-Line<a class="headerlink" href="#running-analyzer-from-the-command-line" title="Permalink to this headline">¶</a></h1>
+<p>Profile Analyzer can be run from the command line. This enables batch processing of logs, which is a convenient way to upload multiple logs for automatic processing. Note that it is not possible to analyze separate frames in this way.</p>
+<p>When using batch processing, uploading and processing each log takes some time. It can range from several seconds to a couple of hours, depending on the size and detail of each log. If the specified stdout file is empty, wait a moment for contents to appear.</p>
+<p>To open the Profile_analyzer in batch mode, run the following command.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>profile_analyzer [-c=\&lt;path_to_config\&gt;] [-b] [\&lt;logs_to_open\&gt;...]
+</pre></div>
+</div>
+<ul class="simple">
+<li><strong>-c=&lt;path_to_config&gt;</strong> — define the path to a configuration file (analyzer_config.json in the current directory by default)</li>
+<li><strong>-bf</strong> — launch subsystem analysis in batch mode (to receive results, you need to redirect stdout (&gt; file_name)) (format csv: filename,avg_fps,min_fps[1],...,min_fps[N-1])</li>
+<li><strong>-bm</strong> — launch memory usage analysis in batch mode (to receive results, you need to redirect stdout (&gt; file_name))</li>
+<li><strong>&lt;logs_to_open&gt;</strong> — the list of logs that will be opened at launch (in the GUI mode) or processed (in the batch mode)</li>
+</ul>
+<p>Below is an example of a working .bat file that uses profile_analyzer:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>@echo off
+
+:: Syntax: test &lt;replay_path&gt; &lt;log_path_without_extension&gt;
+:: This will run replay 10 times and generate logs (log_path + _N.upl)
+:: After that analyzer will generate report (log_path + .txt)
+
+echo Playing replay %1:
+setlocal
+set UNIPROF_ENABLE=t
+set UNIPROF_AUTOSTART=t
+for /L %%i in (1,1,10) do call :run %1 %2_%%i.upl
+..\game64\profile_analyzer.exe -c=..\game64\analyzer_config.json -bf %NSET% &gt; %2.txt
+echo.
+echo Results (see also %2.txt):
+type %2.txt
+endlocal
+goto :eof
+
+:run
+echo - writing log %2...
+set UNIPROF_LOGNAME=%2
+wot_h %1
+set NSET=%NSET% %2
+goto :eof
+</pre></div>
+</div>
+<p>An example of the resulting report file in -bf mode (subsystem analysis) is below:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>PC8_true_defense2.upl: average = 14.707ms (67.997 fps) (10287 frames)
+    fps minimums = 2.640, 39.817, 47.591
+
+Total: average = 14.707ms (67.997 fps), std. dev = -1.#IO% (1 logs)
+Unassigned: average = 1.234ms, std. dev = -1.#IO%
+Shadows: average = 1.679ms, std. dev = -1.#IO%
+Scene: average = 3.222ms, std. dev = -1.#IO%
+Water: average = 0.427ms, std. dev = -1.#IO%
+Flora: average = 1.090ms, std. dev = -1.#IO%
+GUI: average = 1.209ms, std. dev = -1.#IO%
+Particles: average = 1.137ms, std. dev = -1.#IO%
+GPU Sync: average = 0.554ms, std. dev = -1.#IO%
+Scripts: average = 2.418ms, std. dev = -1.#IO%
+Sound: average = 0.551ms, std. dev = -1.#IO%
+Post-fx: average = 0.943ms, std. dev = -1.#IO%
+Decals: average = 0.241ms, std. dev = -1.#IO%
+</pre></div>
+</div>
+<p>In the example above:</p>
+<ul class="simple">
+<li>The average tpf (in ms) and fps (equal to GUI mode at smoothing=0) values are indicated after the log name.</li>
+<li>The &#8220;fps minimums&#8221; line contains values of the minimum FPS recorded. The three values correspond to the smoothing values =0 sec, =2 sec, and =5 sec.</li>
+<li>The remainder of the file shows the names of subsystems and average times of operation for each of them (in ms).</li>
+</ul>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="settings_recommendations.html" class="btn btn-neutral float-right" title="Settings Recommendations" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="analyzer_background.html" class="btn btn-neutral" title="Analyzer Background Mode (receiving statistics on several playbacks of one replay)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Wargaming.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/custom.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -140,11 +140,20 @@
             
   <div class="section" id="utility-classes">
 <h1>Utility Classes<a class="headerlink" href="#utility-classes" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#assetserver" id="id1">AssetServer</a><ul>
+<li><a class="reference internal" href="#assetclient" id="id2">AssetClient</a></li>
+<li><a class="reference internal" href="#assetlock" id="id3">AssetLock</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <p>The asset_pipeline module provides a number of utility classes for
 creating asset servers and asset clients, and handling connections
 between them.</p>
 <div class="section" id="assetserver">
-<h2>AssetServer<a class="headerlink" href="#assetserver" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">AssetServer</a><a class="headerlink" href="#assetserver" title="Permalink to this headline">¶</a></h2>
 <p>An asset server is an application that can accept requests to convert
 assets from multiple connections. To implement an asset server, derive
 from the AssetServer class. The base class implementation of the
@@ -167,7 +176,7 @@ need to call the following function on AssetServer:</p>
 <p>This function communicates to all connected clients that the asset
 server has finished processing the requested asset.</p>
 <div class="section" id="assetclient">
-<h3>AssetClient<a class="headerlink" href="#assetclient" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id2">AssetClient</a><a class="headerlink" href="#assetclient" title="Permalink to this headline">¶</a></h3>
 <p>An asset client is an application that can connect to an asset server
 and request assets for conversion. When an asset server receives an
 asset request it will push the required asset to the front of its
@@ -194,7 +203,7 @@ As such, it is the responsibility of the asset client to verify the
 contents of an asset.</p>
 </div>
 <div class="section" id="assetlock">
-<h3>AssetLock<a class="headerlink" href="#assetlock" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id3">AssetLock</a><a class="headerlink" href="#assetlock" title="Permalink to this headline">¶</a></h3>
 <p>The implementation of the asset server provided with BWT is known as the
 JIT Compiler. The JIT Compiler automatically detects and processes
 changes to assets on disk. This can sometimes lead to undesirable
